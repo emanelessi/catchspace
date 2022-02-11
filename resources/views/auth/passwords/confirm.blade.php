@@ -52,6 +52,7 @@
 @extends('layouts.provider.loginApp')
 
 @section('content')
+    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
     <style>
         a:hover {
             color: #ffffff !important;
@@ -63,42 +64,43 @@
     <body class=" login" style="
             background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);
-            min-height: 1024px;
+            min-height: 768px;
             ">
     <!-- BEGIN LOGO -->
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}" style="
-    width: 363px;
-    height: 48px;
-    right: 998px;
-    top: 31px;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 48px;
-    letter-spacing: -0.022em;
-    color: #FFFFFF;
-" >
+        <a class="navbar-brand" href="{{ url('/') }}"  style="
+  width: 119px;
+height: 32px;
+right: 1179px;
+top: 28px;
+font-family: 'Avenir LT Std', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 48px;
+letter-spacing: -0.022em;
+color: #FFFFFF;
+">
             Back to main
         </a>
     </div>
     <a class="navbar-brand" href="{{ url('/') }}">
-        <img class="login-logo login-6" src="../assets/pages/img/login/catchspace-logo.png" style="height: 36px;left: 631px;top: 186px;font-family: Poppins;font-style: normal;font-weight: bold;font-size: 24px;line-height: 36px;
-                    letter-spacing: -0.022em;margin-left: 600px;margin-top: 90px;"/>
+        <img class="login-logo login-6" src="../assets/pages/img/login/catchspace-logo.png"
+             style="width: 178px;height: 49px;left: 603px;top: 108px;margin-left: 590px;margin-top: 50px; "/>
+
     </a>
-    <div><img src="../assets/pages/img/login/vector.png" style="
+    <div><img src="../assets/pages/img/login/vector.png"  style="
 width: 1349px;    height: 145px;
     left: 794px;
-    margin-top: 305px;
+    margin-top: 240px;
 "></div>
     <!-- BEGIN LOGIN -->
-    <div class="content" style="
+    <div class="content"  style="
     border-radius: 20px !important;
-    margin-top: -319px;
-    margin-left: 438px;
-    width: 528.54px;
-    height: 483px;
+    margin-top: -306px;
+    margin-left: 489px;
+    width: 431px;
+    height: 392px;
     background: #FFFFFF;
     ">
         <!-- BEGIN LOGIN FORM -->
@@ -109,19 +111,33 @@ width: 1349px;    height: 145px;
         @endif
         <img class="login-logo login-6" src="../assets/pages/img/login/Email.png"
              style="
-    margin-left: 168px;
-    margin-top: 52px;
-    margin-bottom: 15px;
+  width: 87px;
+height: 48px;
+margin-left: 137px;
+margin-top: 20px;
 "/>
         <h3 class="form-title"
-            style="margin-bottom: 10px;color: #333333;left: 556.99px;
-                top: 432.17px;font-family: Inter;font-style: normal;
-                font-weight: 500 !important;font-size: 33px;line-height: 80px;
-                letter-spacing: -0.022em;text-transform: capitalize;margin-left: -85px;">Check your email</h3>
-        <h5 class="control-label" style="color: #333333;width: 325.83px;height: 187.02px;left: 569.16px;top: 509.64px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 18px;line-height: 48px;
-/* or 267% */letter-spacing: -0.022em;text-transform: capitalize;margin-left: 68px;"> Open your email inbox.<br>
+            style="width: 321px;
+height: 42px;
+left: 533px;
+top: 269px;
+font-family: 'Avenir LT Std', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 33px; margin-top: 25px;
+color: #333333;">Check your email</h3>
+        <h5 class="control-label" style="width: 331px;
+height: 125px;
+left: 496px;
+top: 342px;
+font-family: 'Avenir LT Std', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 48px;margin-left: 37px;
+color: #333333;"> Open your email inbox.<br>
             Find our "Welcome" email.<br>
-            Click Confirm and back to login to catxh space.<br> </h5>
+            Click Confirm and back to login to <br>catxh space.<br> </h5>
         <!-- END LOGIN FORM -->
 
     </div>
