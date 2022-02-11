@@ -25,8 +25,8 @@
 ">404: The page you are looking for isn’t here</h1>
     </div>
         <img src="../assets/pages/img/login/404-page.png" class="img-responsive" alt="" style="
-    margin-left: 195px;
-    width: 951px;
+    margin-left: 260px;
+    width: 900px;
     height: 295px;
     margin-top: 60px;
     "> </div>
@@ -43,7 +43,7 @@
                             position: absolute;
                             width: 251.21px;
                             height: 48px;
-                            left: 536.12px;
+                            left: 570px;
                             top: 641px;
                             background: #7952B3;
                             margin-top: -111px;
