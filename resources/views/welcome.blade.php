@@ -165,6 +165,14 @@
             margin-left: 3rem
         }
 
+        .ml-20 {
+            margin-left: 12rem
+        }
+
+        .ml-50 {
+            margin-left: 38rem
+        }
+
         .-mt-px {
             margin-top: -1px
         }
@@ -434,19 +442,19 @@
     <div class="row bs-reset">
         <div class="col-md-7 login-container bs-reset" style=" height: 768px; background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);">
-            <a class="navbar-brand" href="{{ url('/') }}" style="margin-left: 64px;color:#fff">
+            <a class=" m-grid-col-md-offset-1 " href="{{ url('/') }}">
                 {{--                {{ config('app.name', 'Laravel') }}--}}
-                <img class="login-logo login-6" src="../assets/pages/img/login/catchspace-logo.png"
-                     style="left: 78px;top: 32px;width: 178px;height: 48.21px;"/>
+                <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png"
+                />
             </a>
-            <div class="login-content">
+            <div class="m-grid m-grid-col-md-offset-1 margin-top-100">
                 <h5 style="
                         color: #FFF;
-                        margin-top: -100px;
-                        width: 312px;
-                        height: 157px;
-                        left: 65px;
-                        top: 168px;
+                        /*margin-top: -100px;*/
+                        /*width: 312px;*/
+                        /*height: 157px;*/
+                        /*left: 65px;*/
+                        /*top: 168px;*/
                        font-family: 'Avenir LT Std', sans-serif;
                         font-style: normal;
                         font-weight: 750;
@@ -457,10 +465,10 @@
                     background: -webkit-linear-gradient(#7952B3, #FFBF00);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    width: 312px;
-                    height: 157px;
-                    left: 65px;
-                    top: 168px;
+                    /*width: 312px;*/
+                    /*height: 157px;*/
+                    /*left: 65px;*/
+                    /*top: 168px;*/
                       font-family: 'Avenir LT Std', sans-serif;
                     font-style: normal;
                     font-weight: 750;
@@ -471,36 +479,37 @@
                 </h5>
                 <p style="
                         color: #FFF;
-                        height: 48px;
-                        left: 65px;
+                        /*height: 48px;*/
+                        /*left: 65px;*/
                        font-family: 'Avenir LT Std', sans-serif;
                         font-style: normal;
                         font-weight: normal;
                         font-size: 22px;
                         line-height: 48px;
                         letter-spacing: -0.022em;
-                        margin-top: -7px;
+                        /*margin-top: -7px;*/
                         ">
                     Manage and market your space, to Help people<br>
                     to find the best coworking space,
                     we are here to<br> help you</p>
-                <div class="col-lg-8 text-left">
-                    <button class="btn blue" type="submit" style="    margin-left: -13px;
+                <div class="text-left margin-left-8 ">
+                    <button class="btn blue " type="submit" style="
+                      /*margin-left: -13px;*/
                             border-color: #FFC107;
                             border-radius: 3px !important;
                             align-items: center;
-                            padding: 0px;
-                            position: absolute;
+                            /*padding: 0px;*/
+                            /*position: absolute;*/
                             width: 175px;
                             height: 46px;
-                            top: 52px;
+                            /*top: 52px;*/
                             background: #FFC107;
                        font-family: 'Avenir LT Std', sans-serif;
                             font-style: normal;
                             font-weight: 750;
                             font-size: 16px;
                             color: #FFFFFF;
-                            margin-top: 56px;
+                            /*margin-top: 56px;*/
                             ">
                         Login
                     </button>
@@ -509,16 +518,17 @@
         </div>
         <div class="col-md-5 login-container bs-reset" style="  background-color: #7952B3;
             background-image: linear-gradient( #7952B3, #FFBF00);">
-            <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="top:32px;">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
+                <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav me-auto" style="list-style-type:none;
-                                       margin-left: 105px;float: left;color:#fff;">
+                    <ul class="navbar-nav me-auto margin-top-30 ml-20" style="list-style-type:none;
+                                       /*margin-left: 105px;*/
+                                       float: left;color:#fff;">
                         <li class="nav-item " style="
-    padding-right: 90px;
+    /*padding-right: 90px;*/
     width: 85px;
     height: 22px;
-    right: 253px;
+    /*right: 253px;*/
     font-family: 'Avenir LT Std', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -527,9 +537,9 @@
     letter-spacing: -0.022em;
 "><a class="nav-link">Home</a></li>
                         <li class="nav-item" style="
-    padding-right: 70px;
-    height: 22px;
-    right: 253px;
+    /*padding-right: 70px;*/
+    /*height: 22px;*/
+    /*right: 253px;*/
     font-family: 'Avenir LT Std', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -538,26 +548,40 @@
     letter-spacing: -0.022em;
 "><a class="nav-link">Contact Us </a></li>
                     </ul>
-                    <button class="btn blue" type="submit"
-                            style="display: flex;flex-direction: column;
-                            justify-content: center;align-items: center;padding: 0px;
-                            position: absolute;width: 84px;height: 27px;
-                            left: 400px;top: 14px;border: 1px solid #FFFFFF;
-                            box-sizing: border-box;border-radius: 3px !important;
+                    <button class="btn blue margin-top-30 ml-50 " type="submit"
+                            style="
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            /*padding: 0px;*/
+                            position: absolute;
+                            width: 84px;
+                            height: 27px;
+                            /*left: 400px;*/
+                            /*top: 14px;*/
+                            border: 1px solid #FFFFFF;
+                            box-sizing: border-box;
+                            border-radius: 3px !important;
                             font-family: 'Avenir LT Std', sans-serif;
-                            font-style: normal;font-weight: normal;
-                            font-size: 14px;line-height: 24px;
-                            color: #FFFFFF;background-color: #845ba6;margin-right: 78px;">
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #FFFFFF;
+                            background-color: #845ba6;
+                            /*margin-right: 78px;*/
+">
                         Login
                     </button>
                 </div>
             </nav>
             <div>
-                <img src="../assets/pages/img/login/WORKSPACES-Vector.png" style="
+                <img src="../assets/pages/img/login/WORKSPACES-Vector.png" class="img-responsive margin-top-226" style="
        width: 562px;
     height: 145px;
-    left: 794px;
-    margin-top: 226px;
+    /*left: 794px;*/
+    /*margin-top: 226px;*/
 ">
             </div>
         </div>
