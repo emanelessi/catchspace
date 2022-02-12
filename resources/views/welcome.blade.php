@@ -440,7 +440,8 @@
 <!-- BEGIN : LOGIN PAGE 5-2 -->
 <div class="user-login-5">
     <div class="row bs-reset">
-        <div class="col-md-7 login-container bs-reset" style=" height: 768px; background-color: #6B6767;
+        <div class="col-md-7 login-container bs-reset" style="
+         height: 768px; background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);">
             <a class=" m-grid-col-md-offset-1 " href="{{ url('/') }}">
                 {{--                {{ config('app.name', 'Laravel') }}--}}
@@ -521,9 +522,10 @@
             <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
                 <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav me-auto margin-top-30 ml-20" style="list-style-type:none;
+                    <ul class="navbar-nav me-auto margin-top-30 ml-20 pull-left" style="list-style-type:none;
                                        /*margin-left: 105px;*/
-                                       float: left;color:#fff;">
+                                       /*float: left;*/
+                                       color:#fff;">
                         <li class="nav-item " style="
     /*padding-right: 90px;*/
     width: 85px;
