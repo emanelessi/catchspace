@@ -22,43 +22,52 @@
         <div class="row bs-reset">
             <div class="col-md-6 bs-reset mt-login-5-bsfix" style="min-height: 768px;background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);">
-                <a class="navbar-brand" href="{{ url('/') }}" style="margin-left: 64px;color:#fff">
+                <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
                     {{--                {{ config('app.name', 'Laravel') }}--}}
-                    <img class="login-logo login-6" src="../assets/pages/img/login/catchspace-logo.png"
-                         style="left: 100px;top: 32px;width: 178px;height: 48px;"/>
+                    <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png"
+                    />
                 </a>
-                <div><img src="../assets/pages/img/login/WORKSPACES-Vector.png" style="
-width: 676px;    height: 145px;
-    left: 794px;
-    margin-top:238px;"></div>
+                <div>
+                    <img src="../assets/pages/img/login/WORKSPACES-Vector.png" class="img-responsive margin-top-226" style="
+       width: 680px;
+    /*height: 145px;*/
+    /*left: 794px;*/
+    /*margin-top: 226px;*/
+">
+                </div>
 
             </div>
             <div class="col-md-5 login-container bs-reset mt-login-5-bsfix">
-                <div class="login-content" style="margin-top: 8%;margin-left: 65px;">
+                <div class="login-content margin-top-30 margin-left-20
+                            m-grid-col-lg-12 m-grid-col-md-11 m-grid-col-xs-12
+                            " style="
+                /*margin-top: 8%;*/
+                /*margin-left: 65px;*/
+">
                     <h1 style="
-                    width: 313px;
-                    height: 30px;
-                    left: 864px;
-                    top: 28px;
+                    /*width: 313px;*/
+                    /*height: 30px;*/
+                    /*left: 864px;*/
+                    /*top: 28px;*/
                     font-family: 'Avenir LT Std', sans-serif;
                     font-style: normal;
-                    font-weight: 600;
-                    font-size: 33px;
+                    /*font-weight: 600;*/
+                    /*font-size: 33px;*/
                     color: #333333;
                     ">Creat an account</h1>
                     <p style="
                     color: #333333;
-                    width: 427.73px;
-                    height: 24.87px;
-                    left: 828px;
-                    top: 241px;
+                    /*width: 427.73px;*/
+                    /*height: 24.87px;*/
+                    /*left: 828px;*/
+                    /*top: 241px;*/
                     font-family: 'Avenir LT Std', sans-serif;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 16px;
                     letter-spacing: -0.022em;
-                    margin-bottom: 11px;
-                    margin-top: 11px;
+                    /*margin-bottom: 11px;*/
+                    /*margin-top: 11px;*/
                     "> Sign up to have an account</p>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -66,8 +75,8 @@ width: 676px;    height: 145px;
                             <button class="close" data-close="alert"></button>
                             <span>Enter any username and password. </span>
                         </div>
-                        <div class="form-group" style="
-    margin-bottom: 7px;
+                        <div class="form-group margin-bottom-15" style="
+    /*margin-bottom: 7px;*/
 ">
                             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Name') }}</label>
@@ -77,10 +86,10 @@ width: 676px;    height: 145px;
                                 value="{{ old('name') }}" required autocomplete="name" autofocus
                                 style="
     border-radius: 20px !important;
-    width: 396px;
-    height: 57px;
-    left: 824px;
-    top: 373px;
+    /*width: 396px;*/
+    height: 53px;
+    /*left: 824px;*/
+    /*top: 373px;*/
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -91,8 +100,8 @@ width: 676px;    height: 145px;
                                     </span>
                             @enderror
                         </div>
-                        <div class="form-group" style="
-    margin-bottom: 7px;
+                        <div class="form-group margin-bottom-15" style="
+    /*margin-bottom: 7px;*/
 ">
                             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Co-work Space Name') }}</label>
@@ -102,10 +111,10 @@ width: 676px;    height: 145px;
                                 value="{{ old('Co-name') }}" required autocomplete="Co-name" autofocus
                                 style="
     border-radius: 20px !important;
-    width: 396px;
-    height: 57px;
-    left: 824px;
-    top: 373px;
+    /*width: 396px;*/
+    height: 53px;
+    /*left: 824px;*/
+    /*top: 373px;*/
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -116,8 +125,8 @@ width: 676px;    height: 145px;
                                         </span>
                             @enderror
                         </div>
-                        <div class="form-group" style="
-    margin-bottom: 7px;
+                        <div class="form-group margin-bottom-15" style="
+    /*margin-bottom: 7px;*/
 ">
                             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
@@ -127,10 +136,10 @@ width: 676px;    height: 145px;
                                 value="{{ old('email') }}" required autocomplete="email" autofocus
                                 style="
     border-radius: 20px !important;
-    width: 396px;
-    height: 57px;
-    left: 824px;
-    top: 373px;
+    /*width: 396px;*/
+    height: 53px;
+    /*left: 824px;*/
+    /*top: 373px;*/
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -141,8 +150,8 @@ width: 676px;    height: 145px;
                     </span>
                             @enderror
                         </div>
-                        <div class="form-group" style="
-    margin-bottom: 7px;
+                        <div class="form-group margin-bottom-15" style="
+    /*margin-bottom: 7px;*/
 ">
                             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                             <label class="control-label visible-ie8 visible-ie9">{{ __('phone') }}</label>
@@ -152,10 +161,10 @@ width: 676px;    height: 145px;
                                 value="{{ old('phone') }}" required autocomplete="phone" autofocus
                                 style="
     border-radius: 20px !important;
-    width: 396px;
-    height: 57px;
-    left: 824px;
-    top: 373px;
+    /*width: 396px;*/
+    height: 53px;
+    /*left: 824px;*/
+    /*top: 373px;*/
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -166,8 +175,8 @@ width: 676px;    height: 145px;
                     </span>
                             @enderror
                         </div>
-                        <div class="form-group" style="
-    margin-bottom: 7px;
+                        <div class="form-group margin-bottom-15" style="
+    /*margin-bottom: 7px;*/
 ">
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Password') }}</label>
                             <input
@@ -176,10 +185,10 @@ width: 676px;    height: 145px;
                                 required autocomplete="current-password"
                                 style="
     border-radius: 20px !important;
-    width: 396px;
-    height: 57px;
-    left: 824px;
-    top: 373px;
+    /*width: 396px;*/
+    height: 53px;
+    /*left: 824px;*/
+    /*top: 373px;*/
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -190,8 +199,8 @@ width: 676px;    height: 145px;
                                     </span>
                             @enderror
                         </div>
-                        <div class="form-group" style="
-    margin-bottom: 7px;
+                        <div class="form-group margin-bottom-15" style="
+    /*margin-bottom: 7px;*/
 ">
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Confirm password') }}</label>
                             <input
@@ -201,10 +210,10 @@ width: 676px;    height: 145px;
                                 required autocomplete="new-password"
                                 style="
     border-radius: 20px !important;
-    width: 396px;
-    height: 57px;
-    left: 824px;
-    top: 373px;
+    /*width: 396px;*/
+    height: 53px;
+    /*left: 824px;*/
+    /*top: 373px;*/
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -217,10 +226,12 @@ width: 676px;    height: 145px;
                         </div>
                         <div class="row">
                             <div class="col-lg-8">
-                                <div class="rem-password" style="width: 222px;">
+                                <div class="rem-password" style="
+                                width: 222px;
+">
                                     <label class="rememberme mt-checkbox mt-checkbox-outline" style="                                           margin-bottom: 10px;
-                                            width: 301.87px;
-                                            height: 21px;
+                                            /*width: 301.87px;*/
+                                            /*height: 21px;*/
                                             font-family: 'Avenir LT Std', sans-serif;
                                             font-style: normal;
                                             font-weight: normal;
@@ -233,7 +244,7 @@ width: 676px;    height: 145px;
                                 </div>
                             </div>
                             <div class="col-lg-8 text-left">
-                                <button type="submit" class="btn btn-primary" style="
+                                <button type="submit" class="btn btn-primary " style="
     border-radius: 20px !important;
     border-color: #FFC107;
     background: #FFC107;
@@ -245,27 +256,28 @@ align-items: center;
 padding: 10px;
 width: 396px;
 height: 52px;
-left: 821px;
-top: 539px;
+/*left: 821px;*/
+/*top: 539px;*/
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
-line-height: 24px;
+/*line-height: 24px;*/
 color: #FFFFFF;
 ">
                                     {{ __('Sign up') }}
                                 </button>
                             </div>
-                            <div class="col-lg-9">
-                                <h5 style=" width: 301.87px;
-height: 24px;
-left: 940px;
-top: 709.85px;
+                            <div class="col-lg-9 ">
+                                <h5 style="
+/*                                width: 301.87px;*/
+/*height: 24px;*/
+/*left: 940px;*/
+/*top: 709.85px;*/
 font-family: 'Avenir LT Std', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
-line-height: 24px;
+/*font-size: 16px;*/
+/*line-height: 24px;*/
 color: rgba(114, 103, 103, 0.78);
 margin-left: 100px;
 ">

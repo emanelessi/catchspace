@@ -45,7 +45,7 @@ color: #FFFFFF;
     <!-- BEGIN LOGIN -->
     <a class=" m-grid-col-xs-offset-2 " href="{{ url('/') }}">
         <img class=" img-responsive m-grid-col-lg-offset-5-5  margin-bottom-5
-        m-grid-col-md-offset-5 m-grid-col-xs-offset-3 "
+        m-grid-col-md-offset-5 m-grid-col-xs-offset-4 "
              src="../assets/pages/img/login/catchspace-logo.png"
              style="
              /*left: 631px;*/
@@ -192,15 +192,16 @@ color: rgba(51, 51, 51, 0.7);
                 @endif
             </label>
             <button type="submit"
-                    class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4 m-grid-col-xs-offset-1"
+                    class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4
+                    m-grid-col-xs-1"
                     style="
             /*display: flex;*/
 /*flex-direction: column;*/
 /*justify-content: center;*/
 /*align-items: center;*/
 /*padding: 0px;*/
-/*width: 360.25px;*/
-/*height: 50px;*/
+width: 100%;
+/*height: 53px;*/
 background: #FFC107;
 border-color: #FFC107;
 border-radius: 20px !important;
