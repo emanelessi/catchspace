@@ -10,7 +10,7 @@
     <title>Catch Space</title>
 
     <!-- Fonts -->
-{{--    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">--}}
+    {{--    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">--}}
     <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
 
     <!-- Styles -->
@@ -401,6 +401,7 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
+
         .nav-link:hover {
             color: #FECA2F !important;
         }
@@ -429,65 +430,75 @@
     <div class="row bs-reset">
         <div class="col-md-7 login-container bs-reset" style="  height: 768px;  background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);">
-            <a class="navbar-brand" href="{{ url('/') }}" style="margin-left: 64px;color:#fff">
+            <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
                 {{--                {{ config('app.name', 'Laravel') }}--}}
-                <img class="login-logo login-6" src="../assets/pages/img/login/catchspace-logo.png"
-                     style="left: 78px;top: 32px;width: 178px;height: 48.21px;"/>
+                <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png"
+                />
             </a>
-            <div class="login-content" style="
-    width: 457px;
-    height: 308.37px;
-    left: 167px;
-    top: 305px;
-">
-                <h1 style="margin-left: 90px;width: 420px;height: 96px;left: 176px;top: 235px;
+            <div class=" m-grid-col-lg-10 m-grid-col-md-12 m-grid-col-xs-12 margin-top-150">
+
+                <h1 style="
+                /*margin-left: 90px;*/
+                /*width: 420px;*/
+                /*height: 96px;*/
+                /*left: 176px;*/
+                /*top: 235px;*/
                    font-family: 'Avenir LT Std', sans-serif;
-                   font-style: normal;font-weight: normal;font-size: 44px;line-height: 48px;
-                   text-align: center;letter-spacing: -0.022em;color: #FFFFFF;margin-top: -55px">
+                   /*font-style: normal;*/
+                   /*font-weight: normal;*/
+                   font-size: 44px;
+                   line-height: 48px;
+                   text-align: center;
+                   /*letter-spacing: -0.022em;*/
+                   color: #FFFFFF;
+                   /*margin-top: -55px*/
+">
                     For obtaining services <br>contact our team via</h1>
                 <p style="
-    margin-left: 196px;
+    /*margin-left: 196px;*/
     color: #FFF;
-    margin-top: 45px;
-    height: 80px;
+    /*margin-top: 45px;*/
+    /*height: 80px;*/
                    font-family: 'Avenir LT Std', sans-serif;
-    font-style: normal;
+    /*font-style: normal;*/
     font-size: 24px;
     line-height: 80px;
-/* or 333% */
     text-align: center;
-    letter-spacing: -0.022em;
-    width: 195px;
+    /*letter-spacing: -0.022em;*/
+    /*width: 195px;*/
     ">+970 59 96 66 563</p>
                 <p style="
-                        width: 261px;
-                        height: 32px;
-                        left: 267px;
-                        top: 476px;
+                        /*width: 261px;*/
+                        /*height: 32px;*/
+                        /*left: 267px;*/
+                        /*top: 476px;*/
                         font-family: 'Avenir LT Std', sans-serif;
-                        font-style: normal;
-                        font-weight: normal;
+                        /*font-style: normal;*/
+                        /*font-weight: normal;*/
                         font-size: 24px;
                         line-height: 29px;
-                        text-transform: capitalize;
+                        /*text-transform: capitalize;*/
                         color: #FFFFFF;
-                        margin-left: 171px;
+                        text-align: center;
+                        /*margin-left: 171px;*/
                         ">WEB@catchSpace.com</p>
 
             </div>
         </div>
         <div class="col-md-5 login-container bs-reset" style="  background-color: #7952B3;
             background-image: linear-gradient( #7952B3, #FFBF00);">
-            <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="top:32px;">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
+                <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav me-auto" style="list-style-type:none;
-                                       margin-left: 105px;float: left;color:#fff;">
-                        <li class="nav-item " style="
-    padding-right: 90px;
+                    <ul class="navbar-nav me-auto margin-top-30 margin-left-50 pull-left " style="list-style-type:none;
+                                       /*margin-left: 105px;*/
+                                       /*float: left;*/
+                                       color:#fff;">
+                        <li class="nav-item" style="
+    /*padding-right: 90px;*/
     width: 85px;
     height: 22px;
-    right: 253px;
+    /*right: 253px;*/
     font-family: 'Avenir LT Std', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -495,10 +506,10 @@
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link">Home</a></li>
-                        <li class="nav-item" style="
-    padding-right: 70px;
-    height: 22px;
-    right: 253px;
+                        <li class="nav-item " style="
+    /*padding-right: 70px;*/
+    /*height: 22px;*/
+    /*right: 253px;*/
     font-family: 'Avenir LT Std', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -506,27 +517,43 @@
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link">Contact Us </a></li>
-                    </ul>
-                    <button class="btn blue" type="submit"
-                            style="display: flex;flex-direction: column;
-                            justify-content: center;align-items: center;padding: 0px;
-                            position: absolute;width: 84px;height: 27px;
-                            left: 400px;top: 14px;border: 1px solid #FFFFFF;
-                            box-sizing: border-box;border-radius: 3px !important;
+                        <button class="btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-11
+                        m-grid-col-xs-offset-1" type="submit"
+                                style="
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            /*padding: 0px;*/
+                            /*position: absolute;*/
+                            width: 84px;
+                            height: 27px;
+                            /*left: 400px;*/
+                            /*top: 14px;*/
+                            border: 1px solid #FFFFFF;
+                            box-sizing: border-box;
+                            border-radius: 3px !important;
                             font-family: 'Avenir LT Std', sans-serif;
-                            font-style: normal;font-weight: normal;
-                            font-size: 14px;line-height: 24px;
-                            color: #FFFFFF;background-color: #845ba6;margin-right: 78px;">
-                        Login
-                    </button>
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #FFFFFF;
+                            background-color: #845ba6;
+                            /*margin-right: 78px;*/
+">
+                            Login
+                        </button>
+                    </ul>
+
                 </div>
             </nav>
             <div>
-                <img src="../assets/pages/img/login/WORKSPACES-Vector.png" style="
+                <img src="../assets/pages/img/login/WORKSPACES-Vector.png" class="img-responsive m-grid-col-lg-9 m-grid-col-md-12 m-grid-col-xs-12  margin-top-226" style="
        width: 562px;
     height: 145px;
-    left: 794px;
-    margin-top: 226px;
+    /*left: 794px;*/
+    /*margin-top: 226px;*/
 ">
             </div>
         </div>
