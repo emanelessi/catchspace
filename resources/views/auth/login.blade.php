@@ -38,13 +38,14 @@ font-weight: normal;
 /*line-height: 48px;*/
 letter-spacing: -0.022em;
 color: #FFFFFF;
-" >
+">
             Back to main
         </a>
     </div>
     <!-- BEGIN LOGIN -->
     <a class=" m-grid-col-xs-offset-2 " href="{{ url('/') }}">
-        <img class=" img-responsive m-grid-col-lg-offset-5-5 m-grid-col-md-offset-5 m-grid-col-xs-offset-4 "
+        <img class=" img-responsive m-grid-col-lg-offset-5-5  margin-bottom-5
+        m-grid-col-md-offset-5 m-grid-col-xs-offset-3 "
              src="../assets/pages/img/login/catchspace-logo.png"
              style="
              /*left: 631px;*/
@@ -56,7 +57,7 @@ color: #FFFFFF;
              /*height: 48px;*/
 "/>
     </a>
-    <div >
+    <div>
         <img src="../assets/pages/img/login/vector.png" class="img-responsive margin-top-150 " style="
 /*width: 1349px;    height: 145px;*/
 /*    left: 794px;*/
@@ -78,7 +79,7 @@ color: #FFFFFF;
     /*margin-left: 25px !important;*/
 ">
             @csrf
-            <h3 class="form-title m-grid-col-lg-4-5 m-grid-col-md-4 m-grid-col-xs-4 "  style="
+            <h3 class="form-title m-grid-col-lg-4-5 m-grid-col-md-4 m-grid-col-xs-4 " style="
 /*            width: 123px; margin-bottom: 9px;*/
 /*height: 52px;*/
 /*left: 541px;*/
@@ -150,7 +151,7 @@ border-radius: 20px !important;
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                </span>
                 @enderror
             </div>
             <label class="rememberme check mt-checkbox mt-checkbox-outline" for="remember" style="
@@ -190,7 +191,9 @@ color: rgba(51, 51, 51, 0.7);
 ">{{ __('Forgot password?') }}</a>
                 @endif
             </label>
-            <button type="submit" class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4 m-grid-col-xs-offset-1" style="
+            <button type="submit"
+                    class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4 m-grid-col-xs-offset-1"
+                    style="
             /*display: flex;*/
 /*flex-direction: column;*/
 /*justify-content: center;*/
@@ -224,7 +227,7 @@ color: #FFFFFF;">  {{ __('Login') }}</button>
         /*left: 593px;*/
         /*top: 572px;*/
 " class="m-grid-col-lg-offset-4-5 m-grid-col-md-offset-4 m-grid-col-xs-offset-3">Don’t have an account?
-            <a href="javascript:;" id="register-btn"  style="color: #FFC107;">Sign up</a>
+            <a href="javascript:;" id="register-btn" style="color: #FFC107;">Sign up</a>
         </p>
     </div>
     </body>

@@ -443,12 +443,12 @@
         <div class="col-md-7 login-container bs-reset" style="
          height: 768px; background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);">
-            <a class=" m-grid-col-md-offset-1 " href="{{ url('/') }}">
+            <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
                 {{--                {{ config('app.name', 'Laravel') }}--}}
                 <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png"
                 />
             </a>
-            <div class="m-grid m-grid-col-md-offset-1 margin-top-100">
+            <div class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-12 margin-top-100">
                 <h5 style="
                         color: #FFF;
                         /*margin-top: -100px;*/
@@ -522,11 +522,11 @@
             <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
                 <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav me-auto margin-top-30 ml-20 pull-left" style="list-style-type:none;
+                    <ul class="navbar-nav me-auto margin-top-30 ml-20 pull-left " style="list-style-type:none;
                                        /*margin-left: 105px;*/
                                        /*float: left;*/
                                        color:#fff;">
-                        <li class="nav-item " style="
+                        <li class="nav-item" style="
     /*padding-right: 90px;*/
     width: 85px;
     height: 22px;
@@ -538,7 +538,7 @@
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link">Home</a></li>
-                        <li class="nav-item" style="
+                        <li class="nav-item " style="
     /*padding-right: 70px;*/
     /*height: 22px;*/
     /*right: 253px;*/
@@ -549,15 +549,15 @@
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link">Contact Us </a></li>
-                    </ul>
-                    <button class="btn blue margin-top-30 ml-50 " type="submit"
-                            style="
+                        <button class="btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-11
+                        m-grid-col-xs-offset-1" type="submit"
+                                                   style="
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
                             /*padding: 0px;*/
-                            position: absolute;
+                            /*position: absolute;*/
                             width: 84px;
                             height: 27px;
                             /*left: 400px;*/
@@ -574,8 +574,10 @@
                             background-color: #845ba6;
                             /*margin-right: 78px;*/
 ">
-                        Login
-                    </button>
+                            Login
+                        </button>
+                    </ul>
+
                 </div>
             </nav>
             <div>
