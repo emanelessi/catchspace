@@ -10,7 +10,9 @@
         }
 
     </style>
-    <div class="page-head" style="margin-bottom: 25px;">
+    <div class="page-head" style="
+    /*margin-bottom: 25px;*/
+">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
             <h1 style="
