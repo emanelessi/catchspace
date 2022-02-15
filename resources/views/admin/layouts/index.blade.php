@@ -34,7 +34,10 @@ License: You must have a valid license purchased only from themeforest(the above
 </head>
 <!-- END HEAD -->
 
-<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo" style="background-color: #E5E5E5;margin-top: -9px;">
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo" style="
+background-color: #E5E5E5;
+/*margin-top: -9px;*/
+">
 <!-- BEGIN HEADER -->
 @include('admin.layouts.header')
 <!-- END HEADER -->

@@ -10,11 +10,11 @@
     <!-- BEGIN SIDEBAR -->
     <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
     <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-    <div class="page-sidebar navbar-collapse collapse" style="
-    min-height: 1024px;
-    margin-left: -20px;
-    margin-top: -20px;
-    width: 250px;
+    <div class="page-sidebar navbar-collapse collapse margin-left--20 margin-top--20 " style="
+    /*min-height: 1024px;*/
+    /*margin-left: -20px;*/
+    /*margin-top: -20px;*/
+    /*width: 250px;*/
     height: 946px !important;
     background: #7952B3;
     ">
@@ -28,15 +28,14 @@
         <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
             <li class="nav-item start active open">
             <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="
+   font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    text-transform: capitalize;
-    margin-left: 7px;
-    margin-bottom: 18px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
 
 ">
                     <i class="icon-home"></i>
@@ -44,15 +43,14 @@
                 </a>
             </li>
             <li class="nav-item @if(preg_match('/cowork-provider/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="
+   font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    text-transform: capitalize;
-    margin-left: 7px;
-    margin-bottom: 18px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
 
 ">
                     <i class="icon-user"></i>
@@ -61,15 +59,14 @@
 
             </li>
             <li class="nav-item @if(preg_match('/work-space/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="
+    font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    text-transform: capitalize;
-    margin-left: 7px;
-    margin-bottom: 18px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
 
 ">
                     <i class="icon-bulb"></i>
@@ -77,15 +74,14 @@
                 </a>
             </li>
             <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="
+   font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    text-transform: capitalize;
-    margin-left: 7px;
-    margin-bottom: 18px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
 
 ">
                     <i class="icon-docs"></i>
@@ -93,15 +89,14 @@
                 </a>
             </li>
             <li class="nav-item @if(preg_match('/system/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="
+  font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    text-transform: capitalize;
-    margin-left: 7px;
-    margin-bottom: 18px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
 
 ">
                     <i class="icon-settings"></i>
