@@ -17,8 +17,8 @@ class CreatePoliciesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('body');
-            $table->unsignedBigInteger('Providerid');
-            $table->foreign('Providerid')->references('id')->on('providers')->cascadeOnDelete();
+            $table->unsignedBigInteger('provider_id');
+            $table->foreign('provider_id')->references('id')->on('providers')->cascadeOnDelete();
             $table->timestamps();
         });
     }
