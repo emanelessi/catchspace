@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Attribute extends Model
 {
     use HasFactory;
+
     public function providerAttributes()
     {
         return $this->hasMany(ProviderAttribute::class, 'provider_id', 'id');
