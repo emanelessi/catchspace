@@ -15,6 +15,11 @@ class CreatePricingsTable extends Migration
     {
         Schema::create('pricings', function (Blueprint $table) {
             $table->id();
+            $table->double('price');
+            $table->unsignedBigInteger('work_space_id');
+            $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
+            $table->unsignedBigInteger('rent_type_id');
+            $table->foreign('rent_type_id')->references('id')->on('rent_types')->onDelete('cascade');
             $table->timestamps();
         });
     }

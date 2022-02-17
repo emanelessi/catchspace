@@ -15,6 +15,11 @@ class CreateWorkSpaceServicesTable extends Migration
     {
         Schema::create('work_space_services', function (Blueprint $table) {
             $table->id();
+            $table->string('value');
+            $table->unsignedBigInteger('work_space_id');
+            $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
+            $table->unsignedBigInteger('service_id');
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
             $table->timestamps();
         });
     }
