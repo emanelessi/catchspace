@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Policies extends Model
 {
     use HasFactory;
+
+    public function provider()
+    {
+        return $this->belongsTo(Provider::class, 'provider_id');
+    }
 }
