@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Addons extends Model
 {
     use HasFactory;
+    public function WorkSpaceAddons(){
+        return $this->hasMany(WorkSpaceAddons::class,'addon_id','id');
+    }
 }
