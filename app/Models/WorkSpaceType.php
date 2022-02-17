@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class WorkSpaceType extends Model
 {
     use HasFactory;
-    public function workSpace()
+    public function workSpaces()
     {
         return $this->hasMany(WorkSpace::class, 'work_space_type_id', 'id');
     }
