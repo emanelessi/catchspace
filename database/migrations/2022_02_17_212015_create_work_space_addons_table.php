@@ -15,6 +15,11 @@ class CreateWorkSpaceAddonsTable extends Migration
     {
         Schema::create('work_space_addons', function (Blueprint $table) {
             $table->id();
+            $table->string('value');
+            $table->unsignedBigInteger('work_space_id');
+            $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
+            $table->unsignedBigInteger('addon_id');
+            $table->foreign('addon_id')->references('id')->on('addons')->onDelete('cascade');
             $table->timestamps();
         });
     }
