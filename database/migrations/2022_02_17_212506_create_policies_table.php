@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkSpaceAddonsTable extends Migration
+class CreatePoliciesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateWorkSpaceAddonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('work_space_addons', function (Blueprint $table) {
+        Schema::create('policies', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
@@ -27,6 +26,6 @@ class CreateWorkSpaceAddonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('work_space_addons');
+        Schema::dropIfExists('policies');
     }
 }
