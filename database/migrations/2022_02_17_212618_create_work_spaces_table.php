@@ -15,6 +15,12 @@ class CreateWorkSpacesTable extends Migration
     {
         Schema::create('work_spaces', function (Blueprint $table) {
             $table->id();
+            $table->integer('capacity');
+            $table->unsignedBigInteger('work_space_type_id');
+            $table->foreign('work_space_type_id')->references('id')->on('work_space_types')->cascadeOnDelete();
+            $table->unsignedBigInteger('provider_id');
+            $table->foreign('provider_id')->references('id')->on('providers')->cascadeOnDelete();
+
             $table->timestamps();
         });
     }

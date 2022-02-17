@@ -15,6 +15,12 @@ class CreateProviderAttributesTable extends Migration
     {
         Schema::create('provider_attributes', function (Blueprint $table) {
             $table->id();
+            $table->string('value');
+            $table->unsignedBigInteger('provider_id');
+            $table->foreign('provider_id')->references('id')->on('providers')->cascadeOnDelete();
+            $table->unsignedBigInteger('attribute_id');
+            $table->foreign('attribute_id')->references('id')->on('attributes')->cascadeOnDelete();
+
             $table->timestamps();
         });
     }
