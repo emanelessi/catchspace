@@ -20,7 +20,7 @@ class CreateProvidersTable extends Migration
             $table->string('address');
             $table->string('logo');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('User')->cascadeOnDelete();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }
