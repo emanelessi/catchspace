@@ -13,15 +13,15 @@ class Provider extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
-    public function policie()
+    public function policies()
     {
         return $this->hasMany(Policies::class, 'provider_id', 'id');
     }
-    public function providerAttribute()
+    public function providerAttributes()
     {
         return $this->hasMany(ProviderAttribute::class, 'provider_id', 'id');
     }
-    public function workSpace()
+    public function workSpaces()
     {
         return $this->hasMany(WorkSpace::class, 'provider_id', 'id');
     }
