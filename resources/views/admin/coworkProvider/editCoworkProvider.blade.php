@@ -3,7 +3,7 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color:#8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
 
     </style>
@@ -28,10 +28,10 @@ color: #333333;
 ">Cowork provider</h1>
         </div>
         <!-- END PAGE TITLE -->
-        <div class="row">
+        <div class="row ">
             <div class="col-md-12">
                 <!-- BEGIN PROFILE SIDEBAR -->
-                <div>
+                <div class="m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-12 ">
                     <!-- PORTLET MAIN -->
                     <div class="portlet light profile-sidebar-portlet bordered"
                          style="border-bottom: 1px solid #eef1f5;height: 674px;border-radius: 20px !important;">
@@ -45,7 +45,7 @@ color: #333333;
                         </div>
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
-                        <div class="profile-usertitlemargin-top-40" style="
+                        <div class="profile-usertitle margin-top-40" style="
                         text-align: justify;
                         /*margin-top: 47px;*/
 ">
@@ -56,7 +56,8 @@ font-size: 24px;
 line-height: 137.5%;
 color: #111827;
              font-family: AvenirLTStd-Book;
-"> Omar D.</div>
+"> Omar D.
+                            </div>
                             <div class="profile-usertitle-job" style="
 /*font-style: normal;*/
 /*font-weight: normal;*/
@@ -64,7 +65,8 @@ font-size: 14px;
 line-height: 157%;
 color: #6B7280;
              font-family: AvenirLTStd-Book;
-"> Los Angeles USA</div>
+"> Los Angeles USA
+                            </div>
                         </div>
                         <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
                         <div>
@@ -83,7 +85,8 @@ color: #6B7280;
                                                 <div class="tab-pane active" id="tab_1_1">
                                                     <form role="form" action="#">
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace Name *</label>
+                                                            <label class="control-label" style="color:#6B7280;">Workspace
+                                                                Name *</label>
                                                             <input type="text" placeholder="Tools" class="form-control"
                                                                    style="
                                                                        height: 40px;
@@ -92,8 +95,10 @@ color: #6B7280;
                                                                        border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Owner Name *</label>
-                                                            <input type="text" placeholder="Omar D." class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Owner
+                                                                Name *</label>
+                                                            <input type="text" placeholder="Omar D."
+                                                                   class="form-control"
                                                                    style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -105,9 +110,11 @@ color: #6B7280;
                                                              /*margin-left: 16px;*/
                                                              /*margin-right: 16px;*/
 ">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace Address*</label>
-                                                            <input type="text" placeholder="Al-rehab mall, remal street, Gaza, palestine"
-                                                                   class="form-control"   style="
+                                                            <label class="control-label" style="color:#6B7280;">Workspace
+                                                                Address*</label>
+                                                            <input type="text"
+                                                                   placeholder="Al-rehab mall, remal street, Gaza, palestine"
+                                                                   class="form-control" style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
                                                                        border-radius: 8px !important;
@@ -118,27 +125,31 @@ color: #6B7280;
                                                 <!-- END PERSONAL INFO TAB -->
                                             </div>
                                         </div>
-                                    </div> <button type="button" class="btn btn-primary " style="
+                                    </div>
+                                    <button type="button"
+                                            class="btn btn-primary margin-top--250 margin-left-90 m-grid-col-xs-offset-3 "
+                                            style="
                                                                width: 165px;
                                                                height: 41.2px;
-                                                               flex-grow: 0;
-                                                               display: flex;
-                                                               flex-direction: column;
-                                                               justify-content: center;
+                                                               /*flex-grow: 0;*/
+                                                               /*display: flex;*/
+                                                               /*flex-direction: column;*/
+                                                               /*justify-content: center;*/
                                                                border-color: #7952b3;
                                                                align-items: center;
-                                                               margin: -155px 0 0 755px;
+                                                               /*margin: -155px 0 0 755px;*/
                                                                padding: 0;
                                                                border-radius: 8px !important;
                                                                background-color: #7952b3;
                                                                 font-family: AvenirLTStd-Book;
-                                                               font-style: normal;
-                                                               font-weight: 600;
-                                                               font-size: 14px;
+                                                               /*font-style: normal;*/
+                                                               /*font-weight: 600;*/
+                                                               /*font-size: 14px;*/
                                                                line-height: 24px;
                                                                color: #FFFFFF;
                                                                ">
-                                        Save Change </button>
+                                        Save Change
+                                    </button>
                                 </div>
                             </div>
                         </div>

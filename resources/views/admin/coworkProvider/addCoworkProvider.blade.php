@@ -148,27 +148,30 @@ color: #333333;
                                                     <!-- END PERSONAL INFO TAB -->
                                                 </div>
                                             </div>
-                                        </div> <button type="button" class="btn btn-primary " style="
+                                        </div>   <button type="button"
+                                                         class="btn btn-primary margin-top--250 margin-left-90 m-grid-col-xs-offset-3 "
+                                                         style="
                                                                width: 165px;
                                                                height: 41.2px;
-                                                               flex-grow: 0;
-                                                               display: flex;
-                                                               flex-direction: column;
-                                                               justify-content: center;
+                                                               /*flex-grow: 0;*/
+                                                               /*display: flex;*/
+                                                               /*flex-direction: column;*/
+                                                               /*justify-content: center;*/
                                                                border-color: #7952b3;
                                                                align-items: center;
-                                                               margin: -155px 0 0 755px;
+                                                               /*margin: -155px 0 0 755px;*/
                                                                padding: 0;
                                                                border-radius: 8px !important;
                                                                background-color: #7952b3;
                                                                 font-family: AvenirLTStd-Book;
-                                                               font-style: normal;
-                                                               font-weight: 600;
-                                                               font-size: 14px;
+                                                               /*font-style: normal;*/
+                                                               /*font-weight: 600;*/
+                                                               /*font-size: 14px;*/
                                                                line-height: 24px;
                                                                color: #FFFFFF;
                                                                ">
-                                            Save Change </button>
+                                            Save Change
+                                        </button>
                                     </div>
                                 </div>
                             </div>

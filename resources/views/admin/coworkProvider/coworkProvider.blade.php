@@ -22,19 +22,11 @@
         }
 
     </style>
-    <div class="page-head" style="
-    /*margin-bottom: 25px;*/
-">
+    <div class="page-head" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1 style="
-      font-family: AvenirLTStd-Book;
-            /*font-weight: 400;*/
-            font-size: 30px;
-            letter-spacing: -0.022em;
-            color: #333333;
-            /*margin-left: 27px;*/
-">
+            <h1 style="font-family: Poppins-Semibold;font-style: normal;font-weight: 400;font-size: 40px;
+/* or 120% */letter-spacing: -0.022em;color: #333333;margin-left: 27px;">
                 Cowork provider
             </h1>
         </div>
@@ -173,7 +165,7 @@
                         <div class="table-scrollable table-scrollable-borderless">
                             <table class="table  table-light" style="background-color: #E5E5E5;">
                                 <thead>
-                                <tr class="uppercase">
+                                <tr >
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/

@@ -26,27 +26,97 @@
                 <!-- BEGIN BORDERED TABLE PORTLET-->
                 <div class="portlet light portlet-fit bordered" style="background-color: #E5E5E5;border-color: #E5E5E5 !important;">
                     <div class="portlet-title" style="border-color: #E5E5E5;">
-                        <div class="actions" style="
-    margin-top: -65px;
-">
+                        <div class="actions">
                             <div class="btn-group open">
                                 <a class="btn btn-sm blue btn-outline btn-circle" href="javascript:;"
-                                   style="background-color: #FFFFFF;border-color: #FFFFFF;border-radius: 5px !important;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 14px;line-height: 21px;color: #292D32;width: 118px;height: 35px;"
-                                   data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true"> Filter By
+                                   style="
+                                   background-color: #FFFFFF;
+                                   border-color: #FFFFFF;
+                                   border-radius: 5px !important;
+                                    font-family: AvenirLTStd-Book;
+                                   font-weight: normal;
+                                   font-size: 14px;
+                                   line-height: 21px;
+                                   color: #292D32;
+                                   /*width: 118px;*/
+                                   /*height: 35px;*/
+"
+                                   data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
+                                   aria-expanded="true"> Filter By
                                     <i class="fa fa-angle-down"></i>
                                 </a>
-                                <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
-                                    <div class="span" style="margin-bottom: 5px;padding: 10px;color: #fff;left: 1258px;top: 299px;background: #7952B3;border-radius: 5px !important;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 15px;line-height: 15px;">
-                                        <span style="margin-left: 35px;">From A to Z</span>
+                                <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right" style="
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    box-sizing: border-box;
+    border-radius: 10px !important;
+">
+                                    <div class="span margin-bottom-2  padding-tb-5 "
+                                         style="
+                                        /*margin-bottom: 5px;*/
+                                        /*padding: 10px;*/
+                                        color: #fff;
+                                        /*left: 1258px;*/
+                                        /*top: 299px;*/
+                                        background: #7952B3;
+                                        border-radius: 5px !important;
+                                        font-family: AvenirLTStd-Book;
+                                        font-weight: normal;
+                                        font-size: 15px;
+                                        line-height: 15px;
+">
+                                        <span class="margin-left-40" style="
+                                        /*margin-left: 35px;*/
+">From A to Z</span>
                                     </div>
-                                    <div class="span" style="margin-bottom: 5px;padding: 10px;color: #fff;left: 1258px;top: 299px;background: #7952B3;border-radius: 5px !important;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 15px;line-height: 15px;">
-                                        <span style="margin-left: 35px;">From Z to A</span>
+                                    <div class="span margin-bottom-2  padding-tb-5 "
+                                         style="
+                                        /*margin-bottom: 5px;*/
+                                        /*padding: 10px;*/
+                                        color: #fff;
+                                        /*left: 1258px;*/
+                                        /*top: 299px;*/
+                                        background: #7952B3;
+                                        border-radius: 5px !important;
+                                        font-family: AvenirLTStd-Book;
+                                        font-weight: normal;
+                                        font-size: 15px;
+                                        line-height: 15px;">
+                                        <span  class="margin-left-40" style="
+                                        /*margin-left: 35px;*/
+">From Z to A</span>
                                     </div>
-                                    <div class="span" style="margin-bottom: 5px;padding: 10px;color: #fff;left: 1258px;top: 299px;background: #7952B3;border-radius: 5px !important;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 15px;line-height: 15px;">
-                                        <span style="margin-left: 35px;">The latest</span>
+                                    <div class="span margin-bottom-2  padding-tb-5 "
+                                         style="/*margin-bottom: 5px;*/
+                                        /*padding: 10px;*/
+                                        color: #fff;
+                                        /*left: 1258px;*/
+                                        /*top: 299px;*/
+                                        background: #7952B3;
+                                        border-radius: 5px !important;
+                                        font-family: AvenirLTStd-Book;
+                                        font-weight: normal;
+                                        font-size: 15px;
+                                        line-height: 15px;">
+                                        <span class="margin-left-40" style="
+                                        /*margin-left: 35px;*/
+">The latest</span>
                                     </div>
-                                    <div class="span" style="margin-bottom: 5px;padding: 10px;color: #fff;left: 1258px;top: 299px;background: #7952B3;border-radius: 5px !important;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 15px;line-height: 15px;">
-                                        <span style="margin-left: 35px;">The oldest</span>
+                                    <div class="span margin-bottom-2  padding-tb-5 "
+                                         style="/*margin-bottom: 5px;*/
+                                        /*padding: 10px;*/
+                                        color: #fff;
+                                        /*left: 1258px;*/
+                                        /*top: 299px;*/
+                                        background: #7952B3;
+                                        border-radius: 5px !important;
+                                        font-family: AvenirLTStd-Book;
+                                        font-weight: normal;
+                                        font-size: 15px;
+                                        line-height: 15px;">
+                                        <span class="margin-left-40" style="
+                                        /*margin-left: 35px;*/
+">The oldest</span>
                                     </div>
                                 </div>
                             </div>
@@ -55,92 +125,267 @@
 
                     <div class="portlet-body">
                         <div class="table-scrollable table-scrollable-borderless">
-                            <table class="table table-light" style="background-color: #E5E5E5;">
+                            <table class="table table-light " style="background-color: #E5E5E5;">
                                 <thead>
-                                <tr class="uppercase">
+                                <tr>
                                     <th style="
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 23px;
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
     letter-spacing: -0.022em;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 "> ID </th>
                                     <th style="
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 23px;
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
     letter-spacing: -0.022em;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 "> Work space Name </th>
                                     <th style="
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 23px;
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
     letter-spacing: -0.022em;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 "> Name </th>
                                     <th style="
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 23px;
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
     letter-spacing: -0.022em;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 "> Job title </th>
                                 </tr>
                                 </thead >
-                                <tbody style="
-    width: 59px;
-    height: 53px;
-    left: 542px;
-    top: 369px;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 23px;
-    line-height: 80px;
+                                <tbody >
+                                <tr>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
     letter-spacing: 0.02em;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     color: #000000;
-">
-                                <tr>
-                                    <td> 1 </td>
-                                    <td> Mark </td>
-                                    <td> Otto </td>
-                                    <td> makr124 </td>
+"> 1 </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Mark </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Otto </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> makr124 </td>
                                 </tr>
                                 <tr>
-                                    <td> 2 </td>
-                                    <td> Jacob </td>
-                                    <td> Nilson </td>
-                                    <td> jac123 </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> 2 </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Jacob </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Nilson </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> jac123 </td>
                                 </tr>
                                 <tr>
-                                    <td> 3 </td>
-                                    <td> Larry </td>
-                                    <td> Cooper </td>
-                                    <td> lar </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> 3 </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Larry </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Cooper </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> lar </td>
                                 </tr>
                                 <tr>
-                                    <td> 4 </td>
-                                    <td> Sandy </td>
-                                    <td> Lim </td>
-                                    <td> sanlim </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> 4 </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Sandy </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Lim </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> sanlim </td>
 
                                 </tr>
                                 </tbody>

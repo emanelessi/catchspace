@@ -10,11 +10,25 @@
         }
 
     </style>
-    <div class="page-head" style="margin-bottom: 25px;">
+    <div class="page-head" style="
+    /*margin-bottom: 25px;*/
+">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1 style="width: 557px;height: 47px;left: 296px;top: 104px;font-style: normal;font-weight: 600;font-size: 30px;line-height: 48px;
-/* or 120% */letter-spacing: -0.022em;color: #333333;font-family: Poppins-Semibold;margin-bottom: 20px;">Add type in Tools</h1>
+            <h1 style="
+            /*width: 557px;*/
+            /*height: 47px;*/
+            /*left: 296px;*/
+            /*top: 104px;*/
+            /*font-style: normal;*/
+            /*font-weight: 600;*/
+            font-size: 30px;
+            /*line-height: 48px;*/
+/* or 120% */letter-spacing: -0.022em;
+color: #333333;
+             font-family: AvenirLTStd-Book;
+/*margin-bottom: 20px;*/
+">Add type in Tools</h1>
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">

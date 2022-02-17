@@ -11,11 +11,25 @@
 
     </style>
 
-    <div class="page-head" style="margin-bottom: 25px;">
+    <div class="page-head" style="
+    /*margin-bottom: 25px;*/
+">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1 style="width: 557px;height: 47px;left: 296px;top: 104px;font-style: normal;font-weight: 600;font-size: 30px;line-height: 48px;
-/* or 120% */letter-spacing: -0.022em;color: #333333;font-family: Poppins-Semibold;margin-bottom: 20px;">Add new worker</h1>
+            <h1 style="
+            /*width: 557px;*/
+            /*height: 47px;*/
+            /*left: 296px;*/
+            /*top: 104px;*/
+            /*font-style: normal;*/
+            /*font-weight: 600;*/
+            font-size: 30px;
+            /*line-height: 48px;*/
+/* or 120% */letter-spacing: -0.022em;
+color: #333333;
+             font-family: AvenirLTStd-Book;
+/*margin-bottom: 20px;*/
+">Add new worker</h1>
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">
@@ -24,21 +38,48 @@
                 <div>
                     <!-- PORTLET MAIN -->
                     <div class="portlet light profile-sidebar-portlet bordered"
-                         style="border-bottom: 1px solid #eef1f5;  height: 720px;border-radius: 20px !important;">
+                         style="
+                         border-bottom: 1px solid #eef1f5;
+                          height: 720px;
+                          border-radius: 20px !important;">
                         <!-- SIDEBAR USERPIC -->
-                        <div class="profile-userpic" style="float: left;width: 300px;margin-right: -35px;">
+                        <div class="profile-userpic  margin-right--12" style="
+                        float: left;
+                        width: 300px;
+                        /*margin-right: -35px;*/
+">
                             <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
                         </div>
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
-                        <b class="profile-usertitle" style="text-align: justify;margin-top: 47px;">
+                        <b class="profile-usertitle margin-top-40" style="
+                        text-align: justify;
+                        /*margin-top: 47px;*/
+">
                             <button type="button" data-loading-text="Loading..."
-                                    class="demo-loading-btn btn btn-primary"
-                                    style="width: 165px;height: 41.2px;flex-grow: 0;display: flex;flex-direction: column;justify-content: center;
-                                         border-color:#eaeaea;margin-right:600px;  margin-top: 60px; align-items: center;padding: 0;
-                                           color: #6b7280;border-radius: 8px !important;  background-color: #eaeaea;"
-                            > Upload wokspace logo
-                            </button>
+                                    class="demo-loading-btn btn btn-primary margin-top-60"
+                                    style="
+                                         /*width: 165px;*/
+                                         /*height: 41.2px;*/
+                                         /*flex-grow: 0;*/
+                                         /*display: flex;*/
+                                         /*flex-direction: column;*/
+                                         /*justify-content: center;*/
+                                         border-color:#eaeaea;
+                                         /*margin-right:600px;*/
+                                         /*margin-top: 60px;*/
+                                         align-items: center;
+                                         /*padding: 0;*/
+                                         border-radius: 8px !important;
+                                         background-color: #eaeaea;
+             font-family: AvenirLTStd-Book;
+                                         /*font-weight: 600;*/
+                                         font-size: 14px;
+                                         line-height: 24px;
+                                         color: #6B7280;
+                                         "
+                            >  Upload wokspace logo
+                            </button></b>
 
                             <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
                             <div>
@@ -123,7 +164,7 @@
                             <!-- END BEGIN PROFILE SIDEBAR -->
 
 
-                        </b></div>
+                        </div>
                 </div>
             </div>
         </div>
