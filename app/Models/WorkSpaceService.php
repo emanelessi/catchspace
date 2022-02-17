@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class WorkSpaceService extends Model
 {
     use HasFactory;
-    public function Service(){
+    public function service(){
         return $this->belongsTo(Service::class,'service_id');
     }
-    public function WorkSpace(){
+    public function workSpace(){
         return $this->belongsTo(WorkSpace::class,'work_space_id');
     }
 }
