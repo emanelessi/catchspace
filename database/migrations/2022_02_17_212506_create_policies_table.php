@@ -15,6 +15,10 @@ class CreatePoliciesTable extends Migration
     {
         Schema::create('policies', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('body');
+            $table->unsignedBigInteger('Providerid');
+            $table->foreign('Providerid')->references('id')->on('providers')->cascadeOnDelete();
             $table->timestamps();
         });
     }
