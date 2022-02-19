@@ -20,6 +20,7 @@ class CreatePricingsTable extends Migration
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
             $table->unsignedBigInteger('rent_type_id');
             $table->foreign('rent_type_id')->references('id')->on('rent_types')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

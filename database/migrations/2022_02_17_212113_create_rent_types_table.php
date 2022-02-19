@@ -16,6 +16,7 @@ class CreateRentTypesTable extends Migration
         Schema::create('rent_types', function (Blueprint $table) {
             $table->id();
             $table->enum('type', ['Monthly','by the hour']);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

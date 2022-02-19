@@ -6,13 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class RentType extends Model
+class UserLevel extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
-    public function pricing()
-    {
-        return $this->hasMany(Pricing::class, 'rent_type_id', 'id');
-    }
 }

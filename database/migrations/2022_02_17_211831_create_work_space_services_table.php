@@ -20,6 +20,7 @@ class CreateWorkSpaceServicesTable extends Migration
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
             $table->unsignedBigInteger('service_id');
             $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

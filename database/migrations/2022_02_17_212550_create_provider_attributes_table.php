@@ -20,7 +20,7 @@ class CreateProviderAttributesTable extends Migration
             $table->foreign('provider_id')->references('id')->on('providers')->cascadeOnDelete();
             $table->unsignedBigInteger('attribute_id');
             $table->foreign('attribute_id')->references('id')->on('attributes')->cascadeOnDelete();
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }
