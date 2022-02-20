@@ -21,7 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('phone');
             $table->enum('type', ['admin','provider']);
+            $table->unsignedBigInteger('user_level_id');
+            $table->foreign('user_level_id')->references('id')->on('user_levels')->cascadeOnDelete();
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

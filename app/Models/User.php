@@ -48,4 +48,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Provider::class, 'user_id', 'id');
     }
+    public function userLevel()
+    {
+        return $this->belongsTo(UserLevel::class, 'user_level_id');
+    }
 }

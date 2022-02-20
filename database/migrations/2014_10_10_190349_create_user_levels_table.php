@@ -15,6 +15,7 @@ class CreateUserLevelsTable extends Migration
     {
         Schema::create('user_levels', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->softDeletes();
             $table->timestamps();
         });
