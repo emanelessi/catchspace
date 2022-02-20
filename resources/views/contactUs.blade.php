@@ -48,12 +48,11 @@
                 <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png"
                 />
             </a>
-            <div class=" m-grid-col-lg-10 m-grid-col-md-12 m-grid-col-xs-12 margin-top-150">
+            <div class=" m-grid-col-lg-11-5 m-grid-col-md-12 m-grid-col-xs-12 margin-top-150">
 
                 <h1 style="
 font-family: AvenirLTStd-Book;
-                   font-size: 44px;
-                   line-height: 48px;
+                  font-size: 35px;line-height: 40px;
                    text-align: center;
                    color: #FFFFFF;
 ">
@@ -61,8 +60,8 @@ font-family: AvenirLTStd-Book;
                 <a href="tel:+970 59 96 66 563" style="
                     color: #FFF;
 font-family: AvenirLTStd-Book;
-                    font-size: 24px;
-                    line-height: 80px;
+                   font-size: 20px;
+                    line-height: 60px;
                     text-align: center;
                     display: block;
                     ">
@@ -74,14 +73,7 @@ font-family: AvenirLTStd-Book;
                     margin-left: 19px;
                     " class="fa fa-phone"></i>
                     +970 59 96 66 563</a>
-                <a href="mailto:WEB@catchSpace.com" style="
-font-family: AvenirLTStd-Book;
-                        font-size: 24px;
-                        line-height: 29px;
-                        color: #FFFFFF;
-                        text-align: center;
-                        display: block;
-                        ">
+                <a href="mailto:WEB@catchSpace.com" style="font-family: AvenirLTStd-Book;font-size: 21px;line-height: 25px;color: #FFFFFF;text-align: center;display: block;">
                     <i style="
                     background: -webkit-linear-gradient(#7952B3, #FFBF00);
                     -webkit-background-clip: text;

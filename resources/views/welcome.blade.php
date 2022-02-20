@@ -35,7 +35,9 @@
          height: 768px; background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);">
             <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
-                <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png"/>
+                <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png" style="
+    width: 145px;
+"/>
             </a>
             <div class=" m-grid-col-lg-offset-1 m-grid-col-md-12 m-grid-col-xs-12 margin-top-100">
                 <h5 style="
@@ -43,9 +45,9 @@
 font-family: AvenirLTStd-Book;
                         font-style: normal;
                         font-weight: 750;
-                        font-size: 35px;
+                        font-size: 31px;
                         letter-spacing: -0.022em;
-                        line-height: 70px;
+                        line-height: 48px;
                         ">Welcome to<br>
                     <span style="
                     background: -webkit-linear-gradient(#7952B3, #FFBF00);
@@ -54,7 +56,7 @@ font-family: AvenirLTStd-Book;
 font-family: AvenirLTStd-Book;
                     font-style: normal;
                     font-weight: 750;
-                    font-size: 52px;
+                    font-size: 43px;
                     letter-spacing: -0.022em;
 
                     ">Catch space!</span>
@@ -64,20 +66,20 @@ font-family: AvenirLTStd-Book;
 font-family: AvenirLTStd-Book;
                         font-style: normal;
                         font-weight: normal;
-                        font-size: 22px;
-                        line-height: 48px;
+                       font-size: 20px;
+                        line-height: 35px;
                         letter-spacing: -0.022em;
                         ">
                     Manage and market your space, to Help people<br>
                     to find the best coworking space,
                     we are here to<br> help you</p>
-                <div class="text-left margin-left-8 ">
+                <div class="text-left margin-left-6 ">
                     <button class="btn blue " type="submit" style="
                             border-color: #FFC107;
                             border-radius: 3px !important;
                             align-items: center;
-                            width: 175px;
-                            height: 46px;
+                           width: 113px;
+                            height: 35px;
                             background: #FFC107;
 font-family: AvenirLTStd-Book;
                             font-style: normal;
@@ -95,7 +97,7 @@ font-family: AvenirLTStd-Book;
             <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
                 <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav me-auto margin-top-30 margin-right-20 " style="list-style-type:none;
+                    <ul class="navbar-nav me-auto margin-top-25 margin-right-20 " style="list-style-type:none;
                                        color:#fff;">
                         <li class="nav-item" style="
     width: 85px;
@@ -107,30 +109,31 @@ font-family: AvenirLTStd-Book;
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link">Home</a></li>
-                        <li class="nav-item " style="
+                        <li class="nav-item margin-right-28" style="
 font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.022em;
+
 "><a class="nav-link">Contact Us </a></li>
                         <button class="btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
-                        m-grid-col-xs-12" type="submit"
+                        m-grid-col-xs-12 " type="submit"
                                 style="
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
-                            width: 84px;
-                            height: 27px;
+                            width: 70px;
+                            height: 26px;
                             border: 1px solid #FFFFFF;
                             box-sizing: border-box;
                             border-radius: 3px !important;
-font-family: AvenirLTStd-Book;
+                            font-family: AvenirLTStd-Book;
                             font-style: normal;
                             font-weight: normal;
-                            font-size: 14px;
+                            font-size: 12px;
                             line-height: 24px;
                             color: #FFFFFF;
                             background-color: #845ba6;
@@ -142,7 +145,8 @@ font-family: AvenirLTStd-Book;
                 </div>
             </nav>
             <div>
-                <img src="../assets/pages/img/login/WORKSPACES-Vector.png" class="img-responsive margin-top-226" style="
+                <img src="../assets/pages/img/login/WORKSPACES-Vector.png"
+                     class="img-responsive margin-top-195" style="
        width: 562px;
     height: 145px;
 ">
