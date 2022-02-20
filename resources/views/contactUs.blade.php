@@ -8,7 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Catch Space</title>
+    <style>
+
+
+        .btn:hover {
+            background-color: #FECA2F !important;
+        }
+
+        .nav-link:hover {
+            color: #FECA2F !important;
+        }
+    </style>
 </head>
+
 
 {{--    <body class="antialiased">--}}
 {{--        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">--}}
@@ -46,20 +58,22 @@ font-family: AvenirLTStd-Book;
                    color: #FFFFFF;
 ">
                     For obtaining services <br>contact our team via</h1>
-                <p style="
+                <a href="tel:+970 59 96 66 563" style="
                     color: #FFF;
 font-family: AvenirLTStd-Book;
                     font-size: 24px;
                     line-height: 80px;
                     text-align: center;
-                    ">+970 59 96 66 563</p>
-                <p style="
+                    display: block;
+                    ">+970 59 96 66 563</a>
+                <a href="mailto:WEB@catchSpace.com" style="
 font-family: AvenirLTStd-Book;
                         font-size: 24px;
                         line-height: 29px;
                         color: #FFFFFF;
                         text-align: center;
-                        ">WEB@catchSpace.com</p>
+                        display: block;
+                        ">WEB@catchSpace.com</a>
 
             </div>
         </div>
@@ -87,29 +101,35 @@ font-family: AvenirLTStd-Book;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.022em;
-"><a class="nav-link">Contact Us </a></li>
-                        <button class="btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-11
-                        m-grid-col-xs-offset-1" type="submit"
-                                style="
+
+"><a href="{{ url('/contact') }}" class="nav-link">Contact Us </a></li>
+                        <a class="btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-11
+                        m-grid-col-xs-offset-1"
+                           href="{{ route('login') }}" style="
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
+                            /*padding: 0px;*/
+                            /*position: absolute;*/
                             width: 84px;
                             height: 27px;
+                            /*left: 400px;*/
+                            /*top: 14px;*/
                             border: 1px solid #FFFFFF;
                             box-sizing: border-box;
                             border-radius: 3px !important;
-font-family: AvenirLTStd-Book;
+                            font-family: 'Avenir LT Std', sans-serif;
                             font-style: normal;
                             font-weight: normal;
                             font-size: 14px;
                             line-height: 24px;
                             color: #FFFFFF;
                             background-color: #845ba6;
+                            /*margin-right: 78px;*/
 ">
                             Login
-                        </button>
+                        </a>
                     </ul>
 
                 </div>

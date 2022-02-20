@@ -393,7 +393,7 @@ body.page-md {
     }
 
     .page-header.navbar .page-top {
-        background: #3B3F51
+        background: white;
     }
 
     .page-header.navbar .top-menu .navbar-nav > li.dropdown > .dropdown-toggle:hover {

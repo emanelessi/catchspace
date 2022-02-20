@@ -43,7 +43,7 @@
 font-family: AvenirLTStd-Book;
                     font-style: normal;
                     color: #333333;
-                    ">Creat an account</h1>
+                    ">Create an account</h1>
                     <p style="
                     color: #333333;
 font-family: AvenirLTStd-Book;
@@ -223,7 +223,7 @@ font-weight: normal;
 color: rgba(114, 103, 103, 0.78);
 margin-left: 100px;
 ">
-                                    You have an account?<span><a style="color: #343A40">sign in</a></span>
+                                    You have an account?<span><a style="color: #343A40" href="{{ route('login') }}">sign in</a></span>
                                 </h5>
                             </div>
                         </div>

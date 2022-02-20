@@ -38,6 +38,7 @@ font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
 ">
+            <i class="fa fa-arrow-left"></i>
             Back to main
         </a>
     </div>
@@ -74,36 +75,47 @@ color: #333333;
             <div class="form-group">
                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
-                <input class="form-control form-control-solid placeholder-no-fix @error('email') is-invalid @enderror"
-                       placeholder="Enter your email" name="email" id="email" type="email"
-                       value="{{ old('email') }}" required autocomplete="email" autofocus style="
+                <div class="input-icon">
+                    <i style=" background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;padding-top: 5px;
+                    margin-left: 19px;" class="fa fa-envelope"></i>
+                    <input
+                        class="form-control form-control-solid placeholder-no-fix @error('email') is-invalid @enderror"
+                        placeholder="Enter your email" name="email" id="email" type="email"
+                        value="{{ old('email') }}" required autocomplete="email" autofocus style="
 background: #FFFFFF;
 border: 1px solid #333333;
 box-sizing: border-box;
+padding-left: 42px;
 border-radius: 20px !important;
 "/>
-                @error('email')
-                <span class="invalid-feedback" role="alert">
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror
+                    @enderror
+                </div>
+
             </div>
             <div class="form-group">
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Password') }}</label>
-                <input
-                    class="form-control form-control-solid placeholder-no-fix @error('password') is-invalid @enderror"
-                    placeholder="******" name="password" id="password" type="password"
-                    required autocomplete="current-password" style="
-background: #FFFFFF;
-border: 1px solid #333333;
-box-sizing: border-box;
-border-radius: 20px !important;
-"/>
-                @error('password')
-                <span class="invalid-feedback" role="alert">
+                <div class="input-icon">
+                    <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 23px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 5px;
+                    margin-left: 19px;
+                    " class="fa fa-lock"></i>
+                    <input class="form-control form-control-solid placeholder-no-fix " placeholder="******" name="password" id="password" type="password" required="" autocomplete="current-password" style="background: #FFFFFF;border: 1px solid #333333;box-sizing: border-box;border-radius: 20px !important;padding-left: 42px;">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                 </span>
-                @enderror
+                    @enderror
+                </div>
             </div>
             <label class="rememberme check mt-checkbox mt-checkbox-outline" for="remember" style="
 font-family: AvenirLTStd-Book;
@@ -147,7 +159,7 @@ font-family: AvenirLTStd-Book;
         font-style: normal;
         color: #FFFFFF;
 " class="m-grid-col-lg-offset-4-5 m-grid-col-md-offset-4 m-grid-col-xs-offset-3">Don’t have an account?
-            <a href="javascript:;" id="register-btn" style="color: #FFC107;">Sign up</a>
+            <a href="{{ route('register') }}" id="register-btn" style="color: #FFC107;">Sign up</a>
         </p>
     </div>
     </body>
