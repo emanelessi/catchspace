@@ -109,7 +109,9 @@ border-radius: 20px !important;
                     padding-top: 5px;
                     margin-left: 19px;
                     " class="fa fa-lock"></i>
-                    <input class="form-control form-control-solid placeholder-no-fix " placeholder="******" name="password" id="password" type="password" required="" autocomplete="current-password" style="background: #FFFFFF;border: 1px solid #333333;box-sizing: border-box;border-radius: 20px !important;padding-left: 42px;">
+                    <input class="form-control form-control-solid placeholder-no-fix " placeholder="******"
+                           name="password" id="password" type="password" required="" autocomplete="current-password"
+                           style="background: #FFFFFF;border: 1px solid #333333;box-sizing: border-box;border-radius: 20px !important;padding-left: 42px;">
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
