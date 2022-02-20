@@ -153,14 +153,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
@@ -212,14 +233,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
@@ -270,14 +312,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
@@ -326,14 +389,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
@@ -383,14 +467,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
@@ -439,14 +544,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
@@ -491,14 +617,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
@@ -525,14 +672,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
@@ -559,14 +727,35 @@ font-family: Poppins-Semibold;            font-style: normal;
                                             </div>
                                             <div class="mt-action-buttons ">
                                                 <div >
-                                                    <button type="button" class="btn Reject" style="display: flex;flex-direction: row;align-items: center;position: absolute;width: 80.15px;height: 42.03px;background: #333333;opacity: 0.5;border-radius: 14px !important;font-family: Poppins;font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;letter-spacing: 0.4px;color: #FFFFFF;">
+                                                    <button type="button" class="btn Reject" style="display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 14px !important;
+                                                    font-family: Poppins;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 24px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;">
                                                         Reject
                                                     </button>
-                                                    <button type="button" class="btn Accept" style="display: flex;flex-direction: row;align-items: center;padding: 8px 16px;position: absolute;width: 80px;height: 40px;background: #7952B3;border-radius: 14px !important;margin-left: 100px;font-family: Poppins;font-style: normal;font-weight: normal;font-size: 16px;line-height: 24px;
-/* identical to box height */letter-spacing: 0.4px;color: #FFFFFF;
-
-
-/* Inside auto layout */">
+                                                    <button type="button" class="btn Accept" style="display: inline;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    height: 40px;
+    background: #7952B3;
+    border-radius: 14px !important;
+    margin-left: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;">
                                                         Accept
                                                     </button>
                                                 </div>
