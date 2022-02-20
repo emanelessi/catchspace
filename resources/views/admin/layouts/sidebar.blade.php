@@ -2,6 +2,9 @@
     i:hover {
         color: #FECA2F !important;
     }
+    i{
+        color:whitesmoke !important;
+    }
     /*a:hover {*/
     /*    color: #FECA2F !important;*/
     /*}*/
@@ -38,7 +41,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-home"></i>
+                    <i class="fa fa-home"></i>
                     <span class="title" >Home</span>
                 </a>
             </li>
@@ -53,7 +56,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-user"></i>
+                    <i class="fa fa-user"></i>
                     <span class="title">Cowork provider</span>
                 </a>
 
@@ -69,7 +72,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-bulb"></i>
+                    <i class="fa fa-map-marker"></i>
                     <span class="title">Work space</span>
                 </a>
             </li>
@@ -84,7 +87,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-docs"></i>
+                    <i class="fa fa-sticky-note"></i>
                     <span class="title">Workers</span>
                 </a>
             </li>
@@ -99,7 +102,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-settings"></i>
+                    <i class="fa fa-server"></i>
                     <span class="title">System</span>
                 </a>
             </li>

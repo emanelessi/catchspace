@@ -43,9 +43,9 @@ font-family: Poppins-Semibold;            font-style: normal;
                  border-radius: 10px !important;font-family: Poppins-Semibold;font-style: normal;
                  font-weight: normal;font-size: 18px;line-height: 27px;
                  color: #000000;margin-top: 7px;margin-right: 25px;">
-                <i class="icon-calendar" style="margin-right: 15px;"></i>&nbsp;
+                <i class="icon-calendar" style="margin-right: 15px;color: black !important;"></i>&nbsp;
                 <span class="thin uppercase hidden-xs" style="margin-right: 20px;">20, Jan 2021</span>&nbsp;
-                <i class="fa fa-angle-down"></i>
+                <i class="fa fa-angle-down" style="color: black !important;"></i>
             </div>
 
         </div>
@@ -57,7 +57,7 @@ font-family: Poppins-Semibold;            font-style: normal;
             <a class="dashboard-stat dashboard-stat-v2 blue" href="#"
                style="border-radius: 20px !important;height: 112.32px;left: 277px;top: 208px;background: linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%, #FFC107 103.45%);">
                 <div class="visual">
-                    <i class="fa fa-comments"></i>
+                    <i class="fa fa-user" style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
                 </div>
                 <div class="details">
                     <div class="number">
@@ -71,7 +71,7 @@ font-family: Poppins-Semibold;            font-style: normal;
             <a class="dashboard-stat dashboard-stat-v2 red" href="#"
                style="border-radius: 20px !important;height: 112.32px;left: 686px;top: 208px;background: linear-gradient(90deg, rgba(235, 194, 71, 0.9) -0.02%, #FFC107 22.34%, rgba(243, 194, 46, 0.795918) 64.56%, #7952B3 95.36%);">
                 <div class="visual">
-                    <i class="fa fa-bar-chart-o"></i>
+                    <i class="fa fa-map-marker" style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
                 </div>
                 <div class="details">
                     <div class="number">
@@ -85,7 +85,7 @@ font-family: Poppins-Semibold;            font-style: normal;
             <a class="dashboard-stat dashboard-stat-v2 green" href="#"
                style="border-radius: 20px !important;height: 112.32px;left: 1068px;top: 208px;background: linear-gradient(90deg, #7952B3 29.67%, rgba(132, 99, 181, 0.854962) 50.51%, #FFC107 100%);">
                 <div class="visual">
-                    <i class="fa fa-shopping-cart"></i>
+                    <i class="fa fa-sticky-note" style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
                 </div>
                 <div class="details">
                     <div class="number">

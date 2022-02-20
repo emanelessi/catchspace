@@ -39,7 +39,7 @@
                     <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
                     <span class="input-group-btn">
                                 <a href="javascript:;" class="btn submit">
-                                    <i class="icon-magnifier"></i>
+                                    <i class="icon-magnifier" style="color: #978D8D !important;"></i>
                                 </a>
                             </span>
                 </div>
