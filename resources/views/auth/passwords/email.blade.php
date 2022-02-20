@@ -28,6 +28,7 @@ font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
 ">
+            <i class="fa fa-arrow-left"></i>
             Back to main
         </a>
     </div>
@@ -64,36 +65,49 @@ color: #FFFFFF;
             line-height: 30px;
 ">Please enter your registered email address.<br>
                 We'll send instructions to help reset your<br>
-                password</h5>
+                Email</h5>
             <div class="form-group margin-bottom-15">
                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
-                <input class="form-control form-control-solid placeholder-no-fix @error('email') is-invalid @enderror"
-                       placeholder="enter your email" name="email" id="email" type="email"
-                       value="{{ old('email') }}" required autocomplete="email" autofocus style="
+                <div class="input-icon">
+
+                    <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 7px;
+                    margin-left: 19px;
+                    " class="fa fa-envelope"></i>
+
+                    <input
+                        class="form-control form-control-solid placeholder-no-fix @error('email') is-invalid @enderror"
+                        placeholder="enter your email" name="email" id="email" type="email"
+                        value="{{ old('email') }}" onfocus="this.placeholder = ''" required autocomplete="email"
+                        autofocus style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #333333;
     box-sizing: border-box;
 "/>
-                @error('email')
-                <span class="invalid-feedback" role="alert">
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror
+                    @enderror
+                </div>
             </div>
 
-            <button type="submit" class="btn green" style="
-            border-color: #FFC107;
-            border-radius: 20px !important;
-            width: 100%;
-            height: 53px;
-            background: #FFC107;
+            <button type="submit"
+                    class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4
+                    m-grid-col-xs-1"
+                    style="
+width: 100%;
+background: #FFC107;
+border-color: #FFC107;
+border-radius: 20px !important;
 font-family: AvenirLTStd-Book;
-            font-size: 22px;
-            color: #FFFFFF;
-">  {{ __('Log in') }}</button>
+color: #FFFFFF;">  {{ __('Send') }}</button>
         </form>
         <!-- END LOGIN FORM -->
 

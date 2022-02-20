@@ -25,6 +25,7 @@ font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
 ">
+            <i class="fa fa-arrow-left"></i>
             Back to main
         </a>
     </div>
@@ -48,7 +49,7 @@ color: #FFFFFF;
                 {{ session('status') }}
             </div>
         @endif
-        <img class=" m-grid-col-lg-2 m-grid-col-md-2 m-grid-col-xs-3 margin-left-70"
+        <img class="margin-top-20 m-grid-col-lg-2 m-grid-col-md-2 m-grid-col-xs-3 margin-left-70"
              src="../assets/pages/img/login/Email.png"
         />
         <h3 class="form-title m-grid-col-lg-10 m-grid-col-md-10 m-grid-col-xs-10 "

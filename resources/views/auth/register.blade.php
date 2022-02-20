@@ -61,33 +61,57 @@ font-family: AvenirLTStd-Book;
                         <div class="form-group margin-bottom-15">
                             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Name') }}</label>
-                            <input
-                                class="form-control form-control-solid placeholder-no-fix  @error('name') is-invalid @enderror"
-                                placeholder="name" id="name" type="text" name="name"
-                                value="{{ old('name') }}" required autocomplete="name" autofocus
-                                style="
+                            <div class="input-icon">
+                                <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 20px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 10px;
+                    margin-left: 19px;                    height: 40px;
+
+                    " class="fa fa-user"></i>
+
+                                <input
+                                    class="form-control form-control-solid placeholder-no-fix  @error('name') is-invalid @enderror"
+                                    placeholder="name" onfocus="this.placeholder = ''" id="name" type="text" name="name"
+                                    value="{{ old('name') }}" required autocomplete="name" autofocus
+                                    style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
 "/>
-                            @error('name')
-                            <span class="invalid-feedback" role="alert">
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                            @enderror
+                                @enderror
+                            </div>
                         </div>
                         <div class="form-group margin-bottom-15">
                             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Co-work Space Name') }}</label>
+                            <div class="input-icon">
+
+                            <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 23px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 10px;
+                    margin-left: 19px;                    height: 40px;
+
+                    " class="fa fa-map-marker"></i>
+
                             <input
                                 class="form-control form-control-solid placeholder-no-fix  @error('Co-name') is-invalid @enderror"
-                                placeholder="Co-work space name" id="Co-name" type="text" name="Co-name"
+                                placeholder="Co-work space name" onfocus="this.placeholder = ''" id="Co-name" type="text" name="Co-name"
                                 value="{{ old('Co-name') }}" required autocomplete="Co-name" autofocus
                                 style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -97,56 +121,92 @@ font-family: AvenirLTStd-Book;
                                             <strong>{{ $message }}</strong>
                                         </span>
                             @enderror
+                            </div>
                         </div>
                         <div class="form-group margin-bottom-15">
                             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
-                            <input
-                                class="form-control form-control-solid placeholder-no-fix @error('email') is-invalid @enderror"
-                                placeholder="Enter your email" name="email" id="email" type="email"
-                                value="{{ old('email') }}" required autocomplete="email" autofocus
-                                style="
+                            <div class="input-icon">
+                                <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 10px;
+                    margin-left: 19px;
+                    height: 40px;
+                    " class="fa fa-envelope"></i>
+
+                                <input
+                                    class="form-control form-control-solid placeholder-no-fix @error('email') is-invalid @enderror"
+                                    placeholder="Enter your email" onfocus="this.placeholder = ''" name="email"
+                                    id="email" type="email"
+                                    value="{{ old('email') }}" required autocomplete="email" autofocus
+                                    style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
 "/>
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                            @enderror
+                                @enderror
+                            </div>
                         </div>
                         <div class="form-group margin-bottom-15">
                             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                             <label class="control-label visible-ie8 visible-ie9">{{ __('phone') }}</label>
-                            <input
-                                class="form-control form-control-solid placeholder-no-fix @error('phone') is-invalid @enderror"
-                                placeholder="phone" name="phone" id="phone" type="number"
-                                value="{{ old('phone') }}" required autocomplete="phone" autofocus
-                                style="
+                            <div class="input-icon">
+                                <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 23px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 10px;
+                    margin-left: 19px;                    height: 40px;
+
+                    " class="fa fa-mobile"></i>
+
+                                <input
+                                    class="form-control form-control-solid placeholder-no-fix @error('phone') is-invalid @enderror"
+                                    placeholder="phone" name="phone" id="phone" type="number" onfocus="this.placeholder = ''"
+                                    value="{{ old('phone') }}" required autocomplete="phone" autofocus
+                                    style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
 "/>
-                            @error('phone')
-                            <span class="invalid-feedback" role="alert">
+                                @error('phone')
+                                <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                            @enderror
+                                @enderror
+                            </div>
                         </div>
                         <div class="form-group margin-bottom-15">
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Password') }}</label>
+                            <div class="input-icon">
+                                <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 23px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 10px;
+                    margin-left: 19px;                    height: 40px;
+
+                    " class="fa fa-lock"></i>
+
                             <input
                                 class="form-control form-control-solid placeholder-no-fix @error('password') is-invalid @enderror"
-                                placeholder="*******" name="password" id="password" type="password"
+                                placeholder="*******" onfocus="this.placeholder = ''" name="password" id="password" type="password"
                                 required autocomplete="current-password"
                                 style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -156,17 +216,29 @@ font-family: AvenirLTStd-Book;
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
+                            </div>
                         </div>
                         <div class="form-group margin-bottom-15">
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Confirm password') }}</label>
+                            <div class="input-icon">
+                                <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 18px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 10px;
+                    margin-left: 19px;                    height: 40px;
+
+                    " class="fa fa-check-circle"></i>
+
                             <input
                                 class="form-control form-control-solid placeholder-no-fix @error('confirm_password') is-invalid @enderror"
                                 placeholder="Confirm password" name="password-confirm"
-                                id="password-confirm" type="password"
+                                id="password-confirm" onfocus="this.placeholder = ''" type="password"
                                 required autocomplete="new-password"
                                 style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
@@ -176,6 +248,7 @@ font-family: AvenirLTStd-Book;
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-8">
@@ -194,24 +267,16 @@ font-family: AvenirLTStd-Book;
                                     </label>
                                 </div>
                             </div>
-                            <div class="col-lg-8 text-left">
-                                <button type="submit" class="btn btn-primary " style="
-    border-radius: 20px !important;
-    border-color: #FFC107;
-    background: #FFC107;
+                            <div class="col-lg-12 text-left">
+                                <button type="submit" class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-6
+                    m-grid-col-xs-1"
+                                        style="
+width: 100%;
+background: #FFC107;
+border-color: #FFC107;
+border-radius: 20px !important;
 font-family: AvenirLTStd-Book;
-    letter-spacing: -0.022em;
-    flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 10px;
-width: 396px;
-height: 52px;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-color: #FFFFFF;
-">
+color: #FFFFFF;">
                                     {{ __('Sign up') }}
                                 </button>
                             </div>

@@ -83,6 +83,7 @@ color: #333333;
                     <input
                         class="form-control form-control-solid placeholder-no-fix @error('email') is-invalid @enderror"
                         placeholder="Enter your email" name="email" id="email" type="email"
+                        onfocus="this.placeholder = ''"
                         value="{{ old('email') }}" required autocomplete="email" autofocus style="
 background: #FFFFFF;
 border: 1px solid #333333;
@@ -111,6 +112,7 @@ border-radius: 20px !important;
                     " class="fa fa-lock"></i>
                     <input class="form-control form-control-solid placeholder-no-fix " placeholder="******"
                            name="password" id="password" type="password" required="" autocomplete="current-password"
+                           onfocus="this.placeholder = ''"
                            style="background: #FFFFFF;border: 1px solid #333333;box-sizing: border-box;border-radius: 20px !important;padding-left: 42px;">
                     @error('password')
                     <span class="invalid-feedback" role="alert">

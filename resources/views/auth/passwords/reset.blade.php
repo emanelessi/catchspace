@@ -26,6 +26,7 @@ font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
 ">
+            <i class="fa fa-arrow-left"></i>
             Back to main
         </a>
     </div>
@@ -52,7 +53,7 @@ color: #FFFFFF;
         <form method="POST" action="{{ route('password.update') }}" class=" margin-right-12  margin-left-12">
             @csrf
             {{--            <input type="hidden" name="token" value="{{ $token }}">--}}
-            <img class=" m-grid-col-lg-3 m-grid-col-md-3 m-grid-col-xs-3 margin-left-70"
+            <img class="margin-top-20 m-grid-col-lg-3 m-grid-col-md-3 m-grid-col-xs-3 margin-left-70"
                  src="../assets/pages/img/login/Email.png"
             />
             <h3 class="form-title m-grid-col-lg-8 m-grid-col-md-8 m-grid-col-xs-8 " style="
@@ -75,12 +76,22 @@ color: #FFFFFF;
             {{--            </div>--}}
             <div class="form-group">
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Password') }}</label>
+                <div class="input-icon">
+                    <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 18px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 7px;
+                    margin-left: 19px;
+                    " class="fa fa-lock"></i>
+
                 <input
                     class="form-control form-control-solid placeholder-no-fix @error('password') is-invalid @enderror"
-                    placeholder="******" name="password" id="password" type="password"
+                    placeholder="******" onfocus="this.placeholder = ''" name="password" id="password" type="password"
                     required autocomplete="current-password" style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #333333;
     box-sizing: border-box;
@@ -90,16 +101,27 @@ color: #FFFFFF;
                                         <strong>{{ $message }}</strong>
                                     </span>
                 @enderror
+                </div>
             </div>
             <div class="form-group">
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Confirm password') }}</label>
+                <div class="input-icon">
+                    <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 18px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 7px;
+                    margin-left: 19px;
+                    " class="fa fa-check-circle"></i>
+
                 <input
                     class="form-control form-control-solid placeholder-no-fix @error('confirm_password') is-invalid @enderror"
                     placeholder="Confirm password" name="password-confirm"
-                    id="password-confirm" type="password"
+                    id="password-confirm" onfocus="this.placeholder = ''" type="password"
                     required autocomplete="new-password" style="
     border-radius: 20px !important;
-    height: 53px;
+    height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #333333;
     box-sizing: border-box;
@@ -109,6 +131,7 @@ color: #FFFFFF;
                                         <strong>{{ $message }}</strong>
                                     </span>
                 @enderror
+                </div>
             </div>
             <h5 class="control-label" style="
 font-family: AvenirLTStd-Book;

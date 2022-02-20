@@ -75,6 +75,7 @@ font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
 ">
+            <i class="fa fa-arrow-left"></i>
             Back to main
         </a>
     </div>
@@ -98,22 +99,46 @@ color: #FFFFFF;
                 {{ session('status') }}
             </div>
         @endif
-        <img class=" m-grid-col-lg-2 m-grid-col-md-2 m-grid-col-xs-3 margin-left-70"
+        <img class=" margin-top-20 m-grid-col-lg-2 m-grid-col-md-2 m-grid-col-xs-3 margin-left-70"
              src="../assets/pages/img/login/Email.png"
         />
         <h3 class="form-title m-grid-col-lg-11 m-grid-col-md-11 m-grid-col-xs-11"
             style="
 font-family: AvenirLTStd-Book;
 font-size: 33px;
-color: #333333;">Check Your Email</h3>
+color: #333333;margin-left: 22px;">Check Your Email</h3>
         <h5 class="control-label margin-left-15" style="
 font-family: AvenirLTStd-Book;
 font-size: 18px;
 line-height: 38px;
 
-color: #333333;"> Open your email inbox.<br>
+color: #333333;">
+            <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 7px;
+                    margin-right: 7px;
+                    " class="fa fa-dot-circle-o"></i>
+            Open your email inbox.<br>
+            <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 7px;
+                    margin-right: 7px;
+                    " class="fa fa-dot-circle-o"></i>
+
             Find our "Welcome" email.<br>
-            Click Confirm and back to login to <br>catxh space.<br></h5>
+            <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 7px;
+                    margin-right: 7px;
+                    " class="fa fa-dot-circle-o"></i>
+
+            Click Confirm and back to login to <br><span style="padding-left: 28px;">catch space.</span><br></h5>
         <!-- END LOGIN FORM -->
 
     </div>

@@ -65,7 +65,15 @@ font-family: AvenirLTStd-Book;
                     line-height: 80px;
                     text-align: center;
                     display: block;
-                    ">+970 59 96 66 563</a>
+                    ">
+                    <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 5px;
+                    margin-left: 19px;
+                    " class="fa fa-phone"></i>
+                    +970 59 96 66 563</a>
                 <a href="mailto:WEB@catchSpace.com" style="
 font-family: AvenirLTStd-Book;
                         font-size: 24px;
@@ -73,7 +81,15 @@ font-family: AvenirLTStd-Book;
                         color: #FFFFFF;
                         text-align: center;
                         display: block;
-                        ">WEB@catchSpace.com</a>
+                        ">
+                    <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 5px;
+                    margin-left: 19px;font-size: 20px;
+                    " class="fa fa-envelope"></i>
+                    WEB@catchSpace.com</a>
 
             </div>
         </div>
@@ -101,8 +117,9 @@ font-family: AvenirLTStd-Book;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.022em;
+    color: #FECA2F;
 
-"><a href="{{ url('/contact') }}" class="nav-link">Contact Us </a></li>
+"><a href="{{ url('/contact') }}" class="nav-link ">Contact Us </a></li>
                         <a class="btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-11
                         m-grid-col-xs-offset-1"
                            href="{{ route('login') }}" style="
