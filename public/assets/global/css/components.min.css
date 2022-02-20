@@ -1203,6 +1203,9 @@ code {
 .margin-top-226{
     margin-top: 226px !important
 }
+.margin-top-190{
+    margin-top: 190px !important
+}
 .margin-left-8{
     margin-left: 0.33333%!important
 }
@@ -1293,6 +1296,12 @@ code {
 }
 .margin-right--20 {
     margin-right: -13.44%!important
+}
+.margin-left-330 {
+    margin-left: 330px!important
+}
+.margin-left-530 {
+    margin-left: 530px!important
 }
 
 
@@ -1980,7 +1989,6 @@ code {
     .m-grid-col-md-offset-11 {
         margin-left: 91.66667%
     }
-
     .m-grid-col-md-12 {
         width: 100%
     }
