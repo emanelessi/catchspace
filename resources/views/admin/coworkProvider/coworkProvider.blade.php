@@ -17,7 +17,7 @@
         .cansel:hover {
             background-color:  #C4C4C436 !important;
         }
-        .delete:hover {
+        .deletee:hover {
             background-color:  #8B62C9 !important;
         }
 
@@ -33,7 +33,7 @@
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
         <div class="page-toolbar  ">
-            <button type="button" class="demo-loading-btn btn btn-primary" style="
+            <a href="{{url('/admin/add-provider')}}"  class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
              font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -48,8 +48,8 @@
                     background: #7952B3;
                     border-radius: 5px !important;
 ">
-                Add Coeork Provider
-            </button>
+                Add Cowork Provider
+            </a>
         {{--        </div>--}}
         <!-- END PAGE TOOLBAR -->
         </div>
@@ -345,7 +345,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            delet
+                                            delete
                                         </a>
                                         <a class="btn btn-outline dark"
                                            data-target="#static2" data-toggle="modal" style="
@@ -470,7 +470,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            delet
+                                            delete
                                         </a>
                                         <a class="btn btn-outline dark"
                                            data-target="#static2" data-toggle="modal" style="
@@ -583,7 +583,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            delet
+                                            delete
                                         </a>
                                         <a class="btn btn-outline dark"
                                            data-target="#static2" data-toggle="modal" style="
@@ -696,7 +696,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            delet
+                                            delete
                                         </a>
                                         <a class="btn btn-outline dark"
                                            data-target="#static2" data-toggle="modal" style="
@@ -734,7 +734,7 @@
                                                 letter-spacing: -0.011em;
                                                 color: #333333;
                                                 opacity: 0.5;
-                                                "> Are you sure about delete this Cowork provider ? </p>
+                                                "> Are you sure about deletee this Cowork provider ? </p>
                                 </div>
                                 <div class="modal-footer" style="border-top:0px;">
                                     <button type="button"
@@ -758,7 +758,7 @@
                                         ">
                                         Cancel
                                     </button>
-                                    <button type="button" data-dismiss="modal" class="btn green delete"
+                                    <button type="button" data-dismiss="modal" class="btn green deletee"
                                             style="
                                         border-radius: 10px !important;
                                         /*margin-right: 45px;*/
@@ -775,7 +775,7 @@
                                         line-height: 27px;
                                         color: #FFFFFF;
                                         ">
-                                        Delete
+                                        deletee
                                     </button>
                                 </div>
                             </div>

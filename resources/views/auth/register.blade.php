@@ -74,8 +74,8 @@ font-family: AvenirLTStd-Book;
 
                                 <input
                                     class="form-control form-control-solid placeholder-no-fix  @error('name') is-invalid @enderror"
-                                    placeholder="name" onfocus="this.placeholder = ''" id="name" type="text" name="name"
-                                    value="{{ old('name') }}" required autocomplete="name" autofocus
+                                    placeholder="name" onfocus="this.placeholder = ''" id="name" type="text" name="full_name"
+                                    value="{{ old('full_name') }}" required autocomplete="name" autofocus
                                     style="
     border-radius: 20px !important;
     height: 53px;padding-left: 42px;
