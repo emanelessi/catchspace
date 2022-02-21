@@ -9,8 +9,6 @@
 
     <title>Catch Space</title>
     <style>
-
-
         .btn:hover {
             background-color: #FECA2F !important;
         }
@@ -45,8 +43,9 @@
         <div class="col-md-7 login-container bs-reset" style="  height: 768px;  background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);">
             <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
-                <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png"
-                />
+                <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png" style="
+    width: 145px;
+"/>
             </a>
             <div class=" m-grid-col-lg-11-5 m-grid-col-md-12 m-grid-col-xs-12 margin-top-150">
 
@@ -73,7 +72,8 @@ font-family: AvenirLTStd-Book;
                     margin-left: 19px;
                     " class="fa fa-phone"></i>
                     +970 59 96 66 563</a>
-                <a href="mailto:WEB@catchSpace.com" style="font-family: AvenirLTStd-Book;font-size: 21px;line-height: 25px;color: #FFFFFF;text-align: center;display: block;">
+                <a href="mailto:WEB@catchSpace.com"
+                   style="font-family: AvenirLTStd-Book;font-size: 21px;line-height: 25px;color: #FFFFFF;text-align: center;display: block;">
                     <i style="
                     background: -webkit-linear-gradient(#7952B3, #FFBF00);
                     -webkit-background-clip: text;
@@ -90,7 +90,7 @@ font-family: AvenirLTStd-Book;
             <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
                 <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav me-auto margin-top-30 margin-left-50 pull-left " style="list-style-type:none;
+                    <ul class="navbar-nav me-auto margin-top-25 margin-right-20 " style="list-style-type:none;
                                        color:#fff;">
                         <li class="nav-item" style="
     width: 85px;
@@ -102,40 +102,34 @@ font-family: AvenirLTStd-Book;
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link">Home</a></li>
-                        <li class="nav-item " style="
+                        <li class="nav-item margin-right-28" style="
 font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.022em;
-    color: #FECA2F;
 
-"><a href="{{ url('/contact') }}" class="nav-link ">Contact Us </a></li>
-                        <a class="btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-11
-                        m-grid-col-xs-offset-1"
-                           href="{{ route('login') }}" style="
+"><a href="{{url('contact')}}" class="nav-link">Contact Us </a></li>
+                        <a href="{{route('login')}}" class="nav-btn btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
+                        m-grid-col-xs-12 "
+                           style="
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
-                            /*padding: 0px;*/
-                            /*position: absolute;*/
-                            width: 84px;
-                            height: 27px;
-                            /*left: 400px;*/
-                            /*top: 14px;*/
+                            width: 70px;
+                            height: 26px;
                             border: 1px solid #FFFFFF;
                             box-sizing: border-box;
                             border-radius: 3px !important;
-                            font-family: 'Avenir LT Std', sans-serif;
+                            font-family: AvenirLTStd-Book;
                             font-style: normal;
                             font-weight: normal;
-                            font-size: 14px;
+                            font-size: 12px;
                             line-height: 24px;
                             color: #FFFFFF;
                             background-color: #845ba6;
-                            /*margin-right: 78px;*/
 ">
                             Login
                         </a>
@@ -145,7 +139,7 @@ font-family: AvenirLTStd-Book;
             </nav>
             <div>
                 <img src="../assets/pages/img/login/WORKSPACES-Vector.png"
-                     class="img-responsive m-grid-col-lg-9 m-grid-col-md-12 m-grid-col-xs-12  margin-top-226" style="
+                     class="img-responsive margin-top-195" style="
        width: 562px;
     height: 145px;
 ">

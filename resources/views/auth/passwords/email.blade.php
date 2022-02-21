@@ -99,7 +99,7 @@ color: #FFFFFF;
             </div>
 
             <button type="submit"
-                    class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4
+                    class="btn btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4
                     m-grid-col-xs-1"
                     style="
 width: 100%;

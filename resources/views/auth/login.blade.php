@@ -31,7 +31,7 @@
     ">
     <!-- BEGIN LOGO -->
     <div class="container">
-        <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2" href="{{ url('/') }}" style="
+        <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link" href="{{ url('/') }}" style="
 font-family: AvenirLTStd-Book;
 font-style: normal;
 font-weight: normal;
@@ -145,7 +145,7 @@ color: rgba(51, 51, 51, 0.7);
                 @endif
             </label>
             <button type="submit"
-                    class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4
+                    class="btn btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-4
                     m-grid-col-xs-1"
                     style="
 width: 100%;
@@ -163,7 +163,7 @@ font-family: AvenirLTStd-Book;
         font-style: normal;
         color: #FFFFFF;
 " class="m-grid-col-lg-offset-4-5 m-grid-col-md-offset-4 m-grid-col-xs-offset-3">Don’t have an account?
-            <a href="{{ route('register') }}" id="register-btn" style="color: #FFC107;">Sign up</a>
+            <a href="{{ route('register') }}" id="register-btn" class="nav-link" style="color: #FFC107;">Sign up</a>
         </p>
     </div>
     </body>

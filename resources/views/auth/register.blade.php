@@ -23,9 +23,9 @@
             <div class="col-md-6 bs-reset mt-login-5-bsfix" style="min-height: 768px;background-color: #6B6767;
             background-image: linear-gradient(#726767, #090808);">
                 <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
-
-                    <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png"
-                    />
+                    <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png" style="
+    width: 145px;
+"/>
                 </a>
                 <div>
                     <img src="../assets/pages/img/login/WORKSPACES-Vector.png" class="img-responsive margin-top-226"
@@ -268,7 +268,7 @@ font-family: AvenirLTStd-Book;
                                 </div>
                             </div>
                             <div class="col-lg-12 text-left">
-                                <button type="submit" class="btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-6
+                                <button type="submit" class=" btn btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-6
                     m-grid-col-xs-1"
                                         style="
 width: 100%;
@@ -288,7 +288,7 @@ font-weight: normal;
 color: rgba(114, 103, 103, 0.78);
 margin-left: 100px;
 ">
-                                    You have an account?<span><a style="color: #343A40" href="{{ route('login') }}">sign in</a></span>
+                                    You have an account?<span><a style="color: #343A40" href="{{ route('login') }}" class="nav-link ">sign in</a></span>
                                 </h5>
                             </div>
                         </div>
