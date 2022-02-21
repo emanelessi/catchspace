@@ -2,6 +2,7 @@
     i:hover {
         color: #FECA2F !important;
     }
+
     /*a:hover {*/
     /*    color: #FECA2F !important;*/
     /*}*/
@@ -28,9 +29,8 @@
         <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
             <li class="nav-item start active open">
             <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="/provider/home" class="nav-link nav-toggle" style="
+font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -40,13 +40,12 @@
 
 ">
                     <i class="icon-home"></i>
-                    <span class="title" >Home</span>
+                    <span class="title">Home</span>
                 </a>
             </li>
             <li class="nav-item @if(preg_match('/cowork-provider/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="/provider/cowork-provider" class="nav-link nav-toggle" style="
+font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -60,10 +59,9 @@
                 </a>
 
             </li>
-            <li class="nav-item @if(preg_match('/work-space/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+            <li class="nav-item @if(preg_match('/add-workspace/i',url()->current())) start active open @endif">
+                <a href="/provider/add-workspace" class="nav-link nav-toggle" style="
+font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -77,9 +75,8 @@
                 </a>
             </li>
             <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="/provider/worker" class="nav-link nav-toggle" style="
+font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -92,10 +89,24 @@
                     <span class="title">Workers</span>
                 </a>
             </li>
+            <li class="nav-item @if(preg_match('/policies/i',url()->current())) start active open @endif">
+                <a href="/provider/policies" class="nav-link nav-toggle" style="
+ font-family: AvenirLTStd-Book;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: capitalize;
+    margin-left: 7px;
+    margin-bottom: 18px;
+
+">
+                    <i class="icon-docs"></i>
+                    <span class="title">Policies</span>
+                </a>
+            </li>
             <li class="nav-item @if(preg_match('/system/i',url()->current())) start active open @endif">
-                <a href="javascript:;" class="nav-link nav-toggle" style="
-    font-family: Poppins;
-    font-style: normal;
+                <a href="/provider/system" class="nav-link nav-toggle" style="
+font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;

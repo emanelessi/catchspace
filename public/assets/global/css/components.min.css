@@ -1203,8 +1203,17 @@ code {
 .margin-top-226{
     margin-top: 226px !important
 }
+.margin-top-195{
+    margin-top: 195px !important
+}
+.margin-top-190{
+    margin-top: 190px !important
+}
 .margin-left-8{
     margin-left: 0.33333%!important
+}
+.margin-left-6{
+    margin-left: 0.13333%!important
 }
 .margin-left-15{
     margin-left: 9.33333%!important
@@ -1259,6 +1268,9 @@ code {
     margin-top: 20px !important
 }
 
+.margin-top-25 {
+    margin-top: 25px !important
+}
 .margin-top-30 {
     margin-top: 30px !important
 }
@@ -1291,8 +1303,17 @@ code {
 .margin-right-20 {
     margin-right: 13.44%!important
 }
+.margin-right-28 {
+    margin-right: 28px!important
+}
 .margin-right--20 {
     margin-right: -13.44%!important
+}
+.margin-left-330 {
+    margin-left: 330px!important
+}
+.margin-left-530 {
+    margin-left: 530px!important
 }
 
 
@@ -1980,7 +2001,6 @@ code {
     .m-grid-col-md-offset-11 {
         margin-left: 91.66667%
     }
-
     .m-grid-col-md-12 {
         width: 100%
     }
@@ -2082,6 +2102,9 @@ code {
 
     .m-grid-col-lg-11 {
         width: 91.66667%
+    }
+    .m-grid-col-lg-11-5 {
+        width: 94.66667%
     }
 
     .m-grid-col-lg-offset-11 {

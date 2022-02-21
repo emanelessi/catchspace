@@ -115,6 +115,18 @@ Route::get('/provider/edit-provider', function () {
 //    return view('provider.coworkProvider.addCoworkProvider');
 //});
 
+Route::get('/provider/policies', function () {
+    return view('provider.policies.policies');
+});
+Route::get('/provider/add-policies', function () {
+    return view('provider.policies.addPolicies');
+});
+Route::get('/provider/edit-policies', function () {
+    return view('provider.policies.editPolicies');
+});
+Route::get('/provider/edit-profile', function () {
+    return view('provider.editProfile');
+});
 
 //
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
