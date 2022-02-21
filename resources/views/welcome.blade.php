@@ -7,8 +7,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <title>Catch Space</title>
 
+    <style>
+        .nav-btn:hover {
+            background-color: #FECA2F !important;
+            color: white;
+        }
+    </style>
 </head>
 
 {{--    <body class="antialiased">--}}
@@ -74,7 +81,7 @@ font-family: AvenirLTStd-Book;
                     to find the best coworking space,
                     we are here to<br> help you</p>
                 <div class="text-left margin-left-6 ">
-                    <button class="btn blue " type="submit" style="
+                    <a href="{{route('login')}}" class="btn blue "  style="
                             border-color: #FFC107;
                             border-radius: 3px !important;
                             align-items: center;
@@ -88,7 +95,7 @@ font-family: AvenirLTStd-Book;
                             color: #FFFFFF;
                             ">
                         Login
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -117,9 +124,9 @@ font-family: AvenirLTStd-Book;
     line-height: 22px;
     letter-spacing: -0.022em;
 
-"><a class="nav-link">Contact Us </a></li>
-                        <button class="btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
-                        m-grid-col-xs-12 " type="submit"
+"><a href="{{url('contact')}}" class="nav-link">Contact Us </a></li>
+                        <a href="{{route('login')}}" class="nav-btn btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
+                        m-grid-col-xs-12 "
                                 style="
                             display: flex;
                             flex-direction: column;
@@ -139,7 +146,7 @@ font-family: AvenirLTStd-Book;
                             background-color: #845ba6;
 ">
                             Login
-                        </button>
+                        </a>
                     </ul>
 
                 </div>
