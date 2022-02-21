@@ -24,7 +24,8 @@ font-size: 17px">
                             <input type="text" placeholder="TitleTitleTitle"
                                    class="form-control"
                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
-                        </div> <div class="form-group col-md-6">
+                        </div>
+                        <div class="form-group col-md-6">
                             <label class="control-label" style="color:#6B7280;">description *</label>
                             <input type="text" placeholder="descriptiondescriptiondescriptiondescriptiondescription"
                                    class="form-control"

@@ -6,19 +6,23 @@
         .btn:hover {
             background-color: #8B62C9 !important;
         }
+
         .btn-circle:hover {
-            background-color:  #7952B32B !important;
-           border-color:  #7952B32B !important;
+            background-color: #7952B32B !important;
+            border-color: #7952B32B !important;
         }
+
         .span:hover {
-            background-color:  #8B62C9 !important;
-           border-color:  #8B62C9 !important;
+            background-color: #8B62C9 !important;
+            border-color: #8B62C9 !important;
         }
+
         .cansel:hover {
-            background-color:  #C4C4C436 !important;
+            background-color: #C4C4C436 !important;
         }
+
         .deletee:hover {
-            background-color:  #8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
 
     </style>
@@ -33,7 +37,7 @@
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
         <div class="page-toolbar  ">
-            <a href="{{url('/admin/add-provider')}}"  class="demo-loading-btn btn btn-primary" style="
+            <a href="{{url('/admin/add-provider')}}" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
              font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -90,7 +94,7 @@
     border-radius: 10px !important;
 ">
                                     <div class="span margin-bottom-2  padding-tb-5 "
-                                        style="
+                                         style="
                                         /*margin-bottom: 5px;*/
                                         /*padding: 10px;*/
                                         color: #fff;
@@ -108,7 +112,7 @@
 ">From A to Z</span>
                                     </div>
                                     <div class="span margin-bottom-2  padding-tb-5 "
-                                        style="
+                                         style="
                                         /*margin-bottom: 5px;*/
                                         /*padding: 10px;*/
                                         color: #fff;
@@ -120,12 +124,12 @@
                                         font-weight: normal;
                                         font-size: 15px;
                                         line-height: 15px;">
-                                        <span  class="margin-left-40" style="
+                                        <span class="margin-left-40" style="
                                         /*margin-left: 35px;*/
 ">From Z to A</span>
                                     </div>
                                     <div class="span margin-bottom-2  padding-tb-5 "
-                                        style="/*margin-bottom: 5px;*/
+                                         style="/*margin-bottom: 5px;*/
                                         /*padding: 10px;*/
                                         color: #fff;
                                         /*left: 1258px;*/
@@ -141,7 +145,7 @@
 ">The latest</span>
                                     </div>
                                     <div class="span margin-bottom-2  padding-tb-5 "
-                                        style="/*margin-bottom: 5px;*/
+                                         style="/*margin-bottom: 5px;*/
                                         /*padding: 10px;*/
                                         color: #fff;
                                         /*left: 1258px;*/
@@ -165,7 +169,7 @@
                         <div class="table-scrollable table-scrollable-borderless">
                             <table class="table  table-light" style="background-color: #E5E5E5;">
                                 <thead>
-                                <tr >
+                                <tr>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -175,7 +179,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> ID</th>
+"> ID
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -185,7 +190,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> Logo</th>
+"> Logo
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -195,7 +201,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> Name</th>
+"> Name
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -205,7 +212,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> Owner Name</th>
+"> Owner Name
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -215,7 +223,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> User</th>
+"> User
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -225,7 +234,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> Address</th>
+"> Address
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -235,11 +245,12 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> Action</th>
+"> Action
+                                    </th>
                                 </tr>
                                 </thead>
-                                <tbody >
-                                <tr >
+                                <tbody>
+                                <tr>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -252,7 +263,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 1</td>
+"> 1
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -278,7 +290,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Mark</td>
+"> Mark
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -291,7 +304,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Otto</td>
+"> Otto
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -304,7 +318,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> makr124</td>
+"> makr124
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -317,7 +332,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> test</td>
+"> test
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -378,7 +394,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 2</td>
+"> 2
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -404,7 +421,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Jacob</td>
+"> Jacob
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -417,7 +435,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Nilson</td>
+"> Nilson
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -430,7 +449,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> jac123</td>
+"> jac123
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -443,7 +463,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> test</td>
+"> test
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -457,7 +478,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 "><a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
+     data-target="#static2" data-toggle="modal" style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -503,7 +524,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 3</td>
+"> 3
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -529,7 +551,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Larry</td>
+"> Larry
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -542,7 +565,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Cooper</td>
+"> Cooper
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -555,7 +579,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> lar</td>
+"> lar
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -568,7 +593,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> test</td>
+"> test
+                                    </td>
                                     <td><a class="btn btn-outline dark"
                                            data-target="#static2" data-toggle="modal" style="
     /*width: 59px;*/
@@ -616,7 +642,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 4</td>
+"> 4
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -642,7 +669,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Sandy</td>
+"> Sandy
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -655,7 +683,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Lim</td>
+"> Lim
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -668,7 +697,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> sanlim</td>
+"> sanlim
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -681,8 +711,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> test</td>
-                                    <td ><a class="btn btn-outline dark"
+"> test
+                                    </td>
+                                    <td><a class="btn btn-outline dark"
                                            data-target="#static2" data-toggle="modal" style="
     /*width: 59px;*/
     /*height: 53px;*/

@@ -37,53 +37,15 @@ font-size: 17px">
                         <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
 font-size: 17px">Scroll is always visible</h4>
                         <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                        elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
-                        nisi erat porttitor ligula,
-                        eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis,
-                        est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
-                        consectetur purus sit
-                        amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-                        odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- END Portlet PORTLET-->
-        </div>
-        <div class="col-md-4 ">
-            <!-- BEGIN Portlet PORTLET-->
-            <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
-font-size: 17px">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
-                    </div>
-                    <div class="tools">
-                        <a href="" class="fullscreen"> </a>
-                        <a href="javascript:;" class="collapse"> </a>
-                    </div>
-                    <div class="actions">
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-pencil"></i> Edit </a>
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-plus"></i> Add </a>
-                        <a class="btn btn-default btn-sm"
-                           data-target="#static2" data-toggle="modal" href="javascript:;">
-                            <i class="icon-trash"> Delete</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
-                         data-rail-color="blue" data-handle-color="#7952B3">
-                        <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
-font-size: 17px">Scroll is always visible</h4>
-                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
                             elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
                             nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                            mollis,
+                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                            mattis
                             consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                            lacinia
                             odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
                     </div>
                 </div>
@@ -121,10 +83,13 @@ font-size: 17px">Scroll is always visible</h4>
                         <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
                             elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
                             nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                            mollis,
+                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                            mattis
                             consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                            lacinia
                             odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
                     </div>
                 </div>
@@ -162,10 +127,13 @@ font-size: 17px">Scroll is always visible</h4>
                         <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
                             elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
                             nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                            mollis,
+                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                            mattis
                             consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                            lacinia
                             odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
                     </div>
                 </div>
@@ -203,10 +171,13 @@ font-size: 17px">Scroll is always visible</h4>
                         <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
                             elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
                             nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                            mollis,
+                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                            mattis
                             consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                            lacinia
                             odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
                     </div>
                 </div>
@@ -244,10 +215,57 @@ font-size: 17px">Scroll is always visible</h4>
                         <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
                             elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
                             nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                            mollis,
+                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                            mattis
                             consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                            lacinia
+                            odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END Portlet PORTLET-->
+        </div>
+        <div class="col-md-4 ">
+            <!-- BEGIN Portlet PORTLET-->
+            <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+font-size: 17px">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                    </div>
+                    <div class="tools">
+                        <a href="" class="fullscreen"> </a>
+                        <a href="javascript:;" class="collapse"> </a>
+                    </div>
+                    <div class="actions">
+                        <a href="javascript:;" class="btn btn-default btn-sm">
+                            <i class="fa fa-pencil"></i> Edit </a>
+                        <a href="javascript:;" class="btn btn-default btn-sm">
+                            <i class="fa fa-plus"></i> Add </a>
+                        <a class="btn btn-default btn-sm"
+                           data-target="#static2" data-toggle="modal" href="javascript:;">
+                            <i class="icon-trash"> Delete</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
+                         data-rail-color="blue" data-handle-color="#7952B3">
+                        <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
+font-size: 17px">Scroll is always visible</h4>
+                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+                            elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
+                            nisi erat porttitor ligula,
+                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                            mollis,
+                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                            mattis
+                            consectetur purus sit
+                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                            lacinia
                             odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
                     </div>
                 </div>

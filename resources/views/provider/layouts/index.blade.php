@@ -34,7 +34,8 @@ License: You must have a valid license purchased only from themeforest(the above
 </head>
 <!-- END HEAD -->
 
-<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo" style="background-color: #E5E5E5;margin-top: -9px;">
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo"
+      style="background-color: #E5E5E5;margin-top: -9px;">
 <!-- BEGIN HEADER -->
 @include('provider.layouts.header')
 <!-- END HEADER -->
@@ -51,10 +52,10 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN CONTENT BODY -->
         <div class="page-content">
             <!-- BEGIN PAGE HEAD-->
-{{--        @include('admin.layouts.header')--}}
+        {{--        @include('admin.layouts.header')--}}
         <!-- END PAGE HEAD-->
             <!-- BEGIN PAGE BREADCRUMB -->
-        <!-- END PAGE BREADCRUMB -->
+            <!-- END PAGE BREADCRUMB -->
             <!-- BEGIN PAGE BASE CONTENT -->
             <!-- BEGIN DASHBOARD STATS 1-->
             @yield('content')

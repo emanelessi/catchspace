@@ -86,21 +86,22 @@ color: #FFFFFF;
                     margin-left: 19px;
                     " class="fa fa-lock"></i>
 
-                <input
-                    class="form-control form-control-solid placeholder-no-fix @error('password') is-invalid @enderror"
-                    placeholder="******" onfocus="this.placeholder = ''" name="password" id="password" type="password"
-                    required autocomplete="current-password" style="
+                    <input
+                        class="form-control form-control-solid placeholder-no-fix @error('password') is-invalid @enderror"
+                        placeholder="******" onfocus="this.placeholder = ''" name="password" id="password"
+                        type="password"
+                        required autocomplete="current-password" style="
     border-radius: 20px !important;
     height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #333333;
     box-sizing: border-box;
 "/>
-                @error('password')
-                <span class="invalid-feedback" role="alert">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                @enderror
+                    @enderror
                 </div>
             </div>
             <div class="form-group">
@@ -115,22 +116,22 @@ color: #FFFFFF;
                     margin-left: 19px;
                     " class="fa fa-check-circle"></i>
 
-                <input
-                    class="form-control form-control-solid placeholder-no-fix @error('confirm_password') is-invalid @enderror"
-                    placeholder="Confirm password" name="password-confirm"
-                    id="password-confirm" onfocus="this.placeholder = ''" type="password"
-                    required autocomplete="new-password" style="
+                    <input
+                        class="form-control form-control-solid placeholder-no-fix @error('confirm_password') is-invalid @enderror"
+                        placeholder="Confirm password" name="password-confirm"
+                        id="password-confirm" onfocus="this.placeholder = ''" type="password"
+                        required autocomplete="new-password" style="
     border-radius: 20px !important;
     height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #333333;
     box-sizing: border-box;
 "/>
-                @error('confirm_password')
-                <span class="invalid-feedback" role="alert">
+                    @error('confirm_password')
+                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                @enderror
+                    @enderror
                 </div>
             </div>
             <h5 class="control-label" style="

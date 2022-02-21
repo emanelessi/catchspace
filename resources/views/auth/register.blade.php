@@ -74,7 +74,8 @@ font-family: AvenirLTStd-Book;
 
                                 <input
                                     class="form-control form-control-solid placeholder-no-fix  @error('name') is-invalid @enderror"
-                                    placeholder="name" onfocus="this.placeholder = ''" id="name" type="text" name="full_name"
+                                    placeholder="name" onfocus="this.placeholder = ''" id="name" type="text"
+                                    name="full_name"
                                     value="{{ old('full_name') }}" required autocomplete="name" autofocus
                                     style="
     border-radius: 20px !important;
@@ -95,7 +96,7 @@ font-family: AvenirLTStd-Book;
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Co-work Space Name') }}</label>
                             <div class="input-icon">
 
-                            <i style="
+                                <i style="
                     background: -webkit-linear-gradient(#7952B3, #FFBF00);
                     -webkit-background-clip: text;
                     font-size: 23px;
@@ -105,22 +106,23 @@ font-family: AvenirLTStd-Book;
 
                     " class="fa fa-map-marker"></i>
 
-                            <input
-                                class="form-control form-control-solid placeholder-no-fix  @error('Co-name') is-invalid @enderror"
-                                placeholder="Co-work space name" onfocus="this.placeholder = ''" id="Co-name" type="text" name="Co-name"
-                                value="{{ old('Co-name') }}" required autocomplete="Co-name" autofocus
-                                style="
+                                <input
+                                    class="form-control form-control-solid placeholder-no-fix  @error('Co-name') is-invalid @enderror"
+                                    placeholder="Co-work space name" onfocus="this.placeholder = ''" id="Co-name"
+                                    type="text" name="Co-name"
+                                    value="{{ old('Co-name') }}" required autocomplete="Co-name" autofocus
+                                    style="
     border-radius: 20px !important;
     height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
 "/>
-                            @error('Co-name')
-                            <span class="invalid-feedback" role="alert">
+                                @error('Co-name')
+                                <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
-                            @enderror
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group margin-bottom-15">
@@ -171,7 +173,8 @@ font-family: AvenirLTStd-Book;
 
                                 <input
                                     class="form-control form-control-solid placeholder-no-fix @error('phone') is-invalid @enderror"
-                                    placeholder="phone" name="phone" id="phone" type="number" onfocus="this.placeholder = ''"
+                                    placeholder="phone" name="phone" id="phone" type="number"
+                                    onfocus="this.placeholder = ''"
                                     value="{{ old('phone') }}" required autocomplete="phone" autofocus
                                     style="
     border-radius: 20px !important;
@@ -200,22 +203,23 @@ font-family: AvenirLTStd-Book;
 
                     " class="fa fa-lock"></i>
 
-                            <input
-                                class="form-control form-control-solid placeholder-no-fix @error('password') is-invalid @enderror"
-                                placeholder="*******" onfocus="this.placeholder = ''" name="password" id="password" type="password"
-                                required autocomplete="current-password"
-                                style="
+                                <input
+                                    class="form-control form-control-solid placeholder-no-fix @error('password') is-invalid @enderror"
+                                    placeholder="*******" onfocus="this.placeholder = ''" name="password" id="password"
+                                    type="password"
+                                    required autocomplete="current-password"
+                                    style="
     border-radius: 20px !important;
     height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
 "/>
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                            @enderror
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group margin-bottom-15">
@@ -231,23 +235,23 @@ font-family: AvenirLTStd-Book;
 
                     " class="fa fa-check-circle"></i>
 
-                            <input
-                                class="form-control form-control-solid placeholder-no-fix @error('confirm_password') is-invalid @enderror"
-                                placeholder="Confirm password" name="password-confirm"
-                                id="password-confirm" onfocus="this.placeholder = ''" type="password"
-                                required autocomplete="new-password"
-                                style="
+                                <input
+                                    class="form-control form-control-solid placeholder-no-fix @error('confirm_password') is-invalid @enderror"
+                                    placeholder="Confirm password" name="password-confirm"
+                                    id="password-confirm" onfocus="this.placeholder = ''" type="password"
+                                    required autocomplete="new-password"
+                                    style="
     border-radius: 20px !important;
     height: 53px;padding-left: 42px;
     background: #FFFFFF;
     border: 1px solid #343A40;
     box-sizing: border-box;
 "/>
-                            @error('confirm_password')
-                            <span class="invalid-feedback" role="alert">
+                                @error('confirm_password')
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                            @enderror
+                                @enderror
                             </div>
                         </div>
                         <div class="row">
@@ -288,7 +292,8 @@ font-weight: normal;
 color: rgba(114, 103, 103, 0.78);
 margin-left: 100px;
 ">
-                                    You have an account?<span><a style="color: #343A40" href="{{ route('login') }}" class="nav-link ">sign in</a></span>
+                                    You have an account?<span><a style="color: #343A40" href="{{ route('login') }}"
+                                                                 class="nav-link ">sign in</a></span>
                                 </h5>
                             </div>
                         </div>

@@ -3,10 +3,11 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color:#8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
+
         .demo-loading-btn:hover {
-            background-color:#D2CDCD54 !important;
+            background-color: #D2CDCD54 !important;
         }
 
     </style>
@@ -77,81 +78,93 @@ color: #333333;
                                          line-height: 24px;
                                          color: #6B7280;
                                          "
-                            >   Upload  wokspace logo </button>
+                            > Upload wokspace logo
+                            </button>
 
-                        <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
-                        <div>
-                            <div class="row">
-                                <div class="col-md-12 col-lg-12 col-xs-12">
-                                    <div class="portlet light bordered" style="
+                            <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-xs-12">
+                                        <div class="portlet light bordered" style="
                                         margin: 59px 73px 200px;
                                         border-radius: 20px !important;
                                         background-color: #fff;
                                          border-top-width: 3px !important;
                                             border-bottom-width: 3px !important;
 ">
-                                        <div class="portlet-body">
-                                            <div class="tab-content">
-                                                <!-- PERSONAL INFO TAB -->
-                                                <div class="tab-pane active" id="tab_1_1">
-                                                    <form role="form" action="#">
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace Name *</label>
-                                                            <input type="text" placeholder="Workspace" class="form-control"
-                                                                   style="
+                                            <div class="portlet-body">
+                                                <div class="tab-content">
+                                                    <!-- PERSONAL INFO TAB -->
+                                                    <div class="tab-pane active" id="tab_1_1">
+                                                        <form role="form" action="#">
+                                                            <div class="form-group col-md-6">
+                                                                <label class="control-label" style="color:#6B7280;">Workspace
+                                                                    Name *</label>
+                                                                <input type="text" placeholder="Workspace"
+                                                                       class="form-control"
+                                                                       style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace Owner Name *</label>
-                                                            <input type="text" placeholder="Name" class="form-control"
-                                                                   style="
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label class="control-label" style="color:#6B7280;">Workspace
+                                                                    Owner Name *</label>
+                                                                <input type="text" placeholder="Name"
+                                                                       class="form-control"
+                                                                       style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Email *</label>
-                                                            <input type="text" placeholder="Name@gmail.com" class="form-control"
-                                                                   style="
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label class="control-label" style="color:#6B7280;">Email
+                                                                    *</label>
+                                                                <input type="text" placeholder="Name@gmail.com"
+                                                                       class="form-control"
+                                                                       style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Phone *</label>
-                                                            <input type="text" placeholder="+970 590 000 000" class="form-control"
-                                                                   style="
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label class="control-label" style="color:#6B7280;">Phone
+                                                                    *</label>
+                                                                <input type="text" placeholder="+970 590 000 000"
+                                                                       class="form-control"
+                                                                       style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
-                                                        </div>
-                                                        <div class="form-group "
-                                                             style="
+                                                            </div>
+                                                            <div class="form-group "
+                                                                 style="
                                                                  margin-left: 16px;
                                                                  /*margin-right: 16px;*/
 ">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace Address*</label>
-                                                            <input type="text" placeholder="Al-rehab mall, remal street, Gaza, palestine"
-                                                                   class="form-control" style="
+                                                                <label class="control-label" style="color:#6B7280;">Workspace
+                                                                    Address*</label>
+                                                                <input type="text"
+                                                                       placeholder="Al-rehab mall, remal street, Gaza, palestine"
+                                                                       class="form-control" style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/></div>
-                                                    </form>
-                                                </div>
+                                                        </form>
+                                                    </div>
 
-                                                <!-- END PERSONAL INFO TAB -->
+                                                    <!-- END PERSONAL INFO TAB -->
+                                                </div>
                                             </div>
                                         </div>
-                                    </div> <button type="button"
-                                                   class="btn btn-primary margin-top--250 margin-left-90 m-grid-col-xs-offset-3 "
-                                                   style="
+                                        <button type="button"
+                                                class="btn btn-primary margin-top--250 margin-left-90 m-grid-col-xs-offset-3 "
+                                                style="
                                                                width: 165px;
                                                                height: 41.2px;
                                                                /*flex-grow: 0;*/
@@ -171,12 +184,12 @@ color: #333333;
                                                                line-height: 24px;
                                                                color: #FFFFFF;
                                                                ">
-                                        Save Change
-                                    </button>
+                                            Save Change
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- END PROFILE CONTENT -->
+                            <!-- END PROFILE CONTENT -->
                         </b></div>                    <!-- END PORTLET MAIN -->
 
                 </div>

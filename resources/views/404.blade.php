@@ -18,12 +18,13 @@ font-family: AvenirLTStd-Book;
 ">
         404: The page you are looking for isn’t here
     </div>
-    <div >
-            <img src="../assets/pages/img/login/404-page.png" class=" img-responsive
-             m-grid-col-lg-6 m-grid-col-md-6 m-grid-col-xs-7 margin-left-40 " alt="" >
+    <div>
+        <img src="../assets/pages/img/login/404-page.png" class=" img-responsive
+             m-grid-col-lg-6 m-grid-col-md-6 m-grid-col-xs-7 margin-left-40 " alt="">
 
-                <button class="btn blue m-grid-col-lg-offset-6 m-grid-col-md-offset-5 m-grid-col-xs-offset-4 margin-top-15 " type="submit"
-                        style="
+        <button class="btn blue m-grid-col-lg-offset-6 m-grid-col-md-offset-5 m-grid-col-xs-offset-4 margin-top-15 "
+                type="submit"
+                style="
                             border-color: #7952B3;
                             border-radius: 3px !important;
                             align-items: center;
@@ -33,14 +34,13 @@ font-family: AvenirLTStd-Book;
                             color: #FFFFFF;
                             background: #7952B3;
                             ">
-                    <i class="fa fa-arrow-left"></i>
+            <i class="fa fa-arrow-left"></i>
 
-                    Go back to Dashboard
-                </button>
+            Go back to Dashboard
+        </button>
 
 
     </div>
-
 
 
     </body>

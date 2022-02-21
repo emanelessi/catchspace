@@ -6,19 +6,23 @@
         .btn:hover {
             background-color: #8B62C9 !important;
         }
+
         .btn-circle:hover {
-            background-color:  #7952B32B !important;
-            border-color:  #7952B32B !important;
+            background-color: #7952B32B !important;
+            border-color: #7952B32B !important;
         }
+
         .span:hover {
-            background-color:  #8B62C9 !important;
-            border-color:  #8B62C9 !important;
+            background-color: #8B62C9 !important;
+            border-color: #8B62C9 !important;
         }
+
         .cansel:hover {
-            background-color:  #C4C4C436 !important;
+            background-color: #C4C4C436 !important;
         }
+
         .delete:hover {
-            background-color:  #8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
 
     </style>
@@ -118,7 +122,7 @@
                                         font-weight: normal;
                                         font-size: 15px;
                                         line-height: 15px;">
-                                        <span  class="margin-left-40" style="
+                                        <span class="margin-left-40" style="
                                         /*margin-left: 35px;*/
 ">From Z to A</span>
                                     </div>
@@ -163,7 +167,7 @@
                         <div class="table-scrollable table-scrollable-borderless">
                             <table class="table  table-light" style="background-color: #E5E5E5;">
                                 <thead>
-                                <tr >
+                                <tr>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -232,7 +236,7 @@
                                     </th>
                                 </tr>
                                 </thead>
-                                <tbody >
+                                <tbody>
                                 <tr>
                                     <td style="
     /*width: 59px;*/
@@ -246,7 +250,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 1</td>
+"> 1
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -272,7 +277,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Mark</td>
+"> Mark
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -285,7 +291,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Otto</td>
+"> Otto
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -312,7 +319,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 "><a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal">
+     data-target="#static2" data-toggle="modal">
                                             delet
                                         </a>
                                         <a class="btn btn-outline dark"
@@ -334,7 +341,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 2</td>
+"> 2
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -360,7 +368,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Jacob</td>
+"> Jacob
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -373,7 +382,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Nilson</td>
+"> Nilson
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -400,7 +410,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 "><a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal">
+     data-target="#static2" data-toggle="modal">
                                             delet
                                         </a>
                                         <a class="btn btn-outline dark"
@@ -422,7 +432,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 3</td>
+"> 3
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -448,7 +459,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Larry</td>
+"> Larry
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -461,7 +473,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Cooper</td>
+"> Cooper
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -488,7 +501,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 "><a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal">
+     data-target="#static2" data-toggle="modal">
                                             delet
                                         </a>
                                         <a class="btn btn-outline dark"
@@ -510,7 +523,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 4</td>
+"> 4
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -536,7 +550,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Sandy</td>
+"> Sandy
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -549,7 +564,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Lim</td>
+"> Lim
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -576,7 +592,7 @@
     /*text-transform: capitalize;*/
     color: #000000;
 "><a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal">
+     data-target="#static2" data-toggle="modal">
                                             delet
                                         </a>
                                         <a class="btn btn-outline dark"

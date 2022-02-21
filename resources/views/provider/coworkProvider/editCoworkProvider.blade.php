@@ -3,15 +3,16 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color:#8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
 
     </style>
-    <div class="page-head"  style="margin-bottom: 25px;">
+    <div class="page-head" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
             <h1 style="width: 557px;height: 47px;left: 296px;top: 104px;font-style: normal;font-weight: 600;font-size: 30px;line-height: 48px;
-/* or 120% */letter-spacing: -0.022em;color: #333333;font-family: Poppins-Semibold;margin-bottom: 20px;">Cowork provider</h1>
+/* or 120% */letter-spacing: -0.022em;color: #333333;font-family: Poppins-Semibold;margin-bottom: 20px;">Cowork
+                provider</h1>
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">
@@ -28,8 +29,12 @@
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
                         <div class="profile-usertitle" style="text-align: justify;margin-top: 47px;">
-                            <div class="profile-usertitle-name" style="color: #111827; font-family: Poppins-Semibold;"> Ali Mahdi</div>
-                            <div class="profile-usertitle-job" style="color: #6b7280;font-family: Poppins-Semibold;"> Programmer</div>
+                            <div class="profile-usertitle-name" style="color: #111827; font-family: Poppins-Semibold;">
+                                Ali Mahdi
+                            </div>
+                            <div class="profile-usertitle-job" style="color: #6b7280;font-family: Poppins-Semibold;">
+                                Programmer
+                            </div>
                         </div>
                         <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
                         <div>
@@ -43,19 +48,23 @@
                                                 <div class="tab-pane active" id="tab_1_1">
                                                     <form role="form" action="#">
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Name *</label>
-                                                            <input type="text" placeholder="Ali Mahdi" class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Name
+                                                                *</label>
+                                                            <input type="text" placeholder="Ali Mahdi"
+                                                                   class="form-control"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Job Title *</label>
+                                                            <label class="control-label" style="color:#6B7280;">Job
+                                                                Title *</label>
                                                             <input type="text" placeholder="Programmer "
                                                                    class="form-control"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group "
                                                              style="margin-left: 16px;margin-right: 16px;">
-                                                            <label class="control-label" style="color:#6B7280;">Descriotion *</label>
+                                                            <label class="control-label" style="color:#6B7280;">Descriotion
+                                                                *</label>
                                                             <input type="text"
                                                                    placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing  "
                                                                    class="form-control"
@@ -63,7 +72,8 @@
                                                         </div>
                                                         <div class="form-group "
                                                              style="margin-left: 16px;margin-right: 16px;">
-                                                            <label class="control-label" style="color:#6B7280;">Statues *</label>
+                                                            <label class="control-label" style="color:#6B7280;">Statues
+                                                                *</label>
                                                             <input type="text"
                                                                    placeholder="Active"
                                                                    class="form-control"

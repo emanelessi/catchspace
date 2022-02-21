@@ -81,7 +81,7 @@ font-family: AvenirLTStd-Book;
                     to find the best coworking space,
                     we are here to<br> help you</p>
                 <div class="text-left margin-left-6 ">
-                    <a href="{{route('login')}}" class="btn blue "  style="
+                    <a href="{{route('login')}}" class="btn blue " style="
                             border-color: #FFC107;
                             border-radius: 3px !important;
                             align-items: center;
@@ -127,7 +127,7 @@ font-family: AvenirLTStd-Book;
 "><a href="{{url('contact')}}" class="nav-link">Contact Us </a></li>
                         <a href="{{route('login')}}" class="nav-btn btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
                         m-grid-col-xs-12 "
-                                style="
+                           style="
                             display: flex;
                             flex-direction: column;
                             justify-content: center;

@@ -3,10 +3,11 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color:#8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
+
         .demo-loading-btn:hover {
-            background-color:#D2CDCD54 !important;
+            background-color: #D2CDCD54 !important;
         }
 
     </style>
@@ -38,7 +39,7 @@ color: #333333;
                     <!-- PORTLET MAIN -->
                     <div class="portlet light profile-sidebar-portlet bordered"
                          style="border-bottom: 1px solid #eef1f5;  height: 720px;border-radius: 20px !important;">
-                    <!-- BEGIN PROFILE CONTENT -->
+                        <!-- BEGIN PROFILE CONTENT -->
                         <div>
                             <div class="row">
                                 <div class="col-md-12">
@@ -50,32 +51,43 @@ color: #333333;
                                                 <div class="tab-pane active" id="tab_1_1">
                                                     <form role="form" action="#">
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Type *</label>
-                                                            <input type="text" placeholder="Omar D." class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Type
+                                                                *</label>
+                                                            <input type="text" placeholder="Omar D."
+                                                                   class="form-control"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Services *</label>
-                                                            <input type="text" placeholder="High-Speed WiFi , Air Conditioning" class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Services
+                                                                *</label>
+                                                            <input type="text"
+                                                                   placeholder="High-Speed WiFi , Air Conditioning"
+                                                                   class="form-control"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Capacity *</label>
-                                                            <input type="text" placeholder="5 pers " class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Capacity
+                                                                *</label>
+                                                            <input type="text" placeholder="5 pers "
+                                                                   class="form-control"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Rent Type *</label>
-                                                            <input type="text" placeholder="Monthly" class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Rent
+                                                                Type *</label>
+                                                            <input type="text" placeholder="Monthly"
+                                                                   class="form-control"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Status</label>
+                                                            <label class="control-label"
+                                                                   style="color:#6B7280;">Status</label>
                                                             <input type="text" placeholder="Active" class="form-control"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Price *</label>
+                                                            <label class="control-label" style="color:#6B7280;">Price
+                                                                *</label>
                                                             <input type="text" placeholder="30$" class="form-control"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
@@ -86,7 +98,8 @@ color: #333333;
                                                 <!-- END PERSONAL INFO TAB -->
                                             </div>
                                         </div>
-                                    </div> <button type="button" class=" btn btn-primary" style="
+                                    </div>
+                                    <button type="button" class=" btn btn-primary" style="
                                                                width: 165px;
                                                                height: 41.2px;
                                                                flex-grow: 0;
@@ -106,7 +119,8 @@ color: #333333;
                                                                line-height: 24px;
                                                                color: #FFFFFF;
                                                                ">
-                                        Save Change </button>
+                                        Save Change
+                                    </button>
                                 </div>
                             </div>
                         </div>

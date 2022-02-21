@@ -54,10 +54,10 @@ background-color: #E5E5E5;
         <!-- BEGIN CONTENT BODY -->
         <div class="page-content">
             <!-- BEGIN PAGE HEAD-->
-{{--        @include('admin.layouts.header')--}}
+        {{--        @include('admin.layouts.header')--}}
         <!-- END PAGE HEAD-->
             <!-- BEGIN PAGE BREADCRUMB -->
-        <!-- END PAGE BREADCRUMB -->
+            <!-- END PAGE BREADCRUMB -->
             <!-- BEGIN PAGE BASE CONTENT -->
             <!-- BEGIN DASHBOARD STATS 1-->
             @yield('content')

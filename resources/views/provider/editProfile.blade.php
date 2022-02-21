@@ -3,7 +3,7 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color:#8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
 
     </style>
@@ -56,7 +56,8 @@ font-size: 24px;
 line-height: 137.5%;
 color: #111827;
              font-family: AvenirLTStd-Book;
-"> Tools</div>
+"> Tools
+                            </div>
                             <div class="profile-usertitle-job" style="
 /*font-style: normal;*/
 /*font-weight: normal;*/
@@ -64,7 +65,8 @@ font-size: 14px;
 line-height: 157%;
 color: #6B7280;
              font-family: AvenirLTStd-Book;
-"> Gaza, palestine</div>
+"> Gaza, palestine
+                            </div>
                         </div>
                         <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
                         <div>
@@ -83,8 +85,10 @@ color: #6B7280;
                                                 <div class="tab-pane active" id="tab_1_1">
                                                     <form role="form" action="#">
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Name *</label>
-                                                            <input type="text" placeholder="Jones Ferdinand" class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Name
+                                                                *</label>
+                                                            <input type="text" placeholder="Jones Ferdinand"
+                                                                   class="form-control"
                                                                    style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -92,7 +96,8 @@ color: #6B7280;
                                                                        border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Co-work Space Name *</label>
+                                                            <label class="control-label" style="color:#6B7280;">Co-work
+                                                                Space Name *</label>
                                                             <input type="text" placeholder="Tools" class="form-control"
                                                                    style="
                                                                        height: 40px;
@@ -101,16 +106,21 @@ color: #6B7280;
                                                                        border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Email *</label>
-                                                            <input type="email" placeholder="Jones@gmail.com" class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Email
+                                                                *</label>
+                                                            <input type="email" placeholder="Jones@gmail.com"
+                                                                   class="form-control"
                                                                    style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
-                                                        </div>  <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Phone *</label>
-                                                            <input type="number" placeholder="0599589632" class="form-control"
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label class="control-label" style="color:#6B7280;">Phone
+                                                                *</label>
+                                                            <input type="number" placeholder="0599589632"
+                                                                   class="form-control"
                                                                    style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -118,8 +128,9 @@ color: #6B7280;
                                                                        border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6"
-                                                             >
-                                                            <label class="control-label" style="color:#6B7280;">Password *</label>
+                                                        >
+                                                            <label class="control-label" style="color:#6B7280;">Password
+                                                                *</label>
                                                             <input type="password" placeholder="*******"
                                                                    class="form-control" style="
                                                                        height: 40px;

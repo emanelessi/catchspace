@@ -3,7 +3,7 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color:#8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
 
     </style>
@@ -56,7 +56,8 @@ font-size: 24px;
 line-height: 137.5%;
 color: #111827;
              font-family: AvenirLTStd-Book;
-"> Tools</div>
+"> Tools
+                            </div>
                             <div class="profile-usertitle-job" style="
 /*font-style: normal;*/
 /*font-weight: normal;*/
@@ -64,7 +65,8 @@ font-size: 14px;
 line-height: 157%;
 color: #6B7280;
              font-family: AvenirLTStd-Book;
-"> Gaza, palestine</div>
+"> Gaza, palestine
+                            </div>
                         </div>
                         <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
                         <div>
@@ -83,7 +85,8 @@ color: #6B7280;
                                                 <div class="tab-pane active" id="tab_1_1">
                                                     <form role="form" action="#">
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace Name *</label>
+                                                            <label class="control-label" style="color:#6B7280;">Workspace
+                                                                Name *</label>
                                                             <input type="text" placeholder="Tools" class="form-control"
                                                                    style="
                                                                        height: 40px;
@@ -92,8 +95,10 @@ color: #6B7280;
                                                                        border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Owner Name *</label>
-                                                            <input type="text" placeholder="Omar D." class="form-control"
+                                                            <label class="control-label" style="color:#6B7280;">Owner
+                                                                Name *</label>
+                                                            <input type="text" placeholder="Omar D."
+                                                                   class="form-control"
                                                                    style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -102,8 +107,10 @@ color: #6B7280;
                                                         </div>
                                                         <div class="form-group "
                                                              style="margin-left: 16px;margin-right: 16px;">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace Address*</label>
-                                                            <input type="text" placeholder="Al-rehab mall, remal street, Gaza, palestine"
+                                                            <label class="control-label" style="color:#6B7280;">Workspace
+                                                                Address*</label>
+                                                            <input type="text"
+                                                                   placeholder="Al-rehab mall, remal street, Gaza, palestine"
                                                                    class="form-control" style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -139,21 +146,21 @@ color: #6B7280;
                                                                ">
                                             Save Change
                                         </button>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- END PROFILE CONTENT -->
                         </div>
-                        <!-- END PROFILE CONTENT -->
+                        <!-- END PORTLET MAIN -->
+
                     </div>
-                    <!-- END PORTLET MAIN -->
+                    <!-- END BEGIN PROFILE SIDEBAR -->
 
                 </div>
-                <!-- END BEGIN PROFILE SIDEBAR -->
-
             </div>
+
+
         </div>
-
-
-    </div>
 
 @endsection
 

@@ -3,10 +3,11 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color:#8B62C9 !important;
+            background-color: #8B62C9 !important;
         }
+
         .demo-loading-btn:hover {
-            background-color:#D2CDCD54 !important;
+            background-color: #D2CDCD54 !important;
         }
 
     </style>
@@ -77,7 +78,8 @@ color: #333333;
                                          line-height: 24px;
                                          color: #6B7280;
                                          "
-                            >   Upload  wokspace logo </button>
+                            > Upload wokspace logo
+                            </button>
 
                             <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
                             <div>
@@ -98,7 +100,8 @@ color: #333333;
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label" style="
                                                                 color:#6B7280;">Owner Name *</label>
-                                                                <input type="text" placeholder="Omar D." class="form-control"
+                                                                <input type="text" placeholder="Omar D."
+                                                                       class="form-control"
                                                                        style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -106,8 +109,10 @@ color: #333333;
                                                                        border: solid 1px #d1d5db;"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
-                                                                <label class="control-label" style="color:#6B7280;">Workspace Name *</label>
-                                                                <input type="text" placeholder="Tools" class="form-control"
+                                                                <label class="control-label" style="color:#6B7280;">Workspace
+                                                                    Name *</label>
+                                                                <input type="text" placeholder="Tools"
+                                                                       class="form-control"
                                                                        style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -115,8 +120,10 @@ color: #333333;
                                                                        border: solid 1px #d1d5db;"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
-                                                                <label class="control-label" style="color:#6B7280;">Email *</label>
-                                                                <input type="text" placeholder="Name@gmail.com" class="form-control"
+                                                                <label class="control-label" style="color:#6B7280;">Email
+                                                                    *</label>
+                                                                <input type="text" placeholder="Name@gmail.com"
+                                                                       class="form-control"
                                                                        style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -124,8 +131,10 @@ color: #333333;
                                                                        border: solid 1px #d1d5db;"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
-                                                                <label class="control-label" style="color:#6B7280;">Phone *</label>
-                                                                <input type="text" placeholder="+970 590 000 000" class="form-control"
+                                                                <label class="control-label" style="color:#6B7280;">Phone
+                                                                    *</label>
+                                                                <input type="text" placeholder="+970 590 000 000"
+                                                                       class="form-control"
                                                                        style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -136,21 +145,25 @@ color: #333333;
                                                                  margin-left: 16px;
                                                                  /*margin-right: 16px;*/
 ">
-                                                                <label class="control-label" style="color:#6B7280;">Workspace Address*</label>
-                                                                <input type="text" placeholder="Al-rehab mall, remal street, Gaza, palestine"
+                                                                <label class="control-label" style="color:#6B7280;">Workspace
+                                                                    Address*</label>
+                                                                <input type="text"
+                                                                       placeholder="Al-rehab mall, remal street, Gaza, palestine"
                                                                        class="form-control" style="
                                                                        height: 40px;
                                                                        /*height: 56px;padding: 0 12px;*/
-                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/></div>
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                                            </div>
                                                         </form>
                                                     </div>
 
                                                     <!-- END PERSONAL INFO TAB -->
                                                 </div>
                                             </div>
-                                        </div>   <button type="button"
-                                                         class="btn btn-primary margin-top--250 margin-left-90 m-grid-col-xs-offset-3 "
-                                                         style="
+                                        </div>
+                                        <button type="button"
+                                                class="btn btn-primary margin-top--250 margin-left-90 m-grid-col-xs-offset-3 "
+                                                style="
                                                                width: 165px;
                                                                height: 41.2px;
                                                                /*flex-grow: 0;*/

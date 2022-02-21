@@ -4,12 +4,13 @@
     <style>
 
         .btn-circle:hover {
-            background-color:  #7952B32B !important;
-            border-color:  #7952B32B !important;
+            background-color: #7952B32B !important;
+            border-color: #7952B32B !important;
         }
+
         .span:hover {
-            background-color:  #8B62C9 !important;
-            border-color:  #8B62C9 !important;
+            background-color: #8B62C9 !important;
+            border-color: #8B62C9 !important;
         }
 
     </style>
@@ -24,7 +25,8 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- BEGIN BORDERED TABLE PORTLET-->
-                <div class="portlet light portlet-fit bordered" style="background-color: #E5E5E5;border-color: #E5E5E5 !important;">
+                <div class="portlet light portlet-fit bordered"
+                     style="background-color: #E5E5E5;border-color: #E5E5E5 !important;">
                     <div class="portlet-title" style="border-color: #E5E5E5;">
                         <div class="actions">
                             <div class="btn-group open">
@@ -82,7 +84,7 @@
                                         font-weight: normal;
                                         font-size: 15px;
                                         line-height: 15px;">
-                                        <span  class="margin-left-40" style="
+                                        <span class="margin-left-40" style="
                                         /*margin-left: 35px;*/
 ">From Z to A</span>
                                     </div>
@@ -137,7 +139,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> ID </th>
+"> ID
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -147,7 +150,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> Work space Name </th>
+"> Work space Name
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -157,7 +161,8 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> Name </th>
+"> Name
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -167,10 +172,11 @@
     background: -webkit-linear-gradient(#7952B3, #FFBF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-"> Job title </th>
+"> Job title
+                                    </th>
                                 </tr>
-                                </thead >
-                                <tbody >
+                                </thead>
+                                <tbody>
                                 <tr>
                                     <td style="
     /*width: 59px;*/
@@ -184,7 +190,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 1 </td>
+"> 1
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -197,7 +204,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Mark </td>
+"> Mark
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -210,7 +218,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Otto </td>
+"> Otto
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -223,61 +232,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> makr124 </td>
-                                </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 2 </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Jacob </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Nilson </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> jac123 </td>
+"> makr124
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td style="
@@ -292,7 +248,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 3 </td>
+"> 2
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -305,7 +262,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Larry </td>
+"> Jacob
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -318,7 +276,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Cooper </td>
+"> Nilson
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -331,7 +290,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> lar </td>
+"> jac123
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td style="
@@ -346,7 +306,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 4 </td>
+"> 3
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -359,7 +320,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Sandy </td>
+"> Larry
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -372,7 +334,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Lim </td>
+"> Cooper
+                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -385,7 +348,66 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> sanlim </td>
+"> lar
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> 4
+                                    </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Sandy
+                                    </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> Lim
+                                    </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> sanlim
+                                    </td>
 
                                 </tr>
                                 </tbody>

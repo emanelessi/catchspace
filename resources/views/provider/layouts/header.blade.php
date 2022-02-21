@@ -3,6 +3,7 @@
     .menu-toggler:hover {
         color: #8D8282 !important;
     }
+
     .icon-bell:hover {
         color: #343A40 !important;
     }
@@ -14,7 +15,8 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="index.html">
-                <img src="../assets/pages/img/login/catchblack-logo.png" alt="logo" class="logo-default margin-top-10" style="
+                <img src="../assets/pages/img/login/catchblack-logo.png" alt="logo" class="logo-default margin-top-10"
+                     style="
     /*height: 48.21px;*/
     /*margin-top: 14px;*/
 "/> </a>
@@ -31,7 +33,8 @@
         <!-- BEGIN PAGE TOP -->
         <div class="page-top" style="background-color: #ffffff">
             <!-- BEGIN HEADER SEARCH BOX -->
-            <form class="search-form" action="page_general_search_2.html" method="GET" style="background-color: #ffffff;">
+            <form class="search-form" action="page_general_search_2.html" method="GET"
+                  style="background-color: #ffffff;">
                 <div class="input-group" style="
                 background-color: #ffffff;
                 border: 0px;
@@ -170,7 +173,7 @@
                 <!-- BEGIN USER LOGIN DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                     <li class="dropdown dropdown-user ">
-                        <a href="javascript:;"  data-toggle="dropdown" data-hover="dropdown"
+                        <a href="javascript:;" data-toggle="dropdown" data-hover="dropdown"
                            data-close-others="true" style="background-color: #ffffff;"
                            class="m-grid-col-lg-12 m-grid-col-md-1 m-grid-col-xs-1 no-space ">
                         {{--                            <span class="username username-hide-on-mobile"> Jones Ferdinand </span>--}}

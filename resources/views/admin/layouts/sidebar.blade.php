@@ -2,9 +2,11 @@
     i:hover {
         color: #FECA2F !important;
     }
-    i{
-        color:whitesmoke !important;
+
+    i {
+        color: whitesmoke !important;
     }
+
     /*a:hover {*/
     /*    color: #FECA2F !important;*/
     /*}*/
@@ -42,7 +44,7 @@
 
 ">
                     <i class="fa fa-home"></i>
-                    <span class="title" >Home</span>
+                    <span class="title">Home</span>
                 </a>
             </li>
             <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open @endif">
@@ -91,21 +93,21 @@
                     <span class="title">Workers</span>
                 </a>
             </li>
-{{--            <li class="nav-item @if(preg_match('/system/i',url()->current())) start active open @endif">--}}
-{{--                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="--}}
-{{--  font-family: AvenirLTStd-Book;--}}
-{{--    font-weight: normal;--}}
-{{--    font-size: 18px;--}}
-{{--    line-height: 27px;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    /*margin-left: 7px;*/--}}
-{{--    /*margin-bottom: 18px;*/--}}
+            {{--            <li class="nav-item @if(preg_match('/system/i',url()->current())) start active open @endif">--}}
+            {{--                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="--}}
+            {{--  font-family: AvenirLTStd-Book;--}}
+            {{--    font-weight: normal;--}}
+            {{--    font-size: 18px;--}}
+            {{--    line-height: 27px;--}}
+            {{--    /*text-transform: capitalize;*/--}}
+            {{--    /*margin-left: 7px;*/--}}
+            {{--    /*margin-bottom: 18px;*/--}}
 
-{{--">--}}
-{{--                    <i class="fa fa-server"></i>--}}
-{{--                    <span class="title">System</span>--}}
-{{--                </a>--}}
-{{--            </li>--}}
+            {{--">--}}
+            {{--                    <i class="fa fa-server"></i>--}}
+            {{--                    <span class="title">System</span>--}}
+            {{--                </a>--}}
+            {{--            </li>--}}
         </ul>
         <!-- END SIDEBAR MENU -->
     </div>
