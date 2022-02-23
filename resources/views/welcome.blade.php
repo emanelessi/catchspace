@@ -94,7 +94,7 @@ font-family: AvenirLTStd-Book;
                             font-size: 16px;
                             color: #FFFFFF;
                             ">
-                        Login
+                        Sign up
                     </a>
                 </div>
             </div>
