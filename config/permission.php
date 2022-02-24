@@ -75,8 +75,8 @@ return [
         /*
          * Change this if you want to name the related pivots other than defaults
          */
-        'role_pivot_key' => null, //default 'role_id',
-        'permission_pivot_key' => null, //default 'permission_id',
+        // 'role_pivot_key' => null, //default 'role_id',
+        // 'permission_pivot_key' => null, //default 'permission_id',
 
         /*
          * Change this if you want to name the related model primary key other than
@@ -93,7 +93,7 @@ return [
          * foreign key is other than `team_id`.
          */
 
-        'team_foreign_key' => 'team_id',
+        // 'team_foreign_key' => 'team_id',
     ],
 
     /*
@@ -111,7 +111,7 @@ return [
      * 'model_has_permissions'(view the latest version of package's migration file)
      */
 
-    'teams' => true,
+    // 'teams' => true,
 
     /*
      * When set to true, the required permission names are added to the exception
@@ -157,5 +157,17 @@ return [
          */
 
         'store' => 'default',
+
+
+        /*
+         * When checking for a permission against a model by passing a Permission
+         * instance to the check, this key determines what attribute on the
+         * Permissions model is used to cache against.
+         *
+         * Ideally, this should match your preferred way of checking permissions, eg:
+         * `$user->can('view-posts')` would be 'name'.
+         */
+
+        'model_key' => 'name',
     ],
 ];
