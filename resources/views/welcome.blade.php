@@ -12,8 +12,10 @@
 
     <style>
         .nav-btn:hover {
-            background-color: #FECA2F !important;
-            color: white;
+            /*background-color: #FECA2F !important;*/
+            color: #FECA2F !important;
+            border-color:#FECA2F !important ;
+
         }
     </style>
 </head>
@@ -81,16 +83,16 @@ font-family: AvenirLTStd-Book;
                     to find the best coworking space,
                     we are here to<br> help you</p>
                 <div class="text-left margin-left-6 ">
-                    <a href="{{route('login')}}" class="btn blue " style="
+                    <a href="{{route('register')}}" class="btn blue " style="
                             border-color: #FFC107;
                             border-radius: 3px !important;
                             align-items: center;
-                           width: 113px;
-                            height: 35px;
+                            width: 113px;
+                            height: 39px;
                             background: #FFC107;
-font-family: AvenirLTStd-Book;
+                            font-family: AvenirLTStd-Book;
                             font-style: normal;
-                            font-weight: 750;
+                            font-weight: 522;
                             font-size: 16px;
                             color: #FFFFFF;
                             ">

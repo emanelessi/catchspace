@@ -14,11 +14,10 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="{{url('/')}}">
+            <a href="{{url('/')}}"  class="margin-top-6">
                 <img src="../assets/pages/img/login/catchblack-logo.png" alt="logo" class="logo-default margin-top-10"
                      style="
-    /*height: 48.21px;*/
-    /*margin-top: 14px;*/
+    height: 45px;
 "/> </a>
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -41,16 +40,14 @@
 ">
                     <input type="text" class="form-control input-sm" placeholder="Search..." name="query">
                     <span class="input-group-btn">
-                                <a href="javascript:;" class="btn submit">
-                                    <i class="icon-magnifier" style="color: #978D8D !important;"></i>
+                                <a href="javascript:;" class="btn submit margin-top-9">
+                                    <i class="icon-magnifier" style="color: #978D8D !important;  "></i>
                                 </a>
                             </span>
                 </div>
             </form>
             <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="top-menu" style="
-            /*margin-top: -17px;*/
-">
+            <div class="top-menu margin-top-15" >
                 <ul class="nav navbar-nav pull-right">
                     <li class="separator hide"></li>
 
@@ -179,7 +176,7 @@
                             <span class="username username-hide-on-mobile"> {{auth()->user()->full_name}} </span>
                             <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
 {{--                            <img alt="" class="img-circle" src="../assets/layouts/layout4/img/avatar9.jpg"/>--}}
-                            <i class="fa fa-user img-circle" style="font-size: 25px;color: #FFC107 !important;" ></i>
+                            <i class="fa fa-user img-circle" style="font-size: 20px;color: #FFC107 !important;" ></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>

@@ -18,7 +18,8 @@
             margin-left: 8px;
             left: 162px;
             top: 109px;
-font-family: Poppins-Semibold;            font-style: normal;
+font-family: AvenirLTStd-Book;
+         font-style: normal;
             font-weight: normal;
             font-size: 30px;
             line-height: 48px;
@@ -41,7 +42,8 @@ font-family: Poppins-Semibold;            font-style: normal;
                  class="pull-right tooltips btn btn-fit-height green"
                  data-placement="left" data-original-title="Change dashboard date range"
                  style="background-color: #FFFFFF;border-color: #FFFFFF;
-                 border-radius: 10px !important;font-family: Poppins-Semibold;font-style: normal;
+                 border-radius: 10px !important;font-family: AvenirLTStd-Book;
+font-style: normal;
                  font-weight: normal;font-size: 18px;line-height: 27px;
                  color: #000000;margin-top: 7px;margin-right: 25px;">
                 <i class="icon-calendar" style="margin-right: 15px;color: black !important;"></i>&nbsp;
@@ -56,7 +58,10 @@ font-family: Poppins-Semibold;            font-style: normal;
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="dashboard-stat dashboard-stat-v2 blue" href="#"
-                   style="border-radius: 20px !important;height: 112.32px;left: 277px;top: 208px;background: linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%, #FFC107 103.45%);">
+                   style="border-radius: 20px !important;height: 112.32px;left: 277px;
+                   top: 208px;background:
+                   linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,
+                    #FFC107 103.45%);">
                     <div class="visual">
                         <i class="fa fa-user"
                            style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
@@ -102,20 +107,49 @@ font-family: Poppins-Semibold;            font-style: normal;
         </div>
         <div class="clearfix"></div>
         <!-- END DASHBOARD STATS 1-->
-
         <div class="row">
             <div class="col-lg-12 col-xs-12 col-sm-12">
                 <div class="portlet light bordered"
                      style="left: 277px;top: 697px;background: #FFFFFF;border-radius: 20px !important;">
                     <div class=" tabbable-line">
-                        <div class="caption">
+                        <div class="caption" style="height: 321px;">
                             <i class=" icon-social-twitter font-dark hide"></i>
                             <span class="caption-subject font-dark bold " style="
     width: 107px;
     height: 19px;
     left: 0px;
     top: 0px;
-    font-family: Poppins;
+font-family: AvenirLTStd-Book;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.4px;
+    color: #343A40 !important;
+">Quick actions</span>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="tab-content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-xs-12 col-sm-12">
+                <div class="portlet light bordered"
+                     style="left: 277px;top: 697px;background: #FFFFFF;border-radius: 20px !important;">
+                    <div class=" tabbable-line">
+                        <div class="caption" >
+                            <i class=" icon-social-twitter font-dark hide"></i>
+                            <span class="caption-subject font-dark bold " style="
+    width: 107px;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: 600 !important;
     font-size: 16px;
@@ -142,7 +176,7 @@ font-family: Poppins-Semibold;            font-style: normal;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-    font-family: Poppins;
+font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -150,7 +184,13 @@ font-family: Poppins-Semibold;            font-style: normal;
     color: #7C7C7C;
 ">
                                                                 <span class="mt-action-author"
-                                                                      style="margin-right: 25px;width: 109.1px;height: 28.27px;left: 396.39px;top: 761.46px;font-family: Poppins Medium;font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
+                                                                      style="
+                                                                      margin-right: 25px;
+                                                                      width: 109.1px;
+                                                                      height: 28.27px;
+                                                                      left: 396.39px;top: 761.46px;
+                                                                      font-family: AvenirLTStd-Book;
+font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
                                                             Dummy text of the printing
                                                         </p>
@@ -163,7 +203,7 @@ font-family: Poppins-Semibold;            font-style: normal;
                                                     background: #333333;
                                                     opacity: 0.5;
                                                     border-radius: 14px !important;
-                                                    font-family: Poppins;
+font-family: AvenirLTStd-Book;
                                                     font-style: normal;
                                                     font-weight: 500;
                                                     font-size: 16px;
@@ -180,7 +220,7 @@ font-family: Poppins-Semibold;            font-style: normal;
     background: #7952B3;
     border-radius: 14px !important;
     margin-left: 10px;
-    font-family: Poppins;
+font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -197,7 +237,7 @@ font-family: Poppins-Semibold;            font-style: normal;
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-    font-family: Poppins;
+font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -222,7 +262,7 @@ font-family: Poppins-Semibold;            font-style: normal;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-    font-family: Poppins;
+font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -230,7 +270,11 @@ font-family: Poppins-Semibold;            font-style: normal;
     color: #7C7C7C;
 ">
                                                                 <span class="mt-action-author"
-                                                                      style="margin-right: 25px;width: 109.1px;height: 28.27px;left: 396.39px;top: 761.46px;font-family: Poppins Medium;font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Gavin Bond
+                                                                      style="margin-right: 25px;width:
+                                                                       109.1px;height: 28.27px;left:
+                                                                        396.39px;top: 761.46px;
+                                                                        font-family: AvenirLTStd-Book;
+font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Gavin Bond
                                                                 </span>
                                                             pending for approval
                                                         </p>
@@ -243,7 +287,7 @@ font-family: Poppins-Semibold;            font-style: normal;
                                                     background: #333333;
                                                     opacity: 0.5;
                                                     border-radius: 14px !important;
-                                                    font-family: Poppins;
+font-family: AvenirLTStd-Book;
                                                     font-style: normal;
                                                     font-weight: 500;
                                                     font-size: 16px;
@@ -260,7 +304,7 @@ font-family: Poppins-Semibold;            font-style: normal;
     background: #7952B3;
     border-radius: 14px !important;
     margin-left: 10px;
-    font-family: Poppins;
+font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -277,7 +321,7 @@ font-family: Poppins-Semibold;            font-style: normal;
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-    font-family: Poppins;
+font-family: AvenirLTStd-Book;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -822,6 +866,7 @@ font-family: Poppins-Semibold;            font-style: normal;
                 </div>
             </div>
         </div>
+
 
         <!-- END PAGE BASE CONTENT -->
     </div>
