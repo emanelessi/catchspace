@@ -17,7 +17,7 @@ font-family: AvenirLTStd-Book;
     line-height: 137.5%;
 ">
         401: No Authorization found    </div>
-    <div class="logo margin-top-10 m-grid-col-lg-8 m-grid-col-md-12 m-grid-col-xs-12">
+    <div class="logo margin-top-10 m-grid-col-lg-8 m-grid-col-md-11 m-grid-col-xs-12">
         <img src="../assets/pages/img/login/401-page.png" class="center-block img-responsive
              m-grid-col-lg-9 m-grid-col-md-12 m-grid-col-xs-12  " alt="">
         <div class="logo margin-top-10 m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-9" style="
@@ -29,7 +29,7 @@ font-family: AvenirLTStd-Book;
     line-height: 137.5%;
 ">
             This page is not publically available, to access it please to login first    </div>
-        <button class="btn blue m-grid-col-lg-offset-5 m-grid-col-md-offset-5 m-grid-col-xs-offset-4 margin-top-15 center-block "
+        <button class="btn blue m-grid-col-lg-offset-5 m-grid-col-md-offset-5 m-grid-col-xs-offset-3 margin-top-15 center-block "
                 type="submit"
                 style="
                             border-color: #7952B3;
@@ -42,7 +42,6 @@ font-family: AvenirLTStd-Book;
                             background: #7952B3;
                             ">
             <i class="fa fa-arrow-left"></i>
-
             Go back to Dashboard
         </button>
 
