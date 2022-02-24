@@ -14,7 +14,7 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="index.html">
+            <a href="{{url('/')}}">
                 <img src="../assets/pages/img/login/catchblack-logo.png" alt="logo" class="logo-default margin-top-10"
                      style="
     /*height: 48.21px;*/
