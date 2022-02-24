@@ -40,8 +40,9 @@
         </div>
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
-        <div class="page-toolbar">
-            <a href="{{url('/admin/add-workspace')}}" type="button" class="demo-loading-btn btn btn-primary" style="
+        @can('create',\App\Models\WorkSpace::class)
+            <div class="page-toolbar">
+                <a href="{{url('/admin/add-workspace')}}" type="button" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
              font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -56,11 +57,12 @@
                     background: #7952B3;
                     border-radius: 5px !important;
 ">
-                Add work Space
-            </a>
+                    Add work Space
+                </a>
 
-            <!-- END PAGE TOOLBAR -->
-        </div>
+                <!-- END PAGE TOOLBAR -->
+            </div>
+        @endcan
         <div class="row">
             <div class="col-md-12">
                 <!-- BEGIN BORDERED TABLE PORTLET-->
@@ -325,8 +327,11 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"><a class="btn btn-outline dark"
-     data-target="#static2" data-toggle="modal" style="
+">
+                                        @can('workspace_delete')
+                                            <a class="btn btn-outline dark"
+                                               data-target="#static2" data-toggle="modal"
+                                               style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -339,10 +344,13 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            delete
-                                        </a>
-                                        <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
+                                                delete
+                                            </a>
+                                        @endcan
+                                        @can('workspace_edit')
+                                            <a class="btn btn-outline dark"
+                                               href="{{url('/admin/edit-workspace')}}" data-toggle="modal"
+                                               style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -355,8 +363,9 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            Edit
-                                        </a>
+                                                Edit
+                                            </a>
+                                        @endcan
                                     </td>
                                 </tr>
                                 <tr>
@@ -441,7 +450,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"><a class="btn btn-outline dark"
+">
+                                        @can('workspace_delete')
+                                        <a class="btn btn-outline dark"
      data-target="#static2" data-toggle="modal" style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -457,8 +468,10 @@
 ">
                                             delete
                                         </a>
+                                        @endcan
+                                        @can('workspace_edit')
                                         <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
+                                           href="{{url('/admin/edit-workspace')}}" data-toggle="modal" style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -473,6 +486,7 @@
 ">
                                             Edit
                                         </a>
+                                        @endcan
                                     </td>
                                 </tr>
                                 <tr>
@@ -557,7 +571,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"><a class="btn btn-outline dark"
+">
+                                        @can('workspace_delete')
+                                        <a class="btn btn-outline dark"
      data-target="#static2" data-toggle="modal" style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -573,8 +589,11 @@
 ">
                                             delete
                                         </a>
-                                        <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
+                                        @endcan
+                                            @can('workspace_edit')
+
+                                            <a class="btn btn-outline dark"
+                                               href="{{url('/admin/edit-workspace')}}" data-toggle="modal" style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -589,6 +608,8 @@
 ">
                                             Edit
                                         </a>
+                                            @endcan
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -673,7 +694,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"><a class="btn btn-outline dark"
+">
+                                        @can('workspace_delete')
+                                        <a class="btn btn-outline dark"
      data-target="#static2" data-toggle="modal" style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -689,8 +712,10 @@
 ">
                                             delete
                                         </a>
-                                        <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
+                                        @endcan
+                                        @can('workspace_edit')
+                                        <a class="btn btn-outline dark" href="{{url('/admin/edit-workspace')}}"
+                                           data-toggle="modal" style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -705,6 +730,8 @@
 ">
                                             Edit
                                         </a>
+                                            @endcan
+
                                     </td>
                                 </tr>
                                 </tbody>

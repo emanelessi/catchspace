@@ -112,6 +112,21 @@ class PermissionSeeder extends Seeder
         foreach ($superAdminPermissions as $permission) {
             $super_admin->givePermissionTo($permission);
         }
+
+
+        $test = Role::create(['name' => 'Test']);
+
+        $testPermissions = [
+            'workspace_create',
+            'workspace_show',
+            'workspace_delete',
+            'workspace_access',
+
+        ];
+
+        foreach ($testPermissions as $permission) {
+            $test->givePermissionTo($permission);
+        }
     }
 
 }

@@ -12,7 +12,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable,HasRoles;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles;
     use SoftDeletes;
 
     /**
@@ -21,9 +21,13 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'full_name',
         'email',
         'password',
+        'phone',
+        'type',
+        'user_level_id'
+
     ];
 
     /**
@@ -49,6 +53,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Provider::class, 'user_id', 'id');
     }
+
     public function userLevel()
     {
         return $this->belongsTo(UserLevel::class, 'user_level_id');

@@ -68,15 +68,18 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
-    Route::get('/admin/workspace', function () {
-        return view('admin.workSpace.workSpace');
-    });
-    Route::get('/admin/edit-workspace', function () {
-        return view('admin.workSpace.editWorkSpace');
-    });
-    Route::get('/admin/add-workspace', function () {
-        return view('admin.workSpace.addWorkSpace');
-    });
+    Route::get('/admin/workspace', [\App\Http\Controllers\Controller::class, 'index']);
+    Route::get('/admin/edit-workspace', [\App\Http\Controllers\Controller::class, 'update']);
+
+//    Route::get('/admin/workspace', function () {
+//        return view('admin.workSpace.workSpace');
+//    });
+//    Route::get('/admin/edit-workspace', function () {
+//        return view('admin.workSpace.editWorkSpace');
+//    });
+//    Route::get('/admin/add-workspace', function () {
+//        return view('admin.workSpace.addWorkSpace');
+//    });
 
 
     Route::get('/admin/worker', function () {

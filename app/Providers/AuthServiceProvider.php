@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -13,7 +14,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-         'App\Models\Model' => 'App\Policies\ModelPolicy',
+//         'App\Models\Model' => 'App\Policies\ModelPolicy',
 
     ];
 
@@ -26,6 +27,14 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+//        Gate::define('workspace_create',function(User $user) {
+//            return $user->Is_Test;
+//        });
+//        Gate::define('workspace_edit',function(User $user) {
+//            return $user->Is_Test;
+//        });
+//        Gate::define('workspace_delete',function(User $user) {
+//            return $user->Is_Test;
+//        });
     }
 }
