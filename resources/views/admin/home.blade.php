@@ -55,7 +55,7 @@ font-family: Poppins-Semibold;            font-style: normal;
     <div>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a class="dashboard-stat dashboard-stat-v2 blue" href="#"
+                <div class="dashboard-stat dashboard-stat-v2 blue" href="#"
                    style="border-radius: 20px !important;height: 112.32px;left: 277px;top: 208px;background: linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%, #FFC107 103.45%);">
                     <div class="visual">
                         <i class="fa fa-user"
@@ -63,14 +63,14 @@ font-family: Poppins-Semibold;            font-style: normal;
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span data-counter="counterup" data-value="36">0</span>
+                            <span data-counter="counterup" data-value="{{$providers->Count() ?? 0}}">{{$providers->Count() ?? 0}}</span>
                         </div>
                         <div class="desc"> Co-working provider</div>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a class="dashboard-stat dashboard-stat-v2 red" href="#"
+                <div class="dashboard-stat dashboard-stat-v2 red" href="#"
                    style="border-radius: 20px !important;height: 112.32px;left: 686px;top: 208px;background: linear-gradient(90deg, rgba(235, 194, 71, 0.9) -0.02%, #FFC107 22.34%, rgba(243, 194, 46, 0.795918) 64.56%, #7952B3 95.36%);">
                     <div class="visual">
                         <i class="fa fa-map-marker"
@@ -78,14 +78,14 @@ font-family: Poppins-Semibold;            font-style: normal;
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span data-counter="counterup" data-value="40">0</span>
+                            <span data-counter="counterup" data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
                         </div>
                         <div class="desc"> Work space</div>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a class="dashboard-stat dashboard-stat-v2 green" href="#"
+                <div class="dashboard-stat dashboard-stat-v2 green" href="#"
                    style="border-radius: 20px !important;height: 112.32px;left: 1068px;top: 208px;background: linear-gradient(90deg, #7952B3 29.67%, rgba(132, 99, 181, 0.854962) 50.51%, #FFC107 100%);">
                     <div class="visual">
                         <i class="fa fa-sticky-note"
@@ -93,11 +93,11 @@ font-family: Poppins-Semibold;            font-style: normal;
                     </div>
                     <div class="details">
                         <div class="number">
-                            <span data-counter="counterup" data-value="70">0</span>
+                            <span data-counter="counterup" data-value="{{$workers->Count() ?? 0}}">{{$workers->Count() ?? 0}}</span>
                         </div>
                         <div class="desc"> Workers</div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>

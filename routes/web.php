@@ -50,36 +50,38 @@ Route::get('/confirm', function () {
     return view('auth.passwords.confirm');
 });
 
-
-Route::get('/admin/home', function () {
-    return view('admin.home');
-});
-
-
-Route::get('/admin/provider', function () {
-    return view('admin.coworkProvider.coworkProvider');
-});
-Route::get('/admin/edit-provider', function () {
-    return view('admin.coworkProvider.editCoworkProvider');
-});
-Route::get('/admin/add-provider', function () {
-    return view('admin.coworkProvider.addCoworkProvider');
-});
-
-
-Route::get('/admin/workspace', function () {
-    return view('admin.workSpace.workSpace');
-});
-Route::get('/admin/edit-workspace', function () {
-    return view('admin.workSpace.editWorkSpace');
-});
-Route::get('/admin/add-workspace', function () {
-    return view('admin.workSpace.addWorkSpace');
-});
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/admin/home', function () {
+        $providers=\App\Models\Provider::all();
+        $work_spaces=\App\Models\WorkSpace::all();
+        $workers=\App\Models\Worker::all();
+        return view('admin.home',compact('workers','work_spaces','providers'));
+    });
+    Route::get('/admin/provider', function () {
+        return view('admin.coworkProvider.coworkProvider');
+    });
+    Route::get('/admin/edit-provider', function () {
+        return view('admin.coworkProvider.editCoworkProvider');
+    });
+    Route::get('/admin/add-provider', function () {
+        return view('admin.coworkProvider.addCoworkProvider');
+    });
 
 
-Route::get('/admin/worker', function () {
-    return view('admin.worker.worker');
+    Route::get('/admin/workspace', function () {
+        return view('admin.workSpace.workSpace');
+    });
+    Route::get('/admin/edit-workspace', function () {
+        return view('admin.workSpace.editWorkSpace');
+    });
+    Route::get('/admin/add-workspace', function () {
+        return view('admin.workSpace.addWorkSpace');
+    });
+
+
+    Route::get('/admin/worker', function () {
+        return view('admin.worker.worker');
+    });
 });
 
 
