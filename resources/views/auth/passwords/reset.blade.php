@@ -110,10 +110,10 @@ color: #000000;
                     <i style="
                     background: -webkit-linear-gradient(#7952B3, #FFBF00);
                     -webkit-background-clip: text;
-                    font-size: 23px;
+                    font-size: 18px;
                     -webkit-text-fill-color: transparent;
                     margin-left: 19px;
-                    " class="fa fa-lock padding-tb-3"></i>
+                    " class="fa fa-check-circle padding-tb-3"></i>
                     <input class="form-control form-control-solid placeholder-no-fix @error('confirm_password')
                         is-invalid @enderror" placeholder="Confirm password"
                            name="password-confirm" id="password-confirm" type="password" required=""

@@ -14,6 +14,32 @@
         a:hover {
             color: #333333 !important;
         }
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        .custom-file-input::before {
+            content: 'Upload Workspace Logo \f093';
+            display: inline-block;
+            font-family: "Font Awesome";
+            /*background: linear-gradient(top, #f9f9f9, #e3e3e3);*/
+            /*border: 1px solid #999;*/
+            /*border-radius: 3px;*/
+            /*padding: 5px 8px;*/
+            /*outline: none;*/
+            /*white-space: nowrap;*/
+            /*-webkit-user-select: none;*/
+            cursor: pointer;
+            /*text-shadow: 1px 1px #fff;*/
+            font-weight: 700;
+            font-size: 10pt;
+        }
+        .custom-file-input:hover::before {
+            border-color: black;
+        }
+        .custom-file-input:active::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
 
     </style>
     <body class=" login">
@@ -52,7 +78,7 @@ font-family: AvenirLTStd-Book;
                     font-size: 16px;
                     letter-spacing: -0.022em;
                     "> Sign up to have an account</p>
-                    <form method="POST" action="{{ route('register') }}">
+                    <form enctype="multipart/form-data"  method="post" action="{{ route('register') }}">
                         @csrf
                         <div class="alert alert-danger display-hide">
                             <button class="close" data-close="alert"></button>
@@ -99,12 +125,12 @@ font-family: AvenirLTStd-Book;
                                 <i style="
                     background: -webkit-linear-gradient(#7952B3, #FFBF00);
                     -webkit-background-clip: text;
-                    font-size: 23px;
+                    font-size: 20px;
                     -webkit-text-fill-color: transparent;
                     padding-top: 10px;
                     margin-left: 19px;                    height: 40px;
 
-                    " class="fa fa-map-marker"></i>
+                    " class="fa fa-building"></i>
 
                                 <input
                                     class="form-control form-control-solid placeholder-no-fix  @error('Co-name') is-invalid @enderror"
@@ -173,7 +199,7 @@ font-family: AvenirLTStd-Book;
 
                                 <input
                                     class="form-control form-control-solid placeholder-no-fix @error('phone') is-invalid @enderror"
-                                    placeholder="phone" name="phone" id="phone" type="number"
+                                    placeholder="phone" name="phone" id="phone" type="tel"
                                     onfocus="this.placeholder = ''"
                                     value="{{ old('phone') }}" required autocomplete="phone" autofocus
                                     style="
@@ -184,6 +210,39 @@ font-family: AvenirLTStd-Book;
     box-sizing: border-box;
 "/>
                                 @error('phone')
+                                <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group margin-bottom-15">
+                            <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                            <label class="control-label visible-ie8 visible-ie9">{{ __('address') }}</label>
+                            <div class="input-icon">
+                                <i style="
+                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    -webkit-background-clip: text;
+                    font-size: 23px;
+                    -webkit-text-fill-color: transparent;
+                    padding-top: 10px;
+                    margin-left: 19px;                    height: 40px;
+
+                    " class="fa fa-map-marker"></i>
+
+                                <input
+                                    class="form-control form-control-solid placeholder-no-fix @error('address') is-invalid @enderror"
+                                    placeholder="Address" name="address" id="address" type="text"
+                                    onfocus="this.placeholder = ''"
+                                    value="{{ old('address') }}" required autocomplete="address" autofocus
+                                    style="
+    border-radius: 20px !important;
+    height: 53px;padding-left: 42px;
+    background: #FFFFFF;
+    border: 1px solid #343A40;
+    box-sizing: border-box;
+"/>
+                                @error('address')
                                 <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -255,6 +314,17 @@ font-family: AvenirLTStd-Book;
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-lg-12 text-left">
+                                <input type="file" name="logo" class="custom-file-input btn btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-6
+                    m-grid-col-xs-1"
+                                        style="
+width: 100%;
+background: #7952B3;
+border-color: #7952B3;
+border-radius: 20px !important;
+font-family: AvenirLTStd-Book;
+color: #FFFFFF;"/>
+                            </div>
                             <div class="col-lg-8">
                                 <div class="rem-password" style="
                                 width: 222px;
