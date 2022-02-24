@@ -42,7 +42,6 @@ font-family: AvenirLTStd-Book;
                             background: #7952B3;
                             ">
             <i class="fa fa-arrow-left"></i>
-
             Go back to Dashboard
         </button>
 
