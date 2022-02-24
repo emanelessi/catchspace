@@ -13,9 +13,14 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    function __construct()
+    {
+        $this->middleware('permission:workspace_show', ['only' => ['index']]);
+    }
+
     public function index()
     {
-        $this->authorize('index', WorkSpace::class);
+        // $this->authorize('index', WorkSpace::class);
         $workspace = WorkSpace::all();
         return view('admin.workSpace.workSpace', compact($workspace));
 //        return view('admin.workSpace.workSpace');
