@@ -120,7 +120,7 @@
 ">
                     <div class="visual">
                         <i class="fa fa-file-text"
-                           style="color: white !important;opacity: 1 !important;padding-left: 44px;font-size: 80px"></i>
+                           style="color: white !important;opacity: 1 !important;padding-left: 44px;font-size: 56px"></i>
                     </div>
                     <div class="details">
                         <div class="number padding-top-12">

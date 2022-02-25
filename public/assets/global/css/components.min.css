@@ -13582,7 +13582,8 @@ body[ng-controller] .modal {
 
 .dashboard-stat .visual > i {
     margin-left: -35px;
-    font-size: 99px;
+    font-size: 64px;
+    margin-top: -19px;
     line-height: 110px
 }
 
