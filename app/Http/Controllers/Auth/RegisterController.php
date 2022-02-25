@@ -82,6 +82,7 @@ class RegisterController extends Controller
         $provider->logo = storeImage('providers', 'logo');
         $provider->user_id = $user->id;
         $provider->save();
+        return $user;
 
     }
 }

@@ -81,7 +81,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="fa fa-sticky-note"></i>
+                    <i class="fa fa-file-text"></i>
                     <span class="title">Workers</span>
                 </a>
             </li>

@@ -93,8 +93,8 @@ font-style: normal;
                 <div class="dashboard-stat dashboard-stat-v2 green" href="#"
                    style="border-radius: 20px !important;height: 112.32px;left: 1068px;top: 208px;background: linear-gradient(90deg, #7952B3 29.67%, rgba(132, 99, 181, 0.854962) 50.51%, #FFC107 100%);">
                     <div class="visual">
-                        <i class="fa fa-sticky-note"
-                           style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
+                        <i class="fa fa-file-text"
+                           style="color: white !important;opacity: 1 !important;padding-left: 44px;font-size: 80px"></i>
                     </div>
                     <div class="details">
                         <div class="number">
