@@ -11,7 +11,7 @@
         }
 
     </style>
-{{--    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">--}}
+    {{--    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">--}}
 
     <div class="page-head" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->

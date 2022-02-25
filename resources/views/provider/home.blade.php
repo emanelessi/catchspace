@@ -26,7 +26,7 @@
         </div>
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
-        <div class="page-toolbar"  style="
+        <div class="page-toolbar" style="
         /*margin-left: 20px;*/
     /*width: 288.18px;*/
     /*height: 56.53px;*/
@@ -74,13 +74,15 @@
                     </div>
                     <div class="details">
                         <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;" data-value="36">0</span>
+                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
+                                  data-value="36">0</span>
                         </div>
                         <div class="desc" style="
     font-family: AvenirLTStd-Book;
     font-weight: 500;
     font-size: 16px;
-"> Co-working provider</div>
+"> Co-working provider
+                        </div>
                     </div>
                 </a>
             </div>
@@ -97,13 +99,15 @@
                     </div>
                     <div class="details">
                         <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;" data-value="40">0</span>
+                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
+                                  data-value="40">0</span>
                         </div>
-                        <div class="desc"  style="
+                        <div class="desc" style="
     font-family: AvenirLTStd-Book;
     font-weight: 500;
     font-size: 16px;
-"> Work space</div>
+"> Work space
+                        </div>
                     </div>
                 </a>
             </div>
@@ -120,13 +124,15 @@
                     </div>
                     <div class="details">
                         <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;" data-value="70">0</span>
+                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
+                                  data-value="70">0</span>
                         </div>
                         <div class="desc" style="
     font-family: AvenirLTStd-Book;
     font-weight: 500;
     font-size: 16px;
-"> Workers</div>
+"> Workers
+                        </div>
                     </div>
                 </a>
             </div>

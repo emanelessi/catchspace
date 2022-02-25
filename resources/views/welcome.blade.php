@@ -14,7 +14,7 @@
         .nav-btn:hover {
             /*background-color: #FECA2F !important;*/
             color: #FECA2F !important;
-            border-color:#FECA2F !important ;
+            border-color: #FECA2F !important;
 
         }
     </style>

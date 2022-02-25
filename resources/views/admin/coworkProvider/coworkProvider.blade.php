@@ -379,38 +379,38 @@
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
-{{--                                        <a class="btn btn-outline dark"--}}
-{{--                                           data-target="#static2" data-toggle="modal" style="--}}
-{{--    /*width: 59px;*/--}}
-{{--    /*height: 53px;*/--}}
-{{--    /*left: 542px;*/--}}
-{{--    /*top: 369px;*/--}}
-{{-- font-family: AvenirLTStd-Book;--}}
-{{--    /*font-weight: 500;*/--}}
-{{--    font-size:  20px;--}}
-{{--    /*line-height: 80px;*/--}}
-{{--    letter-spacing: 0.02em;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    color: #000000;--}}
-{{--">--}}
-{{--                                            delete--}}
-{{--                                        </a>--}}
-{{--                                        <a class="btn btn-outline dark"--}}
-{{--                                           data-target="#static2" data-toggle="modal" style="--}}
-{{--    /*width: 59px;*/--}}
-{{--    /*height: 53px;*/--}}
-{{--    /*left: 542px;*/--}}
-{{--    /*top: 369px;*/--}}
-{{-- font-family: AvenirLTStd-Book;--}}
-{{--    /*font-weight: 500;*/--}}
-{{--    font-size:  20px;--}}
-{{--    /*line-height: 80px;*/--}}
-{{--    letter-spacing: 0.02em;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    color: #000000;--}}
-{{--">--}}
-{{--                                            Edit--}}
-{{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-outline dark"--}}
+                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
+                                        {{--    /*width: 59px;*/--}}
+                                        {{--    /*height: 53px;*/--}}
+                                        {{--    /*left: 542px;*/--}}
+                                        {{--    /*top: 369px;*/--}}
+                                        {{-- font-family: AvenirLTStd-Book;--}}
+                                        {{--    /*font-weight: 500;*/--}}
+                                        {{--    font-size:  20px;--}}
+                                        {{--    /*line-height: 80px;*/--}}
+                                        {{--    letter-spacing: 0.02em;--}}
+                                        {{--    /*text-transform: capitalize;*/--}}
+                                        {{--    color: #000000;--}}
+                                        {{--">--}}
+                                        {{--                                            delete--}}
+                                        {{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-outline dark"--}}
+                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
+                                        {{--    /*width: 59px;*/--}}
+                                        {{--    /*height: 53px;*/--}}
+                                        {{--    /*left: 542px;*/--}}
+                                        {{--    /*top: 369px;*/--}}
+                                        {{-- font-family: AvenirLTStd-Book;--}}
+                                        {{--    /*font-weight: 500;*/--}}
+                                        {{--    font-size:  20px;--}}
+                                        {{--    /*line-height: 80px;*/--}}
+                                        {{--    letter-spacing: 0.02em;--}}
+                                        {{--    /*text-transform: capitalize;*/--}}
+                                        {{--    color: #000000;--}}
+                                        {{--">--}}
+                                        {{--                                            Edit--}}
+                                        {{--                                        </a>--}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -518,38 +518,38 @@
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
-{{--                                        <a class="btn btn-outline dark"--}}
-{{--     data-target="#static2" data-toggle="modal" style="--}}
-{{--    /*width: 59px;*/--}}
-{{--    /*height: 53px;*/--}}
-{{--    /*left: 542px;*/--}}
-{{--    /*top: 369px;*/--}}
-{{-- font-family: AvenirLTStd-Book;--}}
-{{--    /*font-weight: 500;*/--}}
-{{--    font-size:  20px;--}}
-{{--    /*line-height: 80px;*/--}}
-{{--    letter-spacing: 0.02em;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    color: #000000;--}}
-{{--">--}}
-{{--                                            delete--}}
-{{--                                        </a>--}}
-{{--                                        <a class="btn btn-outline dark"--}}
-{{--                                           data-target="#static2" data-toggle="modal" style="--}}
-{{--    /*width: 59px;*/--}}
-{{--    /*height: 53px;*/--}}
-{{--    /*left: 542px;*/--}}
-{{--    /*top: 369px;*/--}}
-{{-- font-family: AvenirLTStd-Book;--}}
-{{--    /*font-weight: 500;*/--}}
-{{--    font-size:  20px;--}}
-{{--    /*line-height: 80px;*/--}}
-{{--    letter-spacing: 0.02em;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    color: #000000;--}}
-{{--">--}}
-{{--                                            Edit--}}
-{{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-outline dark"--}}
+                                        {{--     data-target="#static2" data-toggle="modal" style="--}}
+                                        {{--    /*width: 59px;*/--}}
+                                        {{--    /*height: 53px;*/--}}
+                                        {{--    /*left: 542px;*/--}}
+                                        {{--    /*top: 369px;*/--}}
+                                        {{-- font-family: AvenirLTStd-Book;--}}
+                                        {{--    /*font-weight: 500;*/--}}
+                                        {{--    font-size:  20px;--}}
+                                        {{--    /*line-height: 80px;*/--}}
+                                        {{--    letter-spacing: 0.02em;--}}
+                                        {{--    /*text-transform: capitalize;*/--}}
+                                        {{--    color: #000000;--}}
+                                        {{--">--}}
+                                        {{--                                            delete--}}
+                                        {{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-outline dark"--}}
+                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
+                                        {{--    /*width: 59px;*/--}}
+                                        {{--    /*height: 53px;*/--}}
+                                        {{--    /*left: 542px;*/--}}
+                                        {{--    /*top: 369px;*/--}}
+                                        {{-- font-family: AvenirLTStd-Book;--}}
+                                        {{--    /*font-weight: 500;*/--}}
+                                        {{--    font-size:  20px;--}}
+                                        {{--    /*line-height: 80px;*/--}}
+                                        {{--    letter-spacing: 0.02em;--}}
+                                        {{--    /*text-transform: capitalize;*/--}}
+                                        {{--    color: #000000;--}}
+                                        {{--">--}}
+                                        {{--                                            Edit--}}
+                                        {{--                                        </a>--}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -657,38 +657,38 @@
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
-{{--                                        <a class="btn btn-outline dark"--}}
-{{--                                           data-target="#static2" data-toggle="modal" style="--}}
-{{--    /*width: 59px;*/--}}
-{{--    /*height: 53px;*/--}}
-{{--    /*left: 542px;*/--}}
-{{--    /*top: 369px;*/--}}
-{{-- font-family: AvenirLTStd-Book;--}}
-{{--    /*font-weight: 500;*/--}}
-{{--    font-size:  20px;--}}
-{{--    /*line-height: 80px;*/--}}
-{{--    letter-spacing: 0.02em;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    color: #000000;--}}
-{{--">--}}
-{{--                                            delete--}}
-{{--                                        </a>--}}
-{{--                                        <a class="btn btn-outline dark"--}}
-{{--                                           data-target="#static2" data-toggle="modal" style="--}}
-{{--    /*width: 59px;*/--}}
-{{--    /*height: 53px;*/--}}
-{{--    /*left: 542px;*/--}}
-{{--    /*top: 369px;*/--}}
-{{-- font-family: AvenirLTStd-Book;--}}
-{{--    /*font-weight: 500;*/--}}
-{{--    font-size:  20px;--}}
-{{--    /*line-height: 80px;*/--}}
-{{--    letter-spacing: 0.02em;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    color: #000000;--}}
-{{--">--}}
-{{--                                            Edit--}}
-{{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-outline dark"--}}
+                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
+                                        {{--    /*width: 59px;*/--}}
+                                        {{--    /*height: 53px;*/--}}
+                                        {{--    /*left: 542px;*/--}}
+                                        {{--    /*top: 369px;*/--}}
+                                        {{-- font-family: AvenirLTStd-Book;--}}
+                                        {{--    /*font-weight: 500;*/--}}
+                                        {{--    font-size:  20px;--}}
+                                        {{--    /*line-height: 80px;*/--}}
+                                        {{--    letter-spacing: 0.02em;--}}
+                                        {{--    /*text-transform: capitalize;*/--}}
+                                        {{--    color: #000000;--}}
+                                        {{--">--}}
+                                        {{--                                            delete--}}
+                                        {{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-outline dark"--}}
+                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
+                                        {{--    /*width: 59px;*/--}}
+                                        {{--    /*height: 53px;*/--}}
+                                        {{--    /*left: 542px;*/--}}
+                                        {{--    /*top: 369px;*/--}}
+                                        {{-- font-family: AvenirLTStd-Book;--}}
+                                        {{--    /*font-weight: 500;*/--}}
+                                        {{--    font-size:  20px;--}}
+                                        {{--    /*line-height: 80px;*/--}}
+                                        {{--    letter-spacing: 0.02em;--}}
+                                        {{--    /*text-transform: capitalize;*/--}}
+                                        {{--    color: #000000;--}}
+                                        {{--">--}}
+                                        {{--                                            Edit--}}
+                                        {{--                                        </a>--}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -796,38 +796,38 @@
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
-{{--                                        <a class="btn btn-outline dark"--}}
-{{--                                           data-target="#static2" data-toggle="modal" style="--}}
-{{--    /*width: 59px;*/--}}
-{{--    /*height: 53px;*/--}}
-{{--    /*left: 542px;*/--}}
-{{--    /*top: 369px;*/--}}
-{{-- font-family: AvenirLTStd-Book;--}}
-{{--    /*font-weight: 500;*/--}}
-{{--    font-size:  20px;--}}
-{{--    /*line-height: 80px;*/--}}
-{{--    letter-spacing: 0.02em;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    color: #000000;--}}
-{{--">--}}
-{{--                                            delete--}}
-{{--                                        </a>--}}
-{{--                                        <a class="btn btn-outline dark"--}}
-{{--                                           data-target="#static2" data-toggle="modal" style="--}}
-{{--    /*width: 59px;*/--}}
-{{--    /*height: 53px;*/--}}
-{{--    /*left: 542px;*/--}}
-{{--    /*top: 369px;*/--}}
-{{-- font-family: AvenirLTStd-Book;--}}
-{{--    /*font-weight: 500;*/--}}
-{{--    font-size: 20px;--}}
-{{--    /*line-height: 80px;*/--}}
-{{--    letter-spacing: 0.02em;--}}
-{{--    /*text-transform: capitalize;*/--}}
-{{--    color: #000000;--}}
-{{--">--}}
-{{--                                            Edit--}}
-{{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-outline dark"--}}
+                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
+                                        {{--    /*width: 59px;*/--}}
+                                        {{--    /*height: 53px;*/--}}
+                                        {{--    /*left: 542px;*/--}}
+                                        {{--    /*top: 369px;*/--}}
+                                        {{-- font-family: AvenirLTStd-Book;--}}
+                                        {{--    /*font-weight: 500;*/--}}
+                                        {{--    font-size:  20px;--}}
+                                        {{--    /*line-height: 80px;*/--}}
+                                        {{--    letter-spacing: 0.02em;--}}
+                                        {{--    /*text-transform: capitalize;*/--}}
+                                        {{--    color: #000000;--}}
+                                        {{--">--}}
+                                        {{--                                            delete--}}
+                                        {{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-outline dark"--}}
+                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
+                                        {{--    /*width: 59px;*/--}}
+                                        {{--    /*height: 53px;*/--}}
+                                        {{--    /*left: 542px;*/--}}
+                                        {{--    /*top: 369px;*/--}}
+                                        {{-- font-family: AvenirLTStd-Book;--}}
+                                        {{--    /*font-weight: 500;*/--}}
+                                        {{--    font-size: 20px;--}}
+                                        {{--    /*line-height: 80px;*/--}}
+                                        {{--    letter-spacing: 0.02em;--}}
+                                        {{--    /*text-transform: capitalize;*/--}}
+                                        {{--    color: #000000;--}}
+                                        {{--">--}}
+                                        {{--                                            Edit--}}
+                                        {{--                                        </a>--}}
                                     </td>
                                 </tr>
                                 </tbody>

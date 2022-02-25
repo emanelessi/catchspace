@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="page-title"  style="margin-bottom: 25px;">
+    <div class="page-title" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
             <h1 style="
@@ -11,279 +11,291 @@
             letter-spacing: -0.022em;
             color: #333333;
             " class="margin-top--10">Policies</h1>
-    </div>
-    <div class="row margin-top-40">
-        <div class="col-md-4 ">
-            <!-- BEGIN Portlet PORTLET-->
-            <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
-font-size: 17px">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
-                    </div>
-                    <div class="tools">
-                        <a href="" class="fullscreen"> </a>
-                        <a href="javascript:;" class="collapse"> </a>
-                    </div>
-                    <div class="actions">
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-pencil"></i> Edit </a>
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-plus"></i> Add </a>
-                        <a class="btn btn-default btn-sm"
-                           data-target="#static2" data-toggle="modal" href="javascript:;">
-                            <i class="icon-trash"> Delete</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
-                         data-rail-color="blue" data-handle-color="#7952B3">
-                        <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
-font-size: 17px">Scroll is always visible</h4>
-                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                            elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
-                            nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
-                            mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                            mattis
-                            consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia
-                            odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- END Portlet PORTLET-->
         </div>
-        <div class="col-md-4 ">
-            <!-- BEGIN Portlet PORTLET-->
-            <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+        <div class="row margin-top-40">
+            <div class="col-md-4 ">
+                <!-- BEGIN Portlet PORTLET-->
+                <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
 font-size: 17px">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                        </div>
+                        <div class="tools">
+                            <a href="" class="fullscreen"> </a>
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                        <div class="actions">
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-pencil"></i> Edit </a>
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-plus"></i> Add </a>
+                            <a class="btn btn-default btn-sm"
+                               data-target="#static2" data-toggle="modal" href="javascript:;">
+                                <i class="icon-trash"> Delete</i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="tools">
-                        <a href="" class="fullscreen"> </a>
-                        <a href="javascript:;" class="collapse"> </a>
-                    </div>
-                    <div class="actions">
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-pencil"></i> Edit </a>
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-plus"></i> Add </a>
-                        <a class="btn btn-default btn-sm"
-                           data-target="#static2" data-toggle="modal" href="javascript:;">
-                            <i class="icon-trash"> Delete</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
-                         data-rail-color="blue" data-handle-color="#7952B3">
-                        <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
+                    <div class="portlet-body">
+                        <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
+                             data-rail-color="blue" data-handle-color="#7952B3">
+                            <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
 font-size: 17px">Scroll is always visible</h4>
-                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                            elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
-                            nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
-                            mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                            mattis
-                            consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia
-                            odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                nec
+                                elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo
+                                luctus,
+                                nisi erat porttitor ligula,
+                                eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                                mollis,
+                                est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                                mattis
+                                consectetur purus sit
+                                amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                                lacinia
+                                odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
                     </div>
                 </div>
+                <!-- END Portlet PORTLET-->
             </div>
-            <!-- END Portlet PORTLET-->
-        </div>
-        <div class="col-md-4 ">
-            <!-- BEGIN Portlet PORTLET-->
-            <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+            <div class="col-md-4 ">
+                <!-- BEGIN Portlet PORTLET-->
+                <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
 font-size: 17px">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                        </div>
+                        <div class="tools">
+                            <a href="" class="fullscreen"> </a>
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                        <div class="actions">
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-pencil"></i> Edit </a>
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-plus"></i> Add </a>
+                            <a class="btn btn-default btn-sm"
+                               data-target="#static2" data-toggle="modal" href="javascript:;">
+                                <i class="icon-trash"> Delete</i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="tools">
-                        <a href="" class="fullscreen"> </a>
-                        <a href="javascript:;" class="collapse"> </a>
-                    </div>
-                    <div class="actions">
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-pencil"></i> Edit </a>
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-plus"></i> Add </a>
-                        <a class="btn btn-default btn-sm"
-                           data-target="#static2" data-toggle="modal" href="javascript:;">
-                            <i class="icon-trash"> Delete</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
-                         data-rail-color="blue" data-handle-color="#7952B3">
-                        <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
+                    <div class="portlet-body">
+                        <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
+                             data-rail-color="blue" data-handle-color="#7952B3">
+                            <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
 font-size: 17px">Scroll is always visible</h4>
-                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                            elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
-                            nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
-                            mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                            mattis
-                            consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia
-                            odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                nec
+                                elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo
+                                luctus,
+                                nisi erat porttitor ligula,
+                                eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                                mollis,
+                                est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                                mattis
+                                consectetur purus sit
+                                amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                                lacinia
+                                odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
                     </div>
                 </div>
+                <!-- END Portlet PORTLET-->
             </div>
-            <!-- END Portlet PORTLET-->
-        </div>
-        <div class="col-md-4 ">
-            <!-- BEGIN Portlet PORTLET-->
-            <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+            <div class="col-md-4 ">
+                <!-- BEGIN Portlet PORTLET-->
+                <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
 font-size: 17px">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                        </div>
+                        <div class="tools">
+                            <a href="" class="fullscreen"> </a>
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                        <div class="actions">
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-pencil"></i> Edit </a>
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-plus"></i> Add </a>
+                            <a class="btn btn-default btn-sm"
+                               data-target="#static2" data-toggle="modal" href="javascript:;">
+                                <i class="icon-trash"> Delete</i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="tools">
-                        <a href="" class="fullscreen"> </a>
-                        <a href="javascript:;" class="collapse"> </a>
-                    </div>
-                    <div class="actions">
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-pencil"></i> Edit </a>
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-plus"></i> Add </a>
-                        <a class="btn btn-default btn-sm"
-                           data-target="#static2" data-toggle="modal" href="javascript:;">
-                            <i class="icon-trash"> Delete</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
-                         data-rail-color="blue" data-handle-color="#7952B3">
-                        <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
+                    <div class="portlet-body">
+                        <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
+                             data-rail-color="blue" data-handle-color="#7952B3">
+                            <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
 font-size: 17px">Scroll is always visible</h4>
-                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                            elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
-                            nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
-                            mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                            mattis
-                            consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia
-                            odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                nec
+                                elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo
+                                luctus,
+                                nisi erat porttitor ligula,
+                                eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                                mollis,
+                                est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                                mattis
+                                consectetur purus sit
+                                amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                                lacinia
+                                odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
                     </div>
                 </div>
+                <!-- END Portlet PORTLET-->
             </div>
-            <!-- END Portlet PORTLET-->
-        </div>
-        <div class="col-md-4 ">
-            <!-- BEGIN Portlet PORTLET-->
-            <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+            <div class="col-md-4 ">
+                <!-- BEGIN Portlet PORTLET-->
+                <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
 font-size: 17px">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                        </div>
+                        <div class="tools">
+                            <a href="" class="fullscreen"> </a>
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                        <div class="actions">
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-pencil"></i> Edit </a>
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-plus"></i> Add </a>
+                            <a class="btn btn-default btn-sm"
+                               data-target="#static2" data-toggle="modal" href="javascript:;">
+                                <i class="icon-trash"> Delete</i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="tools">
-                        <a href="" class="fullscreen"> </a>
-                        <a href="javascript:;" class="collapse"> </a>
-                    </div>
-                    <div class="actions">
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-pencil"></i> Edit </a>
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-plus"></i> Add </a>
-                        <a class="btn btn-default btn-sm"
-                           data-target="#static2" data-toggle="modal" href="javascript:;">
-                            <i class="icon-trash"> Delete</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
-                         data-rail-color="blue" data-handle-color="#7952B3">
-                        <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
+                    <div class="portlet-body">
+                        <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
+                             data-rail-color="blue" data-handle-color="#7952B3">
+                            <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
 font-size: 17px">Scroll is always visible</h4>
-                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                            elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
-                            nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
-                            mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                            mattis
-                            consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia
-                            odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                nec
+                                elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo
+                                luctus,
+                                nisi erat porttitor ligula,
+                                eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                                mollis,
+                                est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                                mattis
+                                consectetur purus sit
+                                amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                                lacinia
+                                odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
                     </div>
                 </div>
+                <!-- END Portlet PORTLET-->
             </div>
-            <!-- END Portlet PORTLET-->
-        </div>
-        <div class="col-md-4 ">
-            <!-- BEGIN Portlet PORTLET-->
-            <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+            <div class="col-md-4 ">
+                <!-- BEGIN Portlet PORTLET-->
+                <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
 font-size: 17px">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                        </div>
+                        <div class="tools">
+                            <a href="" class="fullscreen"> </a>
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                        <div class="actions">
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-pencil"></i> Edit </a>
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-plus"></i> Add </a>
+                            <a class="btn btn-default btn-sm"
+                               data-target="#static2" data-toggle="modal" href="javascript:;">
+                                <i class="icon-trash"> Delete</i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="tools">
-                        <a href="" class="fullscreen"> </a>
-                        <a href="javascript:;" class="collapse"> </a>
-                    </div>
-                    <div class="actions">
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-pencil"></i> Edit </a>
-                        <a href="javascript:;" class="btn btn-default btn-sm">
-                            <i class="fa fa-plus"></i> Add </a>
-                        <a class="btn btn-default btn-sm"
-                           data-target="#static2" data-toggle="modal" href="javascript:;">
-                            <i class="icon-trash"> Delete</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                    <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
-                         data-rail-color="blue" data-handle-color="#7952B3">
-                        <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
+                    <div class="portlet-body">
+                        <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
+                             data-rail-color="blue" data-handle-color="#7952B3">
+                            <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
 font-size: 17px">Scroll is always visible</h4>
-                        <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                            elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus,
-                            nisi erat porttitor ligula,
-                            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
-                            mollis,
-                            est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                            mattis
-                            consectetur purus sit
-                            amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia
-                            odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                nec
+                                elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo
+                                luctus,
+                                nisi erat porttitor ligula,
+                                eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                                mollis,
+                                est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                                mattis
+                                consectetur purus sit
+                                amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                                lacinia
+                                odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
                     </div>
                 </div>
+                <!-- END Portlet PORTLET-->
             </div>
-            <!-- END Portlet PORTLET-->
-        </div>
+            <div class="col-md-4 ">
+                <!-- BEGIN Portlet PORTLET-->
+                <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+font-size: 17px">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                        </div>
+                        <div class="tools">
+                            <a href="" class="fullscreen"> </a>
+                            <a href="javascript:;" class="collapse"> </a>
+                        </div>
+                        <div class="actions">
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-pencil"></i> Edit </a>
+                            <a href="javascript:;" class="btn btn-default btn-sm">
+                                <i class="fa fa-plus"></i> Add </a>
+                            <a class="btn btn-default btn-sm"
+                               data-target="#static2" data-toggle="modal" href="javascript:;">
+                                <i class="icon-trash"> Delete</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
+                             data-rail-color="blue" data-handle-color="#7952B3">
+                            <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
+font-size: 17px">Scroll is always visible</h4>
+                            <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                nec
+                                elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo
+                                luctus,
+                                nisi erat porttitor ligula,
+                                eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis
+                                mollis,
+                                est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                                mattis
+                                consectetur purus sit
+                                amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                                lacinia
+                                odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Portlet PORTLET-->
+            </div>
 
-        <div id="static2" class="modal fade"
-             tabindex="-1" data-backdrop="static"
-             data-keyboard="false" data-attention-animation="false"
-             style="background: #FFFFFF;border-radius: 10px !important;">
-            <div class="modal-body">
-                <p style="
+            <div id="static2" class="modal fade"
+                 tabindex="-1" data-backdrop="static"
+                 data-keyboard="false" data-attention-animation="false"
+                 style="background: #FFFFFF;border-radius: 10px !important;">
+                <div class="modal-body">
+                    <p style="
                                                 /*margin-bottom: 1px;*/
                                                  font-family: AvenirLTStd-Book;
 
@@ -295,12 +307,12 @@ font-size: 17px">Scroll is always visible</h4>
                                                 color: #333333;
                                                 opacity: 0.5;
                                                 ">Are you sure about delete this policy ?</p>
-            </div>
-            <div class="modal-footer" style="border-top:0px;">
-                <button type="button"
-                        data-dismiss="modal"
-                        class="btn btn-outline dark cansel"
-                        style="
+                </div>
+                <div class="modal-footer" style="border-top:0px;">
+                    <button type="button"
+                            data-dismiss="modal"
+                            class="btn btn-outline dark cansel"
+                            style="
                                         background: #FFFFFF;
                                         border-radius: 10px !important;
                                         /*margin-right: 244px;*/
@@ -316,10 +328,10 @@ font-size: 17px">Scroll is always visible</h4>
                                         line-height: 27px;
                                         color: #333333;
                                         ">
-                    Cancel
-                </button>
-                <button type="button" data-dismiss="modal" class="btn green delete"
-                        style="
+                        Cancel
+                    </button>
+                    <button type="button" data-dismiss="modal" class="btn green delete"
+                            style="
                                         border-radius: 10px !important;
                                         /*margin-right: 45px;*/
                                         border-color: #7952B3;
@@ -335,12 +347,12 @@ font-size: 17px">Scroll is always visible</h4>
                                         line-height: 27px;
                                         color: #FFFFFF;
                                         ">
-                    Delete
-                </button>
+                        Delete
+                    </button>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 
 @endsection
 
