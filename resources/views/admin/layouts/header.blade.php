@@ -47,7 +47,7 @@
                 </div>
             </form>
             <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="top-menu margin-top-15" >
+            <div class="top-menu margin-top-10" >
                 <ul class="nav navbar-nav pull-right">
                     <li class="separator hide"></li>
 
