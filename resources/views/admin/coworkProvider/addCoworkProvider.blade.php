@@ -78,7 +78,11 @@ color: #333333;
                                          line-height: 24px;
                                          color: #6B7280;
                                          "
-                            > Upload wokspace logo
+                            >
+
+                                Upload wokspace logo
+                                <i class="fa fa-file-photo-o" style="color: #6B7280 !important;"></i>
+
                             </button>
 
                             <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
