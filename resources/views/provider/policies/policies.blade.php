@@ -2,12 +2,17 @@
 
 @section('content')
 
-    <div class="page-title">
-        <h1 style="width: 708px;height: 47px;left: 296px;top: 104px;font-style: normal;font-weight: 600;font-size: 30px;line-height: 48px;
-/* or 120% */letter-spacing: -0.022em;color: #333333;font-family: AvenirLTStd-Book;
-margin-bottom: 20px;">Policies</h1>
+    <div class="page-title"  style="margin-bottom: 25px;">
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1 style="
+            font-family: AvenirLTStd-Book;
+            font-size: 33px;
+            letter-spacing: -0.022em;
+            color: #333333;
+            " class="margin-top--10">Policies</h1>
     </div>
-    <div class="row">
+    <div class="row margin-top-40">
         <div class="col-md-4 ">
             <!-- BEGIN Portlet PORTLET-->
             <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
