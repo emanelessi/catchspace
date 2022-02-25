@@ -55,10 +55,11 @@
             /*top: 117px;*/
             background: #7952B3;
             border-radius: 5px !important;
-            width: 147px;
+            width: 160px;
             height: 30px;
             font-size: 13px;
 ">
+                <i class="fa fa-plus-circle"></i>
                 Add Cowork Provider
             </a>
         {{--        </div>--}}
@@ -86,12 +87,14 @@
                                    font-weight: normal;
                                    font-size: 13px;
                                    color: #292D32;
-                                   width: 82px;
+                                   width: 90px;
                                    height: 29px;
                                    margin-right: -20px;
 "
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
-                                   aria-expanded="true"> Filter By
+                                   aria-expanded="true">
+                                    <i class="fa fa-filter" style="color: #7952B3 !important;"></i>
+                                    Filter By
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right" style="
@@ -368,38 +371,46 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                        <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                            delete
+                                        <a href="">
+                                            <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
+
                                         </a>
-                                        <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                            Edit
+                                        <a href="" style="margin-left: 10px">
+                                            <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
+
                                         </a>
+{{--                                        <a class="btn btn-outline dark"--}}
+{{--                                           data-target="#static2" data-toggle="modal" style="--}}
+{{--    /*width: 59px;*/--}}
+{{--    /*height: 53px;*/--}}
+{{--    /*left: 542px;*/--}}
+{{--    /*top: 369px;*/--}}
+{{-- font-family: AvenirLTStd-Book;--}}
+{{--    /*font-weight: 500;*/--}}
+{{--    font-size:  20px;--}}
+{{--    /*line-height: 80px;*/--}}
+{{--    letter-spacing: 0.02em;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    color: #000000;--}}
+{{--">--}}
+{{--                                            delete--}}
+{{--                                        </a>--}}
+{{--                                        <a class="btn btn-outline dark"--}}
+{{--                                           data-target="#static2" data-toggle="modal" style="--}}
+{{--    /*width: 59px;*/--}}
+{{--    /*height: 53px;*/--}}
+{{--    /*left: 542px;*/--}}
+{{--    /*top: 369px;*/--}}
+{{-- font-family: AvenirLTStd-Book;--}}
+{{--    /*font-weight: 500;*/--}}
+{{--    font-size:  20px;--}}
+{{--    /*line-height: 80px;*/--}}
+{{--    letter-spacing: 0.02em;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    color: #000000;--}}
+{{--">--}}
+{{--                                            Edit--}}
+{{--                                        </a>--}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -498,38 +509,47 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"><a class="btn btn-outline dark"
-     data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
 ">
-                                            delete
+                                        <a href="">
+                                            <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
+
                                         </a>
-                                        <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                            Edit
+                                        <a href="" style="margin-left: 10px">
+                                            <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
+
                                         </a>
+{{--                                        <a class="btn btn-outline dark"--}}
+{{--     data-target="#static2" data-toggle="modal" style="--}}
+{{--    /*width: 59px;*/--}}
+{{--    /*height: 53px;*/--}}
+{{--    /*left: 542px;*/--}}
+{{--    /*top: 369px;*/--}}
+{{-- font-family: AvenirLTStd-Book;--}}
+{{--    /*font-weight: 500;*/--}}
+{{--    font-size:  20px;--}}
+{{--    /*line-height: 80px;*/--}}
+{{--    letter-spacing: 0.02em;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    color: #000000;--}}
+{{--">--}}
+{{--                                            delete--}}
+{{--                                        </a>--}}
+{{--                                        <a class="btn btn-outline dark"--}}
+{{--                                           data-target="#static2" data-toggle="modal" style="--}}
+{{--    /*width: 59px;*/--}}
+{{--    /*height: 53px;*/--}}
+{{--    /*left: 542px;*/--}}
+{{--    /*top: 369px;*/--}}
+{{-- font-family: AvenirLTStd-Book;--}}
+{{--    /*font-weight: 500;*/--}}
+{{--    font-size:  20px;--}}
+{{--    /*line-height: 80px;*/--}}
+{{--    letter-spacing: 0.02em;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    color: #000000;--}}
+{{--">--}}
+{{--                                            Edit--}}
+{{--                                        </a>--}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -616,8 +636,7 @@
     color: #000000;
 "> test
                                     </td>
-                                    <td><a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
+                                    <td style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -630,24 +649,46 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            delete
+                                        <a href="">
+                                            <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
+
                                         </a>
-                                        <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                            Edit
+                                        <a href="" style="margin-left: 10px">
+                                            <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
+
                                         </a>
+{{--                                        <a class="btn btn-outline dark"--}}
+{{--                                           data-target="#static2" data-toggle="modal" style="--}}
+{{--    /*width: 59px;*/--}}
+{{--    /*height: 53px;*/--}}
+{{--    /*left: 542px;*/--}}
+{{--    /*top: 369px;*/--}}
+{{-- font-family: AvenirLTStd-Book;--}}
+{{--    /*font-weight: 500;*/--}}
+{{--    font-size:  20px;--}}
+{{--    /*line-height: 80px;*/--}}
+{{--    letter-spacing: 0.02em;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    color: #000000;--}}
+{{--">--}}
+{{--                                            delete--}}
+{{--                                        </a>--}}
+{{--                                        <a class="btn btn-outline dark"--}}
+{{--                                           data-target="#static2" data-toggle="modal" style="--}}
+{{--    /*width: 59px;*/--}}
+{{--    /*height: 53px;*/--}}
+{{--    /*left: 542px;*/--}}
+{{--    /*top: 369px;*/--}}
+{{-- font-family: AvenirLTStd-Book;--}}
+{{--    /*font-weight: 500;*/--}}
+{{--    font-size:  20px;--}}
+{{--    /*line-height: 80px;*/--}}
+{{--    letter-spacing: 0.02em;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    color: #000000;--}}
+{{--">--}}
+{{--                                            Edit--}}
+{{--                                        </a>--}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -734,8 +775,7 @@
     color: #000000;
 "> test
                                     </td>
-                                    <td><a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
+                                    <td style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -748,24 +788,46 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            delete
+                                        <a href="">
+                                            <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
+
                                         </a>
-                                        <a class="btn btn-outline dark"
-                                           data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size: 20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                            Edit
+                                        <a href="" style="margin-left: 10px">
+                                            <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
+
                                         </a>
+{{--                                        <a class="btn btn-outline dark"--}}
+{{--                                           data-target="#static2" data-toggle="modal" style="--}}
+{{--    /*width: 59px;*/--}}
+{{--    /*height: 53px;*/--}}
+{{--    /*left: 542px;*/--}}
+{{--    /*top: 369px;*/--}}
+{{-- font-family: AvenirLTStd-Book;--}}
+{{--    /*font-weight: 500;*/--}}
+{{--    font-size:  20px;--}}
+{{--    /*line-height: 80px;*/--}}
+{{--    letter-spacing: 0.02em;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    color: #000000;--}}
+{{--">--}}
+{{--                                            delete--}}
+{{--                                        </a>--}}
+{{--                                        <a class="btn btn-outline dark"--}}
+{{--                                           data-target="#static2" data-toggle="modal" style="--}}
+{{--    /*width: 59px;*/--}}
+{{--    /*height: 53px;*/--}}
+{{--    /*left: 542px;*/--}}
+{{--    /*top: 369px;*/--}}
+{{-- font-family: AvenirLTStd-Book;--}}
+{{--    /*font-weight: 500;*/--}}
+{{--    font-size: 20px;--}}
+{{--    /*line-height: 80px;*/--}}
+{{--    letter-spacing: 0.02em;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    color: #000000;--}}
+{{--">--}}
+{{--                                            Edit--}}
+{{--                                        </a>--}}
                                     </td>
                                 </tr>
                                 </tbody>
