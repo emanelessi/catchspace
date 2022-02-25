@@ -13582,7 +13582,7 @@ body[ng-controller] .modal {
 
 .dashboard-stat .visual > i {
     margin-left: -35px;
-    font-size: 110px;
+    font-size: 99px;
     line-height: 110px
 }
 
@@ -13634,7 +13634,6 @@ body[ng-controller] .modal {
 }
 
 .dashboard-stat.dashboard-stat-v2 .visual {
-    padding-top: 35px;
     margin-bottom: 40px
 }
 

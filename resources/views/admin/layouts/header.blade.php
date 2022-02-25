@@ -175,8 +175,8 @@
                            class="m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-12 no-space ">
                             <span class="username username-hide-on-mobile"> {{auth()->user()->full_name}} </span>
                             <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
-{{--                            <img alt="" class="img-circle" src="../assets/layouts/layout4/img/avatar9.jpg"/>--}}
-                            <i class="fa fa-user img-circle" style="font-size: 20px;color: #FFC107 !important;" ></i>
+                            <img alt="" class="img-circle" src="../assets/layouts/layout4/img/avatar9.jpg"/>
+{{--                            <i class="fa fa-user img-circle" style="font-size: 20px;color: #FFC107 !important;" ></i>--}}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>

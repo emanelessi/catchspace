@@ -119,8 +119,8 @@
                     background: #7952B3;
 ">
                     <div class="visual">
-                        <i class="fa fa-sticky-note"
-                           style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
+                        <i class="fa fa-file-text"
+                           style="color: white !important;opacity: 1 !important;padding-left: 44px;font-size: 80px"></i>
                     </div>
                     <div class="details">
                         <div class="number padding-top-12">
