@@ -67,9 +67,12 @@ Route::group(['middleware' => 'auth'], function () {
         return view('admin.coworkProvider.addCoworkProvider');
     });
 
+    Route::group(['middleware' => ['permission:workspace_create|workspace_edit|workspace_delete']], function () {
+        Route::get('/admin/workspace', [\App\Http\Controllers\Controller::class, 'index']);
+        Route::get('/admin/edit-workspace', [\App\Http\Controllers\Controller::class, 'update']);
+    });
 
-    Route::get('/admin/workspace', [\App\Http\Controllers\Controller::class, 'index']);
-    Route::get('/admin/edit-workspace', [\App\Http\Controllers\Controller::class, 'update']);
+
 
 //    Route::get('/admin/workspace', function () {
 //        return view('admin.workSpace.workSpace');

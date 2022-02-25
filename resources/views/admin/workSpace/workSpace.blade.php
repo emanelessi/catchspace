@@ -40,7 +40,7 @@
         </div>
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
-        @can('create',\App\Models\WorkSpace::class)
+        @can('workspace_create')
             <div class="page-toolbar">
                 <a href="{{url('/admin/add-workspace')}}" type="button" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;

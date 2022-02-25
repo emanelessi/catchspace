@@ -172,7 +172,7 @@
                     <li class="dropdown dropdown-user ">
                         <a href="javascript:;" data-toggle="dropdown" data-hover="dropdown"
                            data-close-others="true" style="background-color: #ffffff;"
-                           class="m-grid-col-lg-12 m-grid-col-md-1 m-grid-col-xs-1 no-space ">
+                           class="m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-12 no-space ">
                             <span class="username username-hide-on-mobile"> {{auth()->user()->full_name}} </span>
                             <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
 {{--                            <img alt="" class="img-circle" src="../assets/layouts/layout4/img/avatar9.jpg"/>--}}

@@ -19,12 +19,16 @@
     /*margin-left: -20px;*/
     /*margin-top: -20px;*/
     /*width: 250px;*/
-    height: 946px !important;
+    height: 1162px !important;
     background: #7952B3;
     ">
         <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-            <li class="nav-item start active open">
-            <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif">
+            <li class="nav-item start active open"  style="
+    padding-bottom: 5px;
+">
+            <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif" style="
+    padding-bottom: 5px;
+">
                 <a href="{{url('admin/home')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
     font-weight: normal;
@@ -36,10 +40,12 @@
 
 ">
                     <i class="fa fa-home"></i>
-                    <span class="title">Home</span>
+                    <span class="title" style="font-size: 16px">Home</span>
                 </a>
             </li>
-            <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open select_color @endif">
+            <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open select_color @endif" style="
+    padding-bottom: 5px;
+">
                 <a href="{{url('/admin/provider')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
     font-weight: normal;
@@ -51,11 +57,12 @@
 
 ">
                     <i class="fa fa-user"></i>
-                    <span class="title">Cowork provider</span>
+                    <span class="title" style="font-size: 16px">Cowork provider</span>
                 </a>
-
             </li>
-            <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif">
+            <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif" style="
+    padding-bottom: 5px;
+">
                 <a href="{{url('/admin/workspace')}}" class="nav-link nav-toggle margin-left-10" style="
     font-family: AvenirLTStd-Book;
     font-weight: normal;
@@ -67,10 +74,12 @@
 
 ">
                     <i class="fa fa-map-marker"></i>
-                    <span class="title">Work space</span>
+                    <span class="title" style="font-size: 16px">Work space</span>
                 </a>
             </li>
-            <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open select_color @endif">
+            <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open select_color @endif" tyle="
+    padding-bottom: 5px;
+">
                 <a href="{{url('/admin/worker')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
     font-weight: normal;
@@ -82,7 +91,7 @@
 
 ">
                     <i class="fa fa-sticky-note"></i>
-                    <span class="title">Workers</span>
+                    <span class="title" style="font-size: 16px">Workers</span>
                 </a>
             </li>
             {{--            <li class="nav-item @if(preg_match('/system/i',url()->current())) start active open @endif">--}}

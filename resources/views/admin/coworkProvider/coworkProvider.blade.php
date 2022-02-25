@@ -29,8 +29,12 @@
     <div class="page-head" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1 style="font-family: Poppins-Semibold;font-style: normal;font-weight: 400;font-size: 40px;
-/* or 120% */letter-spacing: -0.022em;color: #333333;margin-left: 27px;">
+            <h1 style="
+            font-family: AvenirLTStd-Book;
+            font-size: 33px;
+            letter-spacing: -0.022em;
+            color: #333333;
+            " class="margin-top--10">
                 Cowork provider
             </h1>
         </div>
@@ -39,18 +43,21 @@
         <div class="page-toolbar  ">
             <a href="{{url('/admin/add-provider')}}" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
-             font-family: AvenirLTStd-Book;
+            font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
             /*font-size: 14px;*/
-            line-height: 21px;
-                    /*margin-top: 13px;*/
-                    color: #FFFFFF;
-                    /*width: 201px;*/
-                    /*height: 35px;*/
-                    /*left: 1192px;*/
-                    /*top: 117px;*/
-                    background: #7952B3;
-                    border-radius: 5px !important;
+            /* line-height: 21px; */
+            /*margin-top: 13px;*/
+            color: #FFFFFF;
+            /*width: 201px;*/
+            /* height: 35px; */
+            /*left: 1192px;*/
+            /*top: 117px;*/
+            background: #7952B3;
+            border-radius: 5px !important;
+            width: 147px;
+            height: 30px;
+            font-size: 13px;
 ">
                 Add Cowork Provider
             </a>
@@ -70,18 +77,18 @@
 ">
                         <div class="actions">
                             <div class="btn-group open">
-                                <a class="btn btn-sm blue btn-outline btn-circle" href="javascript:;"
+                                <a class="btn btn-sm blue btn-outline btn-circle margin-top-20" href="javascript:;"
                                    style="
                                    background-color: #FFFFFF;
                                    border-color: #FFFFFF;
                                    border-radius: 5px !important;
-                                    font-family: AvenirLTStd-Book;
+                                   font-family: AvenirLTStd-Book;
                                    font-weight: normal;
-                                   font-size: 14px;
-                                   line-height: 21px;
+                                   font-size: 13px;
                                    color: #292D32;
-                                   /*width: 118px;*/
-                                   /*height: 35px;*/
+                                   width: 82px;
+                                   height: 29px;
+                                   margin-right: -20px;
 "
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                    aria-expanded="true"> Filter By
@@ -165,21 +172,23 @@
                         </div>
                     </div>
 
-                    <div class="portlet-body">
+                    <div class="portlet-body margin-top--20">
                         <div class="table-scrollable table-scrollable-borderless">
                             <table class="table  table-light" style="background-color: #E5E5E5;">
                                 <thead>
-                                <tr>
+                                <tr style="border-bottom: 2px solid #F2F5F8;">
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-"> ID
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> #
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -187,9 +196,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Logo
                                     </th>
                                     <th style="
@@ -198,9 +209,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Name
                                     </th>
                                     <th style="
@@ -209,9 +222,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Owner Name
                                     </th>
                                     <th style="
@@ -220,9 +235,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> User
                                     </th>
                                     <th style="
@@ -231,9 +248,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Address
                                     </th>
                                     <th style="
@@ -242,9 +261,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Action
                                     </th>
                                 </tr>

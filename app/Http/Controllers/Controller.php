@@ -16,6 +16,8 @@ class Controller extends BaseController
     function __construct()
     {
         $this->middleware('permission:workspace_show', ['only' => ['index']]);
+        $this->middleware('permission:workspace-create', ['only' => ['update']]);
+        $this->middleware('permission:workspace-delete', ['only' => ['destroy']]);
     }
 
     public function index()
@@ -28,14 +30,14 @@ class Controller extends BaseController
 
     public function update(WorkSpace $workSpace)
     {
-        $this->authorize('update', $workSpace);
+//        $this->authorize('update', $workSpace);
         $workspace = WorkSpace::all();
         return view('admin.workSpace.editWorkSpace', compact($workspace));
     }
 
     public function delete(WorkSpace $workSpace)
     {
-        $this->authorize('delete', $workSpace);
+//        $this->authorize('delete', $workSpace);
         $workspace = WorkSpace::all();
         return view('admin.workSpace.workSpace', compact($workspace));
     }
