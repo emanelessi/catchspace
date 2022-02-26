@@ -60,10 +60,11 @@
                     <span class="title" style="font-size: 16px">Cowork provider</span>
                 </a>
             </li>
-            <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif" style="
+{{--            @can('workspace_show')--}}
+                <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif" style="
     padding-bottom: 5px;
 ">
-                <a href="{{url('/admin/workspace')}}" class="nav-link nav-toggle margin-left-10" style="
+                    <a href="{{url('/admin/workspace')}}" class="nav-link nav-toggle margin-left-10" style="
     font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
@@ -73,10 +74,11 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="fa fa-map-marker"></i>
-                    <span class="title" style="font-size: 16px">Work space</span>
-                </a>
-            </li>
+                        <i class="fa fa-map-marker"></i>
+                        <span class="title" style="font-size: 16px">Work space</span>
+                    </a>
+                </li>
+{{--            @endcan--}}
             <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open select_color @endif" tyle="
     padding-bottom: 5px;
 ">

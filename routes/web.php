@@ -67,22 +67,22 @@ Route::group(['middleware' => 'auth'], function () {
         return view('admin.coworkProvider.addCoworkProvider');
     });
 
-    Route::group(['middleware' => ['permission:workspace_create|workspace_edit|workspace_delete']], function () {
-        Route::get('/admin/workspace', [\App\Http\Controllers\Controller::class, 'index']);
-        Route::get('/admin/edit-workspace', [\App\Http\Controllers\Controller::class, 'update']);
+//    Route::group(['middleware' => ['permission:workspace_create|workspace_edit|workspace_delete']], function () {
+//        Route::get('/admin/workspace', [\App\Http\Controllers\Controller::class, 'index']);
+//        Route::get('/admin/edit-workspace', [\App\Http\Controllers\Controller::class, 'update']);
+//    });
+
+
+
+    Route::get('/admin/workspace', function () {
+        return view('admin.workSpace.workSpace');
     });
-
-
-
-//    Route::get('/admin/workspace', function () {
-//        return view('admin.workSpace.workSpace');
-//    });
-//    Route::get('/admin/edit-workspace', function () {
-//        return view('admin.workSpace.editWorkSpace');
-//    });
-//    Route::get('/admin/add-workspace', function () {
-//        return view('admin.workSpace.addWorkSpace');
-//    });
+    Route::get('/admin/edit-workspace', function () {
+        return view('admin.workSpace.editWorkSpace');
+    });
+    Route::get('/admin/add-workspace', function () {
+        return view('admin.workSpace.addWorkSpace');
+    });
 
 
     Route::get('/admin/worker', function () {
