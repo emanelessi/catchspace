@@ -68,28 +68,28 @@
             ">
     <!-- BEGIN LOGO -->
     <div class="container">
-        <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2" href="{{ url('/') }}" style="
+        <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link " href="{{ url('/') }}" style="
 font-family: AvenirLTStd-Book;
 font-style: normal;
 font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
 ">
-            <i class="fa fa-arrow-left"></i>
+            <i class="fa fa-arrow-left" style="font-size: 15px"></i>
             Back to main
         </a>
     </div>
     <!-- BEGIN LOGIN -->
     <a class=" m-grid-col-xs-offset-2 " href="{{ url('/') }}">
         <img class=" img-responsive m-grid-col-lg-offset-5-5  margin-bottom-5
-        m-grid-col-md-offset-5 m-grid-col-xs-offset-4 "
-             src="../assets/pages/img/login/catchspace-logo.png"
-        />
+        m-grid-col-md-offset-5 m-grid-col-xs-offset-4 " style=" height: 47px;"
+             src="../assets/pages/img/login/catchspace-logo.png"/>
     </a>
     <div>
-        <img src="../assets/pages/img/login/vector.png" class="img-responsive margin-top-150 "></div>
+        <img src="../assets/pages/img/login/vector.png" class="img-responsive margin-top-111 "></div>
 
-    <div class="content margin-top--200 " style="
+    <!-- BEGIN LOGIN -->
+    <div class="content margin-top--220  " style="
     border-radius: 20px !important;
     background: #FFFFFF;
 ">
@@ -99,19 +99,18 @@ color: #FFFFFF;
                 {{ session('status') }}
             </div>
         @endif
-        <img class=" margin-top-20 m-grid-col-lg-2 m-grid-col-md-2 m-grid-col-xs-3 margin-left-70"
+        <img class="margin-top-20 m-grid-col-lg-2-5 m-grid-col-md-2 m-grid-col-xs-3 margin-left-70"
              src="../assets/pages/img/login/Email.png"
         />
-        <h3 class="form-title m-grid-col-lg-11 m-grid-col-md-11 m-grid-col-xs-11"
+        <h3 class="form-title m-grid-col-lg-10 m-grid-col-md-10 m-grid-col-xs-10 margin-bottom-15 "
             style="
 font-family: AvenirLTStd-Book;
-font-size: 33px;
-color: #333333;margin-left: 22px;">Check Your Email</h3>
-        <h5 class="control-label margin-left-15" style="
+font-size: 28px;
+color: #333333;">Check Your Email</h3>
+        <h5 class="control-label margin-left-16" style="
 font-family: AvenirLTStd-Book;
 font-size: 18px;
 line-height: 38px;
-
 color: #333333;">
             <i style="
                     background: -webkit-linear-gradient(#7952B3, #FFBF00);

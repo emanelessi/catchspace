@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Provider;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -44,7 +45,7 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -52,28 +53,36 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'full_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'phone' => ['required', 'int', 'max:10'],
-            'type' => ['required', 'string'],
-            'user_level_id' => ['required'],
+            'password' => ['required', 'string', 'min:8'],
+            'phone' => ['required', 'max:10'],
         ]);
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \App\Models\User
      */
     protected function create(array $data)
     {
-        return User::create([
-            'full_name' => $data['full_name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'phone' => $data['phone'],
-            'type' => $data['type'],
-            'user_level_id' => $data['user_level_id'],
-        ]);
+        $user = new User();
+        $user->full_name = $data['full_name'];
+        $user->email = $data['email'];
+        $user->password = Hash::make($data['password']);
+        $user->phone = $data['phone'];
+        $user->type = 'provider';
+        $user->user_level_id = 2;
+        $user->save();
+
+        $provider = new Provider();
+        $provider->name = $data['Co-name'];
+        $provider->owner_name = $data['full_name'];
+        $provider->address = $data['address'];
+        $provider->logo = storeImage('providers', 'logo');
+        $provider->user_id = $user->id;
+        $provider->save();
+        return $user;
+
     }
 }

@@ -17,8 +17,12 @@
     <div class="page-head" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1 style="font-family: Poppins-Semibold;font-style: normal;font-weight: 400;font-size: 40px;
-/* or 120% */letter-spacing: -0.022em;color: #333333;margin-left: 27px;">worker</h1>
+            <h1 style="
+            font-family: AvenirLTStd-Book;
+            font-size: 33px;
+            letter-spacing: -0.022em;
+            color: #333333;
+            " class="margin-top--10">worker</h1>
         </div>
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
@@ -26,28 +30,34 @@
             <div class="col-md-12">
                 <!-- BEGIN BORDERED TABLE PORTLET-->
                 <div class="portlet light portlet-fit bordered"
-                     style="background-color: #E5E5E5;border-color: #E5E5E5 !important;">
-                    <div class="portlet-title" style="border-color: #E5E5E5;">
+                     style="
+                     background-color: #E5E5E5;
+                     border-color: #E5E5E5 !important;
+">
+                    <div class="portlet-title" style="
+                    border-color: #E5E5E5;
+">
                         <div class="actions">
                             <div class="btn-group open">
-                                <a class="btn btn-sm blue btn-outline btn-circle" href="javascript:;"
+                                <a class="btn btn-sm blue btn-outline btn-circle margin-top--70" href="javascript:;"
                                    style="
                                    background-color: #FFFFFF;
                                    border-color: #FFFFFF;
                                    border-radius: 5px !important;
-                                    font-family: AvenirLTStd-Book;
+                                   font-family: AvenirLTStd-Book;
                                    font-weight: normal;
-                                   font-size: 14px;
-                                   line-height: 21px;
+                                   font-size: 13px;
                                    color: #292D32;
-                                   /*width: 118px;*/
-                                   /*height: 35px;*/
+                                   width: 82px;
+                                   height: 29px;
+                                   margin-right: -20px;
 "
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                    aria-expanded="true"> Filter By
                                     <i class="fa fa-angle-down"></i>
                                 </a>
-                                <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right" style="
+                                <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right margin-top--30"
+                                     style="
     background: #FFFFFF;
     border: 1px solid #F4F4F4;
     box-sizing: border-box;
@@ -129,17 +139,19 @@
                         <div class="table-scrollable table-scrollable-borderless">
                             <table class="table table-light " style="background-color: #E5E5E5;">
                                 <thead>
-                                <tr>
+                                <tr style="border-bottom: 2px solid #F2F5F8;">
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-"> ID
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> #
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -147,9 +159,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Work space Name
                                     </th>
                                     <th style="
@@ -158,9 +172,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Name
                                     </th>
                                     <th style="
@@ -169,9 +185,11 @@
     font-size: 20px;
     letter-spacing: -0.022em;
     /*text-transform: capitalize;*/
-    background: -webkit-linear-gradient(#7952B3, #FFBF00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Job title
                                     </th>
                                 </tr>
