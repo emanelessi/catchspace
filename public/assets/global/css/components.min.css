@@ -1189,6 +1189,12 @@ code {
 .margin-top--20 {
     margin-top: -20px !important
 }
+.margin-top--30 {
+    margin-top: -30px !important
+}
+.margin-top--70 {
+    margin-top: -70px !important
+}
 
 
 .margin-top-15 {
@@ -1197,6 +1203,9 @@ code {
 
 .margin-top-20 {
     margin-top: 20px !important
+}
+.margin-top-35 {
+    margin-top: 35px !important
 }
 
 .margin-top-100 {
