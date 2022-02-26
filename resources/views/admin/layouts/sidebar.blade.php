@@ -55,6 +55,8 @@
                 </a>
 
             </li>
+
+            @can('workspace_show')
             <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif">
                 <a href="{{url('/admin/workspace')}}" class="nav-link nav-toggle margin-left-10" style="
     font-family: AvenirLTStd-Book;
@@ -70,6 +72,9 @@
                     <span class="title">Work space</span>
                 </a>
             </li>
+            @endcan
+
+            
             <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open select_color @endif">
                 <a href="{{url('/admin/worker')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
