@@ -7,25 +7,15 @@
         }
 
     </style>
-    <div class="page-head" style="
-    /*margin-bottom: 25px;*/
-">
+    <div class="page-head" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
             <h1 style="
-            /*width: 557px;*/
-            /*height: 47px;*/
-            /*left: 296px;*/
-            /*top: 104px;*/
-            /*font-style: normal;*/
-            /*font-weight: 600;*/
+            font-family: AvenirLTStd-Book;
             font-size: 30px;
-            /*line-height: 48px;*/
-/* or 120% */letter-spacing: -0.022em;
-color: #333333;
-             font-family: AvenirLTStd-Book;
-/*margin-bottom: 20px;*/
-">Cowork provider</h1>
+            letter-spacing: -0.022em;
+            color: #333333;
+            " class="margin-top--10 ">Workspace</h1>
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">
@@ -33,10 +23,10 @@ color: #333333;
                 <!-- BEGIN PROFILE SIDEBAR -->
                 <div class="m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-12 ">
                     <!-- PORTLET MAIN -->
-                    <div class="portlet light profile-sidebar-portlet bordered"
-                         style="border-bottom: 1px solid #eef1f5;height: 674px;border-radius: 20px !important;">
+                    <div class="portlet light profile-sidebar-portlet bordered margin-top-35"
+                         style="border-bottom: 1px solid #eef1f5;height: 100%;border-radius: 20px !important;">
                         <!-- SIDEBAR USERPIC -->
-                        <div class="profile-userpic margin-right--12" style="
+                        <div class="profile-userpic margin-right--12 margin-top-25" style="
                         float: left;
                         width: 300px;
                         /*margin-right: -35px;*/
@@ -45,7 +35,7 @@ color: #333333;
                         </div>
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
-                        <div class="profile-usertitle margin-top-40" style="
+                        <div class="profile-usertitle margin-top-70" style="
                         text-align: justify;
                         /*margin-top: 47px;*/
 ">
@@ -58,7 +48,7 @@ color: #111827;
              font-family: AvenirLTStd-Book;
 "> Tools
                             </div>
-                            <div class="profile-usertitle-job" style="
+                            <div style="
 /*font-style: normal;*/
 /*font-weight: normal;*/
 font-size: 14px;
@@ -73,11 +63,11 @@ color: #6B7280;
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="portlet light bordered" style="
-                                        margin: 112px 73px 200px;
+                                        margin: 72px 73px 200px;
                                         border-radius: 20px !important;
                                         background-color: #fff;
-                                         border-top-width: 3px !important;
-                                            border-bottom-width: 3px !important;
+                                         border-top-width: 2px !important;
+                                            border-bottom-width: 2px !important;
 ">
                                         <div class="portlet-body">
                                             <div class="tab-content">
@@ -85,7 +75,8 @@ color: #6B7280;
                                                 <div class="tab-pane active" id="tab_1_1">
                                                     <form role="form" action="#">
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace
+                                                            <label class="control-label margin-left-9"
+                                                                   style="color:#6B7280;">Workspace
                                                                 Name *</label>
                                                             <input type="text" placeholder="Tools" class="form-control"
                                                                    style="
@@ -95,7 +86,8 @@ color: #6B7280;
                                                                        border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Owner
+                                                            <label class="control-label margin-left-9"
+                                                                   style="color:#6B7280;">Owner
                                                                 Name *</label>
                                                             <input type="text" placeholder="Omar D."
                                                                    class="form-control"
@@ -105,9 +97,13 @@ color: #6B7280;
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
                                                         </div>
-                                                        <div class="form-group "
-                                                             style="margin-left: 16px;margin-right: 16px;">
-                                                            <label class="control-label" style="color:#6B7280;">Workspace
+                                                        <div class="form-group margin-left-9 margin-right-10"
+                                                             style="
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/
+">
+                                                            <label class="control-label margin-left-9"
+                                                                   style="color:#6B7280;">Workspace
                                                                 Address*</label>
                                                             <input type="text"
                                                                    placeholder="Al-rehab mall, remal street, Gaza, palestine"
@@ -122,11 +118,12 @@ color: #6B7280;
                                                 <!-- END PERSONAL INFO TAB -->
                                             </div>
                                         </div>
-                                        <button type="button"
-                                                class="btn btn-primary margin-left-90 m-grid-col-xs-offset-3 "
-                                                style="
-                                                               width: 165px;
-                                                               height: 41.2px;
+                                    </div>
+                                    <button type="button"
+                                            class="btn btn-primary margin-top--250  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
+                                            style="
+                                                               width: 125px;
+                                                               height: 32.2px;
                                                                /*flex-grow: 0;*/
                                                                /*display: flex;*/
                                                                /*flex-direction: column;*/
@@ -137,19 +134,19 @@ color: #6B7280;
                                                                padding: 0;
                                                                border-radius: 8px !important;
                                                                background-color: #7952b3;
-                                                                font-family: AvenirLTStd-Book;
+                                                               font-family: AvenirLTStd-Book;
                                                                /*font-style: normal;*/
                                                                /*font-weight: 600;*/
                                                                /*font-size: 14px;*/
-                                                               line-height: 24px;
+                                                               /* line-height: 24px; */
                                                                color: #FFFFFF;
+                                                               font-size: 13px;
+                                                               letter-spacing: 1px;
                                                                ">
-                                            Save Change
-                                        </button>
-                                    </div>
+                                        Save Change
+                                    </button>
                                 </div>
                             </div>
-                            <!-- END PROFILE CONTENT -->
                         </div>
                         <!-- END PORTLET MAIN -->
 

@@ -11,25 +11,15 @@
         }
 
     </style>
-    <div class="page-head" style="
-    /*margin-bottom: 25px;*/
-">
+    <div class="page-head" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
             <h1 style="
-            /*width: 557px;*/
-            /*height: 47px;*/
-            /*left: 296px;*/
-            /*top: 104px;*/
-            /*font-style: normal;*/
-            /*font-weight: 600;*/
+            font-family: AvenirLTStd-Book;
             font-size: 30px;
-            /*line-height: 48px;*/
-/* or 120% */letter-spacing: -0.022em;
-color: #333333;
-             font-family: AvenirLTStd-Book;
-/*margin-bottom: 20px;*/
-">Add new Work space</h1>
+            letter-spacing: -0.022em;
+            color: #333333;
+            " class="margin-top--10 ">Add new Work space</h1>
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">
@@ -37,13 +27,13 @@ color: #333333;
                 <!-- BEGIN PROFILE SIDEBAR -->
                 <div>
                     <!-- PORTLET MAIN -->
-                    <div class="portlet light profile-sidebar-portlet bordered"
+                    <div class="portlet light profile-sidebar-portlet bordered margin-top-35"
                          style="
                          border-bottom: 1px solid #eef1f5;
-                          height: 720px;
+                          height: 100%;
                           border-radius: 20px !important;">
                         <!-- SIDEBAR USERPIC -->
-                        <div class="profile-userpic margin-right--12" style="
+                        <div class="profile-userpic  margin-right--12 margin-top-25" style="
                         float: left;
                         width: 300px;
                         /*margin-right: -35px;*/
@@ -57,7 +47,7 @@ color: #333333;
                         /*margin-top: 47px;*/
 ">
                             <button type="button" data-loading-text="Loading..."
-                                    class="demo-loading-btn btn btn-primary margin-top-60"
+                                    class="demo-loading-btn btn btn-primary margin-top-85"
                                     style="
                                          /*width: 165px;*/
                                          /*height: 41.2px;*/
@@ -69,16 +59,17 @@ color: #333333;
                                          /*margin-right:600px;*/
                                          /*margin-top: 60px;*/
                                          align-items: center;
-                                         /*padding: 0;*/
+                                         padding: 5px;
                                          border-radius: 8px !important;
                                          background-color: #eaeaea;
-             font-family: AvenirLTStd-Book;
+                                         font-family: AvenirLTStd-Book;
                                          /*font-weight: 600;*/
                                          font-size: 14px;
                                          line-height: 24px;
                                          color: #6B7280;
+                                         width: 157px;
                                          "
-                            > Upload wokspace logo
+                            >Upload wokspace logo
                             </button>
 
                             <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
@@ -86,11 +77,11 @@ color: #333333;
                                 <div class="row">
                                     <div class="col-md-12 col-lg-12 col-xs-12">
                                         <div class="portlet light bordered" style="
-                                        margin: 59px 73px 200px;
+                                        margin: 72px 73px 200px;
                                         border-radius: 20px !important;
                                         background-color: #fff;
-                                         border-top-width: 3px !important;
-                                            border-bottom-width: 3px !important;
+                                         border-top-width: 2px !important;
+                                            border-bottom-width: 2px !important;
 ">
                                             <div class="portlet-body">
                                                 <div class="tab-content">
@@ -98,7 +89,8 @@ color: #333333;
                                                     <div class="tab-pane active" id="tab_1_1">
                                                         <form role="form" action="#">
                                                             <div class="form-group col-md-6">
-                                                                <label class="control-label" style="color:#6B7280;">Workspace
+                                                                <label class="control-label margin-left-9" style="
+                                                                color:#6B7280;">Workspace
                                                                     Name *</label>
                                                                 <input type="text" placeholder="Workspace"
                                                                        class="form-control"
@@ -109,7 +101,7 @@ color: #333333;
                                                                        border: solid 1px #d1d5db;"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
-                                                                <label class="control-label" style="color:#6B7280;">Workspace
+                                                                <label class="control-label margin-left-9" style="color:#6B7280;">Workspace
                                                                     Owner Name *</label>
                                                                 <input type="text" placeholder="Name"
                                                                        class="form-control"
@@ -120,7 +112,7 @@ color: #333333;
                                                                        border: solid 1px #d1d5db;"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
-                                                                <label class="control-label" style="color:#6B7280;">Email
+                                                                <label class="control-label margin-left-9" style="color:#6B7280;">Email
                                                                     *</label>
                                                                 <input type="text" placeholder="Name@gmail.com"
                                                                        class="form-control"
@@ -131,7 +123,7 @@ color: #333333;
                                                                        border: solid 1px #d1d5db;"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
-                                                                <label class="control-label" style="color:#6B7280;">Phone
+                                                                <label class="control-label margin-left-9" style="color:#6B7280;">Phone
                                                                     *</label>
                                                                 <input type="text" placeholder="+970 590 000 000"
                                                                        class="form-control"
@@ -141,20 +133,19 @@ color: #333333;
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
                                                             </div>
-                                                            <div class="form-group "
+                                                            <div class="form-group margin-left-9 margin-right-10"
                                                                  style="
-                                                                 margin-left: 16px;
-                                                                 /*margin-right: 16px;*/
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/
 ">
-                                                                <label class="control-label" style="color:#6B7280;">Workspace
+                                                                <label class="control-label margin-left-9" style="color:#6B7280;">Workspace
                                                                     Address*</label>
                                                                 <input type="text"
                                                                        placeholder="Al-rehab mall, remal street, Gaza, palestine"
                                                                        class="form-control" style="
                                                                        height: 40px;
-                                                                       /*padding: 0 12px;*/
-                                                                       border-radius: 8px !important;
-                                                                       border: solid 1px #d1d5db;"/></div>
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/></div>
                                                         </form>
                                                     </div>
 
@@ -163,10 +154,10 @@ color: #333333;
                                             </div>
                                         </div>
                                         <button type="button"
-                                                class="btn btn-primary margin-top--250 margin-left-90 m-grid-col-xs-offset-3 "
+                                                class="btn btn-primary margin-top--250  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
                                                 style="
-                                                               width: 165px;
-                                                               height: 41.2px;
+                                                               width: 125px;
+                                                               height: 32.2px;
                                                                /*flex-grow: 0;*/
                                                                /*display: flex;*/
                                                                /*flex-direction: column;*/
@@ -177,12 +168,14 @@ color: #333333;
                                                                padding: 0;
                                                                border-radius: 8px !important;
                                                                background-color: #7952b3;
-                                                                font-family: AvenirLTStd-Book;
+                                                               font-family: AvenirLTStd-Book;
                                                                /*font-style: normal;*/
                                                                /*font-weight: 600;*/
                                                                /*font-size: 14px;*/
-                                                               line-height: 24px;
+                                                               /* line-height: 24px; */
                                                                color: #FFFFFF;
+                                                               font-size: 13px;
+                                                               letter-spacing: 1px;
                                                                ">
                                             Save Change
                                         </button>

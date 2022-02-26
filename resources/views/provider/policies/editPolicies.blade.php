@@ -1,10 +1,14 @@
 @extends('provider.layouts.index')
 
 @section('content')
-    <div class="page-title">
-        <h1 style="width: 708px;height: 47px;font-style: normal;font-weight: 600;font-size: 30px;line-height: 48px;
-/* or 120% */letter-spacing: -0.022em;color: #333333;font-family: AvenirLTStd-Book;
-margin-bottom: 20px;">Edit Policies</h1>
+        <!-- BEGIN PAGE TITLE -->
+        <div class="page-title">
+            <h1 style="
+            font-family: AvenirLTStd-Book;
+            font-size: 30px;
+            letter-spacing: -0.022em;
+            color: #333333;
+            " class="margin-top--10 ">Edit Policies</h1>
     </div>
     <div class="col-md-12 ">
         <!-- BEGIN Portlet PORTLET-->

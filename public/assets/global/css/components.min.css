@@ -1204,6 +1204,9 @@ code {
 .margin-top-20 {
     margin-top: 20px !important
 }
+.margin-top-25 {
+    margin-top: 25px !important
+}
 .margin-top-35 {
     margin-top: 35px !important
 }
@@ -1359,6 +1362,12 @@ code {
 .margin-top-60 {
     margin-top: 60px !important
 }
+.margin-top-70 {
+    margin-top: 70px !important
+}
+.margin-top-85 {
+    margin-top: 85px !important
+}
 
 .margin-bottom-25 {
     margin-bottom: 25px !important
@@ -1484,6 +1493,9 @@ code {
 
 .padding-left-18 {
     padding-left: 18px !important;
+}
+.padding-right-120 {
+    padding-right: 120px !important;
 }
 
 .padding-tb-5 {
@@ -2089,6 +2101,9 @@ code {
     .m-grid-col-md-offset-9 {
         margin-left: 75%
     }
+    .m-grid-col-md-offset-9-5 {
+        margin-left: 79%
+    }
 
     .m-grid-col-md-10 {
         width: 83.33333%
@@ -2202,6 +2217,9 @@ code {
 
     .m-grid-col-lg-offset-9 {
         margin-left: 75%
+    }
+    .m-grid-col-lg-offset-9-5 {
+        margin-left: 82%
     }
 
     .m-grid-col-lg-10 {

@@ -375,7 +375,7 @@
                                             <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
 
                                         </a>
-                                        <a href="" style="margin-left: 10px">
+                                        <a href="" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
@@ -514,7 +514,7 @@
                                             <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
 
                                         </a>
-                                        <a href="" style="margin-left: 10px">
+                                        <a href="" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
@@ -653,7 +653,7 @@
                                             <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
 
                                         </a>
-                                        <a href="" style="margin-left: 10px">
+                                        <a href="" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
@@ -792,7 +792,7 @@
                                             <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
 
                                         </a>
-                                        <a href="" style="margin-left: 10px">
+                                        <a href="" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
@@ -835,60 +835,75 @@
                             <div id="static2" class="modal fade"
                                  tabindex="-1" data-backdrop="static"
                                  data-keyboard="false" data-attention-animation="false"
-                                 style="background: #FFFFFF;border-radius: 10px !important;">
-                                <div class="modal-body">
+                                 style="background: rgb(255, 255, 255);border-radius: 10px !important;display: block;margin-top: -82.5px;height: 185px;width: 480px;">
+                                <div class="modal-body" >
                                     <p style="
                                                 /*margin-bottom: 1px;*/
-                                                 font-family: AvenirLTStd-Book;
-
+                                                font-family: AvenirLTStd-Book;
                                                 font-weight: bold;
-                                                font-size: 22px;
+                                                font-size: 18px;
                                                 line-height: 24px;
                                                 text-align: center;
                                                 letter-spacing: -0.011em;
                                                 color: #333333;
-                                                opacity: 0.5;
+                                                /* opacity: 0.5; */
                                                 "> Are you sure about deletee this Cowork provider ? </p>
                                 </div>
-                                <div class="modal-footer" style="border-top:0px;">
+                                <div class="modal-footer padding-right-120 " style="border-top:0px;">
                                     <button type="button"
                                             data-dismiss="modal"
                                             class="btn btn-outline dark cansel"
                                             style="
-                                        background: #FFFFFF;
+                                                               width: 125px;
+                                                               height: 32.2px;
+                                                               /*flex-grow: 0;*/
+                                                               /*display: flex;*/
+                                                               /*flex-direction: column;*/
+                                                               /*justify-content: center;*/
+                                                               /*border-color: #7952b3;*/
+                                                               align-items: center;
+                                                               /*margin: -155px 0 0 755px;*/
+                                                               padding: 0;
+                                                               border-radius: 8px !important;
+                                                               /*background-color: #7952b3;*/
+                                                               font-family: AvenirLTStd-Book;
+                                                               /*font-style: normal;*/
+                                                               /*font-weight: 600;*/
+                                                               /*font-size: 14px;*/
+                                                               /* line-height: 24px; */
+                                                               /*color: #FFFFFF;*/
+                                                               font-size: 13px;
+                                                               letter-spacing: 1px;
+                                                                  /*background: #FFFFFF;*/
                                         border-radius: 10px !important;
                                         /*margin-right: 244px;*/
                                         border-color: #7952B3;
-                                        /*margin-top: 10px;*/
-                                        /*width: 185px;*/
-                                        /*height: 56px;*/
-                                        /*left: 535px;*/
-                                        /*top: 563px;*/
-                                       font-family: AvenirLTStd-Book;
-                                        font-weight: normal;
-                                        font-size: 18px;
-                                        line-height: 27px;
-                                        color: #333333;
-                                        ">
+                                                               ">
                                         Cancel
                                     </button>
                                     <button type="button" data-dismiss="modal" class="btn green deletee"
                                             style="
-                                        border-radius: 10px !important;
-                                        /*margin-right: 45px;*/
-                                        border-color: #7952B3;
-                                        /*width: 185px;*/
-                                        /*height: 56px;*/
-                                        /*left: 732px;*/
-                                        /*top: 563px;*/
-                                        /* margin-top: -76px;*/
-                                        background: #7952B3;
-                                        font-family: AvenirLTStd-Book;
-                                        font-weight: normal;
-                                        font-size: 18px;
-                                        line-height: 27px;
-                                        color: #FFFFFF;
-                                        ">
+                                                               width: 125px;
+                                                               height: 32.2px;
+                                                               /*flex-grow: 0;*/
+                                                               /*display: flex;*/
+                                                               /*flex-direction: column;*/
+                                                               /*justify-content: center;*/
+                                                               border-color: #7952b3;
+                                                               align-items: center;
+                                                               /*margin: -155px 0 0 755px;*/
+                                                               padding: 0;
+                                                               border-radius: 8px !important;
+                                                               background-color: #7952b3;
+                                                               font-family: AvenirLTStd-Book;
+                                                               /*font-style: normal;*/
+                                                               /*font-weight: 600;*/
+                                                               /*font-size: 14px;*/
+                                                               /* line-height: 24px; */
+                                                               color: #FFFFFF;
+                                                               font-size: 13px;
+                                                               letter-spacing: 1px;
+                                                               ">
                                         deletee
                                     </button>
                                 </div>
