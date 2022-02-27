@@ -74,7 +74,7 @@
             </li>
             @endcan
 
-            
+
             <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open select_color @endif">
                 <a href="{{url('/admin/worker')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
@@ -86,7 +86,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="fa fa-sticky-note"></i>
+                    <i class="fa fa-file-text"></i>
                     <span class="title">Workers</span>
                 </a>
             </li>
