@@ -15,7 +15,7 @@
             font-size: 30px;
             letter-spacing: -0.022em;
             color: #333333;
-            " class="margin-top--10 ">Workspace</h1>
+            " class="margin-top--10 ">Edit Workspace</h1>
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">
@@ -26,38 +26,38 @@
                     <div class="portlet light profile-sidebar-portlet bordered margin-top-35"
                          style="border-bottom: 1px solid #eef1f5;height: 100%;border-radius: 20px !important;">
                         <!-- SIDEBAR USERPIC -->
-                        <div class="profile-userpic margin-right--12 margin-top-25" style="
-                        float: left;
-                        width: 300px;
-                        /*margin-right: -35px;*/
-">
-                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
-                        </div>
-                        <!-- END SIDEBAR USERPIC -->
-                        <!-- SIDEBAR USER TITLE -->
-                        <div class="profile-usertitle margin-top-70" style="
-                        text-align: justify;
-                        /*margin-top: 47px;*/
-">
-                            <div class="profile-usertitle-name" style="
-/*font-style: normal;*/
-/*font-weight: 600;*/
-font-size: 24px;
-line-height: 137.5%;
-color: #111827;
-             font-family: AvenirLTStd-Book;
-"> Tools
-                            </div>
-                            <div style="
-/*font-style: normal;*/
-/*font-weight: normal;*/
-font-size: 14px;
-line-height: 157%;
-color: #6B7280;
-             font-family: AvenirLTStd-Book;
-"> Gaza, palestine
-                            </div>
-                        </div>
+{{--                        <div class="profile-userpic margin-right--12 margin-top-25" style="--}}
+{{--                        float: left;--}}
+{{--                        width: 300px;--}}
+{{--                        /*margin-right: -35px;*/--}}
+{{--">--}}
+{{--                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">--}}
+{{--                        </div>--}}
+{{--                        <!-- END SIDEBAR USERPIC -->--}}
+{{--                        <!-- SIDEBAR USER TITLE -->--}}
+{{--                        <div class="profile-usertitle margin-top-70" style="--}}
+{{--                        text-align: justify;--}}
+{{--                        /*margin-top: 47px;*/--}}
+{{--">--}}
+{{--                            <div class="profile-usertitle-name" style="--}}
+{{--/*font-style: normal;*/--}}
+{{--/*font-weight: 600;*/--}}
+{{--font-size: 24px;--}}
+{{--line-height: 137.5%;--}}
+{{--color: #111827;--}}
+{{--             font-family: AvenirLTStd-Book;--}}
+{{--"> Tools--}}
+{{--                            </div>--}}
+{{--                            <div style="--}}
+{{--/*font-style: normal;*/--}}
+{{--/*font-weight: normal;*/--}}
+{{--font-size: 14px;--}}
+{{--line-height: 157%;--}}
+{{--color: #6B7280;--}}
+{{--             font-family: AvenirLTStd-Book;--}}
+{{--"> Gaza, palestine--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
                         <div>
                             <div class="row">
@@ -77,8 +77,8 @@ color: #6B7280;
                                                         <div class="form-group col-md-6">
                                                             <label class="control-label margin-left-9"
                                                                    style="color:#6B7280;">Workspace
-                                                                Name *</label>
-                                                            <input type="text" placeholder="Tools" class="form-control"
+                                                                capacity *</label>
+                                                            <input type="number" placeholder="Tools" class="form-control"
                                                                    style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
@@ -87,8 +87,7 @@ color: #6B7280;
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Owner
-                                                                Name *</label>
+                                                                   style="color:#6B7280;">Workspace type *</label>
                                                             <input type="text" placeholder="Omar D."
                                                                    class="form-control"
                                                                    style="
@@ -103,8 +102,7 @@ color: #6B7280;
                                                              /*margin-right: 16px;*/
 ">
                                                             <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Workspace
-                                                                Address*</label>
+                                                                   style="color:#6B7280;">Provider Name *</label>
                                                             <input type="text"
                                                                    placeholder="Al-rehab mall, remal street, Gaza, palestine"
                                                                    class="form-control" style="

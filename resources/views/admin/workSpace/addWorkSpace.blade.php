@@ -33,44 +33,44 @@
                           height: 100%;
                           border-radius: 20px !important;">
                         <!-- SIDEBAR USERPIC -->
-                        <div class="profile-userpic  margin-right--12 margin-top-25" style="
-                        float: left;
-                        width: 300px;
-                        /*margin-right: -35px;*/
-">
-                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
-                        </div>
-                        <!-- END SIDEBAR USERPIC -->
-                        <!-- SIDEBAR USER TITLE -->
-                        <b class="profile-usertitle margin-top-40" style="
-                        text-align: justify;
-                        /*margin-top: 47px;*/
-">
-                            <button type="button" data-loading-text="Loading..."
-                                    class="demo-loading-btn btn btn-primary margin-top-85"
-                                    style="
-                                         /*width: 165px;*/
-                                         /*height: 41.2px;*/
-                                         /*flex-grow: 0;*/
-                                         /*display: flex;*/
-                                         /*flex-direction: column;*/
-                                         /*justify-content: center;*/
-                                         border-color:#eaeaea;
-                                         /*margin-right:600px;*/
-                                         /*margin-top: 60px;*/
-                                         align-items: center;
-                                         padding: 5px;
-                                         border-radius: 8px !important;
-                                         background-color: #eaeaea;
-                                         font-family: AvenirLTStd-Book;
-                                         /*font-weight: 600;*/
-                                         font-size: 14px;
-                                         line-height: 24px;
-                                         color: #6B7280;
-                                         width: 157px;
-                                         "
-                            >Upload wokspace logo
-                            </button>
+{{--                        <div class="profile-userpic  margin-right--12 margin-top-25" style="--}}
+{{--                        float: left;--}}
+{{--                        width: 300px;--}}
+{{--                        /*margin-right: -35px;*/--}}
+{{--">--}}
+{{--                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">--}}
+{{--                        </div>--}}
+{{--                        <!-- END SIDEBAR USERPIC -->--}}
+{{--                        <!-- SIDEBAR USER TITLE -->--}}
+{{--                        <b class="profile-usertitle margin-top-40" style="--}}
+{{--                        text-align: justify;--}}
+{{--                        /*margin-top: 47px;*/--}}
+{{--">--}}
+{{--                            <button type="button" data-loading-text="Loading..."--}}
+{{--                                    class="demo-loading-btn btn btn-primary margin-top-85"--}}
+{{--                                    style="--}}
+{{--                                         /*width: 165px;*/--}}
+{{--                                         /*height: 41.2px;*/--}}
+{{--                                         /*flex-grow: 0;*/--}}
+{{--                                         /*display: flex;*/--}}
+{{--                                         /*flex-direction: column;*/--}}
+{{--                                         /*justify-content: center;*/--}}
+{{--                                         border-color:#eaeaea;--}}
+{{--                                         /*margin-right:600px;*/--}}
+{{--                                         /*margin-top: 60px;*/--}}
+{{--                                         align-items: center;--}}
+{{--                                         padding: 5px;--}}
+{{--                                         border-radius: 8px !important;--}}
+{{--                                         background-color: #eaeaea;--}}
+{{--                                         font-family: AvenirLTStd-Book;--}}
+{{--                                         /*font-weight: 600;*/--}}
+{{--                                         font-size: 14px;--}}
+{{--                                         line-height: 24px;--}}
+{{--                                         color: #6B7280;--}}
+{{--                                         width: 157px;--}}
+{{--                                         "--}}
+{{--                            >Upload wokspace logo--}}
+{{--                            </button>--}}
 
                             <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
                             <div>
@@ -91,8 +91,8 @@
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9" style="
                                                                 color:#6B7280;">Workspace
-                                                                    Name *</label>
-                                                                <input type="text" placeholder="Workspace"
+                                                                    capacity *</label>
+                                                                <input type="number" placeholder="capacity"
                                                                        class="form-control"
                                                                        style="
                                                                        height: 40px;
@@ -102,7 +102,7 @@
                                                             </div>
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9" style="color:#6B7280;">Workspace
-                                                                    Owner Name *</label>
+                                                                    type *</label>
                                                                 <input type="text" placeholder="Name"
                                                                        class="form-control"
                                                                        style="
@@ -111,35 +111,14 @@
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label class="control-label margin-left-9" style="color:#6B7280;">Email
-                                                                    *</label>
-                                                                <input type="text" placeholder="Name@gmail.com"
-                                                                       class="form-control"
-                                                                       style="
-                                                                       height: 40px;
-                                                                       /*padding: 0 12px;*/
-                                                                       border-radius: 8px !important;
-                                                                       border: solid 1px #d1d5db;"/>
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label class="control-label margin-left-9" style="color:#6B7280;">Phone
-                                                                    *</label>
-                                                                <input type="text" placeholder="+970 590 000 000"
-                                                                       class="form-control"
-                                                                       style="
-                                                                       height: 40px;
-                                                                       /*padding: 0 12px;*/
-                                                                       border-radius: 8px !important;
-                                                                       border: solid 1px #d1d5db;"/>
-                                                            </div>
+
+
                                                             <div class="form-group margin-left-9 margin-right-10"
                                                                  style="
                                                              /*margin-left: 16px;*/
                                                              /*margin-right: 16px;*/
 ">
-                                                                <label class="control-label margin-left-9" style="color:#6B7280;">Workspace
-                                                                    Address*</label>
+                                                                <label class="control-label margin-left-9" style="color:#6B7280;">Provider Name*</label>
                                                                 <input type="text"
                                                                        placeholder="Al-rehab mall, remal street, Gaza, palestine"
                                                                        class="form-control" style="

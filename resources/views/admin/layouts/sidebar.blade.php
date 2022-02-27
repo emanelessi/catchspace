@@ -24,6 +24,7 @@
     ">
         <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
             <li class="nav-item start active open">
+            {{--            @can('workspace_show')--}}
             <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif">
                 <a href="{{url('admin/home')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
@@ -36,11 +37,13 @@
 
 ">
                     <i class="fa fa-home"></i>
-                    <span class="title">Home</span>
+                    <span class="title">Admin Home</span>
                 </a>
             </li>
-            <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open select_color @endif">
-                <a href="{{url('/admin/provider')}}" class="nav-link nav-toggle margin-left-10" style="
+            {{--            @endcan--}}
+            @can('provider_access')
+                <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('provider/home')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
@@ -50,15 +53,34 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="fa fa-user"></i>
-                    <span class="title">Cowork provider</span>
-                </a>
+                        <i class="fa fa-home"></i>
+                        <span class="title">Provider Home</span>
+                    </a>
+                </li>
+            @endcan
 
-            </li>
+            @can('provider_show')
+                <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('/admin/provider')}}" class="nav-link nav-toggle margin-left-10" style="
+   font-family: AvenirLTStd-Book;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
+
+">
+                        <i class="fa fa-user"></i>
+                        <span class="title">Cowork provider</span>
+                    </a>
+
+                </li>
+            @endcan
 
             @can('workspace_show')
-            <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif">
-                <a href="{{url('/admin/workspace')}}" class="nav-link nav-toggle margin-left-10" style="
+                <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('/admin/workspace')}}" class="nav-link nav-toggle margin-left-10" style="
     font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
@@ -68,15 +90,15 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="fa fa-map-marker"></i>
-                    <span class="title">Work space</span>
-                </a>
-            </li>
+                        <i class="fa fa-map-marker"></i>
+                        <span class="title">Work space</span>
+                    </a>
+                </li>
             @endcan
 
-
-            <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open select_color @endif">
-                <a href="{{url('/admin/worker')}}" class="nav-link nav-toggle margin-left-10" style="
+            @can('worker_show')
+                <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('/admin/worker')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
@@ -86,10 +108,29 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="fa fa-file-text"></i>
-                    <span class="title">Workers</span>
-                </a>
-            </li>
+                        <i class="fa fa-file-text"></i>
+                        <span class="title">Workers</span>
+                    </a>
+                </li>
+            @endcan
+
+            @can('role_show')
+                <li class="nav-item @if(preg_match('/role/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('/admin/role')}}" class="nav-link nav-toggle margin-left-10" style="
+   font-family: AvenirLTStd-Book;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
+
+">
+                        <i class="fa fa-institution"></i>
+                        <span class="title">Roles</span>
+                    </a>
+                </li>
+            @endcan
             {{--            <li class="nav-item @if(preg_match('/system/i',url()->current())) start active open @endif">--}}
             {{--                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="--}}
             {{--  font-family: AvenirLTStd-Book;--}}

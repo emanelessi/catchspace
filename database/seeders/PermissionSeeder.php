@@ -36,7 +36,7 @@ class PermissionSeeder extends Seeder
             'provider_edit',
             'provider_show',
             'provider_delete',
-            'provider_access',
+//            'provider_access',
             'workspace_create',
             'workspace_edit',
             'workspace_show',

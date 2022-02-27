@@ -18,71 +18,42 @@ class RoleController extends Controller
      */
     function __construct()
     {
-        $this->middleware('permission:Roles', ['only' => ['index']]);
-        $this->middleware('permission:Role Create', ['only' => ['create','store']]);
-        $this->middleware('permission:Role Edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:Role Delete', ['only' => ['destroy']]);
+        $this->middleware('permission:role_show', ['only' => ['index']]);
+        $this->middleware('permission:role_create', ['only' => ['create','store']]);
+        $this->middleware('permission:role_edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:role_delete', ['only' => ['destroy']]);
     }
 
     public function index(Request $request)
     {
         $page = config('pages.roles');
-        $superadmin_user_level_id = config('roles.admin');
-        $enterprise_user_level_id = config('roles.enterprise');
-        $brand_user_level_id = config('roles.brand');
-        $branch_user_level_id = config('roles.branch');
-        $inventory_user_level_id = config('roles.inventory');
-        $seller_user_level_id = config('roles.seller');
+        $superadmin_user_level_id = 1;
+        $provider_user_level_id = 2;
         $user = auth()->user();
 
         if ($user->user_level_id == $superadmin_user_level_id) {
             $roles = Role::orderBy('id','DESC')->get();
-        } else if ($user->user_level_id == $enterprise_user_level_id) {
-            $enterprise_id = $user->enterprise_id;
-            $roles = Role::orderBy('id','DESC')->where('enterprise_id', $enterprise_id)->get();
-        } else if ($user->user_level_id == $brand_user_level_id) {
-            $brand_id = $user->brand_id;
-            $roles = Role::orderBy('id','DESC')->where('brand_id', $brand_id)->get();
-        } else if ($user->user_level_id == $branch_user_level_id) {
-            $branch_id = $user->branch_id;
-            $roles = Role::orderBy('id','DESC')->where('branch_id', $branch_id)->get();
-        } else if ($user->user_level_id == $inventory_user_level_id) {
-            $inventory_id = $user->inventory_id;
-            $roles = Role::orderBy('id','DESC')->where('inventory_id', $inventory_id)->get();
-        } else if ($user->user_level_id == $seller_user_level_id) {
-            $seller_id = $user->seller_id;
-            $roles = Role::orderBy('id','DESC')->where('seller_id', $seller_id)->get();
+        } else if ($user->user_level_id == $provider_user_level_id) {
+            $roles = Role::orderBy('id','DESC')->get();
         }
 
-        return view('roles.index',compact('roles','page'));
+        return view('admin.role.roles',compact('roles','page'));
     }
 
     public function create()
     {
         $page = config('pages.roles');
         $permission = Permission::all();
-
+        $provider_user_level_id = config('roles.provider');
         $superadmin_user_level_id = config('roles.admin');
-        $enterprise_user_level_id = config('roles.enterprise');
-        $brand_user_level_id = config('roles.brand');
-        $branch_user_level_id = config('roles.branch');
-        $inventory_user_level_id = config('roles.inventory');
-        $seller_user_level_id = config('roles.seller');
+
         $user = auth()->user();
         $user_level_id = $user->user_level_id;
 
         if ($user->user_level_id == $superadmin_user_level_id) {
             $user_levels = UserLevel::all();
-        } else if ($user->user_level_id == $enterprise_user_level_id) {
-            $user_levels = UserLevel::where('id', '>=', $enterprise_user_level_id)->get();
-        } else if ($user->user_level_id == $brand_user_level_id) {
-            $user_levels = UserLevel::where('id', '>=', $brand_user_level_id)->get();
-        } else if ($user->user_level_id == $branch_user_level_id) {
-            $user_levels = UserLevel::where('id', $branch_user_level_id)->get();
-        } else if ($user->user_level_id == $inventory_user_level_id) {
-            $user_levels = UserLevel::where('id', $inventory_user_level_id)->get();
-        } else if ($user->user_level_id == $seller_user_level_id) {
-            $user_levels = UserLevel::where('id', $seller_user_level_id)->get();
+        } else if ($user->user_level_id == $provider_user_level_id) {
+            $user_levels = UserLevel::where('id', '>=', $provider_user_level_id)->get();
         }
 
         return view('roles.create',compact('permission','page','user_levels'));
@@ -112,21 +83,11 @@ class RoleController extends Controller
             if ((!$enterprise_id = $request['enterprise_id']) || (!$brand_id = $request['brand_id'])) {
                 return back()->with('error', trans('cp.messages.fill_information'));
             }
-        } else if ($user_level_id == $branch_user_level_id) {
-            if ((!$enterprise_id = $request['enterprise_id']) || (!$enterprise_id = $request['enterprise_id']) || (!$branch_id = $request['branch_id'])) {
-                return back()->with('error', trans('cp.messages.fill_information'));
-            }
-        } else if ($user_level_id == $inventory_user_level_id) {
-            if ((!$enterprise_id = $request['enterprise_id']) || (!$enterprise_id = $request['enterprise_id']) || (!$inventory_id = $request['inventory_id'])) {
-                return back()->with('error', trans('cp.messages.fill_information'));
-            }
-        } else if ($user_level_id == $seller_user_level_id) {
-            if ((!$enterprise_id = $request['enterprise_id']) || (!$enterprise_id = $request['enterprise_id']) || (!$seller_id = $request['seller_id'])) {
-                return back()->with('error', trans('cp.messages.fill_information'));
-            }
         }
 
-        $role = Role::create(['name' => $request->input('name'),'user_level_id' => $request->input('user_level_id'), 'enterprise_id' => $request->input('enterprise_id', null), 'brand_id' => $request->input('brand_id', null), 'branch_id' => $request->input('branch_id', null), 'inventory_id' => $request->input('inventory_id', null), 'seller_id' => $request->input('seller_id', null)]);
+        $role = Role::create(['name' => $request->input('name'),'user_level_id' => $request->input('user_level_id'),
+            'enterprise_id' => $request->input('enterprise_id', null),
+            ]);
         $role->syncPermissions($request->input('permission'));
 
         return back()->with('success',trans('cp.messages.roles.role_created'));

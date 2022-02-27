@@ -15,7 +15,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="{{url('/')}}"  class="margin-top-6">
-                <img src="../assets/pages/img/login/catchblack-logo.png" alt="logo" class="logo-default margin-top-10"
+                <img src="{{asset('../assets/pages/img/login/catchblack-logo.png')}}" alt="logo" class="logo-default margin-top-10"
                      style="
     height: 45px;
 "/> </a>

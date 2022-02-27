@@ -72,10 +72,7 @@ Route::group(['middleware' => 'auth'], function () {
 //        Route::get('/admin/edit-workspace', [\App\Http\Controllers\Controller::class, 'update']);
 //    });
 
-
-
-
-    Route::get('/admin/workspace', [\App\Http\Controllers\WorkSpaceController::class, 'index'])->name('event');
+    Route::get('/admin/workspace', [\App\Http\Controllers\WorkSpaceController::class, 'index'])->name('workspaces');
     Route::get('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'create'])->name('create');
     Route::post('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'store'])->name('store');
     Route::get('/admin/delete-workspace/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'destroy']);
@@ -86,10 +83,14 @@ Route::group(['middleware' => 'auth'], function () {
         return view('admin.worker.worker');
     });
 
+    Route::get('/admin/role', [\App\Http\Controllers\RoleController::class, 'index'])->name('roles');
+    Route::get('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'create'])->name('create');
+    Route::post('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'store'])->name('store');
+    Route::get('/admin/delete-role/{id}', [\App\Http\Controllers\RoleController::class, 'destroy']);
+    Route::get('/admin/edit-role/{id}', [\App\Http\Controllers\RoleController::class, 'edit']);
+    Route::post('/admin/edit-role', [\App\Http\Controllers\RoleController::class, 'update'])->name('update');
 
-    Route::get('/provider/home', function () {
-        return view('provider.home');
-    });
+    Route::get('/provider/home', [\App\Http\Controllers\ProviderController::class, 'index'])->name('providers');
 
 
     Route::get('/provider/workspace', function () {
