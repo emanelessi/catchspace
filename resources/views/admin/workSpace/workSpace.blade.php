@@ -40,7 +40,7 @@
         <!-- BEGIN PAGE TOOLBAR -->
         @can('workspace_create')
             <div class="page-toolbar">
-                <a href="{{url('/admin/add-workspace')}}" type="button" class="demo-loading-btn btn btn-primary" style="
+                <a href="{{route('create')}}" type="button" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -91,7 +91,9 @@
                                    margin-right: -20px;
 "
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
-                                   aria-expanded="true"> Filter By
+                                   aria-expanded="true">
+                                    <i class="fa fa-filter" style="color: #7952B3 !important;"></i>
+                                    Filter By
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right" style="
@@ -200,7 +202,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Logo
+"> Capacity
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -213,7 +215,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Name
+"> Type
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -226,7 +228,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> owner name
+"> Provider Name
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -239,7 +241,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Address
+"> Provider Address
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -257,355 +259,10 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 1
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"></td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Mark
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Otto
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> makr124
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                        @can('workspace_delete')
-                                            <a class="btn btn-outline dark"
-                                               data-target="#static2" data-toggle="modal"
-                                               style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                                delete
-                                            </a>
-                                        @endcan
-                                        @can('workspace_edit')
-                                            <a class="btn btn-outline dark"
-                                               href="{{url('/admin/edit-workspace')}}" data-toggle="modal"
-                                               style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                                Edit
-                                            </a>
-                                        @endcan
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 2
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"></td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Jacob
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Nilson
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> jac123
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                        @can('workspace_delete')
-                                            <a class="btn btn-outline dark"
-                                               data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                                delete
-                                            </a>
-                                        @endcan
-                                        @can('workspace_edit')
-                                            <a class="btn btn-outline dark"
-                                               href="{{url('/admin/edit-workspace')}}" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                                Edit
-                                            </a>
-                                        @endcan
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 3
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"></td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Larry
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Cooper
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> lar
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                        @can('workspace_delete')
-                                            <a class="btn btn-outline dark"
-                                               data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                                delete
-                                            </a>
-                                        @endcan
-                                        @can('workspace_edit')
+                                @foreach($workspace as $myworkspace)
 
-                                            <a class="btn btn-outline dark"
-                                               href="{{url('/admin/edit-workspace')}}" data-toggle="modal" style="
+                                    <tr>
+                                    <td style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -617,83 +274,64 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-">
-                                                Edit
-                                            </a>
-                                        @endcan
+"> {{$myworkspace->id}}
+                                    </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+">{{$myworkspace->capacity}}</td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> {{$myworkspace->workSpaceType->type}}
+                                    </td>
+                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> {{$myworkspace->provider->name}}
+                                    </td>
+                                        <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> {{$myworkspace->provider->address}}
+                                    </td>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 4
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"></td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Sandy
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Lim
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> sanlim
-                                    </td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -708,44 +346,21 @@
     color: #000000;
 ">
                                         @can('workspace_delete')
-                                            <a class="btn btn-outline dark"
-                                               data-target="#static2" data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                                delete
+                                            <a href="/admin/delete-workspace/{{$myworkspace->id}}" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
+                                                <i class="fa fa-trash" style="color: #000000 !important;"></i>
+
                                             </a>
                                         @endcan
                                         @can('workspace_edit')
-                                            <a class="btn btn-outline dark" href="{{url('/admin/edit-workspace')}}"
-                                               data-toggle="modal" style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                                Edit
-                                            </a>
-                                        @endcan
+                                                <a href="/admin/edit-workspace/{{$myworkspace->id}}">
+                                                    <i class="fa fa-pencil" style="color: #000000 !important;"></i>
 
+                                                </a>
+                                        @endcan
                                     </td>
                                 </tr>
+                                @endforeach
+
                                 </tbody>
                             </table>
                             <div id="static2" class="modal fade"
@@ -820,7 +435,7 @@
                                                                font-size: 13px;
                                                                letter-spacing: 1px;
                                                                ">
-                                        deletee
+                                        delete
                                     </button>
                                 </div>
                             </div>
