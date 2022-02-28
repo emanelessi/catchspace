@@ -29,17 +29,23 @@ class UserController extends Controller
 
     function __construct()
     {
-        $this->middleware('permission:permission_access', ['only' => ['index']]);
+//        $this->middleware('permission:permission_access', ['only' => ['index']]);
+//        $this->middleware('permission:provider_access', ['only' => ['index']]);
         $this->middleware('permission:permission_create', ['only' => ['create', 'store']]);
         $this->middleware('permission:permission_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:permission_delete', ['only' => ['destroy']]);
     }
 
-    public function index () {
-        $providers = \App\Models\Provider::all();
-        $work_spaces = \App\Models\WorkSpace::all();
-        $workers = \App\Models\Worker::all();
-        return view('admin.home', compact('workers', 'work_spaces', 'providers'));
+    public function index()
+    {
+        if (auth()->user()->user_level_id ==1) {
+            $providers = \App\Models\Provider::all();
+            $work_spaces = \App\Models\WorkSpace::all();
+            $workers = \App\Models\Worker::all();
+            return view('admin.home', compact('workers', 'work_spaces', 'providers'));
+
+        }
+        return redirect()->route('providers');
 //        $page = config('pages.users');
 //        $superadmin_user_level_id = config('roles.admin');
 //        $enterprise_user_level_id = config('roles.enterprise');
@@ -74,7 +80,8 @@ class UserController extends Controller
     }
 
 
-    public function create () {
+    public function create()
+    {
         $page = config('pages.users');
         $superadmin_user_level_id = config('roles.admin');
         $enterprise_user_level_id = config('roles.enterprise');
@@ -99,11 +106,12 @@ class UserController extends Controller
             $user_levels = UserLevel::where('id', $seller_user_level_id)->get();
         }
 
-        return view('users.create')->with(compact('page','user_levels','user_level_id'));
+        return view('users.create')->with(compact('page', 'user_levels', 'user_level_id'));
     }
 
 
-    public function store (UserRequest $request) {
+    public function store(UserRequest $request)
+    {
         $enterprise_user_level_id = config('roles.enterprise');
         $brand_user_level_id = config('roles.brand');
         $branch_user_level_id = config('roles.branch');
@@ -142,7 +150,7 @@ class UserController extends Controller
             $user->employee_id = $user->id;
             $user->save();
 
-            DB::table('model_has_roles')->insert(['role_id' => request('role_id') , 'model_type' => "App\User" , 'model_id' => $user->id]);
+            DB::table('model_has_roles')->insert(['role_id' => request('role_id'), 'model_type' => "App\User", 'model_id' => $user->id]);
             return back()->with('success', trans('cp.messages.add_success'));
         }
 
@@ -150,7 +158,8 @@ class UserController extends Controller
     }
 
 
-    public function edit ($id) {
+    public function edit($id)
+    {
         $page = config('pages.users');
         $superadmin_user_level_id = config('roles.admin');
         $enterprise_user_level_id = config('roles.enterprise');
@@ -167,32 +176,33 @@ class UserController extends Controller
         $branch_payment_methods = [];
 
         if ($user_level_id == $superadmin_user_level_id) {
-            $roles = Role::orderBy('id','DESC')->where('user_level_id', $superadmin_user_level_id)->get();
+            $roles = Role::orderBy('id', 'DESC')->where('user_level_id', $superadmin_user_level_id)->get();
         } else if ($user_level_id == $enterprise_user_level_id) {
             $enterprise_id = $user->enterprise_id;
-            $roles = Role::orderBy('id','DESC')->where('user_level_id', $enterprise_user_level_id)->where('enterprise_id', $enterprise_id)->get();
+            $roles = Role::orderBy('id', 'DESC')->where('user_level_id', $enterprise_user_level_id)->where('enterprise_id', $enterprise_id)->get();
         } else if ($user_level_id == $brand_user_level_id) {
             $brand_id = $user->brand_id;
-            $roles = Role::orderBy('id','DESC')->where('user_level_id', $brand_user_level_id)->where('brand_id', $brand_id)->get();
+            $roles = Role::orderBy('id', 'DESC')->where('user_level_id', $brand_user_level_id)->where('brand_id', $brand_id)->get();
         } else if ($user_level_id == $branch_user_level_id) {
             $branch_id = $user->branch_id;
-            $roles = Role::orderBy('id','DESC')->where('user_level_id', $branch_user_level_id)->where('branch_id', $branch_id)->get();
+            $roles = Role::orderBy('id', 'DESC')->where('user_level_id', $branch_user_level_id)->where('branch_id', $branch_id)->get();
             $api_permissions = ApiPermission::all();
             $branch_payment_methods = BranchPaymentMethod::all();
         } else if ($user_level_id == $inventory_user_level_id) {
             $inventory_id = $user->inventory_id;
-            $roles = Role::orderBy('id','DESC')->where('user_level_id', $inventory_user_level_id)->where('inventory_id', $inventory_id)->get();
+            $roles = Role::orderBy('id', 'DESC')->where('user_level_id', $inventory_user_level_id)->where('inventory_id', $inventory_id)->get();
         } else if ($user_level_id == $seller_user_level_id) {
             $seller_id = $user->seller_id;
-            $roles = Role::orderBy('id','DESC')->where('user_level_id', $seller_user_level_id)->where('seller_id', $seller_id)->get();
+            $roles = Role::orderBy('id', 'DESC')->where('user_level_id', $seller_user_level_id)->where('seller_id', $seller_id)->get();
         }
 
 
-        return view('users.edit_some')->with(compact('page','user','roles','api_permissions','branch_payment_methods'));
+        return view('users.edit_some')->with(compact('page', 'user', 'roles', 'api_permissions', 'branch_payment_methods'));
     }
 
 
-    public function update (Request $request, $id) {
+    public function update(Request $request, $id)
+    {
         $user = User::findOrFail($id);
 
         if ($employee_id = request('employee_id')) {
@@ -213,10 +223,9 @@ class UserController extends Controller
         if ($role_id = request('role_id')) {
             if (!empty($role_id) && $role_id > 0) {
                 DB::table('model_has_roles')->where('model_id', $user->id)->delete();
-                DB::table('model_has_roles')->insert(['role_id' => $role_id , 'model_type' => "App\User" , 'model_id' => $user->id]);
+                DB::table('model_has_roles')->insert(['role_id' => $role_id, 'model_type' => "App\User", 'model_id' => $user->id]);
             }
         }
-
 
 
         if (!empty($request['api_permissions'])) {
@@ -226,7 +235,7 @@ class UserController extends Controller
 
             $rows = [];
             foreach ($api_permissions as $api_permission_id) {
-                $rows[] = ['user_id' => $user->id , 'api_permission_id' => $api_permission_id];
+                $rows[] = ['user_id' => $user->id, 'api_permission_id' => $api_permission_id];
             }
             DB::table('api_permission_user')->insert($rows);
 
@@ -240,7 +249,7 @@ class UserController extends Controller
 
             $rows = [];
             foreach ($branch_payment_methods as $branch_payment_method_id) {
-                $rows[] = ['user_id' => $user->id , 'branch_payment_method_id' => $branch_payment_method_id];
+                $rows[] = ['user_id' => $user->id, 'branch_payment_method_id' => $branch_payment_method_id];
             }
             DB::table('branch_payment_method_user')->insert($rows);
         }

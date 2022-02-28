@@ -12,7 +12,7 @@
 
     </style>
     {{--    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">--}}
-    @can('role_show')
+    @can('permission_access')
 
     <div class="page-head" style="margin-bottom: 25px;">
         <!-- BEGIN PAGE TITLE -->

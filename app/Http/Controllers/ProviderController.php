@@ -8,7 +8,7 @@ class ProviderController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:provider_access', ['only' => ['index']]);
+//        $this->middleware('permission:provider_access', ['only' => ['index']]);
 //        $this->middleware('permission:role_create', ['only' => ['create','store']]);
 //        $this->middleware('permission:role_edit', ['only' => ['edit','update']]);
 //        $this->middleware('permission:role_delete', ['only' => ['destroy']]);
@@ -16,16 +16,9 @@ class ProviderController extends Controller
 
     public function index(Request $request)
     {
-//        $superadmin_user_level_id = 1;
-//        $provider_user_level_id = 2;
-//        $user = auth()->user();
-//
-//        if ($user->user_level_id == $superadmin_user_level_id) {
-//            return 'j';
-//        } else if ($user->user_level_id == $provider_user_level_id) {
-//            return 'pp';
-//        }
-
-        return view('admin.home');
+        $providers = \App\Models\Provider::all();
+        $work_spaces = \App\Models\WorkSpace::where('provider_id',auth()->user()->providers[0]->id);
+        $workers = \App\Models\Worker::all();
+        return view('admin.home',compact('workers', 'work_spaces', 'providers'));
     }
 }
