@@ -41,7 +41,7 @@
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
         <div class="page-toolbar  ">
-            <a href="{{url('/admin/add-role')}}" class="demo-loading-btn btn btn-primary" style="
+            <a href="{{route('rolecreate')}}" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/

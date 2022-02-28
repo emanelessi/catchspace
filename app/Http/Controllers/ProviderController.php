@@ -16,16 +16,16 @@ class ProviderController extends Controller
 
     public function index(Request $request)
     {
-        $superadmin_user_level_id = 1;
-        $provider_user_level_id = 2;
-        $user = auth()->user();
+//        $superadmin_user_level_id = 1;
+//        $provider_user_level_id = 2;
+//        $user = auth()->user();
+//
+//        if ($user->user_level_id == $superadmin_user_level_id) {
+//            return 'j';
+//        } else if ($user->user_level_id == $provider_user_level_id) {
+//            return 'pp';
+//        }
 
-        if ($user->user_level_id == $superadmin_user_level_id) {
-            return 'j';
-        } else if ($user->user_level_id == $provider_user_level_id) {
-            return 'pp';
-        }
-
-        return view('provider.home');
+        return view('admin.home');
     }
 }

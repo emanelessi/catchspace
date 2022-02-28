@@ -56,7 +56,7 @@ class RoleController extends Controller
             $user_levels = UserLevel::where('id', '>=', $provider_user_level_id)->get();
         }
 
-        return view('roles.create',compact('permission','page','user_levels'));
+        return view('admin.role.addRole',compact('permission','page'));
     }
 
     public function store(Request $request)

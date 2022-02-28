@@ -51,12 +51,7 @@ Route::get('/confirm', function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/admin/home', function () {
-        $providers = \App\Models\Provider::all();
-        $work_spaces = \App\Models\WorkSpace::all();
-        $workers = \App\Models\Worker::all();
-        return view('admin.home', compact('workers', 'work_spaces', 'providers'));
-    });
+    Route::get('/admin/home', [\App\Http\Controllers\UserController::class, 'index'] );
     Route::get('/admin/provider', function () {
         return view('admin.coworkProvider.coworkProvider');
     });
@@ -73,8 +68,8 @@ Route::group(['middleware' => 'auth'], function () {
 //    });
 
     Route::get('/admin/workspace', [\App\Http\Controllers\WorkSpaceController::class, 'index'])->name('workspaces');
-    Route::get('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'create'])->name('workspacescreate');
-    Route::post('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'store'])->name('workspacesstore');
+    Route::get('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'create'])->name('workspacecreate');
+    Route::post('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'store'])->name('workspacestore');
     Route::get('/admin/delete-workspace/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'destroy']);
     Route::get('/admin/edit-workspace/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'edit']);
     Route::post('/admin/edit-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'update'])->name('update');
@@ -84,11 +79,11 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::get('/admin/role', [\App\Http\Controllers\RoleController::class, 'index'])->name('roles');
-    Route::get('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'create'])->name('create');
-    Route::post('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'store'])->name('store');
+    Route::get('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'create'])->name('rolecreate');
+    Route::post('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'store'])->name('rolestore');
     Route::get('/admin/delete-role/{id}', [\App\Http\Controllers\RoleController::class, 'destroy']);
     Route::get('/admin/edit-role/{id}', [\App\Http\Controllers\RoleController::class, 'edit']);
-    Route::post('/admin/edit-role', [\App\Http\Controllers\RoleController::class, 'update'])->name('update');
+    Route::post('/admin/edit-role', [\App\Http\Controllers\RoleController::class, 'update'])->name('roleupdate');
 
     Route::get('/provider/home', [\App\Http\Controllers\ProviderController::class, 'index'])->name('providers');
 

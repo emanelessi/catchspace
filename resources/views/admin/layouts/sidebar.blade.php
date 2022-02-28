@@ -24,9 +24,9 @@
     ">
         <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
             <li class="nav-item start active open">
-            {{--            @can('workspace_show')--}}
-            <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif">
-                <a href="{{url('admin/home')}}" class="nav-link nav-toggle margin-left-10" style="
+            @can('role_show')
+                <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('admin/home')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
@@ -36,11 +36,11 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="fa fa-home"></i>
-                    <span class="title">Admin Home</span>
-                </a>
-            </li>
-            {{--            @endcan--}}
+                        <i class="fa fa-home"></i>
+                        <span class="title">Admin Home</span>
+                    </a>
+                </li>
+            @endcan
             @can('provider_access')
                 <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('provider/home')}}" class="nav-link nav-toggle margin-left-10" style="

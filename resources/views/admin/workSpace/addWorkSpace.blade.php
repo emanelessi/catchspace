@@ -87,7 +87,7 @@
                                                 <div class="tab-content">
                                                     <!-- PERSONAL INFO TAB -->
                                                     <div class="tab-pane active" id="tab_1_1">
-                                                        <form role="form" action="{{route('store')}}" method="POST">
+                                                        <form role="form" action="{{route('workspacestore')}}" method="POST">
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9" style="
                                                                 color:#6B7280;">Workspace

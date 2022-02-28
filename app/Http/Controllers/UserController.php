@@ -22,52 +22,55 @@ use DB;
 
 class UserController extends Controller
 {
-    
-    use GetBy;
-    use CheckTrait;
-    use MainTrait;
+
+//    use GetBy;
+//    use CheckTrait;
+//    use MainTrait;
 
     function __construct()
     {
-        $this->middleware('permission:Users', ['only' => ['index']]);
-        $this->middleware('permission:Users Create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:Users Edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:Users Deactivate', ['only' => ['destroy']]);
-        $this->middleware('permission:Users Activate', ['only' => ['restore']]);
+        $this->middleware('permission:permission_access', ['only' => ['index']]);
+        $this->middleware('permission:permission_create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:permission_edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:permission_delete', ['only' => ['destroy']]);
     }
 
     public function index () {
-        $page = config('pages.users');
-        $superadmin_user_level_id = config('roles.admin');
-        $enterprise_user_level_id = config('roles.enterprise');
-        $brand_user_level_id = config('roles.brand');
-        $branch_user_level_id = config('roles.branch');
-        $inventory_user_level_id = config('roles.inventory');
-        $seller_user_level_id = config('roles.seller');
-        $user = auth()->user();
-
-        $list = [];
-
-        if ($user->user_level_id == $superadmin_user_level_id) {
-            $list = User::withTrashed()->get();
-        } else if ($user->user_level_id == $enterprise_user_level_id) {
-            $enterprise_id = $user->enterprise_id;
-            $list = User::withTrashed()->where('enterprise_id', $enterprise_id)->get();
-        } else if ($user->user_level_id == $brand_user_level_id) {
-            $brand_id = $user->brand_id;
-            $list = User::withTrashed()->where('brand_id', $brand_id)->get();
-        } else if ($user->user_level_id == $branch_user_level_id) {
-            $branch_id = $user->branch_id;
-            $list = User::withTrashed()->where('branch_id', $branch_id)->get();
-        } else if ($user->user_level_id == $inventory_user_level_id) {
-            $inventory_id = $user->inventory_id;
-            $list = User::withTrashed()->where('inventory_id', $inventory_id)->get();
-        } else if ($user->user_level_id == $seller_user_level_id) {
-            $seller_id = $user->seller_id;
-            $list = User::withTrashed()->where('seller_id', $seller_id)->get();
-        }
-
-        return view('users.index')->with(compact('page', 'list'));
+        $providers = \App\Models\Provider::all();
+        $work_spaces = \App\Models\WorkSpace::all();
+        $workers = \App\Models\Worker::all();
+        return view('admin.home', compact('workers', 'work_spaces', 'providers'));
+//        $page = config('pages.users');
+//        $superadmin_user_level_id = config('roles.admin');
+//        $enterprise_user_level_id = config('roles.enterprise');
+//        $brand_user_level_id = config('roles.brand');
+//        $branch_user_level_id = config('roles.branch');
+//        $inventory_user_level_id = config('roles.inventory');
+//        $seller_user_level_id = config('roles.seller');
+//        $user = auth()->user();
+//
+//        $list = [];
+//
+//        if ($user->user_level_id == $superadmin_user_level_id) {
+//            $list = User::withTrashed()->get();
+//        } else if ($user->user_level_id == $enterprise_user_level_id) {
+//            $enterprise_id = $user->enterprise_id;
+//            $list = User::withTrashed()->where('enterprise_id', $enterprise_id)->get();
+//        } else if ($user->user_level_id == $brand_user_level_id) {
+//            $brand_id = $user->brand_id;
+//            $list = User::withTrashed()->where('brand_id', $brand_id)->get();
+//        } else if ($user->user_level_id == $branch_user_level_id) {
+//            $branch_id = $user->branch_id;
+//            $list = User::withTrashed()->where('branch_id', $branch_id)->get();
+//        } else if ($user->user_level_id == $inventory_user_level_id) {
+//            $inventory_id = $user->inventory_id;
+//            $list = User::withTrashed()->where('inventory_id', $inventory_id)->get();
+//        } else if ($user->user_level_id == $seller_user_level_id) {
+//            $seller_id = $user->seller_id;
+//            $list = User::withTrashed()->where('seller_id', $seller_id)->get();
+//        }
+//
+//        return view('users.index')->with(compact('page', 'list'));
     }
 
 
@@ -218,7 +221,7 @@ class UserController extends Controller
 
         if (!empty($request['api_permissions'])) {
             $api_permissions = $request['api_permissions'];
-            
+
             DB::table('api_permission_user')->where('user_id', $user->id)->delete();
 
             $rows = [];
@@ -232,7 +235,7 @@ class UserController extends Controller
 
         if (!empty($request['branch_payment_methods'])) {
             $branch_payment_methods = $request['branch_payment_methods'];
-            
+
             DB::table('branch_payment_method_user')->where('user_id', $user->id)->delete();
 
             $rows = [];
