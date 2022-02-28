@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Permission\Models\Role;
 
 class Provider extends Model
 {
@@ -29,5 +30,9 @@ class Provider extends Model
     public function workSpaces()
     {
         return $this->hasMany(WorkSpace::class, 'provider_id', 'id');
+    }
+    public function roles()
+    {
+        return $this->hasMany(Role::class, 'role_id', 'id');
     }
 }

@@ -40,7 +40,7 @@
         <!-- BEGIN PAGE TOOLBAR -->
         @can('workspace_create')
             <div class="page-toolbar">
-                <a href="{{route('create')}}" type="button" class="demo-loading-btn btn btn-primary" style="
+                <a href="{{route('workspacesstore')}}" type="button" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
