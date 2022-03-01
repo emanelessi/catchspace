@@ -36,7 +36,7 @@ class PermissionSeeder extends Seeder
             'provider_edit',
             'provider_show',
             'provider_delete',
-//            'provider_access',
+            'provider_access',
             'workspace_create',
             'workspace_edit',
             'workspace_show',
@@ -62,9 +62,15 @@ class PermissionSeeder extends Seeder
         }
 
         // gets all permissions via Gate::before rule; see AuthServiceProvider
-//        Role::create(['name' => 'Super Admin']);
 
-        $provider = Role::create(['name' => 'Provider']);
+//        Role::create(['name' => 'Super Admin']);
+        $providerRole= new  Role();
+        $providerRole->name = 'Provider';
+        $providerRole->user_level_id = 2;
+        $providerRole->provider_id = 1;
+        $providerRole->guard_name = 'web';
+        $providerRole->save();
+//        $provider = Role::create(['name' => 'Provider']);
 
         $providerPermissions = [
             'provider_edit',
@@ -88,17 +94,23 @@ class PermissionSeeder extends Seeder
         ];
 
         foreach ($providerPermissions as $permission) {
-            $provider->givePermissionTo($permission);
+            $providerRole->givePermissionTo($permission);
         }
 
-        $super_admin = Role::create(['name' => 'Super Admin']);
+//        $super_admin = Role::create(['name' => 'Super Admin']);
+        $adminRole= new  Role();
+        $adminRole->name = 'Admin';
+        $adminRole->user_level_id = 1;
+        $adminRole->provider_id = null;
+        $adminRole->guard_name = 'web';
+        $adminRole->save();
 
         $superAdminPermissions = [
             'provider_create',
             'provider_edit',
             'provider_show',
             'provider_delete',
-            'provider_access',
+//            'provider_access',
             'workspace_create',
             'workspace_edit',
             'workspace_show',
@@ -110,11 +122,16 @@ class PermissionSeeder extends Seeder
         ];
 
         foreach ($superAdminPermissions as $permission) {
-            $super_admin->givePermissionTo($permission);
+            $adminRole->givePermissionTo($permission);
         }
 
 
-        $test = Role::create(['name' => 'Test']);
+        $testRole= new  Role();
+        $testRole->name = 'Test Provider';
+        $testRole->user_level_id = 2;
+        $testRole->provider_id = 2;
+        $testRole->guard_name = 'web';
+        $testRole->save();
 
         $testPermissions = [
             'workspace_create',
@@ -125,7 +142,7 @@ class PermissionSeeder extends Seeder
         ];
 
         foreach ($testPermissions as $permission) {
-            $test->givePermissionTo($permission);
+            $testRole->givePermissionTo($permission);
         }
     }
 

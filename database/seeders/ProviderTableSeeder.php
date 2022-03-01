@@ -26,6 +26,13 @@ class ProviderTableSeeder extends Seeder
         $provider->address = 'Gaza';
         $provider->logo = 'logo';
         $provider->save();
+
+        $testProvider = new  Provider();
+        $testProvider->name = 'Test provider name';
+        $testProvider->owner_name = 'owner';
+        $testProvider->address = 'Gaza';
+        $testProvider->logo = 'logo';
+        $testProvider->save();
 //        `full_name`, `email`, `password`, `phone`, `type`, `user_level_id`,'provider_id'
         $provider_login = new  User();
         $provider_login->full_name = 'Provider';
