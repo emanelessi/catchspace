@@ -3,22 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Traits\CheckTrait;
-use App\Http\Traits\GetBy;
-use App\Http\Traits\MainTrait;
-use App\User;
-use App\Models\UserLevel;
-use App\Models\Enterprise;
-use App\Models\Brand;
-use App\Models\Branch;
-use App\Models\Inventory;
-use App\Models\Seller;
-use App\Models\ApiPermission;
-use App\Models\BranchPaymentMethod;
-use App\Models\Corporate;
-use App\Http\Requests\UserRequest;
-use Spatie\Permission\Models\Role;
-use DB;
+
 
 class UserController extends Controller
 {
@@ -29,8 +14,7 @@ class UserController extends Controller
 
     function __construct()
     {
-//        $this->middleware('permission:permission_access', ['only' => ['index']]);
-//        $this->middleware('permission:provider_access', ['only' => ['index']]);
+        $this->middleware('permission:permission_access', ['only' => ['index']]);
         $this->middleware('permission:permission_create', ['only' => ['create', 'store']]);
         $this->middleware('permission:permission_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:permission_delete', ['only' => ['destroy']]);
