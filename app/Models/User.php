@@ -49,9 +49,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function providers()
+    public function provider()
     {
-        return $this->hasMany(Provider::class, 'user_id', 'id');
+        return $this->belongsTo(Provider::class, 'provider_id');
     }
 
     public function userLevel()

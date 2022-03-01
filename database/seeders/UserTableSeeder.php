@@ -19,7 +19,7 @@ class UserTableSeeder extends Seeder
         $user_level_admin->name='Admin';
         $user_level_admin->save();
 
-//        `full_name`, `email`, `password`, `phone`, `type`, `user_level_id`
+//        `full_name`, `email`, `password`, `phone`, `type`, `user_level_id`,'provider_id'
         $admin=new  User();
         $admin->full_name='Admin';
         $admin->email='admin@admin.com';
@@ -27,6 +27,7 @@ class UserTableSeeder extends Seeder
         $admin->phone='0567013637';
         $admin->type='admin';
         $admin->user_level_id=1;
+        $admin->provider_id=null;
         $admin->save();
 
         $dina_admin=new  User();
@@ -36,6 +37,7 @@ class UserTableSeeder extends Seeder
         $dina_admin->phone='0597505581';
         $dina_admin->type='admin';
         $dina_admin->user_level_id=1;
+        $dina_admin->provider_id=null;
         $dina_admin->save();
 
         $eman_admin=new  User();
@@ -45,6 +47,7 @@ class UserTableSeeder extends Seeder
         $eman_admin->phone='0599174952';
         $eman_admin->type='admin';
         $eman_admin->user_level_id=1;
+        $eman_admin->provider_id=null;
         $eman_admin->save();
 
         $jumana_admin=new  User();
@@ -54,15 +57,17 @@ class UserTableSeeder extends Seeder
         $jumana_admin->phone='0595866320';
         $jumana_admin->type='admin';
         $jumana_admin->user_level_id=1;
+        $jumana_admin->provider_id=null;
         $jumana_admin->save();
 
         $dalia_admin=new  User();
-        $dalia_admin->full_name='Dalia Marouf ';
+        $dalia_admin->full_name='Dalia Marouf';
         $dalia_admin->email='dalia.5.6.2000@gmail.com';
         $dalia_admin->password=bcrypt('0592072589');
         $dalia_admin->phone='0592072589';
         $dalia_admin->type='admin';
         $dalia_admin->user_level_id=1;
+        $dalia_admin->provider_id=null;
         $dalia_admin->save();
     }
 }

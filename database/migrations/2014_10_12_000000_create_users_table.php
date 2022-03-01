@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
             $table->enum('type', ['admin','provider']);
             $table->unsignedBigInteger('user_level_id');
             $table->foreign('user_level_id')->references('id')->on('user_levels')->cascadeOnDelete();
+            $table->unsignedBigInteger('provider_id')->nullable();
+            $table->foreign('provider_id')->references('id')->on('providers')->cascadeOnDelete();
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();

@@ -12,9 +12,14 @@ class Provider extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->hasMany(User::class, 'provider_id', 'id');
+    }
+
+    public function roles()
+    {
+        return $this->hasMany(Role::class, 'provider_id', 'id');
     }
 
     public function policies()
@@ -31,8 +36,5 @@ class Provider extends Model
     {
         return $this->hasMany(WorkSpace::class, 'provider_id', 'id');
     }
-    public function roles()
-    {
-        return $this->hasMany(Role::class, 'role_id', 'id');
-    }
+
 }

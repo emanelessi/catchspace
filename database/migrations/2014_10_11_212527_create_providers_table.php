@@ -19,8 +19,6 @@ class CreateProvidersTable extends Migration
             $table->string('owner_name');
             $table->string('address');
             $table->string('logo');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->softDeletes();
             $table->timestamps();
         });
