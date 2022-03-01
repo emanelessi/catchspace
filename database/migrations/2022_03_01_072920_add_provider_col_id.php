@@ -16,7 +16,7 @@ class AddProviderColId extends Migration
         Schema::table('roles', function (Blueprint $table) {
             $table->unsignedBigInteger('provider_id')->after('name')->nullable();
             $table->foreign('provider_id')->references('id')->on('providers')->cascadeOnDelete();
-            $table->unsignedBigInteger('user_level_id')->after('name')->default('1');
+            $table->unsignedBigInteger('user_level_id')->after('name');
             $table->foreign('user_level_id')->references('id')->on('user_levels')->cascadeOnDelete();
             $table->softDeletes();
 
