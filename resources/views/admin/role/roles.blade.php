@@ -41,7 +41,8 @@
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
         <div class="page-toolbar  ">
-            <a href="{{route('rolecreate')}}" class="demo-loading-btn btn btn-primary" style="
+            @can('role_create')
+                <a href="{{route('rolecreate')}}" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -59,9 +60,10 @@
             height: 30px;
             font-size: 13px;
 ">
-                <i class="fa fa-plus-circle"></i>
-                Add Role
-            </a>
+                    <i class="fa fa-plus-circle"></i>
+                    Add Role
+                </a>
+        @endcan
         {{--        </div>--}}
         <!-- END PAGE TOOLBAR -->
         </div>
@@ -217,6 +219,32 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
+"> User Level
+                                    </th>
+                                    <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Provider
+                                    </th>
+                                    <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
 "> Guard Name
                                     </th>
 
@@ -278,6 +306,34 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
+"> {{$myrole->user_level_id }}
+                                        </td>
+                                        <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> {{$myrole->provider_id  }}
+                                        </td>
+                                        <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
 "> {{$myrole->guard_name}}
                                         </td>
                                         <td style="
@@ -293,14 +349,15 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            @can('workspace_delete')
-                                                <a href="/admin/delete-workspace/{{$myrole->id}}" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
+                                            @can('role_delete')
+                                                <a href="/admin/delete-role/{{$myrole->id}}" data-target="#static2"
+                                                   data-toggle="modal" style="margin-left: 10px">
                                                     <i class="fa fa-trash" style="color: #000000 !important;"></i>
 
                                                 </a>
                                             @endcan
-                                            @can('workspace_edit')
-                                                <a href="/admin/edit-workspace/{{$myrole->id}}">
+                                            @can('role_edit')
+                                                <a href="/admin/edit-role/{{$myrole->id}}">
                                                     <i class="fa fa-pencil" style="color: #000000 !important;"></i>
 
                                                 </a>
@@ -315,7 +372,7 @@
                                  tabindex="-1" data-backdrop="static"
                                  data-keyboard="false" data-attention-animation="false"
                                  style="background: rgb(255, 255, 255);border-radius: 10px !important;display: block;margin-top: -82.5px;height: 185px;width: 480px;">
-                                <div class="modal-body" >
+                                <div class="modal-body">
                                     <p style="
                                                 /*margin-bottom: 1px;*/
                                                 font-family: AvenirLTStd-Book;

@@ -127,9 +127,11 @@ font-family: AvenirLTStd-Book;
     letter-spacing: -0.022em;
 
 "><a href="{{url('contact')}}" class="nav-link">Contact Us </a></li>
-                        <a href="{{route('login')}}" class="nav-btn btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
+                        @guest
+                            @if (Route::has('login'))
+                                <a href="{{route('login')}}" class="nav-btn btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
                         m-grid-col-xs-12 "
-                           style="
+                                   style="
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
@@ -147,8 +149,33 @@ font-family: AvenirLTStd-Book;
                             color: #FFFFFF;
                             background-color: #845ba6;
 ">
-                            Login
-                        </a>
+                                    Login
+                                </a>
+                            @endif
+                        @else
+                            <a href="{{url('/admin/home')}}" class="nav-btn btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
+                        m-grid-col-xs-12 "
+                               style="
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: 70px;
+                            height: 26px;
+                            border: 1px solid #FFFFFF;
+                            box-sizing: border-box;
+                            border-radius: 3px !important;
+                            font-family: AvenirLTStd-Book;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 24px;
+                            color: #FFFFFF;
+                            background-color: #845ba6;
+">
+                                home
+                            </a>
+                        @endguest
                     </ul>
 
                 </div>

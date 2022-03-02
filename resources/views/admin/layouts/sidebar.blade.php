@@ -96,7 +96,7 @@
                 </li>
             @endcan
 
-            @can('role_show')
+            @can('role_access')
                 <li class="nav-item @if(preg_match('/role/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/admin/role')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
