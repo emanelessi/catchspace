@@ -41,7 +41,7 @@
                     </a>
                 </li>
             @endcan
-            @can('provider_show')
+            @can('provider_access')
                 <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/admin/provider')}}" class="nav-link nav-toggle margin-left-10" style="
    font-family: AvenirLTStd-Book;
