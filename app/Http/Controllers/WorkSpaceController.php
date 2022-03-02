@@ -9,7 +9,7 @@ class WorkSpaceController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:workspace_show', ['only' => ['index']]);
+        $this->middleware('permission:workspace_access', ['only' => ['index']]);
         $this->middleware('permission:workspace_create', ['only' => ['store','create']]);
         $this->middleware('permission:workspace_edit', ['only' => ['edit','update']]);
         $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);

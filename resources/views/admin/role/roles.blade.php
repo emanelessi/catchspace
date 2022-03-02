@@ -219,7 +219,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> User Level
+">Role
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -232,7 +232,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Provider
+"> Permission
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -306,8 +306,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$myrole->user_level_id }}
-                                        </td>
+"> {{$myrole->pivot->role_id}}</td>
                                         <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -320,8 +319,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$myrole->provider_id  }}
-                                        </td>
+"> {{$myrole->pivot->permission_id  }}</td>
                                         <td style="
     /*width: 59px;*/
     /*height: 53px;*/

@@ -5,6 +5,7 @@ use App\Level;
 use App\Models\UserLevel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use DB;
@@ -32,7 +33,9 @@ class RoleController extends Controller
         $user = auth()->user();
 
         if ($user->user_level_id == $superadmin_user_level_id) {
-            $roles = Role::orderBy('id','DESC')->get();
+//            $roles = Role::orderBy('id','DESC')->get();
+            $roles = Auth::user()->getAllPermissions();
+//            dd($roles->toArray());
         } else if ($user->user_level_id == $provider_user_level_id) {
             $roles = Role::orderBy('id','DESC')->get();
         }

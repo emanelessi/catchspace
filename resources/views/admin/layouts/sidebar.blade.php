@@ -60,7 +60,7 @@
                 </li>
             @endcan
 
-            @can('workspace_show')
+            @can('workspace_access')
                 <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/admin/workspace')}}" class="nav-link nav-toggle margin-left-10" style="
     font-family: AvenirLTStd-Book;
