@@ -54,7 +54,8 @@ Route::get('/confirm', function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/admin/home', [\App\Http\Controllers\UserController::class, 'index'] );
+    Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index'] );
+    Route::get('/admin/user', [\App\Http\Controllers\UserController::class, 'index'] );
     Route::get('/admin/provider', function () {
         return view('admin.coworkProvider.coworkProvider');
     });

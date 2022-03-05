@@ -14,8 +14,9 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="{{url('/')}}"  class="margin-top-6">
-                <img src="{{asset('../assets/pages/img/login/catchblack-logo.png')}}" alt="logo" class="logo-default margin-top-10"
+            <a href="{{url('/')}}" class="margin-top-6">
+                <img src="{{asset('../assets/pages/img/login/catchblack-logo.png')}}" alt="logo"
+                     class="logo-default margin-top-10"
                      style="
     height: 45px;
 "/> </a>
@@ -47,7 +48,7 @@
                 </div>
             </form>
             <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="top-menu margin-top-10" >
+            <div class="top-menu margin-top-10">
                 <ul class="nav navbar-nav pull-right">
                     <li class="separator hide"></li>
 
@@ -175,10 +176,13 @@
                            class="m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-12 no-space ">
                             <span class="username username-hide-on-mobile"> {{auth()->user()->full_name}} </span>
                             <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
-{{--                            @can('provider_access')--}}
-{{--                            <img alt="" class="img-circle" src="{{'/storage/'.auth()->user()->provider->logo}}"/>--}}
-{{--                            @endcan--}}
-{{--                            <i class="fa fa-user img-circle" style="font-size: 20px;color: #FFC107 !important;" ></i>--}}
+                            @can('provider_access')
+                                <img alt="" class="img-circle"
+                                     src="{{'/storage/providers/'.auth()->user()->provider->logo}}"/>
+                            @endcan
+                            @can('permission_access')
+                            <i class="fa fa-user img-circle" style="font-size: 20px;color: #7952B3 !important;"></i>
+                            @endcan
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>

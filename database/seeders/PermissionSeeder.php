@@ -52,6 +52,10 @@ class PermissionSeeder extends Seeder
             'worker_show',
             'worker_delete',
             'worker_access',
+            'user_edit',
+            'user_delete',
+            'user_show',
+            'user_create'
 
         ];
 
@@ -110,7 +114,7 @@ class PermissionSeeder extends Seeder
             'provider_edit',
             'provider_show',
             'provider_delete',
-//            'provider_access',
+            'user_create',
             'workspace_create',
             'workspace_edit',
             'workspace_show',
@@ -118,6 +122,9 @@ class PermissionSeeder extends Seeder
             'workspace_access',
             'worker_show',
             'worker_access',
+            'user_edit',
+            'user_delete',
+            'user_show'
 
         ];
 

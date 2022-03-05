@@ -19,10 +19,10 @@ class RoleController extends Controller
      */
     function __construct()
     {
-        $this->middleware('permission:role_access', ['only' => ['index']]);
-        $this->middleware('permission:role_create', ['only' => ['create','store']]);
-        $this->middleware('permission:role_edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:role_delete', ['only' => ['destroy']]);
+//        $this->middleware('permission:role_access', ['only' => ['index']]);
+//        $this->middleware('permission:role_create', ['only' => ['create','store']]);
+//        $this->middleware('permission:role_edit', ['only' => ['edit','update']]);
+//        $this->middleware('permission:role_delete', ['only' => ['destroy']]);
     }
 
     public function index(Request $request)
@@ -33,13 +33,15 @@ class RoleController extends Controller
         $user = auth()->user();
 
         if ($user->user_level_id == $superadmin_user_level_id) {
-//            $roles = Role::orderBy('id','DESC')->get();
-            $roles = Auth::user()->getAllPermissions();
+            $roles = Role::orderBy('id','DESC')->get();
+//            $roles = Auth::user()->getAllPermissions();
 //            dd($roles->toArray());
         } else if ($user->user_level_id == $provider_user_level_id) {
-            $roles = Role::orderBy('id','DESC')->get();
+            $provider_id = $user->provider_id;
+            $roles = Role::where('provider_id', $provider_id)->orderBy('id','DESC')->get();
         }
 
+       # name, userLevel.name, provider.name
         return view('admin.role.roles',compact('roles','page'));
     }
 

@@ -34,15 +34,13 @@
             font-size: 33px;
             letter-spacing: -0.022em;
             color: #333333;
-            " class="margin-top--10">
-                Role
-            </h1>
+            ">User</h1>
         </div>
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
-        <div class="page-toolbar  ">
-            @can('role_create')
-                <a href="{{route('rolecreate')}}" class="demo-loading-btn btn btn-primary" style="
+        @can('user_create')
+            <div class="page-toolbar">
+                <a href="{{route('workspacecreate')}}" type="button" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -56,17 +54,16 @@
             /*top: 117px;*/
             background: #7952B3;
             border-radius: 5px !important;
-            width: 160px;
+            width: 147px;
             height: 30px;
             font-size: 13px;
 ">
-                    <i class="fa fa-plus-circle"></i>
-                    Add Role
+                    Add User
                 </a>
+
+                <!-- END PAGE TOOLBAR -->
+            </div>
         @endcan
-        {{--        </div>--}}
-        <!-- END PAGE TOOLBAR -->
-        </div>
         <div class="row">
             <div class="col-md-12">
                 <!-- BEGIN BORDERED TABLE PORTLET-->
@@ -89,7 +86,7 @@
                                    font-weight: normal;
                                    font-size: 13px;
                                    color: #292D32;
-                                   width: 90px;
+                                   width: 82px;
                                    height: 29px;
                                    margin-right: -20px;
 "
@@ -176,8 +173,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="portlet-body margin-top--20">
+                    <div class="portlet-body">
                         <div class="table-scrollable table-scrollable-borderless">
                             <table class="table  table-light" style="background-color: #E5E5E5;">
                                 <thead>
@@ -193,7 +189,46 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-">Role Name
+"> #
+                                    </th>
+                                    <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Name
+                                    </th>
+                                    <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Email
+                                    </th>
+                                    <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Phone
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -219,8 +254,20 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-">Provider Name
-
+"> Provider Name
+                                    </th><th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Role Name
+                                    </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -237,7 +284,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($roles as $myrole)
+                                @foreach($users as $user)
 
                                     <tr>
                                         <td style="
@@ -252,7 +299,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-">{{$myrole->name}}</td>
+"> {{$user->id}}
+                                        </td>
                                         <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -265,7 +313,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$myrole->userLevel->name}}</td>
+">{{$user->full_name}}</td>
                                         <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -278,7 +326,64 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$myrole->provider->name ?? ''  }}</td>
+"> {{$user->email}}
+                                        </td>
+                                        <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> {{$user->phone}}
+                                        </td>
+                                        <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> {{$user->userLevel->name}}
+                                        </td>
+                                        <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> {{$user->provider->name ?? ''}}
+                                        </td><td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> {{$user->UserLevel->roles[0]->name ?? ''}}
+                                        </td>
+
                                         <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -292,10 +397,16 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                            @can('role_delete')
-                                                <a href="/admin/delete-role/{{$myrole->id}}" data-target="#static2"
+                                            @can('user_delete')
+                                                <a href="/admin/delete-user/{{$user->id}}" data-target="#static2"
                                                    data-toggle="modal" style="margin-left: 10px">
                                                     <i class="fa fa-trash" style="color: #000000 !important;"></i>
+
+                                                </a>
+                                            @endcan
+                                            @can('user_edit')
+                                                <a href="/admin/edit-user/{{$user->id}}">
+                                                    <i class="fa fa-pencil" style="color: #000000 !important;"></i>
 
                                                 </a>
                                             @endcan
@@ -320,7 +431,7 @@
                                                 letter-spacing: -0.011em;
                                                 color: #333333;
                                                 /* opacity: 0.5; */
-                                                "> Are you sure about delete this Cowork provider ? </p>
+                                                "> Are you sure about delete this user ? </p>
                                 </div>
                                 <div class="modal-footer padding-right-120 " style="border-top:0px;">
                                     <button type="button"
@@ -377,7 +488,7 @@
                                                                font-size: 13px;
                                                                letter-spacing: 1px;
                                                                ">
-                                        deletee
+                                        delete
                                     </button>
                                 </div>
                             </div>

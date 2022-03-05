@@ -113,6 +113,23 @@
                     </a>
                 </li>
             @endcan
+            @can('user_show')
+                <li class="nav-item @if(preg_match('/user/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('/admin/user')}}" class="nav-link nav-toggle margin-left-10" style="
+   font-family: AvenirLTStd-Book;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
+
+">
+                        <i class="fa fa-user"></i>
+                        <span class="title">Users</span>
+                    </a>
+                </li>
+            @endcan
             {{--            <li class="nav-item @if(preg_match('/system/i',url()->current())) start active open @endif">--}}
             {{--                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="--}}
             {{--  font-family: AvenirLTStd-Book;--}}
