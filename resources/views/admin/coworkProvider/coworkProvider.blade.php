@@ -41,7 +41,7 @@
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
         <div class="page-toolbar  ">
-            <a href="{{url('/admin/add-provider')}}" class="demo-loading-btn btn btn-primary" style="
+            <a href="{{route('providercreate')}}" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -232,19 +232,7 @@
     padding-bottom: 15px;
 "> Owner Name
                                     </th>
-                                    <th style="
-  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size: 20px;
-    letter-spacing: -0.022em;
-    /*text-transform: capitalize;*/
-    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
-    color: #e7ae04;
-    padding-bottom: 15px;
-"> User
-                                    </th>
+
                                     <th style="
   font-family: AvenirLTStd-Book;
     /*font-weight: 500;*/
@@ -274,6 +262,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($providers as $myprovider)
                                 <tr>
                                     <td style="
     /*width: 59px;*/
@@ -287,7 +276,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 1
+"> {{$myprovider->id}}
                                     </td>
                                     <td style="
     /*width: 59px;*/
@@ -301,7 +290,8 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"></td>
+"> <img alt="" class="img-circle"
+        src="{{'/storage/'.$myprovider->logo}}"/></td>
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -314,7 +304,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Mark
+"> {{$myprovider->name}}
                                     </td>
                                     <td style="
     /*width: 59px;*/
@@ -328,7 +318,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Otto
+"> {{$myprovider->owner_name}}
                                     </td>
                                     <td style="
     /*width: 59px;*/
@@ -342,22 +332,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> makr124
+"> {{$myprovider->address}}
                                     </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> test
-                                    </td>
+
                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -371,465 +348,18 @@
     /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                        <a href="">
+                                        <a href="/admin/edit-provider/{{$myprovider->id}}">
                                             <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
 
                                         </a>
-                                        <a href="" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
+                                        <a href="/admin/delete-provider/{{$myprovider->id}}" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
                                             <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                         </a>
-                                        {{--                                        <a class="btn btn-outline dark"--}}
-                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
-                                        {{--    /*width: 59px;*/--}}
-                                        {{--    /*height: 53px;*/--}}
-                                        {{--    /*left: 542px;*/--}}
-                                        {{--    /*top: 369px;*/--}}
-                                        {{-- font-family: AvenirLTStd-Book;--}}
-                                        {{--    /*font-weight: 500;*/--}}
-                                        {{--    font-size:  20px;--}}
-                                        {{--    /*line-height: 80px;*/--}}
-                                        {{--    letter-spacing: 0.02em;--}}
-                                        {{--    /*text-transform: capitalize;*/--}}
-                                        {{--    color: #000000;--}}
-                                        {{--">--}}
-                                        {{--                                            delete--}}
-                                        {{--                                        </a>--}}
-                                        {{--                                        <a class="btn btn-outline dark"--}}
-                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
-                                        {{--    /*width: 59px;*/--}}
-                                        {{--    /*height: 53px;*/--}}
-                                        {{--    /*left: 542px;*/--}}
-                                        {{--    /*top: 369px;*/--}}
-                                        {{-- font-family: AvenirLTStd-Book;--}}
-                                        {{--    /*font-weight: 500;*/--}}
-                                        {{--    font-size:  20px;--}}
-                                        {{--    /*line-height: 80px;*/--}}
-                                        {{--    letter-spacing: 0.02em;--}}
-                                        {{--    /*text-transform: capitalize;*/--}}
-                                        {{--    color: #000000;--}}
-                                        {{--">--}}
-                                        {{--                                            Edit--}}
-                                        {{--                                        </a>--}}
+
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 2
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"></td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Jacob
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Nilson
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> jac123
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> test
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                        <a href="">
-                                            <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
-
-                                        </a>
-                                        <a href="" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
-                                            <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
-
-                                        </a>
-                                        {{--                                        <a class="btn btn-outline dark"--}}
-                                        {{--     data-target="#static2" data-toggle="modal" style="--}}
-                                        {{--    /*width: 59px;*/--}}
-                                        {{--    /*height: 53px;*/--}}
-                                        {{--    /*left: 542px;*/--}}
-                                        {{--    /*top: 369px;*/--}}
-                                        {{-- font-family: AvenirLTStd-Book;--}}
-                                        {{--    /*font-weight: 500;*/--}}
-                                        {{--    font-size:  20px;--}}
-                                        {{--    /*line-height: 80px;*/--}}
-                                        {{--    letter-spacing: 0.02em;--}}
-                                        {{--    /*text-transform: capitalize;*/--}}
-                                        {{--    color: #000000;--}}
-                                        {{--">--}}
-                                        {{--                                            delete--}}
-                                        {{--                                        </a>--}}
-                                        {{--                                        <a class="btn btn-outline dark"--}}
-                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
-                                        {{--    /*width: 59px;*/--}}
-                                        {{--    /*height: 53px;*/--}}
-                                        {{--    /*left: 542px;*/--}}
-                                        {{--    /*top: 369px;*/--}}
-                                        {{-- font-family: AvenirLTStd-Book;--}}
-                                        {{--    /*font-weight: 500;*/--}}
-                                        {{--    font-size:  20px;--}}
-                                        {{--    /*line-height: 80px;*/--}}
-                                        {{--    letter-spacing: 0.02em;--}}
-                                        {{--    /*text-transform: capitalize;*/--}}
-                                        {{--    color: #000000;--}}
-                                        {{--">--}}
-                                        {{--                                            Edit--}}
-                                        {{--                                        </a>--}}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 3
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"></td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Larry
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Cooper
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> lar
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> test
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                        <a href="">
-                                            <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
-
-                                        </a>
-                                        <a href="" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
-                                            <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
-
-                                        </a>
-                                        {{--                                        <a class="btn btn-outline dark"--}}
-                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
-                                        {{--    /*width: 59px;*/--}}
-                                        {{--    /*height: 53px;*/--}}
-                                        {{--    /*left: 542px;*/--}}
-                                        {{--    /*top: 369px;*/--}}
-                                        {{-- font-family: AvenirLTStd-Book;--}}
-                                        {{--    /*font-weight: 500;*/--}}
-                                        {{--    font-size:  20px;--}}
-                                        {{--    /*line-height: 80px;*/--}}
-                                        {{--    letter-spacing: 0.02em;--}}
-                                        {{--    /*text-transform: capitalize;*/--}}
-                                        {{--    color: #000000;--}}
-                                        {{--">--}}
-                                        {{--                                            delete--}}
-                                        {{--                                        </a>--}}
-                                        {{--                                        <a class="btn btn-outline dark"--}}
-                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
-                                        {{--    /*width: 59px;*/--}}
-                                        {{--    /*height: 53px;*/--}}
-                                        {{--    /*left: 542px;*/--}}
-                                        {{--    /*top: 369px;*/--}}
-                                        {{-- font-family: AvenirLTStd-Book;--}}
-                                        {{--    /*font-weight: 500;*/--}}
-                                        {{--    font-size:  20px;--}}
-                                        {{--    /*line-height: 80px;*/--}}
-                                        {{--    letter-spacing: 0.02em;--}}
-                                        {{--    /*text-transform: capitalize;*/--}}
-                                        {{--    color: #000000;--}}
-                                        {{--">--}}
-                                        {{--                                            Edit--}}
-                                        {{--                                        </a>--}}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 4
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size: 20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"></td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Sandy
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Lim
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> sanlim
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> test
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-">
-                                        <a href="">
-                                            <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
-
-                                        </a>
-                                        <a href="" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
-                                            <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
-
-                                        </a>
-                                        {{--                                        <a class="btn btn-outline dark"--}}
-                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
-                                        {{--    /*width: 59px;*/--}}
-                                        {{--    /*height: 53px;*/--}}
-                                        {{--    /*left: 542px;*/--}}
-                                        {{--    /*top: 369px;*/--}}
-                                        {{-- font-family: AvenirLTStd-Book;--}}
-                                        {{--    /*font-weight: 500;*/--}}
-                                        {{--    font-size:  20px;--}}
-                                        {{--    /*line-height: 80px;*/--}}
-                                        {{--    letter-spacing: 0.02em;--}}
-                                        {{--    /*text-transform: capitalize;*/--}}
-                                        {{--    color: #000000;--}}
-                                        {{--">--}}
-                                        {{--                                            delete--}}
-                                        {{--                                        </a>--}}
-                                        {{--                                        <a class="btn btn-outline dark"--}}
-                                        {{--                                           data-target="#static2" data-toggle="modal" style="--}}
-                                        {{--    /*width: 59px;*/--}}
-                                        {{--    /*height: 53px;*/--}}
-                                        {{--    /*left: 542px;*/--}}
-                                        {{--    /*top: 369px;*/--}}
-                                        {{-- font-family: AvenirLTStd-Book;--}}
-                                        {{--    /*font-weight: 500;*/--}}
-                                        {{--    font-size: 20px;--}}
-                                        {{--    /*line-height: 80px;*/--}}
-                                        {{--    letter-spacing: 0.02em;--}}
-                                        {{--    /*text-transform: capitalize;*/--}}
-                                        {{--    color: #000000;--}}
-                                        {{--">--}}
-                                        {{--                                            Edit--}}
-                                        {{--                                        </a>--}}
-                                    </td>
-                                </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                             <div id="static2" class="modal fade"
@@ -847,7 +377,7 @@
                                                 letter-spacing: -0.011em;
                                                 color: #333333;
                                                 /* opacity: 0.5; */
-                                                "> Are you sure about deletee this Cowork provider ? </p>
+                                                "> Are you sure about delete this Cowork provider ? </p>
                                 </div>
                                 <div class="modal-footer padding-right-120 " style="border-top:0px;">
                                     <button type="button"
@@ -904,7 +434,7 @@
                                                                font-size: 13px;
                                                                letter-spacing: 1px;
                                                                ">
-                                        deletee
+                                        delete
                                     </button>
                                 </div>
                             </div>

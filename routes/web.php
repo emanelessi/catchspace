@@ -55,29 +55,24 @@ Route::get('/confirm', function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index'] );
-
+    Route::get('/provider/home', [\App\Http\Controllers\ProviderController::class, 'index'])->name('providers');
 
     Route::get('/admin/user', [\App\Http\Controllers\UserController::class, 'index'] );
     Route::get('/admin/add-user', [\App\Http\Controllers\UserController::class, 'create'])->name('usercreate');
     Route::post('/admin/add-user', [\App\Http\Controllers\UserController::class, 'store'])->name('userstore');
     Route::get('/admin/delete-user/{id}', [\App\Http\Controllers\UserController::class, 'destroy']);
     Route::get('/admin/edit-user/{id}', [\App\Http\Controllers\UserController::class, 'edit']);
-    Route::post('/admin/edit-user', [\App\Http\Controllers\UserController::class, 'update'])->name('update');
+    Route::post('/admin/edit-user', [\App\Http\Controllers\UserController::class, 'update'])->name('userupdate');
 
-    Route::get('/admin/provider', function () {
-        return view('admin.coworkProvider.coworkProvider');
-    });
-    Route::get('/admin/edit-provider', function () {
-        return view('admin.coworkProvider.editCoworkProvider');
-    });
-    Route::get('/admin/add-provider', function () {
-        return view('admin.coworkProvider.addCoworkProvider');
-    });
+    Route::get('/admin/provider', [\App\Http\Controllers\ProviderController::class, 'show'] );
+    Route::get('/admin/add-provider', [\App\Http\Controllers\ProviderController::class, 'create'])->name('providercreate');
+    Route::post('/admin/add-provider', [\App\Http\Controllers\ProviderController::class, 'store'])->name('providerstore');
+    Route::get('/admin/edit-provider/{id}', [\App\Http\Controllers\ProviderController::class, 'edit']);
+    Route::post('/admin/edit-provider', [\App\Http\Controllers\ProviderController::class, 'update'])->name('providerupdate');
+    Route::get('/admin/delete-provider/{id}', [\App\Http\Controllers\ProviderController::class, 'destroy']);
 
-//    Route::group(['middleware' => ['permission:workspace_create|workspace_edit|workspace_delete']], function () {
-//        Route::get('/admin/workspace', [\App\Http\Controllers\Controller::class, 'index']);
-//        Route::get('/admin/edit-workspace', [\App\Http\Controllers\Controller::class, 'update']);
-//    });
+
+
 
     Route::get('/admin/workspace', [\App\Http\Controllers\WorkSpaceController::class, 'index'])->name('workspaces');
     Route::get('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'create'])->name('workspacecreate');
@@ -97,7 +92,6 @@ Route::group(['middleware' => 'auth'], function () {
 //    Route::get('/admin/edit-role/{id}', [\App\Http\Controllers\RoleController::class, 'edit']);
 //    Route::post('/admin/edit-role', [\App\Http\Controllers\RoleController::class, 'update'])->name('roleupdate');
 
-    Route::get('/provider/home', [\App\Http\Controllers\ProviderController::class, 'index'])->name('providers');
 
 
     Route::get('/provider/workspace', function () {

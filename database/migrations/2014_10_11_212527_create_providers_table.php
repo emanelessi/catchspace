@@ -18,7 +18,7 @@ class CreateProvidersTable extends Migration
             $table->string('name');
             $table->string('owner_name');
             $table->string('address');
-            $table->string('logo');
+            $table->string('logo')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
