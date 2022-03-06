@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
@@ -28,7 +29,7 @@ class PermissionSeeder extends Seeder
             'permission_delete',
             'permission_access',
             'role_create',
-            'role_edit',
+//            'role_edit',
             'role_show',
             'role_delete',
             'role_access',
@@ -100,6 +101,9 @@ class PermissionSeeder extends Seeder
         foreach ($providerPermissions as $permission) {
             $providerRole->givePermissionTo($permission);
         }
+        DB::table('model_has_roles')
+            ->insert(['role_id' => 1,
+                'model_type' => "App\Models\User", 'model_id' => 6]);
 
 //        $super_admin = Role::create(['name' => 'Super Admin']);
         $adminRole= new  Role();
@@ -124,7 +128,12 @@ class PermissionSeeder extends Seeder
             'worker_access',
             'user_edit',
             'user_delete',
-            'user_show'
+            'user_show',
+            'role_access',
+            'role_delete',
+            'role_show',
+            'role_create',
+            'permission_access',
 
         ];
 
@@ -132,6 +141,9 @@ class PermissionSeeder extends Seeder
             $adminRole->givePermissionTo($permission);
         }
 
+        DB::table('model_has_roles')
+            ->insert(['role_id' => 2,
+                'model_type' => "App\Models\User", 'model_id' => 1]);
 
         $testRole= new  Role();
         $testRole->name = 'Test Provider';

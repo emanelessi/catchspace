@@ -63,7 +63,7 @@
                     <i class="fa fa-plus-circle"></i>
                     Add Role
                 </a>
-        @endcan
+            @endcan
         {{--        </div>--}}
         <!-- END PAGE TOOLBAR -->
         </div>
@@ -320,7 +320,7 @@
                                                 letter-spacing: -0.011em;
                                                 color: #333333;
                                                 /* opacity: 0.5; */
-                                                "> Are you sure about delete this Cowork provider ? </p>
+                                                "> Are you sure about delete this Role ? </p>
                                 </div>
                                 <div class="modal-footer padding-right-120 " style="border-top:0px;">
                                     <button type="button"
@@ -377,7 +377,7 @@
                                                                font-size: 13px;
                                                                letter-spacing: 1px;
                                                                ">
-                                        deletee
+                                        delete
                                     </button>
                                 </div>
                             </div>

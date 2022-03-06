@@ -40,7 +40,7 @@
         <!-- BEGIN PAGE TOOLBAR -->
         @can('user_create')
             <div class="page-toolbar">
-                <a href="{{route('workspacecreate')}}" type="button" class="demo-loading-btn btn btn-primary" style="
+                <a href="{{route('usercreate')}}" type="button" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -58,6 +58,7 @@
             height: 30px;
             font-size: 13px;
 ">
+                    <i class="fa fa-plus-circle"></i>
                     Add User
                 </a>
 

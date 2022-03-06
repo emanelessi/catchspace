@@ -55,7 +55,15 @@ Route::get('/confirm', function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index'] );
+
+
     Route::get('/admin/user', [\App\Http\Controllers\UserController::class, 'index'] );
+    Route::get('/admin/add-user', [\App\Http\Controllers\UserController::class, 'create'])->name('usercreate');
+    Route::post('/admin/add-user', [\App\Http\Controllers\UserController::class, 'store'])->name('userstore');
+    Route::get('/admin/delete-user/{id}', [\App\Http\Controllers\UserController::class, 'destroy']);
+    Route::get('/admin/edit-user/{id}', [\App\Http\Controllers\UserController::class, 'edit']);
+    Route::post('/admin/edit-user', [\App\Http\Controllers\UserController::class, 'update'])->name('update');
+
     Route::get('/admin/provider', function () {
         return view('admin.coworkProvider.coworkProvider');
     });
@@ -86,8 +94,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'create'])->name('rolecreate');
     Route::post('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'store'])->name('rolestore');
     Route::get('/admin/delete-role/{id}', [\App\Http\Controllers\RoleController::class, 'destroy']);
-    Route::get('/admin/edit-role/{id}', [\App\Http\Controllers\RoleController::class, 'edit']);
-    Route::post('/admin/edit-role', [\App\Http\Controllers\RoleController::class, 'update'])->name('roleupdate');
+//    Route::get('/admin/edit-role/{id}', [\App\Http\Controllers\RoleController::class, 'edit']);
+//    Route::post('/admin/edit-role', [\App\Http\Controllers\RoleController::class, 'update'])->name('roleupdate');
 
     Route::get('/provider/home', [\App\Http\Controllers\ProviderController::class, 'index'])->name('providers');
 

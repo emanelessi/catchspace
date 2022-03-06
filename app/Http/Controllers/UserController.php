@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\UserLevel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 
 class UserController extends Controller
@@ -17,8 +21,8 @@ class UserController extends Controller
 
     public function index()
     {
-        $users=User::all();
-        return view('admin.user.users',compact('users'));
+        $users = User::all();
+        return view('admin.user.users', compact('users'));
 
     }
 
@@ -27,77 +31,48 @@ class UserController extends Controller
     {
         $page = config('pages.users');
         $superadmin_user_level_id = config('roles.admin');
-        $enterprise_user_level_id = config('roles.enterprise');
-        $brand_user_level_id = config('roles.brand');
-        $branch_user_level_id = config('roles.branch');
-        $inventory_user_level_id = config('roles.inventory');
-        $seller_user_level_id = config('roles.seller');
+
         $user = auth()->user();
         $user_level_id = $user->user_level_id;
+        $provider_user_level_id = config('roles.provider');
+        $provider = User::whereNotNull('provider_id')->get();
+        $role = Role::all();
 
         if ($user->user_level_id == $superadmin_user_level_id) {
             $user_levels = UserLevel::all();
-        } else if ($user->user_level_id == $enterprise_user_level_id) {
-            $user_levels = UserLevel::where('id', '>=', $enterprise_user_level_id)->get();
-        } else if ($user->user_level_id == $brand_user_level_id) {
-            $user_levels = UserLevel::where('id', '>=', $brand_user_level_id)->get();
-        } else if ($user->user_level_id == $branch_user_level_id) {
-            $user_levels = UserLevel::where('id', $branch_user_level_id)->get();
-        } else if ($user->user_level_id == $inventory_user_level_id) {
-            $user_levels = UserLevel::where('id', $inventory_user_level_id)->get();
-        } else if ($user->user_level_id == $seller_user_level_id) {
-            $user_levels = UserLevel::where('id', $seller_user_level_id)->get();
+        } else if ($user->user_level_id == $provider_user_level_id) {
+            $user_levels = UserLevel::where('id', '>=', $provider_user_level_id)->get();
         }
 
-        return view('users.create')->with(compact('page', 'user_levels', 'user_level_id'));
+        return view('admin.user.addUser')->with(compact('page', 'provider', 'role'));
     }
 
 
-    public function store(UserRequest $request)
+    public function store(Request $request)
     {
-        $enterprise_user_level_id = config('roles.enterprise');
-        $brand_user_level_id = config('roles.brand');
-        $branch_user_level_id = config('roles.branch');
-        $inventory_user_level_id = config('roles.inventory');
-        $seller_user_level_id = config('roles.seller');
+//        $user_level_id = $request['user_level_id'];
+//        $provider_user_level_id = config('roles.provider');
 
-        $user_level_id = $request['user_level_id'];
+//        if ($user_level_id == $provider_user_level_id) {
+//            if (!$provider_user_level_id = $request['provider_id']) {
+//                return back()->with('error', trans('cp.messages.fill_information'));
+//            }
+//        }
+//        $request['created_by'] = auth()->user()->id;
 
-        if ($user_level_id == $enterprise_user_level_id) {
-            if (!$enterprise_id = $request['enterprise_id']) {
-                return back()->with('error', trans('cp.messages.fill_information'));
-            }
-        } else if ($user_level_id == $brand_user_level_id) {
-            if ((!$enterprise_id = $request['enterprise_id']) || (!$brand_id = $request['brand_id'])) {
-                return back()->with('error', trans('cp.messages.fill_information'));
-            }
-        } else if ($user_level_id == $branch_user_level_id) {
-            if ((!$enterprise_id = $request['enterprise_id']) || (!$brand_id = $request['brand_id']) || (!$branch_id = $request['branch_id'])) {
-                return back()->with('error', trans('cp.messages.fill_information'));
-            }
-        } else if ($user_level_id == $inventory_user_level_id) {
-            if ((!$enterprise_id = $request['enterprise_id']) || (!$brand_id = $request['brand_id']) || (!$inventory_id = $request['inventory_id'])) {
-                return back()->with('error', trans('cp.messages.fill_information'));
-            }
-        } else if ($user_level_id == $seller_user_level_id) {
-            if ((!$enterprise_id = $request['enterprise_id']) || (!$brand_id = $request['brand_id']) || (!$seller_id = $request['seller_id'])) {
-                return back()->with('error', trans('cp.messages.fill_information'));
-            }
-        }
+//        $user = User::createInstance($request->all());
+        $user = new User();
+        $user->full_name =  request('full_name');
+        $user->email =  request('email');
+        $user->password = Hash::make( request('password'));
+        $user->phone =  request('phone');
+        $user->type = $request->input('type') ==1?'admin':'provider';
+        $user->user_level_id = $request->input('type') ==1?1:2;
+        $user->provider_id  = $request->input('type') ==1?null:$request->input('provider');
+        $user->save();
+        DB::table('model_has_roles')->insert(['role_id' => request('role'), 'model_type' => "App\Models\User", 'model_id' => $user->id]);
+        return back()->with('success', trans('cp.messages.add_success'));
 
-        $request['created_by'] = auth()->user()->id;
-
-        $user = User::createInstance($request->all());
-
-        if ($user) {
-            $user->employee_id = $user->id;
-            $user->save();
-
-            DB::table('model_has_roles')->insert(['role_id' => request('role_id'), 'model_type' => "App\User", 'model_id' => $user->id]);
-            return back()->with('success', trans('cp.messages.add_success'));
-        }
-
-        return back()->with('error', trans('cp.messages.something_wrong'));
     }
 
 
@@ -200,6 +175,10 @@ class UserController extends Controller
 
         return back()->with('success', trans('cp.messages.modify_success'));
     }
-
+    public function destroy($id)
+    {
+        User::findOrFail($id)->delete();
+        return back()->with('success',trans('cp.messages.roles.role_deleted'));
+    }
 
 }

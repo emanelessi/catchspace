@@ -20,7 +20,7 @@
             font-size: 30px;
             letter-spacing: -0.022em;
             color: #333333;
-            " class="margin-top--10 ">Add new Role</h1>
+            " class="margin-top--10 ">Add new User</h1>
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">
@@ -50,7 +50,7 @@
                                             <div class="tab-content">
                                                 <!-- PERSONAL INFO TAB -->
                                                 <div class="tab-pane active" id="tab_1_1">
-                                                    <form role="form" action="{{route('rolestore')}}" method="Post">
+                                                    <form role="form" action="{{route('userstore')}}" method="Post">
                                                         @csrf
                                                         <div class="form-group margin-left-9 margin-right-10"
                                                              style="
@@ -58,9 +58,51 @@
                                                              /*margin-right: 16px;*/
 ">
                                                             <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Role Name*</label>
+                                                                   style="color:#6B7280;">Name*</label>
                                                             <input type="text"
-                                                                   placeholder="admin" name="name"
+                                                                   placeholder="full name" name="full_name"
+                                                                   class="form-control" style="
+                                                                       height: 40px;
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                                        </div>
+                                                        <div class="form-group margin-left-9 margin-right-10"
+                                                             style="
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/
+">
+                                                            <label class="control-label margin-left-9"
+                                                                   style="color:#6B7280;">Email *</label>
+                                                            <input type="email"
+                                                                   placeholder="email" name="email"
+                                                                   class="form-control" style="
+                                                                       height: 40px;
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                                        </div>
+                                                        <div class="form-group margin-left-9 margin-right-10"
+                                                             style="
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/
+">
+                                                            <label class="control-label margin-left-9"
+                                                                   style="color:#6B7280;">Password *</label>
+                                                            <input type="password"
+                                                                   placeholder="password" name="password"
+                                                                   class="form-control" style="
+                                                                       height: 40px;
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                                        </div>
+                                                        <div class="form-group margin-left-9 margin-right-10"
+                                                             style="
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/
+">
+                                                            <label class="control-label margin-left-9"
+                                                                   style="color:#6B7280;">Phone *</label>
+                                                            <input type="tel"
+                                                                   placeholder="phone" name="phone"
                                                                    class="form-control" style="
                                                                        height: 40px;
                                                                        /*height: 56px;padding: 0 12px;*/
@@ -86,7 +128,6 @@
                                                                 </label>
                                                             </div>
                                                         </div>
-
                                                         <div class="form-group margin-left-9 margin-right-10  "
                                                              id="ifYes" style="visibility:hidden">
 
@@ -102,24 +143,21 @@
                                                                 @endforeach
                                                             </select>
                                                         </div>
-                                                        <div class="form-group margin-left-9 margin-right-10"
-                                                             style="
-                                                             /*margin-left: 16px;*/
-                                                             /*margin-right: 16px;*/
-">
-                                                            <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Permissions*</label>
+                                                        <div class="form-group margin-left-9 margin-right-10  ">
 
-                                                            <div class="mt-checkbox-list margin-left-9 margin-right-10">
-                                                                @foreach($permission as $mypermission)
-                                                                    <label class="mt-checkbox">
-                                                                        <input type="checkbox" name="permissions[]"
-                                                                               value="{{$mypermission->id}}"> {{$mypermission->name}}
-                                                                        <span></span>
-                                                                    </label>
+                                                            <label class="control-label margin-left-9"
+                                                                   style="color:#6B7280;">Role*</label>
+                                                            <select name="role" class="form-control" style="
+                                                                       height: 40px;
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;">
+                                                                @foreach($role as $myrole )
+                                                                    <option
+                                                                        value="{{$myrole->id}}">{{$myrole->name}}</option>
                                                                 @endforeach
-                                                            </div>
+                                                            </select>
                                                         </div>
+
 
                                                         <button type="submit"
                                                                 class="btn btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
