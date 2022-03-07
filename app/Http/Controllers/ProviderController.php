@@ -52,6 +52,23 @@ class ProviderController extends Controller
         return view('admin.coworkProvider.editCoworkProvider',compact('provider'));
     }
 
+    public function update(Request $request)
+    {
+        $id = request('id');
+        $provider = Provider::findOrFail($id);
+        $provider->name = request('name');
+        $provider->owner_name = request('owner_name');
+        $provider->address = request('address');
+
+        if ($logo= request('logo')) {
+            $provider->logo = storeImage('providers','logo' );
+            $provider->save();
+        }
+        $provider->save();
+
+        return back()->with('success', trans('cp.messages.modify_success'));
+    }
+
     public function destroy($id)
     {
         Provider::findOrFail($id)->delete();

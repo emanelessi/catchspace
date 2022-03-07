@@ -122,6 +122,8 @@
                                                                        height: 40px;
                                                                        /*height: 56px;padding: 0 12px;*/
                                                                        border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                                <input type="hidden" name="id"
+                                                        value="{{$provider->id}}"/>
                                             </div>
                                             <div class="form-group margin-left-9 margin-right-10"
                                                  style="
