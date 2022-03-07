@@ -20,10 +20,9 @@ class RoleController extends Controller
      */
     function __construct()
     {
-//        $this->middleware('permission:role_access', ['only' => ['index']]);
-//        $this->middleware('permission:role_create', ['only' => ['create','store']]);
-//        $this->middleware('permission:role_edit', ['only' => ['edit','update']]);
-//        $this->middleware('permission:role_delete', ['only' => ['destroy']]);
+        $this->middleware('permission:role_access', ['only' => ['index']]);
+        $this->middleware('permission:role_create', ['only' => ['create','store']]);
+        $this->middleware('permission:role_delete', ['only' => ['destroy']]);
     }
 
     public function index(Request $request)
@@ -87,18 +86,6 @@ class RoleController extends Controller
 
         return back()->with('success',trans('cp.messages.roles.role_created'));
     }
-
-//    public function edit($id)
-//    {
-//        $page = config('pages.roles');
-//        $role = Role::findOrFail($id);
-//        $permission = Permission::get();
-//        $rolePermissions = \Illuminate\Support\Facades\DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)
-//            ->pluck('role_has_permissions.permission_id','role_has_permissions.permission_id')
-//            ->all();
-//
-//        return view('roles.edit',compact('role','permission','rolePermissions','page'));
-//    }
 
 
     public function destroy($id)

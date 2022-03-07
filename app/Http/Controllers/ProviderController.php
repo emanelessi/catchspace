@@ -11,9 +11,9 @@ class ProviderController extends Controller
     function __construct()
     {
         $this->middleware('permission:provider_access', ['only' => ['index']]);
-//        $this->middleware('permission:role_create', ['only' => ['create','store']]);
-//        $this->middleware('permission:role_edit', ['only' => ['edit','update']]);
-//        $this->middleware('permission:role_delete', ['only' => ['destroy']]);
+        $this->middleware('permission:provider_create', ['only' => ['create','store']]);
+        $this->middleware('permission:provider_edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:provider_delete', ['only' => ['destroy']]);
     }
 
     public function index(Request $request)
@@ -36,20 +36,20 @@ class ProviderController extends Controller
     }
 
     public function store(Request $request){
-        $data = request()->only( 'logo');
-        $testProvider = new  Provider();
-        $testProvider->name = request('name');
-        $testProvider->owner_name = request('owner_name');
-        $testProvider->address = request('address');
+        $provider = new  Provider();
+        $provider->name = request('name');
+        $provider->owner_name = request('owner_name');
+        $provider->address = request('address');
 
-        $testProvider->logo = storeImage('providers','logo' );
-        $testProvider->save();
+        $provider->logo = storeImage('providers','logo' );
+        $provider->save();
         return back()->with('success', trans('cp.messages.roles.role_added'));
 
     }
 
     public function edit($id){
-        return view('admin.coworkProvider.editCoworkProvider');
+        $provider = Provider::findOrFail($id);
+        return view('admin.coworkProvider.editCoworkProvider',compact('provider'));
     }
 
     public function destroy($id)
