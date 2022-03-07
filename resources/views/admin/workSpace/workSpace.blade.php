@@ -58,6 +58,7 @@
             height: 30px;
             font-size: 13px;
 ">
+                    <i class="fa fa-plus-circle"></i>
                     Add work Space
                 </a>
 

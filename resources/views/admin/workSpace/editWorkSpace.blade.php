@@ -25,40 +25,7 @@
                     <!-- PORTLET MAIN -->
                     <div class="portlet light profile-sidebar-portlet bordered margin-top-35"
                          style="border-bottom: 1px solid #eef1f5;height: 100%;border-radius: 20px !important;">
-                        <!-- SIDEBAR USERPIC -->
-{{--                        <div class="profile-userpic margin-right--12 margin-top-25" style="--}}
-{{--                        float: left;--}}
-{{--                        width: 300px;--}}
-{{--                        /*margin-right: -35px;*/--}}
-{{--">--}}
-{{--                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">--}}
-{{--                        </div>--}}
-{{--                        <!-- END SIDEBAR USERPIC -->--}}
-{{--                        <!-- SIDEBAR USER TITLE -->--}}
-{{--                        <div class="profile-usertitle margin-top-70" style="--}}
-{{--                        text-align: justify;--}}
-{{--                        /*margin-top: 47px;*/--}}
-{{--">--}}
-{{--                            <div class="profile-usertitle-name" style="--}}
-{{--/*font-style: normal;*/--}}
-{{--/*font-weight: 600;*/--}}
-{{--font-size: 24px;--}}
-{{--line-height: 137.5%;--}}
-{{--color: #111827;--}}
-{{--             font-family: AvenirLTStd-Book;--}}
-{{--"> Tools--}}
-{{--                            </div>--}}
-{{--                            <div style="--}}
-{{--/*font-style: normal;*/--}}
-{{--/*font-weight: normal;*/--}}
-{{--font-size: 14px;--}}
-{{--line-height: 157%;--}}
-{{--color: #6B7280;--}}
-{{--             font-family: AvenirLTStd-Book;--}}
-{{--"> Gaza, palestine--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-                        <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
+
                         <div>
                             <div class="row">
                                 <div class="col-md-12">
@@ -73,53 +40,56 @@
                                             <div class="tab-content">
                                                 <!-- PERSONAL INFO TAB -->
                                                 <div class="tab-pane active" id="tab_1_1">
-                                                    <form role="form" action="#">
+                                                    <form role="form" action="{{route('workspaceupdate')}}" method="POST">
+                                                        @csrf
                                                         <div class="form-group col-md-6">
                                                             <label class="control-label margin-left-9"
                                                                    style="color:#6B7280;">Workspace
                                                                 capacity *</label>
-                                                            <input type="number" placeholder="Tools" class="form-control"
+                                                            <input type="number" name="capacity" value="{{$workspace->capacity}}" placeholder="0" class="form-control"
                                                                    style="
                                                                        height: 40px;
                                                                        /*padding: 0 12px;*/
                                                                        border-radius: 8px !important;
                                                                        border: solid 1px #d1d5db;"/>
+                                                            <input type="hidden" name="id" value="{{$workspace->id}}" />
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Workspace type *</label>
-                                                            <input type="text" placeholder="Omar D."
-                                                                   class="form-control"
-                                                                   style="
+                                                                   style="color:#6B7280;">Workspace
+                                                                type *</label>
+                                                            <select name="work_space_type_id" class="form-control" style="
                                                                        height: 40px;
-                                                                       /*padding: 0 12px;*/
-                                                                       border-radius: 8px !important;
-                                                                       border: solid 1px #d1d5db;"/>
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;">
+                                                                @foreach($type as $mytype)
+                                                                    <option
+                                                                        value="{{$mytype->id}}">{{$mytype->type}}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
+
+
                                                         <div class="form-group margin-left-9 margin-right-10"
                                                              style="
                                                              /*margin-left: 16px;*/
                                                              /*margin-right: 16px;*/
 ">
                                                             <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Provider Name *</label>
-                                                            <input type="text"
-                                                                   placeholder="Al-rehab mall, remal street, Gaza, palestine"
-                                                                   class="form-control" style="
+                                                                   style="color:#6B7280;">Provider Name*</label>
+                                                            <select name="provider_id" class="form-control" style="
                                                                        height: 40px;
-                                                                       /*padding: 0 12px;*/
-                                                                       border-radius: 8px !important;
-                                                                       border: solid 1px #d1d5db;"/></div>
-                                                    </form>
-                                                </div>
-
-                                                <!-- END PERSONAL INFO TAB -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button"
-                                            class="btn btn-primary margin-top--250  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
-                                            style="
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;">
+                                                                @foreach($provider as $myprovider )
+                                                                    <option
+                                                                        value="{{$myprovider->id}}">{{$myprovider->name}}</option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                        <button type="submit"
+                                                                class="btn btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
+                                                                style="
                                                                width: 125px;
                                                                height: 32.2px;
                                                                /*flex-grow: 0;*/
@@ -141,8 +111,16 @@
                                                                font-size: 13px;
                                                                letter-spacing: 1px;
                                                                ">
-                                        Save Change
-                                    </button>
+                                                            Save Change
+                                                        </button>
+                                                    </form>
+                                                </div>
+
+                                                <!-- END PERSONAL INFO TAB -->
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

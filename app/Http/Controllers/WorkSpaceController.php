@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Provider;
 use App\Models\WorkSpace;
+use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
 
 class WorkSpaceController extends Controller
@@ -22,10 +24,13 @@ class WorkSpaceController extends Controller
     }
     public function create()
     {
-        return view('admin.workSpace.addWorkSpace');
+        $provider = Provider::all();
+        $type = WorkSpaceType::all();
+
+        return view('admin.workSpace.addWorkSpace',compact('provider','type'));
     }
 
-    public function store(\Illuminate\Support\Facades\Request $request)
+    public function store(Request $request)
     {
         $this->validate($request, [
             'capacity' => 'required',
@@ -44,11 +49,14 @@ class WorkSpaceController extends Controller
     public function edit($id)
     {
         $workspace = WorkSpace::findOrFail($id);
-        return view('admin.workSpace.editWorkSpace', compact('workspace'));
+        $provider = Provider::all();
+        $type = WorkSpaceType::all();
+        return view('admin.workSpace.editWorkSpace', compact('workspace','provider','type'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
+        $id = request('id');
         $this->validate($request, [
             'capacity' => 'required',
             'work_space_type_id' => 'required',

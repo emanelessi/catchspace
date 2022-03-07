@@ -10,7 +10,12 @@ class WorkSpace extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'provider_id',
+        'work_space_type_id',
+        'capacity',
 
+    ];
     public function workSpaceType()
     {
         return $this->belongsTo(WorkSpaceType::class, 'work_space_type_id');

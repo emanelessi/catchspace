@@ -164,7 +164,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Work space Name
+"> Avatar
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
@@ -192,11 +192,25 @@
     padding-bottom: 15px;
 "> Job title
                                     </th>
+                                    <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Work space Capacity
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td style="
+                                @foreach($worker as $myworker)
+                                    <tr>
+                                        <td style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -208,9 +222,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 1
-                                    </td>
-                                    <td style="
+">  {{$myworker->id}}
+                                        </td>
+                                        <td style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -222,9 +236,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Mark
-                                    </td>
-                                    <td style="
+"><img alt="" class="img-circle"
+       src="{{'/storage/'.$myworker->avatar}}"/></td>
+                                        <td style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -236,9 +250,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> Otto
-                                    </td>
-                                    <td style="
+"> {{$myworker->name}}
+                                        </td>
+                                        <td style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -250,11 +264,9 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> makr124
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="
+"> {{$myworker->job_title}}
+                                        </td>
+                                        <td style="
     /*width: 59px;*/
     /*height: 53px;*/
     /*left: 542px;*/
@@ -266,168 +278,12 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> 2
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Jacob
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Nilson
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> jac123
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 3
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Larry
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Cooper
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> lar
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> 4
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Sandy
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> Lim
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> sanlim
-                                    </td>
+"> {{$myworker->workSpace->capacity ?? ''}}
+                                        </td>
+                                    </tr>
 
-                                </tr>
+                                @endforeach
+
                                 </tbody>
                             </table>
                         </div>
