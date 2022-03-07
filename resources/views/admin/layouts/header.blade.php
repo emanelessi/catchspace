@@ -178,7 +178,7 @@
                             <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
                             @can('provider_access')
                                 <img alt="" class="img-circle"
-                                     src="{{'/storage/providers/'.auth()->user()->provider->logo}}"/>
+                                     src="{{'/storage'.auth()->user()->provider->logo}}"/>
                             @endcan
                             @can('permission_access')
                             <i class="fa fa-user img-circle" style="font-size: 20px;color: #7952B3 !important;"></i>
