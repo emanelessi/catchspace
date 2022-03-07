@@ -15,43 +15,22 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-Route::get('/test', function () {
-    return view('test');
-});
+Route::get('/test', function () {return view('test');});
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/contact', function () {
-    return view('contactUs');
-});
-Route::get('/404', function () {
-    return view('errors/404');
-});
-Route::get('/403', function () {
-    return view('errors/403');
-});
-Route::get('/500', function () {
-    return view('errors/500');
-});
-Route::get('/401', function () {
-    return view('errors/401');
-});
+Route::get('/', function () {return view('welcome');});
+Route::get('/contact', function () {return view('contactUs');});
+
+Route::get('/404', function () {return view('errors/404');});
+Route::get('/403', function () {return view('errors/403');});
+Route::get('/500', function () {return view('errors/500');});
+Route::get('/401', function () {return view('errors/401');});
 
 Auth::routes();
 
-Route::get('/email', function () {
-    return view('auth.passwords.email');
-});
-Route::get('/check-email', function () {
-    return view('auth.passwords.checkEmail');
-});
-Route::get('/reset', function () {
-    return view('auth.passwords.reset');
-});
-Route::get('/confirm', function () {
-    return view('auth.passwords.confirm');
-});
+Route::get('/email', function () {return view('auth.passwords.email');});
+Route::get('/check-email', function () {return view('auth.passwords.checkEmail');});
+Route::get('/reset', function () {return view('auth.passwords.reset');});
+Route::get('/confirm', function () {return view('auth.passwords.confirm');});
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index'] );
@@ -71,7 +50,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/edit-provider', [\App\Http\Controllers\ProviderController::class, 'update'])->name('providerupdate');
     Route::get('/admin/delete-provider/{id}', [\App\Http\Controllers\ProviderController::class, 'destroy']);
 
-
+    Route::get('/admin/role', [\App\Http\Controllers\RoleController::class, 'index'])->name('roles');
+    Route::get('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'create'])->name('rolecreate');
+    Route::post('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'store'])->name('rolestore');
+    Route::get('/admin/delete-role/{id}', [\App\Http\Controllers\RoleController::class, 'destroy']);
 
 
     Route::get('/admin/workspace', [\App\Http\Controllers\WorkSpaceController::class, 'index'])->name('workspaces');
@@ -85,12 +67,6 @@ Route::group(['middleware' => 'auth'], function () {
         return view('admin.worker.worker');
     });
 
-    Route::get('/admin/role', [\App\Http\Controllers\RoleController::class, 'index'])->name('roles');
-    Route::get('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'create'])->name('rolecreate');
-    Route::post('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'store'])->name('rolestore');
-    Route::get('/admin/delete-role/{id}', [\App\Http\Controllers\RoleController::class, 'destroy']);
-//    Route::get('/admin/edit-role/{id}', [\App\Http\Controllers\RoleController::class, 'edit']);
-//    Route::post('/admin/edit-role', [\App\Http\Controllers\RoleController::class, 'update'])->name('roleupdate');
 
 
 
