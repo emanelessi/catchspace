@@ -203,7 +203,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Work space Capacity
+"> Work Space Capacity
                                     </th>
                                 </tr>
                                 </thead>
