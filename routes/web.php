@@ -61,16 +61,19 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'store'])->name('workspacestore');
     Route::get('/admin/delete-workspace/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'destroy']);
     Route::get('/admin/edit-workspace/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'edit']);
-    Route::post('/admin/edit-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'update'])->name('workspaceupdate');
+    Route::post('/admin/edit-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'update'])->name('update');
 
-    Route::get('/admin/worker', [\App\Http\Controllers\WorkerController::class, 'index'])->name('workers');
-
-
-
-
-    Route::get('/provider/workspace', function () {
-        return view('provider.workSpace.workSpace');
+    Route::get('/admin/worker', function () {
+        return view('admin.worker.worker');
     });
+
+
+
+    Route::get('/provider/workspace', [\App\Http\Controllers\Provider\WorkSpaceController::class, 'index'])->name('workspaces');
+
+//    Route::get('/provider/workspace', function () {
+//        return view('provider.workSpace.workSpace');
+//    });
     Route::get('/provider/add-workspace', function () {
         return view('provider.workSpace.addWorkSpace');
     });
