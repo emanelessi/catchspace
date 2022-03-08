@@ -513,46 +513,23 @@ font-family: AvenirLTStd-Book;
         </div>
         <div>
             <div class="row margin-top-35">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat dashboard-stat-v2 blue" href="#"
-                       style="border-radius: 15px !important;height: 90px;left: 277px;
-                   top: 208px;
-                   /*background:linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
-                    /*#FFC107 103.45%);*/
-                    background: #7952B3;
-">
-                        <div class="visual padding-top-12">
-                            <i class="fa fa-comments"></i>
-                        </div>
-                        <div class="details">
-                            <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
-                                  data-value="36">0</span>
-                            </div>
-                            <div class="desc" style="
-    font-family: AvenirLTStd-Book;
-    font-weight: 500;
-    font-size: 16px;
-"> Co-working provider
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat dashboard-stat-v2 red" href="#"
-                       style="border-radius: 15px !important;height: 90px;left: 277px;
+
+                <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat dashboard-stat-v2 red" href="#"
+                         style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
                    /*background:linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
                     /*#FFC107 103.45%);*/
                     background: #7952B3;
 ">
                         <div class="visual">
-                            <i class="fa fa-bar-chart-o"></i>
+                            <i class="fa fa-map-marker"
+                               style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
                         </div>
                         <div class="details">
                             <div class="number padding-top-12">
                             <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
-                                  data-value="40">0</span>
+                                  data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
     font-family: AvenirLTStd-Book;
@@ -561,23 +538,24 @@ font-family: AvenirLTStd-Book;
 "> Work space
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <a class="dashboard-stat dashboard-stat-v2 green" href="#"
-                       style="border-radius: 15px !important;height: 90px;left: 277px;
+                <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat dashboard-stat-v2 green" href="#"
+                         style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
                    /*background:linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
                     /*#FFC107 103.45%);*/
                     background: #7952B3;
 ">
                         <div class="visual">
-                            <i class="fa fa-shopping-cart"></i>
+                            <i class="fa fa-file-text"
+                               style="color: white !important;opacity: 1 !important;padding-left: 44px;font-size: 56px"></i>
                         </div>
                         <div class="details">
                             <div class="number padding-top-12">
                             <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
-                                  data-value="70">0</span>
+                                  data-value="{{$workers->Count() ?? 0}}">{{$workers->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
     font-family: AvenirLTStd-Book;
@@ -586,9 +564,10 @@ font-family: AvenirLTStd-Book;
 "> Workers
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
+
             <div class="clearfix"></div>
             <!-- END DASHBOARD STATS 1-->
             <div class="row">
