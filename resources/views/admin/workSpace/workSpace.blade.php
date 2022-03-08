@@ -690,7 +690,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($workspace as $myworkspace)
+                                            @foreach($myworkspaces as $workspaces)
 
                                                 <tr>
                                                     <td style="
@@ -705,7 +705,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$myworkspace->id}}
+"> {{$workspaces->id}}
                                                     </td>
                                                     <td style="
     /*width: 59px;*/
@@ -719,7 +719,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-">{{$myworkspace->capacity}}</td>
+">{{$workspaces->capacity}}</td>
                                                     <td style="
     /*width: 59px;*/
     /*height: 53px;*/
@@ -732,7 +732,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$myworkspace->workSpaceType->type}}
+"> {{$workspaces->workSpaceType->type}}
                                                     </td>
                                                     <td style="
     /*width: 59px;*/
@@ -746,7 +746,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$myworkspace->provider->name}}
+"> {{$workspaces->provider->name}}
                                                     </td>
                                                     <td style="
     /*width: 59px;*/
@@ -760,7 +760,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$myworkspace->provider->address}}
+"> {{$workspaces->provider->address}}
                                                     </td>
 
                                                     <td style="
@@ -777,13 +777,13 @@
     color: #000000;
 ">
                                                         @can('workspace_delete')
-                                                            <a href="/admin/delete-workspace/{{$myworkspace->id}}" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
+                                                            <a href="/admin/delete-workspace/{{$workspaces->id}}" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
                                                                 <i class="fa fa-trash" style="color: #000000 !important;"></i>
 
                                                             </a>
                                                         @endcan
                                                         @can('workspace_edit')
-                                                            <a href="/admin/edit-workspace/{{$myworkspace->id}}">
+                                                            <a href="/admin/edit-workspace/{{$workspaces->id}}">
                                                                 <i class="fa fa-pencil" style="color: #000000 !important;"></i>
 
                                                             </a>

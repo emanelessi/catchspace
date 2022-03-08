@@ -193,7 +193,7 @@
     padding-bottom: 5px;
 ">
                 <a href="/provider/home" class="nav-link nav-toggle margin-left-10" style="
-    font-family: AvenirLTStd-Book;
+   font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -202,7 +202,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-home"></i>
+                    <i class="fa fa-home"></i>
                     <span class="title" style="font-size: 16px">Home</span>
                 </a>
             </li>
@@ -211,7 +211,7 @@
     padding-bottom: 5px;
 ">
                 <a href="/provider/workspace" class="nav-link nav-toggle margin-left-10" style="
-    font-family: AvenirLTStd-Book;
+   font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -220,7 +220,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-bulb"></i>
+                    <i class="fa fa-map-marker"></i>
                     <span class="title" style="font-size: 16px">Work space</span>
                 </a>
             </li>
@@ -228,7 +228,7 @@
     padding-bottom: 5px;
 ">
                 <a href="/provider/worker" class="nav-link nav-toggle margin-left-10" style="
-    font-family: AvenirLTStd-Book;
+   font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -237,15 +237,15 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-docs"></i>
+                    <i class="fa fa-file-text"></i>
                     <span class="title" style="font-size: 16px">Workers</span>
                 </a>
             </li>
             <li class="nav-item @if(preg_match('/policies/i',url()->current())) start active open @endif" style="
     padding-bottom: 5px;
 ">
-                <a href="/provider/policies" class="nav-link nav-toggle  margin-left-10" style="
-    font-family: AvenirLTStd-Book;
+                <a href="/provider/policies" class="nav-link nav-toggle margin-left-10" style="
+   font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -254,15 +254,15 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-docs"></i>
+                    <i class="fa fa-institution"></i>
                     <span class="title" style="font-size: 16px">Policies</span>
                 </a>
             </li>
             <li class="nav-item @if(preg_match('/edit-profile/i',url()->current())) start active open @endif" style="
     padding-bottom: 5px;
 ">
-                <a href="/provider/edit-profile" class="nav-link nav-toggle  margin-left-10" style="
-    font-family: AvenirLTStd-Book;
+                <a href="/provider/edit-profile" class="nav-link nav-toggle margin-left-10" style="
+   font-family: AvenirLTStd-Book;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -271,7 +271,7 @@
     /*margin-bottom: 18px;*/
 
 ">
-                    <i class="icon-settings"></i>
+                    <i class="fa fa-user"></i>
                     <span class="title" style="font-size: 16px">System</span>
                 </a>
             </li>

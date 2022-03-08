@@ -11,15 +11,17 @@ class WorkSpaceController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:workspace_access', ['only' => ['index']]);
+        $this->middleware('permission:workspace_show', ['only' => ['index']]);
         $this->middleware('permission:workspace_create', ['only' => ['store','create']]);
         $this->middleware('permission:workspace_edit', ['only' => ['edit','update']]);
         $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
     }
     public function index()
     {
-        $workspace = WorkSpace::where('provider_id',auth()->id())->get();
-        return view('admin.workSpace.workSpace', compact('workspace'));
+        $myworkspaces = WorkSpace::where('provider_id',auth()->user()->provider->id)->get();
+//        $workspace = WorkSpace::all();
+//        dd($workspace);
+        return view('admin.workSpace.workSpace', compact('myworkspaces'));
     }
     public function create()
     {
