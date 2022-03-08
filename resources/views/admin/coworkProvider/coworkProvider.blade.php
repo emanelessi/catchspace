@@ -44,15 +44,7 @@
             <a href="{{route('providercreate')}}" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
-            /*font-weight: normal;*/
-            /*font-size: 14px;*/
-            /* line-height: 21px; */
-            /*margin-top: 13px;*/
             color: #FFFFFF;
-            /*width: 201px;*/
-            /* height: 35px; */
-            /*left: 1192px;*/
-            /*top: 117px;*/
             background: #7952B3;
             border-radius: 5px !important;
             width: 160px;
@@ -62,8 +54,7 @@
                 <i class="fa fa-plus-circle"></i>
                 Add Cowork Provider
             </a>
-        {{--        </div>--}}
-        <!-- END PAGE TOOLBAR -->
+            <!-- END PAGE TOOLBAR -->
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -105,11 +96,9 @@
 ">
                                     <div class="span margin-bottom-2  padding-tb-5 "
                                          style="
-                                        /*margin-bottom: 5px;*/
-                                        /*padding: 10px;*/
+
                                         color: #fff;
-                                        /*left: 1258px;*/
-                                        /*top: 299px;*/
+
                                         background: #7952B3;
                                         border-radius: 5px !important;
                                         font-family: AvenirLTStd-Book;
@@ -117,58 +106,42 @@
                                         font-size: 15px;
                                         line-height: 15px;
 ">
-                                        <span class="margin-left-40" style="
-                                        /*margin-left: 35px;*/
-">From A to Z</span>
+                                        <span class="margin-left-40">From A to Z</span>
                                     </div>
                                     <div class="span margin-bottom-2  padding-tb-5 "
                                          style="
-                                        /*margin-bottom: 5px;*/
-                                        /*padding: 10px;*/
+
                                         color: #fff;
-                                        /*left: 1258px;*/
-                                        /*top: 299px;*/
+
                                         background: #7952B3;
                                         border-radius: 5px !important;
                                         font-family: AvenirLTStd-Book;
                                         font-weight: normal;
                                         font-size: 15px;
                                         line-height: 15px;">
-                                        <span class="margin-left-40" style="
-                                        /*margin-left: 35px;*/
-">From Z to A</span>
+                                        <span class="margin-left-40">From Z to A</span>
                                     </div>
                                     <div class="span margin-bottom-2  padding-tb-5 "
-                                         style="/*margin-bottom: 5px;*/
-                                        /*padding: 10px;*/
+                                         style="
                                         color: #fff;
-                                        /*left: 1258px;*/
-                                        /*top: 299px;*/
                                         background: #7952B3;
                                         border-radius: 5px !important;
                                         font-family: AvenirLTStd-Book;
                                         font-weight: normal;
                                         font-size: 15px;
                                         line-height: 15px;">
-                                        <span class="margin-left-40" style="
-                                        /*margin-left: 35px;*/
-">The latest</span>
+                                        <span class="margin-left-40">The latest</span>
                                     </div>
                                     <div class="span margin-bottom-2  padding-tb-5 "
-                                         style="/*margin-bottom: 5px;*/
-                                        /*padding: 10px;*/
+                                         style="
                                         color: #fff;
-                                        /*left: 1258px;*/
-                                        /*top: 299px;*/
                                         background: #7952B3;
                                         border-radius: 5px !important;
                                         font-family: AvenirLTStd-Book;
                                         font-weight: normal;
                                         font-size: 15px;
                                         line-height: 15px;">
-                                        <span class="margin-left-40" style="
-                                        /*margin-left: 35px;*/
-">The oldest</span>
+                                        <span class="margin-left-40">The oldest</span>
                                     </div>
                                 </div>
                             </div>
@@ -182,52 +155,32 @@
                                 <tr style="border-bottom: 2px solid #F2F5F8;">
                                     <th style="
   font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size: 20px;
     letter-spacing: -0.022em;
-    /*text-transform: capitalize;*/
-    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
 "> #
                                     </th>
                                     <th style="
-  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
+   font-family: AvenirLTStd-Book;
     font-size: 20px;
     letter-spacing: -0.022em;
-    /*text-transform: capitalize;*/
-    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
 "> Logo
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size: 20px;
     letter-spacing: -0.022em;
-    /*text-transform: capitalize;*/
-    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
 "> Name
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size: 20px;
     letter-spacing: -0.022em;
-    /*text-transform: capitalize;*/
-    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
 "> Owner Name
@@ -235,26 +188,16 @@
 
                                     <th style="
   font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size: 20px;
     letter-spacing: -0.022em;
-    /*text-transform: capitalize;*/
-    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
 "> Address
                                     </th>
                                     <th style="
   font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size: 20px;
     letter-spacing: -0.022em;
-    /*text-transform: capitalize;*/
-    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
 "> Action
@@ -263,102 +206,67 @@
                                 </thead>
                                 <tbody>
                                 @foreach($providers as $myprovider)
-                                <tr>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
+                                    <tr>
+                                        <td style="
+
  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size:  20px;
-    /*line-height: 80px;*/
     letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
     color: #000000;
 "> {{$myprovider->id}}
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
+                                        </td>
+                                        <td style="
+
  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size:  20px;
-    /*line-height: 80px;*/
     letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
     color: #000000;
-"> <img alt="" class="img-circle"
-        src="{{'/storage/'.$myprovider->logo}}"/></td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
+"><img alt="" class="img-circle"
+       src="{{'/storage/'.$myprovider->logo}}"/></td>
+                                        <td style="
+
  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size:  20px;
-    /*line-height: 80px;*/
     letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
     color: #000000;
 "> {{$myprovider->name}}
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
+                                        </td>
+                                        <td style="
+
  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size:  20px;
-    /*line-height: 80px;*/
     letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
     color: #000000;
 "> {{$myprovider->owner_name}}
-                                    </td>
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
+                                        </td>
+                                        <td style="
+
  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size:  20px;
-    /*line-height: 80px;*/
     letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
     color: #000000;
 "> {{$myprovider->address}}
-                                    </td>
+                                        </td>
 
-                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
+                                        <td style="
+
  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
     font-size:  20px;
-    /*line-height: 80px;*/
     letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
     color: #000000;
 ">
-                                        <a href="/admin/edit-provider/{{$myprovider->id}}">
-                                            <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
+                                            <a href="/admin/edit-provider/{{$myprovider->id}}">
+                                                <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
 
-                                        </a>
-                                        <a href="/admin/delete-provider/{{$myprovider->id}}" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
-                                            <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
+                                            </a>
+                                            <a href="/admin/delete-provider/{{$myprovider->id}}" data-target="#static2"
+                                               data-toggle="modal" style="margin-left: 10px">
+                                                <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
-                                        </a>
+                                            </a>
 
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
                                 @endforeach
                                 </tbody>
                             </table>
@@ -366,9 +274,8 @@
                                  tabindex="-1" data-backdrop="static"
                                  data-keyboard="false" data-attention-animation="false"
                                  style="background: rgb(255, 255, 255);border-radius: 10px !important;display: block;margin-top: -82.5px;height: 185px;width: 480px;">
-                                <div class="modal-body" >
+                                <div class="modal-body">
                                     <p style="
-                                                /*margin-bottom: 1px;*/
                                                 font-family: AvenirLTStd-Book;
                                                 font-weight: bold;
                                                 font-size: 18px;
@@ -376,7 +283,6 @@
                                                 text-align: center;
                                                 letter-spacing: -0.011em;
                                                 color: #333333;
-                                                /* opacity: 0.5; */
                                                 "> Are you sure about delete this Cowork provider ? </p>
                                 </div>
                                 <div class="modal-footer padding-right-120 " style="border-top:0px;">
@@ -386,27 +292,15 @@
                                             style="
                                                                width: 125px;
                                                                height: 32.2px;
-                                                               /*flex-grow: 0;*/
-                                                               /*display: flex;*/
-                                                               /*flex-direction: column;*/
-                                                               /*justify-content: center;*/
-                                                               /*border-color: #7952b3;*/
+
                                                                align-items: center;
-                                                               /*margin: -155px 0 0 755px;*/
                                                                padding: 0;
                                                                border-radius: 8px !important;
-                                                               /*background-color: #7952b3;*/
                                                                font-family: AvenirLTStd-Book;
-                                                               /*font-style: normal;*/
-                                                               /*font-weight: 600;*/
-                                                               /*font-size: 14px;*/
-                                                               /* line-height: 24px; */
-                                                               /*color: #FFFFFF;*/
+
                                                                font-size: 13px;
                                                                letter-spacing: 1px;
-                                                                  /*background: #FFFFFF;*/
                                         border-radius: 10px !important;
-                                        /*margin-right: 244px;*/
                                         border-color: #7952B3;
                                                                ">
                                         Cancel
@@ -415,21 +309,14 @@
                                             style="
                                                                width: 125px;
                                                                height: 32.2px;
-                                                               /*flex-grow: 0;*/
-                                                               /*display: flex;*/
-                                                               /*flex-direction: column;*/
-                                                               /*justify-content: center;*/
+
                                                                border-color: #7952b3;
                                                                align-items: center;
-                                                               /*margin: -155px 0 0 755px;*/
                                                                padding: 0;
                                                                border-radius: 8px !important;
                                                                background-color: #7952b3;
                                                                font-family: AvenirLTStd-Book;
-                                                               /*font-style: normal;*/
-                                                               /*font-weight: 600;*/
-                                                               /*font-size: 14px;*/
-                                                               /* line-height: 24px; */
+
                                                                color: #FFFFFF;
                                                                font-size: 13px;
                                                                letter-spacing: 1px;

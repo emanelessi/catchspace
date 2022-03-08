@@ -3,36 +3,26 @@
 namespace App\Http\Controllers\Provider;
 
 use App\Http\Controllers\Controller;
-use App\Models\Pricing;
-use App\Models\RentType;
-use App\Models\Service;
-use App\Models\User;
-use App\Models\WorkSpace;
-use App\Models\WorkSpaceService;
+use App\Models\Worker;
 use Illuminate\Http\Request;
 
-class WorkSpaceController extends Controller
+class WorkerController extends Controller
 {
     function __construct()
     {
-        $this->middleware('permission:workspace_access', ['only' => ['index']]);
-        $this->middleware('permission:workspace_create', ['only' => ['store','create']]);
-        $this->middleware('permission:workspace_edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
+        $this->middleware('permission:worker_access', ['only' => ['index']]);
+        $this->middleware('permission:worker_create', ['only' => ['store','create']]);
+        $this->middleware('permission:worker_edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:worker_delete', ['only' => ['destroy']]);
     }
     public function index()
     {
-        $work_space = WorkSpace::where('provider_id',auth()->user()->provider->id)->get();
-//        $work_space = WorkSpace::where('provider_id',auth()->id())->get();
-        $pricing= Pricing::all();
-        $work_space_service= WorkSpaceService::all();
-        $service=Service::all();
-        $rent_type= RentType::all();
-        return view('admin.workSpace.workSpace', compact('work_space','pricing','work_space_service','service','rent_type'));
+        $worker = Worker::all();
+        return view('admin.worker.worker', compact('worker'));
     }
     public function create()
     {
-        return view('admin.workSpace.addWorkSpace');
+        return view('admin.worker.addWorker');
     }
 
     public function store(Request $request)
@@ -43,7 +33,7 @@ class WorkSpaceController extends Controller
             'provider_id' => 'required',
         ]);
 
-        $workspace = WorkSpace::create(['capacity' => $request->input('capacity'),
+        $workspace = Worker::create(['capacity' => $request->input('capacity'),
             'work_space_type_id' => $request->input('work_space_type_id'),
             'provider_id' => $request->input('provider_id'),
         ]);
@@ -53,8 +43,8 @@ class WorkSpaceController extends Controller
 
     public function edit($id)
     {
-        $workspace = WorkSpace::findOrFail($id);
-        return view('admin.workSpace.editWorkSpace', compact('workspace'));
+        $worker = Worker::findOrFail($id);
+        return view('admin.worker.editWorker', compact('worker'));
     }
 
     public function update(Request $request, $id)
@@ -65,7 +55,7 @@ class WorkSpaceController extends Controller
             'provider_id' => 'required',
         ]);
 
-        $workspace = WorkSpace::findOrFail($id);
+        $workspace = Worker::findOrFail($id);
         $workspace->capacity = $request->input('capacity');
         $workspace->work_space_type_id = $request->input('work_space_type_id');
         $workspace->provider_id = $request->input('provider_id');
@@ -76,8 +66,7 @@ class WorkSpaceController extends Controller
 
     public function destroy($id)
     {
-
-        $workspace = WorkSpace::findOrFail($id)->delete();
+        $worker = Worker::findOrFail($id)->delete();
         return back()->with('success', trans('cp.messages.roles.role_deleted'));
     }
 }

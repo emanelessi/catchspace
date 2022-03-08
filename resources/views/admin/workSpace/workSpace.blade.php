@@ -465,7 +465,7 @@
                     <!-- BEGIN PAGE TOOLBAR -->
                     @can('workspace_create')
                         <div class="page-toolbar">
-                            <a href="{{route('workspacecreate')}}" type="button" class="demo-loading-btn btn btn-primary" style="
+                            <a href="#" type="button" class="demo-loading-btn btn btn-primary" style="
             border-color: #7952B3;
             font-family: AvenirLTStd-Book;
             /*font-weight: normal;*/
@@ -483,6 +483,7 @@
             height: 30px;
             font-size: 13px;
 ">
+                                <i class="fa fa-plus-circle"></i>
                                 Add work Space
                             </a>
 
@@ -633,19 +634,6 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Capacity
-                                                </th>
-                                                <th style="
-  font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size: 20px;
-    letter-spacing: -0.022em;
-    /*text-transform: capitalize;*/
-    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
-    color: #e7ae04;
-    padding-bottom: 15px;
 "> Type
                                                 </th>
                                                 <th style="
@@ -659,7 +647,7 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Provider Name
+"> Services
                                                 </th>
                                                 <th style="
   font-family: AvenirLTStd-Book;
@@ -672,7 +660,46 @@
     /*-webkit-text-fill-color: transparent;*/
     color: #e7ae04;
     padding-bottom: 15px;
-"> Provider Address
+"> Capacity
+                                                </th>
+                                                <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Rent Type
+                                                </th>
+                                                <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Price
+                                                </th>
+                                                <th style="
+  font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    /*text-transform: capitalize;*/
+    /*background: -webkit-linear-gradient(#7952B3, #FFBF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    color: #e7ae04;
+    padding-bottom: 15px;
+"> Status
                                                 </th>
                                                 <th style="
   font-family: AvenirLTStd-Book;
@@ -690,7 +717,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($myworkspaces as $workspaces)
+                                            @foreach($work_space as $myworkspace)
 
                                                 <tr>
                                                     <td style="
@@ -705,7 +732,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$workspaces->id}}
+"> {{$myworkspace->id}}
                                                     </td>
                                                     <td style="
     /*width: 59px;*/
@@ -719,20 +746,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-">{{$workspaces->capacity}}</td>
-                                                    <td style="
-    /*width: 59px;*/
-    /*height: 53px;*/
-    /*left: 542px;*/
-    /*top: 369px;*/
- font-family: AvenirLTStd-Book;
-    /*font-weight: 500;*/
-    font-size:  20px;
-    /*line-height: 80px;*/
-    letter-spacing: 0.02em;
-    /*text-transform: capitalize;*/
-    color: #000000;
-"> {{$workspaces->workSpaceType->type}}
+"> {{$myworkspace->workSpaceType->type}}
                                                     </td>
                                                     <td style="
     /*width: 59px;*/
@@ -746,7 +760,7 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$workspaces->provider->name}}
+"> /
                                                     </td>
                                                     <td style="
     /*width: 59px;*/
@@ -760,7 +774,49 @@
     letter-spacing: 0.02em;
     /*text-transform: capitalize;*/
     color: #000000;
-"> {{$workspaces->provider->address}}
+">{{$myworkspace->capacity}}</td>
+
+                                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> /
+                                                    </td>
+                                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> /
+                                                    </td>
+                                                    <td style="
+    /*width: 59px;*/
+    /*height: 53px;*/
+    /*left: 542px;*/
+    /*top: 369px;*/
+ font-family: AvenirLTStd-Book;
+    /*font-weight: 500;*/
+    font-size:  20px;
+    /*line-height: 80px;*/
+    letter-spacing: 0.02em;
+    /*text-transform: capitalize;*/
+    color: #000000;
+"> /
                                                     </td>
 
                                                     <td style="
@@ -777,13 +833,13 @@
     color: #000000;
 ">
                                                         @can('workspace_delete')
-                                                            <a href="/admin/delete-workspace/{{$workspaces->id}}" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
+                                                            <a href="/provider/delete-workspace/{{$myworkspace->id}}" data-target="#static2" data-toggle="modal" style="margin-left: 10px">
                                                                 <i class="fa fa-trash" style="color: #000000 !important;"></i>
 
                                                             </a>
                                                         @endcan
                                                         @can('workspace_edit')
-                                                            <a href="/admin/edit-workspace/{{$workspaces->id}}">
+                                                            <a href="/provider/edit-workspace/{{$myworkspace->id}}">
                                                                 <i class="fa fa-pencil" style="color: #000000 !important;"></i>
 
                                                             </a>
