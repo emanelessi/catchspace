@@ -144,7 +144,7 @@
         <div class="page-head">
             <!-- BEGIN PAGE TITLE -->
             <div class="page-title ">
-                <h1 class="head-title">Services</h1>
+                <h1 class="head-title">Addons</h1>
             </div>
             <!-- END PAGE TITLE -->
             <!-- BEGIN PAGE TOOLBAR -->
@@ -207,19 +207,19 @@
                                         <th class="table-th"> Value
                                         </th>
                                         <th class="table-th"> Work Space Capacity
-                                        </th><th class="table-th"> Service Name
+                                        </th><th class="table-th"> Addon Name
                                         </th>
 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($services as $myservices)
+                                    @foreach($addons as $myaddons )
                                         <tr>
-                                            <td class="table-td"> {{$myservices->id}}
+                                            <td class="table-td"> {{$myaddons->id}}
                                             </td>
-                                            <td class="table-td">{{$myservices->value}} $</td>
-                                            <td class="table-td"> {{$myservices->workSpace->capacity}}
-                                            </td> <td class="table-td"> {{$myservices->service->name}}
+                                            <td class="table-td">{{$myaddons->value}} $</td>
+                                            <td class="table-td"> {{$myaddons->workSpace->capacity}}
+                                            </td> <td class="table-td"> {{$myaddons->addon->name}}
                                             </td>
 {{--                                            @can('services_show')--}}
 {{--                                            <td class="table-td">--}}

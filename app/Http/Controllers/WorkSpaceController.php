@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pricing;
 use App\Models\Provider;
 use App\Models\WorkSpace;
+use App\Models\WorkSpaceAddons;
 use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
@@ -17,6 +19,8 @@ class WorkSpaceController extends Controller
         $this->middleware('permission:workspace_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
         $this->middleware('permission:services_show', ['only' => ['services']]);
+        $this->middleware('permission:pricing_show', ['only' => ['pricing']]);
+        $this->middleware('permission:addons_show', ['only' => ['addons']]);
     }
 
     public function index()
@@ -86,5 +90,17 @@ class WorkSpaceController extends Controller
         $workspace = WorkSpace::findOrFail($id);
         $services = WorkSpaceService::where('work_space_id', $workspace->id)->get();
         return view('admin.workSpace.services', compact('services'));
+    }
+    public function pricing($id)
+    {
+        $workspace = WorkSpace::findOrFail($id);
+        $pricing = Pricing::where('work_space_id', $workspace->id)->get();
+        return view('admin.workSpace.pricing', compact('pricing'));
+    }
+    public function addons($id)
+    {
+        $workspace = WorkSpace::findOrFail($id);
+        $addons= WorkSpaceAddons::where('work_space_id', $workspace->id)->get();
+        return view('admin.workSpace.addons', compact('addons'));
     }
 }

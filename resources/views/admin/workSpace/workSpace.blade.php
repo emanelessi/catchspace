@@ -207,7 +207,12 @@
                                         <th class="table-th"> Capacity
                                         </th>
                                         <th class="table-th"> Type
-                                        </th><th class="table-th"> Services
+                                        </th>
+                                        <th class="table-th"> Services
+                                        </th>
+                                        <th class="table-th"> Pricing
+                                        </th>
+                                        <th class="table-th"> Addons
                                         </th>
                                         <th class="table-th"> Provider Name
                                         </th>
@@ -227,12 +232,28 @@
                                             <td class="table-td"> {{$myworkspace->workSpaceType->type}}
                                             </td>
                                             @can('services_show')
-                                            <td class="table-td">
+                                                <td class="table-td">
                                                     <a href="/admin/workspace/services/{{$myworkspace->id}}"
                                                        style="margin-left: 10px">
-                                                        <i class="fa fa-share" style="color: #000000 !important;"></i>
+                                                        <i class="fa fa-server" style="color: #000000 !important;"></i>
                                                     </a>
-                                            </td>
+                                                </td>
+                                            @endcan
+                                            @can('pricing_show')
+                                                <td class="table-td">
+                                                    <a href="/admin/workspace/pricing/{{$myworkspace->id}}"
+                                                       style="margin-left: 10px">
+                                                        <i class="fa fa-money" style="color: #000000 !important;"></i>
+                                                    </a>
+                                                </td>
+                                            @endcan
+                                            @can('addons_show')
+                                                <td class="table-td">
+                                                    <a href="/admin/workspace/addons/{{$myworkspace->id}}"
+                                                       style="margin-left: 10px">
+                                                        <i class="fa fa-plus-square" style="color: #000000 !important;"></i>
+                                                    </a>
+                                                </td>
                                             @endcan
 
                                             <td class="table-td"> {{$myworkspace->provider->name}}
@@ -287,7 +308,7 @@
                 <div class="page-head">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1  class="margin-top--10 head-title">Tools</h1>
+                        <h1 class="margin-top--10 head-title">Tools</h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
