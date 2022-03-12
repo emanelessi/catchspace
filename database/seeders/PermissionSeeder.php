@@ -56,7 +56,8 @@ class PermissionSeeder extends Seeder
             'user_edit',
             'user_delete',
             'user_show',
-            'user_create'
+            'user_create',
+            'services_show'
 
         ];
 
@@ -134,6 +135,7 @@ class PermissionSeeder extends Seeder
             'role_show',
             'role_create',
             'permission_access',
+            'services_show',
 
         ];
 

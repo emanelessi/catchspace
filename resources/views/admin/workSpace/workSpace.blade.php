@@ -207,6 +207,7 @@
                                         <th class="table-th"> Capacity
                                         </th>
                                         <th class="table-th"> Type
+                                        </th><th class="table-th"> Services
                                         </th>
                                         <th class="table-th"> Provider Name
                                         </th>
@@ -225,6 +226,15 @@
                                             <td class="table-td">{{$myworkspace->capacity}}</td>
                                             <td class="table-td"> {{$myworkspace->workSpaceType->type}}
                                             </td>
+                                            @can('services_show')
+                                            <td class="table-td">
+                                                    <a href="/admin/workspace/services/{{$myworkspace->id}}"
+                                                       style="margin-left: 10px">
+                                                        <i class="fa fa-share" style="color: #000000 !important;"></i>
+                                                    </a>
+                                            </td>
+                                            @endcan
+
                                             <td class="table-td"> {{$myworkspace->provider->name}}
                                             </td>
                                             <td class="table-td"> {{$myworkspace->provider->address}}
@@ -237,6 +247,7 @@
                                                         <i class="fa fa-trash" style="color: #000000 !important;"></i>
                                                     </a>
                                                 @endcan
+
                                                 @can('workspace_edit')
                                                     <a href="/admin/edit-workspace/{{$myworkspace->id}}">
                                                         <i class="fa fa-pencil" style="color: #000000 !important;"></i>
@@ -251,7 +262,7 @@
                                      tabindex="-1" data-backdrop="static"
                                      data-keyboard="false" data-attention-animation="false">
                                     <div class="modal-body">
-                                        <p class="modal-p"> Are you sure about deletee this Cowork provider ? </p>
+                                        <p class="modal-p"> Are you sure about delete this Work Space ? </p>
                                     </div>
                                     <div class="modal-footer padding-right-120 " style="border-top:0px;">
                                         <button type="button"

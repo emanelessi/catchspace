@@ -291,6 +291,8 @@
                                                 </th>
                                                 <th class="table-th"> status
                                                 </th>
+                                                <th class="table-th"> Work Space Capacity
+                                                </th>
                                                 <th class="table-th"> action
                                                 </th>
                                             </tr>
@@ -302,7 +304,7 @@
                                                     </td>
                                                     <td class="table-td">
                                                         <img alt="" class="img-circle"
-                                                           src="{{'/storage/'.$myworker->avatar}}"/>
+                                                             src="{{'/storage/'.$myworker->avatar}}"/>
                                                     </td>
                                                     <td class="table-td"> {{$myworker->name}}
                                                     </td>
@@ -311,6 +313,8 @@
                                                     <td class="table-td"> {{$myworker->you_did}}
                                                     </td>
                                                     <td class="table-td"> /
+                                                    </td>
+                                                    <td class="table-td"> {{$myworker->workSpace->capacity}}
                                                     </td>
                                                     <td class="table-td">
                                                         @can('worker_delete')

@@ -27,16 +27,23 @@
                     <div class="portlet light profile-sidebar-portlet bordered margin-top-35 "
                          style="border-bottom: 1px solid #eef1f5;height: 100%;border-radius: 20px !important;">
                         <!-- SIDEBAR USERPIC -->
-                        <div class=" profile-userpic margin-right--12 margin-top-25" style="
+                        <div class=" profile-userpic  margin-top-25" style="
                         float: left;
                         width: 300px;
                         /*margin-right: -35px;*/
 ">
-                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+
+                            @can('provider_access')
+                                <img alt="" class="img-circle "
+                                     src="{{'/storage'.auth()->user()->provider->logo}}"/>
+                            @endcan
+                            @can('permission_access')
+                                <i class="fa fa-user img-circle" style="font-size: 20px;color: #7952B3 !important;"></i>
+                            @endcan
                         </div>
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
-                        <div class=" profile-usertitle margin-top-70" style="
+                        <div class="center-block profile-usertitle margin-top-70" style="
                         text-align: justify;
                         /*margin-top: 47px;*/
 ">
@@ -107,4 +114,5 @@ color: #6B7280;
 
 
     </div>
+
 @endsection

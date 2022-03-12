@@ -65,7 +65,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/delete-user/{id}', [\App\Http\Controllers\UserController::class, 'destroy']);
     Route::get('/admin/edit-user/{id}', [\App\Http\Controllers\UserController::class, 'edit']);
     Route::post('/admin/edit-user', [\App\Http\Controllers\UserController::class, 'update'])->name('userupdate');
-    Route::get('/admin/profile', [\App\Http\Controllers\UserController::class, 'profile'])->name('profile');
+    Route::get('/admin/profile', [\App\Http\Controllers\UserController::class, 'profile'])->name('adminprofile');
 
     Route::get('/admin/provider', [\App\Http\Controllers\ProviderController::class, 'show']);
     Route::get('/admin/add-provider', [\App\Http\Controllers\ProviderController::class, 'create'])->name('providercreate');
@@ -89,6 +89,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/admin/worker', [\App\Http\Controllers\WorkerController::class, 'index'])->name('workers');
 
+    Route::get('/admin/workspace/services/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'services']);
 
     Route::get('/provider/workspace', [Provider\WorkSpaceController::class, 'index'])->name('workSpaces');
     Route::get('/provider/add-workspace', [Provider\WorkSpaceController::class, 'create'])->name('workSpaceCreate');
@@ -110,6 +111,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/provider/delete-policies/{id}', [Provider\PoliciesController::class, 'destroy']);
     Route::get('/provider/edit-policies/{id}', [Provider\PoliciesController::class, 'edit']);
     Route::post('/provider/edit-policies', [Provider\PoliciesController::class, 'update'])->name('updatePolicies');
+
+    Route::get('/provider/provider-profile', [\App\Http\Controllers\ProviderController::class, 'profile'])->name('providerprofile');
 
     Route::get('/provider/edit-profile/{id}', [Provider\ProviderController::class, 'edit']);
     Route::post('/provider/edit-profile', [Provider\ProviderController::class, 'update'])->name('updateProfile');

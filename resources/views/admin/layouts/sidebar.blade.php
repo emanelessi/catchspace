@@ -258,23 +258,23 @@
                     <span class="title" style="font-size: 16px">Policies</span>
                 </a>
             </li>
-            <li class="nav-item @if(preg_match('/edit-profile/i',url()->current())) start active open @endif" style="
-    padding-bottom: 5px;
-">
-                <a href="/provider/edit-profile" class="nav-link nav-toggle margin-left-10" style="
-   font-family: AvenirLTStd-Book;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
-    /*text-transform: capitalize;*/
-    /*margin-left: 7px;*/
-    /*margin-bottom: 18px;*/
+{{--            <li class="nav-item @if(preg_match('/edit-profile/i',url()->current())) start active open @endif" style="--}}
+{{--    padding-bottom: 5px;--}}
+{{--">--}}
+{{--                <a href="/provider/edit-profile" class="nav-link nav-toggle margin-left-10" style="--}}
+{{--   font-family: AvenirLTStd-Book;--}}
+{{--    font-weight: normal;--}}
+{{--    font-size: 18px;--}}
+{{--    line-height: 27px;--}}
+{{--    /*text-transform: capitalize;*/--}}
+{{--    /*margin-left: 7px;*/--}}
+{{--    /*margin-bottom: 18px;*/--}}
 
-">
-                    <i class="fa fa-user"></i>
-                    <span class="title" style="font-size: 16px">System</span>
-                </a>
-            </li>
+{{--">--}}
+{{--                    <i class="fa fa-user"></i>--}}
+{{--                    <span class="title" style="font-size: 16px">System</span>--}}
+{{--                </a>--}}
+{{--            </li>--}}
         </ul>
         <!-- END SIDEBAR MENU -->
     </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Provider;
 use App\Models\WorkSpace;
+use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,10 @@ class WorkSpaceController extends Controller
     function __construct()
     {
         $this->middleware('permission:workspace_access', ['only' => ['index']]);
-        $this->middleware('permission:workspace_create', ['only' => ['store','create']]);
-        $this->middleware('permission:workspace_edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:workspace_create', ['only' => ['store', 'create']]);
+        $this->middleware('permission:workspace_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
+        $this->middleware('permission:services_show', ['only' => ['services']]);
     }
 
     public function index()
@@ -22,12 +24,13 @@ class WorkSpaceController extends Controller
         $workspace = WorkSpace::all();
         return view('admin.workSpace.workSpace', compact('workspace'));
     }
+
     public function create()
     {
         $provider = Provider::all();
         $type = WorkSpaceType::all();
 
-        return view('admin.workSpace.addWorkSpace',compact('provider','type'));
+        return view('admin.workSpace.addWorkSpace', compact('provider', 'type'));
     }
 
     public function store(Request $request)
@@ -51,7 +54,7 @@ class WorkSpaceController extends Controller
         $workspace = WorkSpace::findOrFail($id);
         $provider = Provider::all();
         $type = WorkSpaceType::all();
-        return view('admin.workSpace.editWorkSpace', compact('workspace','provider','type'));
+        return view('admin.workSpace.editWorkSpace', compact('workspace', 'provider', 'type'));
     }
 
     public function update(Request $request)
@@ -74,8 +77,14 @@ class WorkSpaceController extends Controller
 
     public function destroy($id)
     {
-
         $workspace = WorkSpace::findOrFail($id)->delete();
         return back()->with('success', trans('cp.messages.roles.role_deleted'));
+    }
+
+    public function services($id)
+    {
+        $workspace = WorkSpace::findOrFail($id);
+        $services = WorkSpaceService::where('work_space_id', $workspace->id)->get();
+        return view('admin.workSpace.services', compact('services'));
     }
 }

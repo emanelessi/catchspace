@@ -612,7 +612,7 @@
     color: #000000;
 "><a class="btn btn-outline dark"
      data-target="#static2" data-toggle="modal">
-                                            delet
+                                            delete
                                         </a>
                                         <a class="btn btn-outline dark"
                                            data-target="#static2" data-toggle="modal">

@@ -14,6 +14,8 @@ class ProviderController extends Controller
         $this->middleware('permission:provider_create', ['only' => ['create','store']]);
         $this->middleware('permission:provider_edit', ['only' => ['edit','update']]);
         $this->middleware('permission:provider_delete', ['only' => ['destroy']]);
+        $this->middleware('permission:provider_access', ['only' => ['profile']]);
+
     }
 
     public function index(Request $request)
@@ -74,5 +76,11 @@ class ProviderController extends Controller
     {
         Provider::findOrFail($id)->delete();
         return back()->with('success', trans('cp.messages.roles.role_deleted'));
+    }
+
+    public function profile()
+    {
+        $user=auth()->user();
+        return view('admin.profile')->with(compact('user'));
     }
 }

@@ -187,7 +187,13 @@
                         <ul class="dropdown-menu dropdown-menu-default">
                             @can('permission_access')
                             <li>
-                                <a href="{{ route('profile') }}">
+                                <a href="{{ route('adminprofile') }}">
+                                    <i class="icon-user" style="color: #7952B3 !important;"></i>  Profile </a>
+                            </li>
+                            @endcan
+                                @can('provider_access')
+                            <li>
+                                <a href="{{ route('providerprofile') }}">
                                     <i class="icon-user" style="color: #7952B3 !important;"></i>  Profile </a>
                             </li>
                             @endcan
