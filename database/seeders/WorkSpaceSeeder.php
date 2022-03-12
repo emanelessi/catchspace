@@ -43,6 +43,12 @@ class WorkSpaceSeeder extends Seeder
         $work_space->provider_id   = 1;
         $work_space->save();
 
+        $work_space2 = new WorkSpace();
+        $work_space2->capacity = 3;
+        $work_space2->work_space_type_id  = $work_space_type3->id;
+        $work_space2->provider_id   = 2;
+        $work_space2->save();
+
         $service = new Service();
         $service->name = '5G WiFi';
         $service->save();

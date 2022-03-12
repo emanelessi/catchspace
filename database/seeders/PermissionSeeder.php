@@ -59,7 +59,10 @@ class PermissionSeeder extends Seeder
             'user_create',
             'services_show',
             'pricing_show',
-            'addons_show'
+            'addons_show',
+            'services_access',
+            'pricing_access',
+            'addons_access',
 
         ];
 
@@ -98,6 +101,9 @@ class PermissionSeeder extends Seeder
             'workspace_show',
             'workspace_delete',
             'workspace_access',
+            'services_show',
+            'pricing_show',
+            'addons_show',
 
         ];
 
@@ -137,9 +143,9 @@ class PermissionSeeder extends Seeder
             'role_show',
             'role_create',
             'permission_access',
-            'services_show',
-            'pricing_show',
-            'addons_show'
+            'services_access',
+            'pricing_access',
+            'addons_access',
 
         ];
 

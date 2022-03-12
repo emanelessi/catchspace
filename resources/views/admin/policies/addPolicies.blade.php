@@ -27,13 +27,13 @@ font-size: 17px">
                         @csrf
                         <div class="form-group col-md-6">
                             <label class="control-label" style="color:#6B7280;">Title *</label>
-                            <input type="text" placeholder="TitleTitleTitle" name="title"
+                            <input type="text" placeholder="Title" name="title"
                                    class="form-control"
                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="control-label" style="color:#6B7280;">Description *</label>
-                            <input type="text" placeholder="descriptiondescriptiondescriptiondescriptiondescription"
+                            <input type="text" placeholder="description"
                                    class="form-control" name="body"
                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                         </div>

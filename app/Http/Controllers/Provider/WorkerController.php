@@ -21,14 +21,19 @@ class WorkerController extends Controller
 
     public function index()
     {
-        $worker = Worker::all();
-        return view('admin.worker.worker', compact('worker'));
+
+        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
+//        dd($work_space);
+        foreach ($work_space as $my_work_space){
+            $worker = Worker::where('work_space_id', $my_work_space->id)->get();
+            return view('admin.worker.worker', compact('worker'));
+        }
     }
 
     public function create()
     {
-        $type = WorkSpaceType::all();
-        return view('admin.worker.addWorker', compact('type'));
+        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
+        return view('admin.worker.addWorker', compact('work_space'));
     }
 
     public function store(Request $request)
@@ -37,7 +42,7 @@ class WorkerController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'job_title' => 'required',
-//            'avatar' => 'required',
+            'avatar' => 'required',
             'you_did' => 'required',
             'work_space_type_id' => 'required',
         ]);
@@ -45,7 +50,7 @@ class WorkerController extends Controller
         $worker = new Worker();
         $worker->name = $request->input('name');
         $worker->job_title = $request->input('job_title');
-//        $worker->avatar = $request->input('avatar');
+        $worker->avatar = storeImage('workers','avatar' );
         $worker->you_did = $request->input('you_did');
         $worker->work_space_id = $request->input('work_space_type_id');
         $worker->save();
@@ -55,8 +60,8 @@ class WorkerController extends Controller
     public function edit($id)
     {
         $worker = Worker::findOrFail($id);
-        $type = WorkSpaceType::all();
-        return view('admin.worker.editWorker', compact('worker', 'type'));
+        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
+        return view('admin.worker.editWorker', compact('worker', 'work_space'));
     }
 
     public function update(Request $request)
@@ -65,7 +70,7 @@ class WorkerController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'job_title' => 'required',
-//            'avatar' => 'required',
+            'avatar' => 'required',
             'you_did' => 'required',
             'work_space_type_id' => 'required',
         ]);
@@ -73,7 +78,7 @@ class WorkerController extends Controller
         $worker = Worker::findOrFail($id);
         $worker->name = $request->input('name');
         $worker->job_title = $request->input('job_title');
-//        $worker->avatar = $request->input('avatar');
+        $worker->avatar = storeImage('workers','avatar' );;
         $worker->you_did = $request->input('you_did');
         $worker->work_space_id = $request->input('work_space_type_id');
         $worker->save();

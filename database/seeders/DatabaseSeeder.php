@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ProviderTableSeeder::class);
         $this->call(PermissionSeeder::class);
         $this->call(WorkSpaceSeeder::class);
+        $this->call(PoliciesSeeder::class);
+        $this->call(WorkersSeeder::class);
 
 //        $this->call(RoleSeeder::class);
 

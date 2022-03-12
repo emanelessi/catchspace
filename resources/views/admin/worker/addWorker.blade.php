@@ -10,6 +10,38 @@
             background-color: #D2CDCD54 !important;
         }
 
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .inputfile + label {
+            border-color: #eaeaea;
+            margin-top: 60px;
+
+            align-items: center;
+            padding: 5px;
+            border-radius: 8px !important;
+            background-color: #eaeaea;
+            font-family: AvenirLTStd-Book;
+            font-size: 14px;
+            line-height: 24px;
+            color: #6B7280;
+            width: 157px;
+            display: inline-block;
+        }
+
+        .inputfile:focus + label,
+        .inputfile + label:hover {
+            background-color: #7952b3;
+            color: white;
+
+        }
+
     </style>
 
     <div class="page-head" style="
@@ -34,22 +66,21 @@ color: #333333;
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">
-            <div class="col-md-12">
-                <!-- BEGIN PROFILE SIDEBAR -->
-                <div>
-                    <!-- PORTLET MAIN -->
-                    <div class="portlet light profile-sidebar-portlet bordered"
-                         style="
-                         border-bottom: 1px solid #eef1f5;
-                          height: 720px;
-                          border-radius: 20px !important;">
-                        <!-- SIDEBAR USERPIC -->
-                        <div class="profile-userpic  margin-right--12" style="
+            <div class="col-md-12 col-lg-12 col-xs-12">
+
+                <!-- PERSONAL INFO TAB -->
+                <div class="tab-pane active" id="tab_1_1">
+                    <form role="form" action="{{route('workerStore')}}" enctype="multipart/form-data"
+                          method="Post">
+                        @csrf
+
+                        <div class="profile-userpic  margin-right--12 "
+                             style="
                         float: left;
                         width: 300px;
-                        /*margin-right: -35px;*/
 ">
-                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                            <img src="../assets/pages/media/profile/profile_user.jpg"
+                                 class="img-responsive" alt="">
                         </div>
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
@@ -57,115 +88,103 @@ color: #333333;
                         text-align: justify;
                         /*margin-top: 47px;*/
 ">
-                            <button type="button" data-loading-text="Loading..."
-                                    class="demo-loading-btn btn btn-primary margin-top-60"
-                                    style="
-                                         /*width: 165px;*/
-                                         /*height: 41.2px;*/
-                                         /*flex-grow: 0;*/
-                                         /*display: flex;*/
-                                         /*flex-direction: column;*/
-                                         /*justify-content: center;*/
+                            <input type="file" data-loading-text="Loading..."
+                                   name="avatar" id="file"
+                                   class="inputfile demo-loading-btn btn btn-primary margin-top-85"
+                                   style="
+
                                          border-color:#eaeaea;
-                                         /*margin-right:600px;*/
-                                         /*margin-top: 60px;*/
+
                                          align-items: center;
-                                         /*padding: 0;*/
+                                         padding: 5px;
                                          border-radius: 8px !important;
                                          background-color: #eaeaea;
-             font-family: AvenirLTStd-Book;
-                                         /*font-weight: 600;*/
+                                         font-family: AvenirLTStd-Book;
                                          font-size: 14px;
                                          line-height: 24px;
                                          color: #6B7280;
+                                         width: 157px;
                                          "
-                            > Upload wokspace logo
-                            </button>
-                        </b>
+                            >
 
-                        <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
-                        <div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="portlet light bordered" style="margin: 90px 73px 200px;height: 300px;border-radius: 20px !important;background-color: #fff;    border-top-width: 3px !important;
-                                            border-bottom-width: 3px !important;">
-                                        <div class="portlet-body" style="padding-top: 31px;">
-                                            <div class="tab-content">
-                                                <!-- PERSONAL INFO TAB -->
-                                                <div class="tab-pane active" id="tab_1_1">
-                                                    <form role="form" action="{{route('workerStore')}}"
-                                                          method="POST">
-                                                        @csrf
-                                                        {{--                                                        <div class="form-group col-md-6">--}}
-                                                        {{--                                                            <label class="control-label" style="color:#6B7280;">Email--}}
-                                                        {{--                                                                *</label>--}}
-                                                        {{--                                                            <input type="text" placeholder="Name@gmail.com"--}}
-                                                        {{--                                                                   class="form-control"--}}
-                                                        {{--                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>--}}
-                                                        {{--                                                        </div>--}}
-                                                        {{--                                                        <div class="form-group col-md-6">--}}
-                                                        {{--                                                            <label class="control-label" style="color:#6B7280;">Phone--}}
-                                                        {{--                                                                *</label>--}}
-                                                        {{--                                                            <input type="text" placeholder="+970 590 000 000"--}}
-                                                        {{--                                                                   class="form-control"--}}
-                                                        {{--                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>--}}
-                                                        {{--                                                        </div>--}}
-                                                        {{--                                                        <div class="form-group col-md-6">--}}
-                                                        {{--                                                            <label class="control-label" style="color:#6B7280;">Description--}}
-                                                        {{--                                                                *</label>--}}
-                                                        {{--                                                            <input type="text"--}}
-                                                        {{--                                                                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing  "--}}
-                                                        {{--                                                                   class="form-control"--}}
-                                                        {{--                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>--}}
-                                                        {{--                                                        </div>--}}
-                                                        {{--                                                        <div class="form-group col-md-6">--}}
-                                                        {{--                                                            <label class="control-label" style="color:#6B7280;">Status--}}
-                                                        {{--                                                                *</label>--}}
-                                                        {{--                                                            <input type="text" placeholder="Active"--}}
-                                                        {{--                                                                   class="form-control"--}}
-                                                        {{--                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>--}}
-                                                        {{--                                                        </div> --}}
 
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Name
-                                                                *</label>
-                                                            <input type="text" placeholder="Full Name"
-                                                                   class="form-control" name="name"
-                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Job
-                                                                Title
-                                                                *</label>
-                                                            <input type="text" placeholder="Job Title"
-                                                                   class="form-control" name="job_title"
-                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">You Did
-                                                                *</label>
-                                                            <input type="text"
-                                                                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing  "
-                                                                   class="form-control" name="you_did"
-                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Work
-                                                                Space
-                                                                *</label>
-                                                            <select name="work_space_type_id" class="form-control"
-                                                                    style="height: 56px;padding: 0 12px;border-radius:
+                            <label for="file"> Upload Worker logo <i class="fa fa-file-photo-o"
+                                                                       style="color: #6B7280 !important;"></i></label>
+
+                            <div class="portlet light bordered" style="
+                                        margin: 110px 73px 200px;
+                                        border-radius: 20px !important;
+                                        background-color: #fff;
+                                         border-top-width: 2px !important;
+                                            border-bottom-width: 2px !important;
+">
+                                <div class="portlet-body">
+                                    <div class="tab-content">
+                                        <div class="form-group margin-left-9 margin-right-10"
+                                             style="
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/">
+                                            <label class="control-label margin-left-9"
+                                                   style="color:#6B7280;">
+                                                Name*</label>
+                                            <input type="text" name="name"
+                                                   placeholder="Rami"
+                                                   class="form-control" style="
+                                                                       height: 40px;
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                        </div>
+                                        <div class="form-group margin-left-9 margin-right-10"
+                                             style="
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/
+">
+                                            <label class="control-label margin-left-9"
+                                                   style="color:#6B7280;">
+                                                Job Title*</label>
+                                            <input type="text" name="job_title"
+                                                   placeholder="Developer"
+                                                   class="form-control" style="
+                                                                       height: 40px;
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                        </div>
+                                        <div class="form-group margin-left-9 margin-right-10"
+                                             style="
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/
+">
+                                            <label class="control-label margin-left-9"
+                                                   style="color:#6B7280;">
+                                                You Did*</label>
+                                            <input type="text" name="you_did"
+                                                   placeholder="yes or no"
+                                                   class="form-control" style="
+                                                                       height: 40px;
+                                                                       /*height: 56px;padding: 0 12px;*/
+                                                                       border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                        </div>
+                                        <div class="form-group margin-left-9 margin-right-10"
+                                             style="
+                                                             /*margin-left: 16px;*/
+                                                             /*margin-right: 16px;*/
+">
+                                            <label class="control-label margin-left-9"
+                                                   style="color:#6B7280;">
+                                                Work Space*</label>
+                                            <select name="work_space_type_id" class="form-control"
+                                                    style="height: 56px;padding: 0 12px;border-radius:
                                                                     8px !important;border: solid 1px #d1d5db;">
-                                                                <option> </option>
-                                                                @foreach($type as $mytype)
-                                                                    <option
-                                                                        value="{{$mytype->id}}" >{{$mytype->type}}</option>
-                                                                @endforeach
-                                                            </select>
-                                                        </div>
-                                                        <button type="submit"
-                                                                class="btn btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
-                                                                style="
+                                                <option></option>
+                                                @foreach($work_space as $mywork_space)
+                                                    <option
+                                                        value="{{$mywork_space->id}}">{{$mywork_space->capacity}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <button type="submit"
+                                                class="btn btn-primary margin-top-25  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
+                                                style="
                                                                width: 125px;
                                                                height: 32.2px;
                                                                /*flex-grow: 0;*/
@@ -187,30 +206,15 @@ color: #333333;
                                                                font-size: 13px;
                                                                letter-spacing: 1px;
                                                                ">
-                                                            Save Change
-                                                        </button>
-                                                    </form>
-                                                </div>
-
-                                                <!-- END PERSONAL INFO TAB -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END PROFILE CONTENT -->
-
-                        <!-- END PORTLET MAIN -->
-
-                        <!-- END BEGIN PROFILE SIDEBAR -->
-
-
-                    </div>
+                                            Save Change
+                                        </button>
+                    </form>
                 </div>
+
+                <!-- END PERSONAL INFO TAB -->
             </div>
         </div>
+
     </div>
 
 @endsection

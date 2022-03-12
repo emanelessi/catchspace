@@ -196,7 +196,7 @@ font-size: 17px">{{$myPolicies->provider->name}}</h4>
                                                 letter-spacing: -0.011em;
                                                 color: #333333;
                                                 /* opacity: 0.5; */
-                                                "> Are you sure about deletee this Cowork provider ? </p>
+                                                "> Are you sure about delete this Policie ? </p>
                 </div>
                 <div class="modal-footer padding-right-120 " style="border-top:0px;">
                     <button type="button"
@@ -253,7 +253,7 @@ font-size: 17px">{{$myPolicies->provider->name}}</h4>
                                                                font-size: 13px;
                                                                letter-spacing: 1px;
                                                                ">
-                        deletee
+                        delete
                     </button>
                 </div>
             </div>

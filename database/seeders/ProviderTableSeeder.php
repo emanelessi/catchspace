@@ -44,6 +44,16 @@ class ProviderTableSeeder extends Seeder
         $provider_login->provider_id = $provider->id;
         $provider_login->save();
 
+        $another_provider= new  User();
+        $another_provider->full_name = 'Test Provider';
+        $another_provider->email = 'testprovider@gmail.com';
+        $another_provider->password = bcrypt('123456');
+        $another_provider->phone = '0599717329';
+        $another_provider->type = 'provider';
+        $another_provider->user_level_id = 2;
+        $another_provider->provider_id = $testProvider->id;
+        $another_provider->save();
+
 
     }
 }
