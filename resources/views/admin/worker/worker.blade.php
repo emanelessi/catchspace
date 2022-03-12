@@ -289,8 +289,6 @@
                                                 </th>
                                                 <th class="table-th"> You Did
                                                 </th>
-                                                <th class="table-th"> workspaces
-                                                </th>
                                                 <th class="table-th"> status
                                                 </th>
                                                 <th class="table-th"> action
@@ -311,8 +309,6 @@
                                                     <td class="table-td"> {{$myworker->job_title}}
                                                     </td>
                                                     <td class="table-td"> {{$myworker->you_did}}
-                                                    </td>
-                                                    <td class="table-td"> {{$myworker->workspaces['id']}}
                                                     </td>
                                                     <td class="table-td"> /
                                                     </td>
