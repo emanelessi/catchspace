@@ -11,6 +11,8 @@ class Policies extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $guarded=[];
+
     public function provider()
     {
         return $this->belongsTo(Provider::class, 'provider_id');

@@ -93,37 +93,102 @@ color: #333333;
                                             <div class="tab-content">
                                                 <!-- PERSONAL INFO TAB -->
                                                 <div class="tab-pane active" id="tab_1_1">
-                                                    <form role="form" action="#">
+                                                    <form role="form" action="{{route('workerStore')}}"
+                                                          method="POST">
+                                                        @csrf
+                                                        {{--                                                        <div class="form-group col-md-6">--}}
+                                                        {{--                                                            <label class="control-label" style="color:#6B7280;">Email--}}
+                                                        {{--                                                                *</label>--}}
+                                                        {{--                                                            <input type="text" placeholder="Name@gmail.com"--}}
+                                                        {{--                                                                   class="form-control"--}}
+                                                        {{--                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>--}}
+                                                        {{--                                                        </div>--}}
+                                                        {{--                                                        <div class="form-group col-md-6">--}}
+                                                        {{--                                                            <label class="control-label" style="color:#6B7280;">Phone--}}
+                                                        {{--                                                                *</label>--}}
+                                                        {{--                                                            <input type="text" placeholder="+970 590 000 000"--}}
+                                                        {{--                                                                   class="form-control"--}}
+                                                        {{--                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>--}}
+                                                        {{--                                                        </div>--}}
+                                                        {{--                                                        <div class="form-group col-md-6">--}}
+                                                        {{--                                                            <label class="control-label" style="color:#6B7280;">Description--}}
+                                                        {{--                                                                *</label>--}}
+                                                        {{--                                                            <input type="text"--}}
+                                                        {{--                                                                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing  "--}}
+                                                        {{--                                                                   class="form-control"--}}
+                                                        {{--                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>--}}
+                                                        {{--                                                        </div>--}}
+                                                        {{--                                                        <div class="form-group col-md-6">--}}
+                                                        {{--                                                            <label class="control-label" style="color:#6B7280;">Status--}}
+                                                        {{--                                                                *</label>--}}
+                                                        {{--                                                            <input type="text" placeholder="Active"--}}
+                                                        {{--                                                                   class="form-control"--}}
+                                                        {{--                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>--}}
+                                                        {{--                                                        </div> --}}
+
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Email
+                                                            <label class="control-label" style="color:#6B7280;">Name
                                                                 *</label>
-                                                            <input type="text" placeholder="Name@gmail.com"
-                                                                   class="form-control"
+                                                            <input type="text" placeholder="Full Name"
+                                                                   class="form-control" name="name"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Phone
+                                                            <label class="control-label" style="color:#6B7280;">Job
+                                                                Title
                                                                 *</label>
-                                                            <input type="text" placeholder="+970 590 000 000"
-                                                                   class="form-control"
+                                                            <input type="text" placeholder="Job Title"
+                                                                   class="form-control" name="job_title"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Description
+                                                            <label class="control-label" style="color:#6B7280;">You Did
                                                                 *</label>
                                                             <input type="text"
                                                                    placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing  "
-                                                                   class="form-control"
+                                                                   class="form-control" name="you_did"
                                                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label class="control-label" style="color:#6B7280;">Status
+                                                            <label class="control-label" style="color:#6B7280;">Work
+                                                                Space
                                                                 *</label>
-                                                            <input type="text" placeholder="Active"
-                                                                   class="form-control"
-                                                                   style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
+                                                            <select name="work_space_type_id" class="form-control"
+                                                                    style="height: 56px;padding: 0 12px;border-radius:
+                                                                    8px !important;border: solid 1px #d1d5db;">
+                                                                <option> </option>
+                                                                @foreach($type as $mytype)
+                                                                    <option
+                                                                        value="{{$mytype->id}}" >{{$mytype->type}}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
-
+                                                        <button type="submit"
+                                                                class="btn btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
+                                                                style="
+                                                               width: 125px;
+                                                               height: 32.2px;
+                                                               /*flex-grow: 0;*/
+                                                               /*display: flex;*/
+                                                               /*flex-direction: column;*/
+                                                               /*justify-content: center;*/
+                                                               border-color: #7952b3;
+                                                               align-items: center;
+                                                               /*margin: -155px 0 0 755px;*/
+                                                               padding: 0;
+                                                               border-radius: 8px !important;
+                                                               background-color: #7952b3;
+                                                               font-family: AvenirLTStd-Book;
+                                                               /*font-style: normal;*/
+                                                               /*font-weight: 600;*/
+                                                               /*font-size: 14px;*/
+                                                               /* line-height: 24px; */
+                                                               color: #FFFFFF;
+                                                               font-size: 13px;
+                                                               letter-spacing: 1px;
+                                                               ">
+                                                            Save Change
+                                                        </button>
                                                     </form>
                                                 </div>
 
@@ -131,35 +196,7 @@ color: #333333;
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class=" btn btn-primary" style="
-                                                               width: 165px;
-                                                               height: 41.2px;
-                                                               flex-grow: 0;
-                                                               display: flex;
-                                                               flex-direction: column;
-                                                               justify-content: center;
-                                                               border-color: #7952b3;
-                                                               align-items: center;
-                                                               margin: -155px 0 0 755px;
-                                                               padding: 0;
-                                                               border-radius: 8px !important;
-                                                               background-color: #7952b3;
 
-
-/* Components/Button Medium */
-                                                               font-family: Inter;
-                                                               font-style: normal;
-                                                               font-weight: 600;
-                                                               font-size: 14px;
-                                                               line-height: 24px;
-/* identical to box height, or 171% */
-
-
-/* Primary/Contrast */
-                                                               color: #FFFFFF;
-                                                               ">
-                                        Save Change
-                                    </button>
                                 </div>
                             </div>
                         </div>

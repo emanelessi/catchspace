@@ -16,25 +16,65 @@
 font-size: 17px">
             <div class="portlet-title">
                 <div class="caption">
-                    <i class="fa fa-gift" style="color: #ffffff"></i>Portlet2
+                    <i class="fa fa-gift" style="color: #ffffff"></i>Add Policies
                 </div>
             </div>
             <div class="portlet-body">
-                <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
+                <div class="scroller" style="height:280px" data-always-visible="1" data-rail-visible="1"
                      data-rail-color="blue" data-handle-color="#7952B3">
-                    <form role="form" action="#">
+                    <form role="form"  action="{{route('policiesStore')}}"
+                          method="POST">
+                        @csrf
                         <div class="form-group col-md-6">
                             <label class="control-label" style="color:#6B7280;">Title *</label>
-                            <input type="text" placeholder="TitleTitleTitle"
+                            <input type="text" placeholder="TitleTitleTitle" name="title"
                                    class="form-control"
                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="control-label" style="color:#6B7280;">description *</label>
+                            <label class="control-label" style="color:#6B7280;">Description *</label>
                             <input type="text" placeholder="descriptiondescriptiondescriptiondescriptiondescription"
-                                   class="form-control"
+                                   class="form-control" name="body"
                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                         </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label" style="color:#6B7280;">Provider *</label>
+                            <select name="provider_id" class="form-control"
+                                    style="height: 56px;padding: 0 12px;border-radius:
+                                                                    8px !important;border: solid 1px #d1d5db;">
+                                <option> </option>
+                                @foreach($provider as $myProvider)
+                                    <option
+                                        value="{{$myProvider->id}}" >{{$myProvider->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <button type="submit"
+                                class="btn btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
+                                style="
+                                                               width: 125px;
+                                                               height: 32.2px;
+                                                               /*flex-grow: 0;*/
+                                                               /*display: flex;*/
+                                                               /*flex-direction: column;*/
+                                                               /*justify-content: center;*/
+                                                               border-color: #7952b3;
+                                                               align-items: center;
+                                                               /*margin: -155px 0 0 755px;*/
+                                                               padding: 0;
+                                                               border-radius: 8px !important;
+                                                               background-color: #7952b3;
+                                                               font-family: AvenirLTStd-Book;
+                                                               /*font-style: normal;*/
+                                                               /*font-weight: 600;*/
+                                                               /*font-size: 14px;*/
+                                                               /* line-height: 24px; */
+                                                               color: #FFFFFF;
+                                                               font-size: 13px;
+                                                               letter-spacing: 1px;
+                                                               ">
+                            Save Change
+                        </button>
                     </form>
                 </div>
             </div>

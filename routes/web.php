@@ -92,27 +92,27 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/provider/workspace', [Provider\WorkSpaceController::class, 'index'])->name('workSpaces');
     Route::get('/provider/add-workspace', [Provider\WorkSpaceController::class, 'create'])->name('workSpaceCreate');
-    Route::get('/provider/add-workspace', [Provider\WorkSpaceController::class, 'store'])->name('workSpaceStore');
+    Route::post('/provider/add-workspace', [Provider\WorkSpaceController::class, 'store'])->name('workSpaceStore');
     Route::get('/provider/delete-workspace/{id}', [Provider\WorkSpaceController::class, 'destroy']);
     Route::get('/provider/edit-workspace/{id}', [Provider\WorkSpaceController::class, 'edit']);
-    Route::post('/provider/edit-workspace', [Provider\WorkSpaceController::class, 'update'])->name('update');
+    Route::post('/provider/edit-workspace', [Provider\WorkSpaceController::class, 'update'])->name('updateWorkspace');
 
     Route::get('/provider/worker', [Provider\WorkerController::class, 'index'])->name('worker');
     Route::get('/provider/add-worker', [Provider\WorkerController::class, 'create'])->name('workerCreate');
-    Route::get('/provider/add-worker', [Provider\WorkerController::class, 'store'])->name('workerStore');
+    Route::post('/provider/add-worker', [Provider\WorkerController::class, 'store'])->name('workerStore');
     Route::get('/provider/delete-worker/{id}', [Provider\WorkerController::class, 'destroy']);
     Route::get('/provider/edit-worker/{id}', [Provider\WorkerController::class, 'edit']);
-    Route::post('/provider/edit-worker', [Provider\WorkerController::class, 'update'])->name('update');
+    Route::post('/provider/edit-worker', [Provider\WorkerController::class, 'update'])->name('updateWorker');
 
     Route::get('/provider/policies', [Provider\PoliciesController::class, 'index'])->name('policies');
     Route::get('/provider/add-policies', [Provider\PoliciesController::class, 'create'])->name('policiesCreate');
-    Route::get('/provider/add-policies', [Provider\PoliciesController::class, 'store'])->name('policiesStore');
+    Route::post('/provider/add-policies', [Provider\PoliciesController::class, 'store'])->name('policiesStore');
     Route::get('/provider/delete-policies/{id}', [Provider\PoliciesController::class, 'destroy']);
     Route::get('/provider/edit-policies/{id}', [Provider\PoliciesController::class, 'edit']);
-    Route::post('/provider/edit-policies', [Provider\PoliciesController::class, 'update'])->name('update');
+    Route::post('/provider/edit-policies', [Provider\PoliciesController::class, 'update'])->name('updatePolicies');
 
     Route::get('/provider/edit-profile/{id}', [Provider\ProviderController::class, 'edit']);
-    Route::post('/provider/edit-profile', [Provider\ProviderController::class, 'update'])->name('update');
+    Route::post('/provider/edit-profile', [Provider\ProviderController::class, 'update'])->name('updateProfile');
 
 
 });

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Provider;
 
 use App\Http\Controllers\Controller;
 use App\Models\Policies;
+use App\Models\Provider;
 use Illuminate\Http\Request;
 
 class PoliciesController extends Controller
@@ -22,21 +23,27 @@ class PoliciesController extends Controller
     }
     public function create()
     {
-        return view('admin.policies.addPolicies');
+        $provider = Provider::all();
+        return view('admin.policies.addPolicies',compact('provider'));
     }
 
     public function store(Request $request)
     {
         $this->validate($request, [
-            'capacity' => 'required',
-            'work_space_type_id' => 'required',
+            'title' => 'required',
+            'body' => 'required',
             'provider_id' => 'required',
         ]);
 
-        $workspace = Policies::create(['capacity' => $request->input('capacity'),
-            'work_space_type_id' => $request->input('work_space_type_id'),
-            'provider_id' => $request->input('provider_id'),
-        ]);
+//        $workspace = Policies::create(['title' => $request->input('title'),
+//            'body' => $request->input('body'),
+//        ]);
+        $policies = new Policies();
+        $policies->title = $request->input('title');
+        $policies->body = $request->input('body');
+        $policies->provider_id = $request->input('provider_id');
+        $policies->save();
+
 
         return back()->with('success', trans('cp.messages.roles.role_created'));
     }
@@ -44,22 +51,24 @@ class PoliciesController extends Controller
     public function edit($id)
     {
         $policies = Policies::findOrFail($id);
-        return view('admin.policies.editPolicies', compact('policies'));
+        $provider = Provider::all();
+        return view('admin.policies.editPolicies', compact('policies','provider'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
+        $id = request('id');
         $this->validate($request, [
-            'capacity' => 'required',
-            'work_space_type_id' => 'required',
+            'title' => 'required',
+            'body' => 'required',
             'provider_id' => 'required',
         ]);
 
-        $workspace = Policies::findOrFail($id);
-        $workspace->capacity = $request->input('capacity');
-        $workspace->work_space_type_id = $request->input('work_space_type_id');
-        $workspace->provider_id = $request->input('provider_id');
-        $workspace->save();
+        $policies = Policies::findOrFail($id);
+        $policies->title = $request->input('title');
+        $policies->body = $request->input('body');
+        $policies->provider_id = $request->input('provider_id');
+        $policies->save();
 
         return back()->with('success', trans('cp.messages.roles.role_updated'));
     }

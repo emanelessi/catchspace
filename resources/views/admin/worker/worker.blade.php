@@ -150,7 +150,9 @@
                                     <a class="btn btn-sm blue btn-outline btn-circle margin-top--70 btn-filter"
                                        href="javascript:;"
                                        data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
-                                       aria-expanded="true"> Filter By
+                                       aria-expanded="true">
+                                        <i class="fa fa-filter " style="color: #7952B3 !important;"></i>
+                                        Filter By
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <div
@@ -218,17 +220,17 @@
                 <div class="page-head">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1 class="margin-top--10 head-title">My workers</h1>
+                        <h1 class="margin-top--10 head-title">My Workers</h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
                     @can('worker_create')
                         <div class="page-toolbar">
-                            <a href="#" type="button" class="demo-loading-btn btn btn-primary add-btn">
+                            <a href="{{route('workerCreate')}}" type="button"
+                               class="demo-loading-btn btn btn-primary add-btn">
                                 <i class="fa fa-plus-circle"></i>
                                 Add worker
                             </a>
-
                             <!-- END PAGE TOOLBAR -->
                         </div>
                     @endcan
@@ -244,11 +246,13 @@
                     border-color: #E5E5E5;
 ">
                                     <div class="actions">
-                                        <div class="btn-group open">
+                                        <div class="btn-group">
                                             <a class="btn btn-sm blue btn-outline btn-circle margin-top-20 btn-filter"
                                                href="javascript:;"
                                                data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
-                                               aria-expanded="true"> Filter By
+                                               aria-expanded="true">
+                                                <i class="fa fa-filter " style="color: #7952B3 !important;"></i>
+                                                Filter By
                                                 <i class="fa fa-angle-down"></i>
                                             </a>
                                             <div
@@ -283,6 +287,10 @@
                                                 </th>
                                                 <th class="table-th"> Job title
                                                 </th>
+                                                <th class="table-th"> You Did
+                                                </th>
+                                                <th class="table-th"> workspaces
+                                                </th>
                                                 <th class="table-th"> status
                                                 </th>
                                                 <th class="table-th"> action
@@ -294,12 +302,17 @@
                                                 <tr>
                                                     <td class="table-td">  {{$myworker->id}}
                                                     </td>
-                                                    <td class="table-td"><img alt="" class="img-circle"
-                                                                              src="{{'/storage/'.$myworker->avatar}}"/>
+                                                    <td class="table-td">
+                                                        <img alt="" class="img-circle"
+                                                           src="{{'/storage/'.$myworker->avatar}}"/>
                                                     </td>
                                                     <td class="table-td"> {{$myworker->name}}
                                                     </td>
                                                     <td class="table-td"> {{$myworker->job_title}}
+                                                    </td>
+                                                    <td class="table-td"> {{$myworker->you_did}}
+                                                    </td>
+                                                    <td class="table-td"> {{$myworker->workspaces['id']}}
                                                     </td>
                                                     <td class="table-td"> /
                                                     </td>
