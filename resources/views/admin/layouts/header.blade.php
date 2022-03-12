@@ -185,31 +185,14 @@
                             @endcan
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
+                            @can('permission_access')
                             <li>
-                                <a href="page_user_profile_1.html">
-                                    <i class="icon-user"></i> My Profile </a>
+                                <a href="{{ route('profile') }}">
+                                    <i class="icon-user" style="color: #7952B3 !important;"></i>  Profile </a>
                             </li>
-                            <li>
-                                <a href="app_calendar.html">
-                                    <i class="icon-calendar"></i> My Calendar </a>
-                            </li>
-                            <li>
-                                <a href="app_inbox.html">
-                                    <i class="icon-envelope-open"></i> My Inbox
-                                    <span class="badge badge-danger"> 3 </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="app_todo_2.html">
-                                    <i class="icon-rocket"></i> My Tasks
-                                    <span class="badge badge-success"> 7 </span>
-                                </a>
-                            </li>
+                            @endcan
+
                             <li class="divider"></li>
-                            <li>
-                                <a href="page_user_lock_1.html">
-                                    <i class="icon-lock"></i> Lock Screen </a>
-                            </li>
                             <li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
@@ -217,7 +200,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    <i class="icon-key"></i> Log Out
+                                    <i class="icon-key"  style="color: #7952B3 !important;"></i> Log Out
                                 </a>
                             </li>
                         </ul>

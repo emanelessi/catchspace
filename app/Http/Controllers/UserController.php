@@ -19,6 +19,7 @@ class UserController extends Controller
         $this->middleware('permission:user_create', ['only' => ['create','store']]);
         $this->middleware('permission:user_edit', ['only' => ['edit','update']]);
         $this->middleware('permission:user_delete', ['only' => ['destroy']]);
+        $this->middleware('permission:permission_access', ['only' => ['profile']]);
 
     }
 
@@ -144,6 +145,12 @@ class UserController extends Controller
     {
         User::findOrFail($id)->delete();
         return back()->with('success', trans('cp.messages.roles.role_deleted'));
+    }
+
+    public function profile()
+    {
+        $user=auth()->user();
+        return view('admin.profile')->with(compact('user'));
     }
 
 }

@@ -65,6 +65,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/delete-user/{id}', [\App\Http\Controllers\UserController::class, 'destroy']);
     Route::get('/admin/edit-user/{id}', [\App\Http\Controllers\UserController::class, 'edit']);
     Route::post('/admin/edit-user', [\App\Http\Controllers\UserController::class, 'update'])->name('userupdate');
+    Route::get('/admin/profile', [\App\Http\Controllers\UserController::class, 'profile'])->name('profile');
 
     Route::get('/admin/provider', [\App\Http\Controllers\ProviderController::class, 'show']);
     Route::get('/admin/add-provider', [\App\Http\Controllers\ProviderController::class, 'create'])->name('providercreate');
