@@ -10,7 +10,12 @@ class WorkSpaceService extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'value',
+        'work_space_id',
+        'service_id'
 
+    ];
     public function service()
     {
         return $this->belongsTo(Service::class, 'service_id');

@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\WorkSpace;
 use App\Models\WorkSpaceAddons;
 use App\Models\WorkSpaceService;
+use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
 
 class WorkSpaceController extends Controller
@@ -17,25 +18,26 @@ class WorkSpaceController extends Controller
     function __construct()
     {
         $this->middleware('permission:workspace_access', ['only' => ['index']]);
-        $this->middleware('permission:workspace_create', ['only' => ['store','create']]);
-        $this->middleware('permission:workspace_edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:workspace_create', ['only' => ['store', 'create']]);
+        $this->middleware('permission:workspace_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
-        $this->middleware('permission:services_access', ['only' => ['services']]);
-        $this->middleware('permission:pricing_access', ['only' => ['pricing']]);
-        $this->middleware('permission:addons_access', ['only' => ['addons']]);
+
     }
+
     public function index()
     {
-        $work_space = WorkSpace::where('provider_id',auth()->user()->provider->id)->get();
-        $pricing= Pricing::all();
-        $work_space_service= WorkSpaceService::all();
-        $service=Service::all();
-        $rent_type= RentType::all();
-        return view('admin.workSpace.workSpace', compact('work_space','pricing','work_space_service','service','rent_type'));
+        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
+        $pricing = Pricing::all();
+        $work_space_service = WorkSpaceService::all();
+        $service = Service::all();
+        $rent_type = RentType::all();
+        return view('admin.workSpace.workSpace', compact('work_space', 'pricing', 'work_space_service', 'service', 'rent_type'));
     }
+
     public function create()
     {
-        return view('admin.workSpace.addWorkSpace');
+        $type = WorkSpaceType::all();
+        return view('admin.workSpace.addWorkSpace', compact('type'));
     }
 
     public function store(Request $request)
@@ -57,7 +59,8 @@ class WorkSpaceController extends Controller
     public function edit($id)
     {
         $workspace = WorkSpace::findOrFail($id);
-        return view('admin.workSpace.editWorkSpace', compact('workspace'));
+        $type = WorkSpaceType::all();
+        return view('admin.workSpace.editWorkSpace', compact('workspace', 'type'));
     }
 
     public function update(Request $request, $id)
@@ -83,22 +86,5 @@ class WorkSpaceController extends Controller
         return back()->with('success', trans('cp.messages.roles.role_deleted'));
     }
 
-    public function services($id)
-    {
-        $workspace = WorkSpace::findOrFail($id);
-        $services = WorkSpaceService::where('work_space_id', $workspace->id)->get();
-        return view('admin.workSpace.services', compact('services'));
-    }
-    public function pricing($id)
-    {
-        $workspace = WorkSpace::findOrFail($id);
-        $pricing = Pricing::where('work_space_id', $workspace->id)->get();
-        return view('admin.workSpace.pricing', compact('pricing'));
-    }
-    public function addons($id)
-    {
-        $workspace = WorkSpace::findOrFail($id);
-        $addons= WorkSpaceAddons::where('work_space_id', $workspace->id)->get();
-        return view('admin.workSpace.addons', compact('addons'));
-    }
+
 }

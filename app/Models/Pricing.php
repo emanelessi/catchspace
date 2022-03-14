@@ -10,7 +10,12 @@ class Pricing extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'price',
+        'work_space_id',
+        'rent_type_id',
 
+    ];
     public function workSpace()
     {
         return $this->belongsTo(WorkSpace::class, 'work_space_id');

@@ -93,6 +93,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/workspace/pricing/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'pricing']);
     Route::get('/admin/workspace/addons/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'addons']);
 
+    Route::get('/provider/workspace/services/{id}', [Provider\WorkSpaceController::class, 'services']);
+    Route::get('/provider/workspace/pricing/{id}', [Provider\WorkSpaceController::class, 'pricing']);
+    Route::get('/provider/workspace/addons/{id}', [Provider\WorkSpaceController::class, 'addons']);
+
     Route::get('/provider/workspace', [Provider\WorkSpaceController::class, 'index'])->name('workSpaces');
     Route::get('/provider/add-workspace', [Provider\WorkSpaceController::class, 'create'])->name('workSpaceCreate');
     Route::post('/provider/add-workspace', [Provider\WorkSpaceController::class, 'store'])->name('workSpaceStore');
@@ -100,9 +104,26 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/provider/edit-workspace/{id}', [Provider\WorkSpaceController::class, 'edit']);
     Route::post('/provider/edit-workspace', [Provider\WorkSpaceController::class, 'update'])->name('updateWorkspace');
 
-    Route::get('/provider/workspace/services/{id}', [Provider\WorkSpaceController::class, 'services']);
-    Route::get('/provider/workspace/pricing/{id}', [Provider\WorkSpaceController::class, 'pricing']);
-    Route::get('/provider/workspace/addons/{id}', [Provider\WorkSpaceController::class, 'addons']);
+    Route::get('/provider/workspace/services/{id}', [Provider\ServiceController::class, 'index']);
+    Route::get('/provider/workspace/add-service/{id}', [Provider\ServiceController::class, 'create']);
+    Route::post('/provider/workspace/add-service', [Provider\ServiceController::class, 'store'])->name('serviceStore');
+    Route::get('/provider/workspace/delete-service/{id}', [Provider\ServiceController::class, 'destroy']);
+    Route::get('/provider/workspace/edit-service/{id}', [Provider\ServiceController::class, 'edit']);
+    Route::post('/provider/workspace/edit-service', [Provider\ServiceController::class, 'update'])->name('updateService');
+
+    Route::get('/provider/workspace/pricing/{id}', [Provider\PricingController::class, 'index']);
+    Route::get('/provider/workspace/add-pricing/{id}', [Provider\PricingController::class, 'create']);
+    Route::post('/provider/workspace/add-pricing', [Provider\PricingController::class, 'store'])->name('pricingStore');
+    Route::get('/provider/workspace/delete-pricing/{id}', [Provider\PricingController::class, 'destroy']);
+    Route::get('/provider/workspace/edit-pricing/{id}', [Provider\PricingController::class, 'edit']);
+    Route::post('/provider/workspace/edit-pricing', [Provider\PricingController::class, 'update'])->name('updatePricing');
+
+    Route::get('/provider/workspace/addons/{id}', [Provider\AddonsController::class, 'addons']);
+    Route::get('/provider/workspace/add-addon/{id}', [Provider\AddonsController::class, 'create']);
+    Route::post('/provider/workspace/add-addon', [Provider\AddonsController::class, 'store'])->name('addonStore');
+    Route::get('/provider/workspace/delete-addon/{id}', [Provider\AddonsController::class, 'destroy']);
+    Route::get('/provider/workspace/edit-addon/{id}', [Provider\AddonsController::class, 'edit']);
+    Route::post('/provider/workspace/edit-addon', [Provider\AddonsController::class, 'update'])->name('updateAddon');
 
     Route::get('/provider/worker', [Provider\WorkerController::class, 'index'])->name('worker');
     Route::get('/provider/add-worker', [Provider\WorkerController::class, 'create'])->name('workerCreate');

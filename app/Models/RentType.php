@@ -10,7 +10,10 @@ class RentType extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'type',
 
+    ];
     public function pricing()
     {
         return $this->hasMany(Pricing::class, 'rent_type_id', 'id');

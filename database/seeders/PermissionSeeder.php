@@ -63,6 +63,15 @@ class PermissionSeeder extends Seeder
             'services_access',
             'pricing_access',
             'addons_access',
+            'services_create',
+            'services_delete',
+            'services_edit',
+            'pricing_create',
+            'pricing_delete',
+            'pricing_edit',
+            'addons_create',
+            'addons_delete',
+            'addons_edit',
 
         ];
 
@@ -104,6 +113,15 @@ class PermissionSeeder extends Seeder
             'services_access',
             'pricing_access',
             'addons_access',
+            'services_create',
+            'services_delete',
+            'services_edit',
+            'pricing_create',
+            'pricing_delete',
+            'pricing_edit',
+            'addons_create',
+            'addons_delete',
+            'addons_edit',
 
         ];
 

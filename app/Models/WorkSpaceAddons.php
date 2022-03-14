@@ -10,7 +10,12 @@ class WorkSpaceAddons extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'value',
+        'work_space_id',
+        'addon_id',
 
+    ];
     public function workSpace()
     {
         return $this->belongsTo(WorkSpace::class, 'work_space_id');

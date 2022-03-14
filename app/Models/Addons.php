@@ -11,7 +11,10 @@ class Addons extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'name',
 
+    ];
     public function workSpaceAddons()
     {
         return $this->hasMany(WorkSpaceAddons::class, 'addon_id', 'id');
