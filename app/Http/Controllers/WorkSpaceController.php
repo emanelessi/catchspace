@@ -89,18 +89,18 @@ class WorkSpaceController extends Controller
     {
         $workspace = WorkSpace::findOrFail($id);
         $services = WorkSpaceService::where('work_space_id', $workspace->id)->get();
-        return view('admin.workSpace.services', compact('services'));
+        return view('admin.workSpace.service.services', compact('services'));
     }
     public function pricing($id)
     {
         $workspace = WorkSpace::findOrFail($id);
         $pricing = Pricing::where('work_space_id', $workspace->id)->get();
-        return view('admin.workSpace.pricing', compact('pricing'));
+        return view('admin.workSpace.pricing.pricing', compact('pricing'));
     }
     public function addons($id)
     {
         $workspace = WorkSpace::findOrFail($id);
         $addons= WorkSpaceAddons::where('work_space_id', $workspace->id)->get();
-        return view('admin.workSpace.addons', compact('addons'));
+        return view('admin.workSpace.addons.addons', compact('addons'));
     }
 }
