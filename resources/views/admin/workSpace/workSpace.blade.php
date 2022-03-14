@@ -231,27 +231,27 @@
                                             <td class="table-td">{{$myworkspace->capacity}}</td>
                                             <td class="table-td"> {{$myworkspace->workSpaceType->type}}
                                             </td>
-                                            @can('services_access')
+                                            @can('services_show')
                                                 <td class="table-td">
                                                     <a href="/admin/workspace/services/{{$myworkspace->id}}"
                                                        style="margin-left: 10px">
-                                                        <i class="fa fa-server" style="color: #000000 !important;"></i>
+                                                        <i class="fa fa-server" style="color: #7952B3 !important;"></i>
                                                     </a>
                                                 </td>
                                             @endcan
-                                            @can('pricing_access')
+                                            @can('pricing_show')
                                                 <td class="table-td">
                                                     <a href="/admin/workspace/pricing/{{$myworkspace->id}}"
                                                        style="margin-left: 10px">
-                                                        <i class="fa fa-money" style="color: #000000 !important;"></i>
+                                                        <i class="fa fa-money " style="color: #7952B3 !important;"></i>
                                                     </a>
                                                 </td>
                                             @endcan
-                                            @can('addons_access')
+                                            @can('addons_show')
                                                 <td class="table-td">
                                                     <a href="/admin/workspace/addons/{{$myworkspace->id}}"
                                                        style="margin-left: 10px">
-                                                        <i class="fa fa-plus-square" style="color: #000000 !important;"></i>
+                                                        <i class="fa fa-plus-square" style="color: #7952B3 !important;"></i>
                                                     </a>
                                                 </td>
                                             @endcan
@@ -265,13 +265,13 @@
                                                     <a href="/admin/delete-workspace/{{$myworkspace->id}}"
                                                        data-target="#static2" data-toggle="modal"
                                                        style="margin-left: 10px">
-                                                        <i class="fa fa-trash" style="color: #000000 !important;"></i>
+                                                        <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
                                                     </a>
                                                 @endcan
 
                                                 @can('workspace_edit')
                                                     <a href="/admin/edit-workspace/{{$myworkspace->id}}">
-                                                        <i class="fa fa-pencil" style="color: #000000 !important;"></i>
+                                                        <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
                                                     </a>
                                                 @endcan
                                             </td>
@@ -308,7 +308,7 @@
                 <div class="page-head">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1 class="margin-top--10 head-title">Tools</h1>
+                        <h1 class="margin-top--10 head-title">Workspaces</h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
@@ -334,10 +334,10 @@
                     border-color: #E5E5E5;
 ">
                                     <div class="caption">
-                            <span class="caption-subject font-red sbold " style="
-                            color: #333333!important;  font-size: 20px;  font-family: AvenirLTStd-Book;
-">
-                                Types of workspaces in Tools </span>
+{{--                            <span class="caption-subject font-red sbold " style="--}}
+{{--                            color: #333333!important;  font-size: 20px;  font-family: AvenirLTStd-Book;--}}
+{{--">--}}
+{{--                                Workspaces</span>--}}
                                     </div>
                                     <div class="actions">
                                         <div class="btn-group ">
@@ -374,11 +374,11 @@
                                             <tr style="border-bottom: 2px solid #F2F5F8;">
                                                 <th class="table-th"> #
                                                 </th>
+                                                <th class="table-th"> Capacity
+                                                </th>
                                                 <th class="table-th"> Type
                                                 </th>
                                                 <th class="table-th"> Services
-                                                </th>
-                                                <th class="table-th"> Capacity
                                                 </th>
                                                 <th class="table-th"> Pricing
                                                 </th>
@@ -397,32 +397,32 @@
                                                 <tr>
                                                     <td class="table-td"> {{$myworkspace->id}}
                                                     </td>
-                                                    <td class="table-td"> {{$myworkspace->workSpaceType->type}}
+                                                    <td class="table-td"> {{$myworkspace->capacity}}
                                                     </td>
-                                                    @can('services_show')
+
+
+                                                    <td class="table-td">{{$myworkspace->workSpaceType->type}}</td>
+                                                    @can('services_access')
                                                         <td class="table-td">
-                                                            <a href="/admin/workspace/services/{{$myworkspace->id}}"
+                                                            <a href="/provider/workspace/services/{{$myworkspace->id}}"
                                                                style="margin-left: 10px">
-                                                                <i class="fa fa-server" style="color: #000000 !important;"></i>
+                                                                <i class="fa fa-server" style="color: #7952B3 !important;"></i>
                                                             </a>
                                                         </td>
                                                     @endcan
-
-                                                    <td class="table-td">{{$myworkspace->capacity}}</td>
-
-                                                    @can('pricing_show')
+                                                    @can('pricing_access')
                                                         <td class="table-td">
-                                                            <a href="/admin/workspace/pricing/{{$myworkspace->id}}"
+                                                            <a href="/provider/workspace/pricing/{{$myworkspace->id}}"
                                                                style="margin-left: 10px">
-                                                                <i class="fa fa-money" style="color: #000000 !important;"></i>
+                                                                <i class="fa fa-money" style="color: #7952B3 !important;"></i>
                                                             </a>
                                                         </td>
                                                     @endcan
-                                                    @can('addons_show')
+                                                    @can('addons_access')
                                                         <td class="table-td">
-                                                            <a href="/admin/workspace/addons/{{$myworkspace->id}}"
+                                                            <a href="/provider/workspace/addons/{{$myworkspace->id}}"
                                                                style="margin-left: 10px">
-                                                                <i class="fa fa-plus-square" style="color: #000000 !important;"></i>
+                                                                <i class="fa fa-plus-square" style="color: #7952B3 !important;"></i>
                                                             </a>
                                                         </td>
                                                     @endcan
@@ -434,14 +434,14 @@
                                                                data-target="#static2" data-toggle="modal"
                                                                style="margin-left: 10px">
                                                                 <i class="fa fa-trash"
-                                                                   style="color: #000000 !important;"></i>
+                                                                   style="color: #7952B3 !important;"></i>
 
                                                             </a>
                                                         @endcan
                                                         @can('workspace_edit')
                                                             <a href="/provider/edit-workspace/{{$myworkspace->id}}">
                                                                 <i class="fa fa-pencil"
-                                                                   style="color: #000000 !important;"></i>
+                                                                   style="color: #7952B3 !important;"></i>
 
                                                             </a>
                                                         @endcan

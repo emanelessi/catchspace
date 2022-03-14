@@ -8,6 +8,7 @@ use App\Models\RentType;
 use App\Models\Service;
 use App\Models\User;
 use App\Models\WorkSpace;
+use App\Models\WorkSpaceAddons;
 use App\Models\WorkSpaceService;
 use Illuminate\Http\Request;
 
@@ -19,11 +20,13 @@ class WorkSpaceController extends Controller
         $this->middleware('permission:workspace_create', ['only' => ['store','create']]);
         $this->middleware('permission:workspace_edit', ['only' => ['edit','update']]);
         $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
+        $this->middleware('permission:services_access', ['only' => ['services']]);
+        $this->middleware('permission:pricing_access', ['only' => ['pricing']]);
+        $this->middleware('permission:addons_access', ['only' => ['addons']]);
     }
     public function index()
     {
         $work_space = WorkSpace::where('provider_id',auth()->user()->provider->id)->get();
-//        $work_space = WorkSpace::where('provider_id',auth()->id())->get();
         $pricing= Pricing::all();
         $work_space_service= WorkSpaceService::all();
         $service=Service::all();
@@ -76,8 +79,26 @@ class WorkSpaceController extends Controller
 
     public function destroy($id)
     {
-
         $workspace = WorkSpace::findOrFail($id)->delete();
         return back()->with('success', trans('cp.messages.roles.role_deleted'));
+    }
+
+    public function services($id)
+    {
+        $workspace = WorkSpace::findOrFail($id);
+        $services = WorkSpaceService::where('work_space_id', $workspace->id)->get();
+        return view('admin.workSpace.services', compact('services'));
+    }
+    public function pricing($id)
+    {
+        $workspace = WorkSpace::findOrFail($id);
+        $pricing = Pricing::where('work_space_id', $workspace->id)->get();
+        return view('admin.workSpace.pricing', compact('pricing'));
+    }
+    public function addons($id)
+    {
+        $workspace = WorkSpace::findOrFail($id);
+        $addons= WorkSpaceAddons::where('work_space_id', $workspace->id)->get();
+        return view('admin.workSpace.addons', compact('addons'));
     }
 }

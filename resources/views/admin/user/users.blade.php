@@ -236,13 +236,13 @@
                                             @can('user_delete')
                                                 <a href="/admin/delete-user/{{$user->id}}" data-target="#static2"
                                                    data-toggle="modal" style="margin-left: 10px">
-                                                    <i class="fa fa-trash" style="color: #000000 !important;"></i>
+                                                    <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
 
                                                 </a>
                                             @endcan
                                             @can('user_edit')
                                                 <a href="/admin/edit-user/{{$user->id}}">
-                                                    <i class="fa fa-pencil" style="color: #000000 !important;"></i>
+                                                    <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
 
                                                 </a>
                                             @endcan

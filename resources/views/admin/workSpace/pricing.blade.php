@@ -139,7 +139,7 @@
         }
 
     </style>
-    @can('services_show')
+    @can('pricing_show')
 
         <div class="page-head">
             <!-- BEGIN PAGE TITLE -->

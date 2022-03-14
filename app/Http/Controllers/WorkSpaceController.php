@@ -18,9 +18,9 @@ class WorkSpaceController extends Controller
         $this->middleware('permission:workspace_create', ['only' => ['store', 'create']]);
         $this->middleware('permission:workspace_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
-        $this->middleware('permission:services_access', ['only' => ['services']]);
-        $this->middleware('permission:pricing_access', ['only' => ['pricing']]);
-        $this->middleware('permission:addons_access', ['only' => ['addons']]);
+        $this->middleware('permission:services_show', ['only' => ['services']]);
+        $this->middleware('permission:pricing_show', ['only' => ['pricing']]);
+        $this->middleware('permission:addons_show', ['only' => ['addons']]);
     }
 
     public function index()

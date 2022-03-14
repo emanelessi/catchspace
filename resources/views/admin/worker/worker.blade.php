@@ -322,14 +322,14 @@
                                                                data-target="#static2" data-toggle="modal"
                                                                style="margin-left: 10px">
                                                                 <i class="fa fa-trash"
-                                                                   style="color: #000000 !important;"></i>
+                                                                   style="color: #7952B3 !important;"></i>
 
                                                             </a>
                                                         @endcan
                                                         @can('worker_edit')
                                                             <a href="/provider/edit-worker/{{$myworker->id}}">
                                                                 <i class="fa fa-pencil"
-                                                                   style="color: #000000 !important;"></i>
+                                                                   style="color: #7952B3 !important;"></i>
 
                                                             </a>
                                                         @endcan

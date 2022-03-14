@@ -221,7 +221,7 @@
                                             @can('role_delete')
                                                 <a href="/admin/delete-role/{{$myrole->id}}" data-target="#static2"
                                                    data-toggle="modal" style="margin-left: 10px">
-                                                    <i class="fa fa-trash" style="color: #000000 !important;"></i>
+                                                    <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
                                                 </a>
                                             @endcan
                                         </td>

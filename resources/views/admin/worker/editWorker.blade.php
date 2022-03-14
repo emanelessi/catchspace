@@ -79,7 +79,7 @@ color: #333333;
                         float: left;
                         width: 300px;
 ">
-                            <img src="../assets/pages/media/profile/profile_user.jpg"
+                            <img src="{{'/storage/'.$worker->avatar}}"
                                  class="img-responsive" alt="">
                         </div>
                         <!-- END SIDEBAR USERPIC -->
