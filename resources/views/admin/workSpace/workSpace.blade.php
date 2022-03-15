@@ -1,8 +1,8 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    <!-- BEGIN PAGE style -->
     <style>
-
         .btn:hover {
             background-color: #8B62C9 !important;
         }
@@ -137,8 +137,9 @@
             font-size: 13px !important;
             letter-spacing: 1px !important;
         }
-
     </style>
+    <!-- END PAGE style -->
+
     @can('permission_access')
 
         <div class="page-head">
