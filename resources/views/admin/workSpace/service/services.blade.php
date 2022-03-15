@@ -1,8 +1,8 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    <!-- BEGIN PAGE style -->
     <style>
-
         .btn:hover {
             background-color: #8B62C9 !important;
         }
@@ -139,6 +139,8 @@
         }
 
     </style>
+    <!-- END PAGE style -->
+
     @can('services_show')
 
         <div class="page-head">
@@ -194,7 +196,8 @@
                                         <th class="table-th"> Value
                                         </th>
                                         <th class="table-th"> Work Space Capacity
-                                        </th><th class="table-th"> Service Name
+                                        </th>
+                                        <th class="table-th"> Service Name
                                         </th>
 
                                     </tr>
@@ -206,7 +209,8 @@
                                             </td>
                                             <td class="table-td">{{$myservices->value}} $</td>
                                             <td class="table-td"> {{$myservices->workSpace->capacity}}
-                                            </td> <td class="table-td"> {{$myservices->service->name}}
+                                            </td>
+                                            <td class="table-td"> {{$myservices->service->name}}
                                             </td>
 
                                         </tr>
@@ -224,13 +228,14 @@
                 <div class="page-head">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1  class="margin-top--10 head-title">Services</h1>
+                        <h1 class="margin-top--10 head-title">Services</h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
                     @can('services_create')
                         <div class="page-toolbar">
-                            <a href="/provider/workspace/add-service/{{$id}}" type="button" class="demo-loading-btn btn btn-primary add-btn">
+                            <a href="/provider/workspace/add-service/{{$id}}" type="button"
+                               class="demo-loading-btn btn btn-primary add-btn">
                                 <i class="fa fa-plus-circle"></i>
                                 Add Service
                             </a>
@@ -259,7 +264,8 @@
                                                 Filter By
                                                 <i class="fa fa-angle-down"></i>
                                             </a>
-                                            <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right body-filter">
+                                            <div
+                                                class="dropdown-menu hold-on-click dropdown-checkboxes pull-right body-filter">
                                                 <div class="span margin-bottom-2  padding-tb-5 span-filter">
                                                     <span class="margin-left-40">From A to Z</span>
                                                 </div>
@@ -286,7 +292,8 @@
                                                 <th class="table-th"> Value
                                                 </th>
                                                 <th class="table-th"> Work Space Capacity
-                                                </th><th class="table-th"> Service Name
+                                                </th>
+                                                <th class="table-th"> Service Name
                                                 </th>
                                                 <th class="table-th"> Action
                                                 </th>
@@ -300,7 +307,8 @@
                                                     </td>
                                                     <td class="table-td">{{$myservices->value}} $</td>
                                                     <td class="table-td"> {{$myservices->workSpace->capacity}}
-                                                    </td> <td class="table-td"> {{$myservices->service->name}}
+                                                    </td>
+                                                    <td class="table-td"> {{$myservices->service->name}}
                                                     </td>
                                                     <td class="table-td">
                                                         @can('services_delete')

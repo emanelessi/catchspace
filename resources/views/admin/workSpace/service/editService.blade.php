@@ -1,10 +1,12 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
             background-color: #8B62C9 !important;
         }
+
         .page-head {
             margin-bottom: 25px !important;
         }
@@ -14,121 +16,6 @@
             font-size: 33px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
-        }
-
-        .add-btn {
-            border-color: #7952B3 !important;
-            font-family: AvenirLTStd-Book !important;
-            color: #FFFFFF !important;
-            background: #7952B3 !important;
-            border-radius: 5px !important;
-            width: 160px !important;
-            height: 30px !important;
-            font-size: 13px !important;
-        }
-
-        .btn-filter {
-            background-color: #FFFFFF !important;
-            border-color: #FFFFFF !important;
-            border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
-            font-weight: normal;
-        !important font-size: 13 px !important;
-            color: #292D32 !important;
-            width: 90px !important;
-            height: 29px !important;
-            margin-right: -20px !important;
-        }
-
-        .body-filter {
-            background: #FFFFFF !important;
-            border: 1px solid #F4F4F4 !important;
-            box-sizing: border-box !important;
-            border-radius: 10px !important;
-        }
-
-        .span-filter {
-            color: #fff !important;
-            background: #7952B3 !important;
-            border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
-            font-weight: normal !important;
-            font-size: 15px !important;
-            line-height: 15px !important;
-        }
-
-        .table-th {
-            font-family: AvenirLTStd-Book !important;
-            font-size: 20px !important;
-            letter-spacing: -0.022em !important;
-            color: #e7ae04 !important;
-            padding-bottom: 15px !important;
-        }
-
-        .table-td {
-            font-family: AvenirLTStd-Book !important;
-            font-size: 20px !important;
-            letter-spacing: 0.02em !important;
-            color: #000000 !important;
-        }
-
-        .modal-back {
-            background: rgb(255, 255, 255) !important;
-            border-radius: 10px !important;
-            display: block !important;
-            margin-top: -82.5px !important;
-            height: 185px !important;
-            width: 480px !important;
-        }
-
-        .modal-p {
-            font-family: AvenirLTStd-Book !important;
-            font-weight: bold !important;
-            font-size: 18px !important;
-            line-height: 24px !important;
-            text-align: center !important;
-            letter-spacing: -0.011em !important;
-            color: #333333 !important;
-        }
-
-        .btn-cansel {
-            width: 125px !important;
-            height: 32.2px !important;
-            align-items: center !important;
-            padding: 0 !important;
-            border-radius: 8px !important;
-            font-family: AvenirLTStd-Book !important;
-            font-size: 13px !important;
-            letter-spacing: 1px !important;
-            border-radius: 10px !important;
-            border-color: #7952B3 !important;
-        }
-
-        .btn-delete {
-            width: 125px !important;
-            height: 32.2px !important;
-            border-color: #7952b3 !important;
-            align-items: center !important;
-            padding: 0 !important;
-            border-radius: 8px !important;
-            background-color: #7952b3 !important;
-            font-family: AvenirLTStd-Book !important;
-            color: #FFFFFF !important;
-            font-size: 13px !important;
-            letter-spacing: 1px !important;
-        }
-
-        .img-logo {
-            border-color: #eaeaea !important;
-            align-items: center !important;
-            padding: 5px !important;
-            border-radius: 8px !important;
-            background-color: #eaeaea !important;
-            font-family: AvenirLTStd-Book !important;
-            font-size: 14px !important;
-            line-height: 24px !important;
-            color: #6B7280 !important;
-            width: 157px !important;
         }
 
         .form-input {
@@ -152,12 +39,13 @@
         }
 
     </style>
+    <!-- END PAGE style -->
+
     @can('provider_access')
-        <div class="page-head" style="margin-bottom: 25px;">
+        <div class="page-head">
             <!-- BEGIN PAGE TITLE -->
             <div class="page-title">
-                <h1 style="width: 557px;height: 47px;left: 296px;top: 104px;font-style: normal;font-weight: 600;font-size: 30px;line-height: 48px;
-/* or 120% */letter-spacing: -0.022em;color: #333333;font-family: Poppins-Semibold;margin-bottom: 20px;">Edit Service</h1>
+                <h1 class="margin-top--10 head-title">Edit Service</h1>
             </div>
             <!-- END PAGE TITLE -->
             <div class="row">
@@ -184,55 +72,25 @@
                                                                 Value *</label>
                                                             <input type="number" name="value"
                                                                    placeholder="value"
-                                                                   class="form-control" value="{{$workSpaceService->value}}"
-                                                                   style="
-                                                                       height: 40px;
-                                                                       /*padding: 0 12px;*/
-                                                                       border-radius: 8px !important;
-                                                                       border: solid 1px #d1d5db;"/>
-                                                            <input type="hidden" name="id" value="{{$workSpaceService->id}}" />
-                                                            <input type="hidden" name="work_space_id" value="{{$work_space_id}}" />
+                                                                   class="form-control form-input"
+                                                                   value="{{$workSpaceService->value}}"/>
+                                                            <input type="hidden" name="id"
+                                                                   value="{{$workSpaceService->id}}"/>
+                                                            <input type="hidden" name="work_space_id"
+                                                                   value="{{$work_space_id}}"/>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label class="control-label margin-left-9"
                                                                    style="color:#6B7280;">Service
                                                                 name *</label>
-                                                            <input type="text" name="name" value="{{$workSpaceService->service->name}}"
+                                                            <input type="text" name="name"
+                                                                   value="{{$workSpaceService->service->name}}"
                                                                    placeholder="name"
-                                                                   class="form-control"
-                                                                   style="
-                                                                       height: 40px;
-                                                                       /*padding: 0 12px;*/
-                                                                       border-radius: 8px !important;
-                                                                       border: solid 1px #d1d5db;"/>
+                                                                   class="form-control form-input"/>
                                                         </div>
 
-
-
                                                         <button type="submit"
-                                                                class="btn btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
-                                                                style="
-                                                               width: 125px;
-                                                               height: 32.2px;
-                                                               /*flex-grow: 0;*/
-                                                               /*display: flex;*/
-                                                               /*flex-direction: column;*/
-                                                               /*justify-content: center;*/
-                                                               border-color: #7952b3;
-                                                               align-items: center;
-                                                               /*margin: -155px 0 0 755px;*/
-                                                               padding: 0;
-                                                               border-radius: 8px !important;
-                                                               background-color: #7952b3;
-                                                               font-family: AvenirLTStd-Book;
-                                                               /*font-style: normal;*/
-                                                               /*font-weight: 600;*/
-                                                               /*font-size: 14px;*/
-                                                               /* line-height: 24px; */
-                                                               color: #FFFFFF;
-                                                               font-size: 13px;
-                                                               letter-spacing: 1px;
-                                                               ">
+                                                                class="btn btn-submit btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 ">
                                                             Save Change
                                                         </button>
                                                     </form>
