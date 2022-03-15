@@ -103,6 +103,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/provider/delete-workspace/{id}', [Provider\WorkSpaceController::class, 'destroy']);
     Route::get('/provider/edit-workspace/{id}', [Provider\WorkSpaceController::class, 'edit']);
     Route::post('/provider/edit-workspace', [Provider\WorkSpaceController::class, 'update'])->name('updateWorkspace');
+    Route::get('/provider/workspace/services/{id}', [Provider\WorkSpaceController::class, 'services']);
 
     Route::get('/provider/workspace/services/{id}', [Provider\ServiceController::class, 'index']);
     Route::get('/provider/workspace/add-service/{id}', [Provider\ServiceController::class, 'create']);
