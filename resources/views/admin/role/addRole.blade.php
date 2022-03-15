@@ -1,6 +1,7 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
             background-color: #8B62C9 !important;
@@ -41,6 +42,8 @@
             letter-spacing: 1px !important;
         }
     </style>
+    <!-- END PAGE style -->
+
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">

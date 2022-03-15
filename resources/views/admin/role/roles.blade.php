@@ -1,6 +1,7 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    <!-- BEGIN PAGE style -->
     <style>
 
         .btn:hover {
@@ -137,8 +138,9 @@
             font-size: 13px !important;
             letter-spacing: 1px !important;
         }
-
     </style>
+    <!-- END PAGE style -->
+
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
