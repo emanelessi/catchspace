@@ -43,7 +43,7 @@ class AddonsController extends Controller
         $workSpaceAddons = WorkSpaceAddons::create(['value' => $request->input('value'),
             'work_space_id' => $request->input('work_space_id'), 'addon_id' => $addons->id,]);
 
-        return back()->with('success', trans('cp.messages.roles.role_created'));
+        return back()->with('success', trans('messages.addons.addons_created'));
     }
 
     public function edit($id)
@@ -71,7 +71,7 @@ class AddonsController extends Controller
         $workSpaceAddons->addon_id = $addons->id;
         $workSpaceAddons->save();
 
-        return back()->with('success', trans('cp.messages.roles.role_updated'));
+        return back()->with('success', trans('messages.addons.addons_updated'));
     }
 
     public function destroy($id)
@@ -79,6 +79,6 @@ class AddonsController extends Controller
         $workSpaceAddonsId = WorkSpaceAddons::findOrFail($id);
         $addons = Addons::findOrFail($workSpaceAddonsId->addon->id)->delete();
         $workSpaceAddons = $workSpaceAddonsId->delete();
-        return back()->with('success', trans('cp.messages.roles.role_deleted'));
+        return back()->with('success', trans('messages.addons.addons_deleted'));
     }
 }

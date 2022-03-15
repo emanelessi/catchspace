@@ -79,8 +79,11 @@ font-size: 17px">
                 </div>
             </div>
         </div>
-        <!-- END Portlet PORTLET-->
-    </div>
+        @if(session()->has('success'))
+            <div class="alert alert-success">
+                {{ session()->get('success') }}
+            </div>
+        @endif      </div>
 
 
 @endsection

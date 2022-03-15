@@ -54,17 +54,6 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-//        $user_level_id = $request['user_level_id'];
-//        $provider_user_level_id = config('roles.provider');
-
-//        if ($user_level_id == $provider_user_level_id) {
-//            if (!$provider_user_level_id = $request['provider_id']) {
-//                return back()->with('error', trans('cp.messages.fill_information'));
-//            }
-//        }
-//        $request['created_by'] = auth()->user()->id;
-
-//        $user = User::createInstance($request->all());
         $user = new User();
         $user->full_name = request('full_name');
         $user->email = request('email');
@@ -75,7 +64,7 @@ class UserController extends Controller
         $user->provider_id = $request->input('type') == 1 ? null : $request->input('provider');
         $user->save();
         DB::table('model_has_roles')->insert(['role_id' => request('role'), 'model_type' => "App\Models\User", 'model_id' => $user->id]);
-        return back()->with('success', trans('cp.messages.add_success'));
+        return back()->with('success', trans('messages.user.user_created'));
 
     }
 
@@ -138,13 +127,13 @@ class UserController extends Controller
             }
         }
 
-        return back()->with('success', trans('cp.messages.modify_success'));
+        return back()->with('success', trans('messages.user.user_updated'));
     }
 
     public function destroy($id)
     {
         User::findOrFail($id)->delete();
-        return back()->with('success', trans('cp.messages.roles.role_deleted'));
+        return back()->with('success', trans('messages.user.user_deleted'));
     }
 
     public function profile()

@@ -180,8 +180,12 @@ font-size: 17px">{{$myPolicies->provider->name}}</h4>
                     <!-- END Portlet PORTLET-->
                 </div>
             @endforeach
-
-            <div id="static2" class="modal fade"
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
+                <div id="static2" class="modal fade"
                  tabindex="-1" data-backdrop="static"
                  data-keyboard="false" data-attention-animation="false"
                  style="background: rgb(255, 255, 255);border-radius: 10px !important;display: block;margin-top: -82.5px;height: 185px;width: 480px;">

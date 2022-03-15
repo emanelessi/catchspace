@@ -35,9 +35,6 @@ class PoliciesController extends Controller
             'provider_id' => 'required',
         ]);
 
-//        $workspace = Policies::create(['title' => $request->input('title'),
-//            'body' => $request->input('body'),
-//        ]);
         $policies = new Policies();
         $policies->title = $request->input('title');
         $policies->body = $request->input('body');
@@ -45,7 +42,7 @@ class PoliciesController extends Controller
         $policies->save();
 
 
-        return back()->with('success', trans('cp.messages.roles.role_created'));
+        return back()->with('success', trans('messages.policies.policies_created'));
     }
 
     public function edit($id)
@@ -70,12 +67,12 @@ class PoliciesController extends Controller
         $policies->provider_id = $request->input('provider_id');
         $policies->save();
 
-        return back()->with('success', trans('cp.messages.roles.role_updated'));
+        return back()->with('success', trans('messages.policies.policies_updated'));
     }
 
     public function destroy($id)
     {
         $policies = Policies::findOrFail($id)->delete();
-        return back()->with('success', trans('cp.messages.roles.role_deleted'));
+        return back()->with('success', trans('messages.policies.policies_deleted'));
     }
 }

@@ -42,7 +42,7 @@ class ServiceController extends Controller
         $workSpaceService = WorkSpaceService::create(['value' => $request->input('value'),
             'work_space_id' => $request->input('work_space_id'), 'service_id' => $service->id,]);
 
-        return back()->with('success', trans('cp.messages.roles.role_created'));
+        return back()->with('success', trans('messages.service.service_created'));
     }
 
     public function edit($id)
@@ -70,7 +70,7 @@ class ServiceController extends Controller
         $workSpaceService->service_id = $service->id;
         $workSpaceService->save();
 
-        return back()->with('success', trans('cp.messages.roles.role_updated'));
+        return back()->with('success', trans('messages.service.service_updated'));
     }
 
     public function destroy($id)
@@ -78,6 +78,6 @@ class ServiceController extends Controller
         $workSpaceServiceId = WorkSpaceService::findOrFail($id);
         $service = Service::findOrFail($workSpaceServiceId->service->id)->delete();
         $workSpaceService = $workSpaceServiceId->delete();
-        return back()->with('success', trans('cp.messages.roles.role_deleted'));
+        return back()->with('success', trans('messages.service.service_deleted'));
     }
 }

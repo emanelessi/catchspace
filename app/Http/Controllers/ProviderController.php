@@ -46,7 +46,7 @@ class ProviderController extends Controller
 
         $provider->logo = storeImage('providers','logo' );
         $provider->save();
-        return back()->with('success', trans('cp.messages.roles.role_added'));
+        return back()->with('success', trans('messages.provider.provider_created'));
 
     }
 
@@ -69,13 +69,13 @@ class ProviderController extends Controller
         }
         $provider->save();
 
-        return back()->with('success', trans('cp.messages.modify_success'));
+        return back()->with('success', trans('messages.provider.provider_updated'));
     }
 
     public function destroy($id)
     {
         Provider::findOrFail($id)->delete();
-        return back()->with('success', trans('cp.messages.roles.role_deleted'));
+        return back()->with('success', trans('messages.provider.provider_deleted'));
     }
 
     public function profile()

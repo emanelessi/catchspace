@@ -117,8 +117,11 @@
                                                             </button>
                                                         </form>
                                                     </div>
-                                                    <!-- END PERSONAL INFO TAB -->
-                                                </div>
+                                                    @if(session()->has('success'))
+                                                        <div class="alert alert-success">
+                                                            {{ session()->get('success') }}
+                                                        </div>
+                                                    @endif                                                  </div>
                                             </div>
                                         </div>
                                     </div>
@@ -193,8 +196,11 @@
 
                                                         </form>
                                                     </div>
-
-                                                    <!-- END PERSONAL INFO TAB -->
+                                                    @if(session()->has('success'))
+                                                        <div class="alert alert-success">
+                                                            {{ session()->get('success') }}
+                                                        </div>
+                                                @endif                                                    <!-- END PERSONAL INFO TAB -->
                                                 </div>
                                             </div>
                                         </div>

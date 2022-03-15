@@ -84,13 +84,13 @@ class RoleController extends Controller
             ]);
         $role->syncPermissions($request->input('permissions'));
 
-        return back()->with('success',trans('cp.messages.roles.role_created'));
+        return back()->with('success',trans('messages.role.role_created'));
     }
 
 
     public function destroy($id)
     {
         Role::findOrFail($id)->delete();
-        return back()->with('success',trans('cp.messages.roles.role_deleted'));
+        return back()->with('success',trans('messages.role.role_deleted'));
     }
 }

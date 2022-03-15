@@ -232,6 +232,11 @@
 
                                 </tbody>
                             </table>
+                            @if(session()->has('message'))
+                                <div class="alert alert-success">
+                                    {{ session()->get('message') }}
+                                </div>
+                            @endif
                             <div id="static2" class="modal fade modal-back"
                                  tabindex="-1" data-backdrop="static"
                                  data-keyboard="false" data-attention-animation="false">

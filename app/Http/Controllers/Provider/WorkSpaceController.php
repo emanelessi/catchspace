@@ -53,7 +53,7 @@ class WorkSpaceController extends Controller
             'provider_id' => $request->input('provider_id'),
         ]);
 
-        return back()->with('success', trans('cp.messages.roles.role_created'));
+        return back()->with('success', trans('messages.workspace.workspace_created'));
     }
 
     public function edit($id)
@@ -77,13 +77,13 @@ class WorkSpaceController extends Controller
         $workspace->provider_id = $request->input('provider_id');
         $workspace->save();
 
-        return back()->with('success', trans('cp.messages.roles.role_updated'));
+        return back()->with('success', trans('messages.workspace.workspace_updated'));
     }
 
     public function destroy($id)
     {
         $workspace = WorkSpace::findOrFail($id)->delete();
-        return back()->with('success', trans('cp.messages.roles.role_deleted'));
+        return back()->with('success', trans('messages.workspace.workspace_deleted'));
     }
 
 

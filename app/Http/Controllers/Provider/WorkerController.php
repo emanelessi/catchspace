@@ -54,7 +54,7 @@ class WorkerController extends Controller
         $worker->you_did = $request->input('you_did');
         $worker->work_space_id = $request->input('work_space_type_id');
         $worker->save();
-        return back()->with('success', trans('cp.messages.roles.role_created'));
+        return back()->with('success', trans('messages.worker.worker_created'));
     }
 
     public function edit($id)
@@ -82,12 +82,12 @@ class WorkerController extends Controller
         $worker->you_did = $request->input('you_did');
         $worker->work_space_id = $request->input('work_space_type_id');
         $worker->save();
-        return back()->with('success', trans('cp.messages.roles.role_updated'));
+        return back()->with('success', trans('messages.worker.worker_updated'));
     }
 
     public function destroy($id)
     {
         $worker = Worker::findOrFail($id)->delete();
-        return back()->with('success', trans('cp.messages.roles.role_deleted'));
+        return back()->with('success', trans('messages.worker.worker_deleted'));
     }
 }
