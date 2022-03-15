@@ -1,6 +1,7 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    <!-- BEGIN PAGE style -->
     <style>
         .Reject:hover {
             background-color: rgba(51, 51, 51, 0.58) !important;
@@ -9,6 +10,7 @@
         .Accept:hover {
             background-color: #8B62C9 !important;
         }
+
         .page-head {
             margin-bottom: 25px !important;
         }
@@ -19,166 +21,20 @@
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
-
-        .add-btn {
-            border-color: #7952B3 !important;
-            font-family: AvenirLTStd-Book !important;
-            color: #FFFFFF !important;
-            background: #7952B3 !important;
-            border-radius: 5px !important;
-            width: 160px !important;
-            height: 30px !important;
-            font-size: 13px !important;
-        }
-
-        .btn-filter {
-            background-color: #FFFFFF !important;
-            border-color: #FFFFFF !important;
-            border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
-            font-weight: normal;
-        !important font-size: 13 px !important;
-            color: #292D32 !important;
-            width: 90px !important;
-            height: 29px !important;
-            margin-right: -20px !important;
-        }
-
-        .body-filter {
-            background: #FFFFFF !important;
-            border: 1px solid #F4F4F4 !important;
-            box-sizing: border-box !important;
-            border-radius: 10px !important;
-        }
-
-        .span-filter {
-            color: #fff !important;
-            background: #7952B3 !important;
-            border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
-            font-weight: normal !important;
-            font-size: 15px !important;
-            line-height: 15px !important;
-        }
-
-        .table-th {
-            font-family: AvenirLTStd-Book !important;
-            font-size: 20px !important;
-            letter-spacing: -0.022em !important;
-            color: #e7ae04 !important;
-            padding-bottom: 15px !important;
-        }
-
-        .table-td {
-            font-family: AvenirLTStd-Book !important;
-            font-size: 20px !important;
-            letter-spacing: 0.02em !important;
-            color: #000000 !important;
-        }
-
-        .modal-back {
-            background: rgb(255, 255, 255) !important;
-            border-radius: 10px !important;
-            display: block !important;
-            margin-top: -82.5px !important;
-            height: 185px !important;
-            width: 480px !important;
-        }
-
-        .modal-p {
-            font-family: AvenirLTStd-Book !important;
-            font-weight: bold !important;
-            font-size: 18px !important;
-            line-height: 24px !important;
-            text-align: center !important;
-            letter-spacing: -0.011em !important;
-            color: #333333 !important;
-        }
-
-        .btn-cansel {
-            width: 125px !important;
-            height: 32.2px !important;
-            align-items: center !important;
-            padding: 0 !important;
-            border-radius: 8px !important;
-            font-family: AvenirLTStd-Book !important;
-            font-size: 13px !important;
-            letter-spacing: 1px !important;
-            border-radius: 10px !important;
-            border-color: #7952B3 !important;
-        }
-
-        .btn-delete {
-            width: 125px !important;
-            height: 32.2px !important;
-            border-color: #7952b3 !important;
-            align-items: center !important;
-            padding: 0 !important;
-            border-radius: 8px !important;
-            background-color: #7952b3 !important;
-            font-family: AvenirLTStd-Book !important;
-            color: #FFFFFF !important;
-            font-size: 13px !important;
-            letter-spacing: 1px !important;
-        }
-
-        .img-logo {
-            border-color: #eaeaea !important;
-            align-items: center !important;
-            padding: 5px !important;
-            border-radius: 8px !important;
-            background-color: #eaeaea !important;
-            font-family: AvenirLTStd-Book !important;
-            font-size: 14px !important;
-            line-height: 24px !important;
-            color: #6B7280 !important;
-            width: 157px !important;
-        }
-
-        .form-input {
-            height: 40px !important;
-            border-radius: 8px !important;
-            border: solid 1px #d1d5db !important;
-        }
-
-        .btn-submit {
-            width: 125px !important;
-            height: 32.2px !important;
-            border-color: #7952b3 !important;
-            align-items: center !important;
-            padding: 0 !important;
-            border-radius: 8px !important;
-            background-color: #7952b3 !important;
-            font-family: AvenirLTStd-Book !important;
-            color: #FFFFFF !important;
-            font-size: 13px !important;
-            letter-spacing: 1px !important;
-        }
     </style>
+    <!-- END PAGE style -->
+
     {{--    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">--}}
     @can('permission_access')
 
-    <div class="page-head" style="margin-bottom: 25px;">
+    <div class="page-head" >
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1 style="
-            font-family: AvenirLTStd-Book;
-            font-size: 33px;
-            letter-spacing: -0.022em;
-            color: #333333;
-            " class="margin-top--10">Admin Dashboard</h1>
+            <h1 class="margin-top--10 head-title">Admin Dashboard</h1>
         </div>
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
-        <div class="page-toolbar" style="
-        /*margin-left: 20px;*/
-    /*width: 288.18px;*/
-    /*height: 56.53px;*/
-    /*left: 1127px;*/
-    /*top: 108.18px;*/
-    /*background: #FFFFFF;*/
-    /*border-radius: 10px !important;*/
-">
+        <div class="page-toolbar">
             <div id="dashboard-report-range" data-display-range="0"
                  class="pull-right tooltips btn btn-fit-height green"
                  data-placement="left" data-original-title="Change dashboard date range"
@@ -209,8 +65,7 @@
                 <div class="dashboard-stat dashboard-stat-v2 blue" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                   /*background:linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
-                    /*#FFC107 103.45%);*/
+
                     background: #7952B3;
 ">
                     <div class="visual padding-top-12">
@@ -235,8 +90,6 @@
                 <div class="dashboard-stat dashboard-stat-v2 red" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                   /*background:linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
-                    /*#FFC107 103.45%);*/
                     background: #7952B3;
 ">
                     <div class="visual">
@@ -261,8 +114,6 @@
                 <div class="dashboard-stat dashboard-stat-v2 green" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                   /*background:linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
-                    /*#FFC107 103.45%);*/
                     background: #7952B3;
 ">
                     <div class="visual">
