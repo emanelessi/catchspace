@@ -1,8 +1,8 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    <!-- BEGIN PAGE style -->
     <style>
-
         .btn:hover {
             background-color: #8B62C9 !important;
         }
@@ -137,8 +137,9 @@
             font-size: 13px !important;
             letter-spacing: 1px !important;
         }
-
     </style>
+    <!-- END PAGE style -->
+
     @can('pricing_show')
 
         <div class="page-head">
@@ -194,7 +195,8 @@
                                         <th class="table-th"> Price
                                         </th>
                                         <th class="table-th"> Work Space Capacity
-                                        </th><th class="table-th"> Pricing Type
+                                        </th>
+                                        <th class="table-th"> Pricing Type
                                         </th>
 
                                     </tr>
@@ -206,7 +208,8 @@
                                             </td>
                                             <td class="table-td">{{$mypricing->price}} $</td>
                                             <td class="table-td"> {{$mypricing->workSpace->capacity}}
-                                            </td> <td class="table-td"> {{$mypricing->rentType->type}}
+                                            </td>
+                                            <td class="table-td"> {{$mypricing->rentType->type}}
                                             </td>
                                         </tr>
                                     @endforeach
@@ -225,13 +228,14 @@
                 <div class="page-head">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1  class="margin-top--10 head-title">Pricing</h1>
+                        <h1 class="margin-top--10 head-title">Pricing</h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
                     @can('services_create')
                         <div class="page-toolbar">
-                            <a href="/provider/workspace/add-pricing/{{$id}}" type="button" class="demo-loading-btn btn btn-primary add-btn">
+                            <a href="/provider/workspace/add-pricing/{{$id}}" type="button"
+                               class="demo-loading-btn btn btn-primary add-btn">
                                 <i class="fa fa-plus-circle"></i>
                                 Add Pricing
                             </a>
@@ -260,7 +264,8 @@
                                                 Filter By
                                                 <i class="fa fa-angle-down"></i>
                                             </a>
-                                            <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right body-filter">
+                                            <div
+                                                class="dropdown-menu hold-on-click dropdown-checkboxes pull-right body-filter">
                                                 <div class="span margin-bottom-2  padding-tb-5 span-filter">
                                                     <span class="margin-left-40">From A to Z</span>
                                                 </div>
@@ -287,7 +292,8 @@
                                                 <th class="table-th"> Price
                                                 </th>
                                                 <th class="table-th"> Work Space Capacity
-                                                </th><th class="table-th"> Pricing Type
+                                                </th>
+                                                <th class="table-th"> Pricing Type
                                                 </th>
                                                 <th class="table-th"> Action
                                                 </th>
@@ -301,7 +307,8 @@
                                                     </td>
                                                     <td class="table-td">{{$mypricing->price}} $</td>
                                                     <td class="table-td"> {{$mypricing->workSpace->capacity}}
-                                                    </td> <td class="table-td"> {{$mypricing->rentType->type}}
+                                                    </td>
+                                                    <td class="table-td"> {{$mypricing->rentType->type}}
                                                     </td>
                                                     <td class="table-td">
                                                         @can('pricing_delete')
