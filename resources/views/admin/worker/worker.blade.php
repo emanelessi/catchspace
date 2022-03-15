@@ -1,8 +1,8 @@
 @extends('admin.layouts.index')
 
 @section('content')
+    <!-- BEGIN PAGE style -->
     <style>
-
         .btn-circle:hover {
             background-color: #7952B32B !important;
             border-color: #7952B32B !important;
@@ -126,6 +126,8 @@
             letter-spacing: 1px !important;
         }
     </style>
+    <!-- END PAGE style -->
+
     @can('permission_access')
         <div class="page-head">
             <!-- BEGIN PAGE TITLE -->
