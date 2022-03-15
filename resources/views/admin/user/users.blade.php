@@ -167,7 +167,7 @@
                     border-color: #E5E5E5;
 ">
                         <div class="actions">
-                            <div class="btn-group open">
+                            <div class="btn-group">
                                 <a class="btn btn-sm blue btn-outline btn-circle margin-top-20 btn-filter"
                                    href="javascript:;"
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
