@@ -65,7 +65,7 @@ font-family: AvenirLTStd-Book;
                     display: block;
                     ">
                     <i style="
-                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 5px;
@@ -75,7 +75,7 @@ font-family: AvenirLTStd-Book;
                 <a href="mailto:WEB@catchSpace.com"
                    style="font-family: AvenirLTStd-Book;font-size: 21px;line-height: 25px;color: #FFFFFF;text-align: center;display: block;">
                     <i style="
-                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 5px;
@@ -85,8 +85,8 @@ font-family: AvenirLTStd-Book;
 
             </div>
         </div>
-        <div class="col-md-5 login-container bs-reset" style="  background-color: #7952B3;
-            background-image: linear-gradient( #7952B3, #FFBF00);">
+        <div class="col-md-5 login-container bs-reset" style="  background-color: #9162B3;
+            background-image: linear-gradient( #9162B3, #FFBF00);">
             <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
                 <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->

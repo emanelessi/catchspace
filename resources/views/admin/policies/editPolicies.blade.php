@@ -12,7 +12,7 @@
     </div>
     <div class="col-md-12 ">
         <!-- BEGIN Portlet PORTLET-->
-        <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+        <div class="portlet box " style="background-color: #9162B3;font-family: AvenirLTStd-Book;
 font-size: 17px">
             <div class="portlet-title">
                 <div class="caption">
@@ -21,7 +21,7 @@ font-size: 17px">
             </div>
             <div class="portlet-body">
                 <div class="scroller" style="height:280px" data-always-visible="1" data-rail-visible="1"
-                     data-rail-color="blue" data-handle-color="#7952B3">
+                     data-rail-color="blue" data-handle-color="#9162B3">
                     <form role="form"  action="{{route('updatePolicies')}}"
                           method="POST">
                         @csrf
@@ -39,18 +39,7 @@ font-size: 17px">
                                    class="form-control" name="body"  value="{{$policies->body}}"
                                    style="height: 56px;padding: 0 12px;border-radius: 8px !important;border: solid 1px #d1d5db;"/>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label class="control-label" style="color:#6B7280;">Provider *</label>
-                            <select name="provider_id" class="form-control"
-                                    style="height: 56px;padding: 0 12px;border-radius:
-                                                                    8px !important;border: solid 1px #d1d5db;">
-                                <option> </option>
-                                @foreach($provider as $myProvider)
-                                    <option
-                                        value="{{$myProvider->id}}" >{{$myProvider->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+
                         <button type="submit"
                                 class="btn btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 "
                                 style="
@@ -60,12 +49,12 @@ font-size: 17px">
                                                                /*display: flex;*/
                                                                /*flex-direction: column;*/
                                                                /*justify-content: center;*/
-                                                               border-color: #7952b3;
+                                                               border-color: #9162B3;
                                                                align-items: center;
                                                                /*margin: -155px 0 0 755px;*/
                                                                padding: 0;
                                                                border-radius: 8px !important;
-                                                               background-color: #7952b3;
+                                                               background-color: #9162B3;
                                                                font-family: AvenirLTStd-Book;
                                                                /*font-style: normal;*/
                                                                /*font-weight: 600;*/

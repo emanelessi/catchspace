@@ -177,24 +177,23 @@
                             <span class="username username-hide-on-mobile"> {{auth()->user()->full_name}} </span>
                             <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
                             @can('provider_access')
-                                <img alt="" class="img-circle"
-                                     src="{{'/storage'.auth()->user()->provider->logo}}"/>
+                                <img alt="" class="img-circle" src="{{'/storage/'.auth()->user()->provider->logo}} "/>
                             @endcan
                             @can('permission_access')
-                            <i class="fa fa-user img-circle" style="font-size: 20px;color: #7952B3 !important;"></i>
+                            <i class="fa fa-user img-circle" style="font-size: 20px;color: #9162B3 !important;"></i>
                             @endcan
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             @can('permission_access')
                             <li>
                                 <a href="{{ route('adminprofile') }}">
-                                    <i class="icon-user" style="color: #7952B3 !important;"></i>  Profile </a>
+                                    <i class="icon-user" style="color: #9162B3 !important;"></i>  Profile </a>
                             </li>
                             @endcan
                                 @can('provider_access')
                             <li>
                                 <a href="{{ route('providerprofile') }}">
-                                    <i class="icon-user" style="color: #7952B3 !important;"></i>  Profile </a>
+                                    <i class="icon-user" style="color: #9162B3 !important;"></i>  Profile </a>
                             </li>
                             @endcan
 
@@ -206,7 +205,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    <i class="icon-key"  style="color: #7952B3 !important;"></i> Log Out
+                                    <i class="icon-key"  style="color: #9162B3 !important;"></i> Log Out
                                 </a>
                             </li>
                         </ul>

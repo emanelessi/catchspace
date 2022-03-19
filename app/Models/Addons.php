@@ -17,6 +17,6 @@ class Addons extends Model
     ];
     public function workSpaceAddons()
     {
-        return $this->hasMany(WorkSpaceAddons::class, 'addon_id', 'id');
+        return $this->hasMany(WorkSpaceAddons::class, 'addon_id', 'id')->withTrashed();
     }
 }

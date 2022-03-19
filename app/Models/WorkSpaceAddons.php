@@ -18,11 +18,11 @@ class WorkSpaceAddons extends Model
     ];
     public function workSpace()
     {
-        return $this->belongsTo(WorkSpace::class, 'work_space_id');
+        return $this->belongsTo(WorkSpace::class, 'work_space_id')->withTrashed();
     }
 
     public function addon()
     {
-        return $this->belongsTo(Addons::class, 'addon_id');
+        return $this->belongsTo(Addons::class, 'addon_id')->withTrashed();
     }
 }

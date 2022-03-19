@@ -21,8 +21,8 @@ class AddonsController extends Controller
     }
     public function addons($id)
     {
-        $workspace = WorkSpace::findOrFail($id);
-        $addons = WorkSpaceAddons::where('work_space_id', $workspace->id)->get();
+        $workspace = WorkSpace::withTrashed()->findOrFail($id);
+        $addons = WorkSpaceAddons::withTrashed()->where('work_space_id', $workspace->id)->get();
         return view('admin.workSpace.addons.addons', compact('addons','id'));
     }
 
@@ -48,7 +48,7 @@ class AddonsController extends Controller
 
     public function edit($id)
     {
-        $workSpaceAddons = WorkSpaceAddons::findOrFail($id);
+        $workSpaceAddons = WorkSpaceAddons::withTrashed()->findOrFail($id);
         $work_space_id = $workSpaceAddons->work_space_id;
         return view('admin.workSpace.addons.editAddon', compact('work_space_id', 'workSpaceAddons'));
     }
@@ -62,7 +62,7 @@ class AddonsController extends Controller
         ]);
         $workSpaceAddons = WorkSpaceAddons::findOrFail($request->input('id'));
 
-        $addons = Addons::findOrFail($workSpaceAddons->addon_id);
+        $addons = Addons::withTrashed()->findOrFail($workSpaceAddons->addon_id);
         $addons->name= $request->input('name');
         $addons->save();
 
@@ -80,5 +80,14 @@ class AddonsController extends Controller
         $addons = Addons::findOrFail($workSpaceAddonsId->addon->id)->delete();
         $workSpaceAddons = $workSpaceAddonsId->delete();
         return back()->with('success', trans('messages.addons.addons_deleted'));
+    }
+
+    public function restore($id)
+    {
+        $workSpaceAddonsId = WorkSpaceAddons::withTrashed()->findOrFail($id);
+        $addons = Addons::withTrashed()->findOrFail($workSpaceAddonsId->addon->id)->restore();
+        $workSpaceAddons = $workSpaceAddonsId->restore();
+
+        return back()->with('success', trans('messages.addons.addons_restored'));
     }
 }

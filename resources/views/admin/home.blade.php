@@ -8,7 +8,7 @@
         }
 
         .Accept:hover {
-            background-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
         }
 
         .page-head {
@@ -66,7 +66,7 @@
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
 
-                    background: #7952B3;
+                    background: #9162B3;
 ">
                     <div class="visual padding-top-12">
                         <i class="fa fa-user"
@@ -90,7 +90,7 @@
                 <div class="dashboard-stat dashboard-stat-v2 red" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                    background: #7952B3;
+                    background: #9162B3;
 ">
                     <div class="visual">
                         <i class="fa fa-map-marker"
@@ -114,7 +114,7 @@
                 <div class="dashboard-stat dashboard-stat-v2 green" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                    background: #7952B3;
+                    background: #9162B3;
 ">
                     <div class="visual">
                         <i class="fa fa-file-text"
@@ -241,7 +241,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                         <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #7952B3;
+    background: #9162B3;
                                                     border-radius: 9px !important;
                                                     font-family: AvenirLTStd-Book;
                                                     font-size: 14px;
@@ -325,7 +325,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                         <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #7952B3;
+    background: #9162B3;
                                                     border-radius: 9px !important;
                                                     font-family: AvenirLTStd-Book;
                                                     font-size: 14px;
@@ -409,7 +409,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                         <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #7952B3;
+    background: #9162B3;
                                                     border-radius: 9px !important;
                                                     font-family: AvenirLTStd-Book;
                                                     font-size: 14px;
@@ -513,9 +513,9 @@ font-family: AvenirLTStd-Book;
                     <div class="dashboard-stat dashboard-stat-v2 red" href="#"
                          style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                   /*background:linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
-                    /*#FFC107 103.45%);*/
-                    background: #7952B3;
+                   /*background:linear-gradient(90deg, #9162B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
+                    /*#FFD64F 103.45%);*/
+                    background: #9162B3;
 ">
                         <div class="visual">
                             <i class="fa fa-map-marker"
@@ -523,8 +523,7 @@ font-family: AvenirLTStd-Book;
                         </div>
                         <div class="details">
                             <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
-                                  data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
+                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;" data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
     font-family: AvenirLTStd-Book;
@@ -539,9 +538,9 @@ font-family: AvenirLTStd-Book;
                     <div class="dashboard-stat dashboard-stat-v2 green" href="#"
                          style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                   /*background:linear-gradient(90deg, #7952B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
-                    /*#FFC107 103.45%);*/
-                    background: #7952B3;
+                   /*background:linear-gradient(90deg, #9162B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
+                    /*#FFD64F 103.45%);*/
+                    background: #9162B3;
 ">
                         <div class="visual">
                             <i class="fa fa-file-text"
@@ -669,7 +668,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                             <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #7952B3;
+    background: #9162B3;
                                                     border-radius: 9px !important;
                                                     font-family: AvenirLTStd-Book;
                                                     font-size: 14px;
@@ -753,7 +752,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                             <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #7952B3;
+    background: #9162B3;
                                                     border-radius: 9px !important;
                                                     font-family: AvenirLTStd-Book;
                                                     font-size: 14px;
@@ -837,7 +836,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                             <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #7952B3;
+    background: #9162B3;
                                                     border-radius: 9px !important;
                                                     font-family: AvenirLTStd-Book;
                                                     font-size: 14px;

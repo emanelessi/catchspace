@@ -18,13 +18,12 @@ class PoliciesController extends Controller
     }
     public function index()
     {
-        $policies = Policies::all();
+        $policies = Policies::withTrashed()->where('provider_id', auth()->user()->provider->id)->get();
         return view('admin.policies.policies', compact('policies'));
     }
     public function create()
     {
-        $provider = Provider::all();
-        return view('admin.policies.addPolicies',compact('provider'));
+        return view('admin.policies.addPolicies');
     }
 
     public function store(Request $request)
@@ -32,13 +31,12 @@ class PoliciesController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
-            'provider_id' => 'required',
         ]);
 
         $policies = new Policies();
         $policies->title = $request->input('title');
         $policies->body = $request->input('body');
-        $policies->provider_id = $request->input('provider_id');
+        $policies->provider_id = auth()->user()->provider->id;
         $policies->save();
 
 
@@ -47,8 +45,8 @@ class PoliciesController extends Controller
 
     public function edit($id)
     {
-        $policies = Policies::findOrFail($id);
-        $provider = Provider::all();
+        $policies = Policies::withTrashed()->findOrFail($id);
+        $provider = Provider::withTrashed()->get();
         return view('admin.policies.editPolicies', compact('policies','provider'));
     }
 
@@ -58,13 +56,12 @@ class PoliciesController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
-            'provider_id' => 'required',
         ]);
 
-        $policies = Policies::findOrFail($id);
+        $policies = Policies::withTrashed()->findOrFail($id);
         $policies->title = $request->input('title');
         $policies->body = $request->input('body');
-        $policies->provider_id = $request->input('provider_id');
+        $policies->provider_id = auth()->user()->provider->id;
         $policies->save();
 
         return back()->with('success', trans('messages.policies.policies_updated'));
@@ -74,5 +71,12 @@ class PoliciesController extends Controller
     {
         $policies = Policies::findOrFail($id)->delete();
         return back()->with('success', trans('messages.policies.policies_deleted'));
+    }
+
+    public function restore($id)
+    {
+        Policies::where('id', $id)->withTrashed()->restore();
+
+        return back()->with('success', trans('messages.worker.worker_restored'));
     }
 }

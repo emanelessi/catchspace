@@ -38,7 +38,7 @@
 
         .inputfile:focus + label,
         .inputfile + label:hover {
-            background-color: #7952b3;
+            background-color: #9162B3;
             color: white;
 
         }
@@ -55,10 +55,10 @@
         }
 
         .add-btn {
-            border-color: #7952B3 !important;
+            border-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
-            background: #7952B3 !important;
+            background: #9162B3 !important;
             border-radius: 5px !important;
             width: 160px !important;
             height: 30px !important;
@@ -87,7 +87,7 @@
 
         .span-filter {
             color: #fff !important;
-            background: #7952B3 !important;
+            background: #9162B3 !important;
             border-radius: 5px !important;
             font-family: AvenirLTStd-Book !important;
             font-weight: normal !important;
@@ -139,17 +139,17 @@
             font-size: 13px !important;
             letter-spacing: 1px !important;
             border-radius: 10px !important;
-            border-color: #7952B3 !important;
+            border-color: #9162B3 !important;
         }
 
         .btn-delete {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #7952b3 !important;
+            border-color: #9162B3 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #7952b3 !important;
+            background-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
@@ -178,11 +178,11 @@
         .btn-submit {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #7952b3 !important;
+            border-color: #9162B3 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #7952b3 !important;
+            background-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
@@ -261,6 +261,18 @@
                                     <div class="form-group margin-left-9 margin-right-10">
                                         <label class="control-label margin-left-9"
                                                style="color:#6B7280;">
+                                            Type*</label>
+                                        <select name="type" class="form-control"
+                                                style="height: 56px;padding: 0 12px;border-radius:
+                                                                    8px !important;border: solid 1px #d1d5db;">
+                                            <option></option>
+                                                <option value="team">team</option>
+                                                <option value="individual">individual</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group margin-left-9 margin-right-10">
+                                        <label class="control-label margin-left-9"
+                                               style="color:#6B7280;">
                                             Work Space*</label>
                                         <select name="work_space_type_id" class="form-control"
                                                 style="height: 56px;padding: 0 12px;border-radius:
@@ -268,7 +280,7 @@
                                             <option></option>
                                             @foreach($work_space as $mywork_space)
                                                 <option
-                                                    value="{{$mywork_space->id}}">{{$mywork_space->capacity}}</option>
+                                                    value="{{$mywork_space->id}}">{{$mywork_space->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>

@@ -14,35 +14,36 @@ class WorkSpace extends Model
         'provider_id',
         'work_space_type_id',
         'capacity',
+        'name',
 
     ];
     public function workSpaceType()
     {
-        return $this->belongsTo(WorkSpaceType::class, 'work_space_type_id');
+        return $this->belongsTo(WorkSpaceType::class, 'work_space_type_id')->withTrashed();
     }
 
     public function provider()
     {
-        return $this->belongsTo(Provider::class, 'provider_id');
+        return $this->belongsTo(Provider::class, 'provider_id')->withTrashed();
     }
 
     public function workers()
     {
-        return $this->hasMany(Worker::class, 'work_space_id', 'id');
+        return $this->hasMany(Worker::class, 'work_space_id', 'id')->withTrashed();
     }
 
     public function workSpaceAddons()
     {
-        return $this->hasMany(WorkSpaceAddons::class, 'work_space_id', 'id');
+        return $this->hasMany(WorkSpaceAddons::class, 'work_space_id', 'id')->withTrashed();
     }
 
     public function pricing()
     {
-        return $this->hasMany(Pricing::class, 'work_space_id', 'id');
+        return $this->hasMany(Pricing::class, 'work_space_id', 'id')->withTrashed();
     }
 
     public function workSpaceServices()
     {
-        return $this->hasMany(WorkSpaceService::class, 'work_space_id', 'id');
+        return $this->hasMany(WorkSpaceService::class, 'work_space_id', 'id')->withTrashed();
     }
 }

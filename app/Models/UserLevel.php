@@ -13,10 +13,10 @@ class UserLevel extends Model
     use SoftDeletes;
     public function users()
     {
-        return $this->hasMany(User::class, 'user_level_id','id');
+        return $this->hasMany(User::class, 'user_level_id','id')->withTrashed();
     }
     public function roles()
     {
-        return $this->hasMany(Role::class, 'user_level_id', 'id');
+        return $this->hasMany(Role::class, 'user_level_id', 'id')->withTrashed();
     }
 }

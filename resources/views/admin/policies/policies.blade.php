@@ -9,13 +9,13 @@
         }
 
         .btn-circle:hover {
-            background-color: #7952B32B !important;
-            border-color: #7952B32B !important;
+            background-color: #9162B32B !important;
+            border-color: #9162B32B !important;
         }
 
         .span:hover {
-            background-color: #8B62C9 !important;
-            border-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
+            border-color: #7962B3 !important;
         }
 
         .page-head {
@@ -30,10 +30,10 @@
         }
 
         .add-btn {
-            border-color: #7952B3 !important;
+            border-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
-            background: #7952B3 !important;
+            background: #9162B3 !important;
             border-radius: 5px !important;
             width: 160px !important;
             height: 30px !important;
@@ -62,7 +62,7 @@
 
         .span-filter {
             color: #fff !important;
-            background: #7952B3 !important;
+            background: #9162B3 !important;
             border-radius: 5px !important;
             font-family: AvenirLTStd-Book !important;
             font-weight: normal !important;
@@ -114,17 +114,17 @@
             font-size: 13px !important;
             letter-spacing: 1px !important;
             border-radius: 10px !important;
-            border-color: #7952B3 !important;
+            border-color: #9162B3 !important;
         }
 
         .btn-delete {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #7952b3 !important;
+            border-color: #9162B3 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #7952b3 !important;
+            background-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
@@ -149,7 +149,7 @@
             @foreach($policies as $myPolicies)
                 <div class="col-md-4 ">
                     <!-- BEGIN Portlet PORTLET-->
-                    <div class="portlet box " style="background-color: #7952B3;font-family: AvenirLTStd-Book;
+                    <div class="portlet box " style="background-color: #9162B3;font-family: AvenirLTStd-Book;
 font-size: 17px">
                         <div class="portlet-title">
                             <div class="caption">
@@ -162,105 +162,41 @@ font-size: 17px">
                             <div class="actions">
                                 <a  href="/provider/edit-policies/{{$myPolicies->id}}"  type="button" class="btn btn-default btn-sm ">
                                     <i class="fa fa-pencil btn-i"></i> Edit </a>
+                                @if($myPolicies->deleted_at ==null)
+
                                 <a class="btn btn-default btn-sm"
-                                   data-target="#static2" data-toggle="modal" href="/provider/delete-policies/{{$myPolicies->id}}">
-                                    <i class="icon-trash btn-i"> Delete</i>
+                                    href="/provider/delete-policies/{{$myPolicies->id}}">
+                                    <i class="fa fa-trash btn-i"> Delete</i>
                                 </a>
+                                @else
+                                    <a class="btn btn-default btn-sm"
+                                    href="/provider/restore-policies/{{$myPolicies->id}}">
+                                    <i class="fa fa-recycle btn-i"> Restore</i>
+                                </a>
+                                @endif
                             </div>
                         </div>
                         <div class="portlet-body">
                             <div class="scroller" style="height:200px" data-always-visible="1" data-rail-visible="1"
-                                 data-rail-color="blue" data-handle-color="#7952B3">
+                                 data-rail-color="blue" data-handle-color="#9162B3">
                                 <h4 style="font-weight: 700; font-family: AvenirLTStd-Book;
 font-size: 17px">{{$myPolicies->provider->name}}</h4>
                                 <p>{{$myPolicies->body}}</p>
                             </div>
                         </div>
                     </div>
+
                     <!-- END Portlet PORTLET-->
                 </div>
             @endforeach
+                <div class="col-md-6 ">
                 @if(session()->has('success'))
                     <div class="alert alert-success">
                         {{ session()->get('success') }}
                     </div>
                 @endif
-                <div id="static2" class="modal fade"
-                 tabindex="-1" data-backdrop="static"
-                 data-keyboard="false" data-attention-animation="false"
-                 style="background: rgb(255, 255, 255);border-radius: 10px !important;display: block;margin-top: -82.5px;height: 185px;width: 480px;">
-                <div class="modal-body">
-                    <p style="
-                                                /*margin-bottom: 1px;*/
-                                                font-family: AvenirLTStd-Book;
-                                                font-weight: bold;
-                                                font-size: 18px;
-                                                line-height: 24px;
-                                                text-align: center;
-                                                letter-spacing: -0.011em;
-                                                color: #333333;
-                                                /* opacity: 0.5; */
-                                                "> Are you sure about delete this Policie ? </p>
                 </div>
-                <div class="modal-footer padding-right-120 " style="border-top:0px;">
-                    <button type="button"
-                            data-dismiss="modal"
-                            class="btn btn-outline dark cansel"
-                            style="
-                                                               width: 125px;
-                                                               height: 32.2px;
-                                                               /*flex-grow: 0;*/
-                                                               /*display: flex;*/
-                                                               /*flex-direction: column;*/
-                                                               /*justify-content: center;*/
-                                                               /*border-color: #7952b3;*/
-                                                               align-items: center;
-                                                               /*margin: -155px 0 0 755px;*/
-                                                               padding: 0;
-                                                               border-radius: 8px !important;
-                                                               /*background-color: #7952b3;*/
-                                                               font-family: AvenirLTStd-Book;
-                                                               /*font-style: normal;*/
-                                                               /*font-weight: 600;*/
-                                                               /*font-size: 14px;*/
-                                                               /* line-height: 24px; */
-                                                               /*color: #FFFFFF;*/
-                                                               font-size: 13px;
-                                                               letter-spacing: 1px;
-                                                                  /*background: #FFFFFF;*/
-                                        border-radius: 10px !important;
-                                        /*margin-right: 244px;*/
-                                        border-color: #7952B3;
-                                                               ">
-                        Cancel
-                    </button>
-                    <button type="button" data-dismiss="modal" class="btn green deletee"
-                            style="
-                                                               width: 125px;
-                                                               height: 32.2px;
-                                                               /*flex-grow: 0;*/
-                                                               /*display: flex;*/
-                                                               /*flex-direction: column;*/
-                                                               /*justify-content: center;*/
-                                                               border-color: #7952b3;
-                                                               align-items: center;
-                                                               /*margin: -155px 0 0 755px;*/
-                                                               padding: 0;
-                                                               border-radius: 8px !important;
-                                                               background-color: #7952b3;
-                                                               font-family: AvenirLTStd-Book;
-                                                               /*font-style: normal;*/
-                                                               /*font-weight: 600;*/
-                                                               /*font-size: 14px;*/
-                                                               /* line-height: 24px; */
-                                                               color: #FFFFFF;
-                                                               font-size: 13px;
-                                                               letter-spacing: 1px;
-                                                               ">
-                        delete
-                    </button>
-                </div>
-            </div>
+
         </div>
 
 @endsection

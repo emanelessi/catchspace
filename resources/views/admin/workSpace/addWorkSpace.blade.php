@@ -4,7 +4,7 @@
     <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
-            background-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
         }
 
         .demo-loading-btn:hover {
@@ -31,11 +31,11 @@
         .btn-submit {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #7952b3 !important;
+            border-color: #9162B3 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #7952b3 !important;
+            background-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
@@ -78,6 +78,14 @@
                                                         <form role="form" action="{{route('workspacestore')}}"
                                                               method="POST">
                                                             @csrf
+                                                            <div class="form-group col-md-12">
+                                                                <label class="control-label margin-left-9" style="
+                                                                color:#6B7280;">Workspace
+                                                                    name *</label>
+                                                                <input type="text" name="name"
+                                                                       placeholder="name"
+                                                                       class="form-control form-input"/>
+                                                            </div>
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9" style="
                                                                 color:#6B7280;">Workspace
@@ -163,6 +171,14 @@
                                                     <div class="tab-pane active" id="tab_1_1">
                                                         <form method="POST" action="{{route('workSpaceStore')}}">
                                                             @csrf
+                                                            <div class="form-group col-md-12">
+                                                                <label class="control-label margin-left-9" style="
+                                                                color:#6B7280;">Workspace
+                                                                    name *</label>
+                                                                <input type="text" name="name"
+                                                                       placeholder="name"
+                                                                       class="form-control form-input"/>
+                                                            </div>
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9" style="
                                                                 color:#6B7280;">Workspace

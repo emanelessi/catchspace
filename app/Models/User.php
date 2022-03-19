@@ -51,11 +51,11 @@ class User extends Authenticatable
 
     public function provider()
     {
-        return $this->belongsTo(Provider::class, 'provider_id');
+        return $this->belongsTo(Provider::class, 'provider_id')->withTrashed();
     }
 
     public function userLevel()
     {
-        return $this->belongsTo(UserLevel::class, 'user_level_id');
+        return $this->belongsTo(UserLevel::class, 'user_level_id')->withTrashed();
     }
 }

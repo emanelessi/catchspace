@@ -38,12 +38,14 @@ class WorkSpaceSeeder extends Seeder
         $work_space_type4->save();
 
         $work_space = new WorkSpace();
+        $work_space->name = 'Tools';
         $work_space->capacity = 9;
         $work_space->work_space_type_id  = $work_space_type1->id;
         $work_space->provider_id   = 1;
         $work_space->save();
 
         $work_space2 = new WorkSpace();
+        $work_space2->name = 'GSG';
         $work_space2->capacity = 3;
         $work_space2->work_space_type_id  = $work_space_type3->id;
         $work_space2->provider_id   = 2;

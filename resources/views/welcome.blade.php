@@ -12,9 +12,9 @@
 
     <style>
         .nav-btn:hover {
-            /*background-color: #FECA2F !important;*/
-            color: #FECA2F !important;
-            border-color: #FECA2F !important;
+            /*background-color: #FFD64F!important;*/
+            color: #FFD64F!important;
+            border-color: #FFD64F!important;
 
         }
     </style>
@@ -84,17 +84,17 @@ font-family: AvenirLTStd-Book;
                     we are here to<br> help you</p>
                 <div class="text-left margin-left-6 ">
                     <a href="{{route('register')}}" class="btn blue " style="
-                            border-color: #FFC107;
+                            border-color: #FFD64F;
                             border-radius: 3px !important;
                             align-items: center;
                             width: 113px;
                             height: 39px;
-                            background: #FFC107;
+                            background: #FFD64F;
                             font-family: AvenirLTStd-Book;
                             font-style: normal;
                             font-weight: 522;
                             font-size: 16px;
-                            color: #FFFFFF;
+                            color: black;
                             ">
                         Sign up
                     </a>

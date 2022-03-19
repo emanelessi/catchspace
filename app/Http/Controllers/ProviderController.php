@@ -21,6 +21,7 @@ class ProviderController extends Controller
     public function index(Request $request)
     {
         $providers = \App\Models\Provider::all();
+//        $work_spaces = \App\Models\WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
         $work_spaces = \App\Models\WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
         $workers = \App\Models\Worker::all();
 //        $workers = \App\Models\Worker::where('work_space_id',$work_spaces[0]->id)->get();
@@ -29,7 +30,7 @@ class ProviderController extends Controller
 
     public function show()
     {
-        $providers = Provider::all();
+        $providers = Provider::withTrashed()->get();
         return view('admin.coworkProvider.coworkProvider', compact('providers'));
 
     }
@@ -51,14 +52,14 @@ class ProviderController extends Controller
     }
 
     public function edit($id){
-        $provider = Provider::findOrFail($id);
+        $provider = Provider::withTrashed()->findOrFail($id);
         return view('admin.coworkProvider.editCoworkProvider',compact('provider'));
     }
 
     public function update(Request $request)
     {
         $id = request('id');
-        $provider = Provider::findOrFail($id);
+        $provider = Provider::withTrashed()->findOrFail($id);
         $provider->name = request('name');
         $provider->owner_name = request('owner_name');
         $provider->address = request('address');
@@ -76,6 +77,13 @@ class ProviderController extends Controller
     {
         Provider::findOrFail($id)->delete();
         return back()->with('success', trans('messages.provider.provider_deleted'));
+    }
+
+    public function restore($id)
+    {
+        Provider::where('id', $id)->withTrashed()->restore();
+
+        return back()->with('success', trans('messages.provider.provider_restored'));
     }
 
     public function profile()

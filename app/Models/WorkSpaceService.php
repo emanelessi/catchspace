@@ -18,11 +18,11 @@ class WorkSpaceService extends Model
     ];
     public function service()
     {
-        return $this->belongsTo(Service::class, 'service_id');
+        return $this->belongsTo(Service::class, 'service_id')->withTrashed();
     }
 
     public function workSpace()
     {
-        return $this->belongsTo(WorkSpace::class, 'work_space_id');
+        return $this->belongsTo(WorkSpace::class, 'work_space_id')->withTrashed();
     }
 }

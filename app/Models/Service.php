@@ -17,6 +17,6 @@ class Service extends Model
 
     public function workSpaceServices()
     {
-        return $this->hasMany(WorkSpaceService::class, 'service_id', 'id');
+        return $this->hasMany(WorkSpaceService::class, 'service_id', 'id')->withTrashed();
     }
 }

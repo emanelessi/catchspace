@@ -7,8 +7,10 @@ use App\Models\Provider;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Permission\Models\Role;
 
 class RegisterController extends Controller
 {
@@ -66,6 +68,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $provider = new Provider();
+        $provider->name = $data['Co-name'];
+        $provider->owner_name = $data['full_name'];
+        $provider->address = $data['address'];
+        $provider->logo = storeImage('providers', 'logo');
+        $provider->save();
+
         $user = new User();
         $user->full_name = $data['full_name'];
         $user->email = $data['email'];
@@ -73,15 +82,57 @@ class RegisterController extends Controller
         $user->phone = $data['phone'];
         $user->type = 'provider';
         $user->user_level_id = 2;
+        $user->provider_id  = $provider->id;
         $user->save();
 
-        $provider = new Provider();
-        $provider->name = $data['Co-name'];
-        $provider->owner_name = $data['full_name'];
-        $provider->address = $data['address'];
-        $provider->logo = storeImage('providers', 'logo');
-        $provider->user_id = $user->id;
-        $provider->save();
+
+        $providerRole= new  Role();
+        $providerRole->name = 'Provider'.$provider->id;
+        $providerRole->user_level_id = $user->user_level_id;
+        $providerRole->provider_id = $provider->id;
+        $providerRole->guard_name = 'web';
+        $providerRole->save();
+//        $provider = Role::create(['name' => 'Provider']);
+
+        $providerPermissions = [
+            'provider_edit',
+            'provider_access',
+            'policies_create',
+            'policies_edit',
+            'policies_show',
+            'policies_delete',
+            'policies_access',
+            'worker_create',
+            'worker_edit',
+            'worker_show',
+            'worker_delete',
+            'worker_access',
+            'workspace_create',
+            'workspace_edit',
+            'workspace_show',
+            'workspace_delete',
+            'workspace_access',
+            'services_access',
+            'pricing_access',
+            'addons_access',
+            'services_create',
+            'services_delete',
+            'services_edit',
+            'pricing_create',
+            'pricing_delete',
+            'pricing_edit',
+            'addons_create',
+            'addons_delete',
+            'addons_edit',
+
+        ];
+
+        foreach ($providerPermissions as $permission) {
+            $providerRole->givePermissionTo($permission);
+        }
+        DB::table('model_has_roles')
+            ->insert(['role_id' => 1,
+                'model_type' => "App\Models\User", 'model_id' => $user->id]);
         return $user;
 
     }

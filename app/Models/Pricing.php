@@ -18,11 +18,11 @@ class Pricing extends Model
     ];
     public function workSpace()
     {
-        return $this->belongsTo(WorkSpace::class, 'work_space_id');
+        return $this->belongsTo(WorkSpace::class, 'work_space_id')->withTrashed();
     }
 
     public function rentType()
     {
-        return $this->belongsTo(RentType::class, 'rent_type_id');
+        return $this->belongsTo(RentType::class, 'rent_type_id')->withTrashed();
     }
 }

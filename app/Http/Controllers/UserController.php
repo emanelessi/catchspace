@@ -25,7 +25,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::all();
+        $users = User::withTrashed()->get();
         return view('admin.user.users', compact('users'));
 
     }
@@ -97,7 +97,7 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $id = request('id');
-        $user = User::findOrFail($id);
+        $user = User::withTrashed()->findOrFail($id);
         $user->full_name = request('full_name');
         if ($email = request('email')) {
             $user->email = request('email');
@@ -134,6 +134,13 @@ class UserController extends Controller
     {
         User::findOrFail($id)->delete();
         return back()->with('success', trans('messages.user.user_deleted'));
+    }
+
+    public function restore($id)
+    {
+        User::where('id', $id)->withTrashed()->restore();
+
+        return back()->with('success', trans('messages.user.user_restored'));
     }
 
     public function profile()

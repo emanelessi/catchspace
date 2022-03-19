@@ -26,17 +26,17 @@ class WorkSpaceController extends Controller
 
     public function index()
     {
-        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
-        $pricing = Pricing::all();
-        $work_space_service = WorkSpaceService::all();
-        $service = Service::all();
-        $rent_type = RentType::all();
+        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->withTrashed()->get();
+        $pricing = Pricing::withTrashed()->get();
+        $work_space_service = WorkSpaceService::withTrashed()->get();
+        $service = Service::withTrashed()->get();
+        $rent_type = RentType::withTrashed()->get();
         return view('admin.workSpace.workSpace', compact('work_space', 'pricing', 'work_space_service', 'service', 'rent_type'));
     }
 
     public function create()
     {
-        $type = WorkSpaceType::all();
+        $type = WorkSpaceType::withTrashed()->get();
         return view('admin.workSpace.addWorkSpace', compact('type'));
     }
 
@@ -46,9 +46,11 @@ class WorkSpaceController extends Controller
             'capacity' => 'required',
             'work_space_type_id' => 'required',
             'provider_id' => 'required',
+            'name' => 'required',
         ]);
 
-        $workspace = WorkSpace::create(['capacity' => $request->input('capacity'),
+        $workspace = WorkSpace::create(['name' => $request->input('name'),
+            'capacity' => $request->input('capacity'),
             'work_space_type_id' => $request->input('work_space_type_id'),
             'provider_id' => $request->input('provider_id'),
         ]);
@@ -58,8 +60,8 @@ class WorkSpaceController extends Controller
 
     public function edit($id)
     {
-        $workspace = WorkSpace::findOrFail($id);
-        $type = WorkSpaceType::all();
+        $workspace = WorkSpace::withTrashed()->findOrFail($id);
+        $type = WorkSpaceType::withTrashed()->get();
         return view('admin.workSpace.editWorkSpace', compact('workspace', 'type'));
     }
 
@@ -69,9 +71,11 @@ class WorkSpaceController extends Controller
             'capacity' => 'required',
             'work_space_type_id' => 'required',
             'provider_id' => 'required',
+            'name' => 'name',
         ]);
 
-        $workspace = WorkSpace::findOrFail($id);
+        $workspace = WorkSpace::withTrashed()->findOrFail($id);
+        $workspace->name = $request->input('name');
         $workspace->capacity = $request->input('capacity');
         $workspace->work_space_type_id = $request->input('work_space_type_id');
         $workspace->provider_id = $request->input('provider_id');
@@ -84,6 +88,13 @@ class WorkSpaceController extends Controller
     {
         $workspace = WorkSpace::findOrFail($id)->delete();
         return back()->with('success', trans('messages.workspace.workspace_deleted'));
+    }
+
+    public function restore($id)
+    {
+        WorkSpace::where('id', $id)->withTrashed()->restore();
+
+        return back()->with('success', trans('messages.workspace.workspace_restored'));
     }
 
 

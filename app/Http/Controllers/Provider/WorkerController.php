@@ -21,18 +21,17 @@ class WorkerController extends Controller
 
     public function index()
     {
-
-        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
+        $work_space = WorkSpace::withTrashed()->where('provider_id', auth()->user()->provider->id)->get();
 //        dd($work_space);
         foreach ($work_space as $my_work_space){
-            $worker = Worker::where('work_space_id', $my_work_space->id)->get();
+            $worker = Worker::withTrashed()->where('work_space_id', $my_work_space->id)->get();
             return view('admin.worker.worker', compact('worker'));
         }
     }
 
     public function create()
     {
-        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
+        $work_space = WorkSpace::withTrashed()->where('provider_id', auth()->user()->provider->id)->get();
         return view('admin.worker.addWorker', compact('work_space'));
     }
 
@@ -45,6 +44,7 @@ class WorkerController extends Controller
             'avatar' => 'required',
             'you_did' => 'required',
             'work_space_type_id' => 'required',
+            'type' => 'required',
         ]);
 
         $worker = new Worker();
@@ -52,6 +52,7 @@ class WorkerController extends Controller
         $worker->job_title = $request->input('job_title');
         $worker->avatar = storeImage('workers','avatar' );
         $worker->you_did = $request->input('you_did');
+        $worker->type = $request->input('type');
         $worker->work_space_id = $request->input('work_space_type_id');
         $worker->save();
         return back()->with('success', trans('messages.worker.worker_created'));
@@ -59,8 +60,8 @@ class WorkerController extends Controller
 
     public function edit($id)
     {
-        $worker = Worker::findOrFail($id);
-        $work_space = WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
+        $worker = Worker::withTrashed()->findOrFail($id);
+        $work_space = WorkSpace::withTrashed()->where('provider_id', auth()->user()->provider->id)->get();
         return view('admin.worker.editWorker', compact('worker', 'work_space'));
     }
 
@@ -73,13 +74,15 @@ class WorkerController extends Controller
             'avatar' => 'required',
             'you_did' => 'required',
             'work_space_type_id' => 'required',
+            'type' => 'required',
         ]);
 
-        $worker = Worker::findOrFail($id);
+        $worker = Worker::withTrashed()->findOrFail($id);
         $worker->name = $request->input('name');
         $worker->job_title = $request->input('job_title');
         $worker->avatar = storeImage('workers','avatar' );;
         $worker->you_did = $request->input('you_did');
+        $worker->type = $request->input('type');
         $worker->work_space_id = $request->input('work_space_type_id');
         $worker->save();
         return back()->with('success', trans('messages.worker.worker_updated'));
@@ -89,5 +92,12 @@ class WorkerController extends Controller
     {
         $worker = Worker::findOrFail($id)->delete();
         return back()->with('success', trans('messages.worker.worker_deleted'));
+    }
+
+    public function restore($id)
+    {
+        Worker::where('id', $id)->withTrashed()->restore();
+
+        return back()->with('success', trans('messages.worker.worker_restored'));
     }
 }

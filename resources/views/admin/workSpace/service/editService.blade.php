@@ -4,7 +4,7 @@
     <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
-            background-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
         }
 
         .page-head {
@@ -27,11 +27,11 @@
         .btn-submit {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #7952b3 !important;
+            border-color: #9162B3 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #7952b3 !important;
+            background-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
             font-size: 13px !important;

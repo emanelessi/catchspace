@@ -19,6 +19,7 @@ class WorkersSeeder extends Seeder
         $worker1->job_title = 'Developer';
         $worker1->avatar = '/providers/kGAcCMoaZ3vGHgQzAf2wI9DBToPFt1l8uWqKrblH.jpg';
         $worker1->you_did = 'yes';
+        $worker1->type = 'team';
         $worker1->work_space_id  = 1;
         $worker1->save();
 
@@ -27,6 +28,7 @@ class WorkersSeeder extends Seeder
         $worker2->job_title = 'Designer';
         $worker2->avatar = '/providers/J6KNTtcvZJkB9UNI8B5Vd2pMYNbYUzAwSF6eAOOq.jpg';
         $worker2->you_did = 'no';
+        $worker2->type = 'individual';
         $worker2->work_space_id  = 2;
         $worker2->save();
     }

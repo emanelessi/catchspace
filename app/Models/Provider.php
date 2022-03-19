@@ -14,27 +14,27 @@ class Provider extends Model
 
     public function users()
     {
-        return $this->hasMany(User::class, 'provider_id', 'id');
+        return $this->hasMany(User::class, 'provider_id', 'id')->withTrashed();
     }
 
     public function roles()
     {
-        return $this->hasMany(Role::class, 'provider_id', 'id');
+        return $this->hasMany(Role::class, 'provider_id', 'id')->withTrashed();
     }
 
     public function policies()
     {
-        return $this->hasMany(Policies::class, 'provider_id', 'id');
+        return $this->hasMany(Policies::class, 'provider_id', 'id')->withTrashed();
     }
 
     public function providerAttributes()
     {
-        return $this->hasMany(ProviderAttribute::class, 'provider_id', 'id');
+        return $this->hasMany(ProviderAttribute::class, 'provider_id', 'id')->withTrashed();
     }
 
     public function workSpaces()
     {
-        return $this->hasMany(WorkSpace::class, 'provider_id', 'id');
+        return $this->hasMany(WorkSpace::class, 'provider_id', 'id')->withTrashed();
     }
 
 }

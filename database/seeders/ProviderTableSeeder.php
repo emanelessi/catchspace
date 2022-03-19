@@ -24,14 +24,14 @@ class ProviderTableSeeder extends Seeder
         $provider->name = 'provider name';
         $provider->owner_name = 'owner';
         $provider->address = 'Gaza';
-        $provider->logo = '/providers/kGAcCMoaZ3vGHgQzAf2wI9DBToPFt1l8uWqKrblH.jpg';
+        $provider->logo = 'providers/kGAcCMoaZ3vGHgQzAf2wI9DBToPFt1l8uWqKrblH.jpg';
         $provider->save();
 
         $testProvider = new  Provider();
         $testProvider->name = 'Test provider name';
         $testProvider->owner_name = 'owner';
         $testProvider->address = 'Gaza';
-        $testProvider->logo = '/providers/J6KNTtcvZJkB9UNI8B5Vd2pMYNbYUzAwSF6eAOOq.jpg';
+        $testProvider->logo = 'providers/J6KNTtcvZJkB9UNI8B5Vd2pMYNbYUzAwSF6eAOOq.jpg';
         $testProvider->save();
 //        `full_name`, `email`, `password`, `phone`, `type`, `user_level_id`,'provider_id'
         $provider_login = new  User();

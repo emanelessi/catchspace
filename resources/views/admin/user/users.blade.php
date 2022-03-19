@@ -5,17 +5,17 @@
     <style>
 
         .btn:hover {
-            background-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
         }
 
         .btn-circle:hover {
-            background-color: #7952B32B !important;
-            border-color: #7952B32B !important;
+            background-color: #9162B32B !important;
+            border-color: #9162B32B !important;
         }
 
         .span:hover {
-            background-color: #8B62C9 !important;
-            border-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
+            border-color: #7962B3 !important;
         }
 
         .cansel:hover {
@@ -23,7 +23,7 @@
         }
 
         .deletee:hover {
-            background-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
         }
 
         .head-title {
@@ -34,10 +34,10 @@
         }
 
         .add-btn {
-            border-color: #7952B3 !important;
+            border-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
-            background: #7952B3 !important;
+            background: #9162B3 !important;
             border-radius: 5px !important;
             width: 160px !important;
             height: 30px !important;
@@ -66,7 +66,7 @@
 
         .span-filter {
             color: #fff !important;
-            background: #7952B3 !important;
+            background: #9162B3 !important;
             border-radius: 5px !important;
             font-family: AvenirLTStd-Book !important;
             font-weight: normal !important;
@@ -118,17 +118,17 @@
             font-size: 13px !important;
             letter-spacing: 1px !important;
             border-radius: 10px !important;
-            border-color: #7952B3 !important;
+            border-color: #9162B3 !important;
         }
 
         .btn-delete {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #7952b3 !important;
+            border-color: #9162B3 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #7952b3 !important;
+            background-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
@@ -172,7 +172,7 @@
                                    href="javascript:;"
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                    aria-expanded="true">
-                                    <i class="fa fa-filter" style="color: #7952B3 !important;"></i>
+                                    <i class="fa fa-filter" style="color: #9162B3 !important;"></i>
                                     Filter By
                                     <i class="fa fa-angle-down"></i>
                                 </a>
@@ -236,15 +236,24 @@
 
                                         <td class="table-td">
                                             @can('user_delete')
-                                                <a href="/admin/delete-user/{{$user->id}}" data-target="#static2"
-                                                   data-toggle="modal" style="margin-left: 10px">
-                                                    <i class="fa fa-trash" style="color: #7952B3 !important;"></i>
+                                                @if($user->deleted_at ==null)
+                                                    <a href="/admin/delete-user/{{$user->id}}" data-target="#static2"
+                                                       data-toggle="modal" style="margin-left: 10px">
+                                                        <i class="fa fa-trash" style="color: #9162B3 !important;"></i>
 
-                                                </a>
+                                                    </a>
+                                                @else
+                                                    <a href="/admin/restore-user/{{$user->id}}" data-target="#static2"
+                                                       data-toggle="modal" style="margin-left: 10px">
+                                                        <i class="fa fa-recycle" style="color: #9162B3 !important;"></i>
+
+                                                    </a>
+                                                @endif
+
                                             @endcan
                                             @can('user_edit')
                                                 <a href="/admin/edit-user/{{$user->id}}">
-                                                    <i class="fa fa-pencil" style="color: #7952B3 !important;"></i>
+                                                    <i class="fa fa-pencil" style="color: #9162B3 !important;"></i>
 
                                                 </a>
                                             @endcan

@@ -15,6 +15,6 @@ class Policies extends Model
 
     public function provider()
     {
-        return $this->belongsTo(Provider::class, 'provider_id');
+        return $this->belongsTo(Provider::class, 'provider_id')->withTrashed();
     }
 }

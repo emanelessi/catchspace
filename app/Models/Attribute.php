@@ -13,6 +13,6 @@ class Attribute extends Model
 
     public function providerAttributes()
     {
-        return $this->hasMany(ProviderAttribute::class, 'provider_id', 'id');
+        return $this->hasMany(ProviderAttribute::class, 'provider_id', 'id')->withTrashed();
     }
 }

@@ -19,6 +19,7 @@ class CreateWorkersTable extends Migration
             $table->string('job_title');
             $table->string('avatar');
             $table->string('you_did');
+            $table->enum('type',['team','individual']);
             $table->unsignedBigInteger('work_space_id');
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
             $table->softDeletes();

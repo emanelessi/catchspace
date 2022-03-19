@@ -38,7 +38,7 @@ class RoleController extends Controller
 //            dd($roles->toArray());
         } else if ($user->user_level_id == $provider_user_level_id) {
             $provider_id = $user->provider_id;
-            $roles = Role::where('provider_id', $provider_id)->orderBy('id','DESC')->get();
+            $roles = Role::where('provider_id', $provider_id)->orderBy('id','DESC')->withTrashed()->get();
         }
 
        # name, userLevel.name, provider.name
@@ -92,5 +92,12 @@ class RoleController extends Controller
     {
         Role::findOrFail($id)->delete();
         return back()->with('success',trans('messages.role.role_deleted'));
+    }
+
+    public function restore($id)
+    {
+        Role::where('id', $id)->withTrashed()->restore();
+
+        return back()->with('success', trans('messages.role.role_restored'));
     }
 }

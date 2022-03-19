@@ -20,14 +20,14 @@ class PricingController extends Controller
     }
     public function index($id)
     {
-        $workspace = WorkSpace::findOrFail($id);
-        $pricing = Pricing::where('work_space_id', $workspace->id)->get();
+        $workspace = WorkSpace::withTrashed()->findOrFail($id);
+        $pricing = Pricing::where('work_space_id', $workspace->id)->withTrashed()->get();
         return view('admin.workSpace.pricing.pricing', compact('pricing','id'));
     }
 
     public function create($id)
     {
-        $type=RentType::all();
+        $type=RentType::withTrashed()->get();
         return view('admin.workSpace.pricing.addPricing', compact('id','type'));
     }
 
@@ -49,7 +49,7 @@ class PricingController extends Controller
     public function edit($id)
     {
         $type=RentType::all();
-        $pricing = Pricing::findOrFail($id);
+        $pricing = Pricing::withTrashed()->findOrFail($id);
         $work_space_id = $pricing->work_space_id;
         return view('admin.workSpace.pricing.editPricing', compact('work_space_id', 'pricing','type'));
     }
@@ -61,7 +61,7 @@ class PricingController extends Controller
             'type' => 'required',
             'work_space_id' => 'required',
         ]);
-        $pricing = Pricing::findOrFail($request->input('id'));
+        $pricing = Pricing::withTrashed()->findOrFail($request->input('id'));
         $pricing->price = $request->input('price');
         $pricing->work_space_id = $request->input('work_space_id');
         $pricing->rent_type_id = $request->input('type');
@@ -75,5 +75,12 @@ class PricingController extends Controller
         $PricingId = Pricing::findOrFail($id);
         $workSpaceService = $PricingId->delete();
         return back()->with('success', trans('messages.pricing.pricing_deleted'));
+    }
+
+    public function restore($id)
+    {
+        $PricingId = Pricing::withTrashed()->findOrFail($id);
+        $workSpaceService = $PricingId->restore();
+        return back()->with('success', trans('messages.pricing.pricing_restored'));
     }
 }

@@ -13,6 +13,6 @@ class WorkSpaceType extends Model
 
     public function workSpaces()
     {
-        return $this->hasMany(WorkSpace::class, 'work_space_type_id', 'id');
+        return $this->hasMany(WorkSpace::class, 'work_space_type_id', 'id')->withTrashed();
     }
 }

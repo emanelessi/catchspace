@@ -17,7 +17,7 @@ class WorkerController extends Controller
 
     public function index()
     {
-        $worker = Worker::all();
+        $worker = Worker::withTrashed()->get();
 //        dd($worker[0]->workSpace);
         return view('admin.worker.worker', compact('worker'));
     }

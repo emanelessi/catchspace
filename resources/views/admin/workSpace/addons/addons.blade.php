@@ -4,17 +4,17 @@
     <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
-            background-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
         }
 
         .btn-circle:hover {
-            background-color: #7952B32B !important;
-            border-color: #7952B32B !important;
+            background-color: #9162B32B !important;
+            border-color: #9162B32B !important;
         }
 
         .span:hover {
-            background-color: #8B62C9 !important;
-            border-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
+            border-color: #7962B3 !important;
         }
 
         .cansel:hover {
@@ -22,7 +22,7 @@
         }
 
         .deletee:hover {
-            background-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
         }
 
         .page-head {
@@ -37,10 +37,10 @@
         }
 
         .add-btn {
-            border-color: #7952B3 !important;
+            border-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
-            background: #7952B3 !important;
+            background: #9162B3 !important;
             border-radius: 5px !important;
             width: 160px !important;
             height: 30px !important;
@@ -69,7 +69,7 @@
 
         .span-filter {
             color: #fff !important;
-            background: #7952B3 !important;
+            background: #9162B3 !important;
             border-radius: 5px !important;
             font-family: AvenirLTStd-Book !important;
             font-weight: normal !important;
@@ -121,17 +121,17 @@
             font-size: 13px !important;
             letter-spacing: 1px !important;
             border-radius: 10px !important;
-            border-color: #7952B3 !important;
+            border-color: #9162B3 !important;
         }
 
         .btn-delete {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #7952b3 !important;
+            border-color: #9162B3 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #7952b3 !important;
+            background-color: #9162B3 !important;
             font-family: AvenirLTStd-Book !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
@@ -145,7 +145,7 @@
         <div class="page-head">
             <!-- BEGIN PAGE TITLE -->
             <div class="page-title ">
-                <h1 class="head-title">Addons</h1>
+                <h1 class="head-title">{{$addons[0]->workSpace->name??''}} Addons</h1>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -164,7 +164,7 @@
                                        href="javascript:;"
                                        data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                        aria-expanded="true">
-                                        <i class="fa fa-filter" style="color: #7952B3 !important;"></i>
+                                        <i class="fa fa-filter" style="color: #9162B3 !important;"></i>
                                         Filter By
                                         <i class="fa fa-angle-down"></i>
                                     </a>
@@ -194,8 +194,8 @@
                                         </th>
                                         <th class="table-th"> Value
                                         </th>
-                                        <th class="table-th"> Work Space Capacity
-                                        </th><th class="table-th"> Addon Name
+                                        {{--                                        <th class="table-th"> Work Space</th>--}}
+                                        <th class="table-th"> Addon Name
                                         </th>
 
                                     </tr>
@@ -206,8 +206,8 @@
                                             <td class="table-td"> {{$myaddons->id}}
                                             </td>
                                             <td class="table-td">{{$myaddons->value}} $</td>
-                                            <td class="table-td"> {{$myaddons->workSpace->capacity}}
-                                            </td> <td class="table-td"> {{$myaddons->addon->name}}
+                                            {{--                                            <td class="table-td"> {{$myaddons->workSpace->name}}</td>--}}
+                                            <td class="table-td"> {{$myaddons->addon->name}}
                                             </td>
                                         </tr>
                                     @endforeach
@@ -225,13 +225,14 @@
                 <div class="page-head">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1  class="margin-top--10 head-title">Addons</h1>
+                        <h1 class="margin-top--10 head-title">{{$addons[0]->workSpace->name??''}} Addons</h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
                     @can('addons_create')
                         <div class="page-toolbar">
-                            <a href="/provider/workspace/add-addon/{{$id}}" type="button" class="demo-loading-btn btn btn-primary add-btn">
+                            <a href="/provider/workspace/add-addon/{{$id}}" type="button"
+                               class="demo-loading-btn btn btn-primary add-btn">
                                 <i class="fa fa-plus-circle"></i>
                                 Add Addon
                             </a>
@@ -256,11 +257,12 @@
                                                href="javascript:;"
                                                data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                                aria-expanded="true">
-                                                <i class="fa fa-filter" style="color: #7952B3 !important;"></i>
+                                                <i class="fa fa-filter" style="color: #9162B3 !important;"></i>
                                                 Filter By
                                                 <i class="fa fa-angle-down"></i>
                                             </a>
-                                            <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right body-filter">
+                                            <div
+                                                class="dropdown-menu hold-on-click dropdown-checkboxes pull-right body-filter">
                                                 <div class="span margin-bottom-2  padding-tb-5 span-filter">
                                                     <span class="margin-left-40">From A to Z</span>
                                                 </div>
@@ -286,8 +288,8 @@
                                                 </th>
                                                 <th class="table-th"> Value
                                                 </th>
-                                                <th class="table-th"> Work Space Capacity
-                                                </th><th class="table-th"> Addon Name
+                                                {{--                                                <th class="table-th"> Work Space</th>--}}
+                                                <th class="table-th"> Addon Name
                                                 </th>
                                                 <th class="table-th"> Action
                                                 </th>
@@ -300,23 +302,34 @@
                                                     <td class="table-td"> {{$myaddons->id}}
                                                     </td>
                                                     <td class="table-td">{{$myaddons->value}} $</td>
-                                                    <td class="table-td"> {{$myaddons->workSpace->capacity}}
-                                                    </td> <td class="table-td"> {{$myaddons->addon->name}}
+                                                    {{--                                                    <td class="table-td"> {{$myaddons->workSpace->name}}</td>--}}
+                                                    <td class="table-td"> {{$myaddons->addon->name}}
                                                     </td>
                                                     <td class="table-td">
                                                         @can('addons_delete')
-                                                            <a href="/provider/workspace/delete-addon/{{$myaddons->id}}"
-                                                               data-target="#static2" data-toggle="modal"
-                                                               style="margin-left: 10px">
-                                                                <i class="fa fa-trash"
-                                                                   style="color: #7952B3 !important;"></i>
+                                                            @if($myaddons->deleted_at ==null)
 
-                                                            </a>
+                                                                <a href="/provider/workspace/delete-addon/{{$myaddons->id}}"
+                                                                   data-target="#static2" data-toggle="modal"
+                                                                   style="margin-left: 10px">
+                                                                    <i class="fa fa-trash"
+                                                                       style="color: #9162B3 !important;"></i>
+
+                                                                </a>
+                                                            @else
+                                                                <a href="/provider/workspace/restore-addon/{{$myaddons->id}}"
+                                                                   data-target="#static2" data-toggle="modal"
+                                                                   style="margin-left: 10px">
+                                                                    <i class="fa fa-recycle"
+                                                                       style="color: #9162B3 !important;"></i>
+
+                                                                </a>
+                                                            @endif
                                                         @endcan
                                                         @can('addons_edit')
                                                             <a href="/provider/workspace/edit-addon/{{$myaddons->id}}">
                                                                 <i class="fa fa-pencil"
-                                                                   style="color: #7952B3 !important;"></i>
+                                                                   style="color: #9162B3 !important;"></i>
 
                                                             </a>
                                                         @endcan

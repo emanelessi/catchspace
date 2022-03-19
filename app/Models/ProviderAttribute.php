@@ -13,11 +13,11 @@ class ProviderAttribute extends Model
 
     public function provider()
     {
-        return $this->belongsTo(Provider::class, 'provider_id');
+        return $this->belongsTo(Provider::class, 'provider_id')->withTrashed();
     }
 
     public function attribute()
     {
-        return $this->belongsTo(Attribute::class, 'attribute_id');
+        return $this->belongsTo(Attribute::class, 'attribute_id')->withTrashed();
     }
 }

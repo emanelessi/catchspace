@@ -4,7 +4,7 @@
     <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
-            background-color: #8B62C9 !important;
+            background-color: #7962B3 !important;
         }
 
         .page-head {
@@ -51,7 +51,7 @@
                                      src="{{'/storage'.auth()->user()->provider->logo}}"/>
                             @endcan
                             @can('permission_access')
-                                <i class="fa fa-user img-circle" style="font-size: 20px;color: #7952B3 !important;"></i>
+                                <i class="fa fa-user img-circle" style="font-size: 20px;color: #9162B3 !important;"></i>
                             @endcan
                         </div>
                         <!-- END SIDEBAR USERPIC -->

@@ -20,8 +20,8 @@ class ServiceController extends Controller
     }
     public function index($id)
     {
-        $workspace = WorkSpace::findOrFail($id);
-        $services = WorkSpaceService::where('work_space_id', $workspace->id)->get();
+        $workspace = WorkSpace::withTrashed()->findOrFail($id);
+        $services = WorkSpaceService::where('work_space_id', $workspace->id)->withTrashed()->get();
         return view('admin.workSpace.service.services', compact('services', 'id'));
     }
 
@@ -47,7 +47,7 @@ class ServiceController extends Controller
 
     public function edit($id)
     {
-        $workSpaceService = WorkSpaceService::findOrFail($id);
+        $workSpaceService = WorkSpaceService::withTrashed()->findOrFail($id);
         $work_space_id = $workSpaceService->work_space_id;
         return view('admin.workSpace.service.editService', compact('work_space_id', 'workSpaceService'));
     }
@@ -59,9 +59,9 @@ class ServiceController extends Controller
             'value' => 'required',
             'work_space_id' => 'required',
         ]);
-        $workSpaceService = WorkSpaceService::findOrFail($request->input('id'));
+        $workSpaceService = WorkSpaceService::withTrashed()->findOrFail($request->input('id'));
 
-        $service = Service::findOrFail($workSpaceService->service_id);
+        $service = Service::withTrashed()->findOrFail($workSpaceService->service_id);
         $service->name= $request->input('name');
         $service->save();
 
@@ -79,5 +79,13 @@ class ServiceController extends Controller
         $service = Service::findOrFail($workSpaceServiceId->service->id)->delete();
         $workSpaceService = $workSpaceServiceId->delete();
         return back()->with('success', trans('messages.service.service_deleted'));
+    }
+
+    public function restore($id)
+    {
+        $workSpaceServiceId = WorkSpaceService::withTrashed()->findOrFail($id);
+        $service = Service::withTrashed()->findOrFail($workSpaceServiceId->service->id)->restore();
+        $workSpaceService = $workSpaceServiceId->restore();
+        return back()->with('success', trans('messages.service.service_restored'));
     }
 }
