@@ -1,10 +1,12 @@
 <style>
     i:hover {
-        color: #FECA2F !important;
+        /*color: #FECA2F !important;*/
+        color: #ffffff !important;
     }
 
     .select_color i {
-        color: #FECA2F !important;
+        /*color: #FECA2F !important;*/
+        color: #ffffff !important;
     }
 
     i {
@@ -14,27 +16,29 @@
 </style>
 @can('permission_access')
 <div class="page-sidebar-wrapper">
-
     <div class="page-sidebar navbar-collapse collapse margin-left--20 margin-top--20 " style="
     /*min-height: 1024px;*/
     /*margin-left: -20px;*/
     /*margin-top: -20px;*/
     /*width: 250px;*/
     height: 946px !important;
-    background: #9162B3;
+    /*background: #9162B3;*/
+    background: #2B292C;
     ">
         <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
             <li class="nav-item start active open">
             @can('permission_access')
                 <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('admin/home')}}" class="nav-link nav-toggle margin-left-10" style="
-   font-family: AvenirLTStd-Book;
+   /*font-family: AvenirLTStd-Book;*/
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
     /*text-transform: capitalize;*/
     /*margin-left: 7px;*/
     /*margin-bottom: 18px;*/
+    color: #ffffff;
 
 ">
                         <i class="fa fa-home"></i>
@@ -45,7 +49,8 @@
             @can('user_show')
                 <li class="nav-item @if(preg_match('/user/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/admin/user')}}" class="nav-link nav-toggle margin-left-10" style="
-   font-family: AvenirLTStd-Book;
+   /*font-family: AvenirLTStd-Book;*/
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -62,7 +67,8 @@
             @can('role_access')
                 <li class="nav-item @if(preg_match('/role/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/admin/role')}}" class="nav-link nav-toggle margin-left-10" style="
-   font-family: AvenirLTStd-Book;
+   /*font-family: AvenirLTStd-Book;*/
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -80,7 +86,8 @@
             @can('provider_access')
                 <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/provider/home')}}" class="nav-link nav-toggle margin-left-10" style="
-   font-family: AvenirLTStd-Book;
+   /*font-family: AvenirLTStd-Book;*/
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -98,7 +105,8 @@
 {{--            @can('provider_access')--}}
                 <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/admin/provider')}}" class="nav-link nav-toggle margin-left-10" style="
-   font-family: AvenirLTStd-Book;
+   /*font-family: AvenirLTStd-Book;*/
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -118,7 +126,8 @@
             @can('workspace_access')
                 <li class="nav-item @if(preg_match('/workspace/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/admin/workspace')}}" class="nav-link nav-toggle margin-left-10" style="
-    font-family: AvenirLTStd-Book;
+    /*font-family: AvenirLTStd-Book;*/
+    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
@@ -136,7 +145,8 @@
             @can('worker_show')
                 <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open select_color @endif">
                     <a href="{{url('/admin/worker')}}" class="nav-link nav-toggle margin-left-10" style="
-   font-family: AvenirLTStd-Book;
+   /*font-family: AvenirLTStd-Book;*/
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;

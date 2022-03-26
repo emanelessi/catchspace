@@ -3,9 +3,9 @@
 @section('content')
     <!-- BEGIN PAGE style -->
     <style>
-
         .btn:hover {
-            background-color: #7962B3 !important;
+            /*background-color: #7962B3 !important;*/
+            background-color: #ef6198 !important;
         }
 
         .btn-circle:hover {
@@ -14,8 +14,8 @@
         }
 
         .span:hover {
-            background-color: #7962B3 !important;
-            border-color: #7962B3 !important;
+            background-color: #6dce74 !important;
+            border-color: #6dce74 !important;
         }
 
         .cansel:hover {
@@ -23,21 +23,23 @@
         }
 
         .deletee:hover {
-            background-color: #7962B3 !important;
+            background-color: #E93A76 !important;
         }
 
         .head-title {
-            font-family: AvenirLTStd-Book !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             font-size: 33px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
 
         .add-btn {
-            border-color: #9162B3 !important;
-            font-family: AvenirLTStd-Book !important;
+            border-color: #E93A76 !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             color: #FFFFFF !important;
-            background: #9162B3 !important;
+            background: #E93A76 !important;
             border-radius: 5px !important;
             width: 160px !important;
             height: 30px !important;
@@ -48,7 +50,8 @@
             background-color: #FFFFFF !important;
             border-color: #FFFFFF !important;
             border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             font-weight: normal;
         !important font-size: 13 px !important;
             color: #292D32 !important;
@@ -66,24 +69,27 @@
 
         .span-filter {
             color: #fff !important;
-            background: #9162B3 !important;
+            background: #5AB25E !important;
             border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             font-weight: normal !important;
             font-size: 15px !important;
             line-height: 15px !important;
         }
 
         .table-th {
-            font-family: AvenirLTStd-Book !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             font-size: 20px !important;
             letter-spacing: -0.022em !important;
-            color: #e7ae04 !important;
+            color: #E93A76 !important;
             padding-bottom: 15px !important;
         }
 
         .table-td {
-            font-family: AvenirLTStd-Book !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             font-size: 20px !important;
             letter-spacing: 0.02em !important;
             color: #000000 !important;
@@ -99,7 +105,8 @@
         }
 
         .modal-p {
-            font-family: AvenirLTStd-Book !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             font-weight: bold !important;
             font-size: 18px !important;
             line-height: 24px !important;
@@ -113,23 +120,26 @@
             height: 32.2px !important;
             align-items: center !important;
             padding: 0 !important;
-            border-radius: 8px !important;
-            font-family: AvenirLTStd-Book !important;
+            /*border-radius: 8px !important;*/
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             font-size: 13px !important;
             letter-spacing: 1px !important;
             border-radius: 10px !important;
-            border-color: #9162B3 !important;
+            border-color: #E93A76 !important;
         }
 
         .btn-delete {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #9162B3 !important;
+            border-color: #E93A76 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #9162B3 !important;
-            font-family: AvenirLTStd-Book !important;
+            /*background-color: #9162B3 !important;*/
+            background-color: #E93A76 !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             color: #FFFFFF !important;
             font-size: 13px !important;
             letter-spacing: 1px !important;
@@ -172,9 +182,9 @@
                                    href="javascript:;"
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                    aria-expanded="true">
-                                    <i class="fa fa-filter" style="color: #9162B3 !important;"></i>
+                                    <i class="fa fa-filter" style="color: #5AB25E !important;"></i>
                                     Filter By
-                                    <i class="fa fa-angle-down"></i>
+                                    <i class="fa fa-angle-down" ></i>
                                 </a>
                                 <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right body-filter">
                                     <div class="span margin-bottom-2  padding-tb-5 span-filter">
@@ -217,49 +227,48 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($users as $user)
+{{--                                @foreach($users as $user)--}}
+{{--                                    <tr>--}}
+{{--                                        <td class="table-td"> {{$user->id}}--}}
+{{--                                        </td>--}}
+{{--                                        <td class="table-td">{{$user->full_name}}</td>--}}
+{{--                                        <td class="table-td"> {{$user->email}}--}}
+{{--                                        </td>--}}
+{{--                                        <td class="table-td"> {{$user->phone}}--}}
+{{--                                        </td>--}}
+{{--                                        <td class="table-td"> {{$user->userLevel->name}}--}}
+{{--                                        </td>--}}
+{{--                                        <td class="table-td"> {{$user->provider->name ?? ''}}--}}
+{{--                                        </td>--}}
+{{--                                        <td class="table-td"> {{$user->UserLevel->roles[0]->name ?? ''}}--}}
+{{--                                        </td>--}}
 
-                                    <tr>
-                                        <td class="table-td"> {{$user->id}}
-                                        </td>
-                                        <td class="table-td">{{$user->full_name}}</td>
-                                        <td class="table-td"> {{$user->email}}
-                                        </td>
-                                        <td class="table-td"> {{$user->phone}}
-                                        </td>
-                                        <td class="table-td"> {{$user->userLevel->name}}
-                                        </td>
-                                        <td class="table-td"> {{$user->provider->name ?? ''}}
-                                        </td>
-                                        <td class="table-td"> {{$user->UserLevel->roles[0]->name ?? ''}}
-                                        </td>
+{{--                                        <td class="table-td">--}}
+{{--                                            @can('user_delete')--}}
+{{--                                                @if($user->deleted_at ==null)--}}
+{{--                                                    <a href="/admin/delete-user/{{$user->id}}" data-target="#static2"--}}
+{{--                                                       data-toggle="modal" style="margin-left: 10px">--}}
+{{--                                                        <i class="fa fa-trash" style="color: #9162B3 !important;"></i>--}}
 
-                                        <td class="table-td">
-                                            @can('user_delete')
-                                                @if($user->deleted_at ==null)
-                                                    <a href="/admin/delete-user/{{$user->id}}" data-target="#static2"
-                                                       data-toggle="modal" style="margin-left: 10px">
-                                                        <i class="fa fa-trash" style="color: #9162B3 !important;"></i>
+{{--                                                    </a>--}}
+{{--                                                @else--}}
+{{--                                                    <a href="/admin/restore-user/{{$user->id}}" data-target="#static2"--}}
+{{--                                                       data-toggle="modal" style="margin-left: 10px">--}}
+{{--                                                        <i class="fa fa-recycle" style="color: #9162B3 !important;"></i>--}}
 
-                                                    </a>
-                                                @else
-                                                    <a href="/admin/restore-user/{{$user->id}}" data-target="#static2"
-                                                       data-toggle="modal" style="margin-left: 10px">
-                                                        <i class="fa fa-recycle" style="color: #9162B3 !important;"></i>
+{{--                                                    </a>--}}
+{{--                                                @endif--}}
 
-                                                    </a>
-                                                @endif
+{{--                                            @endcan--}}
+{{--                                            @can('user_edit')--}}
+{{--                                                <a href="/admin/edit-user/{{$user->id}}">--}}
+{{--                                                    <i class="fa fa-pencil" style="color: #9162B3 !important;"></i>--}}
 
-                                            @endcan
-                                            @can('user_edit')
-                                                <a href="/admin/edit-user/{{$user->id}}">
-                                                    <i class="fa fa-pencil" style="color: #9162B3 !important;"></i>
-
-                                                </a>
-                                            @endcan
-                                        </td>
-                                    </tr>
-                                @endforeach
+{{--                                                </a>--}}
+{{--                                            @endcan--}}
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
+{{--                                @endforeach--}}
 
                                 </tbody>
                             </table>

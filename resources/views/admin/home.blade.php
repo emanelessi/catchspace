@@ -16,7 +16,8 @@
         }
 
         .head-title {
-            font-family: AvenirLTStd-Book !important;
+            /*font-family: AvenirLTStd-Book !important;*/
+            font-family: 'Montserrat', sans-serif;
             font-size: 33px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
@@ -25,6 +26,7 @@
     <!-- END PAGE style -->
 
     {{--    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">--}}
+
     @can('permission_access')
 
     <div class="page-head" >
@@ -42,7 +44,8 @@
                  background-color: #FFFFFF;
                  border-color: #FFFFFF;
                  border-radius: 10px !important;
-                 font-family: AvenirLTStd-Book;
+                 /*font-family: AvenirLTStd-Book;*/
+                 font-family: 'Montserrat', sans-serif;
                  font-style: normal;
                  font-weight: normal;
                  font-size: 13px;
@@ -66,7 +69,8 @@
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
 
-                    background: #9162B3;
+                    /*background: #9162B3;*/
+                    background: #E93A76;
 ">
                     <div class="visual padding-top-12">
                         <i class="fa fa-user"
@@ -74,11 +78,15 @@
                     </div>
                     <div class="details">
                         <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
+                            <span data-counter="counterup" style="
+                            /*font-family: AvenirLTStd-Book;*/
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 34px;"
                                   data-value="{{$providers->Count() ?? 0}}">{{$providers->Count() ?? 0}}</span>
                         </div>
                         <div class="desc" style="
-    font-family: AvenirLTStd-Book;
+    /*font-family: AvenirLTStd-Book;*/
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
 "> Co-working provider
@@ -90,7 +98,8 @@
                 <div class="dashboard-stat dashboard-stat-v2 red" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                    background: #9162B3;
+                    /*background: #9162B3;*/
+                    background: #5AB25E;
 ">
                     <div class="visual">
                         <i class="fa fa-map-marker"
@@ -98,11 +107,15 @@
                     </div>
                     <div class="details">
                         <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
+                            <span data-counter="counterup" style="
+                            /*font-family: AvenirLTStd-Book;*/
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 34px;"
                                   data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
                         </div>
                         <div class="desc" style="
-    font-family: AvenirLTStd-Book;
+    /*font-family: AvenirLTStd-Book;*/
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
 "> Work space
@@ -114,7 +127,8 @@
                 <div class="dashboard-stat dashboard-stat-v2 green" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                    background: #9162B3;
+                    /*background: #9162B3;*/
+                    background: #27272A;
 ">
                     <div class="visual">
                         <i class="fa fa-file-text"
@@ -122,11 +136,15 @@
                     </div>
                     <div class="details">
                         <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
+                            <span data-counter="counterup" style="
+                            /*font-family: AvenirLTStd-Book;*/
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 34px;"
                                   data-value="{{$workers->Count() ?? 0}}">{{$workers->Count() ?? 0}}</span>
                         </div>
                         <div class="desc" style="
-    font-family: AvenirLTStd-Book;
+    /*font-family: AvenirLTStd-Book;*/
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
 "> Workers
@@ -138,7 +156,7 @@
         <div class="clearfix"></div>
         <!-- END DASHBOARD STATS 1-->
         <div class="row">
-            <div class="col-lg-12 col-xs-12 col-sm-12">
+            <div class="col-lg-8 col-xs-8 col-sm-8">
                 <div class="portlet light bordered"
                      style="left: 277px;top: 697px;background: #FFFFFF;border-radius: 20px !important;">
                     <div class=" tabbable-line">
@@ -149,7 +167,8 @@
     height: 19px;
     left: 0px;
     top: 0px;
-font-family: AvenirLTStd-Book;
+/*font-family: AvenirLTStd-Book;*/
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600 !important;
     font-size: 16px;
@@ -158,6 +177,37 @@ font-family: AvenirLTStd-Book;
     color: #343A40 !important;
 ">Quick actions</span>
                         </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="tab-content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-4 col-sm-4">
+                <div class="portlet light bordered"
+                     style="left: 277px;top: 697px;background: #FFFFFF;border-radius: 20px !important;">
+                    <div class=" tabbable-line" style="height: 321px;">
+                        <div class="caption" style="height: 137px;background-color: #000000;">
+                            <i class=" icon-social-twitter font-dark hide"></i>
+                            <span class="caption-subject font-dark bold " style="
+    width: 107px;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+/*font-family: AvenirLTStd-Book;*/
+font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.4px;
+    /*color: #343A40 !important;*/
+    color: #ffffff !important;
+">Quick actions</span>
+                        </div>
+                        <div style="background-color: #E93A76;height: 185px;"> </div>
                     </div>
                     <div class="portlet-body">
                         <div class="tab-content">
@@ -175,8 +225,9 @@ font-family: AvenirLTStd-Book;
                         <div class="caption margin-top-10">
                             <i class=" icon-social-twitter font-dark hide"></i>
                             <span class="caption-subject font-dark bold margin-left-9 " style="
-    font-family: AvenirLTStd-Book;
-    font-style: normal;
+    /*font-family: AvenirLTStd-Book;*/
+    font-family: 'Montserrat', sans-serif;
+    /*font-style: normal;*/
     font-size: 20px;
     letter-spacing: 0.5px;
     color: #343A40 !important;
@@ -201,7 +252,8 @@ font-family: AvenirLTStd-Book;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-font-family: AvenirLTStd-Book;
+/*font-family: AvenirLTStd-Book;*/
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -214,7 +266,98 @@ font-family: AvenirLTStd-Book;
                                                                       width: 109.1px;
                                                                       height: 28.27px;
                                                                       left: 396.39px;top: 761.46px;
-                                                                      font-family: AvenirLTStd-Book;
+                                                                      /*font-family: AvenirLTStd-Book;*/
+                                                                      font-family: 'Montserrat', sans-serif;
+font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
+                                                                </span>
+                                                            Dummy text of the printing
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-action-buttons padding-top-0">
+                                                    <div>
+                                                        <button type="button" class="btn Reject margin-right-5" style="
+                                                    display: inline;
+                                                    align-items: center;
+                                                    background: #333333;
+                                                    opacity: 0.5;
+                                                    border-radius: 9px !important;
+                                                    /*font-family: AvenirLTStd-Book;*/
+                                                    font-family: 'Montserrat', sans-serif;
+                                                    font-size: 14px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;
+                                                    height: 33px;
+                                                    width: 80px;
+                                                    ">
+                                                            Reject
+                                                        </button>
+                                                        <button type="button" class="btn Accept" style="
+                                                    display: inline;
+                                                    align-items: center;
+                                                    background: #E93A76;
+                                                    /*background: #9162B3;*/
+                                                    border-radius: 9px !important;
+                                                    /*font-family: AvenirLTStd-Book;*/
+                                                    font-family: 'Montserrat', sans-serif;
+                                                    font-size: 14px;
+                                                    letter-spacing: 0.4px;
+                                                    color: #FFFFFF;
+                                                    height: 33px;
+                                                    width: 80px;
+                                                    ">
+                                                            Accept
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-action-datetime padding-top-0">
+                                                <span class="mt=action-time" style="
+                                                                width: 75.41px;
+                                                                height: 28.37px;
+                                                                left: 1258.46px;
+                                                                top: 761.73px;
+                                                            /*font-family: AvenirLTStd-Book;*/
+                                                            font-family: 'Montserrat', sans-serif;
+                                                                font-style: normal;
+                                                                font-weight: normal;
+                                                                font-size: 16px;
+                                                                line-height: 27px;
+                                                                color: #7C7C7C;
+                                                                margin-left: 35px;
+                                                                ">9:30pm</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-action margin-left-9" style="border-bottom: 0px;">
+                                        <div class="mt-action-img">
+                                            <img src="../assets/pages/media/users/avatar10.jpg"/></div>
+                                        <div class="mt-action-body ">
+                                            <div class="mt-action-row">
+                                                <div class="mt-action-info ">
+                                                    <div class="mt-action-details ">
+                                                        <p class="mt-action-desc" style="
+    width: 511.39px;
+    height: 54.41px;
+    left: 524.14px;
+    top: 761.13px;
+/*font-family: AvenirLTStd-Book;*/
+font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #7C7C7C;
+">
+                                                                <span class="mt-action-author"
+                                                                      style="
+                                                                      margin-right: 25px;
+                                                                      width: 109.1px;
+                                                                      height: 28.27px;
+                                                                      left: 396.39px;top: 761.46px;
+                                                                      /*font-family: AvenirLTStd-Book;*/
+                                                                      font-family: 'Montserrat', sans-serif;
 font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
                                                             Dummy text of the printing
@@ -241,9 +384,11 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                         <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #9162B3;
+                                                    /*background: #9162B3;*/
+                                                    background: #E93A76;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    /*font-family: AvenirLTStd-Book;*/
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -260,7 +405,8 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-font-family: AvenirLTStd-Book;
+/*font-family: AvenirLTStd-Book;*/
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -285,7 +431,8 @@ font-family: AvenirLTStd-Book;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-font-family: AvenirLTStd-Book;
+/*font-family: AvenirLTStd-Book;*/
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -298,7 +445,8 @@ font-family: AvenirLTStd-Book;
                                                                       width: 109.1px;
                                                                       height: 28.27px;
                                                                       left: 396.39px;top: 761.46px;
-                                                                      font-family: AvenirLTStd-Book;
+                                                                      /*font-family: AvenirLTStd-Book;*/
+                                                                      font-family: 'Montserrat', sans-serif;
 font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
                                                             Dummy text of the printing
@@ -325,9 +473,10 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                         <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #9162B3;
+                                                     background: #E93A76;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    /*font-family: AvenirLTStd-Book;*/
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -344,91 +493,8 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-font-family: AvenirLTStd-Book;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 27px;
-    color: #7C7C7C;
-    margin-left: 35px;
-">9:30pm</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-action margin-left-9" style="border-bottom: 0px;">
-                                        <div class="mt-action-img">
-                                            <img src="../assets/pages/media/users/avatar10.jpg"/></div>
-                                        <div class="mt-action-body ">
-                                            <div class="mt-action-row">
-                                                <div class="mt-action-info ">
-                                                    <div class="mt-action-details ">
-                                                        <p class="mt-action-desc" style="
-    width: 511.39px;
-    height: 54.41px;
-    left: 524.14px;
-    top: 761.13px;
-font-family: AvenirLTStd-Book;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
-    color: #7C7C7C;
-">
-                                                                <span class="mt-action-author"
-                                                                      style="
-                                                                      margin-right: 25px;
-                                                                      width: 109.1px;
-                                                                      height: 28.27px;
-                                                                      left: 396.39px;top: 761.46px;
-                                                                      font-family: AvenirLTStd-Book;
-font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
-                                                                </span>
-                                                            Dummy text of the printing
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action-buttons padding-top-0">
-                                                    <div>
-                                                        <button type="button" class="btn Reject margin-right-5" style="
-                                                    display: inline;
-                                                    align-items: center;
-                                                    background: #333333;
-                                                    opacity: 0.5;
-                                                    border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
-                                                    font-size: 14px;
-                                                    letter-spacing: 0.4px;
-                                                    color: #FFFFFF;
-                                                    height: 33px;
-                                                    width: 80px;
-                                                    ">
-                                                            Reject
-                                                        </button>
-                                                        <button type="button" class="btn Accept" style="
-                                                    display: inline;
-                                                    align-items: center;
-    background: #9162B3;
-                                                    border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
-                                                    font-size: 14px;
-                                                    letter-spacing: 0.4px;
-                                                    color: #FFFFFF;
-                                                    height: 33px;
-                                                    width: 80px;
-                                                    ">
-                                                            Accept
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action-datetime padding-top-0">
-                                                <span class="mt=action-time" style="
-    width: 75.41px;
-    height: 28.37px;
-    left: 1258.46px;
-    top: 761.73px;
-font-family: AvenirLTStd-Book;
+/*font-family: AvenirLTStd-Book;*/
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
