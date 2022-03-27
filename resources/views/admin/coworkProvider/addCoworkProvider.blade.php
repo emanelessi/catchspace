@@ -171,6 +171,14 @@
                                                                    placeholder="Al-rehab mall, remal street, Gaza, palestine"
                                                                    class="form-control form-input"/>
                                                         </div>
+                                                        <div class="form-group margin-left-9 margin-right-10">
+                                                            <label class="control-label margin-left-9"
+                                                                   style="color:#6B7280;">
+                                                                Phone*</label>
+                                                            <input type="number" name="phone"
+                                                                   placeholder="059"
+                                                                   class="form-control form-input"/>
+                                                        </div>
                                                         <button type="submit"
                                                                 class="btn btn-primary margin-top-25
                                                                     m-grid-col-lg-offset-9-5

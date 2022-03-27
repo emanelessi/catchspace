@@ -23,7 +23,7 @@ class WorkerController extends Controller
     {
 //        $workspaces = WorkSpace::CheckProvider()
         $workspaces = WorkSpace::withTrashed()
-            ->with('workers')
+            ->with('workerWorkSpace')
             ->where('provider_id', auth()->user()->provider->id)
             ->get();
 

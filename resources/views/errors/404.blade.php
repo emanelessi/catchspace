@@ -3,7 +3,7 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color: #9162B3 !important;
+            background-color: #E93A76 !important;
         }
 
     </style>

@@ -213,6 +213,8 @@
 
                                     <th class="table-th"> Address
                                     </th>
+                                    <th class="table-th"> Phone
+                                    </th>
                                     <th class="table-th"> Action
                                     </th>
                                 </tr>
@@ -223,12 +225,14 @@
                                         <td class="table-td"> {{$myprovider->id}}
                                         </td>
                                         <td class="table-td"><img alt="" class="img-circle"
-                                                                  src="{{'/storage/'.$myprovider->logo}}"/></td>
+                                                                  src="{{'/storage/'.$myprovider->logo}}" style="width: 40px;"/></td>
                                         <td class="table-td"> {{$myprovider->name}}
                                         </td>
                                         <td class="table-td"> {{$myprovider->owner_name}}
                                         </td>
                                         <td class="table-td"> {{$myprovider->address}}
+                                        </td>
+                                        <td class="table-td"> {{$myprovider->phone}}
                                         </td>
 
                                         <td class="table-td">

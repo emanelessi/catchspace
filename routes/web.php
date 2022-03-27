@@ -92,6 +92,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/edit-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'update'])->name('workspaceupdate');
 
     Route::get('/admin/worker', [\App\Http\Controllers\WorkerController::class, 'index'])->name('workers');
+    Route::get('/admin/worker/reservations/{id}', [\App\Http\Controllers\WorkerController::class, 'reservations']);
 
     Route::get('/admin/workspace/services/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'services']);
     Route::get('/admin/workspace/pricing/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'pricing']);

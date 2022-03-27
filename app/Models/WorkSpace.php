@@ -35,11 +35,12 @@ class WorkSpace extends Model
     {
         return $this->belongsTo(Provider::class, 'provider_id')->withTrashed();
     }
-
-    public function workers()
+    public function workerWorkSpace()
     {
-        return $this->hasMany(Worker::class, 'work_space_id', 'id')->withTrashed();
+        return $this->hasMany(WorkerWorkSpace::class, 'work_space_id')->withTrashed();
     }
+
+
 
     public function workSpaceAddons()
     {

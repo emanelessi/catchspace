@@ -190,7 +190,7 @@
                                         </th>
                                         <th class="table-th"> Type
                                         </th>
-                                        <th class="table-th"> Work Space
+                                        <th class="table-th"> Reservations
                                         </th>
                                     </tr>
                                     </thead>
@@ -207,8 +207,15 @@
                                             </td>
                                             <td class="table-td"> {{$myworker->type}}
                                             </td>
-                                            <td class="table-td"> {{$myworker->workSpace->name ?? ''}}
-                                            </td>
+                                            @can('reservations_show')
+                                                <td class="table-td">
+                                                    <a href="/admin/worker/reservations/{{$myworker->id}}"
+                                                       style="margin-left: 10px">
+                                                        <i class="fa fa-bookmark"
+                                                           style="color: #9162B3 !important;"></i>
+                                                    </a>
+                                                </td>
+                                            @endcan
                                         </tr>
 
                                     @endforeach
@@ -299,7 +306,7 @@
                                                 </th>
                                                 <th class="table-th"> status
                                                 </th>
-                                                <th class="table-th"> Work Space
+                                                <th class="table-th"> Reservations
                                                 </th>
                                                 <th class="table-th"> action
                                                 </th>
@@ -307,55 +314,55 @@
                                             </thead>
                                             <tbody>
                                             @foreach($workspaces as $workspace)
-                                            @foreach($workspace->workers as $myworker)
+                                            @foreach($workspace->workerWorkSpace as $myworker)
                                                 <tr>
-                                                    <td class="table-td">  {{$myworker->id}}
+                                                    <td class="table-td">  {{$myworker->workers->id}}
                                                     </td>
                                                     <td class="table-td">
                                                         <img alt="" class="img-circle"
-                                                             src="{{'/storage/'.$myworker->avatar}}"/>
+                                                             src="{{'/storage/'.$myworker->workers->avatar}}"/>
                                                     </td>
-                                                    <td class="table-td"> {{$myworker->name}}
+                                                    <td class="table-td"> {{$myworker->workers->name}}
                                                     </td>
-                                                    <td class="table-td"> {{$myworker->job_title}}
+                                                    <td class="table-td"> {{$myworker->workers->job_title}}
                                                     </td>
-                                                    <td class="table-td"> {{$myworker->you_did}}
+                                                    <td class="table-td"> {{$myworker->workers->you_did}}
                                                     </td>
-                                                    <td class="table-td"> {{$myworker->type}}
+                                                    <td class="table-td"> {{$myworker->workers->type}}
                                                     </td>
                                                     <td class="table-td"> /
                                                     </td>
                                                     <td class="table-td"> {{$myworker->workSpace->name}}
                                                     </td>
-                                                    <td class="table-td">
-                                                        @can('worker_delete')
-                                                            @if($myworker->deleted_at ==null)
+{{--                                                    <td class="table-td">--}}
+{{--                                                        @can('worker_delete')--}}
+{{--                                                            @if($myworker->deleted_at ==null)--}}
 
-                                                            <a href="/provider/delete-worker/{{$myworker->id}}"
-                                                               data-target="#static2" data-toggle="modal"
-                                                               style="margin-left: 10px">
-                                                                <i class="fa fa-trash"
-                                                                   style="color: #9162B3 !important;"></i>
+{{--                                                            <a href="/provider/delete-worker/{{$myworker->id}}"--}}
+{{--                                                               data-target="#static2" data-toggle="modal"--}}
+{{--                                                               style="margin-left: 10px">--}}
+{{--                                                                <i class="fa fa-trash"--}}
+{{--                                                                   style="color: #9162B3 !important;"></i>--}}
 
-                                                            </a>
-                                                            @else
-                                                                <a href="/provider/restore-worker/{{$myworker->id}}"
-                                                               data-target="#static2" data-toggle="modal"
-                                                               style="margin-left: 10px">
-                                                                <i class="fa fa-recycle"
-                                                                   style="color: #9162B3 !important;"></i>
+{{--                                                            </a>--}}
+{{--                                                            @else--}}
+{{--                                                                <a href="/provider/restore-worker/{{$myworker->id}}"--}}
+{{--                                                               data-target="#static2" data-toggle="modal"--}}
+{{--                                                               style="margin-left: 10px">--}}
+{{--                                                                <i class="fa fa-recycle"--}}
+{{--                                                                   style="color: #9162B3 !important;"></i>--}}
 
-                                                            </a>
-                                                            @endif
-                                                        @endcan
-                                                        @can('worker_edit')
-                                                            <a href="/provider/edit-worker/{{$myworker->id}}">
-                                                                <i class="fa fa-pencil"
-                                                                   style="color: #9162B3 !important;"></i>
+{{--                                                            </a>--}}
+{{--                                                            @endif--}}
+{{--                                                        @endcan--}}
+{{--                                                        @can('worker_edit')--}}
+{{--                                                            <a href="/provider/edit-worker/{{$myworker->id}}">--}}
+{{--                                                                <i class="fa fa-pencil"--}}
+{{--                                                                   style="color: #9162B3 !important;"></i>--}}
 
-                                                            </a>
-                                                        @endcan
-                                                    </td>
+{{--                                                            </a>--}}
+{{--                                                        @endcan--}}
+{{--                                                    </td>--}}
                                                 </tr>
 
                                             @endforeach

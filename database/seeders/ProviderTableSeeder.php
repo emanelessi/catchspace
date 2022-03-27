@@ -24,6 +24,7 @@ class ProviderTableSeeder extends Seeder
         $provider->name = 'provider name';
         $provider->owner_name = 'owner';
         $provider->address = 'Gaza';
+        $provider->phone = '0597505581';
         $provider->logo = 'providers/kGAcCMoaZ3vGHgQzAf2wI9DBToPFt1l8uWqKrblH.jpg';
         $provider->save();
 
@@ -31,6 +32,7 @@ class ProviderTableSeeder extends Seeder
         $testProvider->name = 'Test provider name';
         $testProvider->owner_name = 'owner';
         $testProvider->address = 'Gaza';
+        $testProvider->phone = '0591505511';
         $testProvider->logo = 'providers/J6KNTtcvZJkB9UNI8B5Vd2pMYNbYUzAwSF6eAOOq.jpg';
         $testProvider->save();
 //        `full_name`, `email`, `password`, `phone`, `type`, `user_level_id`,'provider_id'

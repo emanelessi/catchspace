@@ -11,8 +11,8 @@ class Worker extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public function workSpace()
+    public function workerWorkSpace()
     {
-        return $this->belongsTo(WorkSpace::class, 'work_space_id')->withTrashed();
+        return $this->hasMany(WorkerWorkSpace::class, 'worker_id')->withTrashed();
     }
 }

@@ -44,7 +44,7 @@ class ProviderController extends Controller
         $provider->name = request('name');
         $provider->owner_name = request('owner_name');
         $provider->address = request('address');
-
+        $provider->phone = request('phone');
         $provider->logo = storeImage('providers','logo' );
         $provider->save();
         return back()->with('success', trans('messages.provider.provider_created'));
@@ -63,6 +63,7 @@ class ProviderController extends Controller
         $provider->name = request('name');
         $provider->owner_name = request('owner_name');
         $provider->address = request('address');
+        $provider->phone = request('phone');
 
         if ($logo= request('logo')) {
             $provider->logo = storeImage('providers','logo' );

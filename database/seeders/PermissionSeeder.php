@@ -29,7 +29,6 @@ class PermissionSeeder extends Seeder
             'permission_delete',
             'permission_access',
             'role_create',
-//            'role_edit',
             'role_show',
             'role_delete',
             'role_access',
@@ -63,6 +62,8 @@ class PermissionSeeder extends Seeder
             'services_access',
             'pricing_access',
             'addons_access',
+            'reservations_access',
+            'reservations_show',
             'services_create',
             'services_delete',
             'services_edit',
@@ -113,6 +114,7 @@ class PermissionSeeder extends Seeder
             'services_access',
             'pricing_access',
             'addons_access',
+            'reservations_access',
             'services_create',
             'services_delete',
             'services_edit',
@@ -164,6 +166,7 @@ class PermissionSeeder extends Seeder
             'services_show',
             'pricing_show',
             'addons_show',
+            'reservations_show',
 
         ];
 

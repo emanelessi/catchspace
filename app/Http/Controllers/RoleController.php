@@ -33,7 +33,7 @@ class RoleController extends Controller
         $user = auth()->user();
 
         if ($user->user_level_id == $superadmin_user_level_id) {
-            $roles = Role::orderBy('id','DESC')->get();
+            $roles = Role::orderBy('id','DESC')->withTrashed()->get();
 //            $roles = Auth::user()->getAllPermissions();
 //            dd($roles->toArray());
         } else if ($user->user_level_id == $provider_user_level_id) {

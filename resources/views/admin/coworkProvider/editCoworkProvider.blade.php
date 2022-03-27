@@ -117,7 +117,7 @@
                             <input type="file" data-loading-text="Loading..."
                                    name="logo" id="file"
                                    class="inputfile img-logo demo-loading-btn btn btn-primary margin-top-85"
-                                   value="{{$provider->logo}}">
+                                   value="{{$provider->logo}}" >
                             <label for="file"> Upload wokspace logo <i class="fa fa-file-photo-o"
                                                                        style="color: #6B7280 !important;"></i></label>
 
@@ -153,6 +153,14 @@
                                                 Address*</label>
                                             <input type="text" name="address" value="{{$provider->address}}"
                                                    placeholder="Al-rehab mall, remal street, Gaza, palestine"
+                                                   class="form-control form-input"/>
+                                        </div>
+                                        <div class="form-group margin-left-9 margin-right-10">
+                                            <label class="control-label margin-left-9"
+                                                   style="color:#6B7280;">
+                                                Phone*</label>
+                                            <input type="number" name="phone" value="{{$provider->phone}}"
+                                                   placeholder="059"
                                                    class="form-control form-input"/>
                                         </div>
                                         <button type="submit"
