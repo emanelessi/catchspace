@@ -306,7 +306,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($worker as $myworker)
+                                            @foreach($workspaces as $workspace)
+                                            @foreach($workspace->workers as $myworker)
                                                 <tr>
                                                     <td class="table-td">  {{$myworker->id}}
                                                     </td>
@@ -357,6 +358,7 @@
                                                     </td>
                                                 </tr>
 
+                                            @endforeach
                                             @endforeach
                                             </tbody>
                                         </table>

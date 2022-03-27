@@ -21,12 +21,14 @@ class WorkerController extends Controller
 
     public function index()
     {
-        $work_space = WorkSpace::withTrashed()->where('provider_id', auth()->user()->provider->id)->get();
-//        dd($work_space);
-        foreach ($work_space as $my_work_space){
-            $worker = Worker::withTrashed()->where('work_space_id', $my_work_space->id)->get();
-            return view('admin.worker.worker', compact('worker'));
-        }
+//        $workspaces = WorkSpace::CheckProvider()
+        $workspaces = WorkSpace::withTrashed()
+            ->with('workers')
+            ->where('provider_id', auth()->user()->provider->id)
+            ->get();
+
+        return view('admin.worker.worker', compact('workspaces'));
+
     }
 
     public function create()

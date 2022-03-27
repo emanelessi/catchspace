@@ -199,7 +199,7 @@ background-color: #2B292C;
                             <span class="username username-hide-on-mobile"> {{auth()->user()->full_name}} </span>
                             <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
                             @can('provider_access')
-                                <img alt="" class="img-circle" src="{{'/storage/'.auth()->user()->provider->logo}} "/>
+                                <img alt="" class="img-circle" src="{{'/storage/'.auth()->user()->provider->logo}} " style="width: 40px;"/>
                             @endcan
                             @can('permission_access')
                             <i class="fa fa-user img-circle" style="font-size: 20px;color:#ffffff!important;"></i>

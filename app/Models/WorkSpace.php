@@ -17,6 +17,15 @@ class WorkSpace extends Model
         'name',
 
     ];
+
+
+    public function scopeCheckProvider ($query) {
+        if (auth()->user()->user_level_id == config('constants.user_levels.provider')) {
+            $query->where('provider_id', auth()->user()->provider->id);
+        }
+    }
+
+
     public function workSpaceType()
     {
         return $this->belongsTo(WorkSpaceType::class, 'work_space_type_id')->withTrashed();
