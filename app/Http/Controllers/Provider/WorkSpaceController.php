@@ -9,6 +9,7 @@ use App\Models\Service;
 use App\Models\User;
 use App\Models\WorkSpace;
 use App\Models\WorkSpaceAddons;
+use App\Models\WorkSpaceRating;
 use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
@@ -54,6 +55,7 @@ class WorkSpaceController extends Controller
             'work_space_type_id' => $request->input('work_space_type_id'),
             'provider_id' => $request->input('provider_id'),
         ]);
+        $rate=WorkSpaceRating::create(['work_space_id' => $workspace->id,'rate_avg' => 0,'rate_count' => 0]);
 
         return back()->with('success', trans('messages.workspace.workspace_created'));
     }

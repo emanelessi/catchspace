@@ -8,6 +8,7 @@ use App\Models\RentType;
 use App\Models\Service;
 use App\Models\WorkSpace;
 use App\Models\WorkSpaceAddons;
+use App\Models\WorkSpaceRating;
 use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
 use Illuminate\Database\Seeder;
@@ -50,6 +51,10 @@ class WorkSpaceSeeder extends Seeder
         $work_space2->work_space_type_id  = $work_space_type3->id;
         $work_space2->provider_id   = 2;
         $work_space2->save();
+
+        $rate1=WorkSpaceRating::create(['work_space_id' => $work_space->id,'rate_avg' => 0,'rate_count' => 0]);
+        $rate2=WorkSpaceRating::create(['work_space_id' => $work_space2->id,'rate_avg' => 0,'rate_count' => 0]);
+
 
         $service = new Service();
         $service->name = '5G WiFi';
