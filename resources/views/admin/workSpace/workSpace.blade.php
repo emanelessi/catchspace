@@ -4,7 +4,7 @@
     <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
-            background-color: #7962B3 !important;
+            background-color: #ef6198 !important;
         }
 
         .btn-circle:hover {
@@ -13,8 +13,8 @@
         }
 
         .span:hover {
-            background-color: #7962B3 !important;
-            border-color: #7962B3 !important;
+            background-color: #ef6198 !important;
+            border-color: #ef6198 !important;
         }
 
         .cansel:hover {
@@ -22,7 +22,7 @@
         }
 
         .deletee:hover {
-            background-color: #7962B3 !important;
+            background-color: #ef6198 !important;
         }
 
         .page-head {
@@ -30,17 +30,17 @@
         }
 
         .head-title {
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 33px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
 
         .add-btn {
-            border-color: #9162B3 !important;
-            font-family: AvenirLTStd-Book !important;
+            border-color: #E93A76 !important;
+            font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
-            background: #9162B3 !important;
+            background: #E93A76 !important;
             border-radius: 5px !important;
             width: 160px !important;
             height: 30px !important;
@@ -51,7 +51,7 @@
             background-color: #FFFFFF !important;
             border-color: #FFFFFF !important;
             border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: normal;
         !important font-size: 13 px !important;
             color: #292D32 !important;
@@ -69,25 +69,26 @@
 
         .span-filter {
             color: #fff !important;
-            background: #9162B3 !important;
+            background: #E93A76 !important;
             border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: normal !important;
             font-size: 15px !important;
             line-height: 15px !important;
         }
 
         .table-th {
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 20px !important;
+            font-weight: 300px;
             letter-spacing: -0.022em !important;
-            color: #e7ae04 !important;
+            color: #E93A76 !important;
             padding-bottom: 15px !important;
         }
 
         .table-td {
-            font-family: AvenirLTStd-Book !important;
-            font-size: 20px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 18px !important;
             letter-spacing: 0.02em !important;
             color: #000000 !important;
         }
@@ -102,7 +103,7 @@
         }
 
         .modal-p {
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: bold !important;
             font-size: 18px !important;
             line-height: 24px !important;
@@ -117,7 +118,7 @@
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 13px !important;
             letter-spacing: 1px !important;
             border-radius: 10px !important;
@@ -132,7 +133,7 @@
             padding: 0 !important;
             border-radius: 8px !important;
             background-color: #9162B3 !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
             letter-spacing: 1px !important;
@@ -177,7 +178,7 @@
                                        href="javascript:;"
                                        data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                        aria-expanded="true">
-                                        <i class="fa fa-filter" style="color: #9162B3 !important;"></i>
+                                        <i class="fa fa-filter" style="color: #6dce74 !important;"></i>
                                         Filter By
                                         <i class="fa fa-angle-down"></i>
                                     </a>
@@ -240,7 +241,7 @@
                                                 <td class="table-td">
                                                     <a href="/admin/workspace/services/{{$myworkspace->id}}"
                                                        style="margin-left: 10px">
-                                                        <i class="fa fa-server" style="color: #9162B3 !important;"></i>
+                                                        <i class="fa fa-server" style="color: #000000 !important;"></i>
                                                     </a>
                                                 </td>
                                             @endcan
@@ -248,7 +249,7 @@
                                                 <td class="table-td">
                                                     <a href="/admin/workspace/pricing/{{$myworkspace->id}}"
                                                        style="margin-left: 10px">
-                                                        <i class="fa fa-money " style="color: #9162B3 !important;"></i>
+                                                        <i class="fa fa-money " style="color: #000000 !important;"></i>
                                                     </a>
                                                 </td>
                                             @endcan
@@ -257,7 +258,7 @@
                                                     <a href="/admin/workspace/addons/{{$myworkspace->id}}"
                                                        style="margin-left: 10px">
                                                         <i class="fa fa-plus-square"
-                                                           style="color: #9162B3 !important;"></i>
+                                                           style="color: #000000 !important;"></i>
                                                     </a>
                                                 </td>
                                             @endcan
@@ -274,21 +275,21 @@
                                                            data-target="#static2" data-toggle="modal"
                                                            style="margin-left: 10px">
                                                             <i class="fa fa-trash"
-                                                               style="color: #9162B3 !important;"></i>
+                                                               style="color: #000000 !important;"></i>
                                                         </a>
                                                     @else
                                                         <a href="/admin/restore-workspace/{{$myworkspace->id}}"
                                                            data-target="#static2" data-toggle="modal"
                                                            style="margin-left: 10px">
                                                             <i class="fa fa-recycle"
-                                                               style="color: #9162B3 !important;"></i>
+                                                               style="color: #000000 !important;"></i>
                                                         </a>
                                                     @endif
                                                 @endcan
 
                                                 @can('workspace_edit')
                                                     <a href="/admin/edit-workspace/{{$myworkspace->id}}">
-                                                        <i class="fa fa-pencil" style="color: #9162B3 !important;"></i>
+                                                        <i class="fa fa-pencil" style="color: #000000 !important;"></i>
                                                     </a>
                                                 @endcan
                                             </td>
@@ -353,7 +354,7 @@
 ">
                                     <div class="caption">
                                         {{--                            <span class="caption-subject font-red sbold " style="--}}
-                                        {{--                            color: #333333!important;  font-size: 20px;  font-family: AvenirLTStd-Book;--}}
+                                        {{--                            color: #333333!important;  font-size: 20px;  font-family: 'Montserrat', sans-serif;--}}
                                         {{--">--}}
                                         {{--                                Workspaces</span>--}}
                                     </div>
@@ -363,7 +364,7 @@
                                                href="javascript:;" data-toggle="dropdown" data-hover="dropdown"
                                                data-close-others="true"
                                                aria-expanded="true">
-                                                <i class="fa fa-filter " style="color: #9162B3 !important;"></i>
+                                                <i class="fa fa-filter " style="color: #6dce74 !important;"></i>
                                                 Filter By
                                                 <i class="fa fa-angle-down"></i>
                                             </a>
@@ -429,7 +430,7 @@
                                                             <a href="/provider/workspace/services/{{$myworkspace->id}}"
                                                                style="margin-left: 10px">
                                                                 <i class="fa fa-server"
-                                                                   style="color: #9162B3 !important;"></i>
+                                                                   style="color: #000000 !important;"></i>
                                                             </a>
                                                         </td>
                                                     @endcan
@@ -438,7 +439,7 @@
                                                             <a href="/provider/workspace/pricing/{{$myworkspace->id}}"
                                                                style="margin-left: 10px">
                                                                 <i class="fa fa-money"
-                                                                   style="color: #9162B3 !important;"></i>
+                                                                   style="color: #000000 !important;"></i>
                                                             </a>
                                                         </td>
                                                     @endcan
@@ -447,7 +448,7 @@
                                                             <a href="/provider/workspace/addons/{{$myworkspace->id}}"
                                                                style="margin-left: 10px">
                                                                 <i class="fa fa-plus-square"
-                                                                   style="color: #9162B3 !important;"></i>
+                                                                   style="color: #000000 !important;"></i>
                                                             </a>
                                                         </td>
                                                     @endcan
@@ -461,21 +462,21 @@
                                                                    data-target="#static2" data-toggle="modal"
                                                                    style="margin-left: 10px">
                                                                     <i class="fa fa-trash"
-                                                                       style="color: #9162B3 !important;"></i>
+                                                                       style="color: #000000 !important;"></i>
                                                                 </a>
                                                             @else
                                                                 <a href="/admin/restore-workspace/{{$myworkspace->id}}"
                                                                    data-target="#static2" data-toggle="modal"
                                                                    style="margin-left: 10px">
                                                                     <i class="fa fa-recycle"
-                                                                       style="color: #9162B3 !important;"></i>
+                                                                       style="color: #000000 !important;"></i>
                                                                 </a>
                                                             @endif
                                                         @endcan
                                                         @can('workspace_edit')
                                                             <a href="/provider/edit-workspace/{{$myworkspace->id}}">
                                                                 <i class="fa fa-pencil"
-                                                                   style="color: #9162B3 !important;"></i>
+                                                                   style="color: #000000 !important;"></i>
 
                                                             </a>
                                                         @endcan

@@ -4,11 +4,11 @@
     <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
     <style>
         .btn:hover {
-            background-color: #FFD64F!important;
+            background-color: #E93A76!important;
         }
 
         .nav-link:hover {
-            color: #FFD64F!important;
+            color: #E93A76!important;
         }
 
         a:hover {
@@ -73,7 +73,7 @@
 
         .inputfile:focus + label,
         .inputfile + label:hover {
-            background-color: #9162B3;
+            background-color: #E93A76;
             color: white;
 
         }
@@ -127,7 +127,7 @@ font-family: AvenirLTStd-Book;
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Name') }}</label>
                             <div class="input-icon">
                                 <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     font-size: 20px;
                     -webkit-text-fill-color: transparent;
@@ -161,7 +161,7 @@ font-family: AvenirLTStd-Book;
                             <div class="input-icon">
 
                                 <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     font-size: 20px;
                     -webkit-text-fill-color: transparent;
@@ -194,7 +194,7 @@ font-family: AvenirLTStd-Book;
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
                             <div class="input-icon">
                                 <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 10px;
@@ -226,7 +226,7 @@ font-family: AvenirLTStd-Book;
                             <label class="control-label visible-ie8 visible-ie9">{{ __('phone') }}</label>
                             <div class="input-icon">
                                 <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     font-size: 23px;
                     -webkit-text-fill-color: transparent;
@@ -259,7 +259,7 @@ font-family: AvenirLTStd-Book;
                             <label class="control-label visible-ie8 visible-ie9">{{ __('address') }}</label>
                             <div class="input-icon">
                                 <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     font-size: 23px;
                     -webkit-text-fill-color: transparent;
@@ -291,7 +291,7 @@ font-family: AvenirLTStd-Book;
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Password') }}</label>
                             <div class="input-icon">
                                 <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     font-size: 23px;
                     -webkit-text-fill-color: transparent;
@@ -323,7 +323,7 @@ font-family: AvenirLTStd-Book;
                             <label class="control-label visible-ie8 visible-ie9">{{ __('Confirm password') }}</label>
                             <div class="input-icon">
                                 <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     font-size: 18px;
                     -webkit-text-fill-color: transparent;
@@ -394,11 +394,11 @@ font-family: AvenirLTStd-Book;
                     m-grid-col-xs-1"
                                         style="
 width: 100%;
-background: #FFD64F;
-border-color: #FFD64F;
+background: #E93A76;
+border-color: #E93A76;
 border-radius: 20px !important;
 font-family: AvenirLTStd-Book;
-color: black;">
+color: white;">
                                     {{ __('Sign up') }}
                                 </button>
                             </div>

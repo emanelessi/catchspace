@@ -5,19 +5,19 @@
 
     <style>
         .btn:hover {
-            background-color: #FFD64F!important;
+            background-color: #ef6198!important;
         }
 
         .nav-link:hover {
-            color: #FFD64F!important;
+            color: #ef6198!important;
         }
 
         a:hover {
-            color: #333333 !important;
+            color: #ef6198 !important;
         }
 
         .uppercase:hover {
-            color: #FFD64F!important;
+            color: #ef6198!important;
         }
 
         /*@font-face {*/
@@ -76,7 +76,7 @@ color: #333333;
                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
                 <div class="input-icon">
-                    <i style=" background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    <i style=" background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     margin-left: 19px;" class="fa fa-envelope padding-tb-3"></i>
@@ -103,7 +103,7 @@ border-radius: 20px !important;
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Password') }}</label>
                 <div class="input-icon">
                     <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     font-size: 23px;
                     -webkit-text-fill-color: transparent;
@@ -158,12 +158,12 @@ color: rgba(51, 51, 51, 0.7);
                     m-grid-col-xs-1"
                     style="
 width: 100%;
-background: #FFD64F;
-border-color: #FFD64F;
+background: #E93A76;
+border-color: #E93A76;
 border-radius: 20px !important;
 font-family: AvenirLTStd-Book;
 font-size: 16px;
-color: black;">  {{ __('Log in') }}</button>
+color: white;">  {{ __('Log in') }}</button>
         </form>
         <!-- END LOGIN FORM -->
     </div>
@@ -174,7 +174,7 @@ font-family: AvenirLTStd-Book;
         color: #FFFFFF;
         font-size: 15px;
 " class="m-grid-col-lg-offset-4-5 m-grid-col-md-offset-4 m-grid-col-xs-offset-3 margin-top-10">Don’t have an account?
-            <a href="{{ route('register') }}" id="register-btn" class="nav-link" style="color: #FFD64F;">Sign up</a>
+            <a href="{{ route('register') }}" id="register-btn" class="nav-link" style="color: #E93A76;">Sign up</a>
         </p>
     </div>
     </body>

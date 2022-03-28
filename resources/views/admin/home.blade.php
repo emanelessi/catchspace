@@ -8,7 +8,7 @@
         }
 
         .Accept:hover {
-            background-color: #7962B3 !important;
+            background-color: #ef6198 !important;
         }
 
         .page-head {
@@ -44,7 +44,7 @@
                  background-color: #FFFFFF;
                  border-color: #FFFFFF;
                  border-radius: 10px !important;
-                 /*font-family: AvenirLTStd-Book;*/
+                 /*font-family: 'Montserrat', sans-serif;*/
                  font-family: 'Montserrat', sans-serif;
                  font-style: normal;
                  font-weight: normal;
@@ -69,7 +69,7 @@
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
 
-                    /*background: #9162B3;*/
+                    /*background: #E93A76;*/
                     background: #E93A76;
 ">
                     <div class="visual padding-top-12">
@@ -79,13 +79,13 @@
                     <div class="details">
                         <div class="number padding-top-12">
                             <span data-counter="counterup" style="
-                            /*font-family: AvenirLTStd-Book;*/
+                            /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
                             font-size: 34px;"
                                   data-value="{{$providers->Count() ?? 0}}">{{$providers->Count() ?? 0}}</span>
                         </div>
                         <div class="desc" style="
-    /*font-family: AvenirLTStd-Book;*/
+    /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -98,7 +98,7 @@
                 <div class="dashboard-stat dashboard-stat-v2 red" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                    /*background: #9162B3;*/
+                    /*background: #E93A76;*/
                     background: #5AB25E;
 ">
                     <div class="visual">
@@ -108,13 +108,13 @@
                     <div class="details">
                         <div class="number padding-top-12">
                             <span data-counter="counterup" style="
-                            /*font-family: AvenirLTStd-Book;*/
+                            /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
                             font-size: 34px;"
                                   data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
                         </div>
                         <div class="desc" style="
-    /*font-family: AvenirLTStd-Book;*/
+    /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -127,7 +127,7 @@
                 <div class="dashboard-stat dashboard-stat-v2 green" href="#"
                      style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                    /*background: #9162B3;*/
+                    /*background: #E93A76;*/
                     background: #27272A;
 ">
                     <div class="visual">
@@ -137,13 +137,13 @@
                     <div class="details">
                         <div class="number padding-top-12">
                             <span data-counter="counterup" style="
-                            /*font-family: AvenirLTStd-Book;*/
+                            /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
                             font-size: 34px;"
                                   data-value="{{$workers->Count() ?? 0}}">{{$workers->Count() ?? 0}}</span>
                         </div>
                         <div class="desc" style="
-    /*font-family: AvenirLTStd-Book;*/
+    /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -167,7 +167,7 @@
     height: 19px;
     left: 0px;
     top: 0px;
-/*font-family: AvenirLTStd-Book;*/
+/*font-family: 'Montserrat', sans-serif;*/
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600 !important;
@@ -196,7 +196,7 @@ font-family: 'Montserrat', sans-serif;
     height: 19px;
     left: 0px;
     top: 0px;
-/*font-family: AvenirLTStd-Book;*/
+/*font-family: 'Montserrat', sans-serif;*/
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600 !important;
@@ -225,10 +225,10 @@ font-family: 'Montserrat', sans-serif;
                         <div class="caption margin-top-10">
                             <i class=" icon-social-twitter font-dark hide"></i>
                             <span class="caption-subject font-dark bold margin-left-9 " style="
-    /*font-family: AvenirLTStd-Book;*/
+    /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     /*font-style: normal;*/
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     color: #343A40 !important;
 
@@ -252,7 +252,7 @@ font-family: 'Montserrat', sans-serif;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-/*font-family: AvenirLTStd-Book;*/
+/*font-family: 'Montserrat', sans-serif;*/
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -266,7 +266,7 @@ font-family: 'Montserrat', sans-serif;
                                                                       width: 109.1px;
                                                                       height: 28.27px;
                                                                       left: 396.39px;top: 761.46px;
-                                                                      /*font-family: AvenirLTStd-Book;*/
+                                                                      /*font-family: 'Montserrat', sans-serif;*/
                                                                       font-family: 'Montserrat', sans-serif;
 font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
@@ -282,7 +282,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     background: #333333;
                                                     opacity: 0.5;
                                                     border-radius: 9px !important;
-                                                    /*font-family: AvenirLTStd-Book;*/
+                                                    /*font-family: 'Montserrat', sans-serif;*/
                                                     font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
@@ -296,9 +296,9 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     display: inline;
                                                     align-items: center;
                                                     background: #E93A76;
-                                                    /*background: #9162B3;*/
+                                                    /*background: #E93A76;*/
                                                     border-radius: 9px !important;
-                                                    /*font-family: AvenirLTStd-Book;*/
+                                                    /*font-family: 'Montserrat', sans-serif;*/
                                                     font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
@@ -316,7 +316,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                                 height: 28.37px;
                                                                 left: 1258.46px;
                                                                 top: 761.73px;
-                                                            /*font-family: AvenirLTStd-Book;*/
+                                                            /*font-family: 'Montserrat', sans-serif;*/
                                                             font-family: 'Montserrat', sans-serif;
                                                                 font-style: normal;
                                                                 font-weight: normal;
@@ -342,7 +342,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-/*font-family: AvenirLTStd-Book;*/
+/*font-family: 'Montserrat', sans-serif;*/
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -356,7 +356,7 @@ font-family: 'Montserrat', sans-serif;
                                                                       width: 109.1px;
                                                                       height: 28.27px;
                                                                       left: 396.39px;top: 761.46px;
-                                                                      /*font-family: AvenirLTStd-Book;*/
+                                                                      /*font-family: 'Montserrat', sans-serif;*/
                                                                       font-family: 'Montserrat', sans-serif;
 font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
@@ -372,7 +372,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     background: #333333;
                                                     opacity: 0.5;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -384,10 +384,10 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                         <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-                                                    /*background: #9162B3;*/
+                                                    /*background: #E93A76;*/
                                                     background: #E93A76;
                                                     border-radius: 9px !important;
-                                                    /*font-family: AvenirLTStd-Book;*/
+                                                    /*font-family: 'Montserrat', sans-serif;*/
                                                     font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
@@ -405,7 +405,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-/*font-family: AvenirLTStd-Book;*/
+/*font-family: 'Montserrat', sans-serif;*/
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -431,7 +431,7 @@ font-family: 'Montserrat', sans-serif;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-/*font-family: AvenirLTStd-Book;*/
+/*font-family: 'Montserrat', sans-serif;*/
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -445,7 +445,7 @@ font-family: 'Montserrat', sans-serif;
                                                                       width: 109.1px;
                                                                       height: 28.27px;
                                                                       left: 396.39px;top: 761.46px;
-                                                                      /*font-family: AvenirLTStd-Book;*/
+                                                                      /*font-family: 'Montserrat', sans-serif;*/
                                                                       font-family: 'Montserrat', sans-serif;
 font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
@@ -461,7 +461,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     background: #333333;
                                                     opacity: 0.5;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -475,7 +475,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     align-items: center;
                                                      background: #E93A76;
                                                     border-radius: 9px !important;
-                                                    /*font-family: AvenirLTStd-Book;*/
+                                                    /*font-family: 'Montserrat', sans-serif;*/
                                                     font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
@@ -493,7 +493,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-/*font-family: AvenirLTStd-Book;*/
+/*font-family: 'Montserrat', sans-serif;*/
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -530,7 +530,7 @@ font-family: 'Montserrat', sans-serif;
             <!-- BEGIN PAGE TITLE -->
             <div class="page-title">
                 <h1 style="
-            font-family: AvenirLTStd-Book;
+            font-family: 'Montserrat', sans-serif;
             font-size: 27px;
             letter-spacing: -0.022em;
             color: #333333;
@@ -555,7 +555,7 @@ font-family: 'Montserrat', sans-serif;
                  background-color: #FFFFFF;
                  border-color: #FFFFFF;
                  border-radius: 10px !important;
-                 font-family: AvenirLTStd-Book;
+                 font-family: 'Montserrat', sans-serif;
                  font-style: normal;
                  font-weight: normal;
                  font-size: 13px;
@@ -579,9 +579,9 @@ font-family: 'Montserrat', sans-serif;
                     <div class="dashboard-stat dashboard-stat-v2 red" href="#"
                          style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                   /*background:linear-gradient(90deg, #9162B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
+                   /*background:linear-gradient(90deg, #E93A76 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
                     /*#FFD64F 103.45%);*/
-                    background: #9162B3;
+                    background: #E93A76;
 ">
                         <div class="visual">
                             <i class="fa fa-map-marker"
@@ -589,10 +589,10 @@ font-family: 'Montserrat', sans-serif;
                         </div>
                         <div class="details">
                             <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;" data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
+                            <span data-counter="counterup" style="font-family: 'Montserrat', sans-serif;font-size: 34px;" data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
-    font-family: AvenirLTStd-Book;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
 "> Work space
@@ -604,9 +604,9 @@ font-family: 'Montserrat', sans-serif;
                     <div class="dashboard-stat dashboard-stat-v2 green" href="#"
                          style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
-                   /*background:linear-gradient(90deg, #9162B3 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
+                   /*background:linear-gradient(90deg, #E93A76 26.4%, #A1737F 49.57%, #AE7E6E 57.11%, #B48367 77.05%,*/
                     /*#FFD64F 103.45%);*/
-                    background: #9162B3;
+                    background: #5AB25E;
 ">
                         <div class="visual">
                             <i class="fa fa-file-text"
@@ -614,11 +614,11 @@ font-family: 'Montserrat', sans-serif;
                         </div>
                         <div class="details">
                             <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: AvenirLTStd-Book;font-size: 34px;"
+                            <span data-counter="counterup" style="font-family: 'Montserrat', sans-serif;font-size: 34px;"
                                   data-value="{{$workers->Count() ?? 0}}">{{$workers->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
-    font-family: AvenirLTStd-Book;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
 "> Workers
@@ -642,7 +642,7 @@ font-family: 'Montserrat', sans-serif;
     height: 19px;
     left: 0px;
     top: 0px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600 !important;
     font-size: 16px;
@@ -668,9 +668,9 @@ font-family: AvenirLTStd-Book;
                             <div class="caption margin-top-10">
                                 <i class=" icon-social-twitter font-dark hide"></i>
                                 <span class="caption-subject font-dark bold margin-left-9 " style="
-    font-family: AvenirLTStd-Book;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     color: #343A40 !important;
 
@@ -694,7 +694,7 @@ font-family: AvenirLTStd-Book;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -707,7 +707,7 @@ font-family: AvenirLTStd-Book;
                                                                       width: 109.1px;
                                                                       height: 28.27px;
                                                                       left: 396.39px;top: 761.46px;
-                                                                      font-family: AvenirLTStd-Book;
+                                                                      font-family: 'Montserrat', sans-serif;
 font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
                                                                 Dummy text of the printing
@@ -722,7 +722,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     background: #333333;
                                                     opacity: 0.5;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -734,9 +734,9 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                             <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #9162B3;
+    background: #E93A76;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -753,7 +753,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -778,7 +778,7 @@ font-family: AvenirLTStd-Book;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -791,7 +791,7 @@ font-family: AvenirLTStd-Book;
                                                                       width: 109.1px;
                                                                       height: 28.27px;
                                                                       left: 396.39px;top: 761.46px;
-                                                                      font-family: AvenirLTStd-Book;
+                                                                      font-family: 'Montserrat', sans-serif;
 font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
                                                                 Dummy text of the printing
@@ -806,7 +806,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     background: #333333;
                                                     opacity: 0.5;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -818,9 +818,9 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                             <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #9162B3;
+    background: #E93A76;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -837,7 +837,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -862,7 +862,7 @@ font-family: AvenirLTStd-Book;
     height: 54.41px;
     left: 524.14px;
     top: 761.13px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -875,7 +875,7 @@ font-family: AvenirLTStd-Book;
                                                                       width: 109.1px;
                                                                       height: 28.27px;
                                                                       left: 396.39px;top: 761.46px;
-                                                                      font-family: AvenirLTStd-Book;
+                                                                      font-family: 'Montserrat', sans-serif;
 font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #000000;">Natasha Kim
                                                                 </span>
                                                                 Dummy text of the printing
@@ -890,7 +890,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     background: #333333;
                                                     opacity: 0.5;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -902,9 +902,9 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                             <button type="button" class="btn Accept" style="
                                                     display: inline;
                                                     align-items: center;
-    background: #9162B3;
+    background: #E93A76;
                                                     border-radius: 9px !important;
-                                                    font-family: AvenirLTStd-Book;
+                                                    font-family: 'Montserrat', sans-serif;
                                                     font-size: 14px;
                                                     letter-spacing: 0.4px;
                                                     color: #FFFFFF;
@@ -921,7 +921,7 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
     height: 28.37px;
     left: 1258.46px;
     top: 761.73px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
