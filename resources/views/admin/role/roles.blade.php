@@ -9,8 +9,8 @@
         }
 
         .btn-circle:hover {
-            background-color: #9162B32B !important;
-            border-color: #9162B32B !important;
+            background-color: #E93A762B !important;
+            border-color: #E93A762B !important;
         }
 
         .span:hover {
@@ -31,17 +31,17 @@
         }
 
         .head-title {
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 33px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
 
         .add-btn {
-            border-color: #9162B3 !important;
-            font-family: AvenirLTStd-Book !important;
+            border-color: #E93A76 !important;
+            font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
-            background: #9162B3 !important;
+            background: #E93A76 !important;
             border-radius: 5px !important;
             width: 160px !important;
             height: 30px !important;
@@ -52,7 +52,7 @@
             background-color: #FFFFFF !important;
             border-color: #FFFFFF !important;
             border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: normal;
         !important font-size: 13 px !important;
             color: #292D32 !important;
@@ -70,25 +70,27 @@
 
         .span-filter {
             color: #fff !important;
-            background: #9162B3 !important;
+            background: #E93A76 !important;
             border-radius: 5px !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: normal !important;
             font-size: 15px !important;
             line-height: 15px !important;
         }
 
         .table-th {
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 20px !important;
+            font-weight: 300px;
             letter-spacing: -0.022em !important;
-            color: #e7ae04 !important;
+            color: #E93A76 !important;
             padding-bottom: 15px !important;
         }
 
+
         .table-td {
-            font-family: AvenirLTStd-Book !important;
-            font-size: 20px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 18px !important;
             letter-spacing: 0.02em !important;
             color: #000000 !important;
         }
@@ -103,7 +105,7 @@
         }
 
         .modal-p {
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: bold !important;
             font-size: 18px !important;
             line-height: 24px !important;
@@ -118,22 +120,22 @@
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 13px !important;
             letter-spacing: 1px !important;
             border-radius: 10px !important;
-            border-color: #9162B3 !important;
+            border-color: #E93A76 !important;
         }
 
         .btn-delete {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #9162B3 !important;
+            border-color: #E93A76 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #9162B3 !important;
-            font-family: AvenirLTStd-Book !important;
+            background-color: #E93A76 !important;
+            font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
             letter-spacing: 1px !important;
@@ -176,7 +178,7 @@
                                    href="javascript:;"
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                    aria-expanded="true">
-                                    <i class="fa fa-filter" style="color: #9162B3 !important;"></i>
+                                    <i class="fa fa-filter" style="color: #6dce74 !important;"></i>
                                     Filter By
                                     <i class="fa fa-angle-down"></i>
                                 </a>
@@ -225,12 +227,12 @@
 
                                                 <a href="/admin/delete-role/{{$myrole->id}}" data-target="#static2"
                                                    data-toggle="modal" style="margin-left: 10px">
-                                                    <i class="fa fa-trash" style="color: #9162B3 !important;"></i>
+                                                    <i class="fa fa-trash" style="color: #000000 !important;"></i>
                                                 </a>
                                                 @else
                                                     <a href="/admin/restore-role/{{$myrole->id}}" data-target="#static2"
                                                        data-toggle="modal" style="margin-left: 10px">
-                                                        <i class="fa fa-recycle" style="color: #9162B3 !important;"></i>
+                                                        <i class="fa fa-recycle" style="color: #000000 !important;"></i>
                                                     </a>
                                                 @endif
                                             @endcan
