@@ -17,6 +17,6 @@ class WorkerWorkSpace extends Model
     }
     public function workers()
     {
-        return $this->belongsTo(Worker::class, 'work_space_id')->withTrashed();
+        return $this->belongsTo(Worker::class, 'worker_id')->withTrashed();
     }
 }

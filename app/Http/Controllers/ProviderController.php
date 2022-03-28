@@ -21,10 +21,10 @@ class ProviderController extends Controller
     public function index(Request $request)
     {
         $providers = \App\Models\Provider::all();
-//        $work_spaces = \App\Models\WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
         $work_spaces = \App\Models\WorkSpace::where('provider_id', auth()->user()->provider->id)->get();
-        $workers = \App\Models\Worker::all();
-//        $workers = \App\Models\Worker::where('work_space_id',$work_spaces[0]->id)->get();
+        $workers = \App\Models\WorkerWorkSpace::
+            join('work_spaces', 'worker_work_spaces.work_space_id', '=', 'work_spaces.id')
+            ->where('provider_id', auth()->user()->provider->id)->get();
         return view('admin.home', compact('workers', 'work_spaces', 'providers'));
     }
 

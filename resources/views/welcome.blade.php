@@ -12,9 +12,9 @@
 
     <style>
         .nav-btn:hover {
-            /*background-color: #FFD64F!important;*/
-            color: #FFD64F!important;
-            border-color: #FFD64F!important;
+            background-color: #ffffff!important;
+            color: #000000!important;
+            border-color: #fffffc!important;
 
         }
     </style>
@@ -51,20 +51,20 @@
             <div class=" m-grid-col-lg-offset-1 m-grid-col-md-12 m-grid-col-xs-12 margin-top-100">
                 <h5 style="
                         color: #FFF;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
                         font-style: normal;
-                        font-weight: 750;
+                        font-weight: 500;
                         font-size: 31px;
                         letter-spacing: -0.022em;
                         line-height: 48px;
                         ">Welcome to<br>
                     <span style="
-                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #E6729A);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
                     font-style: normal;
-                    font-weight: 750;
+                    font-weight: 600;
                     font-size: 43px;
                     letter-spacing: -0.022em;
 
@@ -72,10 +72,10 @@ font-family: AvenirLTStd-Book;
                 </h5>
                 <p style="
                         color: #FFF;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
                         font-style: normal;
                         font-weight: normal;
-                       font-size: 20px;
+                       font-size: 18px;
                         line-height: 35px;
                         letter-spacing: -0.022em;
                         ">
@@ -84,25 +84,25 @@ font-family: AvenirLTStd-Book;
                     we are here to<br> help you</p>
                 <div class="text-left margin-left-6 ">
                     <a href="{{route('register')}}" class="btn blue " style="
-                            border-color: #FFD64F;
+                            border-color: #E93A76;
                             border-radius: 3px !important;
                             align-items: center;
                             width: 113px;
                             height: 39px;
-                            background: #FFD64F;
-                            font-family: AvenirLTStd-Book;
+                            background: #E93A76;
+                            font-family: 'Montserrat', sans-serif;
                             font-style: normal;
-                            font-weight: 522;
-                            font-size: 16px;
-                            color: black;
+                            font-weight: 400;
+                            font-size: 15px;
+                            color: white;
                             ">
                         Sign up
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-5 login-container bs-reset" style="  background-color: #7952B3;
-            background-image: linear-gradient( #7952B3, #FFBF00);">
+        <div class="col-md-5 login-container bs-reset" style="  background-color: #5F2F42;
+            background-image: linear-gradient( #5F2F42, #E6729A);">
             <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
                 <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
@@ -111,18 +111,18 @@ font-family: AvenirLTStd-Book;
                         <li class="nav-item" style="
     width: 85px;
     height: 22px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link">Home</a></li>
                         <li class="nav-item margin-right-28" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 22px;
     letter-spacing: -0.022em;
 
@@ -141,13 +141,13 @@ font-family: AvenirLTStd-Book;
                             border: 1px solid #FFFFFF;
                             box-sizing: border-box;
                             border-radius: 3px !important;
-                            font-family: AvenirLTStd-Book;
+                            font-family: 'Montserrat', sans-serif;
                             font-style: normal;
                             font-weight: normal;
                             font-size: 12px;
                             line-height: 24px;
                             color: #FFFFFF;
-                            background-color: #845ba6;
+                            background-color: #5F2F42;
 ">
                                     Login
                                 </a>
@@ -165,7 +165,7 @@ font-family: AvenirLTStd-Book;
                             border: 1px solid #FFFFFF;
                             box-sizing: border-box;
                             border-radius: 3px !important;
-                            font-family: AvenirLTStd-Book;
+                            font-family: 'Montserrat', sans-serif;
                             font-style: normal;
                             font-weight: normal;
                             font-size: 12px;

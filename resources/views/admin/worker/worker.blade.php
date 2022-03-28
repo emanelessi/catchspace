@@ -313,9 +313,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($workspaces as $workspace)
-                                            @foreach($workspace->workerWorkSpace as $myworker)
-{{--                                                {{dd($workspace->workerWorkSpace)}}--}}
+                                            @foreach($workerworkspaces as $myworker)
+{{--                                            @foreach($workspace->workerWorkSpace as $myworker)--}}
+{{--                                                {{dd($workspaces)}}--}}
 {{--                                                {{dd($workspace->workerWorkSpace[2]->workers)}}--}}
                                                 <tr>
                                                     <td class="table-td">  {{$myworker->workers->id}}
@@ -345,7 +345,7 @@
                                                     @endcan
                                                 </tr>
 
-                                            @endforeach
+{{--                                            @endforeach--}}
                                             @endforeach
                                             </tbody>
                                         </table>

@@ -195,6 +195,8 @@
                                         </th>
                                         <th class="table-th"> Work Space
                                         </th>
+                                        <th class="table-th"> Work Space Capacity</th>
+                                        <th class="table-th"> Work Space Type</th>
 
 
                                     </tr>
@@ -205,7 +207,8 @@
                                             <td class="table-td"> {{$myreservations->id}}
                                             </td>
                                             <td class="table-td">{{$myreservations->workSpace->name}}</td>
-
+                                            <td class="table-td">{{$myreservations->workSpace->capacity}}</td>
+                                            <td class="table-td">{{$myreservations->workSpace->workSpaceType->type}}</td>
 
                                         </tr>
                                     @endforeach
@@ -269,8 +272,9 @@
                                             <tr style="border-bottom: 2px solid #F2F5F8;">
                                                 <th class="table-th"> #
                                                 </th>
-                                                <th class="table-th"> Work Space
-                                                </th>
+                                                <th class="table-th"> Work Space</th>
+                                                <th class="table-th"> Work Space Capacity</th>
+                                                <th class="table-th"> Work Space Type</th>
 
 
                                             </tr>
@@ -281,6 +285,8 @@
                                                     <td class="table-td"> {{$myreservations->id}}
                                                     </td>
                                                     <td class="table-td">{{$myreservations->workSpace->name}}</td>
+                                                    <td class="table-td">{{$myreservations->workSpace->capacity}}</td>
+                                                    <td class="table-td">{{$myreservations->workSpace->workSpaceType->type}}</td>
 
 
                                                 </tr>
