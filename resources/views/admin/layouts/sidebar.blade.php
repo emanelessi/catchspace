@@ -190,7 +190,8 @@
     margin-top: -20px;
     width: 250px;
     height: 946px !important;
-background: #2B292C;    ">
+background: #2B292C;
+">
         <!-- BEGIN SIDEBAR MENU -->
         <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
         <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->

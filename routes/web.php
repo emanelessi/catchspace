@@ -139,6 +139,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/provider/restore-worker/{id}', [Provider\WorkerController::class, 'restore']);
     Route::get('/provider/edit-worker/{id}', [Provider\WorkerController::class, 'edit']);
     Route::post('/provider/edit-worker', [Provider\WorkerController::class, 'update'])->name('updateWorker');
+    Route::get('/provider/worker/reservations/{id}', [Provider\WorkerController::class, 'reservations']);
+
 
     Route::get('/provider/policies', [Provider\PoliciesController::class, 'index'])->name('policies');
     Route::get('/provider/add-policies', [Provider\PoliciesController::class, 'create'])->name('policiesCreate');

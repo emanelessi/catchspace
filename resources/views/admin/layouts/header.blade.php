@@ -12,7 +12,7 @@
 </style>
 <div class="page-header navbar navbar-fixed-top" style="
 /*background-color: #ffffff;*/
-background-color: #2B292C;
+background-color: #2B292C;border-bottom-color: #2B292C;
 ">
     <!-- BEGIN HEADER INNER -->
     <div class="page-header-inner ">

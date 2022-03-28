@@ -16124,7 +16124,7 @@ body[ng-controller] .modal {
 }
 
 .table.table-light > thead > tr > th {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 13px;
     color: #93a2a9;
     border: 0;

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Provider;
 use App\Http\Controllers\Controller;
 use App\Models\Provider;
 use App\Models\Worker;
+use App\Models\WorkerWorkSpace;
 use App\Models\WorkSpace;
 use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
@@ -17,14 +18,17 @@ class WorkerController extends Controller
         $this->middleware('permission:worker_create', ['only' => ['store', 'create']]);
         $this->middleware('permission:worker_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:worker_delete', ['only' => ['destroy']]);
+        $this->middleware('permission:reservations_access', ['only' => ['reservations']]);
+
     }
 
     public function index()
     {
 //        $workspaces = WorkSpace::CheckProvider()
         $workspaces = WorkSpace::withTrashed()
-            ->with('workerWorkSpace')
-            ->where('provider_id', auth()->user()->provider->id)
+            ->join('worker_work_spaces', 'worker_work_spaces.work_space_id', '=', 'work_spaces.id')
+//            ->join('workers', 'workers.id', '=', 'worker_work_spaces.worker_id')
+            ->where('work_spaces.provider_id', auth()->user()->provider->id)
             ->get();
 
         return view('admin.worker.worker', compact('workspaces'));
@@ -101,5 +105,13 @@ class WorkerController extends Controller
         Worker::where('id', $id)->withTrashed()->restore();
 
         return back()->with('success', trans('messages.worker.worker_restored'));
+    }
+    public function reservations($id)
+    {
+        $worker = Worker::withTrashed()->findOrFail($id);
+        $reservations= WorkerWorkSpace::withTrashed()->where('worker_id', $worker->id)
+            ->join('work_spaces', 'worker_work_spaces.work_space_id', '=', 'work_spaces.id')
+            ->where('work_spaces.provider_id', auth()->user()->provider->id)->get();
+        return view('admin.worker.reservations.reservations', compact('reservations'));
     }
 }

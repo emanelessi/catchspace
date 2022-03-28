@@ -308,13 +308,15 @@
                                                 </th>
                                                 <th class="table-th"> Reservations
                                                 </th>
-                                                <th class="table-th"> action
-                                                </th>
+{{--                                                <th class="table-th"> action--}}
+{{--                                                </th>--}}
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @foreach($workspaces as $workspace)
                                             @foreach($workspace->workerWorkSpace as $myworker)
+{{--                                                {{dd($workspace->workerWorkSpace)}}--}}
+{{--                                                {{dd($workspace->workerWorkSpace[2]->workers)}}--}}
                                                 <tr>
                                                     <td class="table-td">  {{$myworker->workers->id}}
                                                     </td>
@@ -332,37 +334,15 @@
                                                     </td>
                                                     <td class="table-td"> /
                                                     </td>
-                                                    <td class="table-td"> {{$myworker->workSpace->name}}
-                                                    </td>
-{{--                                                    <td class="table-td">--}}
-{{--                                                        @can('worker_delete')--}}
-{{--                                                            @if($myworker->deleted_at ==null)--}}
-
-{{--                                                            <a href="/provider/delete-worker/{{$myworker->id}}"--}}
-{{--                                                               data-target="#static2" data-toggle="modal"--}}
-{{--                                                               style="margin-left: 10px">--}}
-{{--                                                                <i class="fa fa-trash"--}}
-{{--                                                                   style="color: #9162B3 !important;"></i>--}}
-
-{{--                                                            </a>--}}
-{{--                                                            @else--}}
-{{--                                                                <a href="/provider/restore-worker/{{$myworker->id}}"--}}
-{{--                                                               data-target="#static2" data-toggle="modal"--}}
-{{--                                                               style="margin-left: 10px">--}}
-{{--                                                                <i class="fa fa-recycle"--}}
-{{--                                                                   style="color: #9162B3 !important;"></i>--}}
-
-{{--                                                            </a>--}}
-{{--                                                            @endif--}}
-{{--                                                        @endcan--}}
-{{--                                                        @can('worker_edit')--}}
-{{--                                                            <a href="/provider/edit-worker/{{$myworker->id}}">--}}
-{{--                                                                <i class="fa fa-pencil"--}}
-{{--                                                                   style="color: #9162B3 !important;"></i>--}}
-
-{{--                                                            </a>--}}
-{{--                                                        @endcan--}}
-{{--                                                    </td>--}}
+                                                    @can('reservations_access')
+                                                        <td class="table-td">
+                                                            <a href="/provider/worker/reservations/{{$myworker->workers->id}}"
+                                                               style="margin-left: 10px">
+                                                                <i class="fa fa-bookmark"
+                                                                   style="color: #9162B3 !important;"></i>
+                                                            </a>
+                                                        </td>
+                                                    @endcan
                                                 </tr>
 
                                             @endforeach

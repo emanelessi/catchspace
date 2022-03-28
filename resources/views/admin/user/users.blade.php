@@ -82,6 +82,7 @@
             /*font-family: AvenirLTStd-Book !important;*/
             font-family: 'Montserrat', sans-serif;
             font-size: 20px !important;
+            font-weight: 300px;
             letter-spacing: -0.022em !important;
             color: #E93A76 !important;
             padding-bottom: 15px !important;
@@ -90,7 +91,7 @@
         .table-td {
             /*font-family: AvenirLTStd-Book !important;*/
             font-family: 'Montserrat', sans-serif;
-            font-size: 20px !important;
+            font-size:18px !important;
             letter-spacing: 0.02em !important;
             color: #000000 !important;
         }
@@ -207,7 +208,7 @@
                         <div class="table-scrollable table-scrollable-borderless">
                             <table class="table  table-light" style="background-color: #E5E5E5;">
                                 <thead>
-                                <tr style="border-bottom: 2px solid #F2F5F8;">
+                                <tr style="border-bottom: 1.2px solid #978D8D;">
                                     <th class="table-th"> #
                                     </th>
                                     <th class="table-th"> Name
@@ -227,48 +228,48 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-{{--                                @foreach($users as $user)--}}
-{{--                                    <tr>--}}
-{{--                                        <td class="table-td"> {{$user->id}}--}}
-{{--                                        </td>--}}
-{{--                                        <td class="table-td">{{$user->full_name}}</td>--}}
-{{--                                        <td class="table-td"> {{$user->email}}--}}
-{{--                                        </td>--}}
-{{--                                        <td class="table-td"> {{$user->phone}}--}}
-{{--                                        </td>--}}
-{{--                                        <td class="table-td"> {{$user->userLevel->name}}--}}
-{{--                                        </td>--}}
-{{--                                        <td class="table-td"> {{$user->provider->name ?? ''}}--}}
-{{--                                        </td>--}}
-{{--                                        <td class="table-td"> {{$user->UserLevel->roles[0]->name ?? ''}}--}}
-{{--                                        </td>--}}
+                                @foreach($users as $user)
+                                    <tr>
+                                        <td class="table-td"> {{$user->id}}
+                                        </td>
+                                        <td class="table-td">{{$user->full_name}}</td>
+                                        <td class="table-td"> {{$user->email}}
+                                        </td>
+                                        <td class="table-td"> {{$user->phone}}
+                                        </td>
+                                        <td class="table-td"> {{$user->userLevel->name}}
+                                        </td>
+                                        <td class="table-td"> {{$user->provider->name ?? ''}}
+                                        </td>
+                                        <td class="table-td"> {{$user->UserLevel->roles[0]->name ?? ''}}
+                                        </td>
 
-{{--                                        <td class="table-td">--}}
-{{--                                            @can('user_delete')--}}
-{{--                                                @if($user->deleted_at ==null)--}}
-{{--                                                    <a href="/admin/delete-user/{{$user->id}}" data-target="#static2"--}}
-{{--                                                       data-toggle="modal" style="margin-left: 10px">--}}
-{{--                                                        <i class="fa fa-trash" style="color: #9162B3 !important;"></i>--}}
+                                        <td class="table-td">
+                                            @can('user_delete')
+                                                @if($user->deleted_at ==null)
+                                                    <a href="/admin/delete-user/{{$user->id}}" data-target="#static2"
+                                                       data-toggle="modal" style="margin-left: 10px">
+                                                        <i class="fa fa-trash" style="color: #000000 !important;"></i>
 
-{{--                                                    </a>--}}
-{{--                                                @else--}}
-{{--                                                    <a href="/admin/restore-user/{{$user->id}}" data-target="#static2"--}}
-{{--                                                       data-toggle="modal" style="margin-left: 10px">--}}
-{{--                                                        <i class="fa fa-recycle" style="color: #9162B3 !important;"></i>--}}
+                                                    </a>
+                                                @else
+                                                    <a href="/admin/restore-user/{{$user->id}}" data-target="#static2"
+                                                       data-toggle="modal" style="margin-left: 10px">
+                                                        <i class="fa fa-recycle" style="color: #000000 !important;"></i>
 
-{{--                                                    </a>--}}
-{{--                                                @endif--}}
+                                                    </a>
+                                                @endif
 
-{{--                                            @endcan--}}
-{{--                                            @can('user_edit')--}}
-{{--                                                <a href="/admin/edit-user/{{$user->id}}">--}}
-{{--                                                    <i class="fa fa-pencil" style="color: #9162B3 !important;"></i>--}}
+                                            @endcan
+                                            @can('user_edit')
+                                                <a href="/admin/edit-user/{{$user->id}}">
+                                                    <i class="fa fa-pencil" style="color: #000000 !important;"></i>
 
-{{--                                                </a>--}}
-{{--                                            @endcan--}}
-{{--                                        </td>--}}
-{{--                                    </tr>--}}
-{{--                                @endforeach--}}
+                                                </a>
+                                            @endcan
+                                        </td>
+                                    </tr>
+                                @endforeach
 
                                 </tbody>
                             </table>
