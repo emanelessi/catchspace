@@ -25,12 +25,16 @@ class WorkerController extends Controller
     public function index()
     {
 //        $workspaces = WorkSpace::CheckProvider()
-        $workerworkspaces = WorkerWorkSpace::withTrashed()
-            ->join('work_spaces', 'worker_work_spaces.work_space_id', '=', 'work_spaces.id')
-            ->where('work_spaces.provider_id', auth()->user()->provider->id)
-            ->distinct('worker_id')
-//            ->groupBy('workers.id')
-            ->get();
+//         $workerworkspaces = WorkerWorkSpace::withTrashed()
+//             ->join('work_spaces', 'worker_work_spaces.work_space_id', '=', 'work_spaces.id')
+//             ->where('work_spaces.provider_id', auth()->user()->provider->id)
+//             ->distinct('worker_id')
+// //            ->groupBy('workers.id')
+//             ->get();
+
+        $workerworkspaces = Worker::withTrashed()
+                        ->whereIn('id', WorkerWorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('workder_id'))
+                        ->get();
 
         return view('admin.worker.worker', compact('workerworkspaces'));
 
