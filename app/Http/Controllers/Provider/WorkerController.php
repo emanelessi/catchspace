@@ -33,7 +33,7 @@ class WorkerController extends Controller
 //             ->get();
 
         $workerworkspaces = Worker::withTrashed()
-                        ->whereIn('id', WorkerWorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('workder_id'))
+                        ->whereIn('id', WorkerWorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('worker_id'))
                         ->get();
 
         return view('admin.worker.worker', compact('workerworkspaces'));
