@@ -19,6 +19,7 @@ class CreateRatingsTable extends Migration
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
             $table->ipAddress('mac_address');
             $table->double('rate');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

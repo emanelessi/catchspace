@@ -68,6 +68,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/admin/edit-user', [\App\Http\Controllers\UserController::class, 'update'])->name('userupdate');
     Route::get('/admin/profile', [\App\Http\Controllers\UserController::class, 'profile'])->name('adminprofile');
 
+    Route::get('/admin/rate', [\App\Http\Controllers\RateController::class, 'index']);
+    Route::get('/admin/rate/rating/{id}', [\App\Http\Controllers\RateController::class, 'rating']);
+
     Route::get('/admin/provider', [\App\Http\Controllers\ProviderController::class, 'show']);
     Route::get('/admin/add-provider', [\App\Http\Controllers\ProviderController::class, 'create'])->name('providercreate');
     Route::post('/admin/add-provider', [\App\Http\Controllers\ProviderController::class, 'store'])->name('providerstore');
@@ -155,5 +158,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/provider/edit-profile/{id}', [Provider\ProviderController::class, 'edit']);
     Route::post('/provider/edit-profile', [Provider\ProviderController::class, 'update'])->name('updateProfile');
 
-
+    Route::get('/provider/rate', [Provider\RateController::class, 'index']);
+    Route::get('/provider/rate/rating/{id}', [Provider\RateController::class, 'rating']);
 });

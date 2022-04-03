@@ -40,6 +40,16 @@ class WorkSpace extends Model
         return $this->hasMany(WorkerWorkSpace::class, 'work_space_id')->withTrashed();
     }
 
+    public function rating()
+    {
+        return $this->hasMany(Rating::class, 'work_space_id')->withTrashed();
+    }
+
+    public function workSpaceRating()
+    {
+        return $this->hasMany(WorkSpaceRating::class, 'work_space_id')->withTrashed();
+    }
+
 
 
     public function workSpaceAddons()

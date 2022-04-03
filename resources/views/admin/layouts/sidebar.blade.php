@@ -161,6 +161,26 @@
                 </li>
             @endcan
 
+            @can('rate_access')
+                <li class="nav-item @if(preg_match('/rate/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('/admin/rate')}}" class="nav-link nav-toggle margin-left-10" style="
+   /*font-family: 'Montserrat', sans-serif;;*/
+   font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 27px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
+
+">
+                        <i class="fa fa-star"></i>
+                        <span class="title">Rating</span>
+                    </a>
+                </li>
+            @endcan
+
+
 
             {{--            <li class="nav-item @if(preg_match('/system/i',url()->current())) start active open @endif">--}}
             {{--                <a href="javascript:;" class="nav-link nav-toggle margin-left-10" style="--}}
@@ -270,6 +290,24 @@ background: #2B292C;
                     <span class="title" style="font-size: 14px">Policies</span>
                 </a>
             </li>
+            @can('rate_show')
+                <li class="nav-item @if(preg_match('/rate/i',url()->current())) start active open select_color @endif">
+                    <a href="{{url('/provider/rate')}}" class="nav-link nav-toggle margin-left-10" style="
+   /*font-family: 'Montserrat', sans-serif;;*/
+   font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 27px;
+    /*text-transform: capitalize;*/
+    /*margin-left: 7px;*/
+    /*margin-bottom: 18px;*/
+
+">
+                        <i class="fa fa-star"></i>
+                        <span class="title">Rating</span>
+                    </a>
+                </li>
+            @endcan
 {{--            <li class="nav-item @if(preg_match('/edit-profile/i',url()->current())) start active open @endif" style="--}}
 {{--    padding-bottom: 5px;--}}
 {{--">--}}

@@ -19,6 +19,7 @@ class CreateWorkSpaceRatingsTable extends Migration
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
             $table->double('rate_avg');
             $table->double('rate_count');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
