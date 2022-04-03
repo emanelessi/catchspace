@@ -10,7 +10,12 @@ class Rating extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'work_space_id',
+        'mac_address',
+        'rate',
 
+    ];
     public function workSpace()
     {
         return $this->belongsTo(WorkSpace::class, 'work_space_id')->withTrashed();
