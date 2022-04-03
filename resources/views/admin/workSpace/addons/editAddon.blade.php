@@ -4,7 +4,7 @@
     <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
-            background-color: #7962B3 !important;
+            background-color: #ef6198 !important;
         }
 
         .page-head {
@@ -12,7 +12,7 @@
         }
 
         .head-title {
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 33px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
@@ -27,14 +27,14 @@
         .btn-submit {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #9162B3 !important;
+            border-color: #E93A76 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #9162B3 !important;
-            font-family: AvenirLTStd-Book !important;
+            background-color: #E93A76 !important;
+            font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
-            font-size: 13px !important;
+            font-size: 12px !important;
             letter-spacing: 1px !important;
         }
     </style>

@@ -201,7 +201,7 @@
                                             <td class="table-td">  {{$myworker->id}}
                                             </td>
                                             <td class="table-td"><img alt="" class="img-circle"
-                                                                      src="{{'/storage/'.$myworker->avatar}}"/></td>
+                                                                      src="{{'/storage/'.$myworker->avatar}}" style="width: 40px;"/></td>
                                             <td class="table-td"> {{$myworker->name}}
                                             </td>
                                             <td class="table-td"> {{$myworker->job_title}}
@@ -309,8 +309,8 @@
                                                 </th>
                                                 <th class="table-th"> Reservations
                                                 </th>
-{{--                                                <th class="table-th"> action--}}
-{{--                                                </th>--}}
+                                                <th class="table-th"> action
+                                                </th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -323,7 +323,7 @@
                                                     </td>
                                                     <td class="table-td">
                                                         <img alt="" class="img-circle"
-                                                             src="{{'/storage/'.$myworker->workers->avatar}}"/>
+                                                             src="{{'/storage/'.$myworker->workers->avatar}}" style="width: 40px;"/>
                                                     </td>
                                                     <td class="table-td"> {{$myworker->workers->name}}
                                                     </td>
@@ -344,6 +344,32 @@
                                                             </a>
                                                         </td>
                                                     @endcan
+                                                    <td class="table-td">
+                                                        @can('worker_delete')
+                                                            @if($myworker->deleted_at ==null)
+
+                                                                <a href="/provider/delete-worker/{{$myworker->id}}"
+                                                                   data-target="#static2" data-toggle="modal"
+                                                                   style="margin-left: 10px">
+                                                                    <i class="fa fa-trash"
+                                                                       style="color: #000000 !important;"></i>
+                                                                </a>
+                                                            @else
+                                                                <a href="/provider/restore-worker/{{$myworker->id}}"
+                                                                   data-target="#static2" data-toggle="modal"
+                                                                   style="margin-left: 10px">
+                                                                    <i class="fa fa-recycle"
+                                                                       style="color: #000000 !important;"></i>
+                                                                </a>
+                                                            @endif
+                                                        @endcan
+
+                                                        @can('worker_edit')
+                                                            <a href="/provider/edit-worker/{{$myworker->id}}">
+                                                                <i class="fa fa-pencil" style="color: #000000 !important;"></i>
+                                                            </a>
+                                                        @endcan
+                                                    </td>
                                                 </tr>
 
 {{--                                            @endforeach--}}

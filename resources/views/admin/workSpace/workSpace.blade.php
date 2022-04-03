@@ -122,17 +122,17 @@
             font-size: 13px !important;
             letter-spacing: 1px !important;
             border-radius: 10px !important;
-            border-color: #9162B3 !important;
+            border-color: #E93A76 !important;
         }
 
         .btn-delete {
             width: 125px !important;
             height: 32.2px !important;
-            border-color: #9162B3 !important;
+            border-color: #E93A76 !important;
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            background-color: #9162B3 !important;
+            background-color: #E93A76 !important;
             font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
             font-size: 13px !important;

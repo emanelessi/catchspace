@@ -12,7 +12,7 @@
         }
 
         .head-title {
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 33px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
@@ -32,7 +32,7 @@
             padding: 0 !important;
             border-radius: 8px !important;
             background-color: #E93A76 !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
             font-size: 13px !important;
             letter-spacing: 1px !important;

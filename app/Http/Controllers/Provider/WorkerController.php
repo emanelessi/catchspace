@@ -32,8 +32,8 @@ class WorkerController extends Controller
 // //            ->groupBy('workers.id')
 //             ->get();
 
-        $workerworkspaces = Worker::withTrashed()
-                        ->whereIn('id', WorkerWorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('worker_id'))
+        $workerworkspaces = WorkerWorkSpace::withTrashed()
+                        ->whereIn('work_space_id', WorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('id'))
                         ->get();
 
         return view('admin.worker.worker', compact('workerworkspaces'));
@@ -54,7 +54,7 @@ class WorkerController extends Controller
             'job_title' => 'required',
             'avatar' => 'required',
             'you_did' => 'required',
-            'work_space_type_id' => 'required',
+            'work_space_id' => 'required',
             'type' => 'required',
         ]);
 
@@ -64,8 +64,12 @@ class WorkerController extends Controller
         $worker->avatar = storeImage('workers','avatar' );
         $worker->you_did = $request->input('you_did');
         $worker->type = $request->input('type');
-        $worker->work_space_id = $request->input('work_space_type_id');
         $worker->save();
+        $workerworkspace=new WorkerWorkSpace();
+        $workerworkspace->worker_id   = $worker->id;
+        $workerworkspace->work_space_id  = $request->input('work_space_id');
+        $workerworkspace->save();
+
         return back()->with('success', trans('messages.worker.worker_created'));
     }
 
@@ -84,7 +88,7 @@ class WorkerController extends Controller
             'job_title' => 'required',
             'avatar' => 'required',
             'you_did' => 'required',
-            'work_space_type_id' => 'required',
+            'work_space_id' => 'required',
             'type' => 'required',
         ]);
 
@@ -94,8 +98,11 @@ class WorkerController extends Controller
         $worker->avatar = storeImage('workers','avatar' );;
         $worker->you_did = $request->input('you_did');
         $worker->type = $request->input('type');
-        $worker->work_space_id = $request->input('work_space_type_id');
         $worker->save();
+        $workerworkspace= WorkerWorkSpace::withTrashed()->findOrFail($id);
+        $workerworkspace->worker_id   = $worker->id;
+        $workerworkspace->work_space_id  = $request->input('work_space_id');
+        $workerworkspace->save();
         return back()->with('success', trans('messages.worker.worker_updated'));
     }
 

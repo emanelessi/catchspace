@@ -62,7 +62,7 @@ background-color: #2B292C;border-bottom-color: #2B292C;
                 </div>
             </form>
             <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="top-menu margin-top-10">
+            <div class="top-menu margin-top-2">
                 <ul class="nav navbar-nav pull-right">
                     <li class="separator hide"></li>
 
@@ -185,7 +185,7 @@ background-color: #2B292C;border-bottom-color: #2B292C;
                 <!-- BEGIN USER LOGIN DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                     <li class="dropdown dropdown-user" style="
-    margin-top: 5px;
+    margin-top: 9px;
 ">
                         <a href="javascript:;" data-toggle="dropdown" data-hover="dropdown"
                            data-close-others="true" style="

@@ -5,7 +5,7 @@
     <style>
 
         .btn:hover {
-            background-color: #7962B3 !important;
+            background-color: #ef6198!important;
         }
 
         .btn-circle:hover {
@@ -14,8 +14,8 @@
         }
 
         .span:hover {
-            background-color: #7962B3 !important;
-            border-color: #7962B3 !important;
+            background-color: #ef6198!important;
+            border-color: #ef6198!important;
         }
 
         .cansel:hover {
@@ -23,7 +23,7 @@
         }
 
         .deletee:hover {
-            background-color: #7962B3 !important;
+            background-color: #ef6198!important;
         }
 
         .page-head {

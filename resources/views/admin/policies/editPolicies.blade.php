@@ -4,7 +4,7 @@
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
             <h1 style="
-            font-family: AvenirLTStd-Book;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 30px;
             letter-spacing: -0.022em;
             color: #333333;
@@ -12,7 +12,7 @@
     </div>
     <div class="col-md-12 ">
         <!-- BEGIN Portlet PORTLET-->
-        <div class="portlet box " style="background-color: #9162B3;font-family: AvenirLTStd-Book;
+        <div class="portlet box " style="background-color: #E93A76;font-family: 'Montserrat', sans-serif !important;
 font-size: 17px">
             <div class="portlet-title">
                 <div class="caption">
@@ -21,7 +21,7 @@ font-size: 17px">
             </div>
             <div class="portlet-body">
                 <div class="scroller" style="height:280px" data-always-visible="1" data-rail-visible="1"
-                     data-rail-color="blue" data-handle-color="#9162B3">
+                     data-rail-color="blue" data-handle-color="#E93A76">
                     <form role="form"  action="{{route('updatePolicies')}}"
                           method="POST">
                         @csrf
@@ -49,19 +49,19 @@ font-size: 17px">
                                                                /*display: flex;*/
                                                                /*flex-direction: column;*/
                                                                /*justify-content: center;*/
-                                                               border-color: #9162B3;
+                                                               border-color: #E93A76;
                                                                align-items: center;
                                                                /*margin: -155px 0 0 755px;*/
                                                                padding: 0;
                                                                border-radius: 8px !important;
-                                                               background-color: #9162B3;
-                                                               font-family: AvenirLTStd-Book;
+                                                               background-color: #E93A76;
+                                                               font-family: 'Montserrat', sans-serif !important;
                                                                /*font-style: normal;*/
                                                                /*font-weight: 600;*/
                                                                /*font-size: 14px;*/
                                                                /* line-height: 24px; */
                                                                color: #FFFFFF;
-                                                               font-size: 13px;
+                                                               font-size: 12px;
                                                                letter-spacing: 1px;
                                                                ">
                             Save Change
