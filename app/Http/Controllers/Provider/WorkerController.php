@@ -109,13 +109,14 @@ class WorkerController extends Controller
     public function destroy($id)
     {
         $worker = Worker::findOrFail($id)->delete();
+        $workerworkspace=WorkerWorkSpace::where('worker_id',$id)->delete();
         return back()->with('success', trans('messages.worker.worker_deleted'));
     }
 
     public function restore($id)
     {
         Worker::where('id', $id)->withTrashed()->restore();
-
+        WorkerWorkSpace::where('worker_id',$id)->withTrashed()->restore();
         return back()->with('success', trans('messages.worker.worker_restored'));
     }
     public function reservations($id)

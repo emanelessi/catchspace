@@ -349,7 +349,10 @@
                                              data-keyboard="false" data-attention-animation="false"
                                         >
                                             <div class="modal-body">
-                                                <p class="modal-p"> Are you sure about delete this Addon
+                                                <p class="modal-p">
+                                                    <i class="fa fa-warning" style="color: #5DB461 !important;font-size: 50px"></i>
+                                                    <br><br>
+                                                    Are you sure about delete this Addon
                                                     ? </p>
                                             </div>
                                             <div class="modal-footer padding-right-120 " style="border-top:0px;">
