@@ -24,23 +24,32 @@
         }
     </style>
     <!-- END PAGE style -->
-
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css"/>
+    <link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="../assets/layouts/layout4/css/layout.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/layouts/layout4/css/themes/default.min.css" rel="stylesheet" type="text/css"
+          id="style_color"/>
+    <link href="../assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END THEME LAYOUT STYLES -->
     {{--    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">--}}
 
     @can('permission_access')
 
-    <div class="page-head" >
-        <!-- BEGIN PAGE TITLE -->
-        <div class="page-title">
-            <h1 class="margin-top--10 head-title">Admin Dashboard</h1>
-        </div>
-        <!-- END PAGE TITLE -->
-        <!-- BEGIN PAGE TOOLBAR -->
-        <div class="page-toolbar">
-            <div id="dashboard-report-range" data-display-range="0"
-                 class="pull-right tooltips btn btn-fit-height green"
-                 data-placement="left" data-original-title="Change dashboard date range"
-                 style="
+        <div class="page-head">
+            <!-- BEGIN PAGE TITLE -->
+            <div class="page-title">
+                <h1 class="margin-top--10 head-title">Admin Dashboard</h1>
+            </div>
+            <!-- END PAGE TITLE -->
+            <!-- BEGIN PAGE TOOLBAR -->
+            <div class="page-toolbar">
+                <div id="dashboard-report-range" data-display-range="0"
+                     class="pull-right tooltips btn btn-fit-height green"
+                     data-placement="left" data-original-title="Change dashboard date range"
+                     style="
                  background-color: #FFFFFF;
                  border-color: #FFFFFF;
                  border-radius: 10px !important;
@@ -54,164 +63,133 @@
                  height: 30px;
                  padding-top: 1px;
 ">
-                <i class="icon-calendar" style="margin-right: 5px;color: black !important;"></i>&nbsp;
-                <span class="thin uppercase hidden-xs" style="margin-right: 15px;">20, Jan 2021</span>&nbsp;
-                <i class="fa fa-angle-down" style="color: black !important; font-size: 15px"></i>
-            </div>
+                    <i class="icon-calendar" style="margin-right: 5px;color: black !important;"></i>&nbsp;
+                    <span class="thin uppercase hidden-xs" style="margin-right: 15px;">20, Jan 2021</span>&nbsp;
+                    <i class="fa fa-angle-down" style="color: black !important; font-size: 15px"></i>
+                </div>
 
+            </div>
+            <!-- END PAGE TOOLBAR -->
         </div>
-        <!-- END PAGE TOOLBAR -->
-    </div>
-    <div>
-        <div class="row margin-top-35">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="dashboard-stat dashboard-stat-v2 blue" href="#"
-                     style="border-radius: 15px !important;height: 90px;left: 277px;
+        <div>
+            <div class="row margin-top-35">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat dashboard-stat-v2 blue" href="#"
+                         style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
 
                     /*background: #E93A76;*/
                     background: #E93A76;
 ">
-                    <div class="visual padding-top-12">
-                        <i class="fa fa-user"
-                           style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
-                    </div>
-                    <div class="details">
-                        <div class="number padding-top-12">
+                        <div class="visual padding-top-12">
+                            <i class="fa fa-user"
+                               style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number padding-top-12">
                             <span data-counter="counterup" style="
                             /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
                             font-size: 34px;"
                                   data-value="{{$providers->Count() ?? 0}}">{{$providers->Count() ?? 0}}</span>
-                        </div>
-                        <div class="desc" style="
+                            </div>
+                            <div class="desc" style="
     /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
 "> Co-working provider
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="dashboard-stat dashboard-stat-v2 red" href="#"
-                     style="border-radius: 15px !important;height: 90px;left: 277px;
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat dashboard-stat-v2 red" href="#"
+                         style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
                     /*background: #E93A76;*/
                     background: #5AB25E;
 ">
-                    <div class="visual">
-                        <i class="fa fa-map-marker"
-                           style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
-                    </div>
-                    <div class="details">
-                        <div class="number padding-top-12">
+                        <div class="visual">
+                            <i class="fa fa-map-marker"
+                               style="color: white !important;opacity: 1 !important;padding-left: 44px;"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number padding-top-12">
                             <span data-counter="counterup" style="
                             /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
                             font-size: 34px;"
                                   data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
-                        </div>
-                        <div class="desc" style="
+                            </div>
+                            <div class="desc" style="
     /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
 "> Work space
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="dashboard-stat dashboard-stat-v2 green" href="#"
-                     style="border-radius: 15px !important;height: 90px;left: 277px;
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat dashboard-stat-v2 green" href="#"
+                         style="border-radius: 15px !important;height: 90px;left: 277px;
                    top: 208px;
                     /*background: #E93A76;*/
                     background: #27272A;
 ">
-                    <div class="visual">
-                        <i class="fa fa-file-text"
-                           style="color: white !important;opacity: 1 !important;padding-left: 44px;font-size: 56px"></i>
-                    </div>
-                    <div class="details">
-                        <div class="number padding-top-12">
+                        <div class="visual">
+                            <i class="fa fa-file-text"
+                               style="color: white !important;opacity: 1 !important;padding-left: 44px;font-size: 56px"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number padding-top-12">
                             <span data-counter="counterup" style="
                             /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
                             font-size: 34px;"
                                   data-value="{{$workers->Count() ?? 0}}">{{$workers->Count() ?? 0}}</span>
-                        </div>
-                        <div class="desc" style="
+                            </div>
+                            <div class="desc" style="
     /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
 "> Workers
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="clearfix"></div>
-        <!-- END DASHBOARD STATS 1-->
-        <div class="row">
-            <div class="col-lg-8 col-xs-8 col-sm-8">
-                <div class="portlet light bordered"
-                     style="left: 277px;top: 697px;background: #FFFFFF;border-radius: 20px !important;">
-                    <div class=" tabbable-line">
-                        <div class="caption" style="height: 321px;">
-                            <i class=" icon-social-twitter font-dark hide"></i>
-                            <span class="caption-subject font-dark bold " style="
-    width: 107px;
-    height: 19px;
-    left: 0px;
-    top: 0px;
-/*font-family: 'Montserrat', sans-serif;*/
-font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600 !important;
-    font-size: 16px;
-    line-height: 120%;
-    letter-spacing: -0.4px;
-    color: #343A40 !important;
-">Quick actions</span>
+            <div class="clearfix"></div>
+            <!-- END DASHBOARD STATS 1-->
+            <div class="row">
+                <div class="col-lg-7 col-xs-7 col-sm-7">
+                    <div class="portlet light portlet-fit bordered" style="border-radius: 20px !important;">
+                        <div class="portlet-title" style="border-bottom:0px !important;">
+                            <div class="caption">
+                                <i class=" icon-layers font-green" style="color: #2B292C !important;"></i>
+                                <span class="caption-subject font-green bold uppercase"
+                                      style="color: #2B292C !important;">Workspace Visitor statistics</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portlet-body">
-                        <div class="tab-content">
-
+                        <div class="portlet-body">
+                            <div id="highchart_1" style="height:500px;"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-xs-4 col-sm-4">
-                <div class="portlet light bordered"
-                     style="left: 277px;top: 697px;background: #FFFFFF;border-radius: 20px !important;">
-                    <div class=" tabbable-line" style="height: 321px;">
-                        <div class="caption" style="height: 137px;background-color: #000000;">
-                            <i class=" icon-social-twitter font-dark hide"></i>
-                            <span class="caption-subject font-dark bold " style="
-    width: 107px;
-    height: 19px;
-    left: 0px;
-    top: 0px;
-/*font-family: 'Montserrat', sans-serif;*/
-font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600 !important;
-    font-size: 16px;
-    line-height: 120%;
-    letter-spacing: -0.4px;
-    /*color: #343A40 !important;*/
-    color: #ffffff !important;
-">Quick actions</span>
+                <div class="col-lg-5 col-xs-5 col-sm-5">
+                    <div class="portlet light portlet-fit bordered" style="border-radius: 20px !important;">
+                        <div class="portlet-title" style="border-bottom:0px !important;">
+                            <div class="caption">
+                                <i class=" icon-layers font-green" style="color: #2B292C !important;"></i>
+                                <span class="caption-subject font-green bold uppercase"
+                                      style="color: #2B292C !important;">New workspace booked up</span>
+                            </div>
                         </div>
-                        <div style="background-color: #E93A76;height: 185px;"> </div>
-                    </div>
-                    <div class="portlet-body">
-                        <div class="tab-content">
-
+                        <div class="portlet-body">
+                            <div id="morris_chart_1" style="height:500px;"></div>
                         </div>
                     </div>
                 </div>
@@ -521,7 +499,7 @@ font-family: 'Montserrat', sans-serif;
 
 
         <!-- END PAGE BASE CONTENT -->
-    </div>
+        </div>
     @endcan
     @can('provider_access')
         <div class="page-head" style="
@@ -589,7 +567,9 @@ font-family: 'Montserrat', sans-serif;
                         </div>
                         <div class="details">
                             <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: 'Montserrat', sans-serif;font-size: 34px;" data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
+                                <span data-counter="counterup"
+                                      style="font-family: 'Montserrat', sans-serif;font-size: 34px;"
+                                      data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
     font-family: 'Montserrat', sans-serif;
@@ -614,7 +594,8 @@ font-family: 'Montserrat', sans-serif;
                         </div>
                         <div class="details">
                             <div class="number padding-top-12">
-                            <span data-counter="counterup" style="font-family: 'Montserrat', sans-serif;font-size: 34px;"
+                            <span data-counter="counterup"
+                                  style="font-family: 'Montserrat', sans-serif;font-size: 34px;"
                                   data-value="{{$workers->Count() ?? 0}}">{{$workers->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
@@ -631,31 +612,31 @@ font-family: 'Montserrat', sans-serif;
             <div class="clearfix"></div>
             <!-- END DASHBOARD STATS 1-->
             <div class="row">
-                <div class="col-lg-12 col-xs-12 col-sm-12">
-                    <div class="portlet light bordered"
-                         style="left: 277px;top: 697px;background: #FFFFFF;border-radius: 20px !important;">
-                        <div class=" tabbable-line">
-                            <div class="caption" style="height: 321px;">
-                                <i class=" icon-social-twitter font-dark hide"></i>
-                                <span class="caption-subject font-dark bold " style="
-    width: 107px;
-    height: 19px;
-    left: 0px;
-    top: 0px;
-font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600 !important;
-    font-size: 16px;
-    line-height: 120%;
-    letter-spacing: -0.4px;
-    color: #343A40 !important;
-">Quick actions</span>
+                <div class="col-lg-7 col-xs-7 col-sm-7">
+                    <div class="portlet light portlet-fit bordered" style="border-radius: 20px !important;">
+                        <div class="portlet-title" style="border-bottom:0px !important;">
+                            <div class="caption">
+                                <i class=" icon-layers font-green" style="color: #2B292C !important;"></i>
+                                <span class="caption-subject font-green bold uppercase"
+                                      style="color: #2B292C !important;">Workspace Visitor statistics</span>
                             </div>
                         </div>
                         <div class="portlet-body">
-                            <div class="tab-content">
-
+                            <div id="highchart_1" style="height:500px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-xs-5 col-sm-5">
+                    <div class="portlet light portlet-fit bordered" style="border-radius: 20px !important;">
+                        <div class="portlet-title" style="border-bottom:0px !important;">
+                            <div class="caption">
+                                <i class=" icon-layers font-green" style="color: #2B292C !important;"></i>
+                                <span class="caption-subject font-green bold uppercase"
+                                      style="color: #2B292C !important;">New workspace booked up</span>
                             </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div id="morris_chart_1" style="height:500px;"></div>
                         </div>
                     </div>
                 </div>
@@ -716,7 +697,8 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     </div>
                                                     <div class="mt-action-buttons padding-top-0">
                                                         <div>
-                                                            <button type="button" class="btn Reject margin-right-5" style="
+                                                            <button type="button" class="btn Reject margin-right-5"
+                                                                    style="
                                                     display: inline;
                                                     align-items: center;
                                                     background: #333333;
@@ -800,7 +782,8 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     </div>
                                                     <div class="mt-action-buttons padding-top-0">
                                                         <div>
-                                                            <button type="button" class="btn Reject margin-right-5" style="
+                                                            <button type="button" class="btn Reject margin-right-5"
+                                                                    style="
                                                     display: inline;
                                                     align-items: center;
                                                     background: #333333;
@@ -884,7 +867,8 @@ font-style: normal;font-weight: 500;font-size: 18px;line-height: 27px;color: #00
                                                     </div>
                                                     <div class="mt-action-buttons padding-top-0">
                                                         <div>
-                                                            <button type="button" class="btn Reject margin-right-5" style="
+                                                            <button type="button" class="btn Reject margin-right-5"
+                                                                    style="
                                                     display: inline;
                                                     align-items: center;
                                                     background: #333333;
@@ -950,5 +934,24 @@ font-family: 'Montserrat', sans-serif;
         </div>
     @endcan
 
+
 @endsection
 
+
+@section('js')
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="../assets/global/plugins/highcharts/js/highcharts.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/highcharts/js/highcharts-3d.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/highcharts/js/highcharts-more.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="../assets/pages/scripts/charts-highcharts.min.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="../assets/pages/scripts/charts-morris.min.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+@stop

@@ -3,7 +3,7 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color: #9162B3 !important;
+            background-color: #f36596 !important;
         }
 
     </style>
@@ -37,14 +37,14 @@ font-family: AvenirLTStd-Book;
             onclick="window.location='{{url('/')}}'"
 
             style="
-                            border-color: #9162B3;
+                              border-color: #E93B77;
+                                background: #E93B77;
                             border-radius: 3px !important;
                             align-items: center;
 font-family: AvenirLTStd-Book;
                             font-style: normal;
                             font-size: 16px;
                             color: #FFFFFF;
-                            background: #9162B3;
                             ">
             <i class="fa fa-arrow-left"></i>
             Go back to Dashboard

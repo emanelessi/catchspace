@@ -10,11 +10,12 @@
     <title>Catch Space</title>
     <style>
         .btn:hover {
-            background-color: #FECA2F !important;
+            background-color: #ffffff !important;
+            color: black !important;
         }
 
         .nav-link:hover {
-            color: #FECA2F !important;
+            color: #000000 !important;
         }
     </style>
 </head>
@@ -40,8 +41,9 @@
 <!-- BEGIN : LOGIN PAGE 5-2 -->
 <div class="user-login-5">
     <div class="row bs-reset">
-        <div class="col-md-7 login-container bs-reset" style="  height: 768px;  background-color: #6B6767;
-            background-image: linear-gradient(#726767, #090808);">
+        <div class="col-md-7 login-container bs-reset" style="
+         height: 768px; background-color: #28282B;
+            background-image: linear-gradient(#28282B, #0B0A0A);">
             <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
                 <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png" style="
     width: 145px;
@@ -50,7 +52,7 @@
             <div class=" m-grid-col-lg-11-5 m-grid-col-md-12 m-grid-col-xs-12 margin-top-150">
 
                 <h1 style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
                   font-size: 35px;line-height: 40px;
                    text-align: center;
                    color: #FFFFFF;
@@ -58,14 +60,13 @@ font-family: AvenirLTStd-Book;
                     For obtaining services <br>contact our team via</h1>
                 <a href="tel:+970 59 96 66 563" style="
                     color: #FFF;
-font-family: AvenirLTStd-Book;
-                   font-size: 20px;
+font-family: 'Montserrat', sans-serif !important;                   font-size: 20px;
                     line-height: 60px;
                     text-align: center;
                     display: block;
                     ">
                     <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 5px;
@@ -73,9 +74,9 @@ font-family: AvenirLTStd-Book;
                     " class="fa fa-phone"></i>
                     +970 59 96 66 563</a>
                 <a href="mailto:WEB@catchSpace.com"
-                   style="font-family: AvenirLTStd-Book;font-size: 21px;line-height: 25px;color: #FFFFFF;text-align: center;display: block;">
+                   style="font-family: 'Montserrat', sans-serif !important;font-size: 21px;line-height: 25px;color: #FFFFFF;text-align: center;display: block;">
                     <i style="
-                    background: -webkit-linear-gradient(#9162B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 5px;
@@ -85,8 +86,8 @@ font-family: AvenirLTStd-Book;
 
             </div>
         </div>
-        <div class="col-md-5 login-container bs-reset" style="  background-color: #9162B3;
-            background-image: linear-gradient( #9162B3, #FFBF00);">
+        <div class="col-md-5 login-container bs-reset" style="  background-color: #E93B77;
+            background-image: linear-gradient( #E93B77, #EC769E);">
             <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
                 <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
@@ -95,7 +96,7 @@ font-family: AvenirLTStd-Book;
                         <li class="nav-item" style="
     width: 85px;
     height: 22px;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -103,7 +104,7 @@ font-family: AvenirLTStd-Book;
     letter-spacing: -0.022em;
 "><a class="nav-link">Home</a></li>
                         <li class="nav-item margin-right-28" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -123,13 +124,13 @@ font-family: AvenirLTStd-Book;
                             border: 1px solid #FFFFFF;
                             box-sizing: border-box;
                             border-radius: 3px !important;
-                            font-family: AvenirLTStd-Book;
+                            font-family: 'Montserrat', sans-serif;
                             font-style: normal;
                             font-weight: normal;
                             font-size: 12px;
                             line-height: 24px;
                             color: #FFFFFF;
-                            background-color: #845ba6;
+                            background-color: #E93B77;
 ">
                             Login
                         </a>

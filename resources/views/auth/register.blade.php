@@ -4,11 +4,11 @@
     <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
     <style>
         .btn:hover {
-            background-color: #E93A76!important;
+            background-color: #E93B77!important;
         }
 
         .nav-link:hover {
-            color: #E93A76!important;
+            color: #E93B77!important;
         }
 
         a:hover {
@@ -61,7 +61,7 @@
             padding: 10px;
             border-radius: 20px !important;
             background-color: #eaeaea;
-            font-family: AvenirLTStd-Book;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 14px;
             line-height: 24px;
             color: #6B7280;
@@ -73,7 +73,7 @@
 
         .inputfile:focus + label,
         .inputfile + label:hover {
-            background-color: #E93A76;
+            background-color: #E93B77;
             color: white;
 
         }
@@ -84,8 +84,9 @@
     <!-- BEGIN : LOGIN PAGE 5-1 -->
     <div class="user-login-5">
         <div class="row bs-reset">
-            <div class="col-md-6 bs-reset mt-login-5-bsfix" style="min-height: 768px;background-color: #6B6767;
-            background-image: linear-gradient(#726767, #090808);">
+            <div class="col-md-6 bs-reset mt-login-5-bsfix" style="
+         height: 768px; background-color: #28282B;
+            background-image: linear-gradient(#28282B, #0B0A0A);">
                 <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
                     <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png" style="
     width: 145px;
@@ -104,13 +105,13 @@
                             m-grid-col-lg-12 m-grid-col-md-11 m-grid-col-xs-12
                             ">
                     <h1 style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
                     font-style: normal;
                     color: #333333;
                     ">Create an account</h1>
                     <p style="
                     color: #333333;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
                     font-style: normal;
                     font-weight: normal;
                     font-size: 16px;
@@ -378,7 +379,7 @@ font-family: AvenirLTStd-Book;
                                 width: 222px;
 ">
                                     <label class="rememberme mt-checkbox mt-checkbox-outline" style="                                           margin-bottom: 10px;
-                                    font-family: AvenirLTStd-Book;
+                                  font-family: 'Montserrat', sans-serif !important;
                                             font-style: normal;
                                             font-weight: normal;
                                             font-size: 13px;
@@ -397,14 +398,14 @@ width: 100%;
 background: #E93A76;
 border-color: #E93A76;
 border-radius: 20px !important;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 color: white;">
                                     {{ __('Sign up') }}
                                 </button>
                             </div>
                             <div class="col-lg-9 ">
                                 <h5 style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-style: normal;
 font-weight: normal;
 color: rgba(114, 103, 103, 0.78);

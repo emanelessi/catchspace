@@ -17,6 +17,9 @@
             border-color: #fffffc!important;
 
         }
+        .nav-link:hover {
+            color: #000000 !important;
+        }
     </style>
 </head>
 
@@ -41,14 +44,14 @@
 <div class="user-login-5">
     <div class="row bs-reset">
         <div class="col-md-7 login-container bs-reset" style="
-         height: 768px; background-color: #6B6767;
-            background-image: linear-gradient(#726767, #090808);">
+         height: 768px; background-color: #28282B;
+            background-image: linear-gradient(#28282B, #0B0A0A);">
             <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
                 <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png" style="
     width: 145px;
 "/>
             </a>
-            <div class=" m-grid-col-lg-offset-1 m-grid-col-md-12 m-grid-col-xs-12 margin-top-100">
+            <div class=" m-grid-col-lg-offset-1 m-grid-cl-md-12 m-grid-col-xs-12 margin-top-100">
                 <h5 style="
                         color: #FFF;
 font-family: 'Montserrat', sans-serif;
@@ -59,7 +62,7 @@ font-family: 'Montserrat', sans-serif;
                         line-height: 48px;
                         ">Welcome to<br>
                     <span style="
-                    background: -webkit-linear-gradient(#E93B77, #E6729A);
+                    background: -webkit-linear-gradient(#ff0058, #F0F2F5);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
 font-family: 'Montserrat', sans-serif;
@@ -84,12 +87,12 @@ font-family: 'Montserrat', sans-serif;
                     we are here to<br> help you</p>
                 <div class="text-left margin-left-6 ">
                     <a href="{{route('register')}}" class="btn blue " style="
-                            border-color: #E93A76;
+                            border-color: #E93B77;
                             border-radius: 3px !important;
                             align-items: center;
                             width: 113px;
                             height: 39px;
-                            background: #E93A76;
+                            background: #E93B77;
                             font-family: 'Montserrat', sans-serif;
                             font-style: normal;
                             font-weight: 400;
@@ -101,8 +104,8 @@ font-family: 'Montserrat', sans-serif;
                 </div>
             </div>
         </div>
-        <div class="col-md-5 login-container bs-reset" style="  background-color: #5F2F42;
-            background-image: linear-gradient( #5F2F42, #E6729A);">
+        <div class="col-md-5 login-container bs-reset" style="  background-color: #E93B77;
+            background-image: linear-gradient( #E93B77, #EC769E);">
             <nav class="navbar navbar-expand-md navbar-light  shadow-sm  ">
                 <div class=" navbar-collapse " id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
@@ -147,7 +150,7 @@ font-family: 'Montserrat', sans-serif;
                             font-size: 12px;
                             line-height: 24px;
                             color: #FFFFFF;
-                            background-color: #5F2F42;
+                            background-color: #E93B77;
 ">
                                     Login
                                 </a>

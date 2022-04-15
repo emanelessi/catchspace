@@ -61,15 +61,14 @@
         }
 
     </style>
-    <body class=" login" style="
-            background-color: #6B6767;
-            background-image: linear-gradient(#726767, #090808);
-            min-height: 768px;
-            ">
+    <body class=" login" style="background-color: #28282B;
+            background-image: linear-gradient(#28282B, #090808);
+            height: 768px;
+    ">
     <!-- BEGIN LOGO -->
     <div class="container">
         <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link " href="{{ url('/') }}" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-style: normal;
 font-weight: normal;
 letter-spacing: -0.022em;
@@ -104,16 +103,16 @@ color: #FFFFFF;
         />
         <h3 class="form-title m-grid-col-lg-10 m-grid-col-md-10 m-grid-col-xs-10 margin-bottom-15 "
             style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-size: 28px;
 color: #333333;">Check Your Email</h3>
         <h5 class="control-label margin-left-16" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-size: 18px;
 line-height: 38px;
 color: #333333;">
             <i style="
-                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 7px;
@@ -121,7 +120,7 @@ color: #333333;">
                     " class="fa fa-dot-circle-o"></i>
             Open your email inbox.<br>
             <i style="
-                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 7px;
@@ -130,7 +129,7 @@ color: #333333;">
 
             Find our "Welcome" email.<br>
             <i style="
-                    background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 7px;

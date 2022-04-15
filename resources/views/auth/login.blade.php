@@ -5,19 +5,19 @@
 
     <style>
         .btn:hover {
-            background-color: #ef6198!important;
+            background-color: #f36596!important;
         }
 
         .nav-link:hover {
-            color: #ef6198!important;
+            color: #f36596!important;
         }
 
         a:hover {
-            color: #ef6198 !important;
+            color: #f36596 !important;
         }
 
         .uppercase:hover {
-            color: #ef6198!important;
+            color: #f36596!important;
         }
 
         /*@font-face {*/
@@ -25,14 +25,14 @@
         /*    src: url(AvenirLTStd-Book.ttf);*/
         /*}*/
     </style>
-    <body class=" login" style="background-color: #6B6767;
-            background-image: linear-gradient(#726767, #090808);
+    <body class=" login" style="background-color: #28282B;
+            background-image: linear-gradient(#28282B, #090808);
             height: 768px;
     ">
     <!-- BEGIN LOGO -->
     <div class="container">
         <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link " href="{{ url('/') }}" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-style: normal;
 font-weight: normal;
 letter-spacing: -0.022em;
@@ -60,11 +60,12 @@ color: #FFFFFF;
         <form method="POST" action="{{ route('login') }}" class=" margin-right-12  margin-left-12">
             @csrf
             <h3 class="form-title m-grid-col-lg-4-5 m-grid-col-md-4 m-grid-col-xs-4 " style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 color: #000000;
+font-size: 24px !important;
 ">{{ __('Log in') }}</h3>
             <h5 class="control-label margin-top--15 margin-left-9" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-weight: normal;
 color: #333333;
 ">Log in to manage your account</h5>
@@ -76,7 +77,7 @@ color: #333333;
                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
                 <div class="input-icon">
-                    <i style=" background: -webkit-linear-gradient(#E93B77, #E6729A);
+                    <i style="background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     margin-left: 19px;" class="fa fa-envelope padding-tb-3"></i>
@@ -103,7 +104,7 @@ border-radius: 20px !important;
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Password') }}</label>
                 <div class="input-icon">
                     <i style="
-                    background: -webkit-linear-gradient(#E93B77, #E6729A);
+                    background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     font-size: 23px;
                     -webkit-text-fill-color: transparent;
@@ -126,10 +127,10 @@ border-radius: 20px !important;
                 </div>
             </div>
             <label class="rememberme check mt-checkbox mt-checkbox-outline padding-left-18 " for="remember" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
               font-weight: normal;
               color: rgba(51, 51, 51, 0.7) !important;
-              font-size: 12px;
+              font-size: 10px;
 ">
                 <input type="checkbox" name="remember" value="1"
                        id="remember" {{ old('remember') ? 'checked' : '' }} style="color:#333333; "
@@ -145,10 +146,10 @@ font-family: AvenirLTStd-Book;
                 @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}" id="forget-password"
                        class="forget-password margin-left-125 " style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-weight: normal;
 color: rgba(51, 51, 51, 0.7);
-              font-size: 12px;
+              font-size: 9px;
 
 ">{{ __('Forgot password?') }}</a>
                 @endif
@@ -158,10 +159,10 @@ color: rgba(51, 51, 51, 0.7);
                     m-grid-col-xs-1"
                     style="
 width: 100%;
-background: #E93A76;
-border-color: #E93A76;
+background: #E93B77;
+border-color: #E93B77;
 border-radius: 20px !important;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-size: 16px;
 color: white;">  {{ __('Log in') }}</button>
         </form>
@@ -169,7 +170,7 @@ color: white;">  {{ __('Log in') }}</button>
     </div>
     <div class=" m-grid-col-xs-offset-1 ">
         <p style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
         font-style: normal;
         color: #FFFFFF;
         font-size: 15px;

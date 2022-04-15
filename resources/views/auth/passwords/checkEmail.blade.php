@@ -11,11 +11,10 @@
         }
 
     </style>
-    <body class=" login" style="
-            background-color: #6B6767;
-            background-image: linear-gradient(#726767, #090808);
-            min-height: 768px;
-            ">
+    <body class=" login" style="background-color: #28282B;
+            background-image: linear-gradient(#28282B, #090808);
+            height: 768px;
+    ">
     <!-- BEGIN LOGO -->
     <div class="container">
         <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link " href="{{ url('/') }}" style="
@@ -62,7 +61,7 @@ font-family: AvenirLTStd-Book;
 font-size: 18px;
 line-height: 30px;
 color: #333333;">Please follow the instructions we sent<br> to your inbox<br>
-            <span style="font-weight: 600 !important;
+            <span style="font-weight: 600 !important; color: #E93B77;
 "> web@catchspace.com</span></h5>
         <!-- END LOGIN FORM -->
 

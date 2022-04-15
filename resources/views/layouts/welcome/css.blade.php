@@ -413,7 +413,7 @@
     }
 
     .nav-link:hover {
-        color: #FECA2F !important;
+        color: #f36596 !important;
     }
 </style>
 

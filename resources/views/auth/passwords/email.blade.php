@@ -3,7 +3,7 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color: #FECA2F !important;
+            background-color: #f36596 !important;
         }
 
         a:hover {
@@ -15,16 +15,15 @@
     </style>
     <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
 
-    <body class=" login" style="
-            background-color: #6B6767;
-            background-image: linear-gradient(#726767, #090808);
-            min-height: 768px;
-            ">
+    <body class=" login" style="background-color: #28282B;
+            background-image: linear-gradient(#28282B, #090808);
+            height: 768px;
+    ">
     <!-- BEGIN LOGO -->
     <div class="container">
         <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link "
            href="{{ url('/') }}" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-style: normal;
 font-weight: normal;
 letter-spacing: -0.022em;
@@ -58,12 +57,12 @@ color: #FFFFFF;
             @csrf
             <h3 class="form-title m-grid-col-lg-8 m-grid-col-md-8 m-grid-col-xs-8 margin-left--5
             margin-bottom-10" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 color: #000000;
 ">Forgot Passwoard</h3>
             <h5 class="control-label " style="
             color: #333333;
-          font-family: AvenirLTStd-Book;
+          font-family: 'Montserrat', sans-serif !important;
           font-size: 18px;
 line-height: 30px;
 ">Please enter your registered email address<br>
@@ -73,7 +72,7 @@ line-height: 30px;
                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
                 <div class="input-icon">
-                    <i style=" background: -webkit-linear-gradient(#7952B3, #FFBF00);
+                    <i style="background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     margin-left: 19px;" class="fa fa-envelope padding-tb-3"></i>
@@ -102,10 +101,10 @@ border-radius: 20px !important;
                     m-grid-col-xs-1"
                     style="
 width: 100%;
-background: #FFC107;
-border-color: #FFC107;
+background: #E93B77;
+border-color: #E93B77;
 border-radius: 20px !important;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-size: 16px;
 color: #FFFFFF;">  {{ __('Log in') }}</button>
         </form>

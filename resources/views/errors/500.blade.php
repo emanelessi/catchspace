@@ -4,7 +4,7 @@
     <body class=" login" style="background-color: white !important;">
     <div class="logo margin-top-10 margin-bottom-40 m-grid-col-lg-7 m-grid-col-md-12 m-grid-col-xs-9" style="
     color: #343A40;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
     font-style: normal;
     font-weight: normal;
     font-size: 44px;
@@ -18,7 +18,7 @@ font-family: AvenirLTStd-Book;
     </div>
     <div class="logo m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-9" style="
     color: #343A40;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;

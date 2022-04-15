@@ -151,9 +151,11 @@
 
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
-        <div class="page-title">
-            <h1 class="head-title">Rate</h1>
+        <div class="page-title ">
+            <h1 class="margin-top--10 head-title">Rate</h1>
         </div>
+        <!-- END PAGE TITLE -->
+        <!-- BEGIN PAGE TOOLBAR -->
         <div class="row">
             <div class="col-md-12">
                 <!-- BEGIN BORDERED TABLE PORTLET-->
@@ -166,16 +168,17 @@
                     border-color: #E5E5E5;
 ">
                         <div class="actions">
-                            <div class="btn-group">
-                                <a class="btn btn-sm blue btn-outline btn-circle margin-top-20 btn-filter"
+                            <div class="btn-group ">
+                                <a class="btn btn-sm blue btn-outline btn-circle margin-top--70 btn-filter"
                                    href="javascript:;"
                                    data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
                                    aria-expanded="true">
-                                    <i class="fa fa-filter" style="color: #5AB25E !important;"></i>
+                                    <i class="fa fa-filter " style="color: #6dce74 !important;"></i>
                                     Filter By
                                     <i class="fa fa-angle-down"></i>
                                 </a>
-                                <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right body-filter">
+                                <div
+                                    class="dropdown-menu hold-on-click dropdown-checkboxes pull-right margin-top--30 body-filter">
                                     <div class="span margin-bottom-2  padding-tb-5 span-filter">
                                         <span class="margin-left-40">From A to Z</span>
                                     </div>

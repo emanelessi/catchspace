@@ -6371,7 +6371,7 @@ li [class*=" fa-"].icon-large, li [class*=" glyphicon-"].icon-large, li [class*=
 }
 
 .label, .table.table-light > thead > tr > th {
-    font-family: "Open Sans", sans-serif
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .dropdown-submenu:hover > .dropdown-menu {

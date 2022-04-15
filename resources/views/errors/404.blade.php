@@ -3,14 +3,14 @@
 @section('content')
     <style>
         .btn:hover {
-            background-color: #E93A76 !important;
+            background-color: #f36596 !important;
         }
 
     </style>
     <body class=" login" style="background-color: white !important;">
     <div class="logo margin-top-10 margin-bottom-40 m-grid-col-lg-7 m-grid-col-md-12 m-grid-col-xs-9" style="
     color: #343A40;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
     font-style: normal;
     font-weight: normal;
     font-size: 44px;
@@ -25,14 +25,14 @@ font-family: AvenirLTStd-Book;
         <button class="btn blue m-grid-col-lg-offset-5 m-grid-col-md-offset-5 m-grid-col-xs-offset-4 margin-top-15 center-block "
                 onclick="window.location='{{url('/')}}'"
                 style="
-                            border-color: #7952B3;
+                            border-color: #E93B77;
                             border-radius: 3px !important;
                             align-items: center;
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
                             font-style: normal;
                             font-size: 16px;
                             color: #FFFFFF;
-                            background: #7952B3;
+                            background: #E93B77;
                             ">
             <i class="fa fa-arrow-left"></i>
 

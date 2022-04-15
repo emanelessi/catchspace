@@ -399,15 +399,15 @@
 
     <style>
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Montserrat', sans-serif !important;
         }
 
         .btn:hover {
-            background-color: #FECA2F !important;
+            background-color: #f36596 !important;
         }
 
         .nav-link:hover {
-            color: #FECA2F !important;
+            color: #f36596 !important;
         }
     </style>
 </head>
@@ -447,7 +447,7 @@
                         height: 157px;
                         left: 65px;
                         top: 168px;
-                       font-family: 'Avenir LT Std', sans-serif;
+                    font-family: 'Montserrat', sans-serif !important;
                         font-style: normal;
                         font-weight: 750;
                         font-size: 35px;
@@ -461,8 +461,7 @@
                     height: 157px;
                     left: 65px;
                     top: 168px;
-                      font-family: 'Avenir LT Std', sans-serif;
-                    font-style: normal;
+font-family: 'Montserrat', sans-serif !important;                    font-style: normal;
                     font-weight: 750;
                     font-size: 52px;
                     letter-spacing: -0.022em;
@@ -473,7 +472,7 @@
                         color: #FFF;
                         height: 48px;
                         left: 65px;
-                       font-family: 'Avenir LT Std', sans-serif;
+                     font-family: 'Montserrat', sans-serif !important;
                         font-style: normal;
                         font-weight: normal;
                         font-size: 22px;
@@ -495,7 +494,7 @@
                             height: 46px;
                             top: 52px;
                             background: #FFC107;
-                       font-family: 'Avenir LT Std', sans-serif;
+                      font-family: 'Montserrat', sans-serif !important;
                             font-style: normal;
                             font-weight: 750;
                             font-size: 16px;
@@ -519,8 +518,7 @@
     width: 85px;
     height: 22px;
     right: 253px;
-    font-family: 'Avenir LT Std', sans-serif;
-    font-style: normal;
+font-family: 'Montserrat', sans-serif !important;    font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
@@ -530,8 +528,7 @@
     padding-right: 70px;
     height: 22px;
     right: 253px;
-    font-family: 'Avenir LT Std', sans-serif;
-    font-style: normal;
+font-family: 'Montserrat', sans-serif !important;    font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
@@ -544,8 +541,7 @@
                             position: absolute;width: 84px;height: 27px;
                             left: 400px;top: 14px;border: 1px solid #FFFFFF;
                             box-sizing: border-box;border-radius: 3px !important;
-                            font-family: 'Avenir LT Std', sans-serif;
-                            font-style: normal;font-weight: normal;
+font-family: 'Montserrat', sans-serif !important;                            font-style: normal;font-weight: normal;
                             font-size: 14px;line-height: 24px;
                             color: #FFFFFF;background-color: #845ba6;margin-right: 78px;">
                         Login

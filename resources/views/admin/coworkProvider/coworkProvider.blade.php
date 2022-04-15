@@ -42,7 +42,7 @@
             color: #FFFFFF !important;
             background: #E93A76 !important;
             border-radius: 5px !important;
-            width: 160px !important;
+            width: 170px !important;
             height: 30px !important;
             font-size: 13px !important;
         }
@@ -55,7 +55,7 @@
             font-weight: normal;
         !important font-size: 13 px !important;
             color: #292D32 !important;
-            width: 90px !important;
+            width: 97px !important;
             height: 29px !important;
             margin-right: -20px !important;
         }

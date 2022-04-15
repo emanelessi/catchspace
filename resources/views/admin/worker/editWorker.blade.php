@@ -28,7 +28,7 @@
             padding: 5px;
             border-radius: 8px !important;
             background-color: #eaeaea;
-            font-family: AvenirLTStd-Book;
+            font-family: 'Montserrat', sans-serif !important;
             font-size: 14px;
             line-height: 24px;
             color: #6B7280;
