@@ -106,7 +106,7 @@ border-color: #E93B77;
 border-radius: 20px !important;
 font-family: 'Montserrat', sans-serif !important;
 font-size: 16px;
-color: #FFFFFF;">  {{ __('Log in') }}</button>
+color: #FFFFFF;">  {{ __('Send') }}</button>
         </form>
         <!-- END LOGIN FORM -->
 
