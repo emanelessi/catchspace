@@ -15,7 +15,6 @@ use \App\Http\Controllers\Provider;
 |
 */
 
-
 Route::get('/test', function () {
     return view('test');
 });
@@ -54,6 +53,7 @@ Route::get('/reset', function () {
 Route::get('/confirm', function () {
     return view('auth.passwords.confirm');
 });
+
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index']);
