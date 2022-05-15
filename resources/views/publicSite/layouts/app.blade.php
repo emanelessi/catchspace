@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @include('public.layouts.css')
+    @include('publicSite.layouts.css')
 
 </head>
 <body>
@@ -27,6 +27,6 @@
         @yield('content')
     </main>
 </div>
-@include('public.layouts.js')
+@include('publicSite.layouts.js')
 </body>
 </html>

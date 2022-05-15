@@ -1,4 +1,4 @@
-@extends('public.layouts.index-1')
+@extends('publicSite.layouts.index-1')
 
 @section('content')
     <style>

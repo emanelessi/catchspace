@@ -1,4 +1,4 @@
-@extends('public.layouts.app')
+@extends('publicSite.layouts.app')
 
 @section('content')
     <style>
@@ -10619,6 +10619,7 @@
         /* end login page */
 
     </style>
+
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center">
@@ -10634,10 +10635,14 @@
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
-                                    <h3 class="mb-4">Sign In</h3>
+                                    <h3 class="mb-4">Sign UP </h3>
                                 </div>
                             </div>
                             <form action="#" class="signin-form">
+                                <div class="form-group mb-3">
+                                    <label class="label" for="text">Name</label>
+                                    <input type="text" class="form-control" placeholder="Name" required>
+                                </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="Email">Email</label>
                                     <input type="text" class="form-control" placeholder="CatchSpace@CatchSpace.com"
@@ -10647,9 +10652,16 @@
                                     <label class="label" for="password">Password</label>
                                     <input type="password" class="form-control" placeholder="Password" required>
                                 </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="text">Type</label>
+                                    <select class=" form-select" aria-placeholder="Type">
+                                        <option>individual</option>
+                                        <option>team</option>
+                                    </select>
+                                </div>
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3"
-                                            href="home.html">Sign In
+                                            href="home.html">Sign up
                                     </button>
                                 </div>
                                 <div class="form-group d-md-flex">
@@ -10659,13 +10671,9 @@
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
-                                    <div class="w-50 text-md-right">
-                                        <a href="reset password.html">Forgot Password?</a>
-                                    </div>
                                 </div>
                             </form>
-                            <p class="text-center">Not have an account? <a data-toggle="tab" href="signUp.html">Sign
-                                    Up</a>
+                            <p class="text-center">If you have an sccount? <a data-toggle="tab" href="login.html">Login</a>
                             </p>
                         </div>
                     </div>
@@ -10673,7 +10681,6 @@
             </div>
         </div>
     </section>
-
 @endsection
 
 {{--@section('js')--}}

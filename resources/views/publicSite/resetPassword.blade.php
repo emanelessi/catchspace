@@ -1,4 +1,4 @@
-@extends('public.layouts.app')
+@extends('publicSite.layouts.app')
 
 @section('content')
     <style>
@@ -10632,35 +10632,42 @@
                     <div class="wrap d-md-flex">
                         <div class="img" style="background-image: url(img/login.png);">
                         </div>
-                        <div class="login-wrap p-4 p-md-5 III">
+                        <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
-                                    <h3 class="mb-4" style="margin-top:10px ;">Password recovery</h3>
-                                    <p style="font-size:12px ; padding-top: -100px;">Enter your email address and we'll send
-                                        you a verification code to reset your password.
+                                    <h3 class="mb-4">Reset Password</h3>
                                 </div>
+
                             </div>
-                            <form action="#" class="signin-form">
-                                <div class="form-group mb-3">
-                                    <label class="label" style="margin-top:50px ;" for="Email">Email</label>
-                                    <input type="text" class="form-control" placeholder="CatchSpace@CatchSpace.com"
-                                           required>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" style="margin-top:10px ;"
-                                            class="form-control btn btn-primary rounded submit px-3"
-                                            href="sent link to email.html">Continue
-                                    </button>
-                                </div>
-                            </form>
-                            <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab" href="login.html">Logi
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">New password</label>
+                                <input type="password" class="form-control" placeholder="**********" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">Confirm password</label>
+                                <input type="password" class="form-control" placeholder="**********" required>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3"
+                                        href="login.html">Continue
+                                </button>
+                            </div>
+                            <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab"
+                                                                                       href="login.html">Log
                                     in</a></p>
+
+                            </form>
+                            <br>
+                            <br>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 @endsection
 

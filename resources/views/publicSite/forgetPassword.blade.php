@@ -1,4 +1,4 @@
-@extends('public.layouts.app')
+@extends('publicSite.layouts.app')
 
 @section('content')
     <style>
@@ -10632,55 +10632,36 @@
                     <div class="wrap d-md-flex">
                         <div class="img" style="background-image: url(img/login.png);">
                         </div>
-                        <div class="login-wrap p-4 p-md-5">
+                        <div class="login-wrap p-4 p-md-5 III">
                             <div class="d-flex">
                                 <div class="w-100">
-                                    <h3 class="mb-4">Sign UP </h3>
+                                    <h3 class="mb-4" style="margin-top:10px ;">Password recovery</h3>
+                                    <p style="font-size:12px ; padding-top: -100px;">Enter your email address and we'll send
+                                        you a verification code to reset your password.
                                 </div>
                             </div>
                             <form action="#" class="signin-form">
                                 <div class="form-group mb-3">
-                                    <label class="label" for="text">Name</label>
-                                    <input type="text" class="form-control" placeholder="Name" required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="Email">Email</label>
+                                    <label class="label" style="margin-top:50px ;" for="Email">Email</label>
                                     <input type="text" class="form-control" placeholder="CatchSpace@CatchSpace.com"
                                            required>
                                 </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="password">Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="text">Type</label>
-                                    <select class=" form-select" aria-placeholder="Type">
-                                        <option>individual</option>
-                                        <option>team</option>
-                                    </select>
-                                </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3"
-                                            href="home.html">Sign up
+                                    <button type="submit" style="margin-top:10px ;"
+                                            class="form-control btn btn-primary rounded submit px-3"
+                                            href="sent link to email.html">Continue
                                     </button>
                                 </div>
-                                <div class="form-group d-md-flex">
-                                    <div class="w-50 text-left">
-                                        <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
-                                            <input type="checkbox" checked>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
                             </form>
-                            <p class="text-center">If you have an sccount? <a data-toggle="tab" href="login.html">Login</a>
-                            </p>
+                            <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab" href="login.html">Logi
+                                    in</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 @endsection
 
 {{--@section('js')--}}
