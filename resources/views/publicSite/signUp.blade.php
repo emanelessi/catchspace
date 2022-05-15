@@ -10638,30 +10638,38 @@
                                     <h3 class="mb-4">Sign UP </h3>
                                 </div>
                             </div>
-                            <form action="#" class="signin-form">
+                            <form class="signin-form" enctype="multipart/form-data"  method="post" action="{{ route('workerStore') }}">
+                                @csrf
                                 <div class="form-group mb-3">
                                     <label class="label" for="text">Name</label>
-                                    <input type="text" class="form-control" placeholder="Name" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="Email">Email</label>
-                                    <input type="text" class="form-control" placeholder="CatchSpace@CatchSpace.com"
+                                    <input type="email" name="email" class="form-control" placeholder="CatchSpace@CatchSpace.com"
                                            required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" required>
+                                    <input type="password" name="password" class="form-control" placeholder="Password" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="text">Type</label>
-                                    <select class=" form-select" aria-placeholder="Type">
+                                    <label class="label" for="job_title">Job Title</label>
+                                    <input type="text" name="job_title" class="form-control" placeholder="Developer" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="type">Type</label>
+                                    <select class=" form-select" name="type" aria-placeholder="Type">
                                         <option>individual</option>
                                         <option>team</option>
                                     </select>
                                 </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="avatar">Avatar</label>
+                                    <input type="file" name="avatar" class="form-control">
+                                </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3"
-                                            href="home.html">Sign up
+                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign up
                                     </button>
                                 </div>
                                 <div class="form-group d-md-flex">
@@ -10672,6 +10680,11 @@
                                         </label>
                                     </div>
                                 </div>
+                                @if(session()->has('success'))
+                                    <div class="alert alert-success">
+                                        {{ session()->get('success') }}
+                                    </div>
+                                @endif
                             </form>
                             <p class="text-center">If you have an sccount? <a data-toggle="tab" href="{{ route('workerLogin') }}">Login</a>
                             </p>

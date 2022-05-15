@@ -16,9 +16,11 @@ class CreateWorkersTable extends Migration
         Schema::create('workers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
             $table->string('job_title');
-            $table->string('avatar');
-            $table->string('you_did');
+            $table->string('avatar')->nullable();
+//            $table->string('you_did');
             $table->enum('type',['team','individual']);
             $table->softDeletes();
             $table->timestamps();

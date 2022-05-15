@@ -51,18 +51,22 @@ class WorkerController extends Controller
 
         $this->validate($request, [
             'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
             'job_title' => 'required',
             'avatar' => 'required',
-            'you_did' => 'required',
+//            'you_did' => 'required',
             'work_space_id' => 'required',
             'type' => 'required',
         ]);
 
         $worker = new Worker();
         $worker->name = $request->input('name');
+        $worker->email = $request->input('email');
+        $worker->password = bcrypt($request->input('password'));
         $worker->job_title = $request->input('job_title');
         $worker->avatar = storeImage('workers','avatar' );
-        $worker->you_did = $request->input('you_did');
+//        $worker->you_did = $request->input('you_did');
         $worker->type = $request->input('type');
         $worker->save();
         $workerworkspace=new WorkerWorkSpace();
@@ -85,18 +89,22 @@ class WorkerController extends Controller
         $id = request('id');
         $this->validate($request, [
             'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
             'job_title' => 'required',
             'avatar' => 'required',
-            'you_did' => 'required',
+//            'you_did' => 'required',
             'work_space_id' => 'required',
             'type' => 'required',
         ]);
 
         $worker = Worker::withTrashed()->findOrFail($id);
         $worker->name = $request->input('name');
+        $worker->email = $request->input('email');
+        $worker->password = bcrypt($request->input('password'));
         $worker->job_title = $request->input('job_title');
         $worker->avatar = storeImage('workers','avatar' );;
-        $worker->you_did = $request->input('you_did');
+//        $worker->you_did = $request->input('you_did');
         $worker->type = $request->input('type');
         $worker->save();
         $workerworkspace= WorkerWorkSpace::withTrashed()->findOrFail($id);

@@ -245,19 +245,34 @@
                                     <div class="form-group margin-left-9 margin-right-10">
                                         <label class="control-label margin-left-9"
                                                style="color:#6B7280;">
-                                            Job Title*</label>
-                                        <input type="text" name="job_title"
-                                               placeholder="Developer"
+                                            Email*</label>
+                                        <input type="email" name="email"
+                                               placeholder="Rami@gmail.com"
                                                class="form-control form-input"/>
                                     </div>
                                     <div class="form-group margin-left-9 margin-right-10">
                                         <label class="control-label margin-left-9"
                                                style="color:#6B7280;">
-                                            You Did*</label>
-                                        <input type="text" name="you_did"
-                                               placeholder="yes or no"
+                                            Password*</label>
+                                        <input type="password" name="password"
                                                class="form-control form-input"/>
                                     </div>
+                                    <div class="form-group margin-left-9 margin-right-10">
+                                        <label class="control-label margin-left-9"
+                                               style="color:#6B7280;">
+                                            Job Title*</label>
+                                        <input type="text" name="job_title"
+                                               placeholder="Developer"
+                                               class="form-control form-input"/>
+                                    </div>
+{{--                                    <div class="form-group margin-left-9 margin-right-10">--}}
+{{--                                        <label class="control-label margin-left-9"--}}
+{{--                                               style="color:#6B7280;">--}}
+{{--                                            You Did*</label>--}}
+{{--                                        <input type="text" name="you_did"--}}
+{{--                                               placeholder="yes or no"--}}
+{{--                                               class="form-control form-input"/>--}}
+{{--                                    </div>--}}
                                     <div class="form-group margin-left-9 margin-right-10">
                                         <label class="control-label margin-left-9"
                                                style="color:#6B7280;">
