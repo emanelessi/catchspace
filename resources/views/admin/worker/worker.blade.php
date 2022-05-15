@@ -187,6 +187,8 @@
                                         </th>
                                         <th class="table-th"> Name
                                         </th>
+                                        <th class="table-th"> Email
+                                        </th>
                                         <th class="table-th"> Job title
                                         </th>
                                         <th class="table-th"> Type
@@ -203,6 +205,8 @@
                                             <td class="table-td"><img alt="" class="img-circle"
                                                                       src="{{'/storage/'.$myworker->avatar}}" style="width: 40px;"/></td>
                                             <td class="table-td"> {{$myworker->name}}
+                                            </td>
+                                            <td class="table-td"> {{$myworker->email}}
                                             </td>
                                             <td class="table-td"> {{$myworker->job_title}}
                                             </td>
@@ -299,9 +303,9 @@
                                                 </th>
                                                 <th class="table-th"> Name
                                                 </th>
-                                                <th class="table-th"> Job title
+                                                <th class="table-th"> Email
                                                 </th>
-                                                <th class="table-th"> You Did
+                                                <th class="table-th"> Job title
                                                 </th>
                                                 <th class="table-th"> Type
                                                 </th>
@@ -327,10 +331,11 @@
                                                     </td>
                                                     <td class="table-td"> {{$myworker->workers->name}}
                                                     </td>
+                                                    <td class="table-td"> {{$myworker->workers->email}}
+                                                    </td>
                                                     <td class="table-td"> {{$myworker->workers->job_title}}
                                                     </td>
-                                                    <td class="table-td"> {{$myworker->workers->you_did}}
-                                                    </td>
+
                                                     <td class="table-td"> {{$myworker->workers->type}}
                                                     </td>
                                                     <td class="table-td"> /
@@ -348,14 +353,14 @@
                                                         @can('worker_delete')
                                                             @if($myworker->deleted_at ==null)
 
-                                                                <a href="/provider/delete-worker/{{$myworker->id}}"
+                                                                <a href="/provider/delete-worker/{{$myworker->workers->id}}"
                                                                    data-target="#static2" data-toggle="modal"
                                                                    style="margin-left: 10px">
                                                                     <i class="fa fa-trash"
                                                                        style="color: #000000 !important;"></i>
                                                                 </a>
                                                             @else
-                                                                <a href="/provider/restore-worker/{{$myworker->id}}"
+                                                                <a href="/provider/restore-worker/{{$myworker->workers->id}}"
                                                                    data-target="#static2" data-toggle="modal"
                                                                    style="margin-left: 10px">
                                                                     <i class="fa fa-recycle"
@@ -365,7 +370,7 @@
                                                         @endcan
 
                                                         @can('worker_edit')
-                                                            <a href="/provider/edit-worker/{{$myworker->id}}">
+                                                            <a href="/provider/edit-worker/{{$myworker->workers->id}}">
                                                                 <i class="fa fa-pencil" style="color: #000000 !important;"></i>
                                                             </a>
                                                         @endcan
