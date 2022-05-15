@@ -55,6 +55,11 @@ Route::get('/confirm', function () {
 });
 
 
+Route::get('/publicsite/login', function () {
+    return view('publicSite.login');
+});
+
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index']);
     Route::get('/provider/home', [\App\Http\Controllers\ProviderController::class, 'index'])->name('providers');
