@@ -371,48 +371,7 @@
     <!--start hero-->
     <!-- navbar -->
 
-    <section id="hero">
-        <div class="hero-container" data-aos="fade-up">
-            <nav class="navbar navbar-expand-lg ">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                        <button
-                            class="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#main"
-                            aria-controls="main"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-
-                        >
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                        <img src="img/logo2.png" alt=""/>
-                    </a>
-                    <div class="collapse navbar-collapse" id="main">
-                        <ul class="navbar-nav  align-items-center" style="margin-left: 200px;">
-                            <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3  " aria-current="page" href="Home.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3 active " href="workspace.html">Workspace</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3  " href="contact us.html">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3" href="aboutUs.html">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3" href="login.html" style="margin-left: 200px;">Login</a>
-                            </li>
-                        </ul>
-                        <a class="btn btn-primary1 main-btn1 " id="R" href="#">Sign up</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
+@include('publicSite.layouts.header-1')
         <div class="container">
             <div id="hero1" class="d-flex align-items-center row">
                 <div class="  col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
@@ -420,14 +379,13 @@
                     <h2>In A Place Full Of Beautiful Nature We Convene Online
                         <br> Freelancers,Designers, Developers, And Startup Founders
                         <br> Under One Roof To Share Ideas.</h2>
-                    <div><input type="submit" value="Write Review" class="btn-get-started scrollto"></input></div>
+                    <div><input type="submit" value="Write Review" class="btn-get-started scrollto"/></div>
                 </div>
                 <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-                    <img src="img/review.png" class="img-fluid animated" alt="">
+                    <img src="{{asset('../img/review.png')}}" class="img-fluid animated" alt="">
                 </div>
             </div>
         </div>
-    </section>
 
     <!--end hero-->
 
@@ -438,7 +396,7 @@
         <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                    <img src="img/lego.png" class=" rimg img-fluid" alt="">
+                    <img src="{{asset('../img/lego.png')}}" class=" rimg img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                     <h3>So What Do You Think ?</h3>

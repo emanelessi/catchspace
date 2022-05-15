@@ -483,7 +483,7 @@
 
 		entry = asArray(entry);
 
-		// Validate input. Values aren't tested, as the public .val method
+		// Validate input. Values aren't tested, as the publicSite .val method
 		// will always provide a valid location.
 		if ( !Array.isArray( entry ) || !entry.length || entry.length > 2 ) {
 			throw new Error("noUiSlider: 'start' option is incorrect.");
@@ -1615,7 +1615,7 @@ function closure ( target, options ){
 		var options = testOptions( originalOptions, target ),
 			slider = closure( target, options );
 
-		// Use the public value method to set the start values.
+		// Use the publicSite value method to set the start values.
 		slider.set(options.start);
 
 		target.noUiSlider = slider;

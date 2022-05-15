@@ -14,7 +14,7 @@ var Custom = function () {
 
         //main function
         init: function () {
-            //initialize here something.            
+            //initialize here something.
         },
 
         //some helper function
@@ -26,8 +26,8 @@ var Custom = function () {
 
 }();
 
-jQuery(document).ready(function() {    
-   Custom.init(); 
+jQuery(document).ready(function() {
+   Custom.init();
 });
 
 /***

@@ -1012,6 +1012,8 @@
         }
 
     </style>
+    @include('publicSite.layouts.header')
+
     <div class="container">
         <div id="hero1" class="d-flex align-items-center row">
             <div class="col-lg-6 d-flex flex-column justify-content-center pt-lg-0 order-2 order-lg-1"
@@ -1023,7 +1025,7 @@
                     <br> we are here to help you!</h2>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/gaza.png" class="img-fluid animated" alt="">
+                <img src="{{asset('../img/gaza.png')}}" class="img-fluid animated" alt="">
             </div>
         </div>
     </div>
@@ -1098,7 +1100,7 @@
                                          data-aos-delay="100">
                                         <div class="icon-box iconbox ">
                                             <div class="icon">
-                                                <img src="img/checked.png"
+                                                <img src="{{asset('../img/checked.png')}}"
                                                      style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
                                             </div>
                                             <h4 class=""><a>Validated Spaces</a></h4>
@@ -1112,7 +1114,7 @@
                                          data-aos-delay="200">
                                         <div class="icon-boxs iconbox ">
                                             <div class="icon">
-                                                <img src="img/trusted.png"
+                                                <img src=" {{asset('../img/trusted.png')}}"
                                                      style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
                                             </div>
                                             <h4 class=""><a>Trusted
@@ -1127,7 +1129,7 @@
                                          data-aos-delay="300">
                                         <div class="icon-boxs iconbox ">
                                             <div class="icon">
-                                                <img src="img/free.svg"
+                                                <img src="{{asset('../img/free.svg')}}"
                                                      style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
                                             </div>
                                             <h4 class=""><a>Free</a></h4>
@@ -1176,7 +1178,7 @@
                                                             <div class="col-sm-4">
                                                                 <div class="thumb-wrapper">
                                                                     <div class="img-box">
-                                                                        <img src="img/space1.png" class="img-fluid"
+                                                                        <img src=" {{asset('../img/space1.png')}}" class="img-fluid"
                                                                              style=" width:100%" alt="">
                                                                     </div>
                                                                     <div class="thumb-content">
@@ -1204,7 +1206,7 @@
                                                             <div class="col-sm-4">
                                                                 <div class="thumb-wrapper">
                                                                     <div class="img-box">
-                                                                        <img src="img/space1.png" class="img-fluid"
+                                                                        <img src="{{asset('../img/space1.png')}}" class="img-fluid"
                                                                              style=" width:100%" alt="">
                                                                     </div>
                                                                     <div class="thumb-content">
@@ -1233,7 +1235,7 @@
                                                                 <div class="thumb-wrapper">
 
                                                                     <div class="img-box">
-                                                                        <img src="img/space1.png" class="img-fluid"
+                                                                        <img src="{{asset('../img/space1.png')}}" class="img-fluid"
                                                                              style=" width:100%; height: 100%;"
                                                                              alt="">
                                                                     </div>
@@ -1284,7 +1286,7 @@
     </div>
 
     <!--WorkSpace-->
-    <section class="book" id="hero3" style="background-image: url(img/background2.png); margin-top: 80px;">
+    <section class="book" id="hero3" style="background-image: url({{asset('../img/background2.png')}}); margin-top: 80px;">
         <div class="container p-3">
             <div class="row">
                 <div class="p-3 col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
@@ -1297,7 +1299,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-md-3  ">
                         <div class="card  rounded-1  shadow">
-                            <img src="img/meeting room.png" class="card-img-top" alt="...">
+                            <img src=" {{asset('../img/meeting room.png')}}" class="card-img-top" alt="...">
                             <div class="card-body bg-warning  text-center ">
                                 <h5 class="card-title mb-0">Meeting room</h5>
                             </div>
@@ -1305,7 +1307,7 @@
                     </div>
                     <div class="col-xl-3 col-md-3">
                         <div class="card rounded-1 border-1-whaite">
-                            <img src="img/private room.png" class="card-img-top roun" alt="...">
+                            <img src=" {{asset('../img/private room.png')}}" class="card-img-top roun" alt="...">
                             <div class="card-body bg-warning text-center ">
                                 <h5 class="card-title mb-0">Private room</h5>
 
@@ -1314,7 +1316,7 @@
                     </div>
                     <div class="col-xl-3  col-md-3">
                         <div class="card  rounded-1 ">
-                            <img src="img/Skype room.png" class="card-img-top" alt="...">
+                            <img src="{{asset('../img/Skype room.png')}}" class="card-img-top" alt="...">
                             <div class="card-body bg-warning text-center    ">
                                 <h5 class="card-title mb-0">Skype room</h5>
 
@@ -1323,7 +1325,7 @@
                     </div>
                     <div class="col-xl-3 col-md-3 ">
                         <div class="card  rounded-1 ">
-                            <img src="img/shard room.png" class="card-img-top" alt="...">
+                            <img src="{{asset('../img/shard room.png')}}" class="card-img-top" alt="...">
                             <div class="card-body  bg-warning text-center ">
                                 <h5 class="card-title   mb-0">Sheard room</h5>
 

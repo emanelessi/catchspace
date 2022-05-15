@@ -14,7 +14,7 @@
                 >
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <img src="img/catxhspaceLogo.png" alt=""/>
+                <img src="{{asset('../img/catxhspaceLogo.png ')}}" alt=""/>
             </a>
             <div class="collapse navbar-collapse" id="main">
                 <ul class="navbar-nav  align-items-center" style="margin-left: 200px;">

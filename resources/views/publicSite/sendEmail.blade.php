@@ -10624,13 +10624,13 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-3">
-                    <img class="heading-section" src="img/Group 14.png">
+                    <img class="heading-section" src="{{asset('../img/Group 14.png')}}">
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-4 col-lg-12">
                     <div class="wrap d-md-flex">
-                        <div class="img" style="background-image: url(img/login.png);">
+                        <div class="img" style="background-image: url({{asset('../img/login.png')}});">
                         </div>
                         <div class="login-wrap p-4 p-md-5 ">
                             <div class="d-flex">
@@ -10638,7 +10638,7 @@
                                 </div>
                             </div>
                             <div class="III">
-                                <img class="center-block " src="img/mail.png" style="width: 70px; height:70px; ">
+                                <img class="center-block " src="{{asset('../img/mail.png')}}" style="width: 70px; height:70px; ">
                                 <p class="font-weight-bold" style="
                   text-align: center;
 

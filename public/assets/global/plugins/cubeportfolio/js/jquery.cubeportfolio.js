@@ -279,7 +279,7 @@
                 // animating is now false
                 t.isAnimating = false;
 
-                // trigger public event initComplete
+                // trigger publicSite event initComplete
                 t.$obj.trigger('initComplete.cbp');
             });
         },
@@ -3437,7 +3437,7 @@ if (typeof Object.create !== 'function') {
         el.removeAttribute('data-cbp-src');
         t.parent.removeAttrImage(el);
 
-        // trigger public event
+        // trigger publicSite event
         t.parent.$obj.trigger('lazyLoad.cbp', el);
 
         if (parentNode) {
@@ -4632,7 +4632,7 @@ if (typeof Object.create !== 'function') {
             t.fromAJAX = {};
 
 
-            // trigger public event
+            // trigger publicSite event
             t.cubeportfolio.$obj.trigger('updateSinglePageStart.cbp');
 
             // instantiate slider if exists
@@ -4664,7 +4664,7 @@ if (typeof Object.create !== 'function') {
                 });
             }
 
-            // trigger public event
+            // trigger publicSite event
             t.cubeportfolio.$obj.trigger('updateSinglePageComplete.cbp');
         },
 
@@ -4716,7 +4716,7 @@ if (typeof Object.create !== 'function') {
             if (scripts) {
                 t.appendScriptsToWrap(scripts);
             }
-            // trigger public event
+            // trigger publicSite event
             t.cubeportfolio.$obj.trigger('updateSinglePageInlineStart.cbp');
 
             t.singlePageInlineIsOpen.call(t);
@@ -4731,7 +4731,7 @@ if (typeof Object.create !== 'function') {
 
                 t.resizeSinglePageInline();
 
-                // trigger public event
+                // trigger publicSite event
                 t.cubeportfolio.$obj.trigger('updateSinglePageInlineComplete.cbp');
             }
 

@@ -358,7 +358,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
     name: "clike",
     keywords: words(cKeywords + " asm dynamic_cast namespace reinterpret_cast try explicit new " +
                     "static_cast typeid catch operator template typename class friend private " +
-                    "this using const_cast inline public throw virtual delete mutable protected " +
+                    "this using const_cast inline publicSite throw virtual delete mutable protected " +
                     "alignas alignof constexpr decltype nullptr noexcept thread_local final " +
                     "static_assert override"),
     types: words(cTypes + " bool wchar_t"),
@@ -389,7 +389,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
     name: "clike",
     keywords: words("abstract assert break case catch class const continue default " +
                     "do else enum extends final finally float for goto if implements import " +
-                    "instanceof interface native new package private protected public " +
+                    "instanceof interface native new package private protected publicSite " +
                     "return static strictfp super switch synchronized this throw throws transient " +
                     "try volatile while"),
     types: words("byte short int long float double boolean char void Boolean Byte Character Double Float " +
@@ -412,7 +412,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
     keywords: words("abstract as async await base break case catch checked class const continue" +
                     " default delegate do else enum event explicit extern finally fixed for" +
                     " foreach goto if implicit in interface internal is lock namespace new" +
-                    " operator out override params private protected public readonly ref return sealed" +
+                    " operator out override params private protected publicSite readonly ref return sealed" +
                     " sizeof stackalloc static struct switch this throw try typeof unchecked" +
                     " unsafe using virtual void volatile while add alias ascending descending dynamic from get" +
                     " global group into join let orderby partial remove select set value var yield"),

@@ -24,7 +24,7 @@ CodeMirror.defineMode("kotlin", function (config, parserConfig) {
           "package continue return object while break class data trait interface throw super" +
           " when type this else This try val var fun for is in if do as true false null get set");
   var softKeywords = words("import" +
-      " where by get set abstract enum open annotation override private public internal" +
+      " where by get set abstract enum open annotation override private publicSite internal" +
       " protected catch out vararg inline finally final ref");
   var blockKeywords = words("catch class do else finally for if where try while enum");
   var atoms = words("null true false this");

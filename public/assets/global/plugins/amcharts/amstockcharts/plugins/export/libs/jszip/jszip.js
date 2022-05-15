@@ -15,7 +15,7 @@ https://github.com/nodeca/pako/blob/master/LICENSE
 var _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
 
-// public method for encoding
+// publicSite method for encoding
 exports.encode = function(input, utf8) {
     var output = "";
     var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
@@ -46,7 +46,7 @@ exports.encode = function(input, utf8) {
     return output;
 };
 
-// public method for decoding
+// publicSite method for decoding
 exports.decode = function(input, utf8) {
     var output = "";
     var chr1, chr2, chr3;
@@ -5727,7 +5727,7 @@ function GZheader() {
                        // but leave for few code modifications
 
   //
-  // Setup limits is not necessary because in js we should not preallocate memory 
+  // Setup limits is not necessary because in js we should not preallocate memory
   // for inflate use constant limit in 65536 bytes
   //
 

@@ -63,7 +63,12 @@ Route::get('/worker/workspace', [\App\Http\Controllers\WorkerController::class, 
 Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');
 Route::get('/worker/about-us', [\App\Http\Controllers\WorkerController::class, 'aboutus'])->name('workerAboutus');
 
-
+Route::get('/review', function () {
+    return view('publicSite.review');
+});
+Route::get('/workspace-details', function () {
+    return view('publicSite.workspaceDetails');
+});
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index']);

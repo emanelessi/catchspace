@@ -13080,8 +13080,8 @@ fabric.util.object.extend(fabric.Object.prototype, /** @lends fabric.Object.prot
 
     /**
      * Draws corners of an object's bounding box.
-     * Requires public properties: width, height
-     * Requires public options: cornerSize, padding
+     * Requires publicSite properties: width, height
+     * Requires publicSite options: cornerSize, padding
      * @param {CanvasRenderingContext2D} ctx Context to draw on
      * @return {fabric.Object} thisArg
      * @chainable

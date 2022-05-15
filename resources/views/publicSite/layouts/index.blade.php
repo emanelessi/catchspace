@@ -16,7 +16,7 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero">
 
-    @include('publicSite.layouts.header')
+{{--    @include('publicSite.layouts.header')--}}
 
     @yield('content')
 
