@@ -58,6 +58,9 @@ Route::get('/confirm', function () {
 Route::get('/publicsite/login', function () {
     return view('publicSite.login');
 });
+Route::get('/publicsite/home', function () {
+    return view('publicSite.home');
+});
 
 
 Route::group(['middleware' => 'auth'], function () {
