@@ -46,8 +46,34 @@ class WorkerController extends Controller
         return view('publicSite.login');
     }
 
-    public function signup(){
+    public function create(){
         return view('publicSite.signUp');
+    }
+    public function store(Request $request)
+    {
+
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'job_title' => 'required',
+            'avatar' => 'required',
+//            'you_did' => 'required',
+//            'work_space_id' => 'required',
+            'type' => 'required',
+        ]);
+
+        $worker = new Worker();
+        $worker->name = $request->input('name');
+        $worker->email = $request->input('email');
+        $worker->password = bcrypt($request->input('password'));
+        $worker->job_title = $request->input('job_title');
+        $worker->avatar = storeImage('workers','avatar' );
+//        $worker->you_did = $request->input('you_did');
+        $worker->type = $request->input('type');
+        $worker->save();
+
+        return back()->with('success', trans('messages.worker.worker_created'));
     }
 
     public function forgetpassword(){
