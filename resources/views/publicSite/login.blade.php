@@ -10623,13 +10623,13 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-3">
-                    <img class="heading-section" src="img/Group 14.png">
+                    <a href="{{ route('workerHome') }}" ><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-4 col-lg-12">
                     <div class="wrap d-md-flex">
-                        <div class="img" style="background-image: url(img/login.png);">
+                        <div class="img" style="background-image: url({{url('/img/login.png')}});">
                         </div>
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
@@ -10660,11 +10660,11 @@
                                         </label>
                                     </div>
                                     <div class="w-50 text-md-right">
-                                        <a href="reset password.html">Forgot Password?</a>
+                                        <a href="{{ route('workerForgetpassword') }}">Forgot Password?</a>
                                     </div>
                                 </div>
                             </form>
-                            <p class="text-center">Not have an account? <a data-toggle="tab" href="signUp.html">Sign
+                            <p class="text-center">Not have an account? <a data-toggle="tab" href="{{ route('workerSignup') }}">Sign
                                     Up</a>
                             </p>
                         </div>

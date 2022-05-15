@@ -10624,13 +10624,13 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-3">
-                    <img class="heading-section" src="img/Group 14.png">
+                    <a href="{{ route('workerHome') }}" ><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-4 col-lg-12">
                     <div class="wrap d-md-flex">
-                        <div class="img" style="background-image: url(img/login.png);">
+                        <div class="img" style="background-image: url({{url('/img/login.png')}});">
                         </div>
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
@@ -10673,7 +10673,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <p class="text-center">If you have an sccount? <a data-toggle="tab" href="login.html">Login</a>
+                            <p class="text-center">If you have an sccount? <a data-toggle="tab" href="{{ route('workerLogin') }}">Login</a>
                             </p>
                         </div>
                     </div>

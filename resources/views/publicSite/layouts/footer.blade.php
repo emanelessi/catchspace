@@ -5,23 +5,23 @@
             <div class="row text-center d-flex justify-content-center pt-5">
                 <div class="col-md-2">
                     <h6 class="text-uppercase">
-                        <a href="#!" class="text-white">Home</a>
+                        <a href="{{ route('workerHome') }}" class="text-white">Home</a>
                     </h6>
                 </div>
                 <!-- Grid column -->
                 <div class="col-md-2">
                     <h6 class="text-uppercase">
-                        <a href="#!" class="text-white">Workspace</a>
+                        <a href="{{ route('workerWorkspace') }}" class="text-white">Workspace</a>
                     </h6>
                 </div>
                 <div class="col-md-3">
                     <h6 class="text-uppercase ">
-                        <a href="#!" class="text-white">Contact Us</a>
+                        <a href="{{ route('workerContactus') }}" class="text-white">Contact Us</a>
                     </h6>
                 </div>
                 <div class="col-md-3">
                     <h6 class="text-uppercase ">
-                        <a href="#!" class="text-white">About us</a>
+                        <a href="{{ route('workerAboutus') }}" class="text-white">About us</a>
                     </h6>
                 </div>
                 <!-- Grid column -->

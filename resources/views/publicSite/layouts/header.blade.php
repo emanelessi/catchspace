@@ -1,7 +1,7 @@
 <div class="hero-container" data-aos="fade-up">
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ route('workerHome') }}">
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -19,23 +19,23 @@
             <div class="collapse navbar-collapse" id="main">
                 <ul class="navbar-nav  align-items-center" style="margin-left: 200px;">
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3 active " aria-current="page" href="Home.html">Home</a>
+                        <a class="nav-link p-2 p-lg-3 active " aria-current="page" href="{{ route('workerHome') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="workspace.html"><u>Workspace</u></a>
+                        <a class="nav-link p-2 p-lg-3" href="{{ route('workerWorkspace') }}"><u>Workspace</u></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3  " href="contact us.html">Contact</a>
+                        <a class="nav-link p-2 p-lg-3  " href="{{ route('workerContactus') }}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="aboutUs.html">About us</a>
+                        <a class="nav-link p-2 p-lg-3" href="{{ route('workerAboutus') }}">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="login.html" style="margin-left: 200px;">Login</a>
+                        <a class="nav-link p-2 p-lg-3" href="{{ route('workerLogin') }}" style="margin-left: 200px;">Login</a>
                     </li>
                 </ul>
 
-                <a class="btn btn-primary1 main-btn1 " id="R" href="#">Sign up</a>
+                <a class="btn btn-primary1 main-btn1 " id="R" href="{{ route('workerSignup') }}">Sign up</a>
             </div>
         </div>
     </nav>

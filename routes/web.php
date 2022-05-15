@@ -19,7 +19,7 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('welcome');
 });
 Route::get('/contact', function () {
@@ -54,13 +54,15 @@ Route::get('/confirm', function () {
     return view('auth.passwords.confirm');
 });
 
+Route::get('/worker/login', [\App\Http\Controllers\WorkerController::class, 'login'])->name('workerLogin');
+Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'signup'])->name('workerSignup');
+Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class, 'forgetpassword'])->name('workerForgetpassword');
+Route::get('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'resetpassword'])->name('workerResetpassword');
+Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
+Route::get('/worker/workspace', [\App\Http\Controllers\WorkerController::class, 'workspace'])->name('workerWorkspace');
+Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');
+Route::get('/worker/about-us', [\App\Http\Controllers\WorkerController::class, 'aboutus'])->name('workerAboutus');
 
-Route::get('/publicsite/login', function () {
-    return view('publicSite.login');
-});
-Route::get('/publicsite/home', function () {
-    return view('publicSite.home');
-});
 
 
 Route::group(['middleware' => 'auth'], function () {
