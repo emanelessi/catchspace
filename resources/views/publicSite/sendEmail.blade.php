@@ -165,7 +165,7 @@
         code,
         kbd,
         samp {
-            font-family: SFMono-Regular, roboto;
+            font-family: 'SFMono-Regular', 'roboto';
             font-size: 1em;
         }
 
@@ -225,7 +225,7 @@
         optgroup,
         textarea {
             margin: 0;
-            font-family: roboto;
+            font-family: 'roboto';
             font-size: inherit;
             line-height: inherit;
         }

@@ -9,7 +9,7 @@
         }
 
         body {
-            font-family: "roboto" sans-serif;
+            font-family: "roboto",'sans-serif';
 
 
         }
@@ -18,7 +18,7 @@
         #hero {
             width: 100%;
             height: 100vh;
-            background: url("../img/reviewHero.png");
+            background: url({{url('"../img/reviewHero.png"')}});
 
             background-size: cover;
             position: relative;
@@ -31,7 +31,7 @@
 
         #hero1 h1 {
             margin-top: 100px;
-            font-family: roboto;
+            font-family: 'roboto';
             margin: 0;
             font-size: 52px;
             font-weight: 700;
@@ -43,13 +43,13 @@
             padding-top: 10px;
             padding-bottom: 10px;
             color: #8d8b8b;
-            font-family: roboto;
+            font-family: 'roboto';
             margin: 10px 0 0 0;
             font-size: 18px;
         }
 
         #hero1 .btn-get-started {
-            font-family: roboto;
+            font-family: 'roboto';
             font-weight: 500;
             font-size: 16px;
             letter-spacing: 1px;
@@ -268,7 +268,7 @@
 
         .star .rimg {
             width: 375px;;
-            height: 463;
+            height: 463px;
             margin-left: 150px;
             margin-top: 50px;
 
@@ -277,7 +277,7 @@
 
         .star .content #D {
             font-size: 14px;
-            font-family: roboto;
+            font-family: 'roboto';
             font-weight: 100px;
             text-align: center;
             color: #ffffff;
@@ -308,16 +308,16 @@
         .textrating #Label {
             font-size: 18px;
             font-weight: 1000 !important;
-            margin-bottom: 0px;
-            font-family: roboto;
+            margin-bottom: 0;
+            font-family: 'roboto';
             padding-bottom: 20px;
         }
 
         .textrating #Label1 {
             font-size: 18px;
             font-weight: 1000 !important;
-            margin-bottom: 0px;
-            font-family: roboto;
+            margin-bottom: 0;
+            font-family: 'roboto';
             padding-bottom: 20px;
             margin-top: 22px;
         }
@@ -334,8 +334,8 @@
         }
 
         #like {
-            font-size: 24;
-            font-family: roboto;
+            font-size: 24px;
+            font-family: 'roboto';
             font-weight: 600;
             color: #fff;
             letter-spacing: 2px;
@@ -344,8 +344,8 @@
 
         .textrating #c {
             font-size: 14px;
-            font-family: roboto;
-            font-weight: 400px !important;
+            font-family: 'roboto';
+            font-weight: 400 !important;
             text-align: center;
             color: #D9368B;
             background-color: #ffffff;
@@ -358,8 +358,8 @@
 
         .textrating #cr {
             font-size: 14px;
-            font-family: roboto;
-            font-weight: 400px !important;
+            font-family: 'roboto';
+            font-weight: 400 !important;
             text-align: center;
             color: #ffffff;
             border-color: #ffffff;
@@ -377,7 +377,7 @@
 
 
         .textrating .btns {
-            font-family: roboto;
+            font-family: 'roboto';
             font-weight: 500;
             font-size: 16px;
             display: inline-block;
