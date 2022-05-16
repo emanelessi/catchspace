@@ -10624,7 +10624,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-3">
-                    <a href="{{ route('workerHome') }}" ><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
+                    <a href="{{ route('workerHome') }}"><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -10639,23 +10639,23 @@
                                 </div>
 
                             </div>
-                            <div class="form-group mb-3">
-                                <label class="label" for="password">New password</label>
-                                <input type="password" class="form-control" placeholder="**********" required>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label class="label" for="password">Confirm password</label>
-                                <input type="password" class="form-control" placeholder="**********" required>
-                            </div>
-
-                            <div class="form-group">
-                                <button type="submit" class="form-control btn btn-primary rounded submit px-3"
-                                        href="login.html">Continue
-                                </button>
-                            </div>
-                            <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab"
-                                                                                       href="{{ route('workerLogin') }}">Login</a></p>
-
+                            <form>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="password">New password</label>
+                                    <input type="password" class="form-control" placeholder="**********" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="password">Confirm password</label>
+                                    <input type="password" class="form-control" placeholder="**********" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3"
+                                            href="login.html">Continue
+                                    </button>
+                                </div>
+                                <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab"
+                                                                                           href="{{ route('workerLogin') }}">Login</a>
+                                </p>
                             </form>
                             <br>
                             <br>

@@ -10638,7 +10638,8 @@
                                 </div>
                             </div>
                             <div class="III">
-                                <img class="center-block " src="{{asset('../img/mail.png')}}" style="width: 70px; height:70px; ">
+                                <img class="center-block " src="{{asset('../img/mail.png')}}"
+                                     style="width: 70px; height:70px; ">
                                 <p class="font-weight-bold" style="
                   text-align: center;
 
@@ -10646,7 +10647,8 @@
                   color: #B85282;">A link to reset your password has been sent to </p>
                                 <p class="text-center ">*******@gmail.com </p>
                             </div>
-                            <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab" href="signUp.html">Log
+                            <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab"
+                                                                                       href="signUp.html">Log
                                     in</a></p>
                         </div>
                     </div>

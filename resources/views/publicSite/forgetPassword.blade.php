@@ -1,38 +1,7 @@
 @extends('publicSite.layouts.app')
 
 @section('content')
-    <style>
-
-        :root {
-            --blue: #007bff;
-            --indigo: #6610f2;
-            --purple: #6f42c1;
-            --pink: #e83e8c;
-            --red: #dc3545;
-            --orange: #fd7e14;
-            --yellow: #ffc107;
-            --green: #28a745;
-            --teal: #20c997;
-            --cyan: #17a2b8;
-            --white: #fff;
-            --gray: #6c757d;
-            --gray-dark: #343a40;
-            --primary: #007bff;
-            --secondary: #6c757d;
-            --success: #28a745;
-            --info: #17a2b8;
-            --warning: #ffc107;
-            --danger: #dc3545;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --breakpoint-xs: 0;
-            --breakpoint-sm: 576px;
-            --breakpoint-md: 768px;
-            --breakpoint-lg: 992px;
-            --breakpoint-xl: 1200px;
-        }
-
-        *,
+    <style>*,
         *::before,
         *::after {
             -webkit-box-sizing: border-box;
@@ -10624,7 +10593,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-3">
-                    <a href="{{ route('workerHome') }}" ><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
+                    <a href="{{ route('workerHome') }}"><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -10636,7 +10605,8 @@
                             <div class="d-flex">
                                 <div class="w-100">
                                     <h3 class="mb-4" style="margin-top:10px ;">Password recovery</h3>
-                                    <p style="font-size:12px ; padding-top: -100px;">Enter your email address and we'll send
+                                    <p style="font-size:12px ; padding-top: -100px;">Enter your email address and we'll
+                                        send
                                         you a verification code to reset your password.
                                 </div>
                             </div>
@@ -10653,7 +10623,9 @@
                                     </button>
                                 </div>
                             </form>
-                            <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab" href="{{ route('workerLogin') }}">Login</a></p>
+                            <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab"
+                                                                                       href="{{ route('workerLogin') }}">Login</a>
+                            </p>
                         </div>
                     </div>
                 </div>

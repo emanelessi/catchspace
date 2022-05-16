@@ -18,9 +18,9 @@
 
 {{--    @include('publicSite.layouts.header-1')--}}
 
-    @yield('content')
+@yield('content')
 
-    @include('publicSite.layouts.footer')
+@include('publicSite.layouts.footer')
 
 
 {{--</section>--}}

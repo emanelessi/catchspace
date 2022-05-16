@@ -427,7 +427,8 @@
         <div class="container">
             <div id="hero1" class="d-flex align-items-center row">
                 <div class="  col-lg-6  d-flex flex-column justify-content-center pt-lg-0 order-2 order-lg-1">
-                    <h1>best<img src="{{asset('../img/bom.png')}}" style="width:60px ; height:60px; margin-left: 10px;"><br>collection of
+                    <h1>best<img src="{{asset('../img/bom.png')}}" style="width:60px ; height:60px; margin-left: 10px;"><br>collection
+                        of
                     </h1>
                     <h1 id="h1h" style=" color: #D9368B; "><strike>workspaces</strike>
                     </h1>
@@ -481,7 +482,8 @@
                 </div>
             </div>
             <div class="col-lg-6  order-1 order-lg-2  " data-aos="zoom-in" data-aos-delay="150">
-                <img src="{{asset('../img/work.png')}}" style=" margin-left:780px; width: 450px; height:450px; margin-top:-450px ;"
+                <img src="{{asset('../img/work.png')}}"
+                     style=" margin-left:780px; width: 450px; height:450px; margin-top:-450px ;"
                      class="img-fluid animated" alt="">
             </div>
         </div>

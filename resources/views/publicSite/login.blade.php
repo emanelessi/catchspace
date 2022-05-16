@@ -10623,7 +10623,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-3">
-                    <a href="{{ route('workerHome') }}" ><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
+                    <a href="{{ route('workerHome') }}"><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -10664,7 +10664,8 @@
                                     </div>
                                 </div>
                             </form>
-                            <p class="text-center">Not have an account? <a data-toggle="tab" href="{{ route('workerSignup') }}">Sign
+                            <p class="text-center">Not have an account? <a data-toggle="tab"
+                                                                           href="{{ route('workerSignup') }}">Sign
                                     Up</a>
                             </p>
                         </div>

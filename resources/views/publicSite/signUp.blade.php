@@ -10624,7 +10624,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-3">
-                    <a href="{{ route('workerHome') }}" ><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
+                    <a href="{{ route('workerHome') }}"><img class="heading-section" src="{{url('/img/Group 14.png')}}"></a>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -10638,7 +10638,8 @@
                                     <h3 class="mb-4">Sign UP </h3>
                                 </div>
                             </div>
-                            <form class="signin-form" enctype="multipart/form-data"  method="post" action="{{ route('workerStore') }}">
+                            <form class="signin-form" enctype="multipart/form-data" method="post"
+                                  action="{{ route('workerStore') }}">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <label class="label" for="text">Name</label>
@@ -10646,16 +10647,19 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="Email">Email</label>
-                                    <input type="email" name="email" class="form-control" placeholder="CatchSpace@CatchSpace.com"
+                                    <input type="email" name="email" class="form-control"
+                                           placeholder="CatchSpace@CatchSpace.com"
                                            required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Password</label>
-                                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                                    <input type="password" name="password" class="form-control" placeholder="Password"
+                                           required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="job_title">Job Title</label>
-                                    <input type="text" name="job_title" class="form-control" placeholder="Developer" required>
+                                    <input type="text" name="job_title" class="form-control" placeholder="Developer"
+                                           required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="type">Type</label>
@@ -10669,7 +10673,8 @@
                                     <input type="file" name="avatar" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign up
+                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign
+                                        up
                                     </button>
                                 </div>
                                 <div class="form-group d-md-flex">
@@ -10686,7 +10691,8 @@
                                     </div>
                                 @endif
                             </form>
-                            <p class="text-center">If you have an sccount? <a data-toggle="tab" href="{{ route('workerLogin') }}">Login</a>
+                            <p class="text-center">If you have an sccount? <a data-toggle="tab"
+                                                                              href="{{ route('workerLogin') }}">Login</a>
                             </p>
                         </div>
                     </div>

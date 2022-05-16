@@ -1178,7 +1178,8 @@
                                                             <div class="col-sm-4">
                                                                 <div class="thumb-wrapper">
                                                                     <div class="img-box">
-                                                                        <img src=" {{asset('../img/space1.png')}}" class="img-fluid"
+                                                                        <img src=" {{asset('../img/space1.png')}}"
+                                                                             class="img-fluid"
                                                                              style=" width:100%" alt="">
                                                                     </div>
                                                                     <div class="thumb-content">
@@ -1206,7 +1207,8 @@
                                                             <div class="col-sm-4">
                                                                 <div class="thumb-wrapper">
                                                                     <div class="img-box">
-                                                                        <img src="{{asset('../img/space1.png')}}" class="img-fluid"
+                                                                        <img src="{{asset('../img/space1.png')}}"
+                                                                             class="img-fluid"
                                                                              style=" width:100%" alt="">
                                                                     </div>
                                                                     <div class="thumb-content">
@@ -1235,7 +1237,8 @@
                                                                 <div class="thumb-wrapper">
 
                                                                     <div class="img-box">
-                                                                        <img src="{{asset('../img/space1.png')}}" class="img-fluid"
+                                                                        <img src="{{asset('../img/space1.png')}}"
+                                                                             class="img-fluid"
                                                                              style=" width:100%; height: 100%;"
                                                                              alt="">
                                                                     </div>
@@ -1286,7 +1289,8 @@
     </div>
 
     <!--WorkSpace-->
-    <section class="book" id="hero3" style="background-image: url({{asset('../img/background2.png')}}); margin-top: 80px;">
+    <section class="book" id="hero3"
+             style="background-image: url({{asset('../img/background2.png')}}); margin-top: 80px;">
         <div class="container p-3">
             <div class="row">
                 <div class="p-3 col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"

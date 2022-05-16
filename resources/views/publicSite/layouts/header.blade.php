@@ -19,7 +19,8 @@
             <div class="collapse navbar-collapse" id="main">
                 <ul class="navbar-nav  align-items-center" style="margin-left: 200px;">
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3 active " aria-current="page" href="{{ route('workerHome') }}">Home</a>
+                        <a class="nav-link p-2 p-lg-3 active " aria-current="page"
+                           href="{{ route('workerHome') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link p-2 p-lg-3" href="{{ route('workerWorkspace') }}"><u>Workspace</u></a>
@@ -34,7 +35,6 @@
                         <a class="nav-link p-2 p-lg-3" href="{{ route('workerLogin') }}" style="margin-left: 200px;">Login</a>
                     </li>
                 </ul>
-
                 <a class="btn btn-primary1 main-btn1 " id="R" href="{{ route('workerSignup') }}">Sign up</a>
             </div>
         </div>
