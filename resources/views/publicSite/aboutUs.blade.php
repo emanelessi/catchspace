@@ -327,6 +327,12 @@
             letter-spacing: 0.5px;
             font-size: 30px;
         }
+        .section-subtitle{
+            color: black !important;
+            text-align: center!important;
+            font-size: 30px!important;
+            font-weight: 800!important;
+        }
 
         /*end our value*/
 
@@ -353,13 +359,14 @@
     <section id="what-we-do" class="what-we-do ">
         <div class="section-center">
             <div class="section-title ">
-                <h2>Our Working value</h2>
+                <h2 class="section-subtitle">Our Working value</h2>
                 <p style="color:  #343A40 ;">We Help To Get Solutions</p>
             </div>
             <div class="container">
                 <div id="d5" class="container">
-                    <div class=" col-md-4 d-flex ">
-                        <div class="row no-margin">
+                    <div class="row no-margin">
+                        <div class=" col-md-4 d-flex ">
+
                             <div class="icon-box">
                                 <div class="icon"><i class="bi bi-bookmark-star-fill"></i></div>
                                 <h4><a>PROFESSIONALISM</a></h4>
@@ -368,27 +375,24 @@
                             </div>
                         </div>
                         <div class=" col-md-4 d-flex px-4 ">
-                            <div class="row no-margin">
-                                <div class="icon-box">
-                                    <div class="icon"><i class="bi bi-bag-heart-fill"></i></div>
-                                    <h4><a>RESPECT & DIVERSITY</a></h4>
-                                    <p>CatchSpace employees are CONTRIBUTING AND SUPPORTING members of a team. in a
-                                        climate
-                                        of MUTUAL RESPECT AND TRUST CONDUCIVE</p>
-                                </div>
+                            <div class="icon-box">
+                                <div class="icon"><i class="bi bi-bag-heart-fill"></i></div>
+                                <h4><a>RESPECT & DIVERSITY</a></h4>
+                                <p>CatchSpace employees are CONTRIBUTING AND SUPPORTING members of a team. in a
+                                    climate
+                                    of MUTUAL RESPECT AND TRUST CONDUCIVE</p>
                             </div>
                         </div>
                         <div class=" col-md-4 d-flex px-4  ">
-                            <div class="row no-margin">
-                                <div class="icon-box">
-                                    <div class="icon"><i class="bi bi-envelope-check-fill"></i></div>
-                                    <h4><a>TENING TO THE CUSTOMER</a></h4>
-                                    <p>In total we share the same ambition to listen and support our customers so that
-                                        their success becomes ours</p>
-                                </div>
+                            <div class="icon-box">
+                                <div class="icon"><i class="bi bi-envelope-check-fill"></i></div>
+                                <h4><a>TENING TO THE CUSTOMER</a></h4>
+                                <p>In total we share the same ambition to listen and support our customers so that
+                                    their success becomes ours</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -448,7 +452,7 @@
 
     <div class="section-center">
         <div class="section-title mt-4">
-            <h2>Meet our team</h2>
+            <h2 class="section-subtitle">Meet our team</h2>
             <p style="color:  #343A40 ;">Meet and Greet our Team Members </p>
         </div>
         <div class="container mt-10 ">

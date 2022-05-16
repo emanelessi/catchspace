@@ -10637,9 +10637,14 @@
                                 <div class="w-100">
                                     <h3 class="mb-4">Sign UP </h3>
                                 </div>
+                                @if(session()->has('success'))
+                                    <div class="alert alert-success">
+                                        {{ session()->get('success') }}
+                                    </div>
+                                @endif
                             </div>
                             <form class="signin-form" enctype="multipart/form-data" method="post"
-                                  action="{{ route('workerStore') }}">
+                                  action="{{ route('signupWorkerStore') }}">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <label class="label" for="text">Name</label>
@@ -10685,11 +10690,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                @if(session()->has('success'))
-                                    <div class="alert alert-success">
-                                        {{ session()->get('success') }}
-                                    </div>
-                                @endif
+
                             </form>
                             <p class="text-center">If you have an sccount? <a data-toggle="tab"
                                                                               href="{{ route('workerLogin') }}">Login</a>

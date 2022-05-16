@@ -55,15 +55,20 @@ Route::get('/confirm', function () {
 });
 
 Route::get('/worker/login', [\App\Http\Controllers\WorkerController::class, 'login'])->name('workerLogin');
+
 Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'create'])->name('workerSignup');
-Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('workerStore');
+Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('signupWorkerStore');
+
 Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class, 'forgetpassword'])->name('workerForgetpassword');
 Route::get('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'resetpassword'])->name('workerResetpassword');
 Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
 Route::get('/worker/workspace', [\App\Http\Controllers\WorkerController::class, 'workspace'])->name('workerWorkspace');
 Route::get('/worker/review', [\App\Http\Controllers\WorkerController::class, 'review'])->name('workerReview');
 Route::get('/worker/workspace-details', [\App\Http\Controllers\WorkerController::class, 'workspacedetails'])->name('workspaceDetails');
+
 Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');
+Route::post('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactstore'])->name('workerContactStore');
+
 Route::get('/worker/about-us', [\App\Http\Controllers\WorkerController::class, 'aboutus'])->name('workerAboutus');
 
 Route::get('/review', function () {

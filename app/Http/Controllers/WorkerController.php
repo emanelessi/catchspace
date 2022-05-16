@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUs;
 use App\Models\Worker;
 use App\Models\WorkerWorkSpace;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class WorkerController extends Controller
 {
@@ -48,6 +50,33 @@ class WorkerController extends Controller
     public function contactus(){
         return view('publicSite.contactUs');
     }
+    public function contactstore(Request $request)
+    {
+
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'message' => 'required',
+        ]);
+
+        $contact = new ContactUs();
+        $contact->name = $request->input('name');
+        $contact->email = $request->input('email');
+        $contact->message = $request->input('message');
+        $contact->save();
+        $details = array(
+            'title' => 'Mail from '.$request->input('name'),
+            'body' => 'This is for '.$request->input('message'),
+        );
+        $emails = ['dinashadiakeela@gmail.com', 'hanieman86@gmail.com','jumanashawwa1@gmail.com','dalia.5.6.2000@gmail.com'];
+
+        Mail::send('emails.ContactMail', $details, function($message) use ($request,$emails) {
+            $message->to($emails, $request->input('name'))->subject
+            ('Mail From Contact Us Catch Space');
+            $message->from($request->input('email'),'Catch Space');
+        });
+        return back()->with('success', trans('messages.contactus.contactus_created'));
+    }
     public function login(){
         return view('publicSite.login');
     }
@@ -79,7 +108,7 @@ class WorkerController extends Controller
         $worker->type = $request->input('type');
         $worker->save();
 
-        return back()->with('success', trans('messages.worker.worker_created'));
+        return back()->with('success', trans('messages.worker.worker_added'));
     }
 
     public function forgetpassword(){

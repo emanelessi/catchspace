@@ -239,7 +239,14 @@
         <div class="container">
             <div class="row align-items-stretch justify-content-center no-gutters">
                 <div class="col-md-7">
-                    <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                    @if(session()->has('success'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
+                    <form class="mb-5" id="contactForm" name="contactForm" method="post"
+                          action="{{ route('workerContactStore') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6 form-group mb-3">
 

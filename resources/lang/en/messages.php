@@ -39,10 +39,13 @@ return [
         'worker_updated'=>'worker updated successfully',
         'worker_deleted'=>'worker deleted successfully',
         'worker_restored'=>'worker restored successfully',
+        'worker_added'=>'Added successfully Go to Login',
     ],'policies' => [
         'policies_created'=>'policies created successfully',
         'policies_updated'=>'policies updated successfully',
         'policies_deleted'=>'policies deleted successfully',
         'policies_restored'=>'policies restored successfully',
+    ],'contactus' => [
+        'contactus_created'=>'Thank you! We will reply soon',
     ],
 ];

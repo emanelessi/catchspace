@@ -1367,9 +1367,15 @@
         letter-spacing: -0.022em;
         margin-top: 20px;
         color: #FFC107;">We are waiting for your inquiries.</p>
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
             </div>
             <div class="form">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form action="{{ route('workerContactStore') }}" method="post" role="form" class="php-email-form">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6 form-group">
                             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
