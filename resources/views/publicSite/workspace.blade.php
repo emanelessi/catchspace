@@ -417,6 +417,10 @@
             background-color: white;
             border-radius: 20px;
         }
+        .workspace-name{
+            text-decoration: none;
+            color: black;
+        }
 
 
     </style>
@@ -539,7 +543,7 @@
                 <div class="  sh shadow   d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
                     <img src="{{asset('../img/space1.png')}}" class="  col-lg-6  rimg img-fluid" alt="">
                     <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                        <h3>Lego</h3>
+                        <h3><a href="{{ route('workspaceDetails') }}" class="workspace-name">Lego</a></h3>
                         <p class="t">
                             Gaza, Universities, Lego Building
                         </p>

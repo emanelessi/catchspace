@@ -428,7 +428,7 @@
     <div class="container">
         <div id="hero1" class="d-flex align-items-center  row">
             <div class="col   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/legopage.png {{asset('../img/background2.png')}}" class="img-fluid animated" alt="">
+                <img src="{{asset('../img/legopage.png')}}" class="img-fluid animated" alt="">
                 <div class="centered ">Find The Best Palce To <br>Enjoy Your Time</div>
                 <div class="centered ">
                     <nav class="navbar navbar-expand-lg shadow " id="nav1">
@@ -693,7 +693,7 @@
                                         <h5 style="color: #6B60E6  ; ">₪210/mo </h5>
                                     </div>
                                     <div class="ratings">
-                                        <a class="btn main-btn6">ENQUIRE NOW</a>
+                                        <a class="btn main-btn6" >ENQUIRE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -980,7 +980,7 @@
                                                         your opinion of our space</h6>
 
                                                 </div>
-                                                <a class="btn main-btn9" style="align-items:center ;">Post A Review</a>
+                                                <a class="btn main-btn9" href="{{ route('workerReview') }}" style="align-items:center ;">Post A Review</a>
                                             </div>
                                         </div>
                                     </div>

@@ -39,6 +39,12 @@ class WorkerController extends Controller
     public function workspace(){
         return view('publicSite.workspace');
     }
+    public function review(){
+        return view('publicSite.review');
+    }
+    public function workspacedetails(){
+        return view('publicSite.workspaceDetails');
+    }
     public function contactus(){
         return view('publicSite.contactUs');
     }

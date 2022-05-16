@@ -26,7 +26,7 @@
                         <a class="nav-link p-2 p-lg-3" href="{{ route('workerWorkspace') }}"><u>Workspace</u></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3  " href="{{ route('workerContactus') }}">Contact</a>
+                        <a class="nav-link p-2 p-lg-3  " href="{{ route('workerContactus') }}">Contact us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link p-2 p-lg-3" href="{{ route('workerAboutus') }}">About us</a>

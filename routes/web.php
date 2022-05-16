@@ -61,6 +61,8 @@ Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::c
 Route::get('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'resetpassword'])->name('workerResetpassword');
 Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
 Route::get('/worker/workspace', [\App\Http\Controllers\WorkerController::class, 'workspace'])->name('workerWorkspace');
+Route::get('/worker/review', [\App\Http\Controllers\WorkerController::class, 'review'])->name('workerReview');
+Route::get('/worker/workspace-details', [\App\Http\Controllers\WorkerController::class, 'workspacedetails'])->name('workspaceDetails');
 Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');
 Route::get('/worker/about-us', [\App\Http\Controllers\WorkerController::class, 'aboutus'])->name('workerAboutus');
 
