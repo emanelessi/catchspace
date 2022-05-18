@@ -15,6 +15,8 @@ class WorkSpace extends Model
         'work_space_type_id',
         'capacity',
         'name',
+        'location',
+        'image',
 
     ];
 

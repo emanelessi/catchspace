@@ -39,6 +39,12 @@ class WorkerController extends Controller
     public function aboutus(){
         return view('publicSite.aboutUs');
     }
+    public function simplesearch(Request $request){
+        $search = $request->input('search');
+        $workspaces = WorkSpace::query()->where('name', 'LIKE', "%{$search}%")->get();
+
+        return view('publicSite.simpleSearch', compact('workspaces'));
+    }
     public function workspace(){
         $workspaces=WorkSpace::all();
 

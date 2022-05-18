@@ -105,6 +105,37 @@
             border-radius: 10px !important;
             border-color: #E93A76 !important;
         }
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .inputfile + label {
+            border-color: #eaeaea;
+            margin-top: 60px;
+
+            align-items: center;
+            padding: 5px;
+            border-radius: 8px !important;
+            background-color: #eaeaea;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 14px;
+            line-height: 24px;
+            color: #6B7280;
+            width: 157px;
+            display: inline-block;
+        }
+
+        .inputfile:focus + label,
+        .inputfile + label:hover {
+            background-color: #E93A76;
+            color: white;
+
+        }
 
         .btn-delete {
             width: 125px !important;
@@ -173,26 +204,57 @@
                             <div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="portlet light bordered" style="
+
+                                                    <!-- PERSONAL INFO TAB -->
+                                                    <div class="tab-pane active" id="tab_1_1">
+                                                        <form role="form" enctype="multipart/form-data" action="{{route('workspaceupdate')}}"
+                                                              method="POST">
+                                                            @csrf
+                                                            <div class="profile-userpic  margin-right--12 " style="
+                        float: left;
+                        width: 300px;
+">
+                                                                <img src="{{'/storage/'.$workspace->image}}"
+                                                                     class="img-responsive" alt="">
+                                                            </div>
+                                                            <!-- END SIDEBAR USERPIC -->
+                                                            <!-- SIDEBAR USER TITLE -->
+                                                            <b class="profile-usertitle margin-top-40" style="
+                        text-align: justify;
+                        /*margin-top: 47px;*/
+">
+                                                                <input type="file" data-loading-text="Loading..."
+                                                                       name="image" id="file" value="{{'/storage/'.$workspace->image}}"
+                                                                       class="inputfile img-logo demo-loading-btn btn btn-primary margin-top-85"
+
+                                                                >
+
+
+                                                                <label for="file"> Upload Worker logo <i class="fa fa-file-photo-o"
+                                                                                                         style="color: #6B7280 !important;"></i></label>
+                                                            </b>
+                                                            <div class="portlet light bordered" style="
                                         margin: 72px 73px 200px;
                                         border-radius: 20px !important;
                                         background-color: #fff;
                                          border-top-width: 2px !important;
                                             border-bottom-width: 2px !important;
 ">
-                                            <div class="portlet-body">
-                                                <div class="tab-content">
-                                                    <!-- PERSONAL INFO TAB -->
-                                                    <div class="tab-pane active" id="tab_1_1">
-                                                        <form role="form" action="{{route('workspaceupdate')}}"
-                                                              method="POST">
-                                                            @csrf
-                                                            <div class="form-group col-md-12">
+                                                                <div class="portlet-body">
+                                                                    <div class="tab-content">
+                                                            <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9" style="
                                                                 color:#6B7280;">Workspace
                                                                     name *</label>
                                                                 <input type="text" name="name"
                                                                        placeholder="name" value="{{$workspace->name}}"
+                                                                       class="form-control form-input"/>
+                                                            </div><div class="form-group col-md-6">
+                                                                <label class="control-label margin-left-9" style="
+                                                                color:#6B7280;">Workspace
+                                                                    Location *</label>
+                                                                <input type="text" name="location"
+                                                                       placeholder="location" value="{{$workspace->location}}"
                                                                        class="form-control form-input"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
@@ -278,15 +340,44 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="portlet light bordered" style="margin: 90px 73px 200px;height: 373px;border-radius: 20px !important;background-color: #fff;    border-top-width: 3px !important;
-                                            border-bottom-width: 3px !important;">
-                                                <div class="portlet-body" style="padding-top: 31px;">
-                                                    <div class="tab-content">
+
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                                                            <form role="form" action="{{route('workspaceupdate')}}"
+                                                            <form role="form" enctype="multipart/form-data" action="{{route('workspaceupdate')}}"
                                                                   method="POST">
                                                                 @csrf
+                                                                <div class="profile-userpic  margin-right--12 " style="
+                        float: left;
+                        width: 300px;
+">
+                                                                    <img src="{{'/storage/'.$workspace->image}}"
+                                                                         class="img-responsive" alt="">
+                                                                </div>
+                                                                <!-- END SIDEBAR USERPIC -->
+                                                                <!-- SIDEBAR USER TITLE -->
+                                                                <b class="profile-usertitle margin-top-40" style="
+                        text-align: justify;
+                        /*margin-top: 47px;*/
+">
+                                                                    <input type="file" data-loading-text="Loading..."
+                                                                           name="image" id="file" value="{{'/storage/'.$workspace->image}}"
+                                                                           class="inputfile img-logo demo-loading-btn btn btn-primary margin-top-85"
+
+                                                                    >
+
+
+                                                                    <label for="file"> Upload Worker logo <i class="fa fa-file-photo-o"
+                                                                                                             style="color: #6B7280 !important;"></i></label>
+                                                                </b>
+                                                                <div class="portlet light bordered" style="
+                                        margin: 72px 73px 200px;
+                                        border-radius: 20px !important;
+                                        background-color: #fff;
+                                         border-top-width: 2px !important;
+                                            border-bottom-width: 2px !important;
+">
+                                                                    <div class="portlet-body">
+                                                                        <div class="tab-content">
                                                                 <div class="form-group col-md-12">
                                                                     <label class="control-label margin-left-9" style="
                                                                 color:#6B7280;">Workspace
@@ -295,6 +386,14 @@
                                                                            placeholder="name" value="{{$workspace->name}}"
                                                                            class="form-control form-input"/>
                                                                 </div>
+                                                                            <div class="form-group col-md-6">
+                                                                                <label class="control-label margin-left-9" style="
+                                                                color:#6B7280;">Workspace
+                                                                                    Location *</label>
+                                                                                <input type="text" name="location"
+                                                                                       placeholder="location" value="{{$workspace->location}}"
+                                                                                       class="form-control form-input"/>
+                                                                            </div>
                                                                 <div class="form-group col-md-6">
                                                                     <label class="control-label margin-left-9"
                                                                            style="color:#6B7280;">Workspace

@@ -42,14 +42,16 @@ class WorkSpaceController extends Controller
     {
         $this->validate($request, [
             'capacity' => 'required',
+            'location' => 'required',
+            'image' => 'required',
             'work_space_type_id' => 'required',
             'provider_id' => 'required',
             'name' => 'required',
         ]);
 
         $workspace = WorkSpace::create(['name' => $request->input('name'),
-            'capacity' => $request->input('capacity'),
-            'work_space_type_id' => $request->input('work_space_type_id'),
+            'location' => $request->input('location'),'capacity' => $request->input('capacity'),
+            'image' => storeImage('workspaces','image' ), 'work_space_type_id' => $request->input('work_space_type_id'),
             'provider_id' => $request->input('provider_id'),
         ]);
         $rate=WorkSpaceRating::create(['work_space_id' => $workspace->id,'rate_avg' => 0,'rate_count' => 0]);
@@ -70,6 +72,8 @@ class WorkSpaceController extends Controller
         $id = request('id');
         $this->validate($request, [
             'capacity' => 'required',
+            'location' => 'required',
+            'image' => 'required',
             'work_space_type_id' => 'required',
             'provider_id' => 'required',
             'name' => 'required',
@@ -77,7 +81,9 @@ class WorkSpaceController extends Controller
 
         $workspace = WorkSpace::withTrashed()->findOrFail($id);
         $workspace->name = $request->input('name');
+        $workspace->location = $request->input('location');
         $workspace->capacity = $request->input('capacity');
+        $workspace->image = storeImage('workspaces','image' );
         $workspace->work_space_type_id = $request->input('work_space_type_id');
         $workspace->provider_id = $request->input('provider_id');
         $workspace->save();

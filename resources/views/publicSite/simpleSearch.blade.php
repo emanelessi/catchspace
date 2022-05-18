@@ -424,11 +424,11 @@
         }
 
         .work-img {
-            width: 450px;
-            height: 450px;
+            width: 309px;
+            height: 316px;
             position: absolute;
             top: 96px;
-            left: 880px;
+            left: 994px;
         }
         .filter-bar{
             background-color: #6B60E6;  height: 80px; padding-bottom: 10px;
@@ -450,7 +450,7 @@
 
     </style>
 
-    <section id="hero">
+    <section id="hero" style="height: auto;">
         @include('publicSite.layouts.header-1')
 
         <div class="container">
@@ -463,58 +463,9 @@
                         </h1>
                         <h1 id="h1h" style=" color: #D9368B; "><strike>workspaces</strike>
                         </h1>
-                        <h2 class="font-weight-bold">Viewing {{$workspaces->count()}} Coworking Spaces In Gaza</h2>
-                        <form style="
+                        <h2 class="font-weight-bold">Viewing Results </h2>
 
-            margin-top: 5px;
-            background: #fff;
-            padding:5px  10px;
-            position: relative;
-            border-radius: 50px;
-            text-align: left;
-            border:0;
 
-            " method="get" action="{{ route('simplesearch') }}" role="form" class="php-email-form col-4">
-                            @csrf
-                            <div class="search d-flex"><input id="search" style="border:0" type="text" name="search"
-                                                       required="">
-                                <input type="submit" class=" btn main-btn3" value="Search"></div>
-                        </form>
-
-                        <div id="box" class=" box ">
-                            <div class="row">
-                            <div class="col-xl-4 d-flex mt-5 align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         class="bi bi-check2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                    <h5>Annually</h5>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 d-flex mt-5  align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         class="bi bi-check2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                    <h5>Monthly</h5>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 mt-5 d-flex align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         class="bi bi-check2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                    <h5>Daily</h5>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6  order-1 order-lg-2  " data-aos="zoom-in" data-aos-delay="150">
@@ -527,52 +478,6 @@
         </div>
 
     </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div id="hero2" class="d-flex align-items-center col-md-6 ">
-                    <div class="  pt-6 pt-lg-0 order-2 order-lg-1 d-flex  justify-content-center">
-                        <h2>Viewing {{$workspaces->count()}} <br>Coworking Spaces In GAZA
-                        </h2>
-                    </div>
-                    <br>
-                </div>
-            </div>
-
-                <div class="cheak1 filter-bar  d-flex align-items-center "
-                    >
-                    <div class="row  align-items-center">
-
-
-                    <h6 class="col-md-2">Looking For ?</h6>
-                    <div class="col-md-2  col-sm-3 checkbox  checkbox-success">
-                        <input id="checkbox1" class="styled" type="checkbox">
-                        <label for="checkbox1">
-                            Desk
-                        </label>
-                    </div>
-                    <div class=" col-md-2 col-sm-3 checkbox checkbox-primary">
-                        <input id="checkbox2" class="styled" type="checkbox" checked>
-                        <label for="checkbox2">
-                            Private room
-                        </label>
-                    </div>
-                    <div class="col-md-2 col-sm-3 checkbox checkbox-success">
-                        <input id="checkbox3" class="styled" type="checkbox">
-                        <label for="checkbox3">
-                            Meeting room
-                        </label>
-                    </div>
-                    <div class="col-md-2 col-sm-3 checkbox checkbox-success">
-                        <input id="checkbox4" class="styled" type="checkbox">
-                        <label for="checkbox4">
-                            Skype room
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     @foreach($workspaces as $workspace)
         <section id="star" class="star">
             <div class="container " data-aos="fade-up">
@@ -580,7 +485,7 @@
                     <div class="   col-lg-12  sh shadow d-flex align-items-center" data-aos="fade-right"
                          data-aos-delay="100">
                         <div class="col-lg-4">
-                        <img src="{{'/storage/'.$workspace->image}}" class="    rimg img-fluid" alt="">
+                            <img src="{{'/storage/'.$workspace->image}}" class="    rimg img-fluid" alt="">
                         </div>
                         <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                             <h3><a href="/worker/workspace-details/{{$workspace->id}}"

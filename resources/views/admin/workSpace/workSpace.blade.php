@@ -206,7 +206,11 @@
                                     <tr style="border-bottom: 2px solid #F2F5F8;">
                                         <th class="table-th"> #
                                         </th>
+                                        <th class="table-th"> Image
+                                        </th>
                                         <th class="table-th"> Name
+                                        </th>
+                                        <th class="table-th"> Location
                                         </th>
                                         <th class="table-th"> Capacity
                                         </th>
@@ -218,9 +222,9 @@
                                         </th>
                                         <th class="table-th"> Addons
                                         </th>
-                                        <th class="table-th"> Provider Name
+                                        <th class="table-th"> Provider<br> Name
                                         </th>
-                                        <th class="table-th"> Provider Address
+                                        <th class="table-th"> Provider<br> Address
                                         </th>
                                         <th class="table-th"> Action
                                         </th>
@@ -232,7 +236,13 @@
                                         <tr>
                                             <td class="table-td"> {{$myworkspace->id}}
                                             </td>
+                                            <td class="table-td">
+                                                <img alt="" class="img-circle"
+                                                     src="{{'/storage/'.$myworkspace->image}}" style="width: 100px;"/>
+                                            </td>
                                             <td class="table-td"> {{$myworkspace->name}}
+                                            </td>
+                                            <td class="table-td"> {{$myworkspace->location}}
                                             </td>
                                             <td class="table-td">{{$myworkspace->capacity}}</td>
                                             <td class="table-td"> {{$myworkspace->workSpaceType->type}}
@@ -396,7 +406,11 @@
                                             <tr style="border-bottom: 2px solid #F2F5F8;">
                                                 <th class="table-th"> #
                                                 </th>
+                                                <th class="table-th"> Image
+                                                </th>
                                                 <th class="table-th"> Name
+                                                </th>
+                                                <th class="table-th"> Location
                                                 </th>
                                                 <th class="table-th"> Capacity
                                                 </th>
@@ -421,7 +435,13 @@
                                                 <tr>
                                                     <td class="table-td"> {{$myworkspace->id}}
                                                     </td>
+                                                    <td class="table-td">
+                                                        <img alt="" class="img-circle"
+                                                             src="{{'/storage/'.$myworkspace->image}}" style="width: 100px;"/>
+                                                    </td>
                                                     <td class="table-td"> {{$myworkspace->name}}
+                                                    </td>
+                                                    <td class="table-td"> {{$myworkspace->location}}
                                                     </td>
                                                     <td class="table-td"> {{$myworkspace->capacity}}
                                                     </td>

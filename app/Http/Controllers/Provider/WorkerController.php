@@ -103,7 +103,7 @@ class WorkerController extends Controller
         $worker->email = $request->input('email');
         $worker->password = bcrypt($request->input('password'));
         $worker->job_title = $request->input('job_title');
-        $worker->avatar = storeImage('workers','avatar' );;
+        $worker->avatar = storeImage('workers','avatar' );
 //        $worker->you_did = $request->input('you_did');
         $worker->type = $request->input('type');
         $worker->save();
