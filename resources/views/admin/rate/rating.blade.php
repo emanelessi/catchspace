@@ -4,18 +4,17 @@
     <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
-            /*background-color: #7962B3 !important;*/
             background-color: #ef6198 !important;
         }
 
         .btn-circle:hover {
-            background-color: #9162B32B !important;
-            border-color: #9162B32B !important;
+            background-color: #ef6198 !important;
+            border-color: #ef6198 !important;
         }
 
         .span:hover {
-            background-color: #6dce74 !important;
-            border-color: #6dce74 !important;
+            background-color: #ef6198 !important;
+            border-color: #ef6198 !important;
         }
 
         .cansel:hover {
@@ -23,39 +22,40 @@
         }
 
         .deletee:hover {
-            background-color: #E93A76 !important;
+            background-color: #ef6198 !important;
+        }
+
+        .page-head {
+            margin-bottom: 25px !important;
         }
 
         .head-title {
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
-            font-size: 33px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 25px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
 
         .add-btn {
             border-color: #E93A76 !important;
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
             background: #E93A76 !important;
             border-radius: 5px !important;
-            width: 160px !important;
+            width: 170px !important;
             height: 30px !important;
-            font-size: 13px !important;
+            font-size: 12px !important;
         }
 
         .btn-filter {
             background-color: #FFFFFF !important;
             border-color: #FFFFFF !important;
             border-radius: 5px !important;
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: normal;
-        !important font-size: 13 px !important;
+        !important font-size: 12 px !important;
             color: #292D32 !important;
-            width: 90px !important;
+            width: 97px !important;
             height: 29px !important;
             margin-right: -20px !important;
         }
@@ -69,29 +69,25 @@
 
         .span-filter {
             color: #fff !important;
-            background: #5AB25E !important;
+            background: #E93A76 !important;
             border-radius: 5px !important;
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: normal !important;
             font-size: 15px !important;
             line-height: 15px !important;
         }
 
         .table-th {
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px !important;
-            font-weight: 300px;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 17px !important;
             letter-spacing: -0.022em !important;
             color: #E93A76 !important;
             padding-bottom: 15px !important;
         }
 
         .table-td {
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 16px !important;
             letter-spacing: 0.02em !important;
             color: #000000 !important;
         }
@@ -106,8 +102,7 @@
         }
 
         .modal-p {
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif !important;
             font-weight: bold !important;
             font-size: 18px !important;
             line-height: 24px !important;
@@ -121,12 +116,10 @@
             height: 32.2px !important;
             align-items: center !important;
             padding: 0 !important;
-            /*border-radius: 8px !important;*/
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
-            font-size: 13px !important;
+            border-radius: 8px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 12px !important;
             letter-spacing: 1px !important;
-            border-radius: 10px !important;
             border-color: #E93A76 !important;
         }
 
@@ -137,15 +130,12 @@
             align-items: center !important;
             padding: 0 !important;
             border-radius: 8px !important;
-            /*background-color: #9162B3 !important;*/
             background-color: #E93A76 !important;
-            /*font-family: AvenirLTStd-Book !important;*/
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
-            font-size: 13px !important;
+            font-size: 12px !important;
             letter-spacing: 1px !important;
         }
-
     </style>
     <!-- END PAGE style -->
 
@@ -197,7 +187,7 @@
                             <div class="table-scrollable table-scrollable-borderless">
                                 <table class="table  table-light" style="background-color: #E5E5E5;">
                                     <thead>
-                                    <tr style="border-bottom: 1.2px solid #978D8D;">
+                                    <tr style="border-bottom: 2px solid #F2F5F8;">
                                         <th class="table-th"> #
                                         </th>
                                         {{--                                    <th class="table-th"> Work Space</th>--}}

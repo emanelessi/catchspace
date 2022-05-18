@@ -7,15 +7,63 @@
             background-color: #ef6198 !important;
         }
 
+        .demo-loading-btn:hover {
+            background-color: #D2CDCD54 !important;
+        }
+
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .inputfile + label {
+            border-color: #eaeaea;
+            margin-top: 60px;
+            align-items: center;
+            padding: 5px;
+            border-radius: 8px !important;
+            background-color: #eaeaea;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 12px;
+            line-height: 24px;
+            color: #6B7280;
+            width: 200px;
+            display: inline-block;
+        }
+
+        .inputfile:focus + label,
+        .inputfile + label:hover {
+            background-color: #E93A76;
+            color: white;
+
+        }
+
         .page-head {
             margin-bottom: 25px !important;
         }
 
         .head-title {
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 33px !important;
+            font-size: 25px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
+        }
+
+        .img-logo {
+            border-color: #eaeaea !important;
+            align-items: center !important;
+            padding: 5px !important;
+            border-radius: 8px !important;
+            background-color: #eaeaea !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 12px !important;
+            line-height: 24px !important;
+            color: #6B7280 !important;
+            width: 157px !important;
         }
 
         .form-input {
@@ -34,11 +82,13 @@
             background-color: #E93A76 !important;
             font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
-            font-size: 12px !important;
+            font-size: 11px !important;
             letter-spacing: 1px !important;
         }
+
     </style>
     <!-- END PAGE style -->
+
 
     @can('provider_access')
         <div class="page-head">
