@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ContactUs;
 use App\Models\Worker;
 use App\Models\WorkerWorkSpace;
+use App\Models\WorkSpace;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -39,13 +40,16 @@ class WorkerController extends Controller
         return view('publicSite.aboutUs');
     }
     public function workspace(){
-        return view('publicSite.workspace');
+        $workspaces=WorkSpace::all();
+
+        return view('publicSite.workspace', compact('workspaces'));
     }
     public function review(){
         return view('publicSite.review');
     }
-    public function workspacedetails(){
-        return view('publicSite.workspaceDetails');
+    public function workspacedetails($id){
+        $workspace=WorkSpace::find($id);
+        return view('publicSite.workspaceDetails', compact('workspace'));
     }
     public function contactus(){
         return view('publicSite.contactUs');

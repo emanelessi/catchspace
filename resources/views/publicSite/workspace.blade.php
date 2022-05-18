@@ -417,9 +417,28 @@
             background-color: white;
             border-radius: 20px;
         }
-        .workspace-name{
+
+        .workspace-name {
             text-decoration: none;
             color: black;
+        }
+
+        .work-img {
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            top: 96px;
+            left: 880px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .work-img {
+                width: 450px;
+                height: 450px;
+                position: absolute;
+                top: 96px;
+                left: 813px;
+            }
         }
 
 
@@ -429,7 +448,8 @@
         @include('publicSite.layouts.header-1')
 
         <div class="container">
-            <div id="hero1" class="d-flex align-items-center row">
+            <div class="row">
+            <div id="hero1" class="d-flex align-items-center col-lg-6">
                 <div class="  col-lg-6  d-flex flex-column justify-content-center pt-lg-0 order-2 order-lg-1">
                     <h1>best<img src="{{asset('../img/bom.png')}}" style="width:60px ; height:60px; margin-left: 10px;"><br>collection
                         of
@@ -487,9 +507,9 @@
             </div>
             <div class="col-lg-6  order-1 order-lg-2  " data-aos="zoom-in" data-aos-delay="150">
                 <img src="{{asset('../img/work.png')}}"
-                     style=" margin-left:780px; width: 450px; height:450px; margin-top:-450px ;"
-                     class="img-fluid animated" alt="">
+                     class="img-fluid animated work-img" alt="">
             </div>
+        </div>
         </div>
         <div class="input-field third-wrap">
         </div>
@@ -536,93 +556,41 @@
             </div>
         </div>
     </section>
+    @foreach($workspaces as $workspace)
+        <section id="star" class="star">
+            <div class="container " data-aos="fade-up">
+                <div class="row">
 
-    <section id="star" class="star">
-        <div class="container " data-aos="fade-up">
-            <div class="row">
-                <div class="  sh shadow   d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                    <img src="{{asset('../img/space1.png')}}" class="  col-lg-6  rimg img-fluid" alt="">
-                    <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                        <h3><a href="{{ route('workspaceDetails') }}" class="workspace-name">Lego</a></h3>
-                        <p class="t">
-                            Gaza, Universities, Lego Building
-                        </p>
-                        <div class="ratings">
-                            <span class="product-rating">4.6</span><span>/5</span>
-                            <div class="stars" style="color:#FFC107 ;">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                    <div class="  sh shadow col-lg-12   d-flex align-items-center" data-aos="fade-right"
+                         data-aos-delay="100">
+                        <img src="{{'/storage/'.$workspace->image}}" class="  col-lg-6  rimg img-fluid" alt="">
+                        <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                            <h3><a href="/worker/workspace-details/{{$workspace->id}}"
+                                   class="workspace-name">{{$workspace->name}}</a></h3>
+                            <p class="t">
+                                {{$workspace->location}}
+                            </p>
+                            <div class="ratings">
+                                <span
+                                    class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
+                                <div class="stars" style="color:#FFC107 ;">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="rating-text">
+                                    <span style="color:#BBBBBB; font-size:12px">{{$workspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>
+                                </div>
                             </div>
-                            <div class="rating-text">
-                                <span style="color:#BBBBBB; font-size:12px">46 ratings & 15 reviews</span>
-                            </div>
+                            <a class="btn main-btn2" id="D">ENQUIRE NOW</a>
                         </div>
-                        <a class="btn main-btn2" id="D">ENQUIRE NOW</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endforeach
 
-    <section id="star" class="star">
-        <div class="container " data-aos="fade-up">
-            <div class="row">
-                <div class="  sh shadow   d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                    <img src=" {{asset('../img/Tools.png')}}" class="  col-lg-6  rimg img-fluid" alt="">
-                    <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                        <h3>Tools</h3>
-                        <p class="t">
-                            Gaza, Universities, Lego Building
-                        </p>
-                        <div class="ratings">
-                            <span class="product-rating">3.9</span><span>/5</span>
-                            <div class="stars" style="color:#FFC107 ;">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="rating-text">
-                                <span style="color:#BBBBBB; font-size:12px">46 ratings & 15 reviews</span>
-                            </div>
-                        </div>
-                        <a class="btn  main-btn2" id="D">ENQUIRE NOW</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="star" class="star">
-        <div class="container " data-aos="fade-up">
-            <div class="row">
-                <div class="  sh shadow   d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                    <img src="{{asset('../img/space3.png')}}" class="  col-lg-6  rimg img-fluid" alt="">
-                    <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                        <h3>Lego</h3>
-                        <p class="t">
-                            Gaza, Universities, Lego Building
-                        </p>
-                        <div class="ratings">
-                            <span class="product-rating">3.6</span><span>/5</span>
-                            <div class="stars" style="color:#FFC107 ;">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="rating-text">
-                                <span style="color:#BBBBBB; font-size:12px">46 ratings & 15 reviews</span>
-                            </div>
-                        </div>
-                        <a class="btn  main-btn2" id="D">ENQUIRE NOW</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 @endsection
 
