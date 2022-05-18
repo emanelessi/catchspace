@@ -53,7 +53,8 @@
 
                 <h1 style="
 font-family: 'Montserrat', sans-serif !important;
-                  font-size: 35px;line-height: 40px;
+                      font-size: 28px;
+line-height: 40px;
                    text-align: center;
                    color: #FFFFFF;
 ">
@@ -74,13 +75,14 @@ font-family: 'Montserrat', sans-serif !important;                   font-size: 2
                     " class="fa fa-phone"></i>
                     +970 59 96 66 563</a>
                 <a href="mailto:WEB@catchSpace.com"
-                   style="font-family: 'Montserrat', sans-serif !important;font-size: 21px;line-height: 25px;color: #FFFFFF;text-align: center;display: block;">
+                   style="font-family: 'Montserrat', sans-serif !important;font-size: 16px;line-height: 25px;color: #FFFFFF;text-align: center;display: block;">
                     <i style="
                     background: -webkit-linear-gradient(#E93B77, #b9a6a6);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     padding-top: 5px;
-                    margin-left: 19px;font-size: 20px;
+                    margin-left: 19px;
+                     font-size: 16px;
                     " class="fa fa-envelope"></i>
                     WEB@catchSpace.com</a>
 
@@ -99,7 +101,7 @@ font-family: 'Montserrat', sans-serif !important;                   font-size: 2
 font-family: 'Montserrat', sans-serif !important;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link">Home</a></li>
@@ -107,7 +109,7 @@ font-family: 'Montserrat', sans-serif !important;
 font-family: 'Montserrat', sans-serif !important;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.022em;
 

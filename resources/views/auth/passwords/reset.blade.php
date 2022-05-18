@@ -27,8 +27,9 @@ font-style: normal;
 font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
+font-size: 16px;
 ">
-            <i class="fa fa-arrow-left" style="font-size: 15px"></i>
+            <i class="fa fa-arrow-left" style="font-size: 13px"></i>
             Back to main
         </a>
     </div>
@@ -61,7 +62,7 @@ color: #FFFFFF;
             <h3 class="form-title m-grid-col-lg-8 m-grid-col-md-8 m-grid-col-xs-8 margin-left--10
             margin-bottom-10" style="
 font-family: 'Montserrat', sans-serif !important;
-color: #000000;
+color: #000000; font-size: 21px;
 ">{{ __('Reset Password') }}</h3>
 
             {{--            <div class="form-group">--}}
@@ -137,9 +138,11 @@ color: #000000;
 font-family: 'Montserrat', sans-serif !important;
 font-weight: normal;
 color: rgba(51, 51, 51, 0.76);
-              font-size: 12px;
+              font-size: 11px;
 
-">Minimum 10 characters, must have lower and upercase, number</h5>
+">
+                Minimum 10 characters, must have lower and uppercase, number
+            </h5>
 
 
             <button type="submit"
@@ -151,7 +154,7 @@ background: #E93B77;
 border-color: #E93B77;
 border-radius: 20px !important;
 font-family: 'Montserrat', sans-serif !important;
-font-size: 16px;
+font-size: 15px;
 color: #FFFFFF;">  {{ __('Reset Password') }}</button>
 
         </form>

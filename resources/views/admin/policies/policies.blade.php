@@ -24,7 +24,7 @@
 
         .head-title {
             font-family: 'Montserrat', sans-serif!important;
-            font-size: 33px !important;
+            font-size: 25px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }

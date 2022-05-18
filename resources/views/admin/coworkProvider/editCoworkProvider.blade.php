@@ -1,7 +1,7 @@
 @extends('admin.layouts.index')
 
 @section('content')
-    <!-- END PAGE style -->
+    <!-- BEGIN PAGE style -->
     <style>
         .btn:hover {
             background-color: #ef6198 !important;
@@ -23,13 +23,12 @@
         .inputfile + label {
             border-color: #eaeaea;
             margin-top: 60px;
-
             align-items: center;
             padding: 5px;
             border-radius: 8px !important;
             background-color: #eaeaea;
-            font-family: AvenirLTStd-Book;
-            font-size: 14px;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 12px;
             line-height: 24px;
             color: #6B7280;
             width: 200px;
@@ -49,7 +48,7 @@
 
         .head-title {
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 33px !important;
+            font-size: 25px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
@@ -61,7 +60,7 @@
             border-radius: 8px !important;
             background-color: #eaeaea !important;
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 14px !important;
+            font-size: 12px !important;
             line-height: 24px !important;
             color: #6B7280 !important;
             width: 157px !important;
@@ -83,11 +82,13 @@
             background-color: #E93A76 !important;
             font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
-            font-size: 12px !important;
+            font-size: 11px !important;
             letter-spacing: 1px !important;
         }
+
     </style>
     <!-- END PAGE style -->
+
 
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->

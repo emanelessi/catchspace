@@ -31,7 +31,7 @@
 
         .head-title {
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 33px !important;
+            font-size: 25px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
@@ -44,7 +44,7 @@
             border-radius: 5px !important;
             width: 170px !important;
             height: 30px !important;
-            font-size: 13px !important;
+            font-size: 12px !important;
         }
 
         .btn-filter {
@@ -53,7 +53,7 @@
             border-radius: 5px !important;
             font-family: 'Montserrat', sans-serif !important;
             font-weight: normal;
-        !important font-size: 13 px !important;
+        !important font-size: 12 px !important;
             color: #292D32 !important;
             width: 97px !important;
             height: 29px !important;
@@ -79,8 +79,7 @@
 
         .table-th {
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 20px !important;
-            font-weight: 300px;
+            font-size: 17px !important;
             letter-spacing: -0.022em !important;
             color: #E93A76 !important;
             padding-bottom: 15px !important;
@@ -88,7 +87,7 @@
 
         .table-td {
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 18px !important;
+            font-size: 16px !important;
             letter-spacing: 0.02em !important;
             color: #000000 !important;
         }
@@ -119,9 +118,8 @@
             padding: 0 !important;
             border-radius: 8px !important;
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 13px !important;
+            font-size: 12px !important;
             letter-spacing: 1px !important;
-            border-radius: 10px !important;
             border-color: #E93A76 !important;
         }
 
@@ -135,7 +133,7 @@
             background-color: #E93A76 !important;
             font-family: 'Montserrat', sans-serif !important;
             color: #FFFFFF !important;
-            font-size: 13px !important;
+            font-size: 12px !important;
             letter-spacing: 1px !important;
         }
     </style>
@@ -150,7 +148,7 @@
         </div>
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
-        <div class="page-toolbar  ">
+        <div class="page-toolbar">
             <a href="{{route('providercreate')}}" class="demo-loading-btn btn btn-primary add-btn">
                 <i class="fa fa-plus-circle"></i>
                 Add Cowork Provider

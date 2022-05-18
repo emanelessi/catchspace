@@ -18,7 +18,7 @@
         .head-title {
             /*font-family: AvenirLTStd-Book !important;*/
             font-family: 'Montserrat', sans-serif;
-            font-size: 33px !important;
+            font-size: 25px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
@@ -90,14 +90,14 @@
                             <span data-counter="counterup" style="
                             /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
-                            font-size: 34px;"
+                            font-size: 30px;"
                                   data-value="{{$providers->Count() ?? 0}}">{{$providers->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
     /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
 "> Co-working provider
                             </div>
                         </div>
@@ -119,14 +119,14 @@
                             <span data-counter="counterup" style="
                             /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
-                            font-size: 34px;"
+                            font-size: 30px;"
                                   data-value="{{$work_spaces->Count() ?? 0}}">{{$work_spaces->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
     /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
 "> Work space
                             </div>
                         </div>
@@ -148,14 +148,14 @@
                             <span data-counter="counterup" style="
                             /*font-family: 'Montserrat', sans-serif;*/
                             font-family: 'Montserrat', sans-serif;
-                            font-size: 34px;"
+                            font-size: 30px;"
                                   data-value="{{$workers->Count() ?? 0}}">{{$workers->Count() ?? 0}}</span>
                             </div>
                             <div class="desc" style="
     /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
 "> Workers
                             </div>
                         </div>

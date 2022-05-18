@@ -18,13 +18,14 @@
     <!-- BEGIN LOGO -->
     <div class="container">
         <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link " href="{{ url('/') }}" style="
-font-family: AvenirLTStd-Book;
+font-family: 'Montserrat', sans-serif !important;
 font-style: normal;
 font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
+font-size: 16px;
 ">
-            <i class="fa fa-arrow-left" style="font-size: 15px"></i>
+            <i class="fa fa-arrow-left" style="font-size: 13px"></i>
             Back to main
         </a>
     </div>
@@ -53,15 +54,16 @@ color: #FFFFFF;
         />
         <h3 class="form-title m-grid-col-lg-10 m-grid-col-md-10 m-grid-col-xs-10 margin-bottom-15 "
             style="
-font-family: AvenirLTStd-Book;
-font-size: 28px;
+font-family: 'Montserrat', sans-serif !important;
+font-size: 23px;
 color: #333333;">Check Your Email</h3>
         <h5 class="control-label margin-left-16" style="
-font-family: AvenirLTStd-Book;
-font-size: 18px;
-line-height: 30px;
+font-family: 'Montserrat', sans-serif !important;
+font-size: 14px;line-height: 30px;
 color: #333333;">Please follow the instructions we sent<br> to your inbox<br>
-            <span style="font-weight: 600 !important; color: #E93B77;
+            <span style="
+            font-weight: 600 !important;
+            color: #E93B77;
 "> web@catchspace.com</span></h5>
         <!-- END LOGIN FORM -->
 

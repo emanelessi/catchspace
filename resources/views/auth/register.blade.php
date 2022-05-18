@@ -4,16 +4,17 @@
     <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
     <style>
         .btn:hover {
-            background-color: #E93B77!important;
+            background-color: #E93B77 !important;
         }
 
         .nav-link:hover {
-            color: #E93B77!important;
+            color: #E93B77 !important;
         }
 
         a:hover {
             color: #333333 !important;
         }
+
         .custom-file-input::-webkit-file-upload-button {
             visibility: hidden;
         }
@@ -34,12 +35,15 @@
             font-weight: 700;
             font-size: 10pt;
         }
+
         .custom-file-input:hover::before {
             border-color: #FFFFFF;
         }
+
         .custom-file-input:active::before {
             background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
         }
+
         .demo-loading-btn:hover {
             background-color: #D2CDCD54 !important;
         }
@@ -106,7 +110,7 @@
                             ">
                     <h1 style="
 font-family: 'Montserrat', sans-serif !important;
-                    font-style: normal;
+                    font-style: normal;font-size: 27px;
                     color: #333333;
                     ">Create an account</h1>
                     <p style="
@@ -114,10 +118,10 @@ font-family: 'Montserrat', sans-serif !important;
 font-family: 'Montserrat', sans-serif !important;
                     font-style: normal;
                     font-weight: normal;
-                    font-size: 16px;
+                    font-size: 15px;
                     letter-spacing: -0.022em;
                     "> Sign up to have an account</p>
-                    <form enctype="multipart/form-data"  method="post" action="{{ route('register') }}">
+                    <form enctype="multipart/form-data" method="post" action="{{ route('register') }}">
                         @csrf
                         <div class="alert alert-danger display-hide">
                             <button class="close" data-close="alert"></button>
@@ -361,18 +365,19 @@ font-family: 'Montserrat', sans-serif !important;
                                     <input type="file" data-loading-text="Loading..."
                                            name="logo" id="file"
                                            class="inputfile img-logo demo-loading-btn btn btn-primary ">
-                                    <label for="file"> Upload Workspace Logo<i class="fa fa-file-photo-o"
-                                                                             style="color: #6B7280 !important;"></i></label>
+                                    <label for="file" style="font-size: 12px;"> Upload Workspace Logo<i
+                                            class="fa fa-file-photo-o"
+                                            style="color: #6B7280 !important; "></i></label>
                                 </b>
-{{--                                <input type="file" name="logo" class="custom-file-input btn btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-6--}}
-{{--                    m-grid-col-xs-1"--}}
-{{--                                        style="--}}
-{{--width: 100%;--}}
-{{--background: #9162B3;--}}
-{{--border-color: #9162B3;--}}
-{{--border-radius: 20px !important;--}}
-{{--font-family: AvenirLTStd-Book;--}}
-{{--color: #FFFFFF;"/>--}}
+                                {{--                                <input type="file" name="logo" class="custom-file-input btn btn-login blue margin-left-8  m-grid-col-lg-offset-1 m-grid-col-md-offset-6--}}
+                                {{--                    m-grid-col-xs-1"--}}
+                                {{--                                        style="--}}
+                                {{--width: 100%;--}}
+                                {{--background: #9162B3;--}}
+                                {{--border-color: #9162B3;--}}
+                                {{--border-radius: 20px !important;--}}
+                                {{--font-family: AvenirLTStd-Book;--}}
+                                {{--color: #FFFFFF;"/>--}}
                             </div>
                             <div class="col-lg-8">
                                 <div class="rem-password" style="
@@ -382,11 +387,11 @@ font-family: 'Montserrat', sans-serif !important;
                                   font-family: 'Montserrat', sans-serif !important;
                                             font-style: normal;
                                             font-weight: normal;
-                                            font-size: 13px;
+                                            font-size: 11px;
                                             color: rgba(51, 51, 51, 0.7);">
                                         <input type="checkbox" name="remember" value="1"/> I agree for the term &
                                         conditions
-                                        <span></span>
+                                        <span style=" top: 0px;left: 3px;height: 15px;width: 15px;"></span>
                                     </label>
                                 </div>
                             </div>
@@ -410,6 +415,7 @@ font-style: normal;
 font-weight: normal;
 color: rgba(114, 103, 103, 0.78);
 margin-left: 100px;
+font-size: 13px;
 ">
                                     You have an account?<span><a style="color: #343A40" href="{{ route('login') }}"
                                                                  class="nav-link ">sign in</a></span>

@@ -24,7 +24,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <head>
     <meta charset="utf-8"/>
     @can('permission_access')
-    <title>Admin Dashboard</title>
+    <title style="">Admin Dashboard</title>
     @endcan
     @can('provider_access')
     <title>Provider Dashboard</title>

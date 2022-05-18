@@ -5,11 +5,11 @@
 
     <style>
         .btn:hover {
-            background-color: #f36596!important;
+            background-color: #f36596 !important;
         }
 
         .nav-link:hover {
-            color: #f36596!important;
+            color: #f36596 !important;
         }
 
         a:hover {
@@ -17,7 +17,7 @@
         }
 
         .uppercase:hover {
-            color: #f36596!important;
+            color: #f36596 !important;
         }
 
         /*@font-face {*/
@@ -37,8 +37,9 @@ font-style: normal;
 font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
+font-size: 16px;
 ">
-            <i class="fa fa-arrow-left" style="font-size: 15px"></i>
+            <i class="fa fa-arrow-left" style="font-size: 13px"></i>
             Back to main
         </a>
     </div>
@@ -62,12 +63,13 @@ color: #FFFFFF;
             <h3 class="form-title m-grid-col-lg-4-5 m-grid-col-md-4 m-grid-col-xs-4 " style="
 font-family: 'Montserrat', sans-serif !important;
 color: #000000;
-font-size: 24px !important;
+font-size: 23px !important;
 ">{{ __('Log in') }}</h3>
             <h5 class="control-label margin-top--15 margin-left-9" style="
 font-family: 'Montserrat', sans-serif !important;
 font-weight: normal;
 color: #333333;
+font-size: 13px;
 ">Log in to manage your account</h5>
             <div class="alert alert-danger display-hide">
                 <button class="close" data-close="alert"></button>
@@ -163,7 +165,7 @@ background: #E93B77;
 border-color: #E93B77;
 border-radius: 20px !important;
 font-family: 'Montserrat', sans-serif !important;
-font-size: 16px;
+font-size: 15px;
 color: white;">  {{ __('Log in') }}</button>
         </form>
         <!-- END LOGIN FORM -->
@@ -173,7 +175,7 @@ color: white;">  {{ __('Log in') }}</button>
 font-family: 'Montserrat', sans-serif !important;
         font-style: normal;
         color: #FFFFFF;
-        font-size: 15px;
+       font-size: 13px;
 " class="m-grid-col-lg-offset-4-5 m-grid-col-md-offset-4 m-grid-col-xs-offset-3 margin-top-10">Don’t have an account?
             <a href="{{ route('register') }}" id="register-btn" class="nav-link" style="color: #E93A76;">Sign up</a>
         </p>

@@ -12,11 +12,12 @@
 
     <style>
         .nav-btn:hover {
-            background-color: #ffffff!important;
-            color: #000000!important;
-            border-color: #fffffc!important;
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border-color: #fffffc !important;
 
         }
+
         .nav-link:hover {
             color: #000000 !important;
         }
@@ -57,7 +58,7 @@
 font-family: 'Montserrat', sans-serif;
                         font-style: normal;
                         font-weight: 500;
-                        font-size: 31px;
+                        font-size: 26px;
                         letter-spacing: -0.022em;
                         line-height: 48px;
                         ">Welcome to<br>
@@ -68,7 +69,7 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Montserrat', sans-serif;
                     font-style: normal;
                     font-weight: 600;
-                    font-size: 43px;
+                   font-size: 37px;
                     letter-spacing: -0.022em;
 
                     ">Catch space!</span>
@@ -117,7 +118,7 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.022em;
 "><a class="nav-link" href="{{ route('workerHome') }}">Home</a></li>
@@ -125,7 +126,7 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.022em;
 
@@ -133,7 +134,7 @@ font-family: 'Montserrat', sans-serif;
                         @guest
                             @if (Route::has('login'))
                                 <a href="{{route('login')}}" class="nav-btn btn blue m-grid-col-lg-offset-9 m-grid-col-md-offset-10
-                        m-grid-col-xs-12 "
+                                        m-grid-col-xs-12 "
                                    style="
                             display: flex;
                             flex-direction: column;

@@ -12,8 +12,8 @@
         }
 
         .head-title {
-            font-family: AvenirLTStd-Book !important;
-            font-size: 33px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 25px !important;
             letter-spacing: -0.022em !important;
             color: #333333 !important;
         }
@@ -22,7 +22,7 @@
             font-size: 14px !important;
             line-height: 157% !important;
             color: #6B7280 !important;
-            font-family: AvenirLTStd-Book !important;
+            font-family: 'Montserrat', sans-serif !important;
         }
     </style>
     <!-- END PAGE style -->

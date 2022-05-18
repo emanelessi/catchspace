@@ -28,8 +28,9 @@ font-style: normal;
 font-weight: normal;
 letter-spacing: -0.022em;
 color: #FFFFFF;
+font-size: 16px;
 ">
-            <i class="fa fa-arrow-left" style="font-size: 15px"></i>
+            <i class="fa fa-arrow-left" style="font-size: 13px"></i>
             Back to main
         </a>
     </div>
@@ -55,15 +56,16 @@ color: #FFFFFF;
         @endif
         <form method="POST" action="{{ route('password.email') }}" class=" margin-right-12 margin-left-12">
             @csrf
-            <h3 class="form-title m-grid-col-lg-8 m-grid-col-md-8 m-grid-col-xs-8 margin-left--5
+            <h3 class="form-title m-grid-col-lg-7 m-grid-col-md-8 m-grid-col-xs-8 margin-left--5
             margin-bottom-10" style="
 font-family: 'Montserrat', sans-serif !important;
 color: #000000;
+font-size: 17px;
 ">Forgot Passwoard</h3>
             <h5 class="control-label " style="
             color: #333333;
           font-family: 'Montserrat', sans-serif !important;
-          font-size: 18px;
+         font-size: 13px;
 line-height: 30px;
 ">Please enter your registered email address<br>
                 We'll send instructions to help reset your<br>
@@ -105,7 +107,7 @@ background: #E93B77;
 border-color: #E93B77;
 border-radius: 20px !important;
 font-family: 'Montserrat', sans-serif !important;
-font-size: 16px;
+font-size: 15px;
 color: #FFFFFF;">  {{ __('Send') }}</button>
         </form>
         <!-- END LOGIN FORM -->
