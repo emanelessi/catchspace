@@ -8,6 +8,7 @@ use App\Models\WorkerWorkSpace;
 use App\Models\WorkSpace;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class WorkerController extends Controller
 {
@@ -90,6 +91,31 @@ class WorkerController extends Controller
     public function login(){
         return view('publicSite.login');
     }
+    public function check(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+
+        $email =  $request->input('email');
+        $password =  $request->input('password');
+
+        if (Worker::where('email', $email)->where('password', $password)->first() ===null) {
+            return view('publicSite.home');
+
+        }
+        return view('publicSite.login');
+
+
+    }
+
+//    public function logout() {
+//        Session::flush();
+//        Worker::logout();
+//
+//        return view('publicSite.login');
+//    }
 
     public function create(){
         return view('publicSite.signUp');

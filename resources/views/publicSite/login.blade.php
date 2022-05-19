@@ -10637,19 +10637,20 @@
                                     <h3 class="mb-4">Sign In</h3>
                                 </div>
                             </div>
-                            <form action="#" class="signin-form">
+                            <form action="{{ route('workerCheck') }}" method="post" class="signin-form">
+                                @csrf
                                 <div class="form-group mb-3">
                                     <label class="label" for="Email">Email</label>
-                                    <input type="text" class="form-control" placeholder="CatchSpace@CatchSpace.com"
+                                    <input type="email" name="email" class="form-control" placeholder="CatchSpace@CatchSpace.com"
                                            required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" required>
+                                    <input type="password" name="password" class="form-control" placeholder="Password" required>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3"
-                                            href="home.html">Sign In
+                                    >Sign In
                                     </button>
                                 </div>
                                 <div class="form-group d-md-flex">
