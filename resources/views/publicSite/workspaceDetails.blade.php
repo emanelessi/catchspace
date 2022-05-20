@@ -429,7 +429,8 @@
         <div id="hero1" class="d-flex align-items-center  row">
             <div class="col   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200">
                 <img src="{{asset('../img/legopage.png')}}" class="img-fluid animated" alt="">
-                <div class="centered ">Find The Best Palce To <br>Enjoy Your Time</div>
+{{--                <img src="{{'/storage/'.$workspace->image}}" class="img-fluid animated" alt="">--}}
+                <div class="centered ">Find The Best Place To <br>Enjoy Your Time</div>
                 <div class="centered ">
                     <nav class="navbar navbar-expand-lg shadow " id="nav1">
                         <div class="container">
@@ -451,19 +452,19 @@
                             <div class="collapse navbar-collapse  " id="main">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link p-2 p-lg-3 active " aria-current="page" href=" ">Overview</a>
+                                        <a class="nav-link p-2 p-lg-3 active " aria-current="page" href="#overview">Overview</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link p-2 p-lg-3 " href=" ">Pricing</a>
+                                        <a class="nav-link p-2 p-lg-3 " href="#pricing">Pricing</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link p-2 p-lg-3  " href=" ">Meeting Room</a>
+                                        <a class="nav-link p-2 p-lg-3  " href="#meetingRoom">Meeting Room</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link p-2 p-lg-3" href=" ">Amenities</a>
+                                        <a class="nav-link p-2 p-lg-3" href="#amenities">Amenities</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link p-2 p-lg-3" href=" ">Reviews</a>
+                                        <a class="nav-link p-2 p-lg-3" href="#reviews">Reviews</a>
                                     </li>
                                 </ul>
 
@@ -496,7 +497,7 @@
                 <div class="row">
                     <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
                         <div class="col-lg-6   pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                            <h1 style="color:#FFC107 ">{{$workspace->name}}</h1>
+                            <h1 style="color:#FFC107 " id="overview">{{$workspace->name}}</h1>
                             <h6 style="color:  #BBBBBB ;">
                                 <svg style="color:#6B60E6;  margin-bottom: 4px;" xmlns="http://www.w3.org/2000/svg"
                                      width="14" height="14" fill="currentColor" class="bi bi-geo-alt-fill"
@@ -520,7 +521,7 @@
                             </p>
                             <!--enf lego over view-->
                             <!--pricing table-->
-                            <h4 style="color:#6B60E6; margin-top: 32px; ">
+                            <h4 style="color:#6B60E6; margin-top: 32px; " id="pricing">
                                 <svg style="margin-right:6px; margin-top:-3px" xmlns="http://www.w3.org/2000/svg"
                                      width="18"
                                      height="18" fill="currentColor" class="bi bi-currency-exchange"
@@ -645,7 +646,7 @@
                                 <div class="rating-text">
                                     <h5>Member Reviews </h5>
                                 </div>
-                                <span class="product-rating">4.6</span><span>/5</span>
+                                <span class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
                                 <div class="stars">
                                     <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
                                          height="16"
@@ -680,7 +681,7 @@
                                 </div>
                                 <div class="ratings">
                                     <div class="rating-text">
-                                        <a href="review.html" style="color:#6B60E6 ;"> Read All Reviews </a>
+                                        <a href="#reviews" style="color:#6B60E6 ;"> Read All Reviews </a>
                                     </div>
                                 </div>
                             </div>
@@ -693,7 +694,7 @@
                                         <h5 style="color: #6B60E6  ; ">₪210/mo </h5>
                                     </div>
                                     <div class="ratings">
-                                        <a class="btn main-btn6" >ENQUIRE NOW</a>
+                                        <a class="btn main-btn6">ENQUIRE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -735,7 +736,7 @@
                 </div>
                 <!--end section overview + pricing -->
                 <!-- start Meeting Room-->
-                <h4 style="color:#6B60E6; margin-top: 35px; margin-bottom:50px; ">
+                <h4 style="color:#6B60E6; margin-top: 35px; margin-bottom:50px; " id="meetingRoom" >
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                          class="bi bi-bullseye" style="  margin-top:-4px;" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -794,7 +795,7 @@
                         </div>
                     </div>
                 </div>
-                <h4 style="color:#6B60E6; margin-top: 40px; ">
+                <h4 style="color:#6B60E6; margin-top: 40px; " id="amenities">
                     <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px; margin-top:-3px;" width="16"
                          height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -802,7 +803,7 @@
                     </svg>
                     Amenities
                 </h4>
-                <section id="star" class="star">
+                <section id="reviews" class="star" >
                     <div class="container " data-aos="fade-up">
                         <div class="row">
                             <div class="  d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
@@ -878,7 +879,7 @@
                                                 <div class="row justify-content-left d-flex">
                                                     <div class="col-md-4 d-flex flex-column">
                                                         <div class="rating-box">
-                                                            <h1 class="pt-4">4.0</h1>
+                                                            <h1 class="pt-4">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</h1>
                                                             <p class="">out of 5</p>
                                                         </div>
                                                         <div>
@@ -980,7 +981,8 @@
                                                         your opinion of our space</h6>
 
                                                 </div>
-                                                <a class="btn main-btn9" href="/worker/review/{{$workspace->id}}"  style="align-items:center ;">Post A Review</a>
+                                                <a class="btn main-btn9" href="/worker/review/{{$workspace->id}}"
+                                                   style="align-items:center ;">Post A Review</a>
                                             </div>
                                         </div>
                                     </div>
