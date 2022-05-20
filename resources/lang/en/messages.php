@@ -47,5 +47,8 @@ return [
         'policies_restored'=>'policies restored successfully',
     ],'contactus' => [
         'contactus_created'=>'Thank you! We will reply soon',
+    ],'review' => [
+        'review_created'=>'Thank you! Your review added successfully',
+        'review_repeated'=>'You review for this workspace before',
     ],
 ];

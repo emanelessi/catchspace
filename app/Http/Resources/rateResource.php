@@ -17,9 +17,14 @@ class rateResource extends JsonResource
 
         return [
             'id'=>$this->id,
-            'work_space_id'=>$this->work_space_id,
-            'mac_address'=>$this->mac_address,
+            'title'=>$this->title,
             'rate'=>$this->rate,
+            'message'=>$this->message,
+            'mac_address'=>$this->mac_address,
+            'is_back'=>$this->is_back,
+            'tips'=>$this->tips,
+            'work_space_id'=>$this->work_space_id,
+
         ];
     }
 }
