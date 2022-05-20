@@ -496,7 +496,7 @@
                 <div class="row">
                     <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
                         <div class="col-lg-6   pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                            <h1 style="color:#FFC107 ">Lego</h1>
+                            <h1 style="color:#FFC107 ">{{$workspace->name}}</h1>
                             <h6 style="color:  #BBBBBB ;">
                                 <svg style="color:#6B60E6;  margin-bottom: 4px;" xmlns="http://www.w3.org/2000/svg"
                                      width="14" height="14" fill="currentColor" class="bi bi-geo-alt-fill"
@@ -504,7 +504,7 @@
                                     <path
                                         d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                                 </svg>
-                                Universities Street, Lego Building
+                                {{$workspace->location}}
                             </h6>
                             <h4 style="color:#6B60E6; margin-top: 35px; ">Overview</h4>
                             <p style=" color:#717171; font-size: px; font-weight: 400;">
@@ -974,13 +974,13 @@
                                                     <h5 style="color: #fff; text-align: center; margin-top: 20px;">Are
                                                         You A
                                                         Member Of
-                                                        Lego</h5>
+                                                        {{$workspace->name}}</h5>
                                                     <h6 style="color:  #6B60E6; text-align: center;">We are interested
                                                         in
                                                         your opinion of our space</h6>
 
                                                 </div>
-                                                <a class="btn main-btn9" href="{{ route('workerReview') }}" style="align-items:center ;">Post A Review</a>
+                                                <a class="btn main-btn9" href="/worker/review/{{$workspace->id}}"  style="align-items:center ;">Post A Review</a>
                                             </div>
                                         </div>
                                     </div>

@@ -15,10 +15,15 @@ class CreateRatingsTable extends Migration
     {
         Schema::create('ratings', function (Blueprint $table) {
             $table->id();
+            $table->text('title');
+            $table->double('rate');
+            $table->ipAddress('mac_address');
+            $table->longText('message');
+            $table->boolean('is_back');
+            $table->longText('tips');
             $table->unsignedBigInteger('work_space_id');
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
-            $table->ipAddress('mac_address');
-            $table->double('rate');
+
             $table->softDeletes();
             $table->timestamps();
         });

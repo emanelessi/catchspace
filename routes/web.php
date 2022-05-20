@@ -65,7 +65,10 @@ Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::c
 Route::get('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'resetpassword'])->name('workerResetpassword');
 Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
 Route::get('/worker/workspace', [\App\Http\Controllers\WorkerController::class, 'workspace'])->name('workerWorkspace');
-Route::get('/worker/review', [\App\Http\Controllers\WorkerController::class, 'review'])->name('workerReview');
+Route::get('/worker/review/{id}', [\App\Http\Controllers\WorkerController::class, 'review'])->name('workerReview');
+Route::post('/worker/review', [\App\Http\Controllers\WorkerController::class, 'storereview'])->name('workerReviewStore');
+
+
 Route::get('/worker/workspace-details/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacedetails']);
 
 Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');
@@ -75,9 +78,8 @@ Route::get('/worker/about-us', [\App\Http\Controllers\WorkerController::class, '
 
 Route::get('/search/workspace', [\App\Http\Controllers\WorkerController::class, 'simplesearch'])->name('simplesearch');
 
-Route::get('/review', function () {
-    return view('publicSite.review');
-});
+
+
 Route::get('/workspace-details', function () {
     return view('publicSite.workspaceDetails');
 });

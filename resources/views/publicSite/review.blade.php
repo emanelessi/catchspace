@@ -9,7 +9,7 @@
         }
 
         body {
-            font-family: "roboto",'sans-serif';
+            font-family: "roboto", 'sans-serif';
 
 
         }
@@ -72,7 +72,7 @@
             height: 500px;
             width: 850px;
             margin-top: 50px;
-            margin-left: 190px;
+            /*margin-left: 190px;*/
         }
 
         #hero .animated {
@@ -269,7 +269,7 @@
         .star .rimg {
             width: 375px;;
             height: 463px;
-            margin-left: 150px;
+            /*margin-left: 150px;*/
             margin-top: 50px;
 
         }
@@ -295,7 +295,6 @@
 
         .textrating textarea {
             border-radius: 15px;
-            width: 1120px;
             border: 0;
             margin-bottom: 30px;
             font-size: 12px;
@@ -324,17 +323,17 @@
 
 
         .rateLike {
-            width: 800px;
-            height: 90px;
+            /*width: 800px;*/
+            /*height: 90px;*/
             text-align: center;
-            margin-left: 180px;
+            /*margin-left: 180px;*/
             margin-top: 40px;
             border-radius: 5px;
             align-items: center;
         }
 
         #like {
-            font-size: 24px;
+            font-size: 19px;
             font-family: 'roboto';
             font-weight: 600;
             color: #fff;
@@ -387,7 +386,7 @@
             transition: 0.5s;
             margin-top: 20px;
             align-items: center;
-            margin-left: 450px;
+            /*margin-left: 450px;*/
             margin-bottom: 30px;
 
             color: #fff;
@@ -405,108 +404,133 @@
 
     @include('publicSite.layouts.header-1')
     <div class="container">
-        <div id="hero1" class="d-flex align-items-center row">
-            <div class="  col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h1>Hiring Smarter<br>With Real Reviews</h1>
-                <h2>In A Place Full Of Beautiful Nature We Convene Online
-                    <br> Freelancers,Designers, Developers, And Startup Founders
-                    <br> Under One Roof To Share Ideas.</h2>
-                <div><input type="submit" value="Write Review" class="btn-get-started scrollto"/></div>
+        <div class="row d-flex">
+            <div id="hero1" class="col-lg-6 align-items-center ">
+                <div class="   pt-3  justify-content-center">
+                    <h1>Hiring Smarter<br>With Real Reviews</h1>
+                    <h2>In A Place Full Of Beautiful Nature We Convene Online
+                        <br> Freelancers,Designers, Developers, And Startup Founders
+                        <br> Under One Roof To Share Ideas.</h2>
+                    <div>
+                        <a href="#review" class="btn-get-started scrollto" style="text-decoration: none">
+                            Write Review
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
                 <img src="{{asset('../img/review.png')}}" class="img-fluid animated" alt="">
             </div>
         </div>
     </div>
-
     <!--end hero-->
 
     <!--star review-->
 
-
-    <section id="star" class="star">
-        <div class="container" data-aos="fade-up">
-            <div class="row">
-                <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                    <img src="{{asset('../img/lego.png')}}" class=" rimg img-fluid" alt="">
-                </div>
-                <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                    <h3>So What Do You Think ?</h3>
-                    <p class="t">
-                        Your Review Of Lego Really Helps All
-                        <br> Of Us-Thank You!
-                    </p>
-                    <p class="r">
-                        Your Overall Rating Of This Coworking Space
-                    </p>
-                    <a class="btn" id="D">Click on stars to rate</a>
-                    <div class="rating">
-                        <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-                        <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-                        <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-                        <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-                        <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="textrating" class="textrating">
-        <div class="container">
-            <div class="form">
+    <form action="{{route('workerReviewStore')}}" method="post" id="review">
+        @csrf
+        <section id="star" class="star">
+            <div class="container" data-aos="fade-up">
                 <div class="row">
-                    <div class="col-md-6 form-group">
-                        <div class="form-group mt-3">
-                            <label id="Label">Title Of Your Review</label>
-                            <textarea class="form-control" name="message" rows="5"
-                                      placeholder="Summarize Your Visit Or Highlight An Interesting Detail . . ."
-                                      required></textarea>
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <div class="form-group mt-3">
-                                <label id="Label"> Your Review</label>
-                                <textarea class="form-control" name="message" rows="5"
-                                          placeholder="Tell People About Your Experiance . . ." required></textarea>
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                        <img src="{{'/storage/'.$workspace->image}}" class=" rimg img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                        <h3>So What Do You Think ?</h3>
+                        <p class="t">
+                            Your Review Of {{$workspace->name}} Really Helps All
+                            <br> Of Us-Thank You!
+                        </p>
+                        <p class="r">
+                            Your Overall Rating Of This Coworking Space
+                        </p>
+                        <a class="btn" id="D">Click on stars to rate</a>
 
-                            </div>
-                            <div class="container"></div>
-                            <div id="rateLike" class="rateLike p-3 align-items-center"
-                                 style=" background: #6B60E6; margin-top: 40px;">
-                                <p id="like">When You're In Gaza Again, Would You Go Back To Lego Workspace ?</p>
-                                <a class="btn" id="c">Yes
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
-                                         class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
-                                    </svg>
-                                </a>
-                                <a class="btn" id="cr">No
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
-                                         class="bi bi-emoji-frown-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm-2.715 5.933a.5.5 0 0 1-.183-.683A4.498 4.498 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.498 3.498 0 0 0 8 10.5a3.498 3.498 0 0 0-3.032 1.75.5.5 0 0 1-.683.183zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
-                                    </svg>
-                                </a>
-                            </div>
+                        <div class="rating">
+                            <input type="radio" name="rate" value="5" id="5"><label for="5">☆</label>
+                            <input type="radio" name="rate" value="4" id="4"><label for="4">☆</label>
+                            <input type="radio" name="rate" value="3" id="3"><label for="3">☆</label>
+                            <input type="radio" name="rate" value="2" id="2"><label for="2">☆</label>
+                            <input type="radio" name="rate" value="1" id="1"><label for="1">☆</label>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 form-group">
-                <div class="form-group mt-3 ">
-                    <label id="Label1"> Add A Tip To Help Coworker Still In</label>
-                    <textarea class="form-control" name="message" rows="5"
-                              placeholder="There Is A Place To Host Visitors"
-                              required></textarea>
+        </section>
+
+        <section id="textrating" class="textrating">
+            <div class="container">
+                <div class="form">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                    {{ session()->get('success') }}
+                                </div>
+                            @endif
+
+
+                            <div class="form-group mt-3">
+                                <label id="Label">Title Of Your Review</label>
+                                <textarea class="form-control" name="title" rows="5"
+                                          placeholder="Summarize Your Visit Or Highlight An Interesting Detail . . ."
+                                          required></textarea>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="form-group mt-3">
+                                    <label id="Label"> Your Review</label>
+                                    <textarea class="form-control" name="message" rows="5"
+                                              placeholder="Tell People About Your Experiance . . ." required></textarea>
+
+                                </div>
+                                <div class="container"></div>
+                                <div id="rateLike" class="rateLike p-3 align-items-center"
+                                     style=" background: #6B60E6; margin-top: 40px;">
+                                    <p id="like">When You're In Gaza Again, Would You Go Back To {{$workspace->name}}
+                                        Workspace ?</p>
+                                    <div id="cr">
+
+                                        <input class="btn" type="radio" name="is_back" value="1"/>Yes
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                             fill="currentColor"
+                                             class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+                                        </svg>
+                                    </div>
+                                    <div id="cr" style="margin-left: 157px;
+    margin-top: -21px;">
+                                        <input class="btn" type="radio" name="is_back" value="0">No
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                             fill="currentColor"
+                                             class="bi bi-emoji-frown-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm-2.715 5.933a.5.5 0 0 1-.183-.683A4.498 4.498 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.498 3.498 0 0 0 8 10.5a3.498 3.498 0 0 0-3.032 1.75.5.5 0 0 1-.683.183zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <div class="form-group mt-3 ">
+                        <label id="Label1"> Add A Tip To Help Coworker Still In</label>
+                        <textarea class="form-control" name="tips" rows="5"
+                                  placeholder="There Is A Place To Host Visitors"
+                                  required></textarea>
+                        <input type="hidden" name="work_space_id" value="{{$workspace->id}}">
+                    </div>
+                </div>
+                <div class="container">
+                    <input type="submit" name="submit" value="Post Your Review" class="btns align-items-center "/>
                 </div>
             </div>
-            <div class="container">
-                <input type="submit" value="Post Your Review" class="btns align-items-center "/>
-            </div>
-        </div>
-    </section>
 
 
+        </section>
+
+    </form>
 @endsection
 
 {{--@section('js')--}}
