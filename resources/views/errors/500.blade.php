@@ -22,16 +22,6 @@
             line-height: 137.5%;
         }
 
-        .submit-btn {
-            border-color: #5AB25E;
-            background: #5AB25E;
-            border-radius: 3px !important;
-            align-items: center;
-            font-family: 'Montserrat', sans-serif !important;
-            font-size: 15px;
-            color: #FFFFFF;
-        }
-
     </style>
     <body class=" login" style="background-color: white !important;">
     <div class="logo margin-top-10 margin-bottom-40 m-grid-col-lg-7 m-grid-col-md-12 m-grid-col-xs-9 header">

@@ -16,8 +16,8 @@
         }
 
         .submit-btn {
-            border-color: #5AB25E;
-            background: #5AB25E;
+            border-color: #5AB25E !important;
+            background: #5AB25E !important;
             border-radius: 3px !important;
             align-items: center;
             font-family: 'Montserrat', sans-serif !important;
