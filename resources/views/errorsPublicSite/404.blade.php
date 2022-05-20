@@ -17,20 +17,21 @@ font-size: 40px;
         404: The page you are looking for isn’t here
     </div>
     <div class="logo margin-top-10 m-grid-col-lg-9 m-grid-col-md-12 m-grid-col-xs-12">
-        <img src="{{asset('assets/pages/img/login/404-page.png')}}" class="center-block img-responsive
+        <img src="{{asset('assets/pages/img/login/404-page-public.png')}}" class="center-block img-responsive
              m-grid-col-lg-9 m-grid-col-md-12 m-grid-col-xs-12  " alt="">
 
         <button class="btn blue m-grid-col-lg-offset-5 m-grid-col-md-offset-5 m-grid-col-xs-offset-4 margin-top-15 center-block "
                 onclick="window.location='{{url('/')}}'"
                 style="
-                           border-color:#5AB25E;
-                                background: #5AB25E;
+                                border-color: #D9368B;
+                                background: #D9368B;
                             border-radius: 3px !important;
                             align-items: center;
 font-family: 'Montserrat', sans-serif !important;
-                                                        font-size: 15px;
+                                                       font-size: 15px;
 
                             color: #FFFFFF;
+
                             ">
             <i class="fa fa-arrow-left"></i>
 

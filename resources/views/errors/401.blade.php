@@ -10,10 +10,8 @@
     <body class=" login" style="background-color: white !important;">
     <div class="logo margin-top-10 margin-bottom-40 m-grid-col-lg-7 m-grid-col-md-12 m-grid-col-xs-9" style="
     color: #343A40;
-font-family: AvenirLTStd-Book;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 44px;
+font-family: 'Montserrat', sans-serif !important;
+ font-size: 40px;
     line-height: 137.5%;
 ">
         401: No Authorization found
@@ -23,10 +21,8 @@ font-family: AvenirLTStd-Book;
              m-grid-col-lg-9 m-grid-col-md-12 m-grid-col-xs-12  " alt="">
         <div class="logo margin-top-10 m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-9" style="
     color: #343A40;
-font-family: AvenirLTStd-Book;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
+font-family: 'Montserrat', sans-serif !important;
+  font-size: 25px;
     line-height: 137.5%;
 ">
             This page is not publically available, to access it please to login first
@@ -37,13 +33,12 @@ font-family: AvenirLTStd-Book;
             onclick="window.location='{{url('/')}}'"
 
             style="
-                              border-color: #E93B77;
-                                background: #E93B77;
+                              border-color:#5AB25E;
+                                background: #5AB25E;
                             border-radius: 3px !important;
                             align-items: center;
-font-family: AvenirLTStd-Book;
-                            font-style: normal;
-                            font-size: 16px;
+font-family: 'Montserrat', sans-serif !important;
+                            font-size: 15px;
                             color: #FFFFFF;
                             ">
             <i class="fa fa-arrow-left"></i>

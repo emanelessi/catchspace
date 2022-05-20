@@ -11,18 +11,18 @@
     <div class="logo margin-top-10 margin-bottom-40 m-grid-col-lg-7 m-grid-col-md-12 m-grid-col-xs-9" style="
     color: #343A40;
 font-family: 'Montserrat', sans-serif !important;
-font-size: 40px;
+  font-size: 40px;
     line-height: 137.5%;
 ">
         403 :Forbidden
     </div>
     <div class="logo margin-top-10 m-grid-col-lg-8 m-grid-col-md-11 m-grid-col-xs-12">
-        <img src="{{asset('assets/pages/img/login/403-page.png')}}" class="center-block img-responsive
+        <img src="{{asset('assets/pages/img/login/403-page-public.png')}}" class="center-block img-responsive
              m-grid-col-lg-9 m-grid-col-md-12 m-grid-col-xs-12  " alt="">
         <div class="logo margin-top-10 m-grid-col-lg-12 m-grid-col-md-12 m-grid-col-xs-9" style="
     color: #343A40;
 font-family: 'Montserrat', sans-serif !important;
-   font-size: 25px;
+font-size: 25px;
     line-height: 137.5%;
 ">
             You don't have permission to access this page
@@ -32,13 +32,13 @@ font-family: 'Montserrat', sans-serif !important;
             type="submit"
             onclick="window.location='{{url('/')}}'"
 
-            style=" border-color:#5AB25E;
-                                background: #5AB25E;
+            style="
+                            border-color: #D9368B;
+                                background: #D9368B;
                             border-radius: 3px !important;
                             align-items: center;
 font-family: 'Montserrat', sans-serif !important;
-                            font-style: normal;
-                                                       font-size: 15px;
+                                                    font-size: 15px;
 
                             color: #FFFFFF;
                             ">

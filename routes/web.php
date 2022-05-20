@@ -39,6 +39,19 @@ Route::get('/401', function () {
     return view('errors/401');
 });
 
+Route::get('public/404', function () {
+    return view('errorsPublicSite/404');
+});
+Route::get('public/403', function () {
+    return view('errorsPublicSite/403');
+});
+Route::get('public/500', function () {
+    return view('errorsPublicSite/500');
+});
+Route::get('public/401', function () {
+    return view('errorsPublicSite/401');
+});
+
 Auth::routes();
 
 Route::get('/email', function () {
