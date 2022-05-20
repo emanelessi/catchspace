@@ -66,6 +66,9 @@ Route::get('/reset', function () {
 Route::get('/confirm', function () {
     return view('auth.passwords.confirm');
 });
+Route::get('/worker/profile', function () {
+    return view('publicSite.profile');
+});
 
 Route::get('/worker/login', [\App\Http\Controllers\WorkerController::class, 'login'])->name('workerLogin');
 Route::post('/worker/login', [\App\Http\Controllers\WorkerController::class, 'check'])->name('workerCheck');

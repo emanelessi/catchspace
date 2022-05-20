@@ -1,5 +1,5 @@
 :root{
-  --blue-color:  #6B60E6;
+  --blue-color:  #6B60E6; 
   --yellow-color: hsl(45, 100%, 51%);
   --gray-color:#EFEEEF;
 }
@@ -16,13 +16,13 @@ body{
   width: 80px;
   height: 35px;
   padding-top: -50px;
-
+  
 }
 .main-btn1:hover{
     background-color:#e47db2;
     color: #EFEEEF;
   }
-
+  
 .navbar{
   background-color:  #6B60E6;;
 }
@@ -52,7 +52,7 @@ body{
 /* start contact us */
 
 .contact{
-
+ 
   position: relative;
   padding: 50px 100px;
   display: flex;
@@ -105,7 +105,7 @@ color: #FFC107;
 	padding-right: 0;
 	border-radius: 0;
 	background: none;
-
+	
 }
 .col-form-label {
 	color: #000;
@@ -134,7 +134,7 @@ color: #FFC107;
 	letter-spacing: .1rem;
 	font-family: roboto;
 	border-radius: 3px!important;
-
+	
 	}
   .contact-wrap {
     box-shadow: 0 0px 20px 0 rgba(black, .2);
@@ -194,6 +194,8 @@ label.error {
 	font-size: 12px;
 	color: #000;
 }
+    
+  
 
 
 
@@ -205,7 +207,5 @@ label.error {
 
 
 
-
-
-
+ 
 
