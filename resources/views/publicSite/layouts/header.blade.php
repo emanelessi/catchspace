@@ -1,7 +1,7 @@
 <div class="hero-container" data-aos="fade-up">
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('workerHome') }}">
+            <a href="{{ route('workerHome') }}">
 
                 <button
                     class="navbar-toggler"
@@ -35,8 +35,10 @@
                     <li class="nav-item">
                         <a class="nav-link p-2 p-lg-3" href="{{ route('workerLogin') }}" style="margin-left: 200px;">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary1 main-btn1 " id="R" href="{{ route('workerSignup') }}">Sign up</a>
+                    </li>
                 </ul>
-                <a class="btn btn-primary1 main-btn1 " id="R" href="{{ route('workerSignup') }}">Sign up</a>
             </div>
         </div>
     </nav>
