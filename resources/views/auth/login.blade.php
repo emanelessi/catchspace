@@ -34,7 +34,7 @@
     ">
     <!-- BEGIN LOGO -->
     <div class="container">
-        <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link " href="{{ url('/') }}" style="
+        <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link " href="{{ url('/dashboard') }}" style="
 font-family: 'Montserrat', sans-serif !important;
 font-style: normal;
 font-weight: normal;
@@ -47,7 +47,7 @@ font-size: 16px;
         </a>
     </div>
     <!-- BEGIN LOGIN -->
-    <a class=" m-grid-col-xs-offset-2 " href="{{ url('/') }}">
+    <a class=" m-grid-col-xs-offset-2 " href="{{ url('/dashboard') }}">
         <img class=" img-responsive m-grid-col-lg-offset-5-5  margin-bottom-5
         m-grid-col-md-offset-5 m-grid-col-xs-offset-4 " style=" height: 47px;"
              src="../assets/pages/img/login/catchspace-logo.png"/>

@@ -11,6 +11,15 @@
         color: whitesmoke !important;
     }
 
+    a.nav-link:focus, a.nav-link:hover {
+        outline: 0;
+        background-color: #E93A76;
+        border-radius: 10px !important;
+        height: 45px;
+        width: 200px ;
+    ;
+    }
+
     /*.nav-item:active {*/
     /*    background-color:#E93B77!important;*/
     /*    color: #fffffc!important;*/
@@ -30,7 +39,7 @@
                     <li class="nav-item @if(preg_match('/home/i',url()->current())) start active open select_color @endif"
                         style="margin-bottom: 15px;">
                         <a href="{{url('admin/home')}}" class="nav-link nav-toggle margin-left-10" style="
-]   font-family: 'Montserrat', sans-serif;
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 15px;
     line-height: 27px;
@@ -62,7 +71,7 @@
                     <li class="nav-item @if(preg_match('/role/i',url()->current())) start active open select_color @endif"
                         style="margin-bottom: 15px;">
                         <a href="{{url('/admin/role')}}" class="nav-link nav-toggle margin-left-10" style="
-]   font-family: 'Montserrat', sans-serif;
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 15px;
     line-height: 27px;
@@ -79,7 +88,7 @@
                     <li class="nav-item @if(preg_match('/provider/i',url()->current())) start active open select_color @endif"
                         style="margin-bottom: 15px;">
                         <a href="{{url('/provider/home')}}" class="nav-link nav-toggle margin-left-10" style="
-]   font-family: 'Montserrat', sans-serif;
+   font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 15px;
     line-height: 27px;

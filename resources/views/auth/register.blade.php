@@ -91,7 +91,7 @@
             <div class="col-md-6 bs-reset mt-login-5-bsfix" style="
          height: 768px; background-color: #28282B;
             background-image: linear-gradient(#28282B, #0B0A0A);">
-                <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/') }}">
+                <a class=" m-grid-col-lg-offset-1 m-grid-col-md-offset-1 m-grid-col-xs-offset-1 " href="{{ url('/dashboard') }}">
                     <img class="margin-top-20 " src="../assets/pages/img/login/catchspace-logo.png" style="
     width: 145px;
 "/>

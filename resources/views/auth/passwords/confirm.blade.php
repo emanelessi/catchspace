@@ -1,53 +1,3 @@
-{{--@extends('layouts.app')--}}
-
-{{--@section('content')--}}
-{{--<div class="container">--}}
-{{--    <div class="row justify-content-center">--}}
-{{--        <div class="col-md-8">--}}
-{{--            <div class="card">--}}
-{{--                <div class="card-header">{{ __('Confirm Password') }}</div>--}}
-
-{{--                <div class="card-body">--}}
-{{--                    {{ __('Please confirm your password before continuing.') }}--}}
-
-{{--                    <form method="POST" action="{{ route('password.confirm') }}">--}}
-{{--                        @csrf--}}
-
-{{--                        <div class="row mb-3">--}}
-{{--                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>--}}
-
-{{--                            <div class="col-md-6">--}}
-{{--                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">--}}
-
-{{--                                @error('password')--}}
-{{--                                    <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                                @enderror--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="row mb-0">--}}
-{{--                            <div class="col-md-8 offset-md-4">--}}
-{{--                                <button type="submit" class="btn btn-primary">--}}
-{{--                                    {{ __('Confirm Password') }}--}}
-{{--                                </button>--}}
-
-{{--                                @if (Route::has('password.request'))--}}
-{{--                                    <a class="btn btn-link" href="{{ route('password.request') }}">--}}
-{{--                                        {{ __('Forgot Your Password?') }}--}}
-{{--                                    </a>--}}
-{{--                                @endif--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </form>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-{{--@endsection--}}
-
 
 @extends('layouts.provider.loginApp')
 
@@ -68,7 +18,7 @@
     <!-- BEGIN LOGO -->
     <div class="container">
         <a class="navbar-brand m-grid-col-md-3 m-grid-col-xs-12 m-grid-col-lg-2 nav-link "
-           href="{{ url('/') }}" style="
+           href="{{ url('/dashboard') }}" style="
 font-family: 'Montserrat', sans-serif !important;
 font-style: normal;
 font-weight: normal;
@@ -81,7 +31,7 @@ font-size: 16px;
         </a>
     </div>
     <!-- BEGIN LOGIN -->
-    <a class=" m-grid-col-xs-offset-2 " href="{{ url('/') }}">
+    <a class=" m-grid-col-xs-offset-2 " href="{{ url('/dashboard') }}">
         <img class=" img-responsive m-grid-col-lg-offset-5-5  margin-bottom-5
         m-grid-col-md-offset-5 m-grid-col-xs-offset-4 " style=" height: 47px;"
              src="../assets/pages/img/login/catchspace-logo.png"/>

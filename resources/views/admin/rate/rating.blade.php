@@ -53,7 +53,7 @@
             border-radius: 5px !important;
             font-family: 'Montserrat', sans-serif !important;
             font-weight: normal;
-        !important font-size: 12 px !important;
+            font-size: 12 px !important;
             color: #292D32 !important;
             width: 97px !important;
             height: 29px !important;
@@ -191,9 +191,17 @@
                                         <th class="table-th"> #
                                         </th>
                                         {{--                                    <th class="table-th"> Work Space</th>--}}
+                                        <th class="table-th"> Title
+                                        </th>
                                         <th class="table-th"> Mac Address
                                         </th>
+                                        <th class="table-th"> Message
+                                        </th>
+                                        <th class="table-th"> Is Back
+                                        </th>
                                         <th class="table-th"> Rate
+                                        </th>
+                                        <th class="table-th"> Tips
                                         </th>
 
                                     </tr>
@@ -201,13 +209,14 @@
                                     <tbody>
                                     @foreach($raters as $myrate)
                                         <tr>
-                                            <td class="table-td"> {{$myrate->id}}
-                                            </td>
+                                            <td class="table-td"> {{$myrate->id}}</td>
+                                            <td class="table-td"> {{$myrate->title}}</td>
                                             {{--                                        <td class="table-td">{{$myrate->workSpace->name}}</td>--}}
-                                            <td class="table-td"> {{$myrate->mac_address}}
-                                            </td>
-                                            <td class="table-td"> {{$myrate->rate}}
-                                            </td>
+                                            <td class="table-td"> {{$myrate->mac_address}}</td>
+                                            <td class="table-td"> {{$myrate->message}}</td>
+                                            <td class="table-td"> {{$myrate->is_back}}</td>
+                                            <td class="table-td"> {{$myrate->rate}}</td>
+                                            <td class="table-td"> {{$myrate->tips}}</td>
                                         </tr>
                                     @endforeach
 
@@ -230,11 +239,17 @@
                                     <thead>
                                     <tr style="border-bottom: 1.2px solid #978D8D;">
                                         <th class="table-th"> #
+                                        </th><th class="table-th"> Title
                                         </th>
-                                        {{--                                    <th class="table-th"> Work Space</th>--}}
                                         <th class="table-th"> Mac Address
                                         </th>
+                                        <th class="table-th"> Message
+                                        </th>
+                                        <th class="table-th"> Is Back
+                                        </th>
                                         <th class="table-th"> Rate
+                                        </th>
+                                        <th class="table-th"> Tips
                                         </th>
 
                                     </tr>
@@ -242,13 +257,14 @@
                                     <tbody>
                                     @foreach($raters as $myrate)
                                         <tr>
-                                            <td class="table-td"> {{$myrate->id}}
-                                            </td>
+                                            <td class="table-td"> {{$myrate->id}}</td>
+                                            <td class="table-td"> {{$myrate->title}}</td>
                                             {{--                                        <td class="table-td">{{$myrate->workSpace->name}}</td>--}}
-                                            <td class="table-td"> {{$myrate->mac_address}}
-                                            </td>
-                                            <td class="table-td"> {{$myrate->rate}}
-                                            </td>
+                                            <td class="table-td"> {{$myrate->mac_address}}</td>
+                                            <td class="table-td"> {{$myrate->message}}</td>
+                                            <td class="table-td"> {{$myrate->is_back}}</td>
+                                            <td class="table-td"> {{$myrate->rate}}</td>
+                                            <td class="table-td"> {{$myrate->tips}}</td>
                                         </tr>
                                     @endforeach
 
