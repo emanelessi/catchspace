@@ -11,17 +11,15 @@
         }
 
         body {
-            font-family: "roboto", " sans-serif";
-
+            font-family: "roboto", sans-serif !important;
 
         }
 
 
         #hero {
             width: 100%;
-            height: 100vh;
-            background: url("../img/works.png");
-
+            height: 720px;
+            background: url("{{asset('../img/worker.png')}}");
             background-size: cover;
             position: relative;
             padding: 0;
@@ -35,7 +33,7 @@
 
         #hero1 h1 {
             padding-top: 70px;
-            font-family: roboto;
+            font-family: 'roboto';
             margin: 0;
             font-size: 52px;
             font-weight: 700;
@@ -47,7 +45,7 @@
 
 
             padding-top: 10px;
-            font-family: roboto;
+            font-family: 'roboto';
             line-break: initial;
             margin: 0;
             font-size: 56px;
@@ -61,7 +59,7 @@
             padding-bottom: 10px;
             margin-left: 2px;
             color: #545454;
-            font-family: roboto;
+            font-family: 'roboto';
             font-weight: 600 !important;
             font-size: 16px;
 
@@ -89,7 +87,7 @@
             text-align: center;
             border-radius: 10px;
             background: #fff;
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             padding: 2px 20px;
 
             width: 100%;
@@ -110,7 +108,7 @@
 
 
         #hero1 .btn-get-started {
-            font-family: roboto;
+            font-family: 'roboto';
             font-weight: 500;
             font-size: 16px;
             letter-spacing: 1px;
@@ -184,7 +182,7 @@
         #hero2 h2 {
             padding-top: 100px;
 
-            font-family: roboto;
+            font-family: 'roboto';
             margin: 0;
             font-size: 30px;
             font-weight: 700;
@@ -319,7 +317,7 @@
         }
 
         .star .content h3 {
-            margin-top: 0px;
+            margin-top: 0;
             font-weight: 600;
             font-size: 32px;
             color: #000000;
@@ -349,15 +347,15 @@
             width: 450px;;
             height: 250px;
             margin-left: 10px;
-            margin-top: 0px;
+            margin-top: 0;
 
         }
 
 
         .main-btn2 {
             font-size: 14px;
-            font-family: roboto;
-            font-weight: 100px;
+            font-family: 'roboto';
+            font-weight: 100;
             text-align: center;
             color: #ffffff;
             background-color: #D9368B;
@@ -411,7 +409,7 @@
 
 
         .container .sh {
-            box-shadow: 0px 5px 6px 0px rgba(110, 123, 131, 0.1);
+            box-shadow: 0 5px 6px 0 rgba(110, 123, 131, 0.1);
             margin-top: 5px;
             height: 300px;
             background-color: white;
@@ -430,8 +428,11 @@
             top: 96px;
             left: 880px;
         }
-        .filter-bar{
-            background-color: #6B60E6;  height: 80px; padding-bottom: 10px;
+
+        .filter-bar {
+            background-color: #6B60E6;
+            height: 80px;
+            padding-bottom: 10px;
         }
 
         @media only screen and (max-width: 600px) {
@@ -442,11 +443,11 @@
                 left: 160px;
                 z-index: -1;
             }
-            .filter-bar{
+
+            .filter-bar {
                 height: 232px;
             }
         }
-
 
     </style>
 
@@ -477,50 +478,53 @@
             " method="get" action="{{ route('simplesearch') }}" role="form" class="php-email-form col-4">
                             @csrf
                             <div class="search d-flex"><input id="search" style="border:0" type="text" name="search"
-                                                       required="">
+                                                              required="">
                                 <input type="submit" class=" btn main-btn3" value="Search"></div>
                         </form>
 
                         <div id="box" class=" box ">
                             <div class="row">
-                            <div class="col-xl-4 d-flex mt-5 align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         class="bi bi-check2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                    <h5>Annually</h5>
+                                <div class="col-xl-4 d-flex mt-5 align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             fill="currentColor"
+                                             class="bi bi-check2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        <h5>Annually</h5>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex mt-5  align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             fill="currentColor"
+                                             class="bi bi-check2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        <h5>Monthly</h5>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 mt-5 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             fill="currentColor"
+                                             class="bi bi-check2" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                        </svg>
+                                        <h5>Daily</h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 d-flex mt-5  align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         class="bi bi-check2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                    <h5>Monthly</h5>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 mt-5 d-flex align-items-stretch">
-                                <div class="icon-box mt-4 mt-xl-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                         class="bi bi-check2" viewBox="0 0 16 16">
-                                        <path
-                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                    <h5>Daily</h5>
-                                </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6  order-1 order-lg-2  " data-aos="zoom-in" data-aos-delay="150">
-                    <img src="{{asset('../img/work.png')}}"
-                         class="img-fluid animated work-img" alt="">
-                </div>
+                {{--                <div class="col-lg-6  order-1 order-lg-2  " data-aos="zoom-in" data-aos-delay="150">--}}
+                {{--                    <img src="{{asset('../img/worker.png')}}"--}}
+                {{--                         class="img-fluid animated work-img" alt="">--}}
+                {{--                </div>--}}
             </div>
         </div>
         <div class="input-field third-wrap">
@@ -539,9 +543,9 @@
                 </div>
             </div>
 
-                <div class="cheak1 filter-bar  d-flex align-items-center "
-                    >
-                    <div class="row  align-items-center">
+            <div class="cheak1 filter-bar  d-flex align-items-center "
+            >
+                <div class="row  align-items-center">
 
 
                     <h6 class="col-md-2">Looking For ?</h6>
@@ -580,7 +584,7 @@
                     <div class="   col-lg-12  sh shadow d-flex align-items-center" data-aos="fade-right"
                          data-aos-delay="100">
                         <div class="col-lg-4">
-                        <img src="{{'/storage/'.$workspace->image}}" class="    rimg img-fluid" alt="">
+                            <img src="{{'/storage/'.$workspace->image}}" class="    rimg img-fluid" alt="">
                         </div>
                         <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                             <h3><a href="/worker/workspace-details/{{$workspace->id}}"
@@ -601,14 +605,117 @@
                                     <span style="color:#BBBBBB; font-size:12px">{{$workspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>
                                 </div>
                             </div>
-                            <a class="btn main-btn2" id="D">ENQUIRE NOW</a>
+                            <a class="btn main-btn2" id="D" data-target="#responsive"
+                               data-toggle="modal">ENQUIRE NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="responsive" class="modal fade" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content ">
+                        <div>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class=" text-center" style="align-items: center;justify-content: space-between;
+                                padding: 1rem 1rem;border-bottom: 1px solid #e5e5e5;margin-left: 33px;
+                                margin-right: 52px; font-family: 'roboto', sans-serif !important; ">
+                                Share Your Requirements</h4>
+                        </div>
+                        <h5 class="text-center" style="color:#6B60E6; font-family: 'roboto', sans-serif !important; ">We
+                            will Get Back To You With The Guaranteed<br> Best Pricing And
+                            Advailability </h5>
+                        <div class="modal-body">
+                            <div class="scroller" style="height:350px" data-always-visible="1" data-rail-visible1="1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div>
+                                            <input type="text" placeholder="First Name" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Last Name" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="Company Email" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Company Name" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="Phone Number" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Dedicated Desk" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="1 Person" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Estimated Start Date" class="col-md-5 "
+                                                   style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="1" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Months" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="Add..." class="col-md-11 " style="height: 80px;
+                                                                margin: 0 20px 10px 20px; width: 409px;
+                                                                background-color: #fff;
+                                                                border: 1px solid #c2cad8;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="text-align: right;display: flex;flex-wrap: wrap;flex-shrink: 0;
+                                 align-items: center;justify-content: flex-end;padding: 0.75rem;">
+                                <button type="button" data-dismiss="modal" class="btn dark btn-outline main-btn2"
+                                        style="background-color:#6B60E6;font-family: 'roboto', sans-serif !important;  margin-right: 20px">
+                                    Close
+                                </button>
+                                <button type="button" class="btn green main-btn2"
+                                        style="background-color: #ffc105;font-family: 'roboto', sans-serif !important;  margin-right: 33px">
+                                    Save changes
+                                </button>
+                            </div>
+
+                        </div>
+                        <div
+                            style="border-top: 1px solid #e5e5e5;  font-family: 'roboto', sans-serif !important;  margin-left: 33px;     margin-right: 52px;">
+                            <p class="text-center">By completing You Accept The Catch Space<br> <span
+                                    style="color:#6B60E6;">Terms Of Use</span> And <span style="color: #ffc105;">Privacy Policy</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     @endforeach
-
 
 @endsection
 
