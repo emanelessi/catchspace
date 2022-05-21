@@ -9,7 +9,7 @@
         }
 
         body {
-            font-family: "roboto",sans-serif !important;
+            font-family: "roboto", sans-serif !important;
         }
 
         .main-btn1 {
@@ -96,7 +96,7 @@
             background: #fff;
             border-radius: 10px;
             height: 80px;
-            box-shadow: 0.625erm, .937erm, rgba(105, 105, 105, 0.001);
+            box-shadow: 0.625 erm, .937 erm, rgba(105, 105, 105, 0.001);
             position: relative;
         }
 
@@ -428,7 +428,7 @@
         <div id="hero1" class="d-flex align-items-center  row">
             <div class="col   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200">
                 <img src="{{asset('../img/legopage.png')}}" class="img-fluid animated" alt="">
-{{--                <img src="{{'/storage/'.$workspace->image}}" class="img-fluid animated" alt="">--}}
+                {{--                <img src="{{'/storage/'.$workspace->image}}" class="img-fluid animated" alt="">--}}
                 <div class="centered ">Find The Best Place To <br>Enjoy Your Time</div>
                 <div class="centered ">
                     <nav class="navbar navbar-expand-lg shadow " id="nav1">
@@ -535,10 +535,10 @@
                                     <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right"
                                          data-aos-delay="100">
                                         @foreach($workspace_type as $workspace_types)
-                                        <button class="btn main-btn5 shadow"
-                                                style="margin-right:30px ;margin-top: -90px;" >
-                                            {{$workspace_types->type}}
-                                        </button>
+                                            <button class="btn main-btn5 shadow"
+                                                    style="margin-right:30px ;margin-top: -90px;">
+                                                {{$workspace_types->type}}
+                                            </button>
                                         @endforeach
                                     </div>
                                 </div>
@@ -571,52 +571,52 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                        <th scope="row">
-                                        </th>
-                                        <td>
-                                            2
-                                        </td>
-                                        <td><a>1 Month</a></td>
-                                        <td>
-                                            ₪ 300
+                                            <th scope="row">
+                                            </th>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td><a>1 Month</a></td>
+                                            <td>
+                                                ₪ 300
 
-                                        </td>
-                                        <td>24 Hours</td>
-                                        <td>
-                                            <button class="btn main-btn7 shadow">Meeting room</button>
-                                        </td>
+                                            </td>
+                                            <td>24 Hours</td>
+                                            <td>
+                                                <button class="btn main-btn7 shadow">Meeting room</button>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        <th scope="row">
-                                        </th>
-                                        <td>
-                                            3
-                                        </td>
-                                        <td><a>1 Month</a></td>
-                                        <td>
-                                            ₪ 400
+                                            <th scope="row">
+                                            </th>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td><a>1 Month</a></td>
+                                            <td>
+                                                ₪ 400
 
-                                        </td>
-                                        <td>24 Hours</td>
-                                        <td>
-                                            <button class="btn main-btn7 shadow">Meeting room</button>
-                                        </td>
+                                            </td>
+                                            <td>24 Hours</td>
+                                            <td>
+                                                <button class="btn main-btn7 shadow">Meeting room</button>
+                                            </td>
                                         </tr>
                                         <tr>
-                                        <th scope="row">
-                                        </th>
-                                        <td>
-                                            4
-                                        </td>
-                                        <td><a>1 Month</a></td>
-                                        <td>
-                                            ₪ 400
+                                            <th scope="row">
+                                            </th>
+                                            <td>
+                                                4
+                                            </td>
+                                            <td><a>1 Month</a></td>
+                                            <td>
+                                                ₪ 400
 
-                                        </td>
-                                        <td>24 Hours</td>
-                                        <td>
-                                            <button class="btn main-btn7 shadow">Meeting room</button>
-                                        </td>
+                                            </td>
+                                            <td>24 Hours</td>
+                                            <td>
+                                                <button class="btn main-btn7 shadow">Meeting room</button>
+                                            </td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -632,7 +632,8 @@
                                 <div class="rating-text">
                                     <h5>Member Reviews </h5>
                                 </div>
-                                <span class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
+                                <span
+                                    class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
                                 <div class="stars">
                                     <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
                                          height="16"
@@ -680,7 +681,8 @@
                                         <h5 style="color: #6B60E6  ; ">₪210/mo </h5>
                                     </div>
                                     <div class="ratings">
-                                        <a class="btn main-btn6">ENQUIRE NOW</a>
+                                        <a class="btn main-btn6" data-target="#responsive"
+                                           data-toggle="modal">ENQUIRE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -722,7 +724,7 @@
                 </div>
                 <!--end section overview + pricing -->
                 <!-- start Meeting Room-->
-                <h4 style="color:#6B60E6; margin-top: 35px; margin-bottom:50px; " id="meetingRoom" >
+                <h4 style="color:#6B60E6; margin-top: 35px; margin-bottom:50px; " id="meetingRoom">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                          class="bi bi-bullseye" style="  margin-top:-4px;" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -744,7 +746,8 @@
                                     </ul>
                                     <h5 class="title"> Call Room, 4 People</h5>
                                     <div class="product-button-group">
-                                        <a class="btn main-btn6">ENQUIRE NOW</a>
+                                        <a class="btn main-btn6" data-target="#responsive"
+                                           data-toggle="modal">ENQUIRE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -757,9 +760,10 @@
                                 <div class="product-content">
                                     <ul class="rating">
                                     </ul>
-                                    <h5 class="title" > Call Room, 4 People</h5>
+                                    <h5 class="title"> Call Room, 4 People</h5>
                                     <div class="product-button-group">
-                                        <a class="btn main-btn6">ENQUIRE NOW</a>
+                                        <a class="btn main-btn6" data-target="#responsive"
+                                           data-toggle="modal">ENQUIRE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -774,7 +778,8 @@
                                     </ul>
                                     <h5 class="title"> Call Room,4 People</h5>
                                     <div class="product-button-group">
-                                        <a class="btn main-btn6">ENQUIRE NOW</a>
+                                        <a class="btn main-btn6" data-target="#responsive"
+                                           data-toggle="modal">ENQUIRE NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -789,27 +794,27 @@
                     </svg>
                     Amenities
                 </h4>
-                <section id="reviews" class="star" >
+                <section id="reviews" class="star">
                     <div class="container " data-aos="fade-up">
                         <div class="row">
                             <div class="  d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
                                 @foreach($workspace_services as $workspace_service)
-                                <h6 class=" col-sm-2 " id="ccc"
-                                    style="margin-top: -70px;   margin-bottom: 70px; color: #AAB2B1;">
-                                    <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left"
-                                         data-aos-delay="100">
-{{--                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
-{{--                                             fill="currentColor"--}}
-{{--                                             class="bi bi-wifi" style="margin-top:-6px ; margin-right:5px;"--}}
-{{--                                             viewBox="0 0 16 16">--}}
-{{--                                            <path--}}
-{{--                                                d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>--}}
-{{--                                            <path--}}
-{{--                                                d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>--}}
-{{--                                        </svg>--}}
-                                        {{$workspace_service->service->name}}
-                                    </div>
-                                </h6>
+                                    <h6 class=" col-sm-2 " id="ccc"
+                                        style="margin-top: -70px;   margin-bottom: 70px; color: #AAB2B1;">
+                                        <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left"
+                                             data-aos-delay="100">
+                                            {{--                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
+                                            {{--                                             fill="currentColor"--}}
+                                            {{--                                             class="bi bi-wifi" style="margin-top:-6px ; margin-right:5px;"--}}
+                                            {{--                                             viewBox="0 0 16 16">--}}
+                                            {{--                                            <path--}}
+                                            {{--                                                d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>--}}
+                                            {{--                                            <path--}}
+                                            {{--                                                d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>--}}
+                                            {{--                                        </svg>--}}
+                                            {{$workspace_service->service->name}}
+                                        </div>
+                                    </h6>
                                 @endforeach
                             </div>
                         </div>
@@ -1124,6 +1129,109 @@
                         </div>
                     </div>
                 </section>
+            </div>
+            <div id="responsive" class="modal fade" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content ">
+                        <div>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class=" text-center" style="align-items: center;justify-content: space-between;
+                                padding: 1rem 1rem;border-bottom: 1px solid #e5e5e5;margin-left: 33px;
+                                margin-right: 52px; font-family: 'roboto', sans-serif !important; ">
+                                Share Your Requirements</h4>
+                        </div>
+                        <h5 class="text-center" style="color:#6B60E6; font-family: 'roboto', sans-serif !important; ">We
+                            will Get Back To You With The Guaranteed<br> Best Pricing And
+                            Advailability </h5>
+                        <div class="modal-body">
+                            <div class="scroller" style="height:350px" data-always-visible="1" data-rail-visible1="1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div>
+                                            <input type="text" placeholder="First Name" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Last Name" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="Company Email" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Company Name" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="Phone Number" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Dedicated Desk" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="1 Person" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Estimated Start Date" class="col-md-5 "
+                                                   style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="1" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">
+                                            <input type="text" placeholder="Months" class="col-md-5 " style=" height: 40px;
+                                                                padding: 6px 12px;background-color: #ededed;
+                                                                border: 1px solid #efefef;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="Add..." class="col-md-11 " style="height: 80px;
+                                                                margin: 0 20px 10px 20px; width: 409px;
+                                                                background-color: #fff;
+                                                                border: 1px solid #c2cad8;
+                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="text-align: right;display: flex;flex-wrap: wrap;flex-shrink: 0;
+                                 align-items: center;justify-content: flex-end;padding: 0.75rem;">
+                                <button type="button" data-dismiss="modal" class="btn dark btn-outline main-btn2"
+                                        style="background-color:#6B60E6;font-family: 'roboto', sans-serif !important;  margin-right: 20px">
+                                    Close
+                                </button>
+                                <button type="button" class="btn green main-btn2"
+                                        style="background-color: #ffc105;font-family: 'roboto', sans-serif !important;  margin-right: 33px">
+                                    Save changes
+                                </button>
+                            </div>
+
+                        </div>
+                        <div
+                            style="border-top: 1px solid #e5e5e5;  font-family: 'roboto', sans-serif !important;  margin-left: 33px;     margin-right: 52px;">
+                            <p class="text-center">By completing You Accept The Catch Space<br> <span
+                                    style="color:#6B60E6;">Terms Of Use</span> And <span style="color: #ffc105;">Privacy Policy</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </section>
