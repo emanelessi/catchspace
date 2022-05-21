@@ -7,7 +7,10 @@ use App\Models\Rating;
 use App\Models\Worker;
 use App\Models\WorkerWorkSpace;
 use App\Models\WorkSpace;
+use App\Models\WorkSpaceAddons;
 use App\Models\WorkSpaceRating;
+use App\Models\WorkSpaceService;
+use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -113,7 +116,9 @@ class WorkerController extends Controller
     public function workspacedetails($id)
     {
         $workspace = WorkSpace::find($id);
-        return view('publicSite.workspaceDetails', compact('workspace'));
+        $workspace_type = WorkSpaceType::all();
+        $workspace_services=WorkSpaceService::all();
+        return view('publicSite.workspaceDetails', compact('workspace','workspace_type','workspace_services'));
     }
 
     public function contactus()

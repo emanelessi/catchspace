@@ -9,8 +9,7 @@
         }
 
         body {
-            font-family: "roboto" sans-serif;
-
+            font-family: "roboto",sans-serif !important;
         }
 
         .main-btn1 {
@@ -97,7 +96,7 @@
             background: #fff;
             border-radius: 10px;
             height: 80px;
-            box-shadow: 0.625 erm .937 erm rgba(105, 105, 105, 0.001);;
+            box-shadow: 0.625erm, .937erm, rgba(105, 105, 105, 0.001);
             position: relative;
         }
 
@@ -194,7 +193,7 @@
 
         .main-btn2 {
             font-size: 14px;
-            font-family: roboto;
+            font-family: 'roboto' !important;
             font-weight: 100px;
             text-align: center;
             color: #ffffff;
@@ -477,7 +476,6 @@
     </div>
     <!--end hero-->
 
-
     <section id="pic" class="pic">
         <div class="container" data-aos="fade-up">
             <div class="row">
@@ -508,7 +506,7 @@
                                 {{$workspace->location}}
                             </h6>
                             <h4 style="color:#6B60E6; margin-top: 35px; ">Overview</h4>
-                            <p style=" color:#717171; font-size: px; font-weight: 400;">
+                            <p style=" color:#717171;font-weight: 400;">
                                 In A Place Full Of Beautiful Nature We Convene Online
                                 Freelancers,Designers, Developers, And Startup Founders
                                 Under One Roof To Share Ideas, Code, And Build Brighter
@@ -536,27 +534,17 @@
                                 <div class="btn-toolbar ">
                                     <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right"
                                          data-aos-delay="100">
+                                        @foreach($workspace_type as $workspace_types)
                                         <button class="btn main-btn5 shadow"
-                                                style="margin-right:30px ;margin-top: -90px; ">
-                                            Desk office
+                                                style="margin-right:30px ;margin-top: -90px;" >
+                                            {{$workspace_types->type}}
                                         </button>
-                                        <button class="btn main-btn5 shadow"
-                                                style="margin-right:30px ;margin-top: -90px;">
-                                            Private room
-                                        </button>
-                                        <button class="btn main-btn5 shadow"
-                                                style="margin-right:30px ;margin-top: -90px;">
-                                            Meeting room
-                                        </button>
-                                        <button class="btn main-btn5 shadow"
-                                                style="margin-right:30px ;margin-top: -90px;">
-                                            Skype room
-                                        </button>
+                                        @endforeach
                                     </div>
                                 </div>
 
                                 <div class="content">
-                                    <table class="table custom-table   ">
+                                    <table class="table custom-table ">
                                         <thead>
                                         <th scope></th>
                                         <th class="tab">People</th>
@@ -582,6 +570,7 @@
                                                 <button class="btn main-btn7 shadow">Meeting room</button>
                                             </td>
                                         </tr>
+                                        <tr>
                                         <th scope="row">
                                         </th>
                                         <td>
@@ -597,10 +586,8 @@
                                             <button class="btn main-btn7 shadow">Meeting room</button>
                                         </td>
                                         </tr>
-
+                                        <tr>
                                         <th scope="row">
-
-
                                         </th>
                                         <td>
                                             3
@@ -615,9 +602,8 @@
                                             <button class="btn main-btn7 shadow">Meeting room</button>
                                         </td>
                                         </tr>
+                                        <tr>
                                         <th scope="row">
-
-
                                         </th>
                                         <td>
                                             4
@@ -771,7 +757,7 @@
                                 <div class="product-content">
                                     <ul class="rating">
                                     </ul>
-                                    <h5 class="title" style="align-items: right;"> Call Room, 4 People</h5>
+                                    <h5 class="title" > Call Room, 4 People</h5>
                                     <div class="product-button-group">
                                         <a class="btn main-btn6">ENQUIRE NOW</a>
                                     </div>
@@ -807,51 +793,24 @@
                     <div class="container " data-aos="fade-up">
                         <div class="row">
                             <div class="  d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                                @foreach($workspace_services as $workspace_service)
                                 <h6 class=" col-sm-2 " id="ccc"
                                     style="margin-top: -70px;   margin-bottom: 70px; color: #AAB2B1;">
                                     <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left"
                                          data-aos-delay="100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             fill="currentColor"
-                                             class="bi bi-wifi" style="margin-top:-6px ; margin-right:5px;"
-                                             viewBox="0 0 16 16">
-                                            <path
-                                                d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
-                                            <path
-                                                d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
-                                        </svg>
-                                        WI FI
+{{--                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
+{{--                                             fill="currentColor"--}}
+{{--                                             class="bi bi-wifi" style="margin-top:-6px ; margin-right:5px;"--}}
+{{--                                             viewBox="0 0 16 16">--}}
+{{--                                            <path--}}
+{{--                                                d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>--}}
+{{--                                            <path--}}
+{{--                                                d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>--}}
+{{--                                        </svg>--}}
+                                        {{$workspace_service->service->name}}
                                     </div>
                                 </h6>
-                                <h6 class=" col-sm-2 " id="ccc"
-                                    style="margin-top: -70px;    margin-bottom: 70px; color: #AAB2B1;">
-                                    <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left"
-                                         data-aos-delay="100"></div>
-                                    <svg style="margin-top:-6px ; margin-right:5px;" xmlns="http://www.w3.org/2000/svg"
-                                         width="16" height="16" fill="currentColor" class="bi bi-calendar-check"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                                    </svg>
-                                    Events
-                                </h6>
-                                <h6 class=" col-sm-2 "
-                                    style="margin-top: -70px;  ; margin-bottom: 70px; color: #AAB2B1;">
-                                    <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left"
-                                         data-aos-delay="100">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             style="margin-top:-6px ; margin-right:5px;"
-                                             width="16" height="16" fill="currentColor" class="bi bi-printer"
-                                             viewBox="0 0 16 16">
-                                            <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-                                            <path
-                                                d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
-                                        </svg>
-                                        Printer
-                                    </div>
-                                </h6>
+                                @endforeach
                             </div>
                         </div>
                     </div>
