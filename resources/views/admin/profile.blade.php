@@ -1,142 +1,15 @@
-{{--@extends('admin.layouts.index')--}}
-
-{{--@section('content')--}}
-{{--    <!-- BEGIN PAGE style -->--}}
-{{--    <style>--}}
-{{--        .btn:hover {--}}
-{{--            background-color: #7962B3 !important;--}}
-{{--        }--}}
-
-{{--        .page-head {--}}
-{{--            margin-bottom: 25px !important;--}}
-{{--        }--}}
-
-{{--        .head-title {--}}
-{{--            font-family: 'Montserrat', sans-serif !important;--}}
-{{--            font-size: 25px !important;--}}
-{{--            letter-spacing: -0.022em !important;--}}
-{{--            color: #333333 !important;--}}
-{{--        }--}}
-
-{{--        .div-inf {--}}
-{{--            font-size: 14px !important;--}}
-{{--            line-height: 157% !important;--}}
-{{--            color: #6B7280 !important;--}}
-{{--            font-family: 'Montserrat', sans-serif !important;--}}
-{{--        }--}}
-{{--    </style>--}}
-{{--    <!-- END PAGE style -->--}}
-
-{{--    <div class="page-head">--}}
-{{--        <!-- BEGIN PAGE TITLE -->--}}
-{{--        <div class="page-title">--}}
-{{--            <h1 class="margin-top--10 head-title">Profile</h1>--}}
-{{--        </div>--}}
-{{--        <!-- END PAGE TITLE -->--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <!-- BEGIN PROFILE SIDEBAR -->--}}
-{{--                <div>--}}
-{{--                    <!-- PORTLET MAIN -->--}}
-{{--                    <div class="portlet light profile-sidebar-portlet bordered margin-top-35 "--}}
-{{--                         style="border-bottom: 1px solid #eef1f5;height: 100%;border-radius: 20px !important;">--}}
-{{--                        <!-- SIDEBAR USERPIC -->--}}
-{{--                        <div class=" profile-userpic  margin-top-25" style="--}}
-{{--                        float: left;--}}
-{{--                        width: 300px;--}}
-{{--">--}}
-
-{{--                            @can('provider_access')--}}
-{{--                                <img alt="" class="img-circle "--}}
-{{--                                     src="{{'/storage'.auth()->user()->provider->logo}}"/>--}}
-{{--                            @endcan--}}
-{{--                            @can('permission_access')--}}
-{{--                                <i class="fa fa-user img-circle" style="font-size: 20px;color: #9162B3 !important;"></i>--}}
-{{--                            @endcan--}}
-{{--                        </div>--}}
-{{--                        <!-- END SIDEBAR USERPIC -->--}}
-{{--                        <!-- SIDEBAR USER TITLE -->--}}
-{{--                        <div class="center-block profile-usertitle margin-top-70" style="--}}
-{{--                        text-align: justify;--}}
-{{--">--}}
-{{--                            <div class="profile-usertitle-name " style="--}}
-
-{{--font-size: 24px;--}}
-{{--line-height: 137.5%;--}}
-{{--color: #111827;--}}
-{{--             font-family: AvenirLTStd-Book;--}}
-{{--">--}}
-{{--                                {{$user->full_name}}--}}
-{{--                            </div>--}}
-{{--                            <div class="div-inf">--}}
-{{--                                {{$user->email}}--}}
-
-
-{{--                            </div>--}}
-{{--                            <div class="div-inf">--}}
-{{--                                {{$user->phone}}</div>--}}
-
-{{--                            <div class="div-inf">--}}
-{{--                                {{$user->userLevel->name }}</div>--}}
-{{--                            <div class="div-inf">--}}
-{{--                                {{$user->provider->name ?? ''}}</div>--}}
-{{--                        </div>--}}
-{{--                        <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->--}}
-
-{{--                        <div>--}}
-{{--                        </div>--}}
-{{--                        <!-- END PROFILE CONTENT -->--}}
-{{--                    </div>--}}
-{{--                    <!-- END PORTLET MAIN -->--}}
-
-{{--                </div>--}}
-{{--                <!-- END BEGIN PROFILE SIDEBAR -->--}}
-
-{{--            </div>--}}
-{{--        </div>--}}
-
-
-{{--    </div>--}}
-
-{{--@endsection--}}
-
-
-@extends('publicSite.layouts.index')
+@extends('admin.layouts.index')
 
 @section('content')
-    @include('publicSite.layouts.header')
-
     <style>
-
         :root {
-            --blue-color: #6b60e6;
+            --blue-color: #6B60E6;
             --yellow-color: hsl(45, 100%, 51%);
             --gray-color: #EFEEEF;
         }
 
         body {
-            font-family: "roboto",sans-serif;
-
-        }
-
-        .main-btn2 {
-            font-size: 14px;
-            font-family: 'roboto';
-            font-weight: 100;
-            text-align: center;
-            color: #ffffff;
-            background-color: #6B60E6;
-            border-radius: 5px;
-            margin-top: 3px;
-            padding: 5px 20px;
-
-        }
-
-
-        .main-btn2:hover {
-            background-color: #8077e0;
-            color: #EFEEEF;
-
+            font-family: "roboto", sans-serif !important;
         }
 
         /* start Navbar */
@@ -157,7 +30,7 @@
         }
 
         .navbar {
-            background-color: #6B60E6;
+            background-color: #6B60E6;;
         }
 
         .navbar .navbar-nav .nav-link {
@@ -182,269 +55,205 @@
             box-shadow: none;
         }
 
-        .main-body {
-            padding: 15px;
-        }
+        /* end Navbar */
 
-        .card {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
-        }
+        /* start contact us */
 
-        .card {
+        .contact {
+
             position: relative;
+            padding: 50px 100px;
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
-            min-width: 0;
-            word-wrap: break-word;
-            background-color: #fff;
-            background-clip: border-box;
-            border: 0 solid rgba(0, 0, 0, 1);
-            border-radius: .25rem;
-            margin-top: 20px;
+
+            background-size: cover;
         }
 
-        .card-body {
-            flex: 1 1 auto;
-            min-height: 1px;
-            padding: 1rem;
-        }
-
-        .gutters-sm {
-            margin-right: -8px;
-            margin-left: -8px;
-        }
-
-        .gutters-sm > .col, .gutters-sm > [class*=col-] {
-            padding-right: 8px;
-            padding-left: 8px;
-        }
-
-        .mb-3, .my-3 {
-            margin-bottom: 1rem !important;
-        }
-
-        .bg-gray-300 {
-            background-color: #e2e8f0;
-        }
-
-        .h-100 {
-            height: 100% !important;
-        }
-
-        .shadow-none {
-            box-shadow: none !important;
-        }
-
-
-        .content .table {
-            background-color: #ffffff;
+        .contact .text-center {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 80px;
+            color: #FFC107;
 
         }
 
-        h2 {
-            font-size: 20px;
+        .contact .text-center p {
+            margin: 26px 214px 24px 208px;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 1.43;
+            letter-spacing: -0.77px;;
+            color: #6c6c6c;
         }
 
-        .custom-table {
-            margin-top: 40px;
-            text-align: center;
-            font-family: roboto;
+
+        .text-black {
+            color: #000;
         }
 
-        .custom-table {
-            min-width: 690px;
+        .content {
+            padding: 7rem 0;
         }
 
-        .custom-table tbody th, .custom-table tbody td {
-
-            font-weight: 400;
-            padding-bottom: 15px;
-            padding-top: 15px;
-            font-weight: 300;
+        .heading {
+            font-size: 2.5rem;
+            font-weight: 900;
         }
 
+        .form-control {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding-left: 0;
+            padding-right: 0;
+            border-radius: 0;
+            background: none;
+
+        }
+
+        .col-form-label {
+            color: #000;
+            font-size: 13px;
+
+        }
+
+        .btn2, .form-control, .custom-select {
+            height: 45px;
+            border-radius: 0;
+        }
+
+        .custom-select {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding-left: 0;
+            padding-right: 0;
+            border-radius: 0;
+
+        }
+
+
+        .btn2 {
+            border: none;
+            background-color: #FFC107;
+            border-radius: 0;
+            font-size: 11px;
+            letter-spacing: .1rem;
+            font-family: 'roboto';
+            border-radius: 3px !important;
+
+        }
+
+
+        :active, :focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+
+        .form, .contact-info {
+            padding: 40px;
+        }
+
+
+        label.error {
+            font-size: 12px;
+            color: red;
+        }
+
+        #message {
+            resize: vertical;
+        }
+
+        #form-message-warning, #form-message-success {
+            display: none;
+        }
+
+        #form-message-warning {
+            color: #B90B0B;
+        }
+
+        #form-message-success {
+            color: #55A44E;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .submitting {
+            float: left;
+            width: 100%;
+            padding: 10px 0;
+            display: none;
+            font-weight: bold;
+            font-size: 12px;
+            color: #000;
+        }
 
     </style>
-    <div class="container">
-        <div class="main-body">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin"
-                                     class="rounded-circle  bg-primary" width="110" height="150px">
-                                <div class="mt-3">
-                                    <h4>John Doe</h4>
+    <div class="content p-3">
+        <div class="page-title">
+            <h1 class=" head-title">Profile</h1>
+        </div>
+        <div class="row align-items-stretch justify-content-center no-gutters">
 
-                                </div>
-                            </div>
+            <div class="col-lg-2 ">
+                @can('provider_access')
+                    <img alt="" class="img-circle "
+                         src="{{'/storage'.auth()->user()->provider->logo}}"/>
+                @endcan
+                @can('permission_access')
+                    <i class="fa fa-user img-circle margin-top-40"
+                       style="font-size: 100px;color:#E93A76 !important; "></i>
+                @endcan
 
-                        </div>
+            </div>
+            <div class="col-md-7">
+                {{--                <form class="mb-5" id="contactForm" name="contactForm" method="post"--}}
+                {{--                      action="{{ route('workerContactStore') }}">--}}
+                {{--                    @csrf--}}
+                <div class="row">
+                    <div class="col-md-6 form-group mb-3">
+
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your name"
+                               value="{{$user->full_name}}">
+                    </div>
+                    <div class="col-md-6 form-group mb-3">
+
+                        <input type="email" class="form-control" name="email" id="email"
+                               placeholder="Your email" value=" {{$user->email}}">
                     </div>
                 </div>
-                <div class="col-lg-8">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row mb-3">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Full Name</h6>
-                                </div>
-                                <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
-                                     style="width:530px">
-                                    <input type="text" class="form-control" value="John Doe">
+                <div class="row">
+                    <div class="col-md-6 form-group mb-3">
 
-                                    <button class="btn btn-outline-secondary border-left-0 border" type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor"
-                                             class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-2">Email</h6>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your name"
+                               value="  {{$user->phone}}">
+                    </div>
+                    <div class="col-md-6 form-group mb-3">
 
-                                </div>
-                                <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
-                                     style="width:530px">
-                                    <input type="text" class="form-control" value="john@example.com">
-
-                                    <button class="btn btn-outline-secondary border-left-0 border" type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor"
-                                             class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                                        </svg>
-                                    </button>
-
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Password</h6>
-                                </div>
-                                <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
-                                     style="width:530px">
-
-                                    <input type="text" class="form-control" placeholder="********">
-
-                                    <button class="btn btn-outline-secondary border-left-0 border" type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor"
-                                             class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-3"></div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input type="button" class="btn   main-btn2  " value="Save Changes">
-                                </div>
-                            </div>
-                        </div>
+                        <input type="email" class="form-control" name="email" id="email"
+                               placeholder="Your email" value="  {{$user->userLevel->name }}">
                     </div>
                 </div>
-                <div class="content">
-                    <table class="table custom-table pt-5  ">
-                        <thead>
-                        <th scope>
-                        <th class="tab">Workspace name</th>
-                        <th class="tab">Workspace Type</th>
-                        <th class="tab">price</th>
-                        <th class="tab">Date</th>
-                        <th class="tab">Action</th>
-                        </thead>
-                        <tbody>
-                        <tr scope="row">
-                            <th scope="row">
-                            </th>
-                            <td>
-                                Tools space
-                            </td>
-                            <td><a>Meeting room</a></td>
-                            <td>
-                                ₪ 200
-
-                            </td>
-                            <td>15/02/2023</td>
-                            <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                                     class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                     class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                                </svg>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                            </th>
-                            <td>
-                                Lego space
-                            </td>
-                            <td><a>closed room</a></td>
-                            <td>
-                                ₪ 300
-
-                            </td>
-                            <td>13/6/2023</td>
-                            <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                                     class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                     class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                                </svg>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                            </th>
-                            <td>
-                                Lego space
-                            </td>
-                            <td><a>closed room</a></td>
-                            <td>
-                                ₪ 300
-
-                            </td>
-                            <td>13/6/2023</td>
-                            <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                                     class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                     class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                                </svg>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="row mb-6 p-3">
+                    <div class="col-md-12 form-group ">
+                            <textarea class="form-control" name="message" id="message" cols="30" rows="4"
+                                      placeholder="Write your message"
+                                      value="{{$user->provider->name ?? ''}}"></textarea>
+                    </div>
                 </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 form-group text-center ">
+                        <input type="submit" value="Send"
+                               class="btn2 btn-block btn-primary rounded-0 py-2 px-4"
+                               style="background-color: black;color: #ffffff">
+                        <span class="submitting"></span>
+                    </div>
+                </div>
+                {{--                </form>--}}
             </div>
         </div>
     </div>
-
 @endsection
 
 {{--@section('js')--}}
