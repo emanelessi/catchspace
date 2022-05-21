@@ -29,6 +29,8 @@
 <!-- END PAGE LEVEL SCRIPTS -->
 <!-- BEGIN THEME LAYOUT SCRIPTS -->
 <!-- END THEME LAYOUT SCRIPTS -->
+<script src="{{url('/')}}/assets/pages/scripts/all.min.js"></script>
+
 <script>
     $(document).ready(function () {
         $('#clickmewow').click(function () {

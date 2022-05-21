@@ -1,5 +1,7 @@
 <script src="{{url('/')}}/js/bootstrap.bundle.min.js"></script>
 <script src="{{url('/')}}/js/all.min.js"></script>
+<script src="{{url('/')}}/assets/pages/scripts/all.min.js"></script>
+
 @yield('js')
 
 <script>

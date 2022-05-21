@@ -43,6 +43,8 @@
 <!-- END PAGE LEVEL STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
 
+<link href="{{url('/')}}/assets/pages/css/all.min.css" rel="stylesheet" type="text/css"/>
+
 
 
 @stack('css')

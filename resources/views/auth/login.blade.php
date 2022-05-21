@@ -4,6 +4,7 @@
     {{--    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">--}}
 {{--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>--}}
 {{--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css" rel="stylesheet"/>--}}
+    <link href="{{url('/')}}/assets/pages/css/all.min.css" rel="stylesheet" type="text/css"/>
 
     <style>
         .btn:hover {
@@ -81,11 +82,12 @@ font-size: 13px;
                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                 <label class="control-label visible-ie8 visible-ie9">{{ __('Email Address') }}</label>
                 <div class="input-icon">
-{{--                    <i style="background: -webkit-linear-gradient(#E93B77, #b9a6a6);--}}
-{{--                    -webkit-background-clip: text;--}}
-{{--                    -webkit-text-fill-color: transparent;--}}
-{{--                    margin-left: 19px;" class="fa fa-envelope padding-tb-3"></i>--}}
-                    <i class="fa-light fa-envelope-circle-check"></i>
+                    <i style="background: -webkit-linear-gradient(#E93B77, #b9a6a6);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    margin-left: 19px;" class="fa fa-envelope padding-tb-3"></i>
+
+{{--                    <i class="fa-light fa-envelope-circle-check fa-5x"></i>--}}
                     <input
                         class="form-control form-control-solid margin-top-20 placeholder-no-fix @error('email') is-invalid @enderror"
                         placeholder="Enter your email" name="email" id="email" type="email"

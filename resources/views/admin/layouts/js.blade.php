@@ -74,6 +74,8 @@
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="{{url('/')}}/assets/pages/scripts/ui-extended-modals.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
+<script src="{{url('/')}}/assets/pages/scripts/all.min.js"></script>
+
 <script>
     $(document).ready(function () {
         $('#clickmewow').click(function () {
