@@ -6,6 +6,11 @@
 <link href="{{url('/')}}/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="{{url('/')}}/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
 <!-- END GLOBAL MANDATORY STYLES -->
-
+<style>
+    .navbar .navbar-nav .nav-link.active, .navbar .navbar-nav .nav-link:focus, .navbar .navbar-nav .nav-link:hover {
+        color: var(--yellow-color);
+        text-decoration: none;
+    }
+</style>
 
 @stack('css')
