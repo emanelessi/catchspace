@@ -12,29 +12,24 @@
             font-family: "roboto", sans-serif;
         }
 
-        /*hero*/
         #hero {
             width: 100%;
-            height: 90vh;
-            background: url("../img/homeBackgrong.jpg") top center;
-
+            height: 580px;
+            background: url({{asset('../img/homeBackgrong.jpg')}}) top center;
             background-size: cover;
             position: relative;
             padding: 0;
 
         }
 
-        #hero1 h1 {
-
+        #hero1 p {
             padding-top: 40px;
-            font-family: 'roboto';
-            color: hsl(0, 0%, 100%);
-            margin: 0 0px 5px 0;
+            font-family: "roboto", sans-serif;
+            margin: 0 0 5px 0;
             font-size: 55px;
             font-weight: 700;
             line-height: 56px;
             color: #fff;
-            letter-spacing: 0em;
         }
 
         #hero h2 {
@@ -77,7 +72,6 @@
             background-color: hsl(300, 3%, 94%, 0.3);
         }
 
-
         .navbar .navbar-nav .nav-link {
             color: white;
         }
@@ -114,7 +108,7 @@
         .search-form {
             background: #fff;
             border-radius: 2px;
-            height: 130px;
+            /*height: 130px;*/
 
             box-shadow: 0.625 erm .937 erm rgba(105, 105, 105, 0.001);
             position: relative;
@@ -136,10 +130,11 @@
 
         .search-form .form-group {
             position: relative;
-            padding: 25px;
+            padding: 25px 25px 0 25px;
+            /*padding: 25px;*/
 
-            margin-bottom: 30px;
-            margin-left: 30px;
+            /*margin-bottom: 30px;*/
+            /*margin-left: 30px;*/
         }
 
         .search-form .form-group:after {
@@ -171,11 +166,11 @@
             color: #818390;
         }
 
-        .search-form select.form-control {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        }
+        /*.search-form select.form-control {*/
+        /*    -webkit-appearance: none;*/
+        /*    -moz-appearance: none;*/
+        /*    appearance: none;*/
+        /*}*/
 
         .search-form select.form-control + .select-arrow {
             position: absolute;
@@ -230,20 +225,20 @@
             height: 30px;
             line-height: 25px;
             font-size: 14px;
+            font-family: "roboto", sans-serif;
         }
 
         .search-form .form-btn {
             padding: 55px;
             margin-right: 10px;
+
         }
 
         .search-form .submit-btn {
 
             background: var(--yellow-color);
-            border: none;
             text-transform: capitalize;
             display: block;
-            border-radius: 2px;
             line-height: 25px;
             width: 100%;
             height: 41px;
@@ -252,9 +247,9 @@
             background-position: 5px;
             margin-top: 3px;
             color: #fff;
+            border: 1px solid;
+            border-radius: 4px;
         }
-
-        /**!*/
 
 
         /*Why Book On Catch Space?*/
@@ -487,7 +482,7 @@
         .services .icon-boxs h4 {
             font-weight: 600;
             line-height: 0.1em;
-            margin: 15px 0 15px 0;
+            /*margin: 15px 0 15px 0;*/
             font-size: 22px;
 
         }
@@ -514,7 +509,7 @@
         .services .icon-boxs p {
             line-height: 24px;
             font-size: 14px;
-            margin-top: 30px;
+            /*margin-top: 30px;*/
             font-family: roboto;
             color: #f5f5f5;
             font-weight: 500;
@@ -554,7 +549,7 @@
 
         .card-body {
             color: white;
-            font-family: roboto;
+            font-family: 'roboto';
             font-weight: 500;
         }
 
@@ -861,12 +856,12 @@
         }
 
         .carousel .thumb-wrapper {
-            padding: 25px 15px;
-            background: #fff;
-            border-radius: 6px;
-            text-align: center;
-            position: relative;
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+            /*padding: 25px 15px;*/
+            /*background: #fff;*/
+            /*border-radius: 6px;*/
+            /*text-align: center;*/
+            /*position: relative;*/
+            /*box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);*/
         }
 
         .carousel .item .img-box {
@@ -1015,16 +1010,17 @@
     @include('publicSite.layouts.header')
 
     <div class="container">
-        <div id="hero1" class="d-flex align-items-center row">
-            <div class="col-lg-6 d-flex flex-column justify-content-center pt-lg-0 order-2 order-lg-1"
+        <div id="hero1" class=" d-flex align-items-center row ">
+            <div class="col-lg-6 col-md-6 col-sm-6 d-flex flex-column justify-content-center pt-lg-0 order-2 order-lg-1"
                  data-aos="fade-up" data-aos-delay="200">
-                <h1>Catch best workpace
-                    <br>you need!</h1>
-                <h2 class=" p-1">we help you to find the best coworking space with Best <br> service and best price for
+                <p class="col-md-12 col-sm-12">Catch best workspace you need!</p>
+                <h2 class=" p-1 col-md-12 col-sm-12">we help you to find the best coworking space with Best <br> service
+                    and best price for
                     available workspaces near
                     <br> we are here to help you!</h2>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-lg-6 col-md-6 col-sm-6 order-1 order-lg-2 hero1-img" data-aos="zoom-in"
+                 data-aos-delay="200">
                 <img src="{{asset('../img/gaza.png')}}" class="img-fluid animated" alt="">
             </div>
         </div>
@@ -1034,54 +1030,57 @@
         <div class="section-center">
             <div class="container">
                 <div class="row">
-                    <div class="search-form shadow">
+                    <div class="search-form shadow col-lg-12 col-md-12 col-sm-12">
                         <form>
                             <div class="row no-margin">
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <span class="form-label">Location</span>
-                                        <input class="form-control" type="text" placeholder="Remal">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row no-margin">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <span class="form-label">Workspace Type</span>
-                                                <input class="form-control" type="text" placeholder="private office">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <span class="form-label">Date</span>
-                                                <input class="form-control" type="date" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <span class="form-label"> person</span>
-                                                <select class="form-control form-select">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                </select>
-                                                <span class="select-arrow"></span>
-                                            </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                        <div class="form-group">
+                                            <span class="form-label">Location</span>
+                                            <input class="form-control" type="text" placeholder="Remal">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-btn">
-                                        <button class="submit-btn">Check availability</button>
+                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                        <div class="form-group">
+                                            <span class="form-label">Workspace Type</span>
+                                            <input class="form-control" type="text" placeholder="private office">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                        <div class="form-group">
+                                            <span class="form-label">Date</span>
+                                            <input class="form-control" type="date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                        <div class="form-group">
+                                            <span class="form-label"> person</span>
+                                            <select class="form-control form-select">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3">
+                                        <div class="form-btn">
+                                            <button class="submit-btn">Check availability</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-
-                    <section id="featured-services" class="featured-services ">
-                        <p style="font-family: 'Roboto';
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="featured-services" class="featured-services ">
+        <div class="container">
+            <div class="row">
+                <p style="font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 44px;
@@ -1093,61 +1092,63 @@
     margin-top: -150px;
     margin-bottom: 50px;
     ">Why Book On <br>Catch Space?</p>
-                        <section id="services" class="services section-bg">
-                            <div class="container" data-aos="fade-up">
-                                <div class="row">
-                                    <div class="col-lg-4   d-flex align-items-stretch" data-aos="zoom-in"
-                                         data-aos-delay="100">
-                                        <div class="icon-box iconbox ">
-                                            <div class="icon">
-                                                <img src="{{asset('../img/checked.png')}}"
-                                                     style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
-                                            </div>
-                                            <h4 class=""><a>Validated Spaces</a></h4>
-                                            <div class="about-border"></div>
-                                            <p>Distinguished workspaces in the Gaza Strip combine office rooms, meeting
-                                                rooms with the best services</p>
-                                        </div>
+                <section id="services" class="services section-bg">
+                    <div class="container" data-aos="fade-up">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 d-flex align-items-stretch" data-aos="zoom-in"
+                                 data-aos-delay="100" style="margin-bottom: 20px;">
+                                <div class="icon-box iconbox ">
+                                    <div class="icon">
+                                        <img src="{{asset('../img/checked.png')}}"
+                                             style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
                                     </div>
-
-                                    <div class="col-lg-4  d-flex align-items-stretch" data-aos="zoom-in"
-                                         data-aos-delay="200">
-                                        <div class="icon-boxs iconbox ">
-                                            <div class="icon">
-                                                <img src=" {{asset('../img/trusted.png')}}"
-                                                     style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
-                                            </div>
-                                            <h4 class=""><a>Trusted
-                                                </a></h4>
-                                            <div class="about-border"></div>
-                                            <p>Customers' opinions, and their feedback on connecting them with spaces,
-                                                are enough to make your decision to book</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="zoom-in"
-                                         data-aos-delay="300">
-                                        <div class="icon-boxs iconbox ">
-                                            <div class="icon">
-                                                <img src="{{asset('../img/free.svg')}}"
-                                                     style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
-                                            </div>
-                                            <h4 class=""><a>Free</a></h4>
-                                            <div class="about-border"></div>
-                                            <p>Whether it's a single office or a team, you don't have to charge for our
-                                                site, we're just here for your convenience.</p>
-                                        </div>
-                                    </div>
+                                    <h4 class=""><a>Validated Spaces</a></h4>
+                                    <div class="about-border"></div>
+                                    <p>Distinguished workspaces in the Gaza Strip combine office rooms, meeting
+                                        rooms with the best services</p>
                                 </div>
                             </div>
-                        </section>
-                    </section>
 
-                    <section id="featured-services" class="featured-services ">
-                        <div class="container-xl">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p style="font-family: 'Roboto';
+                            <div class="col-lg-4 col-md-4 col-sm-4 d-flex align-items-stretch" data-aos="zoom-in"
+                                 data-aos-delay="200" style="margin-bottom: 20px;">
+                                <div class="icon-boxs iconbox ">
+                                    <div class="icon">
+                                        <img src=" {{asset('../img/trusted.png')}}"
+                                             style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
+                                    </div>
+                                    <h4 class=""><a>Trusted
+                                        </a></h4>
+                                    <div class="about-border"></div>
+                                    <p>Customers' opinions, and their feedback on connecting them with spaces,
+                                        are enough to make your decision to book</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 d-flex align-items-stretch" data-aos="zoom-in"
+                                 data-aos-delay="300" style="margin-bottom: 20px;">
+                                <div class="icon-boxs iconbox  ">
+                                    <div class="icon">
+                                        <img src="{{asset('../img/free.svg')}}"
+                                             style="margin-right: 200px; width: 66px; height:66px; padding-top: -130px;">
+                                    </div>
+                                    <h4 class=""><a>Free</a></h4>
+                                    <div class="about-border"></div>
+                                    <p>Whether it's a single office or a team, you don't have to charge for our
+                                        site, we're just here for your convenience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-services" class="featured-services ">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-12">
+                    <p style="font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 44px;
@@ -1159,134 +1160,131 @@
     margin-top: -150px;
     margin-bottom: 50px;
     ">Recommendation
-                                        <br>our space for you</p>
-                                    <section id="services1" class="services1 section-bg">
-                                        <div class="container" data-aos="fade-up">
-                                            <div id="myCarousel" class="carousel slide" data-ride="carousel"
-                                                 data-interval="0">
-                                                <!-- Carousel indicators -->
-                                                <ol class="carousel-indicators">
-                                                    <li data-target="#myCarousel" data-slide-to="0"
-                                                        class="active"></li>
-                                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                                </ol>
-                                                <!-- Wrapper for carousel items -->
-                                                <div class="carousel-inner">
-                                                    <div class="item carousel-item active">
-                                                        <div class="row">
-                                                            <div class="col-sm-4">
-                                                                <div class="thumb-wrapper">
-                                                                    <div class="img-box">
-                                                                        <img src=" {{asset('../img/space1.png')}}"
-                                                                             class="img-fluid"
-                                                                             style=" width:100%" alt="">
-                                                                    </div>
-                                                                    <div class="thumb-content">
-                                                                        <h4>LEGO</h4>
-                                                                        <div class="star-rating"
-                                                                             style="color: #FFC107">
-                                                                            <ul class="list-inline">
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
+                        <br>our space for you</p>
+                    <section id="services1" class="services1 section-bg">
+                        <div class="container" data-aos="fade-up">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel"
+                                 data-interval="0">
+                                <!-- Carousel indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0"
+                                        class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="item carousel-item active">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
+                                                <div class="thumb-wrapper">
+                                                    <div class="img-box">
+                                                        <img src=" {{asset('../img/space1.png')}}"
+                                                             class="img-fluid"
+                                                             style=" width:100%" alt="">
+                                                    </div>
+                                                    <div class="thumb-content">
+                                                        <h4>LEGO</h4>
+                                                        <div class="star-rating"
+                                                             style="color: #FFC107">
+                                                            <ul class="list-inline">
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
 
-                                                                            </ul>
-                                                                        </div>
-                                                                        <p class="item-price"><b>$7.00/DAY</b></p>
-                                                                        <a href="#" class="btn btn-primary ">View
-                                                                            avilability</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <div class="thumb-wrapper">
-                                                                    <div class="img-box">
-                                                                        <img src="{{asset('../img/space1.png')}}"
-                                                                             class="img-fluid"
-                                                                             style=" width:100%" alt="">
-                                                                    </div>
-                                                                    <div class="thumb-content">
-                                                                        <h4>LEGO</h4>
-                                                                        <div class="star-rating"
-                                                                             style="color: #FFC107">
-                                                                            <ul class="list-inline">
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-
-                                                                            </ul>
-                                                                        </div>
-                                                                        <p class="item-price"><b>$7.00/DAY</b></p>
-                                                                        <a href="#" class="btn btn-primary">View
-                                                                            avilability</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <div class="thumb-wrapper">
-
-                                                                    <div class="img-box">
-                                                                        <img src="{{asset('../img/space1.png')}}"
-                                                                             class="img-fluid"
-                                                                             style=" width:100%; height: 100%;"
-                                                                             alt="">
-                                                                    </div>
-                                                                    <div class="thumb-content">
-                                                                        <h4>LEGO</h4>
-                                                                        <div class="star-rating"
-                                                                             style="color: #FFC107">
-                                                                            <ul class="list-inline">
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-                                                                                <li class="list-inline-item"><i
-                                                                                        class="fa fa-star"></i></li>
-
-                                                                            </ul>
-                                                                        </div>
-                                                                        <p class="item-price"><b>$7.00/DAY</b></p>
-                                                                        <a href="#" class="btn btn-primary">View
-                                                                            avilability</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            </ul>
                                                         </div>
+                                                        <p class="item-price"><b>$7.00/DAY</b></p>
+                                                        <a href="#" class="btn btn-primary ">View
+                                                            avilability</a>
                                                     </div>
                                                 </div>
-                                                <!-- Carousel controls -->
-                                                <a class="carousel-control-prev" href="#myCarousel"
-                                                   data-slide="prev">
-                                                    <i class="fa fa-angle-left"></i>
-                                                </a>
-                                                <a class="carousel-control-next" href="#myCarousel"
-                                                   data-slide="next">
-                                                    <i class="fa fa-angle-right"></i>
-                                                </a>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
+                                                <div class="thumb-wrapper">
+                                                    <div class="img-box">
+                                                        <img src="{{asset('../img/space1.png')}}"
+                                                             class="img-fluid"
+                                                             style=" width:100%" alt="">
+                                                    </div>
+                                                    <div class="thumb-content">
+                                                        <h4>LEGO</h4>
+                                                        <div class="star-rating"
+                                                             style="color: #FFC107">
+                                                            <ul class="list-inline">
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <p class="item-price"><b>$7.00/DAY</b></p>
+                                                        <a href="#" class="btn btn-primary">View
+                                                            avilability</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
+                                                <div class="thumb-wrapper">
+
+                                                    <div class="img-box">
+                                                        <img src="{{asset('../img/space1.png')}}"
+                                                             class="img-fluid"
+                                                             style=" width:100%; height: 100%;"
+                                                             alt="">
+                                                    </div>
+                                                    <div class="thumb-content">
+                                                        <h4>LEGO</h4>
+                                                        <div class="star-rating"
+                                                             style="color: #FFC107">
+                                                            <ul class="list-inline">
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+
+                                                            </ul>
+                                                        </div>
+                                                        <p class="item-price"><b>$7.00/DAY</b></p>
+                                                        <a href="#" class="btn btn-primary">View
+                                                            avilability</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </section>
+                                    </div>
                                 </div>
+                                <!-- Carousel controls -->
+                                <a class="carousel-control-prev" href="#myCarousel"
+                                   data-slide="prev">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                                <a class="carousel-control-next" href="#myCarousel"
+                                   data-slide="next">
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
     <!--WorkSpace-->
     <section class="book" id="hero3"
@@ -1299,17 +1297,17 @@
                     <h1>BOOK YOUR <br> NEXT...</h1>
                 </div>
             </div>
-            <div class="container5">
+            <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-md-3  ">
-                        <div class="card  rounded-1  shadow">
+                    <div class="col-lg-3 col-sm-2 col-md-3">
+                        <div class="card  rounded-1  shadow ">
                             <img src=" {{asset('../img/meeting room.png')}}" class="card-img-top" alt="...">
                             <div class="card-body bg-warning  text-center ">
                                 <h5 class="card-title mb-0">Meeting room</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-3">
+                    <div class="col-lg-3 col-sm-3 col-md-3">
                         <div class="card rounded-1 border-1-whaite">
                             <img src=" {{asset('../img/private room.png')}}" class="card-img-top roun" alt="...">
                             <div class="card-body bg-warning text-center ">
@@ -1318,7 +1316,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3  col-md-3">
+                    <div class="col-lg-3 col-sm-3 col-md-3">
                         <div class="card  rounded-1 ">
                             <img src="{{asset('../img/Skype room.png')}}" class="card-img-top" alt="...">
                             <div class="card-body bg-warning text-center    ">
@@ -1327,7 +1325,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-3 ">
+                    <div class="col-lg-3 col-sm-3 col-md-3">
                         <div class="card  rounded-1 ">
                             <img src="{{asset('../img/shard room.png')}}" class="card-img-top" alt="...">
                             <div class="card-body  bg-warning text-center ">

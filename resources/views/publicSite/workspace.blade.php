@@ -521,10 +521,6 @@
                         </div>
                     </div>
                 </div>
-                {{--                <div class="col-lg-6  order-1 order-lg-2  " data-aos="zoom-in" data-aos-delay="150">--}}
-                {{--                    <img src="{{asset('../img/worker.png')}}"--}}
-                {{--                         class="img-fluid animated work-img" alt="">--}}
-                {{--                </div>--}}
             </div>
         </div>
         <div class="input-field third-wrap">
