@@ -3,11 +3,13 @@
 namespace Database\Seeders;
 
 use App\Models\Addons;
+use App\Models\Attribute;
 use App\Models\Pricing;
 use App\Models\RentType;
 use App\Models\Service;
 use App\Models\WorkSpace;
 use App\Models\WorkSpaceAddons;
+use App\Models\WorkSpaceAttribute;
 use App\Models\WorkSpaceRating;
 use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
@@ -99,5 +101,39 @@ class WorkSpaceSeeder extends Seeder
         $work_space_addons->work_space_id = $work_space->id;
         $work_space_addons->addon_id = $addon->id;
         $work_space_addons->save();
+
+        $attribute= new Attribute();
+        $attribute->name = 'Overview';
+        $attribute->save();
+
+        $attribute1= new Attribute();
+        $attribute1->name = 'Starting at';
+        $attribute1->save();
+
+        $attribute2= new Attribute();
+        $attribute2->name = 'Opining Hours';
+        $attribute2->save();
+
+        $work_space_attribute = new WorkSpaceAttribute();
+        $work_space_attribute->value = 'gives your business the commercial office space solutions it needs—minus the headaches of upfront capital and lengthy leases. That’s why more than 50% of Fortune 100 companies are WeWork members.';
+        $work_space_attribute->work_space_id = $work_space->id;
+        $work_space_attribute->attribute_id = $attribute->id;
+        $work_space_attribute->save();
+
+        $work_space_attribute1 = new WorkSpaceAttribute();
+        $work_space_attribute1->value = 200;
+        $work_space_attribute1->work_space_id = $work_space->id;
+        $work_space_attribute1->attribute_id = $attribute1->id;
+        $work_space_attribute1->save();
+
+
+        $work_space_attribute2 = new WorkSpaceAttribute();
+        $work_space_attribute2->value = 'Mon-Fri
+09:00 Am - 07:00 Pm';
+        $work_space_attribute2->work_space_id = $work_space->id;
+        $work_space_attribute2->attribute_id = $attribute2->id;
+        $work_space_attribute2->save();
+
+
     }
 }

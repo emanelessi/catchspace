@@ -507,15 +507,7 @@
                             </h6>
                             <h4 style="color:#6B60E6; margin-top: 35px; ">Overview</h4>
                             <p style=" color:#717171;font-weight: 400;">
-                                In A Place Full Of Beautiful Nature We Convene Online
-                                Freelancers,Designers, Developers, And Startup Founders
-                                Under One Roof To Share Ideas, Code, And Build Brighter
-                                Futures By Smart Marketing And Selling Products And Services
-                                Online.
-
-                                We Have Learned How To Combine A Comfortable And
-                                Productive Workspace With A Dynamic, Unique, And Truly
-                                Special Community.
+                                    {{$workspace->workSpaceAttributes[0]->value ?? ''}}
                             </p>
                             <!--enf lego over view-->
                             <!--pricing table-->
@@ -678,7 +670,7 @@
                                 <div class="ratings">
                                     <div class="rating-text">
                                         <h4>Starting at</h4>
-                                        <h5 style="color: #6B60E6  ; ">₪210/mo </h5>
+                                        <h5 style="color: #6B60E6  ; ">₪{{$workspace->workSpaceAttributes[1]->value ?? ''}}/mo </h5>
                                     </div>
                                     <div class="ratings">
                                         <a class="btn main-btn6" data-target="#responsive"
@@ -706,13 +698,8 @@
 
                                     </div>
                                     <div class="ratings">
-                                        <h6 style="color:#FFC107 ;">Mon-Fri</h6>
-                                        <p style="font-size: 12px ; color:  #717171">09:00 Am - 07:00 Pm</p>
+                                        <h6 style="color:#FFC107 ;">{{$workspace->workSpaceAttributes[2]->value ?? ''}}</h6>
 
-                                        <h6 style="color:#FFC107 ;">Mon-Fri</h6>
-                                        <p style="font-size: 12px ; color:  #717171">09:00 Am - 07:00 Pm</p>
-                                        <h6 style="color:#FFC107 ;">Mon-Fri</h6>
-                                        <p style="font-size: 12px ; color:  #717171">09:00 Am - 07:00 Pm</p>
                                     </div>
                                 </div>
                                 <!--end Member Access Hours -->

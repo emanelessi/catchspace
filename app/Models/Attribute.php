@@ -13,6 +13,6 @@ class Attribute extends Model
 
     public function workSpaceAttributes()
     {
-        return $this->belongsTo(WorkSpaceAttribute::class, 'work_space_id')->withTrashed();
+        return $this->hasMany(WorkSpaceAttribute::class, 'attribute_id')->withTrashed();
     }
 }

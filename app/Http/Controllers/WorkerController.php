@@ -8,6 +8,7 @@ use App\Models\Worker;
 use App\Models\WorkerWorkSpace;
 use App\Models\WorkSpace;
 use App\Models\WorkSpaceAddons;
+use App\Models\WorkSpaceAttribute;
 use App\Models\WorkSpaceRating;
 use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;

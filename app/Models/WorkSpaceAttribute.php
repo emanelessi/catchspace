@@ -11,13 +11,14 @@ class WorkSpaceAttribute extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public function workSpace()
+    public function workSpaces()
     {
-        return $this->belongsTo(WorkSpace::class, 'work_space_id')->withTrashed();
+        return $this->belongsTo(WorkSpace::class, 'work_space_id', 'id')->withTrashed();
+    }
+    public function attributes()
+    {
+        return $this->belongsTo(Attribute::class, 'attribute_id', 'id')->withTrashed();
     }
 
-    public function attribute()
-    {
-        return $this->belongsTo(Attribute::class, 'attribute_id')->withTrashed();
-    }
+
 }
