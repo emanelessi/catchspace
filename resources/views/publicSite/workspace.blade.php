@@ -145,6 +145,10 @@
             padding-top: -50px;
 
         }
+        .navbar .navbar-nav .nav-link {
+            color: #6B60E6;
+            font-weight: 800;
+            text-decoration: none;}
 
         .main-btn1:hover {
             background-color: #e47db2;
@@ -152,9 +156,7 @@
         }
 
 
-        .navbar .navbar-nav .nav-link {
-            color: #6B60E6;
-        }
+
 
         .navbar .navbar-nav .nav-link.active,
         .navbar .navbar-nav .nav-link:focus,
@@ -164,9 +166,9 @@
 
 
         .navbar .navbar-toggler {
-            color: white;
+            color: #6B60E6;
             font-size: 25px;
-            border-color: white;
+            border-color: #6B60E6;
 
         }
 
@@ -201,7 +203,7 @@
         .container .cheak1 label {
             color: #ffff;
             font-weight: 300;
-            margin-top: 13px;
+            margin-top: 29px;
             font-size: 18px;
 
             margin-left: 100px;
@@ -379,7 +381,7 @@
             border-radius: 50px;
             /*padding: 10px;*/
             /*margin-left: -88px;*/
-            margin-left: -41px;
+            margin-left: -51px;
             background: var(--yellow-color);
             transition: all .2s ease-out, color .2s ease-out;
             font-weight: 500;
@@ -448,7 +450,10 @@
             }
 
             .filter-bar {
-                height: 232px;
+                height: 268px;
+            }
+            .login{
+                margin-left: 0px !important;
             }
         }
 
@@ -548,7 +553,7 @@
                     <h6 class="col-md-2 ">Looking For ?</h6>
                     <div class="col-lg-2 col-md-2  col-sm-3 checkbox  checkbox-success">
                         <input id="checkbox1" class="styled" type="checkbox">
-                        <label for="checkbox1">
+                        <label for="checkbox1" style="margin-top: -12px">
                             Desk
                         </label>
                     </div>

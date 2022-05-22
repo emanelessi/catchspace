@@ -74,6 +74,8 @@
 
         .navbar .navbar-nav .nav-link {
             color: white;
+            font-weight: 800;
+            text-decoration: none;
         }
 
 
@@ -604,8 +606,15 @@
         .contact .php-email-form button[type=submit]:hover {
             background: #FFCA29;
         }
-
-        @-webkit-keyframes animate-loading {
+        @media only screen and (max-width: 600px){
+            .login{
+                margin-left: 0px !important;
+            }
+            #hero {
+                height: 996px!important;
+            }
+        }
+            @-webkit-keyframes animate-loading {
             0% {
                 transform: rotate(0deg);
             }
@@ -613,7 +622,9 @@
                 transform: rotate(360deg);
             }
         }
-
+        .search-form > form .row.no-margin {
+             margin-right: 0px !important;
+        }
         @keyframes animate-loading {
             0% {
                 transform: rotate(0deg);

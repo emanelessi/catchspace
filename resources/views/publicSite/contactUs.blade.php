@@ -80,11 +80,10 @@
         }
 
         .contact .text-center p {
-
-            margin: 26px 214px 24px 208px;
+            margin-top: 22px;
+            /*margin: 26px 214px 24px 208px;*/
             font-size: 25px;
             font-weight: 500;
-            font-style: light;
             line-height: 1.43;
             letter-spacing: -0.77px;;
             color: #6c6c6c;
@@ -227,7 +226,7 @@
                             <h1>Let's keep this conversation
                                 going.</h1>
                             <p class=" fw-normal"> Do you have any questions or comments? Don’t hesitate to contact us
-                                we
+                                we<br>
                                 are happy to help you.</p>
                         </div>
                     </div>
