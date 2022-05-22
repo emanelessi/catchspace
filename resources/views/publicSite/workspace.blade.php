@@ -18,7 +18,7 @@
 
         #hero {
             width: 100%;
-            height: 720px;
+            height: 800px;
             background: url("{{asset('../img/worker.png')}}");
             background-size: cover;
             position: relative;
@@ -344,8 +344,10 @@
 
 
         .star .rimg {
-            width: 450px;;
-            height: 250px;
+            /*width: 450px;;*/
+            /*height: 250px;*/
+            width: 100%;
+            height: 100%;
             margin-left: 10px;
             margin-top: 0;
 
@@ -375,8 +377,9 @@
             font-size: 14px;
             color: #ffffff;
             border-radius: 50px;
-            padding: 10px;
-            margin-left: -88px;
+            /*padding: 10px;*/
+            /*margin-left: -88px;*/
+            margin-left: -41px;
             background: var(--yellow-color);
             transition: all .2s ease-out, color .2s ease-out;
             font-weight: 500;
@@ -410,8 +413,8 @@
 
         .container .sh {
             box-shadow: 0 5px 6px 0 rgba(110, 123, 131, 0.1);
-            margin-top: 5px;
-            height: 300px;
+            /*margin-top: 5px;*/
+            /*height: 300px;*/
             background-color: white;
             border-radius: 20px;
         }
@@ -457,7 +460,7 @@
         <div class="container">
             <div class="row">
                 <div id="hero1" class="d-flex align-items-center col-lg-6">
-                    <div class="  col-lg-6  d-flex flex-column justify-content-center pt-lg-0 order-2 order-lg-1">
+                    <div class="col-lg-8 d-flex flex-column justify-content-center pt-lg-0 order-2 order-lg-1">
                         <h1>best<img src="{{asset('../img/bom.png')}}"
                                      style="width:60px ; height:60px; margin-left: 10px;"><br>collection
                             of
@@ -477,9 +480,10 @@
 
             " method="get" action="{{ route('simplesearch') }}" role="form" class="php-email-form col-4">
                             @csrf
-                            <div class="search d-flex"><input id="search" style="border:0" type="text" name="search"
+                            <div class="search d-flex ">
+                                <input id="search" style="border:0" type="text" name="search"
                                                               required="">
-                                <input type="submit" class=" btn main-btn3" value="Search"></div>
+                                <input type="submit" class="  btn main-btn3" value="Search"></div>
                         </form>
 
                         <div id="box" class=" box ">
@@ -525,7 +529,6 @@
         </div>
         <div class="input-field third-wrap">
         </div>
-
     </section>
     <section>
         <div class="container">
@@ -538,32 +541,30 @@
                     <br>
                 </div>
             </div>
-
-            <div class="cheak1 filter-bar  d-flex align-items-center "
-            >
+            <div class="cheak1 filter-bar  d-flex align-items-center ">
                 <div class="row  align-items-center">
 
 
-                    <h6 class="col-md-2">Looking For ?</h6>
-                    <div class="col-md-2  col-sm-3 checkbox  checkbox-success">
+                    <h6 class="col-md-2 ">Looking For ?</h6>
+                    <div class="col-lg-2 col-md-2  col-sm-3 checkbox  checkbox-success">
                         <input id="checkbox1" class="styled" type="checkbox">
                         <label for="checkbox1">
                             Desk
                         </label>
                     </div>
-                    <div class=" col-md-2 col-sm-3 checkbox checkbox-primary">
+                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-primary">
                         <input id="checkbox2" class="styled" type="checkbox" checked>
                         <label for="checkbox2">
                             Private room
                         </label>
                     </div>
-                    <div class="col-md-2 col-sm-3 checkbox checkbox-success">
+                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success">
                         <input id="checkbox3" class="styled" type="checkbox">
                         <label for="checkbox3">
                             Meeting room
                         </label>
                     </div>
-                    <div class="col-md-2 col-sm-3 checkbox checkbox-success">
+                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success">
                         <input id="checkbox4" class="styled" type="checkbox">
                         <label for="checkbox4">
                             Skype room
@@ -577,18 +578,17 @@
         <section id="star" class="star">
             <div class="container " data-aos="fade-up">
                 <div class="row">
-                    <div class="   col-lg-12  sh shadow d-flex align-items-center" data-aos="fade-right"
-                         data-aos-delay="100">
+                    <div class="col-lg-12 col-md-12 col-sm-12  sh shadow" data-aos="fade-right"
+                         data-aos-delay="100" style="padding: 20px">
                         <div class="col-lg-4">
-                            <img src="{{'/storage/'.$workspace->image}}" class="    rimg img-fluid" alt="">
+                            <img src="{{'/storage/'.$workspace->image}}" class=" rimg img-fluid" alt="">
                         </div>
                         <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                             <h3><a href="/worker/workspace-details/{{$workspace->id}}"
                                    class="workspace-name">{{$workspace->name}}</a></h3>
                             <p class="t">
                                 {{$workspace->location}}
-                            </p>
-                            <div class="ratings">
+                            </p>    <div class="ratings">
                                 <span
                                     class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
                                 <div class="stars" style="color:#FFC107 ;">
@@ -604,6 +604,7 @@
                             <a class="btn main-btn2" id="D" data-target="#responsive"
                                data-toggle="modal">ENQUIRE NOW</a>
                         </div>
+
                     </div>
                 </div>
             </div>
