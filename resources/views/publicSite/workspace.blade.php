@@ -423,7 +423,11 @@
 
         .workspace-name {
             text-decoration: none;
-            color: black;
+            color: #6B60E6;
+        }
+        .workspace-name:hover {
+            text-decoration: none;
+            color: #D9368B;
         }
 
         .work-img {

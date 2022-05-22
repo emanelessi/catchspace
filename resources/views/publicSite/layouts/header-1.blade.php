@@ -1,3 +1,19 @@
+<style>
+    @media only screen and (max-width: 600px){
+        .login{
+            margin-left: 0px !important;
+        }}
+    .navbar .navbar-nav .nav-link {
+        color: #6B60E6;
+        font-weight: 800;
+        text-decoration: none;
+    }
+    .navbar .navbar-toggler {
+        color: #6B60E6;
+        font-size: 25px;
+        border-color: #6B60E6;
+    }
+</style>
 <div class="hero-container" data-aos="fade-up">
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
