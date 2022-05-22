@@ -11,8 +11,8 @@ class Attribute extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public function providerAttributes()
+    public function workSpaceAttributes()
     {
-        return $this->hasMany(ProviderAttribute::class, 'provider_id', 'id')->withTrashed();
+        return $this->belongsTo(WorkSpaceAttribute::class, 'work_space_id')->withTrashed();
     }
 }

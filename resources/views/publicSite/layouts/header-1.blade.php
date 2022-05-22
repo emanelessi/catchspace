@@ -51,7 +51,7 @@
                         <a class="nav-link p-2 p-lg-3 login"  href="{{ route('workerLogin') }}" style="margin-left: 200px;">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary1 main-btn1 " id="R" href="{{ route('workerSignup') }}" style="padding-top: 7px;">Sign up</a>
+                        <a class="btn btn-primary1 main-btn1 " id="R" href="{{ route('workerSignup') }}" style="    font-weight: 800;padding-top: 7px;">Sign up</a>
                     </li>
                 </ul>
             </div>

@@ -27,10 +27,7 @@ class Provider extends Model
         return $this->hasMany(Policies::class, 'provider_id', 'id')->withTrashed();
     }
 
-    public function providerAttributes()
-    {
-        return $this->hasMany(ProviderAttribute::class, 'provider_id', 'id')->withTrashed();
-    }
+
 
     public function workSpaces()
     {

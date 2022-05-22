@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class ProviderAttribute extends Model
+class WorkSpaceAttribute extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
-    public function provider()
+    public function workSpace()
     {
-        return $this->belongsTo(Provider::class, 'provider_id')->withTrashed();
+        return $this->belongsTo(WorkSpace::class, 'work_space_id')->withTrashed();
     }
 
     public function attribute()

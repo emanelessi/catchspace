@@ -68,4 +68,8 @@ class WorkSpace extends Model
     {
         return $this->hasMany(WorkSpaceService::class, 'work_space_id', 'id')->withTrashed();
     }
+    public function workSpaceAttributes()
+    {
+        return $this->hasMany(WorkSpaceAttribute::class, 'work_space_id', 'id')->withTrashed();
+    }
 }
