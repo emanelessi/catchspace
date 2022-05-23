@@ -17,7 +17,6 @@ class CreateWorkSpacesTable extends Migration
             $table->id();
             $table->text('name');
             $table->string('image')->nullable();
-            $table->string('location');
             $table->integer('capacity');
             $table->unsignedBigInteger('work_space_type_id');
             $table->foreign('work_space_type_id')->references('id')->on('work_space_types')->cascadeOnDelete();

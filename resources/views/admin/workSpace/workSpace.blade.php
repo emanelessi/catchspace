@@ -208,8 +208,7 @@
                                         </th>
                                         <th class="table-th"> Name
                                         </th>
-                                        <th class="table-th"> Location
-                                        </th>
+
                                         <th class="table-th"> Capacity
                                         </th>
                                         <th class="table-th"> Type
@@ -240,8 +239,7 @@
                                             </td>
                                             <td class="table-td"> {{$myworkspace->name}}
                                             </td>
-                                            <td class="table-td"> {{$myworkspace->location}}
-                                            </td>
+
                                             <td class="table-td">{{$myworkspace->capacity}}</td>
                                             <td class="table-td"> {{$myworkspace->workSpaceType->type}}
                                             </td>
@@ -408,8 +406,7 @@
                                                 </th>
                                                 <th class="table-th"> Name
                                                 </th>
-                                                <th class="table-th"> Location
-                                                </th>
+
                                                 <th class="table-th"> Capacity
                                                 </th>
                                                 <th class="table-th"> Type
@@ -439,8 +436,7 @@
                                                     </td>
                                                     <td class="table-td"> {{$myworkspace->name}}
                                                     </td>
-                                                    <td class="table-td"> {{$myworkspace->location}}
-                                                    </td>
+
                                                     <td class="table-td"> {{$myworkspace->capacity}}
                                                     </td>
 

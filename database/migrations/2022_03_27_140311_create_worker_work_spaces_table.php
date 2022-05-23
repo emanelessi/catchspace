@@ -17,6 +17,7 @@ class CreateWorkerWorkSpacesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('worker_id');
             $table->foreign('worker_id')->references('id')->on('workers')->onDelete('cascade');
+            $table->date('date');
             $table->unsignedBigInteger('work_space_id');
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
             $table->softDeletes();

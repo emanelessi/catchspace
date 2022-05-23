@@ -153,13 +153,6 @@
                                                                 <input type="text" name="name"
                                                                        placeholder="name" value="{{$workspace->name}}"
                                                                        class="form-control form-input"/>
-                                                            </div><div class="form-group col-md-6">
-                                                                <label class="control-label margin-left-9" style="
-                                                                color:#6B7280;">Workspace
-                                                                    Location *</label>
-                                                                <input type="text" name="location"
-                                                                       placeholder="location" value="{{$workspace->location}}"
-                                                                       class="form-control form-input"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9"
@@ -290,14 +283,6 @@
                                                                            placeholder="name" value="{{$workspace->name}}"
                                                                            class="form-control form-input"/>
                                                                 </div>
-                                                                            <div class="form-group col-md-6">
-                                                                                <label class="control-label margin-left-9" style="
-                                                                color:#6B7280;">Workspace
-                                                                                    Location *</label>
-                                                                                <input type="text" name="location"
-                                                                                       placeholder="location" value="{{$workspace->location}}"
-                                                                                       class="form-control form-input"/>
-                                                                            </div>
                                                                 <div class="form-group col-md-6">
                                                                     <label class="control-label margin-left-9"
                                                                            style="color:#6B7280;">Workspace

@@ -25,37 +25,39 @@ class WorkSpaceSeeder extends Seeder
     public function run()
     {
         $work_space_type1 = new WorkSpaceType();
-        $work_space_type1->type = 'Office in a common room';
+        $work_space_type1->type = 'Open room';
+        $work_space_type1->image = 'workspace_type/open_room.jpg';
         $work_space_type1->save();
 
         $work_space_type2 = new WorkSpaceType();
-        $work_space_type2->type = 'closed room';
+        $work_space_type2->type = 'Closed room';
+        $work_space_type2->image = 'workspace_type/closed_room.jpg';
         $work_space_type2->save();
 
         $work_space_type3 = new WorkSpaceType();
         $work_space_type3->type = 'Meetings room';
+        $work_space_type3->image = 'workspace_type/meeting-room.jpg';
         $work_space_type3->save();
 
         $work_space_type4 = new WorkSpaceType();
         $work_space_type4->type = 'Skype room';
+        $work_space_type4->image = 'workspace_type/skype_room.jpg';
         $work_space_type4->save();
 
         $work_space = new WorkSpace();
         $work_space->name = 'Tools';
         $work_space->image = 'workspaces/Tools.png';
-        $work_space->location = 'Gaza, Remal';
         $work_space->capacity = 9;
-        $work_space->work_space_type_id  = $work_space_type1->id;
-        $work_space->provider_id   = 1;
+        $work_space->work_space_type_id  = $work_space_type3->id;
+        $work_space->provider_id   = 2;
         $work_space->save();
 
         $work_space2 = new WorkSpace();
         $work_space2->name = 'Lego';
         $work_space2->image = 'workspaces/space3.png';
-        $work_space2->location = 'Gaza, Universities, Lego Building';
         $work_space2->capacity = 3;
-        $work_space2->work_space_type_id  = $work_space_type3->id;
-        $work_space2->provider_id   = 2;
+        $work_space2->work_space_type_id  = $work_space_type1->id;
+        $work_space2->provider_id   = 1;
         $work_space2->save();
 
         $rate1=WorkSpaceRating::create(['work_space_id' => $work_space->id,'rate_avg' => 0,'rate_count' => 0]);
@@ -102,37 +104,7 @@ class WorkSpaceSeeder extends Seeder
         $work_space_addons->addon_id = $addon->id;
         $work_space_addons->save();
 
-        $attribute= new Attribute();
-        $attribute->name = 'Overview';
-        $attribute->save();
 
-        $attribute1= new Attribute();
-        $attribute1->name = 'Starting at';
-        $attribute1->save();
-
-        $attribute2= new Attribute();
-        $attribute2->name = 'Opining Hours';
-        $attribute2->save();
-
-        $work_space_attribute = new WorkSpaceAttribute();
-        $work_space_attribute->value = 'gives your business the commercial office space solutions it needs—minus the headaches of upfront capital and lengthy leases. That’s why more than 50% of Fortune 100 companies are WeWork members.';
-        $work_space_attribute->work_space_id = $work_space->id;
-        $work_space_attribute->attribute_id = $attribute->id;
-        $work_space_attribute->save();
-
-        $work_space_attribute1 = new WorkSpaceAttribute();
-        $work_space_attribute1->value = 200;
-        $work_space_attribute1->work_space_id = $work_space->id;
-        $work_space_attribute1->attribute_id = $attribute1->id;
-        $work_space_attribute1->save();
-
-
-        $work_space_attribute2 = new WorkSpaceAttribute();
-        $work_space_attribute2->value = 'Mon-Fri
-09:00 Am - 07:00 Pm';
-        $work_space_attribute2->work_space_id = $work_space->id;
-        $work_space_attribute2->attribute_id = $attribute2->id;
-        $work_space_attribute2->save();
 
 
     }

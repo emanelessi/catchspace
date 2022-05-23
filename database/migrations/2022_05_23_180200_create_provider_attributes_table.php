@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkSpaceAttributesTable extends Migration
+class CreateProviderAttributesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateWorkSpaceAttributesTable extends Migration
      */
     public function up()
     {
-        Schema::create('work_space_attributes', function (Blueprint $table) {
+        Schema::create('provider_attributes', function (Blueprint $table) {
             $table->id();
-            $table->string('value');
-            $table->unsignedBigInteger('work_space_id');
-            $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
+            $table->longText('value');
+            $table->unsignedBigInteger('provider_id');
+            $table->foreign('provider_id')->references('id')->on('providers')->onDelete('cascade');
             $table->unsignedBigInteger('attribute_id');
             $table->foreign('attribute_id')->references('id')->on('attributes')->cascadeOnDelete();
             $table->softDeletes();
@@ -32,6 +32,6 @@ class CreateWorkSpaceAttributesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('work_space_attributes');
+        Schema::dropIfExists('provider_attributes');
     }
 }

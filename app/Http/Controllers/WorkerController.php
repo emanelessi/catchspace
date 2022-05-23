@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactUs;
+use App\Models\Provider;
 use App\Models\Rating;
 use App\Models\Worker;
 use App\Models\WorkerWorkSpace;
@@ -13,6 +14,7 @@ use App\Models\WorkSpaceRating;
 use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
@@ -42,7 +44,9 @@ class WorkerController extends Controller
 
     public function home()
     {
-        return view('publicSite.home');
+        $workspace_types=WorkSpaceType::all();
+//        $workspace_rating=WorkSpaceRating::where('rate_avg',)->get();
+        return view('publicSite.home',compact('workspace_types'));
     }
 
     public function aboutus()
@@ -56,6 +60,29 @@ class WorkerController extends Controller
         $workspaces = WorkSpace::query()->where('name', 'LIKE', "%{$search}%")->get();
 
         return view('publicSite.simpleSearch', compact('workspaces'));
+    }
+
+    public function search(Request $request)
+    {
+        $address = $request->input('address');
+        $work_space_type_id = $request->input('work_space_type_id');
+        $date = $request->input('date');
+        $capacity = $request->input('capacity');
+        $workspaces = WorkSpace::query()->where('capacity', $capacity)->where('work_space_type_id', $work_space_type_id)->get();
+        $provider = Provider::query()->where('address','LIKE', "%{$address}%")->get();
+        $reservation = WorkerWorkSpace::where('date', $date)->exists();
+//        dd($workspaces->isEmpty(),$provider->isEmpty(),$reservation == true);
+        if (($workspaces->isEmpty() and $provider->isEmpty() and $reservation) == false){
+            return view('publicSite.search', compact('workspaces','provider'));
+        }
+        elseif (($workspaces->isEmpty() or $provider->isEmpty())==true and $reservation== false){
+            return back()->with('success', trans('messages.search.reserved'));
+
+        }
+        else{
+            return back()->with('success', trans('messages.search.not_found'));
+        }
+
     }
 
     public function workspace()

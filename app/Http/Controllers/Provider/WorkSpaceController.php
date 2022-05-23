@@ -45,14 +45,12 @@ class WorkSpaceController extends Controller
     {
         $this->validate($request, [
             'capacity' => 'required',
-            'location' => 'required',
             'image' => 'required',
             'work_space_type_id' => 'required',
             'provider_id' => 'required',
             'name' => 'required',
         ]);
-        $workspace = WorkSpace::create(['name' => $request->input('name'),
-            'location' => $request->input('location'),'capacity' => $request->input('capacity'),
+        $workspace = WorkSpace::create(['name' => $request->input('name'),'capacity' => $request->input('capacity'),
             'image' => storeImage('workspaces','image' ), 'work_space_type_id' => $request->input('work_space_type_id'),
             'provider_id' => $request->input('provider_id'),
         ]);
@@ -72,7 +70,6 @@ class WorkSpaceController extends Controller
     {
         $this->validate($request, [
             'capacity' => 'required',
-            'location' => 'required',
             'image' => 'required',
             'work_space_type_id' => 'required',
             'provider_id' => 'required',
@@ -81,7 +78,6 @@ class WorkSpaceController extends Controller
 
         $workspace = WorkSpace::withTrashed()->findOrFail($id);
         $workspace->name = $request->input('name');
-        $workspace->location = $request->input('location');
         $workspace->capacity = $request->input('capacity');
         $workspace->image = storeImage('workspaces','image' );
         $workspace->work_space_type_id = $request->input('work_space_type_id');

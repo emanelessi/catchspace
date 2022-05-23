@@ -26,6 +26,7 @@ class WorkersSeeder extends Seeder
         $worker1->save();
 
         $workerWorkSpace1 = new WorkerWorkSpace();
+        $workerWorkSpace1->date= '2022-05-03';
         $workerWorkSpace1->worker_id= $worker1->id;
         $workerWorkSpace1->work_space_id= 1;
         $workerWorkSpace1->save();
@@ -41,11 +42,13 @@ class WorkersSeeder extends Seeder
         $worker2->save();
 
         $workerWorkSpace2 = new WorkerWorkSpace();
+        $workerWorkSpace2->date= '2022-04-01';
         $workerWorkSpace2->worker_id= $worker2->id;
         $workerWorkSpace2->work_space_id= 2;
         $workerWorkSpace2->save();
 
         $workerWorkSpace3 = new WorkerWorkSpace();
+        $workerWorkSpace3->date= '2022-04-07';
         $workerWorkSpace3->worker_id= $worker2->id;
         $workerWorkSpace3->work_space_id= 1;
         $workerWorkSpace3->save();

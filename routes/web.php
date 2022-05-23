@@ -93,6 +93,7 @@ Route::post('/worker/contact-us', [\App\Http\Controllers\WorkerController::class
 Route::get('/worker/about-us', [\App\Http\Controllers\WorkerController::class, 'aboutus'])->name('workerAboutus');
 
 Route::get('/search/workspace', [\App\Http\Controllers\WorkerController::class, 'simplesearch'])->name('simplesearch');
+Route::get('/search/workspaces', [\App\Http\Controllers\WorkerController::class, 'search'])->name('search');
 
 
 

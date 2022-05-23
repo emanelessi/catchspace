@@ -5,7 +5,7 @@
         }}
     .navbar .navbar-nav .nav-link {
         color: white;
-        font-weight: 800;
+        font-weight: 300;
         text-decoration: none;
     }
 </style>

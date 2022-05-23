@@ -15,7 +15,8 @@ class CreateWorkSpaceTypesTable extends Migration
     {
         Schema::create('work_space_types', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['Office in a common room','closed room','Meetings room','Skype room']);
+            $table->enum('type', ['Open room','Closed room','Meetings room','Skype room']);
+            $table->string('image')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

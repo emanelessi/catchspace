@@ -488,6 +488,14 @@
             font-size: 22px;
 
         }
+        .card-title{
+            font-size: 15px;
+            font-weight: 800;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 350px;
+        }
 
         .services .icon-boxs h4 a {
             color: #FFFF;
@@ -1042,37 +1050,45 @@
             <div class="container">
                 <div class="row">
                     <div class="search-form shadow col-lg-12 col-md-12 col-sm-12">
-                        <form>
+                        <form method="get" action="{{route('search')}}">
+                            @csrf
                             <div class="row no-margin">
+                                @if(session()->has('success'))
+                                    <div class="alert alert-success">
+                                        {{ session()->get('success') }}
+                                    </div>
+                                @endif
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <div class="col-lg-3 col-md-3 col-sm-3">
                                         <div class="form-group">
-                                            <span class="form-label">Location</span>
-                                            <input class="form-control" type="text" placeholder="Remal">
+                                            <span class="form-label">Address</span>
+                                            <input class="form-control" type="text" name="address" placeholder="Remal" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
                                         <div class="form-group">
                                             <span class="form-label">Workspace Type</span>
-                                            <input class="form-control" type="text" placeholder="private office">
+                                            <select name="work_space_type_id"
+                                                    class="form-control form-input">
+                                                @foreach($workspace_types as $mytype)
+                                                    <option
+                                                        value="{{$mytype->id}}" required>{{$mytype->type}}</option>
+                                                @endforeach
+                                            </select>
+
+
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
                                         <div class="form-group">
                                             <span class="form-label">Date</span>
-                                            <input class="form-control" type="date" required>
+                                            <input class="form-control" type="date" name="date" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
                                         <div class="form-group">
-                                            <span class="form-label"> person</span>
-                                            <select class="form-control form-select">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
+                                            <span class="form-label"> Capacity </span>
+                                            <input class="form-control" type="number" name="capacity" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-sm-3">
@@ -1310,41 +1326,43 @@
             </div>
             <div class="container">
                 <div class="row">
+                    @foreach($workspace_types as $type)
                     <div class="col-lg-3 col-sm-2 col-md-3">
                         <div class="card  rounded-1  shadow ">
-                            <img src=" {{asset('../img/meeting room.png')}}" class="card-img-top" alt="...">
+                            <img src="{{'/storage/'.$type->image}}" class="card-img-top" alt="...">
                             <div class="card-body bg-warning  text-center ">
-                                <h5 class="card-title mb-0">Meeting room</h5>
+                                <h5 class="card-title mb-0">{{$type->type}}</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-3 col-md-3">
-                        <div class="card rounded-1 border-1-whaite">
-                            <img src=" {{asset('../img/private room.png')}}" class="card-img-top roun" alt="...">
-                            <div class="card-body bg-warning text-center ">
-                                <h5 class="card-title mb-0">Private room</h5>
+                    @endforeach
+{{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
+{{--                        <div class="card rounded-1 border-1-whaite">--}}
+{{--                            <img src=" {{asset('../img/private room.png')}}" class="card-img-top roun" alt="...">--}}
+{{--                            <div class="card-body bg-warning text-center ">--}}
+{{--                                <h5 class="card-title mb-0">Private room</h5>--}}
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-3 col-md-3">
-                        <div class="card  rounded-1 ">
-                            <img src="{{asset('../img/Skype room.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body bg-warning text-center    ">
-                                <h5 class="card-title mb-0">Skype room</h5>
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
+{{--                        <div class="card  rounded-1 ">--}}
+{{--                            <img src="{{asset('../img/Skype room.png')}}" class="card-img-top" alt="...">--}}
+{{--                            <div class="card-body bg-warning text-center    ">--}}
+{{--                                <h5 class="card-title mb-0">Skype room</h5>--}}
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-3 col-md-3">
-                        <div class="card  rounded-1 ">
-                            <img src="{{asset('../img/shard room.png')}}" class="card-img-top" alt="...">
-                            <div class="card-body  bg-warning text-center ">
-                                <h5 class="card-title   mb-0">Sheard room</h5>
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
+{{--                        <div class="card  rounded-1 ">--}}
+{{--                            <img src="{{asset('../img/shard room.png')}}" class="card-img-top" alt="...">--}}
+{{--                            <div class="card-body  bg-warning text-center ">--}}
+{{--                                <h5 class="card-title   mb-0">Sheard room</h5>--}}
 
-                            </div>
-                        </div>
-                    </div>
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>

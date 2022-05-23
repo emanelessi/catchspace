@@ -50,5 +50,8 @@ return [
     ],'review' => [
         'review_created'=>'Thank you! Your review added successfully',
         'review_repeated'=>'You review for this workspace before',
+    ],'search' => [
+        'not_found'=>'There is no workspace available with this details',
+        'reserved'=>'This workspace is reserved',
     ],
 ];
