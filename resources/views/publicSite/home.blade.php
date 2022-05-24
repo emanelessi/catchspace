@@ -664,6 +664,15 @@
             position: relative;
             color: #343A40;
         }
+        .workspace-name {
+            text-decoration: none !important;
+            color: #6B60E6 !important;
+        }
+
+        .workspace-name:hover {
+            text-decoration: none !important;
+            color: var(--yellow-color) !important;
+        }
 
         .section-title h2::before {
             content: "";
@@ -884,7 +893,7 @@
         }
 
         .carousel .item .img-box {
-            height: 120px;
+            height: 180px;
             margin-bottom: 20px;
             width: 100%;
             position: relative;
@@ -1203,95 +1212,38 @@
                                 <div class="carousel-inner">
                                     <div class="item carousel-item active">
                                         <div class="row">
+                                            @foreach($workspaces as $myworkspace)
                                             <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
                                                 <div class="thumb-wrapper">
                                                     <div class="img-box">
-                                                        <img src=" {{asset('../img/space1.png')}}"
+                                                        <img src=" {{'/storage/'.$myworkspace->image}}"
                                                              class="img-fluid"
                                                              style=" width:100%" alt="">
                                                     </div>
                                                     <div class="thumb-content">
-                                                        <h4>LEGO</h4>
+                                                        <h4 class="workspace-name">{{$myworkspace->name}}</h4>
+                                                        <span class="product-rating">{{$myworkspace->workSpaceRating[0]->rate_avg ?? 0 }}</span><span>/5</span>
+
                                                         <div class="star-rating"
                                                              style="color: #FFC107">
-                                                            <ul class="list-inline">
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
 
+                                                            <ul class="list-inline">
+                                                                @for($i=0;$myworkspace->workSpaceRating[0]->rate_avg>$i;$i++)
+                                                                <li class="list-inline-item"><i
+                                                                        class="fa fa-star"></i></li>
+                                                                @endfor
                                                             </ul>
                                                         </div>
-                                                        <p class="item-price"><b>$7.00/DAY</b></p>
-                                                        <a href="#" class="btn btn-primary ">View
-                                                            avilability</a>
+
+                                                        <div class="rating-text">
+                                                            <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>
+                                                        </div>
+{{--                                                        <a href="#" class="btn btn-primary ">View avilability</a>--}}
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
-                                                <div class="thumb-wrapper">
-                                                    <div class="img-box">
-                                                        <img src="{{asset('../img/space1.png')}}"
-                                                             class="img-fluid"
-                                                             style=" width:100%" alt="">
-                                                    </div>
-                                                    <div class="thumb-content">
-                                                        <h4>LEGO</h4>
-                                                        <div class="star-rating"
-                                                             style="color: #FFC107">
-                                                            <ul class="list-inline">
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
+                                            @endforeach
 
-                                                            </ul>
-                                                        </div>
-                                                        <p class="item-price"><b>$7.00/DAY</b></p>
-                                                        <a href="#" class="btn btn-primary">View
-                                                            avilability</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
-                                                <div class="thumb-wrapper">
-
-                                                    <div class="img-box">
-                                                        <img src="{{asset('../img/space1.png')}}"
-                                                             class="img-fluid"
-                                                             style=" width:100%; height: 100%;"
-                                                             alt="">
-                                                    </div>
-                                                    <div class="thumb-content">
-                                                        <h4>LEGO</h4>
-                                                        <div class="star-rating"
-                                                             style="color: #FFC107">
-                                                            <ul class="list-inline">
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-
-                                                            </ul>
-                                                        </div>
-                                                        <p class="item-price"><b>$7.00/DAY</b></p>
-                                                        <a href="#" class="btn btn-primary">View
-                                                            avilability</a>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

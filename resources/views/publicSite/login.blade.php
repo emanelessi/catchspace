@@ -10637,6 +10637,11 @@
                                     <h3 class="mb-4">Sign In</h3>
                                 </div>
                             </div>
+                            @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                    {{ session()->get('success') }}
+                                </div>
+                            @endif
                             <form action="{{ route('workerCheck') }}" method="post" class="signin-form">
                                 @csrf
                                 <div class="form-group mb-3">

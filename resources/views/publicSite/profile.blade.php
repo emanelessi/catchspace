@@ -148,20 +148,20 @@
             font-family: roboto;
         }
 
-        .custom-table {
-            min-width: 690px;
-        }
+
 
         .custom-table tbody th, .custom-table tbody td {
 
-            font-weight: 400;
             padding-bottom: 15px;
             padding-top: 15px;
             font-weight: 300;
         }
+        .tab{
+            text-align: center;
+        }
 
 
-    </style>
+</style>
     <div class="container">
         <div class="main-body">
             <div class="row">
@@ -183,31 +183,35 @@
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row mb-3">
+                            <div class="row mb-3 mt-4">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Full Name</h6>
                                 </div>
                                 <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
                                      style="width:530px">
-                                    <input type="text" class="form-control" value="John Doe">
+                                    <div class="d-flex">
+                                        <input type="text" class="form-control" value="John Doe">
 
-                                    <button class="btn btn-outline-secondary border-left-0 border" type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor"
-                                             class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                                        </svg>
-                                    </button>
+                                        <button class="btn btn-outline-secondary border-left-0 border" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                 fill="currentColor"
+                                                 class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="row mb-3">
+                            <div class="row mb-3 mt-4">
                                 <div class="col-sm-3">
                                     <h6 class="mb-2">Email</h6>
 
                                 </div>
                                 <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
                                      style="width:530px">
+                                    <div class="d-flex">
                                     <input type="text" class="form-control" value="john@example.com">
 
                                     <button class="btn btn-outline-secondary border-left-0 border" type="button">
@@ -218,16 +222,16 @@
                                                 d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
                                         </svg>
                                     </button>
-
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row mb-3">
+                            <div class="row mb-3 mt-3">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Password</h6>
                                 </div>
                                 <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
                                      style="width:530px">
-
+                                    <div class="d-flex">
                                     <input type="text" class="form-control" placeholder="********">
 
                                     <button class="btn btn-outline-secondary border-left-0 border" type="button">
@@ -238,12 +242,13 @@
                                                 d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
                                         </svg>
                                     </button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3"></div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input type="button" class="btn   main-btn2  " value="Save Changes">
+                                <div class="col-sm-8"></div>
+                                <div class="col-sm-4 text-secondary">
+                                    <input type="button" class="btn mt-4  main-btn2  " value="Save Changes">
                                 </div>
                             </div>
                         </div>

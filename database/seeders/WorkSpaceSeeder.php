@@ -45,7 +45,7 @@ class WorkSpaceSeeder extends Seeder
         $work_space_type4->save();
 
         $work_space = new WorkSpace();
-        $work_space->name = 'Tools';
+        $work_space->name = 'Tools Meetings room';
         $work_space->image = 'workspaces/Tools.png';
         $work_space->capacity = 9;
         $work_space->work_space_type_id  = $work_space_type3->id;
@@ -53,7 +53,7 @@ class WorkSpaceSeeder extends Seeder
         $work_space->save();
 
         $work_space2 = new WorkSpace();
-        $work_space2->name = 'Lego';
+        $work_space2->name = 'Lego Open room';
         $work_space2->image = 'workspaces/space3.png';
         $work_space2->capacity = 3;
         $work_space2->work_space_type_id  = $work_space_type1->id;

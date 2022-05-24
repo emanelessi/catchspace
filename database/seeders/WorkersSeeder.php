@@ -17,7 +17,7 @@ class WorkersSeeder extends Seeder
     {
         $worker1 = new Worker();
         $worker1->name = 'John';
-        $worker1->email = 'John@gmail.com';
+        $worker1->email = 'john@gmail.com';
         $worker1->password = bcrypt('123456');
         $worker1->job_title = 'Developer';
         $worker1->avatar = '/providers/kGAcCMoaZ3vGHgQzAf2wI9DBToPFt1l8uWqKrblH.jpg';
@@ -33,7 +33,7 @@ class WorkersSeeder extends Seeder
 
         $worker2 = new Worker();
         $worker2->name = 'Yara';
-        $worker2->email = 'Yara@gmail.com';
+        $worker2->email = 'yara@gmail.com';
         $worker2->password = bcrypt('123456');
         $worker2->job_title = 'Designer';
         $worker2->avatar = '/providers/J6KNTtcvZJkB9UNI8B5Vd2pMYNbYUzAwSF6eAOOq.jpg';

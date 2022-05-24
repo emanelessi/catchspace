@@ -73,6 +73,7 @@ Route::get('/worker/profile', function () {
 Route::get('/worker/login', [\App\Http\Controllers\WorkerController::class, 'login'])->name('workerLogin');
 Route::post('/worker/login', [\App\Http\Controllers\WorkerController::class, 'check'])->name('workerCheck');
 //Route::get('/worker/logout', [\App\Http\Controllers\WorkerController::class, 'logout'])->name('logout');
+Route::get('/worker/profile', [\App\Http\Controllers\WorkerController::class, 'profile'])->name('workerProfile');
 
 Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'create'])->name('workerSignup');
 Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('signupWorkerStore');

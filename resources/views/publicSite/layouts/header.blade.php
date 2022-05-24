@@ -5,7 +5,7 @@
         }}
     .navbar .navbar-nav .nav-link {
         color: white;
-        font-weight: 300;
+        font-weight: 800;
         text-decoration: none;
     }
 </style>
@@ -44,6 +44,7 @@
                     <li class="nav-item">
                         <a class="nav-link p-2 p-lg-3" href="{{ route('workerAboutus') }}">About us</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link p-2 p-lg-3 login" href="{{ route('workerLogin') }}" style="margin-left: 200px;">Login</a>
                     </li>

@@ -23,7 +23,7 @@ class ProviderTableSeeder extends Seeder
         $user_level_admin->save();
 //        `name`, `owner_name`, `address`, `logo`
         $provider = new  Provider();
-        $provider->name = 'LEGO';
+        $provider->name = 'Lego';
         $provider->owner_name = 'Aseel Mousa';
         $provider->address = 'El Sinaa Crossing, LEGO Business Center Building';
         $provider->phone = '0598587747';

@@ -40,6 +40,7 @@ return [
         'worker_deleted'=>'worker deleted successfully',
         'worker_restored'=>'worker restored successfully',
         'worker_added'=>'Added successfully Go to Login',
+        'worker_login'=>'Wrong Email Or Password',
     ],'policies' => [
         'policies_created'=>'policies created successfully',
         'policies_updated'=>'policies updated successfully',

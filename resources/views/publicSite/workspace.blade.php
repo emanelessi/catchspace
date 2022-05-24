@@ -354,7 +354,11 @@
             margin-top: 0;
 
         }
+        .product-rating {
 
+            font-size: 20px;
+            color: #D9368B;
+        }
 
         .main-btn2 {
             font-size: 14px;

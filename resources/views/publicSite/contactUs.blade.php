@@ -9,7 +9,7 @@
         }
 
         body {
-            font-family: "roboto" sans-serif;
+            font-family: "roboto";
         }
 
         /* start Navbar */
@@ -20,7 +20,6 @@
             font-size: small;
             width: 80px;
             height: 35px;
-            padding-top: -50px;
 
         }
 

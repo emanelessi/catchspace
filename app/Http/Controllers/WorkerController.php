@@ -15,6 +15,7 @@ use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
@@ -45,8 +46,9 @@ class WorkerController extends Controller
     public function home()
     {
         $workspace_types=WorkSpaceType::all();
+        $workspaces=WorkSpace::all();
 //        $workspace_rating=WorkSpaceRating::where('rate_avg',)->get();
-        return view('publicSite.home',compact('workspace_types'));
+        return view('publicSite.home',compact('workspace_types','workspaces'));
     }
 
     public function aboutus()
@@ -57,9 +59,10 @@ class WorkerController extends Controller
     public function simplesearch(Request $request)
     {
         $search = $request->input('search');
-        $workspaces = WorkSpace::query()->where('name', 'LIKE', "%{$search}%")->get();
+        $providers = Provider::query()->where('name', 'LIKE', "%{$search}%")->get();
+        $workspaces = Provider::query()->where('name', 'LIKE', "%{$search}%")->get();
 
-        return view('publicSite.simpleSearch', compact('workspaces'));
+        return view('publicSite.simpleSearch', compact('providers','workspaces'));
     }
 
     public function search(Request $request)
@@ -72,7 +75,7 @@ class WorkerController extends Controller
         $provider = Provider::query()->where('address','LIKE', "%{$address}%")->get();
         $reservation = WorkerWorkSpace::where('date', $date)->exists();
 //        dd($workspaces->isEmpty(),$provider->isEmpty(),$reservation == true);
-        if (($workspaces->isEmpty() and $provider->isEmpty() and $reservation) == false){
+        if (($workspaces->isEmpty() or $provider->isEmpty() and $reservation) == false){
             return view('publicSite.search', compact('workspaces','provider'));
         }
         elseif (($workspaces->isEmpty() or $provider->isEmpty())==true and $reservation== false){
@@ -196,14 +199,20 @@ class WorkerController extends Controller
 
         $email = $request->input('email');
         $password = $request->input('password');
-
-        if (Worker::where('email', $email)->where('password', $password)->first() === null) {
-            return view('publicSite.home');
+        $db_password=Worker::select('password')->where('email', $email)->first();
+//        dd(password_verify($password,$db_password['password'] ));
+//dd(Worker::where('email', $email)->first(),Hash::check('password', $password));
+        if (Worker::where('email', $email)->first() != null and password_verify($password,$db_password['password'] ) !=false) {
+            $workspace_types=WorkSpaceType::all();
+            return view('publicSite.home',compact('workspace_types'));
 
         }
-        return view('publicSite.login');
+        return back()->with('success', trans('messages.worker.worker_login'));
 
 
+    }
+    public function profile(){
+        return view('publicSite.profile');
     }
 
 //    public function logout() {
