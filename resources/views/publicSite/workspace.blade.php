@@ -480,7 +480,7 @@
                         </h1>
                         <h1 id="h1h" style=" color: #D9368B; "><strike>workspaces</strike>
                         </h1>
-                        <h2 class="font-weight-bold">Viewing {{$workspaces->count()}} Coworking Spaces In Gaza</h2>
+                        <h2 class="font-weight-bold">Viewing {{$providers->count()}} Coworking Spaces In Gaza</h2>
                         <form style="
 
             margin-top: 5px;
@@ -548,7 +548,7 @@
             <div class="row">
                 <div id="hero2" class="d-flex align-items-center col-md-6 ">
                     <div class="  pt-6 pt-lg-0 order-2 order-lg-1 d-flex  justify-content-center">
-                        <h2>Viewing {{$workspaces->count()}} <br>Coworking Spaces In GAZA
+                        <h2>Viewing {{$providers->count()}} <br>Coworking Spaces In GAZA
                         </h2>
                     </div>
                     <br>
@@ -587,35 +587,39 @@
             </div>
         </div>
     </section>
-    @foreach($workspaces as $workspace)
+    @foreach($providers as $myprovider)
         <section id="star" class="star">
             <div class="container " data-aos="fade-up">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12  sh shadow" data-aos="fade-right"
                          data-aos-delay="100" style="padding: 20px">
                         <div class="col-lg-4">
-                            <img src="{{'/storage/'.$workspace->image}}" class=" rimg img-fluid" alt="">
+                            <img src="{{'/storage/'.$myprovider->logo}}" class=" rimg img-fluid" alt="">
                         </div>
                         <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                            <h3><a href="/worker/workspace-details/{{$workspace->id}}"
-                                   class="workspace-name">{{$workspace->name}}</a></h3>
+                            <h3><a href="/worker/workspace-details/{{$myprovider->id}}"
+                                   class="workspace-name">{{$myprovider->name}}</a></h3>
                             <p class="t">
-                                {{$workspace->location}}
-                            </p>    <div class="ratings">
-                                <span
-                                    class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
-                                <div class="stars" style="color:#FFC107 ;">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="rating-text">
-                                    <span style="color:#BBBBBB; font-size:12px">{{$workspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>
-                                </div>
-                            </div>
-                            <a class="btn main-btn2" id="D" data-target="#responsive"
-                               data-toggle="modal">ENQUIRE NOW</a>
+                                <i class="fa fa-map-marker" style="color: #D9368B;"></i>  {{$myprovider->address}}
+                            </p>
+                            <p class="t">
+                                <i class="fa fa-business-time" style="color: #D9368B;"></i>  {{$myprovider->owner_name}}
+                            </p>
+{{--                            <div class="ratings">--}}
+{{--                                <span--}}
+{{--                                    class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>--}}
+{{--                                <div class="stars" style="color:#FFC107 ;">--}}
+{{--                                    <i class="fa fa-star"></i>--}}
+{{--                                    <i class="fa fa-star"></i>--}}
+{{--                                    <i class="fa fa-star"></i>--}}
+{{--                                    <i class="fa fa-star"></i>--}}
+{{--                                </div>--}}
+{{--                                <div class="rating-text">--}}
+{{--                                    <span style="color:#BBBBBB; font-size:12px">{{$workspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <a class="btn main-btn2" id="D" data-target="#responsive"--}}
+{{--                               data-toggle="modal">ENQUIRE NOW</a>--}}
                         </div>
 
                     </div>

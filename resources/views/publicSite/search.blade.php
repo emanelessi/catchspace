@@ -496,21 +496,9 @@
                             <p class="t">
                                 {{$myprovider->address}}
                             </p>
-                            @foreach($workspaces as $myworkspace)
-                            <div class="ratings">
-                                <span class="product-rating">{{$myworkspace->workSpaceRating[0]->rate_avg ?? 0 }}</span><span>/5</span>
-                                <div class="stars" style="color:#FFC107 ;">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="rating-text">
-                                    <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>
-                                </div>
-                            </div>
-                            @endforeach
-{{--                            <a class="btn main-btn2" id="D">ENQUIRE NOW</a>--}}
+                            <p class="t">
+                                {{$myprovider->owner_name}}
+                            </p>
                         </div>
                     </div>
                     @endforeach

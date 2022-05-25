@@ -418,8 +418,13 @@
         }
 
         .workspace-name {
-            text-decoration: none;
-            color: black;
+            text-decoration: none !important;
+            color: #6B60E6 !important;
+        }
+
+        .workspace-name:hover {
+            text-decoration: none !important;
+            color: var(--yellow-color) !important;
         }
 
         .work-img {
@@ -474,35 +479,38 @@
         </div>
 
     </section>
-    @foreach($workspaces as $workspace)
+    @foreach($providers as $myprovider)
         <section id="star" class="star">
             <div class="container " data-aos="fade-up">
                 <div class="row">
                     <div class="   col-lg-12  sh shadow d-flex align-items-center" data-aos="fade-right"
                          data-aos-delay="100">
                         <div class="col-lg-4">
-                            <img src="{{'/storage/'.$workspace->image}}" class="    rimg img-fluid" alt="">
+                            <img src="{{'/storage/'.$myprovider->logo}}" class="    rimg img-fluid" alt="">
                         </div>
                         <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                            <h3><a href="/worker/workspace-details/{{$workspace->id}}"
-                                   class="workspace-name">{{$workspace->name}}</a></h3>
+                            <h3><a href="/worker/workspace-details/{{$myprovider->id}}"
+                                   class="workspace-name">{{$myprovider->name}}</a></h3>
                             <p class="t">
-                                {{$workspace->location}}
+                                {{$myprovider->address}}
                             </p>
-                            <div class="ratings">
-                                <span
-                                    class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
-                                <div class="stars" style="color:#FFC107 ;">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="rating-text">
-                                    <span style="color:#BBBBBB; font-size:12px">{{$workspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>
-                                </div>
-                            </div>
-                            <a class="btn main-btn2" id="D">ENQUIRE NOW</a>
+                            <p class="t">
+                                {{$myprovider->owner_name}}
+                            </p>
+{{--                            <div class="ratings">--}}
+{{--                                <span--}}
+{{--                                    class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>--}}
+{{--                                <div class="stars" style="color:#FFC107 ;">--}}
+{{--                                    <i class="fa fa-star"></i>--}}
+{{--                                    <i class="fa fa-star"></i>--}}
+{{--                                    <i class="fa fa-star"></i>--}}
+{{--                                    <i class="fa fa-star"></i>--}}
+{{--                                </div>--}}
+{{--                                <div class="rating-text">--}}
+{{--                                    <span style="color:#BBBBBB; font-size:12px">{{$workspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <a class="btn main-btn2" id="D">ENQUIRE NOW</a>--}}
                         </div>
                     </div>
                 </div>

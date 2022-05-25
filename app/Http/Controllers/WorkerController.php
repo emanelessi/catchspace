@@ -46,7 +46,7 @@ class WorkerController extends Controller
     public function home()
     {
         $workspace_types=WorkSpaceType::all();
-        $workspaces=WorkSpace::all();
+        $workspaces=WorkSpaceRating::where('rate_avg','>',4)->get();
 //        $workspace_rating=WorkSpaceRating::where('rate_avg',)->get();
         return view('publicSite.home',compact('workspace_types','workspaces'));
     }
@@ -59,10 +59,10 @@ class WorkerController extends Controller
     public function simplesearch(Request $request)
     {
         $search = $request->input('search');
+//        $workspaces = Provider::query()->where('name', 'LIKE', "%{$search}%")->get();
         $providers = Provider::query()->where('name', 'LIKE', "%{$search}%")->get();
-        $workspaces = Provider::query()->where('name', 'LIKE', "%{$search}%")->get();
 
-        return view('publicSite.simpleSearch', compact('providers','workspaces'));
+        return view('publicSite.simpleSearch', compact('providers'));
     }
 
     public function search(Request $request)
@@ -78,21 +78,27 @@ class WorkerController extends Controller
         if (($workspaces->isEmpty() or $provider->isEmpty() and $reservation) == false){
             return view('publicSite.search', compact('workspaces','provider'));
         }
-        elseif (($workspaces->isEmpty() or $provider->isEmpty())==true and $reservation== false){
-            return back()->with('success', trans('messages.search.reserved'));
+        elseif (($workspaces->isEmpty() or $provider->isEmpty())==true ){
+            if ( $reservation== false){
+                return back()->with('success', trans('messages.search.not_found'));
+            }
+            else{
+                return back()->with('success', trans('messages.search.reserved'));
+            }
+
 
         }
-        else{
-            return back()->with('success', trans('messages.search.not_found'));
-        }
+//        else{
+//            return back()->with('success', trans('messages.search.not_found'));
+//        }
 
     }
 
     public function workspace()
     {
-        $workspaces = WorkSpace::all();
+        $providers = Provider::all();
 
-        return view('publicSite.workspace', compact('workspaces'));
+        return view('publicSite.workspace', compact('providers'));
     }
 
     public function review($id)
@@ -146,10 +152,11 @@ class WorkerController extends Controller
 
     public function workspacedetails($id)
     {
-        $workspace = WorkSpace::find($id);
+        $provider = Provider::find($id);
+        $workspaces = WorkSpace::where('provider_id',$id)->get();
         $workspace_type = WorkSpaceType::all();
         $workspace_services=WorkSpaceService::all();
-        return view('publicSite.workspaceDetails', compact('workspace','workspace_type','workspace_services'));
+        return view('publicSite.workspaceDetails', compact('provider','workspaces','workspace_type','workspace_services'));
     }
 
     public function contactus()

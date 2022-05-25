@@ -10670,7 +10670,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <p class="text-center">Not have an account? <a data-toggle="tab"
+                            <p class="text-center">Not have an account? <a
                                                                            href="{{ route('workerSignup') }}">Sign
                                     Up</a>
                             </p>

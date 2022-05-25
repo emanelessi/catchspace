@@ -1033,7 +1033,10 @@
             font-size: 14px;
             color: #ffc000;
         }
-
+        .product-rating {
+            font-size: 20px;
+            color: #D9368B;
+        }
     </style>
     @include('publicSite.layouts.header')
 
@@ -1216,19 +1219,22 @@
                                             <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
                                                 <div class="thumb-wrapper">
                                                     <div class="img-box">
-                                                        <img src=" {{'/storage/'.$myworkspace->image}}"
+                                                        <img src=" {{'/storage/'.$myworkspace->workSpace->image}}"
                                                              class="img-fluid"
                                                              style=" width:100%" alt="">
                                                     </div>
                                                     <div class="thumb-content">
-                                                        <h4 class="workspace-name">{{$myworkspace->name}}</h4>
-                                                        <span class="product-rating">{{$myworkspace->workSpaceRating[0]->rate_avg ?? 0 }}</span><span>/5</span>
+                                                        <h4 class="workspace-name">{{$myworkspace->workSpace->name}}</h4>
+                                                        <div class="product-rating">
+                                                            <span style="color:#BBBBBB; font-size:14px">{{$myworkspace->workSpace->provider->owner_name ?? 0}}</span>
+                                                        </div>
+                                                        <span class="product-rating">{{$myworkspace->rate_avg ?? 0 }}</span><span>/5</span>
 
                                                         <div class="star-rating"
                                                              style="color: #FFC107">
 
                                                             <ul class="list-inline">
-                                                                @for($i=0;$myworkspace->workSpaceRating[0]->rate_avg>$i;$i++)
+                                                                @for($i=0;$myworkspace->rate_avg>$i;$i++)
                                                                 <li class="list-inline-item"><i
                                                                         class="fa fa-star"></i></li>
                                                                 @endfor
@@ -1236,8 +1242,9 @@
                                                         </div>
 
                                                         <div class="rating-text">
-                                                            <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>
+                                                            <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->rate_count ?? 0}} reviews</span>
                                                         </div>
+
 {{--                                                        <a href="#" class="btn btn-primary ">View avilability</a>--}}
                                                     </div>
                                                 </div>

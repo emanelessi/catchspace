@@ -10692,7 +10692,7 @@
                                 </div>
 
                             </form>
-                            <p class="text-center">If you have an sccount? <a data-toggle="tab"
+                            <p class="text-center">If you have an sccount? <a
                                                                               href="{{ route('workerLogin') }}">Login</a>
                             </p>
                         </div>
