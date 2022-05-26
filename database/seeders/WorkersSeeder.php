@@ -52,5 +52,8 @@ class WorkersSeeder extends Seeder
         $workerWorkSpace3->worker_id= $worker2->id;
         $workerWorkSpace3->work_space_id= 1;
         $workerWorkSpace3->save();
+
+
+
     }
 }

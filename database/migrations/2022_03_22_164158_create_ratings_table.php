@@ -23,6 +23,8 @@ class CreateRatingsTable extends Migration
             $table->longText('tips');
             $table->unsignedBigInteger('work_space_id');
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
+            $table->unsignedBigInteger('worker_id')->nullable();
+            $table->foreign('worker_id')->references('id')->on('workers')->onDelete('cascade');
 
             $table->softDeletes();
             $table->timestamps();

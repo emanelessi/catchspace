@@ -94,11 +94,11 @@ class WorkerController extends Controller
 
     }
 
-    public function workspace()
+    public function providers()
     {
         $providers = Provider::all();
 
-        return view('publicSite.workspace', compact('providers'));
+        return view('publicSite.providers', compact('providers'));
     }
 
     public function review($id)
@@ -150,13 +150,18 @@ class WorkerController extends Controller
         }
     }
 
-    public function workspacedetails($id)
+    public function providerdetails($id)
     {
         $provider = Provider::find($id);
         $workspaces = WorkSpace::where('provider_id',$id)->get();
-        $workspace_type = WorkSpaceType::all();
+        return view('publicSite.providerDetails', compact('provider','workspaces'));
+    }
+    public function workspacedetails($id)
+    {
+        $workspace = WorkSpace::find($id);
+//        $workspace_type = WorkSpaceType::all();
         $workspace_services=WorkSpaceService::all();
-        return view('publicSite.workspaceDetails', compact('provider','workspaces','workspace_type','workspace_services'));
+        return view('publicSite.workspaceDetails', compact('workspace','workspace_services'));
     }
 
     public function contactus()

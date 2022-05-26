@@ -1224,7 +1224,9 @@
                                                              style=" width:100%" alt="">
                                                     </div>
                                                     <div class="thumb-content">
-                                                        <h4 class="workspace-name">{{$myworkspace->workSpace->name}}</h4>
+                                                        <a class="workspace-name" href="/worker/workspace-details/{{$myworkspace->id}}">
+                                                            <h4 >{{$myworkspace->workSpace->name}}</h4>
+                                                        </a>
                                                         <div class="product-rating">
                                                             <span style="color:#BBBBBB; font-size:14px">{{$myworkspace->workSpace->provider->owner_name ?? 0}}</span>
                                                         </div>
@@ -1234,7 +1236,7 @@
                                                              style="color: #FFC107">
 
                                                             <ul class="list-inline">
-                                                                @for($i=0;$myworkspace->rate_avg>$i;$i++)
+                                                                @for($i=0;intval($myworkspace->rate_avg)>$i;$i++)
                                                                 <li class="list-inline-item"><i
                                                                         class="fa fa-star"></i></li>
                                                                 @endfor

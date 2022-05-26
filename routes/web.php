@@ -81,11 +81,12 @@ Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 's
 Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class, 'forgetpassword'])->name('workerForgetpassword');
 Route::get('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'resetpassword'])->name('workerResetpassword');
 Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
-Route::get('/worker/workspace', [\App\Http\Controllers\WorkerController::class, 'workspace'])->name('workerWorkspace');
+Route::get('/worker/providers', [\App\Http\Controllers\WorkerController::class, 'providers'])->name('workerProviders');
 Route::get('/worker/review/{id}', [\App\Http\Controllers\WorkerController::class, 'review'])->name('workerReview');
 Route::post('/worker/review', [\App\Http\Controllers\WorkerController::class, 'storereview'])->name('workerReviewStore');
 
 
+Route::get('/worker/provider-details/{id}', [\App\Http\Controllers\WorkerController::class, 'providerdetails']);
 Route::get('/worker/workspace-details/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacedetails']);
 
 Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');

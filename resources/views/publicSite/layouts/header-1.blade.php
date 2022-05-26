@@ -39,7 +39,7 @@
                         <a class="nav-link p-2 p-lg-3  " aria-current="page" href="{{ route('workerHome') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3 active " href="{{ route('workerWorkspace') }}">Workspace</a>
+                        <a class="nav-link p-2 p-lg-3 active " href="{{ route('workerProviders') }}">Workspace</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link p-2 p-lg-3  " href="{{ route('workerContactus') }}">Contact us</a>

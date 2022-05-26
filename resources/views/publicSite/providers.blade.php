@@ -597,7 +597,7 @@
                             <img src="{{'/storage/'.$myprovider->logo}}" class=" rimg img-fluid" alt="">
                         </div>
                         <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                            <h3><a href="/worker/workspace-details/{{$myprovider->id}}"
+                            <h3><a href="/worker/provider-details/{{$myprovider->id}}"
                                    class="workspace-name">{{$myprovider->name}}</a></h3>
                             <p class="t">
                                 <i class="fa fa-map-marker" style="color: #D9368B;"></i>  {{$myprovider->address}}

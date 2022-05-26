@@ -279,7 +279,7 @@
             color: #fff;
             font-size: 16px;
 
-            padding: 4px 10px;
+            padding: 4px 50px;
 
         }
 
@@ -432,6 +432,10 @@
                 line-height: normal;
             }
 
+            .types {
+                display: block !important;
+            }
+
             #nav1 {
                 margin-top: 391px;
                 width: 100%;
@@ -459,11 +463,19 @@
     <!--Start Hero-->
     <div class="container mt-5">
         <div id="hero1" class="d-flex align-items-center  row mt-5">
-            <div class="col-lg-12   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200">
-                <img src="{{'/storage/'.$provider->logo}}" style="height: 400px;
-    width: -webkit-fill-available;" class="img-fluid animated" alt="">
-                {{--                <img src="{{'/storage/'.$provider->image}}" class="img-fluid animated" alt="">--}}
-                <div class="centered ">Find The Best Place To <br>Enjoy Your Time</div>
+            <div class="col-lg-12   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200"
+                 style="background-color: rgb(22 22 23 / 41%);
+                         position: relative;
+                         border-radius: 10px">
+                <img src="{{'/storage/'.$workspace->image}}" style="height: 400px;
+                                                                    width: -webkit-fill-available;
+                                                                    z-index: -1;
+                                                                    position: relative;"
+                     class="img-fluid animated" alt="">
+                <div class="centered ">Find your perfect workspace <br><h4>Whether you’re a team of one, a growing
+                        startup,<br><br>
+                        or a Fortune 500 company—we have flexible<br><br> solutions for all the ways you work.</h4>
+                </div>
                 <div class="centered ">
                     <nav class="navbar navbar-expand-lg shadow " id="nav1">
                         <div class="container">
@@ -471,14 +483,10 @@
                                 <div class="col-lg-12">
                                     <ul class="navbar-nav" style="float: none !important;">
                                         <li class="nav-item">
-                                            <a class="nav-link p-2 p-lg-3 active " aria-current="page" href="#overview">Overview</a>
+                                            <a class="nav-link p-2 p-lg-3 active " aria-current="page" href="#addons">Addons</a>
                                         </li>
-                                        {{--                                    <li class="nav-item">--}}
-                                        {{--                                        <a class="nav-link p-2 p-lg-3 " href="#pricing">Pricing</a>--}}
-                                        {{--                                    </li>--}}
                                         <li class="nav-item">
-                                            <a class="nav-link p-2 p-lg-3  " href="#meetingRoom">{{$provider->name}}
-                                                Rooms</a>
+                                            <a class="nav-link p-2 p-lg-3 " href="#pricing">Pricing</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link p-2 p-lg-3" href="#amenities">Amenities</a>
@@ -500,741 +508,590 @@
 
         <!--end hero-->
 
-        <section id="pic" class="pic row  mt-5">
+        <!--lego overview-->
+        <section id="star" class="star ">
             <div class="container" data-aos="fade-up">
-                <div class="col-lg-12 mt-5">
-                    <div class="col-lg-6 d-flex align-items-center " data-aos="fade-right" data-aos-delay="100">
-                        <img src=" {{asset('../img/lego.png')}}" class=" rimg img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6  " data-aos="fade-left" data-aos-delay="100">
-                        <img src=" {{asset('../img/space1.png')}}" class=" vimg img-fluid" alt="">
-                        <img src=" {{asset('../img/space3.png')}}" class=" aimg img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-    </div>
-    <!--lego overview-->
-    <section id="star" class="star">
-        <div class="container" data-aos="fade-up">
-            <div class="row">
-                <div class="col-lg-12 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                    <div class="col-lg-6   pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                        <h1 style="color:#FFC107 ;font-weight: 800;" id="overview">{{$provider->name}}</h1>
-                        <h6 style="color:  #BBBBBB ;font-size: 14px;font-weight: 600;padding-top: 10px">
-                            <svg style="color:#6B60E6;  margin-bottom: 4px;" xmlns="http://www.w3.org/2000/svg"
-                                 width="14" height="14" fill="currentColor" class="bi bi-geo-alt-fill"
-                                 viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                            </svg>
-                            {{$provider->address}}
-                        </h6>
-                        <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                 class="bi bi-bullseye" style="  margin-top:-4px;" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
-                                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
-                                <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                            Overview
-                        </h4>
-                        <p style="color:  #BBBBBB ;font-size: 14px;font-weight: 600;padding-top: 10px">
-                            {{$provider->providerAttributes[0]->value ?? ''}}
-                        </p>
-                        <!--enf lego over view-->
-                        <!--pricing table-->
-                        {{--                            <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="pricing">--}}
-                        {{--                                <svg style="margin-right:6px; margin-top:-3px" xmlns="http://www.w3.org/2000/svg"--}}
-                        {{--                                     width="18"--}}
-                        {{--                                     height="18" fill="currentColor" class="bi bi-currency-exchange"--}}
-                        {{--                                     viewBox="0 0 16 16">--}}
-                        {{--                                    <path--}}
-                        {{--                                        d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>--}}
-                        {{--                                </svg>--}}
-                        {{--                                Pricing--}}
-                        {{--                            </h4>--}}
+                <div class="row ">
+                    <div class="col-lg-12 d-flex align-items-center " data-aos="fade-right" data-aos-delay="100"
+                         style="margin-top: 60px">
+                        <div class="col-lg-6   pt-lg-0 content" data-aos="fade-left" data-aos-delay="100"
+                        >
+                            <h1 style="color:#FFC107 ;font-weight: 800;" id="overview">{{$workspace->name}}</h1>
 
-                        {{--                            <div class="col-lg-6    content" data-aos="fade-left" data-aos-delay="100">--}}
-                        <div class="btn-toolbar ">
-                            <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right"
-                                 data-aos-delay="100">
-                                {{--                                        @foreach($provider_type as $provider_types)--}}
-                                {{--                                            <button class="btn main-btn5 shadow"--}}
-                                {{--                                                    style="margin-right:30px ;margin-top: -90px;">--}}
-                                {{--                                                {{$provider_types->type}}--}}
-                                {{--                                            </button>--}}
-                                {{--                                        @endforeach--}}
+
+                            <!--enf lego over view-->
+                            <!--pricing table-->
+                            <div class="btn-toolbar " style="margin-top: 20px">
+                                <div class="col-lg-3 d-flex align-items-center types" data-aos="fade-right"
+                                     data-aos-delay="100">
+                                    <button class="btn main-btn5 shadow ">
+                                        {{$workspace->workSpaceType->type}}
+                                        for {{$workspace->capacity}} people
+                                    </button>
+
+                                </div>
+                            </div>
+                            <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="pricing">
+                                <svg style="margin-right:6px; margin-top:-3px" xmlns="http://www.w3.org/2000/svg"
+                                     width="18"
+                                     height="18" fill="currentColor" class="bi bi-currency-exchange"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>
+                                </svg>
+                                Pricing
+                            </h4>
+
+
+                            <div class="content">
+                                <table class="table custom-table ">
+                                    <thead>
+                                    <th scope></th>
+                                    <th class="tab">People</th>
+                                    <th class="tab">Duration</th>
+                                    <th class="tab">price</th>
+                                    <th class="tab">access hours</th>
+                                    <th class="tab">availability</th>
+                                    </thead>
+                                    <tbody>
+                                    <tr scope="row">
+                                        <th scope="row">
+                                        </th>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td><a>1 Month</a></td>
+                                        <td>
+                                            ₪ 200
+
+                                        </td>
+                                        <td>24 Hours</td>
+                                        <td>
+                                            <button class="btn main-btn7 shadow">Meeting room</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                        </th>
+                                        <td>
+                                            2
+                                        </td>
+                                        <td><a>1 Month</a></td>
+                                        <td>
+                                            ₪ 300
+
+                                        </td>
+                                        <td>24 Hours</td>
+                                        <td>
+                                            <button class="btn main-btn7 shadow">Meeting room</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                        </th>
+                                        <td>
+                                            3
+                                        </td>
+                                        <td><a>1 Month</a></td>
+                                        <td>
+                                            ₪ 400
+
+                                        </td>
+                                        <td>24 Hours</td>
+                                        <td>
+                                            <button class="btn main-btn7 shadow">Meeting room</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                        </th>
+                                        <td>
+                                            4
+                                        </td>
+                                        <td><a>1 Month</a></td>
+                                        <td>
+                                            ₪ 400
+
+                                        </td>
+                                        <td>24 Hours</td>
+                                        <td>
+                                            <button class="btn main-btn7 shadow">Meeting room</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 
-                        {{--                            <div class="content">--}}
-                        {{--                                <table class="table custom-table ">--}}
-                        {{--                                    <thead>--}}
-                        {{--                                    <th scope></th>--}}
-                        {{--                                    <th class="tab">People</th>--}}
-                        {{--                                    <th class="tab">Duration</th>--}}
-                        {{--                                    <th class="tab">price</th>--}}
-                        {{--                                    <th class="tab">access hours</th>--}}
-                        {{--                                    <th class="tab">availability</th>--}}
-                        {{--                                    </thead>--}}
-                        {{--                                    <tbody>--}}
-                        {{--                                    <tr scope="row">--}}
-                        {{--                                        <th scope="row">--}}
-                        {{--                                        </th>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            1--}}
-                        {{--                                        </td>--}}
-                        {{--                                        <td><a>1 Month</a></td>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            ₪ 200--}}
 
-                        {{--                                        </td>--}}
-                        {{--                                        <td>24 Hours</td>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            <button class="btn main-btn7 shadow">Meeting room</button>--}}
-                        {{--                                        </td>--}}
-                        {{--                                    </tr>--}}
-                        {{--                                    <tr>--}}
-                        {{--                                        <th scope="row">--}}
-                        {{--                                        </th>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            2--}}
-                        {{--                                        </td>--}}
-                        {{--                                        <td><a>1 Month</a></td>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            ₪ 300--}}
-
-                        {{--                                        </td>--}}
-                        {{--                                        <td>24 Hours</td>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            <button class="btn main-btn7 shadow">Meeting room</button>--}}
-                        {{--                                        </td>--}}
-                        {{--                                    </tr>--}}
-                        {{--                                    <tr>--}}
-                        {{--                                        <th scope="row">--}}
-                        {{--                                        </th>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            3--}}
-                        {{--                                        </td>--}}
-                        {{--                                        <td><a>1 Month</a></td>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            ₪ 400--}}
-
-                        {{--                                        </td>--}}
-                        {{--                                        <td>24 Hours</td>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            <button class="btn main-btn7 shadow">Meeting room</button>--}}
-                        {{--                                        </td>--}}
-                        {{--                                    </tr>--}}
-                        {{--                                    <tr>--}}
-                        {{--                                        <th scope="row">--}}
-                        {{--                                        </th>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            4--}}
-                        {{--                                        </td>--}}
-                        {{--                                        <td><a>1 Month</a></td>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            ₪ 400--}}
-
-                        {{--                                        </td>--}}
-                        {{--                                        <td>24 Hours</td>--}}
-                        {{--                                        <td>--}}
-                        {{--                                            <button class="btn main-btn7 shadow">Meeting room</button>--}}
-                        {{--                                        </td>--}}
-                        {{--                                    </tr>--}}
-                        {{--                                    </tbody>--}}
-                        {{--                                </table>--}}
-                        {{--                            </div>--}}
-                    </div>
-
-
-                    <!--end pricing table-->
-                    <!--start Member Reviews-->
-                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                        <div class="content text-center rate-section">
-                            <div class="ratings">
-                                <div class="rating-text">
-                                    <h5 style="color:#6B60E6; font-weight: 700;font-size: 15px;">Reviews </h5>
-                                </div>
-                                <span
-                                    class="product-rating">{{$provider->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
-                                <div class="stars">
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16"
-                                         fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16"
-                                         fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16"
-                                         fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16"
-                                         fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16"
-                                         fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </div>
+                        <!--end pricing table-->
+                        <!--start Member Reviews-->
+                        <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                            <div class="content text-center rate-section">
                                 <div class="ratings">
                                     <div class="rating-text">
-                                        <a href="#reviews" style="color:#6B60E6 ;"> Read All Reviews </a>
+                                        <h5 style="color:#6B60E6; font-weight: 700;font-size: 15px;">Reviews </h5>
                                     </div>
-                                </div>
-                            </div>
-                            <!--end Member Reviews-->
-                            <!-- start pricing box-->
-                            <div class="content text-center" style="margin-top: 40px;">
-                                <div class="ratings">
-                                    <div class="rating-text">
-                                        <h4 style="color:#6B60E6;font-weight: 700;font-size: 15px;">Price Start
-                                            From</h4>
-                                        <h4 style="color:#FFC107 ; ">
-                                            ₪ {{$provider->ProviderAttributes[1]->value ?? ''}}/mo </h4>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--end pricing box-->
-                            <!--start Member Access Hours -->
-                            <div class="content text-center" style="margin-top: 40px;">
-                                <div class="ratings">
-                                    <div class="rating-text">
-                                        <h5 style="color:#6B60E6; font-weight: 700;font-size: 15px;"> Access
-                                            Hours </h5>
-                                        <p style="font-size: 16px; color:  #717171 ;">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                 style="color: #717171; margin-right:6px;" width="12" height="12"
-                                                 fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                                                <path
-                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-                                            </svg>
-                                            Opining Hours
-                                        </p>
-
+                                    <span
+                                        class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
+                                    <div class="stars">
+                                        @for($i=0;intval($workspace->workSpaceRating[0]->rate_avg)>$i;$i++)
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star" style="color: #FFC107"></i>
+                                            </li>
+                                        @endfor
                                     </div>
                                     <div class="ratings">
-                                        <h4 style="color:#FFC107 ;">{{$provider->ProviderAttributes[2]->value ?? ''}}</h4>
-
+                                        <div class="rating-text">
+                                            <a href="#reviews" style="color:#6B60E6 ;"> Read All Reviews </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <!--end Member Access Hours -->
+                                <!--end Member Reviews-->
+
                             </div>
 
                         </div>
-
                     </div>
+
+
+                    <!--end section overview + pricing -->
+                    <!-- start Meeting Room-->
+
+
                 </div>
+                <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="amenities">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px; margin-top:-3px;" width="16"
+                         height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                    </svg>
+                    Amenities
+                </h4>
+                <section id="reviews" class="star">
+                    <div class="container " data-aos="fade-up">
+                        <div class="row">
+                            @foreach($workspace_services as $workspace_service)
 
+                                <div class="col-lg-3 d-flex   " data-aos="fade-left"
+                                     data-aos-delay="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin-top: 5px;"
+                                         fill="currentColor"
+                                         class="bi bi-wifi"
+                                         viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
+                                        <path
+                                            d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+                                    </svg>
+                                    <h5 id="ccc" style="margin-left: 8px;">
+                                        {{$workspace_service->service->name}}
+                                    </h5>
+                                </div>
 
-            <!--end section overview + pricing -->
-            <!-- start Meeting Room-->
+                            @endforeach
+                        </div>
+                    </div>
+        </section>
 
-
-
-            </div>
-            <div class="container  ">
+        <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                 class="bi bi-star-fill" style="margin-right: 5px; margin-top:-4px;" viewBox="0 0 16 16">
+                <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg>
+            Reviews
+        </h4>
+        <section id="star" class="star">
+            <div class="container " data-aos="fade-up">
                 <div class="row">
-                    <div class="col-lg-12">
-                    <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="meetingRoom">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
-                            <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
-                            <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
-                        </svg>
-                        {{$provider->name}} Rooms
-                    </h4>
-
-                @foreach($workspaces as $myworkspace)
-                        <div class="col-md-4 col-sm-4 mt-5" style="background-color:#fff ; ">
-                            <div class="product-grid shadow">
-                                <div class="product-image">
-                                    <img class="pic-1" src="{{'/storage/'.$myworkspace->image}}">
-                                </div>
-                                <div class="product-content">
-                                    <ul class="rating">
-                                    </ul>
-                                    <h5 class="title"> {{$myworkspace->name}}</h5>
-                                    <div class="product-button-group">
-                                        <a class="btn main-btn6" data-target="#responsive"
-                                           data-toggle="modal">ENQUIRE NOW</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                    </div>
-                </div>
-            </div>
-            <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="amenities">
-                <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px; margin-top:-3px;" width="16"
-                     height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                          d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                </svg>
-                Amenities
-            </h4>
-            <section id="reviews" class="star">
-                <div class="container " data-aos="fade-up">
-                    <div class="row">
-                        <div class="  d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                            {{--                                @foreach($provider_services as $provider_service)--}}
-                            {{--                                    <h6 class=" col-sm-2 " id="ccc"--}}
-                            {{--                                        style="margin-top: -70px;   margin-bottom: 70px; color: #AAB2B1;">--}}
-                            {{--                                        <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left"--}}
-                            {{--                                             data-aos-delay="100">--}}
-                            {{--                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
-                            {{--                                             fill="currentColor"--}}
-                            {{--                                             class="bi bi-wifi" style="margin-top:-6px ; margin-right:5px;"--}}
-                            {{--                                             viewBox="0 0 16 16">--}}
-                            {{--                                            <path--}}
-                            {{--                                                d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>--}}
-                            {{--                                            <path--}}
-                            {{--                                                d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>--}}
-                            {{--                                        </svg>--}}
-                            {{--                                            {{$provider_service->service->name}}--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </h6>--}}
-                            {{--                                @endforeach--}}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; ">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                     class="bi bi-star-fill" style="margin-right: 5px; margin-top:-4px;" viewBox="0 0 16 16">
-                    <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>
-                Reviews
-            </h4>
-            <section id="star" class="star">
-                <div class="container " data-aos="fade-up">
-                    <div class="row">
-                        <div class="  d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                            <div class="container">
-                                <div class="row">
-                                    <div class=" col-md-7 col-12 text-center mb-5 " style="  background-color:#fff;
+                    <div class="  d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                        <div class="container">
+                            <div class="row">
+                                <div class=" col-md-7 col-12 text-center mb-5 " style="  background-color:#fff;
               border-radius: 6px;
                   border: solid rgba(0, 0, 0, 0.01);
             box-shadow: 0px 10px 10px #E0E0E0; margin-left:30px;">
-                                        <div class="card">
-                                            <div class="row justify-content-left d-flex">
-                                                <div class="col-md-4 d-flex flex-column">
-                                                    <div class="rating-box">
-                                                        <h1 class="pt-4">{{$provider->workSpaceRating[0]->rate_avg ?? 0}}</h1>
-                                                        <p class="">out of 5</p>
-                                                    </div>
-                                                    <div>
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                             style="color: #FFC107;"
-                                                             width="16" height="16" fill="currentColor"
-                                                             class="bi bi-star-fill" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                             style="color: #FFC107;"
-                                                             width="16" height="16" fill="currentColor"
-                                                             class="bi bi-star-fill" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                             style="color: #FFC107;"
-                                                             width="16" height="16" fill="currentColor"
-                                                             class="bi bi-star-fill" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                                        </svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                             style="color: #FFC107;"
-                                                             width="16" height="16" fill="currentColor"
-                                                             class="bi bi-star-fill" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                                        </svg>
-                                                    </div>
+                                    <div class="card">
+                                        <div class="row justify-content-left d-flex">
+                                            <div class="col-md-4 d-flex flex-column">
+                                                <div class="rating-box">
+                                                    <h1 class="pt-4">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</h1>
+                                                    <p class="">out of 5</p>
                                                 </div>
-                                                <div class="col-md-8">
-                                                    <div class="rating-bar0 justify-content-center">
-                                                        <table class="text-left mx-auto">
-                                                            <tr>
-                                                                <td class="rating-label">Excellent</td>
-                                                                <td class="rating-bar">
-                                                                    <div class="bar-container">
-                                                                        <div class="bar-5"></div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="text-right">123</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="rating-label">Good</td>
-                                                                <td class="rating-bar">
-                                                                    <div class="bar-container">
-                                                                        <div class="bar-4"></div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="text-right">23</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="rating-label">Average</td>
-                                                                <td class="rating-bar">
-                                                                    <div class="bar-container">
-                                                                        <div class="bar-3"></div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="text-right">10</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="rating-label">Poor</td>
-                                                                <td class="rating-bar">
-                                                                    <div class="bar-container">
-                                                                        <div class="bar-2"></div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="text-right">3</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="rating-label">Terrible</td>
-                                                                <td class="rating-bar">
-                                                                    <div class="bar-container">
-                                                                        <div class="bar-1"></div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="text-right">0</td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
+                                                <div>
+                                                    @for($i=0;intval($workspace->workSpaceRating[0]->rate_avg)>$i;$i++)
+                                                        <li class="list-inline-item">
+                                                            <i class="fa fa-star" style="color: #FFC107"></i>
+                                                        </li>
+                                                    @endfor
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="rating-bar0 justify-content-center">
+                                                    <table class="text-left mx-auto">
+                                                        <tr>
+                                                            <td class="rating-label">Excellent</td>
+                                                            <td class="rating-bar">
+                                                                <div class="bar-container">
+                                                                    <div class="bar-5"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">123</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="rating-label">Good</td>
+                                                            <td class="rating-bar">
+                                                                <div class="bar-container">
+                                                                    <div class="bar-4"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">23</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="rating-label">Average</td>
+                                                            <td class="rating-bar">
+                                                                <div class="bar-container">
+                                                                    <div class="bar-3"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="rating-label">Poor</td>
+                                                            <td class="rating-bar">
+                                                                <div class="bar-container">
+                                                                    <div class="bar-2"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="rating-label">Terrible</td>
+                                                            <td class="rating-bar">
+                                                                <div class="bar-container">
+                                                                    <div class="bar-1"></div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">0</td>
+                                                        </tr>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4  pt-lg-0 content" data-aos="fade-left"
-                                         data-aos-delay="100">
-                                        <div class="ratings"
-                                             style=" margin-left: -20px; margin-top: -45px; background-color: #FFC107;  ; width: 400px; height: 150px;">
-                                            <div class="ratingtext">
-                                                <h5 style="color: #fff; text-align: center; margin-top: 20px;">Are
-                                                    You A
-                                                    Member Of
-                                                    {{$provider->name}}</h5>
-                                                <h6 style="color:  #6B60E6; text-align: center;">We are interested
-                                                    in
-                                                    your opinion of our space</h6>
+                                </div>
+                                <div class="col-lg-4  pt-lg-0 content" data-aos="fade-left"
+                                     data-aos-delay="100">
+                                    <div class="ratings"
+                                         style=" margin-left: -20px; margin-top: -45px; background-color: #FFC107;  ; width: 400px; height: 150px;">
+                                        <div class="ratingtext">
+                                            <h5 style="color: #fff; text-align: center; margin-top: 20px;">
+                                                Are
+                                                You A
+                                                Member Of
+                                                {{$workspace->name}}</h5>
+                                            <h6 style="color:  #6B60E6; text-align: center;">We are
+                                                interested
+                                                in
+                                                your opinion of our space</h6>
 
-                                            </div>
-                                            <a class="btn main-btn9" href="/worker/review/{{$provider->id}}"
-                                               style="align-items:center ;">Post A Review</a>
                                         </div>
+                                        <a class="btn main-btn9" href="/worker/review/{{$workspace->id}}"
+                                           style="align-items:center ;">Post A Review</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section>
-                <div class="row d-flex justify-content-center " style="background-color:#F5F3FF;  background-color:#fff;
+            </div>
+        </section>
+        <section>
+            <div class="row d-flex justify-content-center " style="background-color:#F5F3FF;  background-color:#fff;
         border-radius: 6px;
             border: solid rgba(0, 0, 0, 0.01);
       box-shadow: 0px 10px 10px #E0E0E0; padding-top: 20px; padding-bottom: 20px;">
-                    <div class="row text-center">
-                        <div class="col-md-4 mb-5 mb-md-0">
-                            <div class="d-flex justify-content-center mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                     class="rounded-circle shadow-1-strong" width="150" height="150"/>
-                            </div>
-                            <h5 class="mb-3">Maria Smantha</h5>
-                            <h6 class="text-primary mb-3">Web Developer</h6>
-                            <p class="px-xl-3">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                                tenetur.
-                            </p>
-                            <ul class="list-unstyled d-flex justify-content-center mb-0">
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                            </ul>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="d-flex justify-content-center mb-4">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                                 class="rounded-circle shadow-1-strong" width="150" height="150"/>
                         </div>
-                        <div class="col-md-4 mb-5 mb-md-0">
-                            <div class="d-flex justify-content-center mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                     class="rounded-circle shadow-1-strong" width="150" height="150"/>
-                            </div>
-                            <h5 class="mb-3">Maria Smantha</h5>
-                            <h6 class="text-primary mb-3">Web Developer</h6>
-                            <p class="px-xl-3">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                                tenetur.
-                            </p>
-                            <ul class="list-unstyled d-flex justify-content-center mb-0">
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" style="color: #FFC107;"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                            </ul>
+                        <h5 class="mb-3">Maria Smantha</h5>
+                        <h6 class="text-primary mb-3">Web Developer</h6>
+                        <p class="px-xl-3">
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
+                            tenetur.
+                        </p>
+                        <ul class="list-unstyled d-flex justify-content-center mb-0">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="d-flex justify-content-center mb-4">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                                 class="rounded-circle shadow-1-strong" width="150" height="150"/>
                         </div>
-                        <div class="col-md-4 mb-0">
-                            <div class="d-flex justify-content-center mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                     class="rounded-circle shadow-1-strong" width="150" height="150"/>
-                            </div>
-                            <h5 class="mb-3">Maria Smantha</h5>
-                            <h6 class="text-primary mb-3">Web Developer</h6>
-                            <p class="px-xl-3">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                                tenetur.
-                            </p>
-                            <ul class="list-unstyled d-flex justify-content-center mb-0">
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                                <li>
-                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                         height="16" fill="currentColor" class="bi bi-star-fill"
-                                         viewBox="0 0 16 16">
-                                        <path
-                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                    </svg>
-                                </li>
-                            </ul>
+                        <h5 class="mb-3">Maria Smantha</h5>
+                        <h6 class="text-primary mb-3">Web Developer</h6>
+                        <p class="px-xl-3">
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
+                            tenetur.
+                        </p>
+                        <ul class="list-unstyled d-flex justify-content-center mb-0">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" style="color: #FFC107;"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-0">
+                        <div class="d-flex justify-content-center mb-4">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                                 class="rounded-circle shadow-1-strong" width="150" height="150"/>
                         </div>
+                        <h5 class="mb-3">Maria Smantha</h5>
+                        <h6 class="text-primary mb-3">Web Developer</h6>
+                        <p class="px-xl-3">
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
+                            tenetur.
+                        </p>
+                        <ul class="list-unstyled d-flex justify-content-center mb-0">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
+                                     height="16" fill="currentColor" class="bi bi-star-fill"
+                                     viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-        </div>
-        {{--            <div id="responsive" class="modal fade" tabindex="-1" aria-hidden="true">--}}
-        {{--                <div class="modal-dialog">--}}
-        {{--                    <div class="modal-content ">--}}
-        {{--                        <div>--}}
-        {{--                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>--}}
-        {{--                            <h4 class=" text-center" style="align-items: center;justify-content: space-between;--}}
-        {{--                                padding: 1rem 1rem;border-bottom: 1px solid #e5e5e5;margin-left: 33px;--}}
-        {{--                                margin-right: 52px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                Share Your Requirements</h4>--}}
-        {{--                        </div>--}}
-        {{--                        <h5 class="text-center" style="color:#6B60E6; font-family: 'roboto', sans-serif !important; ">We--}}
-        {{--                            will Get Back To You With The Guaranteed<br> Best Pricing And--}}
-        {{--                            Advailability </h5>--}}
-        {{--                        <div class="modal-body">--}}
-        {{--                            <div class="scroller" style="height:350px" data-always-visible="1" data-rail-visible1="1">--}}
-        {{--                                <div class="row">--}}
-        {{--                                    <div class="col-md-12">--}}
-        {{--                                        <div>--}}
-        {{--                                            <input type="text" placeholder="First Name" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                            <input type="text" placeholder="Last Name" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                        </div>--}}
-        {{--                                        <div>--}}
-        {{--                                            <input type="text" placeholder="Company Email" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                            <input type="text" placeholder="Company Name" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                        </div>--}}
-        {{--                                        <div>--}}
-        {{--                                            <input type="text" placeholder="Phone Number" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                            <input type="text" placeholder="Dedicated Desk" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                        </div>--}}
-        {{--                                        <div>--}}
-        {{--                                            <input type="text" placeholder="1 Person" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                            <input type="text" placeholder="Estimated Start Date" class="col-md-5 "--}}
-        {{--                                                   style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                        </div>--}}
-        {{--                                        <div>--}}
-        {{--                                            <input type="text" placeholder="1" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                            <input type="text" placeholder="Months" class="col-md-5 " style=" height: 40px;--}}
-        {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-        {{--                                                                border: 1px solid #efefef;--}}
-        {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-        {{--                                        </div>--}}
-        {{--                                        <div>--}}
-        {{--                                            <input type="text" placeholder="Add..." class="col-md-11 " style="height: 80px;--}}
-        {{--                                                                margin: 0 20px 10px 20px; width: 409px;--}}
-        {{--                                                                background-color: #fff;--}}
-        {{--                                                                border: 1px solid #c2cad8;--}}
-        {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
+            </div>
+        </section>
+    </div>
+    {{--            <div id="responsive" class="modal fade" tabindex="-1" aria-hidden="true">--}}
+    {{--                <div class="modal-dialog">--}}
+    {{--                    <div class="modal-content ">--}}
+    {{--                        <div>--}}
+    {{--                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>--}}
+    {{--                            <h4 class=" text-center" style="align-items: center;justify-content: space-between;--}}
+    {{--                                padding: 1rem 1rem;border-bottom: 1px solid #e5e5e5;margin-left: 33px;--}}
+    {{--                                margin-right: 52px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                Share Your Requirements</h4>--}}
+    {{--                        </div>--}}
+    {{--                        <h5 class="text-center" style="color:#6B60E6; font-family: 'roboto', sans-serif !important; ">We--}}
+    {{--                            will Get Back To You With The Guaranteed<br> Best Pricing And--}}
+    {{--                            Advailability </h5>--}}
+    {{--                        <div class="modal-body">--}}
+    {{--                            <div class="scroller" style="height:350px" data-always-visible="1" data-rail-visible1="1">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="col-md-12">--}}
+    {{--                                        <div>--}}
+    {{--                                            <input type="text" placeholder="First Name" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                            <input type="text" placeholder="Last Name" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                        </div>--}}
+    {{--                                        <div>--}}
+    {{--                                            <input type="text" placeholder="Company Email" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                            <input type="text" placeholder="Company Name" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                        </div>--}}
+    {{--                                        <div>--}}
+    {{--                                            <input type="text" placeholder="Phone Number" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                            <input type="text" placeholder="Dedicated Desk" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                        </div>--}}
+    {{--                                        <div>--}}
+    {{--                                            <input type="text" placeholder="1 Person" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                            <input type="text" placeholder="Estimated Start Date" class="col-md-5 "--}}
+    {{--                                                   style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                        </div>--}}
+    {{--                                        <div>--}}
+    {{--                                            <input type="text" placeholder="1" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                            <input type="text" placeholder="Months" class="col-md-5 " style=" height: 40px;--}}
+    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
+    {{--                                                                border: 1px solid #efefef;--}}
+    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
+    {{--                                        </div>--}}
+    {{--                                        <div>--}}
+    {{--                                            <input type="text" placeholder="Add..." class="col-md-11 " style="height: 80px;--}}
+    {{--                                                                margin: 0 20px 10px 20px; width: 409px;--}}
+    {{--                                                                background-color: #fff;--}}
+    {{--                                                                border: 1px solid #c2cad8;--}}
+    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
 
-        {{--                                        </div>--}}
+    {{--                                        </div>--}}
 
-        {{--                                    </div>--}}
+    {{--                                    </div>--}}
 
-        {{--                                </div>--}}
-        {{--                            </div>--}}
-        {{--                            <div style="text-align: right;display: flex;flex-wrap: wrap;flex-shrink: 0;--}}
-        {{--                                 align-items: center;justify-content: flex-end;padding: 0.75rem;">--}}
-        {{--                                <button type="button" data-dismiss="modal" class="btn dark btn-outline main-btn2"--}}
-        {{--                                        style="background-color:#6B60E6;font-family: 'roboto', sans-serif !important;  margin-right: 20px">--}}
-        {{--                                    Close--}}
-        {{--                                </button>--}}
-        {{--                                <button type="button" class="btn green main-btn2"--}}
-        {{--                                        style="background-color: #ffc105;font-family: 'roboto', sans-serif !important;  margin-right: 33px">--}}
-        {{--                                    Save changes--}}
-        {{--                                </button>--}}
-        {{--                            </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                            <div style="text-align: right;display: flex;flex-wrap: wrap;flex-shrink: 0;--}}
+    {{--                                 align-items: center;justify-content: flex-end;padding: 0.75rem;">--}}
+    {{--                                <button type="button" data-dismiss="modal" class="btn dark btn-outline main-btn2"--}}
+    {{--                                        style="background-color:#6B60E6;font-family: 'roboto', sans-serif !important;  margin-right: 20px">--}}
+    {{--                                    Close--}}
+    {{--                                </button>--}}
+    {{--                                <button type="button" class="btn green main-btn2"--}}
+    {{--                                        style="background-color: #ffc105;font-family: 'roboto', sans-serif !important;  margin-right: 33px">--}}
+    {{--                                    Save changes--}}
+    {{--                                </button>--}}
+    {{--                            </div>--}}
 
-        {{--                        </div>--}}
-        {{--                        <div--}}
-        {{--                            style="border-top: 1px solid #e5e5e5;  font-family: 'roboto', sans-serif !important;  margin-left: 33px;     margin-right: 52px;">--}}
-        {{--                            <p class="text-center">By completing You Accept The Catch Space<br> <span--}}
-        {{--                                    style="color:#6B60E6;">Terms Of Use</span> And <span style="color: #ffc105;">Privacy Policy</span>--}}
-        {{--                            </p>--}}
-        {{--                        </div>--}}
-        {{--                    </div>--}}
-        {{--                </div>--}}
-        {{--            </div>--}}
+    {{--                        </div>--}}
+    {{--                        <div--}}
+    {{--                            style="border-top: 1px solid #e5e5e5;  font-family: 'roboto', sans-serif !important;  margin-left: 33px;     margin-right: 52px;">--}}
+    {{--                            <p class="text-center">By completing You Accept The Catch Space<br> <span--}}
+    {{--                                    style="color:#6B60E6;">Terms Of Use</span> And <span style="color: #ffc105;">Privacy Policy</span>--}}
+    {{--                            </p>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
     </section>
     </section>
     <!-- End Team section-->
     <!-- Footer -->
 
 
+    </div>
 @endsection
 
 {{--@section('js')--}}

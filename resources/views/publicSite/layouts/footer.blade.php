@@ -11,7 +11,7 @@
                 <!-- Grid column -->
                 <div class="col-md-2">
                     <h6 class="text-uppercase">
-                        <a href="{{ route('workerWorkspace') }}" class="text-white">Workspace</a>
+                        <a href="{{ route('workerProviders') }}" class="text-white">Workspace</a>
                     </h6>
                 </div>
                 <div class="col-md-3">
