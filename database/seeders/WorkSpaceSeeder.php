@@ -89,8 +89,8 @@ class WorkSpaceSeeder extends Seeder
         $pricing1->save();
 
         $pricing2 = new Pricing();
-        $pricing2->price = 500;
-        $pricing2->work_space_id = $work_space->id;
+        $pricing2->price = 20;
+        $pricing2->work_space_id = $work_space2->id;
         $pricing2->rent_type_id = $rent_type2->id;
         $pricing2->save();
 

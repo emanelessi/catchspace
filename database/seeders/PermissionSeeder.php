@@ -76,6 +76,11 @@ class PermissionSeeder extends Seeder
             'addons_edit',
             'rate_access',
             'rate_show',
+            'attribute_access',
+            'attribute_show',
+            'attribute_delete',
+            'attribute_edit',
+            'attribute_create',
 
         ];
 
@@ -128,6 +133,10 @@ class PermissionSeeder extends Seeder
             'addons_delete',
             'addons_edit',
             'rate_show',
+            'attribute_show',
+            'attribute_delete',
+            'attribute_edit',
+            'attribute_create',
 
         ];
 
@@ -172,6 +181,7 @@ class PermissionSeeder extends Seeder
             'addons_show',
             'reservations_show',
             'rate_access',
+            'attribute_access',
 
         ];
 

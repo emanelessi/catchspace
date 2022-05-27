@@ -474,14 +474,14 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <ul class="navbar-nav" style="float: none !important;">
+
+                                        <li class="nav-item">
+                                            <a class="nav-link p-2 p-lg-3 active " aria-current="page" href="#overview">Overview</a>
+                                        </li>
                                         <li class="nav-item">
                                             <a class="nav-link p-2 p-lg-3  " href="#location">
                                                 Location</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link p-2 p-lg-3 active " aria-current="page" href="#overview">Overview</a>
-                                        </li>
-
                                         <li class="nav-item">
                                             <a class="nav-link p-2 p-lg-3  " href="#meetingRoom">{{$provider->name}}
                                                 Rooms</a>
@@ -541,18 +541,7 @@
                     <div class="col-lg-6   pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                         <h1 style="color:#FFC107 ;font-weight: 800;" >{{$provider->name}}</h1>
 
-                        <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="location">
-                            <svg style="color:#6B60E6;  margin-bottom: 4px;" xmlns="http://www.w3.org/2000/svg"
-                                 width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill"
-                                 viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                            </svg>
-                            Location
-                        </h4>
-                        <p style="color:  #BBBBBB ;font-size: 14px;font-weight: 600;padding-top: 10px">
-                            {{$provider->address ?? ''}}
-                        </p>
+
                         <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="overview">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                  class="bi bi-bullseye" style="  margin-top:-4px;" viewBox="0 0 16 16">
@@ -563,8 +552,20 @@
                             </svg>
                             Overview
                         </h4>
-                        <p style="color:  #BBBBBB ;font-size: 14px;font-weight: 600;padding-top: 10px">
+                        <p style="font-size: 14px;font-weight: 600;padding-top: 10px">
                             {{$provider->providerAttributes[0]->value ?? ''}}
+                        </p>
+                        <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="location">
+                            <svg style="color:#6B60E6;  margin-bottom: 4px;" xmlns="http://www.w3.org/2000/svg"
+                                 width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill"
+                                 viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            Location
+                        </h4>
+                        <p style="font-size: 14px;font-weight: 600;padding-top: 10px">
+                            {{$provider->address ?? ''}}
                         </p>
                         <!--enf lego over view-->
                     </div>

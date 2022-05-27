@@ -546,78 +546,33 @@
                             <div class="content">
                                 <table class="table custom-table ">
                                     <thead>
-                                    <th scope></th>
+                                    <th scope="row">
+                                    </th>
                                     <th class="tab">People</th>
                                     <th class="tab">Duration</th>
                                     <th class="tab">price</th>
-                                    <th class="tab">access hours</th>
                                     <th class="tab">availability</th>
                                     </thead>
                                     <tbody>
-                                    <tr scope="row">
-                                        <th scope="row">
-                                        </th>
-                                        <td>
-                                            1
-                                        </td>
-                                        <td><a>1 Month</a></td>
-                                        <td>
-                                            ₪ 200
 
-                                        </td>
-                                        <td>24 Hours</td>
-                                        <td>
-                                            <button class="btn main-btn7 shadow">Meeting room</button>
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <th scope="row">
                                         </th>
                                         <td>
-                                            2
+                                            {{$workspace->capacity}}
                                         </td>
-                                        <td><a>1 Month</a></td>
                                         <td>
-                                            ₪ 300
+                                            {{$workspace->pricing[0]->rentType->type ?? ''}}
+                                        </td>
+                                        <td>
+                                            ₪ {{$workspace->pricing[0]->price ?? 0}}
 
                                         </td>
-                                        <td>24 Hours</td>
                                         <td>
-                                            <button class="btn main-btn7 shadow">Meeting room</button>
+                                            <button class="btn main-btn7 shadow">Enquire now</button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">
-                                        </th>
-                                        <td>
-                                            3
-                                        </td>
-                                        <td><a>1 Month</a></td>
-                                        <td>
-                                            ₪ 400
 
-                                        </td>
-                                        <td>24 Hours</td>
-                                        <td>
-                                            <button class="btn main-btn7 shadow">Meeting room</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                        </th>
-                                        <td>
-                                            4
-                                        </td>
-                                        <td><a>1 Month</a></td>
-                                        <td>
-                                            ₪ 400
-
-                                        </td>
-                                        <td>24 Hours</td>
-                                        <td>
-                                            <button class="btn main-btn7 shadow">Meeting room</button>
-                                        </td>
-                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
