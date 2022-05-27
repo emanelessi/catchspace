@@ -271,6 +271,22 @@
 ">Policies</span>
                     </a>
                 </li>
+                @can('attribute_show')
+                    <li class="nav-item @if(preg_match('/attribute/i',url()->current())) start active open @endif"
+                        style="margin-bottom: 15px;">
+                        <a href="/provider/attribute/{{\Illuminate\Support\Facades\Auth::user()->provider_id }}" class="nav-link nav-toggle margin-left-10" style="
+   font-family: 'Montserrat', sans-serif;;
+    font-weight: normal;
+        font-size: 15px;
+    line-height: 27px;
+
+">
+                            <i class="fa fa-file-archive-o"></i>
+                            <span class="title" style="    font-size: 15px;
+">Attributes</span>
+                        </a>
+                    </li>
+                @endcan
                 @can('rate_show')
                     <li class="nav-item @if(preg_match('/rate/i',url()->current())) start active open select_color @endif"
                         style="margin-bottom: 15px;">

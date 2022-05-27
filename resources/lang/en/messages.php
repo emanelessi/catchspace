@@ -54,5 +54,7 @@ return [
     ],'search' => [
         'not_found'=>'There is no workspace available with this details',
         'reserved'=>'This workspace is reserved',
+    ],'reserve' => [
+        'reserve_added'=>'reservation done successfully',
     ],
 ];

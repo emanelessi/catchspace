@@ -214,6 +214,8 @@
                                     </th>
                                     <th class="table-th"> Phone
                                     </th>
+                                    <th class="table-th"> Attributes
+                                    </th>
                                     <th class="table-th"> Action
                                     </th>
                                 </tr>
@@ -229,11 +231,20 @@
                                         </td>
                                         <td class="table-td"> {{$myprovider->owner_name}}
                                         </td>
+
                                         <td class="table-td"> {{$myprovider->address}}
                                         </td>
                                         <td class="table-td"> {{$myprovider->phone}}
                                         </td>
-
+                                        @can('attribute_access')
+                                            <td class="table-td">
+                                                <a href="/provider/attribute/{{$myprovider->id}}"
+                                                   style="margin-left: 10px">
+                                                    <i class="fa fa-file-archive-o"
+                                                       style="color: #000000 !important;"></i>
+                                                </a>
+                                            </td>
+                                        @endcan
                                         <td class="table-td">
                                             <a href="/admin/edit-provider/{{$myprovider->id}}">
                                                 <i class="fa fa-pencil" style="color: #000000 !important;"></i>

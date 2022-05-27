@@ -203,7 +203,7 @@
             <div class="col-lg-2 ">
                 @can('provider_access')
                     <img alt="" class="img-circle "
-                         src="{{'/storage'.auth()->user()->provider->logo}}"/>
+                         src="{{'/storage/'.auth()->user()->provider->logo}}" style="width: 200px;height: 200px;"/>
                 @endcan
                 @can('permission_access')
                     <i class="fa fa-user img-circle margin-top-40"

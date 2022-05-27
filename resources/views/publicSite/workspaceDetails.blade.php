@@ -323,7 +323,6 @@
         }
 
 
-
         .custom-table thead tr, .custom-table thead th {
             color: var(--blue-color);
             border-top: none;
@@ -426,6 +425,7 @@
             border-top: 0;
             text-align: center;
         }
+
         .form-select {
             font-size: 14px;
             height: 34px;
@@ -565,41 +565,51 @@
                                     <th class="tab">availability</th>
                                     </thead>
                                     <tbody>
-                                    @for($i=0;$i<count($workspace->pricing);$i++ )
+                                    @if(session()->has('success'))
+                                        <div class="alert alert-success">
+                                            {{ session()->get('success') }}
+                                        </div>
+                                    @endif
+                                    @foreach($workspace->pricing as $price)
                                         <tr>
-                                            <form  action="/worker/workspace-reserve/{{$workspace->id}}" method="post">
+                                            <form action="/worker/workspace-reserve/{{$workspace->id}}" method="post">
                                                 @csrf
-                                            <th scope="row">
-                                            </th>
-                                            <td>
-                                                {{$workspace->capacity}}
-                                                <input type="hidden" name="capacity" value="{{$workspace->capacity}}">
-                                            </td>
-                                            <td>
-                                                {{$workspace->pricing[$i]->rentType->type ?? ''}}
-                                                <input type="hidden" name="rentType" value="{{$workspace->pricing[$i]->rentType->type ?? ''}}">
-                                            </td>
-                                            <td>
-                                                ₪ {{$workspace->pricing[$i]->price ?? 0}}
-                                                <input type="hidden" name="price" value="{{$workspace->pricing[$i]->price ?? 0}}">
-                                            </td>
-                                            <td>
-                                                <input type="date" name="date" class="form-control">
-                                            </td>
+                                                <th scope="row">
+                                                </th>
                                                 <td>
-                                                    <select class="form-select" name="addons" >
+                                                    {{$workspace->capacity}}
+                                                    <input type="hidden" name="capacity"
+                                                           value="{{$workspace->capacity}}">
+                                                </td>
+                                                <td>
+                                                    {{$price->rentType->type ?? ''}}
+                                                    <input type="hidden" name="rentType"
+                                                           value="{{$price->rentType->type ?? ''}}">
+                                                </td>
+                                                <td>
+                                                    ₪ {{$price->price ?? 0}}
+                                                    <input type="hidden" name="price" value="{{$price->id ?? 0}}">
+                                                </td>
+                                                <td>
+                                                    <input type="date" name="date" class="form-control">
+                                                </td>
+                                                <td>
+                                                    <select class="form-select" name="addons">
                                                         @for($i=0;$i<count($workspace->workSpaceAddons);$i++ )
-                                                            <option  >{{$workspace->workSpaceAddons[0]->value }} ₪ {{$workspace->workSpaceAddons[0]->addon->name }}</option>
+                                                            <option
+                                                                value="{{$workspace->workSpaceAddons[$i]->id }}">{{$workspace->workSpaceAddons[$i]->value }}
+                                                                ₪ {{$workspace->workSpaceAddons[$i]->addon->name }}</option>
                                                         @endfor
                                                     </select>
-                                            </td>
-                                            <td>
-                                                <input type="hidden" name="id" value="{{$workspace->id}}">
-                                                <button type="submit" class="btn main-btn7 shadow">Enquire now</button>
-                                            </td>
+                                                </td>
+                                                <td>
+                                                    <input type="hidden" name="id" value="{{$workspace->id}}">
+                                                    <button type="submit" class="btn main-btn7 shadow">Enquire now
+                                                    </button>
+                                                </td>
                                             </form>
                                         </tr>
-                                    @endfor
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -608,32 +618,32 @@
 
                         <!--end pricing table-->
                         <!--start Member Reviews-->
-                        <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                            <div class="content text-center rate-section">
-                                <div class="ratings">
-                                    <div class="rating-text">
-                                        <h5 style="color:#6B60E6; font-weight: 700;font-size: 15px;">Reviews </h5>
-                                    </div>
-                                    <span
-                                        class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>
-                                    <div class="stars">
-                                        @for($i=0;intval($workspace->workSpaceRating[0]->rate_avg)>$i;$i++)
-                                            <li class="list-inline-item">
-                                                <i class="fa fa-star" style="color: #FFC107"></i>
-                                            </li>
-                                        @endfor
-                                    </div>
-                                    <div class="ratings">
-                                        <div class="rating-text">
-                                            <a href="#reviews" style="color:#6B60E6 ;"> Read All Reviews </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end Member Reviews-->
+                        {{--                        <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">--}}
+                        {{--                            <div class="content text-center rate-section">--}}
+                        {{--                                <div class="ratings">--}}
+                        {{--                                    <div class="rating-text">--}}
+                        {{--                                        <h5 style="color:#6B60E6; font-weight: 700;font-size: 15px;">Reviews </h5>--}}
+                        {{--                                    </div>--}}
+                        {{--                                    <span--}}
+                        {{--                                        class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>--}}
+                        {{--                                    <div class="stars">--}}
+                        {{--                                        @for($i=0;intval($workspace->workSpaceRating[0]->rate_avg)>$i;$i++)--}}
+                        {{--                                            <li class="list-inline-item">--}}
+                        {{--                                                <i class="fa fa-star" style="color: #FFC107"></i>--}}
+                        {{--                                            </li>--}}
+                        {{--                                        @endfor--}}
+                        {{--                                    </div>--}}
+                        {{--                                    <div class="ratings">--}}
+                        {{--                                        <div class="rating-text">--}}
+                        {{--                                            <a href="#reviews" style="color:#6B60E6 ;"> Read All Reviews </a>--}}
+                        {{--                                        </div>--}}
+                        {{--                                    </div>--}}
+                        {{--                                </div>--}}
+                        {{--                                <!--end Member Reviews-->--}}
 
-                            </div>
+                        {{--                            </div>--}}
 
-                        </div>
+                        {{--                        </div>--}}
                     </div>
 
 
@@ -797,27 +807,27 @@
       box-shadow: 0px 10px 10px #E0E0E0; padding-top: 20px; padding-bottom: 20px;">
                         <div class="row text-center">
                             @foreach($workspace->rating as $rate)
-                            <div class="col-md-4 mb-5 mb-md-0">
-                                <div class="d-flex justify-content-center mb-4">
-{{--                                    <img src="{{'/storage/'.$rate->worker->avatar}}" class="rounded-circle shadow-1-strong" width="150" height="150"/>--}}
-                                </div>
-{{--                                <h5 class="mb-3">{{$rate->worker->name}}</h5>--}}
-{{--                                <h6 class="text-primary mb-3">{{$rate->worker->job_title}}</h6>--}}
-                                <p class="px-xl-3">
-                                    {{$rate->message}}
-                                </p>
-                                <p class="px-xl-3">
-                                    {{$rate->tips}}
-                                </p>
+                                <div class="col-md-4 mb-5 mb-md-0">
+                                    <div class="d-flex justify-content-center mb-4">
+                                        {{--                                    <img src="{{'/storage/'.$rate->worker->avatar}}" class="rounded-circle shadow-1-strong" width="150" height="150"/>--}}
+                                    </div>
+                                    {{--                                <h5 class="mb-3">{{$rate->worker->name}}</h5>--}}
+                                    {{--                                <h6 class="text-primary mb-3">{{$rate->worker->job_title}}</h6>--}}
+                                    <p class="px-xl-3">
+                                        {{$rate->message}}
+                                    </p>
+                                    <p class="px-xl-3">
+                                        {{$rate->tips}}
+                                    </p>
 
-                                <ul class="list-unstyled d-flex justify-content-center mb-0">
-                                    @for($i=0;intval($rate->rate)>$i;$i++)
-                                        <li class="list-inline-item">
-                                            <i class="fa fa-star" style="color: #FFC107"></i>
-                                        </li>
-                                    @endfor
-                                </ul>
-                            </div>
+                                    <ul class="list-unstyled d-flex justify-content-center mb-0">
+                                        @for($i=0;intval($rate->rate)>$i;$i++)
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star" style="color: #FFC107"></i>
+                                            </li>
+                                        @endfor
+                                    </ul>
+                                </div>
                             @endforeach
 
                         </div>

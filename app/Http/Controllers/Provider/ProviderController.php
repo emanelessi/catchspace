@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Provider;
 
 use App\Http\Controllers\Controller;
+use App\Models\Attribute;
 use App\Models\Provider;
+use App\Models\ProviderAttribute;
 use App\Models\WorkSpace;
 use Illuminate\Http\Request;
 
@@ -31,5 +33,12 @@ class ProviderController extends Controller
 //        $workspace->save();
 
         return back()->with('success', trans('cp.messages.roles.role_updated'));
+    }
+
+    public function attribute($id)
+    {
+        $provider=Provider::withTrashed()->findOrFail($id);
+        $attribute = ProviderAttribute::withTrashed()->where('provider_id', $provider->id)->get();
+        return view('admin.coworkProvider.attributes.attribute', compact('attribute'));
     }
 }

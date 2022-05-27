@@ -88,7 +88,7 @@ Route::post('/worker/review', [\App\Http\Controllers\WorkerController::class, 's
 
 Route::get('/worker/provider-details/{id}', [\App\Http\Controllers\WorkerController::class, 'providerdetails']);
 Route::get('/worker/workspace-details/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacedetails']);
-Route::get('/worker/workspace-reserve/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacereserve']);
+Route::post('/worker/workspace-reserve/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacereserve']);
 
 Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');
 Route::post('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactstore'])->name('workerContactStore');
@@ -159,6 +159,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/provider/edit-workspace/{id}', [Provider\WorkSpaceController::class, 'edit']);
     Route::post('/provider/edit-workspace', [Provider\WorkSpaceController::class, 'update'])->name('updateWorkspace');
     Route::get('/provider/workspace/services/{id}', [Provider\WorkSpaceController::class, 'services']);
+
+    Route::get('/provider/attribute/{id}', [Provider\ProviderController::class, 'attribute']);
 
     Route::get('/provider/workspace/services/{id}', [Provider\ServiceController::class, 'index']);
     Route::get('/provider/workspace/add-service/{id}', [Provider\ServiceController::class, 'create']);

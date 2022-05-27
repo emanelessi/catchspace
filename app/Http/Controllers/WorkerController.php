@@ -163,12 +163,23 @@ class WorkerController extends Controller
         $workspace_services=WorkSpaceService::all();
         return view('publicSite.workspaceDetails', compact('workspace','workspace_services'));
     }
-    public function workspacereserve($id)
+    public function workspacereserve(Request $request)
     {
-        $workspace = WorkSpace::find($id);
-//        $workspace_type = WorkSpaceType::all();
-        $workspace_services=WorkSpaceService::all();
-        return view('publicSite.workspaceDetails', compact('workspace','workspace_services'));
+        $this->validate($request, [
+//            'worker_id' => 'required',
+            'date' => 'required',
+            'id' => 'required',
+            'addons' => 'required',
+            'price' => 'required',
+        ]);
+        $reservation=new WorkerWorkSpace();
+        $reservation->worker_id = 1;
+        $reservation->date = $request['date'];
+        $reservation->work_space_id = $request['id'];
+        $reservation->work_space_addon_id = $request['addons'];
+        $reservation->pricing_id = $request['price'];
+        $reservation->save();
+        return back()->with('success', trans('messages.reserve.reserve_added'));
     }
 
     public function contactus()
