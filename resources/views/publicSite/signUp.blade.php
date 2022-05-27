@@ -10668,7 +10668,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="type">Type</label>
-                                    <select class=" form-select" name="type" aria-placeholder="Type">
+                                    <select class="form-control" name="type" aria-placeholder="Type">
                                         <option>individual</option>
                                         <option>team</option>
                                     </select>

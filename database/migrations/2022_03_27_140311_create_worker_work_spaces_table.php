@@ -20,6 +20,10 @@ class CreateWorkerWorkSpacesTable extends Migration
             $table->date('date');
             $table->unsignedBigInteger('work_space_id');
             $table->foreign('work_space_id')->references('id')->on('work_spaces')->onDelete('cascade');
+            $table->unsignedBigInteger('work_space_addon_id');
+            $table->foreign('work_space_addon_id')->references('id')->on('work_space_addons')->onDelete('cascade');
+            $table->unsignedBigInteger('pricing_id');
+            $table->foreign('pricing_id')->references('id')->on('pricings')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });

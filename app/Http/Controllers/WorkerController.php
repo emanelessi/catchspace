@@ -163,6 +163,13 @@ class WorkerController extends Controller
         $workspace_services=WorkSpaceService::all();
         return view('publicSite.workspaceDetails', compact('workspace','workspace_services'));
     }
+    public function workspacereserve($id)
+    {
+        $workspace = WorkSpace::find($id);
+//        $workspace_type = WorkSpaceType::all();
+        $workspace_services=WorkSpaceService::all();
+        return view('publicSite.workspaceDetails', compact('workspace','workspace_services'));
+    }
 
     public function contactus()
     {

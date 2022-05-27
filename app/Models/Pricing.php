@@ -25,4 +25,8 @@ class Pricing extends Model
     {
         return $this->belongsTo(RentType::class, 'rent_type_id')->withTrashed();
     }
+    public function workerWorkSpace()
+    {
+        return $this->hasMany(WorkerWorkSpace::class, 'pricing_id')->withTrashed();
+    }
 }

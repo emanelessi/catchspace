@@ -16,26 +16,30 @@
         background-color: #E93A76;
         border-radius: 10px !important;
         height: 45px;
-        width: 200px ;
-        color: #ffffff!important;
-    ;
+        width: 200px;
+        color: #ffffff !important;;
     }
-    .page-sidebar .page-sidebar-menu > li.active.open > a, .page-sidebar .page-sidebar-menu > li.active > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a>i {
+
+    .page-sidebar .page-sidebar-menu > li.active.open > a, .page-sidebar .page-sidebar-menu > li.active > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a > i {
         /* background: #f2f6f9; */
         color: #E93A76;
     }
+
     .page-sidebar .page-sidebar-menu > li.active.open > a > i, .page-sidebar .page-sidebar-menu > li.active > a > i, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a > i, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a > i {
-        color: #E93A76!important;
+        color: #E93A76 !important;
     }
+
     .select_color i {
         color: #E93A76 !important;
     }
+
     .page-sidebar .page-sidebar-menu > li.active.open > a, .page-sidebar .page-sidebar-menu > li.active > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a {
         /* background: #f2f6f9; */
-        color: #E93A76!important;
+        color: #E93A76 !important;
     }
-    .page-sidebar .page-sidebar-menu > li > a > .title:hover{
-        color: #ffffff!important;
+
+    .page-sidebar .page-sidebar-menu > li > a > .title:hover {
+        color: #ffffff !important;
     }
 
     /*.nav-item:active {*/
@@ -131,11 +135,12 @@
 
 ">
                         <i class="fa fa-user"></i>
-                        <span class="title">Cowork provider</span>
+                        <span class="title">Cowork Providers</span>
                     </a>
 
                 </li>
                 {{--            @endcan--}}
+
 
 
                 @can('workspace_access')
@@ -150,7 +155,7 @@
 
 ">
                             <i class="fa fa-map-marker"></i>
-                            <span class="title">Work space</span>
+                            <span class="title">Work Spaces</span>
                         </a>
                     </li>
                 @endcan
@@ -234,7 +239,7 @@
 ">
                         <i class="fa fa-map-marker"></i>
                         <span class="title" style="    font-size: 15px;
-">Work space</span>
+">Work Spaces</span>
                     </a>
                 </li>
                 <li class="nav-item @if(preg_match('/worker/i',url()->current())) start active open @endif"

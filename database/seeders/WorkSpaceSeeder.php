@@ -79,7 +79,7 @@ class WorkSpaceSeeder extends Seeder
         $rent_type1->save();
 
         $rent_type2 = new RentType();
-        $rent_type2->type = 'by the hour';
+        $rent_type2->type = 'Hourly';
         $rent_type2->save();
 
         $pricing1 = new Pricing();
@@ -94,6 +94,12 @@ class WorkSpaceSeeder extends Seeder
         $pricing2->rent_type_id = $rent_type2->id;
         $pricing2->save();
 
+        $pricing3 = new Pricing();
+        $pricing3->price = 500;
+        $pricing3->work_space_id = $work_space2->id;
+        $pricing3->rent_type_id = $rent_type1->id;
+        $pricing3->save();
+
         $addon = new Addons();
         $addon->name = 'White Board';
         $addon->save();
@@ -103,6 +109,16 @@ class WorkSpaceSeeder extends Seeder
         $work_space_addons->work_space_id = $work_space->id;
         $work_space_addons->addon_id = $addon->id;
         $work_space_addons->save();
+
+        $addon2 = new Addons();
+        $addon2->name = 'Printer';
+        $addon2->save();
+
+        $work_space_addons2 = new WorkSpaceAddons();
+        $work_space_addons2->value = 10;
+        $work_space_addons2->work_space_id = $work_space2->id;
+        $work_space_addons2->addon_id = $addon2->id;
+        $work_space_addons2->save();
 
 
 

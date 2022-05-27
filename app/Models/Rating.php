@@ -20,4 +20,8 @@ class Rating extends Model
     {
         return $this->belongsTo(WorkSpace::class, 'work_space_id')->withTrashed();
     }
+    public function worker()
+    {
+        return $this->belongsTo(Worker::class, 'worker_id')->withTrashed();
+    }
 }

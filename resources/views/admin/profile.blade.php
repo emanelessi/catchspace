@@ -117,6 +117,10 @@
             font-size: 13px;
 
         }
+        .form-control[readonly] {
+            background-color: transparent;
+            opacity: 1;
+        }
 
         .btn2, .form-control, .custom-select {
             height: 45px;
@@ -208,49 +212,32 @@
 
             </div>
             <div class="col-md-7">
-                {{--                <form class="mb-5" id="contactForm" name="contactForm" method="post"--}}
-                {{--                      action="{{ route('workerContactStore') }}">--}}
-                {{--                    @csrf--}}
+
                 <div class="row">
                     <div class="col-md-6 form-group mb-3">
 
                         <input type="text" class="form-control" name="name" id="name" placeholder="Your name"
-                               value="{{$user->full_name}}">
+                               value="{{$user->full_name}}" readonly>
                     </div>
                     <div class="col-md-6 form-group mb-3">
 
                         <input type="email" class="form-control" name="email" id="email"
-                               placeholder="Your email" value=" {{$user->email}}">
+                               placeholder="Your email" value=" {{$user->email}}" readonly>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 form-group mb-3">
 
                         <input type="text" class="form-control" name="name" id="name" placeholder="Your name"
-                               value="  {{$user->phone}}">
+                               value="  {{$user->phone}}" readonly>
                     </div>
                     <div class="col-md-6 form-group mb-3">
 
                         <input type="email" class="form-control" name="email" id="email"
-                               placeholder="Your email" value="  {{$user->userLevel->name }}">
+                               placeholder="Your email" value="  {{$user->userLevel->name }}" readonly>
                     </div>
                 </div>
-                <div class="row mb-6 p-3">
-                    <div class="col-md-12 form-group ">
-                            <textarea class="form-control" name="message" id="message" cols="30" rows="4"
-                                      placeholder="Write your message"
-                                      value="{{$user->provider->name ?? ''}}"></textarea>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 form-group text-center ">
-                        <input type="submit" value="Send"
-                               class="btn2 btn-block btn-primary rounded-0 py-2 px-4"
-                               style="background-color: black;color: #ffffff">
-                        <span class="submitting"></span>
-                    </div>
-                </div>
-                {{--                </form>--}}
+
             </div>
         </div>
     </div>

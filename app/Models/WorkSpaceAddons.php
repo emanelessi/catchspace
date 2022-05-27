@@ -25,4 +25,8 @@ class WorkSpaceAddons extends Model
     {
         return $this->belongsTo(Addons::class, 'addon_id')->withTrashed();
     }
+    public function workerWorkSpace()
+    {
+        return $this->hasMany(WorkerWorkSpace::class, 'work_space_addon_id')->withTrashed();
+    }
 }

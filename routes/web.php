@@ -88,6 +88,7 @@ Route::post('/worker/review', [\App\Http\Controllers\WorkerController::class, 's
 
 Route::get('/worker/provider-details/{id}', [\App\Http\Controllers\WorkerController::class, 'providerdetails']);
 Route::get('/worker/workspace-details/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacedetails']);
+Route::get('/worker/workspace-reserve/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacereserve']);
 
 Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');
 Route::post('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactstore'])->name('workerContactStore');

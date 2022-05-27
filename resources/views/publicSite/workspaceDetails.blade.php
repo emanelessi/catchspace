@@ -318,14 +318,11 @@
         }
 
         .custom-table {
-            margin-top: -50px;
             text-align: center;
             font-family: roboto;
         }
 
-        .custom-table {
-            min-width: 690px;
-        }
+
 
         .custom-table thead tr, .custom-table thead th {
             color: var(--blue-color);
@@ -423,6 +420,18 @@
             margin-left: 220px;
             margin-top: 60px;
 
+        }
+
+        .table > caption + thead > tr:first-child > td, .table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > td, .table > thead:first-child > tr:first-child > th {
+            border-top: 0;
+            text-align: center;
+        }
+        .form-select {
+            font-size: 14px;
+            height: 34px;
+            border: 1px solid #c2cad8;
+            border-radius: 4px;
+            width: 150px;
         }
 
         @media only screen and (max-width: 600px) {
@@ -543,36 +552,54 @@
                             </h4>
 
 
-                            <div class="content">
-                                <table class="table custom-table ">
+                            <div class="mt-5">
+                                <table class="table custom-table  mt-5">
                                     <thead>
                                     <th scope="row">
                                     </th>
                                     <th class="tab">People</th>
                                     <th class="tab">Duration</th>
                                     <th class="tab">price</th>
+                                    <th class="tab">date</th>
+                                    <th class="tab">addons</th>
                                     <th class="tab">availability</th>
                                     </thead>
                                     <tbody>
-
-                                    <tr>
-                                        <th scope="row">
-                                        </th>
-                                        <td>
-                                            {{$workspace->capacity}}
-                                        </td>
-                                        <td>
-                                            {{$workspace->pricing[0]->rentType->type ?? ''}}
-                                        </td>
-                                        <td>
-                                            ₪ {{$workspace->pricing[0]->price ?? 0}}
-
-                                        </td>
-                                        <td>
-                                            <button class="btn main-btn7 shadow">Enquire now</button>
-                                        </td>
-                                    </tr>
-
+                                    @for($i=0;$i<count($workspace->pricing);$i++ )
+                                        <tr>
+                                            <form  action="/worker/workspace-reserve/{{$workspace->id}}" method="post">
+                                                @csrf
+                                            <th scope="row">
+                                            </th>
+                                            <td>
+                                                {{$workspace->capacity}}
+                                                <input type="hidden" name="capacity" value="{{$workspace->capacity}}">
+                                            </td>
+                                            <td>
+                                                {{$workspace->pricing[$i]->rentType->type ?? ''}}
+                                                <input type="hidden" name="rentType" value="{{$workspace->pricing[$i]->rentType->type ?? ''}}">
+                                            </td>
+                                            <td>
+                                                ₪ {{$workspace->pricing[$i]->price ?? 0}}
+                                                <input type="hidden" name="price" value="{{$workspace->pricing[$i]->price ?? 0}}">
+                                            </td>
+                                            <td>
+                                                <input type="date" name="date" class="form-control">
+                                            </td>
+                                                <td>
+                                                    <select class="form-select" name="addons" >
+                                                        @for($i=0;$i<count($workspace->workSpaceAddons);$i++ )
+                                                            <option  >{{$workspace->workSpaceAddons[0]->value }} ₪ {{$workspace->workSpaceAddons[0]->addon->name }}</option>
+                                                        @endfor
+                                                    </select>
+                                            </td>
+                                            <td>
+                                                <input type="hidden" name="id" value="{{$workspace->id}}">
+                                                <button type="submit" class="btn main-btn7 shadow">Enquire now</button>
+                                            </td>
+                                            </form>
+                                        </tr>
+                                    @endfor
                                     </tbody>
                                 </table>
                             </div>
@@ -630,7 +657,8 @@
 
                                 <div class="col-lg-3 d-flex   " data-aos="fade-left"
                                      data-aos-delay="100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin-top: 5px;"
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                         style="margin-top: 5px;"
                                          fill="currentColor"
                                          class="bi bi-wifi"
                                          viewBox="0 0 16 16">
@@ -647,403 +675,158 @@
                             @endforeach
                         </div>
                     </div>
-        </section>
+                </section>
 
-        <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                 class="bi bi-star-fill" style="margin-right: 5px; margin-top:-4px;" viewBox="0 0 16 16">
-                <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-            </svg>
-            Reviews
-        </h4>
-        <section id="star" class="star">
-            <div class="container " data-aos="fade-up">
-                <div class="row">
-                    <div class="  d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                        <div class="container">
-                            <div class="row">
-                                <div class=" col-md-7 col-12 text-center mb-5 " style="  background-color:#fff;
+                <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                         class="bi bi-star-fill" style="margin-right: 5px; margin-top:-4px;" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    Reviews
+                </h4>
+                <section id="star" class="star">
+                    <div class="container " data-aos="fade-up">
+                        <div class="row">
+                            <div class="  d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class=" col-md-7 col-12 text-center mb-5 " style="  background-color:#fff;
               border-radius: 6px;
                   border: solid rgba(0, 0, 0, 0.01);
             box-shadow: 0px 10px 10px #E0E0E0; margin-left:30px;">
-                                    <div class="card">
-                                        <div class="row justify-content-left d-flex">
-                                            <div class="col-md-4 d-flex flex-column">
-                                                <div class="rating-box">
-                                                    <h1 class="pt-4">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</h1>
-                                                    <p class="">out of 5</p>
-                                                </div>
-                                                <div>
-                                                    @for($i=0;intval($workspace->workSpaceRating[0]->rate_avg)>$i;$i++)
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-star" style="color: #FFC107"></i>
-                                                        </li>
-                                                    @endfor
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="rating-bar0 justify-content-center">
-                                                    <table class="text-left mx-auto">
-                                                        <tr>
-                                                            <td class="rating-label">Excellent</td>
-                                                            <td class="rating-bar">
-                                                                <div class="bar-container">
-                                                                    <div class="bar-5"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-right">123</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="rating-label">Good</td>
-                                                            <td class="rating-bar">
-                                                                <div class="bar-container">
-                                                                    <div class="bar-4"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-right">23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="rating-label">Average</td>
-                                                            <td class="rating-bar">
-                                                                <div class="bar-container">
-                                                                    <div class="bar-3"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-right">10</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="rating-label">Poor</td>
-                                                            <td class="rating-bar">
-                                                                <div class="bar-container">
-                                                                    <div class="bar-2"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-right">3</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="rating-label">Terrible</td>
-                                                            <td class="rating-bar">
-                                                                <div class="bar-container">
-                                                                    <div class="bar-1"></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-right">0</td>
-                                                        </tr>
-                                                    </table>
+                                            <div class="card">
+                                                <div class="row justify-content-left d-flex">
+                                                    <div class="col-md-4 d-flex flex-column">
+                                                        <div class="rating-box">
+                                                            <h1 class="pt-4">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</h1>
+                                                            <p class="">out of 5</p>
+                                                        </div>
+                                                        <div style="margin-left: -20px;">
+                                                            @for($i=0;intval($workspace->workSpaceRating[0]->rate_avg)>$i;$i++)
+                                                                <li class="list-inline-item">
+                                                                    <i class="fa fa-star" style="color: #FFC107"></i>
+                                                                </li>
+                                                            @endfor
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="rating-bar0 justify-content-center">
+                                                            <table class="text-left mx-auto">
+                                                                <tr>
+                                                                    <td class="rating-label">Excellent</td>
+                                                                    <td class="rating-bar">
+                                                                        <div class="bar-container">
+                                                                            <div class="bar-5"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">123</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="rating-label">Good</td>
+                                                                    <td class="rating-bar">
+                                                                        <div class="bar-container">
+                                                                            <div class="bar-4"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">23</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="rating-label">Average</td>
+                                                                    <td class="rating-bar">
+                                                                        <div class="bar-container">
+                                                                            <div class="bar-3"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">10</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="rating-label">Poor</td>
+                                                                    <td class="rating-bar">
+                                                                        <div class="bar-container">
+                                                                            <div class="bar-2"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">3</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="rating-label">Terrible</td>
+                                                                    <td class="rating-bar">
+                                                                        <div class="bar-container">
+                                                                            <div class="bar-1"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">0</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4  pt-lg-0 content" data-aos="fade-left"
-                                     data-aos-delay="100">
-                                    <div class="ratings"
-                                         style=" margin-left: -20px; margin-top: -45px; background-color: #FFC107;  ; width: 400px; height: 150px;">
-                                        <div class="ratingtext">
-                                            <h5 style="color: #fff; text-align: center; margin-top: 20px;">
-                                                Are
-                                                You A
-                                                Member Of
-                                                {{$workspace->name}}</h5>
-                                            <h6 style="color:  #6B60E6; text-align: center;">We are
-                                                interested
-                                                in
-                                                your opinion of our space</h6>
+                                        <div class="col-lg-4  pt-lg-0 content" data-aos="fade-left"
+                                             data-aos-delay="100">
+                                            <div class="ratings"
+                                                 style=" margin-left: -20px; margin-top: -45px; background-color: #FFC107;  ; width: 400px; height: 150px;">
+                                                <div class="ratingtext">
+                                                    <h5 style="color: #fff; text-align: center; margin-top: 20px;">
+                                                        Are
+                                                        You A
+                                                        Member Of
+                                                        {{$workspace->name}}</h5>
+                                                    <h6 style="color:  #6B60E6; text-align: center;">We are
+                                                        interested
+                                                        in
+                                                        your opinion of our space</h6>
 
+                                                </div>
+                                                <a class="btn main-btn9" href="/worker/review/{{$workspace->id}}"
+                                                   style="align-items:center ;">Post A Review</a>
+                                            </div>
                                         </div>
-                                        <a class="btn main-btn9" href="/worker/review/{{$workspace->id}}"
-                                           style="align-items:center ;">Post A Review</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="row d-flex justify-content-center " style="background-color:#F5F3FF;  background-color:#fff;
+                </section>
+                <section>
+                    <div class="row d-flex justify-content-center " style="background-color:#F5F3FF;  background-color:#fff;
         border-radius: 6px;
             border: solid rgba(0, 0, 0, 0.01);
       box-shadow: 0px 10px 10px #E0E0E0; padding-top: 20px; padding-bottom: 20px;">
-                <div class="row text-center">
-                    <div class="col-md-4 mb-5 mb-md-0">
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                 class="rounded-circle shadow-1-strong" width="150" height="150"/>
+                        <div class="row text-center">
+                            @foreach($workspace->rating as $rate)
+                            <div class="col-md-4 mb-5 mb-md-0">
+                                <div class="d-flex justify-content-center mb-4">
+{{--                                    <img src="{{'/storage/'.$rate->worker->avatar}}" class="rounded-circle shadow-1-strong" width="150" height="150"/>--}}
+                                </div>
+{{--                                <h5 class="mb-3">{{$rate->worker->name}}</h5>--}}
+{{--                                <h6 class="text-primary mb-3">{{$rate->worker->job_title}}</h6>--}}
+                                <p class="px-xl-3">
+                                    {{$rate->message}}
+                                </p>
+                                <p class="px-xl-3">
+                                    {{$rate->tips}}
+                                </p>
+
+                                <ul class="list-unstyled d-flex justify-content-center mb-0">
+                                    @for($i=0;intval($rate->rate)>$i;$i++)
+                                        <li class="list-inline-item">
+                                            <i class="fa fa-star" style="color: #FFC107"></i>
+                                        </li>
+                                    @endfor
+                                </ul>
+                            </div>
+                            @endforeach
+
                         </div>
-                        <h5 class="mb-3">Maria Smantha</h5>
-                        <h6 class="text-primary mb-3">Web Developer</h6>
-                        <p class="px-xl-3">
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                            tenetur.
-                        </p>
-                        <ul class="list-unstyled d-flex justify-content-center mb-0">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                        </ul>
                     </div>
-                    <div class="col-md-4 mb-5 mb-md-0">
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                 class="rounded-circle shadow-1-strong" width="150" height="150"/>
-                        </div>
-                        <h5 class="mb-3">Maria Smantha</h5>
-                        <h6 class="text-primary mb-3">Web Developer</h6>
-                        <p class="px-xl-3">
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                            tenetur.
-                        </p>
-                        <ul class="list-unstyled d-flex justify-content-center mb-0">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" style="color: #FFC107;"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 mb-0">
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                 class="rounded-circle shadow-1-strong" width="150" height="150"/>
-                        </div>
-                        <h5 class="mb-3">Maria Smantha</h5>
-                        <h6 class="text-primary mb-3">Web Developer</h6>
-                        <p class="px-xl-3">
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-                            tenetur.
-                        </p>
-                        <ul class="list-unstyled d-flex justify-content-center mb-0">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #FFC107;" width="16"
-                                     height="16" fill="currentColor" class="bi bi-star-fill"
-                                     viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </section>
             </div>
         </section>
-    </div>
-    {{--            <div id="responsive" class="modal fade" tabindex="-1" aria-hidden="true">--}}
-    {{--                <div class="modal-dialog">--}}
-    {{--                    <div class="modal-content ">--}}
-    {{--                        <div>--}}
-    {{--                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>--}}
-    {{--                            <h4 class=" text-center" style="align-items: center;justify-content: space-between;--}}
-    {{--                                padding: 1rem 1rem;border-bottom: 1px solid #e5e5e5;margin-left: 33px;--}}
-    {{--                                margin-right: 52px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                Share Your Requirements</h4>--}}
-    {{--                        </div>--}}
-    {{--                        <h5 class="text-center" style="color:#6B60E6; font-family: 'roboto', sans-serif !important; ">We--}}
-    {{--                            will Get Back To You With The Guaranteed<br> Best Pricing And--}}
-    {{--                            Advailability </h5>--}}
-    {{--                        <div class="modal-body">--}}
-    {{--                            <div class="scroller" style="height:350px" data-always-visible="1" data-rail-visible1="1">--}}
-    {{--                                <div class="row">--}}
-    {{--                                    <div class="col-md-12">--}}
-    {{--                                        <div>--}}
-    {{--                                            <input type="text" placeholder="First Name" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                            <input type="text" placeholder="Last Name" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                        </div>--}}
-    {{--                                        <div>--}}
-    {{--                                            <input type="text" placeholder="Company Email" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                            <input type="text" placeholder="Company Name" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                        </div>--}}
-    {{--                                        <div>--}}
-    {{--                                            <input type="text" placeholder="Phone Number" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                            <input type="text" placeholder="Dedicated Desk" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                        </div>--}}
-    {{--                                        <div>--}}
-    {{--                                            <input type="text" placeholder="1 Person" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                            <input type="text" placeholder="Estimated Start Date" class="col-md-5 "--}}
-    {{--                                                   style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                        </div>--}}
-    {{--                                        <div>--}}
-    {{--                                            <input type="text" placeholder="1" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px;     margin: 0 20px 10px 20px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                            <input type="text" placeholder="Months" class="col-md-5 " style=" height: 40px;--}}
-    {{--                                                                padding: 6px 12px;background-color: #ededed;--}}
-    {{--                                                                border: 1px solid #efefef;--}}
-    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-    {{--                                        </div>--}}
-    {{--                                        <div>--}}
-    {{--                                            <input type="text" placeholder="Add..." class="col-md-11 " style="height: 80px;--}}
-    {{--                                                                margin: 0 20px 10px 20px; width: 409px;--}}
-    {{--                                                                background-color: #fff;--}}
-    {{--                                                                border: 1px solid #c2cad8;--}}
-    {{--                                                                border-radius: 4px; font-family: 'roboto', sans-serif !important; ">--}}
-
-    {{--                                        </div>--}}
-
-    {{--                                    </div>--}}
-
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                            <div style="text-align: right;display: flex;flex-wrap: wrap;flex-shrink: 0;--}}
-    {{--                                 align-items: center;justify-content: flex-end;padding: 0.75rem;">--}}
-    {{--                                <button type="button" data-dismiss="modal" class="btn dark btn-outline main-btn2"--}}
-    {{--                                        style="background-color:#6B60E6;font-family: 'roboto', sans-serif !important;  margin-right: 20px">--}}
-    {{--                                    Close--}}
-    {{--                                </button>--}}
-    {{--                                <button type="button" class="btn green main-btn2"--}}
-    {{--                                        style="background-color: #ffc105;font-family: 'roboto', sans-serif !important;  margin-right: 33px">--}}
-    {{--                                    Save changes--}}
-    {{--                                </button>--}}
-    {{--                            </div>--}}
-
-    {{--                        </div>--}}
-    {{--                        <div--}}
-    {{--                            style="border-top: 1px solid #e5e5e5;  font-family: 'roboto', sans-serif !important;  margin-left: 33px;     margin-right: 52px;">--}}
-    {{--                            <p class="text-center">By completing You Accept The Catch Space<br> <span--}}
-    {{--                                    style="color:#6B60E6;">Terms Of Use</span> And <span style="color: #ffc105;">Privacy Policy</span>--}}
-    {{--                            </p>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    </section>
-    </section>
-    <!-- End Team section-->
-    <!-- Footer -->
+        <!-- End Team section-->
+        <!-- Footer -->
 
 
     </div>

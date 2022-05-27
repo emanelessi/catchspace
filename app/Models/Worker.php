@@ -15,4 +15,8 @@ class Worker extends Model
     {
         return $this->hasMany(WorkerWorkSpace::class, 'worker_id')->withTrashed();
     }
+    public function rating()
+    {
+        return $this->hasMany(Rating::class, 'work_space_id')->withTrashed();
+    }
 }
