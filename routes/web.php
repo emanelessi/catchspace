@@ -160,7 +160,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/provider/edit-workspace', [Provider\WorkSpaceController::class, 'update'])->name('updateWorkspace');
     Route::get('/provider/workspace/services/{id}', [Provider\WorkSpaceController::class, 'services']);
 
-    Route::get('/provider/attribute/{id}', [Provider\ProviderController::class, 'attribute']);
+    Route::get('/provider/attribute/{id}', [Provider\AttributeController::class, 'attribute']);
+    Route::get('/provider/add-attribute/{id}', [Provider\AttributeController::class, 'create']);
+    Route::post('/provider/add-attribute', [Provider\AttributeController::class, 'store'])->name('attributeStore');
+    Route::get('/provider/delete-attribute/{id}', [Provider\AttributeController::class, 'destroy']);
+    Route::get('/provider/restore-attribute/{id}', [Provider\AttributeController::class, 'restore']);
+    Route::get('/provider/edit-attribute/{id}', [Provider\AttributeController::class, 'edit']);
+    Route::post('/provider/edit-attribute', [Provider\AttributeController::class, 'update'])->name('updateAttribute');
+
 
     Route::get('/provider/workspace/services/{id}', [Provider\ServiceController::class, 'index']);
     Route::get('/provider/workspace/add-service/{id}', [Provider\ServiceController::class, 'create']);

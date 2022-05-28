@@ -94,7 +94,7 @@
         <div class="page-head">
             <!-- BEGIN PAGE TITLE -->
             <div class="page-title">
-                <h1 class="margin-top--10 head-title">Add Service</h1>
+                <h1 class="margin-top--10 head-title">Add Attribute</h1>
             </div>
             <!-- END PAGE TITLE -->
             <div class="row">
@@ -114,25 +114,24 @@
                                                 <div class="tab-content">
                                                     <!-- PERSONAL INFO TAB -->
                                                     <div class="tab-pane active" id="tab_1_1">
-                                                        <form method="POST" action="{{route('serviceStore')}}">
+                                                        <form method="POST" action="{{route('attributeStore')}}">
                                                             @csrf
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9" style="
                                                                 color:#6B7280;">
-                                                                    Value *</label>
-                                                                <input type="number" name="value"
-                                                                       placeholder="value"
+                                                                    Key *</label>
+                                                                <input type="text" name="name"
+                                                                       placeholder="Key"
                                                                        class="form-control form-input"/>
-                                                                <input type="hidden" name="work_space_id"
+                                                                <input type="hidden" name="provider_id"
                                                                        class="form-control"
                                                                        value="{{$id}}"/>
                                                             </div>
                                                             <div class="form-group col-md-6">
                                                                 <label class="control-label margin-left-9"
-                                                                       style="color:#6B7280;">Service
-                                                                    name *</label>
-                                                                <input type="text" name="name"
-                                                                       placeholder="name"
+                                                                       style="color:#6B7280;">Value *</label>
+                                                                <input type="text" name="value"
+                                                                       placeholder="value"
                                                                        class="form-control form-input"/>
                                                             </div>
 

@@ -117,6 +117,7 @@
             font-size: 13px;
 
         }
+
         .form-control[readonly] {
             background-color: transparent;
             opacity: 1;
@@ -193,11 +194,41 @@
             color: #000;
         }
 
+        .add-btn {
+            border-color: #E93A76 !important;
+            font-family: 'Montserrat', sans-serif !important;
+            color: #FFFFFF !important;
+            background: #E93A76 !important;
+            border-radius: 5px !important;
+            width: 170px !important;
+            height: 30px !important;
+            font-size: 12px !important;
+        }
+        label{
+            font-size: 17px !important;
+            letter-spacing: -0.022em !important;
+            color: #E93A76 !important;
+        }
     </style>
     <div class="content p-3">
-        <div class="page-title">
+        <div class="page-title ">
             <h1 class=" head-title">Profile</h1>
+            @can('provider_access')
+                <div class="page-toolbar">
+                    <a href="/provider/edit-profile/{{$user->provider->id}}"
+                       class="demo-loading-btn btn btn-primary add-btn" style="
+    position: absolute;
+    right: 59px;
+    top: 130px;
+">
+                        <i class="fa fa-edit"></i>
+                        Edit Provider
+                    </a>
+                    <!-- END PAGE TOOLBAR -->
+                </div>
+            @endcan
         </div>
+
         <div class="row align-items-stretch justify-content-center no-gutters">
 
             <div class="col-lg-2 ">
@@ -211,36 +242,66 @@
                 @endcan
 
             </div>
+
             <div class="col-md-7">
 
                 <div class="row">
                     <div class="col-md-6 form-group mb-3">
-
+                        <label>User Name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Your name"
                                value="{{$user->full_name}}" readonly>
                     </div>
                     <div class="col-md-6 form-group mb-3">
-
+                        <label>User Email</label>
                         <input type="email" class="form-control" name="email" id="email"
                                placeholder="Your email" value=" {{$user->email}}" readonly>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 form-group mb-3">
-
+                        <label>User Phone Number</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Your name"
                                value="  {{$user->phone}}" readonly>
                     </div>
                     <div class="col-md-6 form-group mb-3">
-
+                        <label>User Level</label>
                         <input type="email" class="form-control" name="email" id="email"
                                placeholder="Your email" value="  {{$user->userLevel->name }}" readonly>
                     </div>
-                </div>
 
+                </div>
+                @can('provider_access')
+                    <div class="col-md-12">
+
+                        <div class="row">
+                            <div class="col-md-6 form-group mb-3">
+                                <label>Provider Name</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Your name"
+                                       value="{{$user->provider->name}}" readonly>
+                            </div>
+                            <div class="col-md-6 form-group mb-3">
+                                <label>Provider Owner Name</label>
+
+                                <input type="email" class="form-control" name="email" id="email"
+                                       placeholder="Your email" value=" {{$user->provider->owner_name}}" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+
+                            <div class="row">
+                                <div class="col-md-12 form-group mb-3">
+                                    <label>Provider Address</label>
+
+                                    <input type="text" class="form-control" name="name" id="name"
+                                           placeholder="Your name"
+                                           value="{{$user->provider->address}}" readonly>
+                                </div>
+
+                            </div>
+                            @endcan
+                        </div>
+                    </div>
             </div>
-        </div>
-    </div>
 @endsection
 
 {{--@section('js')--}}

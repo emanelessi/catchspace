@@ -10,7 +10,10 @@ class Attribute extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'name',
 
+    ];
     public function providerAttributes()
     {
         return $this->hasMany(ProviderAttribute::class, 'attribute_id')->withTrashed();

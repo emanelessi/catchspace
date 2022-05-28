@@ -10,7 +10,12 @@ class ProviderAttribute extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'value',
+        'provider_id',
+        'attribute_id',
 
+    ];
     public function provider()
     {
         return $this->belongsTo(Provider::class, 'provider_id')->withTrashed();

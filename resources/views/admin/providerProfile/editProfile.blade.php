@@ -93,117 +93,90 @@
     <div class="page-head">
         <!-- BEGIN PAGE TITLE -->
         <div class="page-title">
-            <h1 class="margin-top--10 head-title">Cowork provider</h1>
+            <h1 class="margin-top--10 head-title">Edit Cowork provider</h1>
         </div>
         <!-- END PAGE TITLE -->
         <div class="row">
-            <div class="col-md-12">
-                <!-- BEGIN PROFILE SIDEBAR -->
-                <div>
-                    <!-- PORTLET MAIN -->
-                    <div class="portlet light profile-sidebar-portlet bordered margin-top-35"
-                         style="border-bottom: 1px solid #eef1f5;height: 100%;border-radius: 20px !important;">
-                        <!-- SIDEBAR USERPIC -->
-                        <div class=" profile-userpic margin-right--12 margin-top-25" style="
+            <div class="col-md-12 col-lg-12 col-xs-12">
+                <!-- PERSONAL INFO TAB -->
+                <div class="tab-pane active" id="tab_1_1">
+                    <form role="form" action="{{route('providerupdate')}}" enctype="multipart/form-data"
+                          method="Post">
+                        @csrf
+                        <div class="profile-userpic  margin-right--12 " style="
                         float: left;
                         width: 300px;
 ">
-                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                            <img src="/storage/{{$provider->logo}}"
+                                 class="img-responsive" alt="">
                         </div>
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
-                        <div class=" profile-usertitle margin-top-70" style="
+                        <b class="profile-usertitle margin-top-40" style="
                         text-align: justify;
 ">
-                            <div class="profile-usertitle-name" style="
-font-size: 24px;
-line-height: 137.5%;
-color: #111827;
-             font-family: AvenirLTStd-Book;
-">
-                                Ali Mahdi
-                            </div>
-                            <div style="
-font-size: 14px;
-line-height: 157%;
-color: #6B7280;
-             font-family: AvenirLTStd-Book;
-">
-                                Programmer
-                            </div>
-                        </div>
-                        <!-- END SIDEBAR USER TITLE -->  <!-- BEGIN PROFILE CONTENT -->
-                        <div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="portlet light bordered" style="
-                                        margin: 72px 73px 200px;
+                            <input type="file" data-loading-text="Loading..."
+                                   name="logo" id="file"
+                                   class="inputfile img-logo demo-loading-btn btn btn-primary margin-top-85"
+                                   value="{{$provider->logo}}" >
+                            <label for="file"> Upload wokspace logo <i class="fa fa-file-photo-o"
+                                                                       style="color: #6B7280 !important;"></i></label>
+
+                            <div class="portlet light bordered" style="
+                                        margin: 110px 73px 200px;
                                         border-radius: 20px !important;
                                         background-color: #fff;
                                          border-top-width: 2px !important;
                                             border-bottom-width: 2px !important;
 ">
-                                        <div class="portlet-body">
-                                            <div class="tab-content">
-                                                <!-- PERSONAL INFO TAB -->
-                                                <div class="tab-pane active" id="tab_1_1">
-                                                    <form role="form" action="{{route('update')}}" method="POST">
-                                                        @csrf
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Name
-                                                                *</label>
-                                                            <input type="text" placeholder="Ali Mahdi"
-                                                                   class="form-control form-input"/>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Job
-                                                                Title *</label>
-                                                            <input type="text" placeholder="Programmer "
-                                                                   class="form-control form-input"/>
-                                                        </div>
-                                                        <div class="form-group "
-                                                             style="margin-left: 16px;margin-right: 16px;">
-                                                            <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Descriotion
-                                                                *</label>
-                                                            <input type="text"
-                                                                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing  "
-                                                                   class="form-control form-input"/>
-                                                        </div>
-                                                        <div class="form-group "
-                                                             style="margin-left: 16px;margin-right: 16px;">
-                                                            <label class="control-label margin-left-9"
-                                                                   style="color:#6B7280;">Statues
-                                                                *</label>
-                                                            <input type="text"
-                                                                   placeholder="Active"
-                                                                   class="form-control form-input"/>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                                <!-- END PERSONAL INFO TAB -->
-                                            </div>
+                                <div class="portlet-body">
+                                    <div class="tab-content">
+                                        <div class="form-group margin-left-9 margin-right-10">
+                                            <label class="control-label margin-left-9" style="color:#6B7280;">
+                                                Name*</label>
+                                            <input type="text" name="name"
+                                                   placeholder="Tools" value="{{$provider->name}}"
+                                                   class="form-control form-input"/>
+                                            <input type="hidden" name="id"
+                                                   value="{{$provider->id}}"/>
                                         </div>
-                                    </div>
-                                    <button type="button"
-                                            class="btn btn-submit btn-primary margin-top--250  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 ">
-                                        Save Change
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END PROFILE CONTENT -->
-                    </div>
-                    <!-- END PORTLET MAIN -->
-
+                                        <div class="form-group margin-left-9 margin-right-10">
+                                            <label class="control-label margin-left-9"
+                                                   style="color:#6B7280;">
+                                                Owner Name*</label>
+                                            <input type="text" name="owner_name"
+                                                   placeholder="Rami" value="{{$provider->owner_name}}"
+                                                   class="form-control form-input"/>
+                                        </div>
+                                        <div class="form-group margin-left-9 margin-right-10">
+                                            <label class="control-label margin-left-9"
+                                                   style="color:#6B7280;">
+                                                Address*</label>
+                                            <input type="text" name="address" value="{{$provider->address}}"
+                                                   placeholder="Al-rehab mall, remal street, Gaza, palestine"
+                                                   class="form-control form-input"/>
+                                        </div>
+                                        <div class="form-group margin-left-9 margin-right-10">
+                                            <label class="control-label margin-left-9"
+                                                   style="color:#6B7280;">
+                                                Phone*</label>
+                                            <input type="number" name="phone" value="{{$provider->phone}}"
+                                                   placeholder="059"
+                                                   class="form-control form-input"/>
+                                        </div>
+                                        <button type="submit"
+                                                class="btn btn-submit btn-primary margin-top-25  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 ">
+                                            Save Change
+                                        </button>
+                    </form>
                 </div>
-                <!-- END BEGIN PROFILE SIDEBAR -->
-
-            </div>
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif              </div>
         </div>
+    </div>
 
 
     </div>

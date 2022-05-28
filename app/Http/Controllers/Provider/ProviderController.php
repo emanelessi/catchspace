@@ -13,32 +13,27 @@ class ProviderController extends Controller
 {
     public function edit($id)
     {
-//        $provider = Provider::findOrFail($id);
-//        return view('admin.providerProfile.editProfile', compact('provider'));
-        return view('admin.providerProfile.editProfile');
+        $provider = Provider::findOrFail($id);
+        return view('admin.providerProfile.editProfile', compact('provider'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-//        $this->validate($request, [
-//            'capacity' => 'required',
-//            'work_space_type_id' => 'required',
-//            'provider_id' => 'required',
-//        ]);
-//
-//        $workspace = WorkSpace::findOrFail($id);
-//        $workspace->capacity = $request->input('capacity');
-//        $workspace->work_space_type_id = $request->input('work_space_type_id');
-//        $workspace->provider_id = $request->input('provider_id');
-//        $workspace->save();
+        $this->validate($request, [
+            'name' => 'required',
+            'owner_name' => 'required',
+        ]);
 
-        return back()->with('success', trans('cp.messages.roles.role_updated'));
+        $provider = Provider::findOrFail($request->input($id));
+        $provider->name = $request->input('name');
+        $provider->owner_name = $request->input('owner_name');
+        $provider->address = $request->input('address');
+        $provider->phone = $request->input('phone');
+        $provider->logo = storeImage('providers','logo' );
+        $provider->save();
+
+        return back()->with('success', trans('messages.provider.provider_updated'));
     }
 
-    public function attribute($id)
-    {
-        $provider=Provider::withTrashed()->findOrFail($id);
-        $attribute = ProviderAttribute::withTrashed()->where('provider_id', $provider->id)->get();
-        return view('admin.coworkProvider.attributes.attribute', compact('attribute'));
-    }
+
 }

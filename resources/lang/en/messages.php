@@ -24,6 +24,11 @@ return [
         'service_updated'=>'service updated successfully',
         'service_deleted'=>'service deleted successfully',
         'service_restored'=>'service restored successfully',
+    ],'attribute' => [
+        'attribute_created'=>'attribute created successfully',
+        'attribute_updated'=>'attribute updated successfully',
+        'attribute_deleted'=>'attribute deleted successfully',
+        'attribute_restored'=>'attribute restored successfully',
     ],'pricing' => [
         'pricing_created'=>'pricing created successfully',
         'pricing_updated'=>'pricing updated successfully',

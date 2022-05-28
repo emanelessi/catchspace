@@ -229,8 +229,8 @@
                     <!-- BEGIN PAGE TOOLBAR -->
                     @can('attribute_create')
                         <div class="page-toolbar">
-{{--                            <a href="/provider/add-attribute/{{$id}}" type="button"--}}
-{{--                               class="demo-loading-btn btn btn-primary add-btn">--}}
+                            <a href="/provider/add-attribute/{{$attribute[0]->provider->id}}" type="button"
+                               class="demo-loading-btn btn btn-primary add-btn">
                                 <i class="fa fa-plus-circle"></i>
                                 Add Attribute
                             </a>
@@ -306,7 +306,7 @@
                                                         @can('attribute_delete')
                                                             @if($myattribute->deleted_at ==null)
 
-                                                                <a href="/provider/workspace/delete-service/{{$myattribute->id}}"
+                                                                <a href="/provider/delete-attribute/{{$myattribute->id}}"
                                                                    data-target="#static2" data-toggle="modal"
                                                                    style="margin-left: 10px">
                                                                     <i class="fa fa-trash"
@@ -314,7 +314,7 @@
 
                                                                 </a>
                                                             @else
-                                                                <a href="/provider/workspace/restore-service/{{$myattribute->id}}"
+                                                                <a href="/provider/restore-attribute/{{$myattribute->id}}"
                                                                    data-target="#static2" data-toggle="modal"
                                                                    style="margin-left: 10px">
                                                                     <i class="fa fa-recycle"
@@ -324,7 +324,7 @@
                                                             @endif
                                                         @endcan
                                                         @can('attribute_edit')
-                                                            <a href="/provider/workspace/edit-service/{{$myattribute->id}}">
+                                                            <a href="/provider/edit-attribute/{{$myattribute->id}}">
                                                                 <i class="fa fa-pencil"
                                                                    style="color: #000000 !important;"></i>
 
@@ -350,7 +350,7 @@
                                                     <i class="fa fa-warning"
                                                        style="color: #5DB461 !important;font-size: 50px"></i>
                                                     <br><br>
-                                                    Are you sure about delete this Service
+                                                    Are you sure about delete this Attribute
                                                     ? </p>
                                             </div>
                                             <div class="modal-footer padding-right-120 " style="border-top:0px;">
