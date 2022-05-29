@@ -10601,32 +10601,22 @@
                     <div class="wrap d-md-flex">
                         <div class="img" style="background-image: url({{url('/img/login.png')}});">
                         </div>
-                        <div class="login-wrap p-4 p-md-5 III">
+                        <div class="login-wrap p-4 p-md-5 ">
                             <div class="d-flex">
                                 <div class="w-100">
-                                    <h3 class="mb-4" style="margin-top:10px ;">Password recovery</h3>
-                                    <p >Enter your email address and we'll
-                                        send
-                                        you a verification code to reset your password.
                                 </div>
                             </div>
-                            <form action="{{route('workerForgetpassword')}}" method="post" class="signin-form">
-                                @csrf
-                                <div class="form-group mb-3">
-                                    <label class="label" style="margin-top:50px ;" for="Email">Email</label>
-                                    <input type="text" name="email" class="form-control" placeholder="CatchSpace@CatchSpace.com"
-                                           required>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" style="margin-top:10px ;"
-                                            class="form-control btn btn-primary rounded submit px-3"
-                                            href="sent link to email.html">Continue
-                                    </button>
-                                </div>
-                            </form>
-                            <p class="text-center" >Back to <a
-                                                                                       href="{{ route('workerLogin') }}">Login</a>
-                            </p>
+                            <div class="III">
+                                <img class="center-block " src="{{url('img/mail.png')}}" style="width: 70px; height:70px; ">
+                                <p class="font-weight-bold" style="
+                  text-align: center;
+
+                  padding-top:50px;
+                  color: #B85282;">A link to reset your password has been sent to </p>
+                                <p class="text-center ">*******@gmail.com </p>
+                            </div>
+                            <p class="text-center" >Back to <a  href="{{ route('workerLogin') }}">Log
+                                    in</a></p>
                         </div>
                     </div>
                 </div>

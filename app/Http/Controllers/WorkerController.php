@@ -13,11 +13,13 @@ use App\Models\WorkSpaceAttribute;
 use App\Models\WorkSpaceRating;
 use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 class WorkerController extends Controller
 {
@@ -45,10 +47,10 @@ class WorkerController extends Controller
 
     public function home()
     {
-        $workspace_types=WorkSpaceType::all();
-        $workspaces=WorkSpaceRating::where('rate_avg','>',4)->get();
+        $workspace_types = WorkSpaceType::all();
+        $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->get();
 //        $workspace_rating=WorkSpaceRating::where('rate_avg',)->get();
-        return view('publicSite.home',compact('workspace_types','workspaces'));
+        return view('publicSite.home', compact('workspace_types', 'workspaces'));
     }
 
     public function aboutus()
@@ -72,17 +74,15 @@ class WorkerController extends Controller
         $date = $request->input('date');
         $capacity = $request->input('capacity');
         $workspaces = WorkSpace::query()->where('capacity', $capacity)->where('work_space_type_id', $work_space_type_id)->get();
-        $provider = Provider::query()->where('address','LIKE', "%{$address}%")->get();
+        $provider = Provider::query()->where('address', 'LIKE', "%{$address}%")->get();
         $reservation = WorkerWorkSpace::where('date', $date)->exists();
 //        dd($workspaces->isEmpty(),$provider->isEmpty(),$reservation == true);
-        if (($workspaces->isEmpty() or $provider->isEmpty() and $reservation) == false){
-            return view('publicSite.search', compact('workspaces','provider'));
-        }
-        elseif (($workspaces->isEmpty() or $provider->isEmpty())==true ){
-            if ( $reservation== false){
+        if (($workspaces->isEmpty() or $provider->isEmpty() and $reservation) == false) {
+            return view('publicSite.search', compact('workspaces', 'provider'));
+        } elseif (($workspaces->isEmpty() or $provider->isEmpty()) == true) {
+            if ($reservation == false) {
                 return back()->with('success', trans('messages.search.not_found'));
-            }
-            else{
+            } else {
                 return back()->with('success', trans('messages.search.reserved'));
             }
 
@@ -117,7 +117,7 @@ class WorkerController extends Controller
             'tips' => 'required',
             'work_space_id' => 'required',
         ]);
-        if (! Rating::where('mac_address',$request->ip())->where('work_space_id',$request->input('work_space_id'))->first()) {
+        if (!Rating::where('mac_address', $request->ip())->where('work_space_id', $request->input('work_space_id'))->first()) {
             $rate = new Rating();
             $rate->title = $request->input('title');
             $rate->mac_address = $request->ip();
@@ -153,16 +153,18 @@ class WorkerController extends Controller
     public function providerdetails($id)
     {
         $provider = Provider::find($id);
-        $workspaces = WorkSpace::where('provider_id',$id)->get();
-        return view('publicSite.providerDetails', compact('provider','workspaces'));
+        $workspaces = WorkSpace::where('provider_id', $id)->get();
+        return view('publicSite.providerDetails', compact('provider', 'workspaces'));
     }
+
     public function workspacedetails($id)
     {
         $workspace = WorkSpace::find($id);
 //        $workspace_type = WorkSpaceType::all();
-        $workspace_services=WorkSpaceService::all();
-        return view('publicSite.workspaceDetails', compact('workspace','workspace_services'));
+        $workspace_services = WorkSpaceService::all();
+        return view('publicSite.workspaceDetails', compact('workspace', 'workspace_services'));
     }
+
     public function workspacereserve(Request $request)
     {
         $this->validate($request, [
@@ -172,7 +174,7 @@ class WorkerController extends Controller
             'addons' => 'required',
             'price' => 'required',
         ]);
-        $reservation=new WorkerWorkSpace();
+        $reservation = new WorkerWorkSpace();
         $reservation->worker_id = 1;
         $reservation->date = $request['date'];
         $reservation->work_space_id = $request['id'];
@@ -229,19 +231,20 @@ class WorkerController extends Controller
 
         $email = $request->input('email');
         $password = $request->input('password');
-        $db_password=Worker::select('password')->where('email', $email)->first();
-//        dd(password_verify($password,$db_password['password'] ));
-//dd(Worker::where('email', $email)->first(),Hash::check('password', $password));
-        if (Worker::where('email', $email)->first() != null and password_verify($password,$db_password['password'] ) !=false) {
-            $workspace_types=WorkSpaceType::all();
-            return view('publicSite.home',compact('workspace_types'));
+        $db_password = Worker::select('password')->where('email', $email)->first();
+        if (Worker::where('email', $email)->first() != null and password_verify($password, $db_password['password']) != false) {
+            $workspace_types = WorkSpaceType::all();
+            $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->get();
+            return view('publicSite.home', compact('workspace_types', 'workspaces'));
 
         }
         return back()->with('success', trans('messages.worker.worker_login'));
 
 
     }
-    public function profile(){
+
+    public function profile()
+    {
         return view('publicSite.profile');
     }
 
@@ -251,6 +254,31 @@ class WorkerController extends Controller
 //
 //        return view('publicSite.login');
 //    }
+    public function getEmail()
+    {
+
+        return view('publicSite.forgetPassword');
+    }
+
+    public function postEmail(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users',
+        ]);
+
+        $token = Str::random(64);
+
+        DB::table('password_resets')->insert(
+            ['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now()]
+        );
+
+        Mail::send('emails.forgetPassword', ['token' => $token], function ($message) use ($request) {
+            $message->to($request->email);
+            $message->subject('Reset Password Notification');
+        });
+
+        return view('publicSite.sentEmail');
+    }
 
     public function create()
     {
@@ -284,13 +312,24 @@ class WorkerController extends Controller
         return back()->with('success', trans('messages.worker.worker_added'));
     }
 
-    public function forgetpassword()
-    {
-        return view('publicSite.forgetPassword');
+
+
+    public function showResetPasswordForm($token) {
+        return view('publicSite.resetPassword', ['token' => $token]);
     }
 
-    public function resetpassword()
+
+    public function submitResetPasswordForm(Request $request)
     {
-        return view('publicSite.resetPassword');
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string|min:6|confirmed',
+            'password_confirmation' => 'required'
+        ]);
+
+        $worker = Worker::where('email', $request->email)
+            ->update(['password' => Hash::make($request->password)]);
+
+        return view('publicSite.login')->with('success', 'Your password has been changed!');
     }
 }

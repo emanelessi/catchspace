@@ -10639,21 +10639,32 @@
                                 </div>
 
                             </div>
-                            <form>
+                            @if(session()->has('success'))
+                                <div class="alert alert-success">
+                                    {{ session()->get('success') }}
+                                </div>
+                            @endif
+                            <form method="post" action="{{route('reset.password.post')}}">
+                                @csrf
+                                <input type="hidden" name="token" value="{{ $token }}">
+                                <div class="form-group mb-3">
+                                    <label class="label" for="email">Email</label>
+                                    <input type="email" name="email" class="form-control" placeholder="dina@gmail.com" required>
+                                </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">New password</label>
-                                    <input type="password" class="form-control" placeholder="**********" required>
+                                    <input type="password"  name="password" class="form-control" placeholder="**********" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Confirm password</label>
-                                    <input type="password" class="form-control" placeholder="**********" required>
+                                    <input type="password" name="password_confirmation" class="form-control" placeholder="**********" required>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3"
-                                            href="login.html">Continue
+                                    <button type="submit"   class="form-control btn btn-primary rounded submit px-3"
+                                            >Continue
                                     </button>
                                 </div>
-                                <p class="text-center" style="font-size:12px ;">Back to <a data-toggle="tab"
+                                <p class="text-center" style="font-size:12px ;">Back to <a
                                                                                            href="{{ route('workerLogin') }}">Login</a>
                                 </p>
                             </form>

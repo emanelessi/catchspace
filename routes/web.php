@@ -77,9 +77,13 @@ Route::get('/worker/profile', [\App\Http\Controllers\WorkerController::class, 'p
 
 Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'create'])->name('workerSignup');
 Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('signupWorkerStore');
+Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class,'getEmail']);
+Route::post('/worker/forget-password',  [\App\Http\Controllers\WorkerController::class,'postEmail'])->name('workerForgetpassword');
+//Route::post('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'resetpassword'])->name('workerResetpassword');
 
-Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class, 'forgetpassword'])->name('workerForgetpassword');
-Route::get('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'resetpassword'])->name('workerResetpassword');
+Route::get('/worker/reset-password/{token}', [\App\Http\Controllers\WorkerController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+
 Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
 Route::get('/worker/providers', [\App\Http\Controllers\WorkerController::class, 'providers'])->name('workerProviders');
 Route::get('/worker/review/{id}', [\App\Http\Controllers\WorkerController::class, 'review'])->name('workerReview');
