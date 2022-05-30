@@ -16,7 +16,6 @@ use \App\Http\Controllers\Provider;
 */
 
 
-
 Route::get('/dashboard', function () {
     return view('welcome');
 });
@@ -72,16 +71,14 @@ Route::post('/worker/login', [\App\Http\Controllers\WorkerController::class, 'ch
 Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'create'])->name('workerSignup');
 Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('signupWorkerStore');
 
-Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class,'getEmail']);
-Route::post('/worker/forget-password',  [\App\Http\Controllers\WorkerController::class,'postEmail'])->name('workerForgetpassword');
+Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class, 'getEmail']);
+Route::post('/worker/forget-password', [\App\Http\Controllers\WorkerController::class, 'postEmail'])->name('workerForgetpassword');
 
 Route::get('/worker/reset-password/{token}', [\App\Http\Controllers\WorkerController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 Route::get('/worker/logout', [\App\Http\Controllers\WorkerController::class, 'logout']);
-    Route::get('/worker/profile/{$id}', function (){
-      return 'jjjjjjjjjjj' ;
-    });
+Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
 
 Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
 
@@ -100,7 +97,6 @@ Route::get('/worker/about-us', [\App\Http\Controllers\WorkerController::class, '
 
 Route::get('/search/workspace', [\App\Http\Controllers\WorkerController::class, 'simplesearch'])->name('simplesearch');
 Route::get('/search/workspaces', [\App\Http\Controllers\WorkerController::class, 'search'])->name('search');
-
 
 
 Route::group(['middleware' => 'auth'], function () {

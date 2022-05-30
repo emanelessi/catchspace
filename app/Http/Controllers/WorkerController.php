@@ -124,6 +124,9 @@ class WorkerController extends Controller
             $rate->rate = $request->input('rate');
             $rate->is_back = $request->input('is_back');
             $rate->tips = $request->input('tips');
+            if ($auth_worker = \Illuminate\Support\Facades\Session::get('worker')) {
+                $rate->worker_id = $auth_worker->id;
+            }
             $rate->work_space_id = $request->input('work_space_id');
             $rate->save();
 
@@ -159,9 +162,9 @@ class WorkerController extends Controller
     public function workspacedetails($id)
     {
         $workspace = WorkSpace::find($id);
-//        $workspace_type = WorkSpaceType::all();
+        $workspace_rating = Rating::where('work_space_id',$id)->where('worker_id','!=',null)->get();
         $workspace_services = WorkSpaceService::all();
-        return view('publicSite.workspaceDetails', compact('workspace', 'workspace_services'));
+        return view('publicSite.workspaceDetails', compact('workspace', 'workspace_services', 'workspace_rating'));
     }
 
     public function workspacereserve(Request $request)
@@ -173,14 +176,18 @@ class WorkerController extends Controller
             'addons' => 'required',
             'price' => 'required',
         ]);
-        $reservation = new WorkerWorkSpace();
-        $reservation->worker_id = 1;
-        $reservation->date = $request['date'];
-        $reservation->work_space_id = $request['id'];
-        $reservation->work_space_addon_id = $request['addons'];
-        $reservation->pricing_id = $request['price'];
-        $reservation->save();
-        return back()->with('success', trans('messages.reserve.reserve_added'));
+        if ($auth_worker = \Illuminate\Support\Facades\Session::get('worker')) {
+            $reservation = new WorkerWorkSpace();
+            $reservation->worker_id = 1;
+            $reservation->date = $request['date'];
+            $reservation->work_space_id = $request['id'];
+            $reservation->work_space_addon_id = $request['addons'];
+            $reservation->pricing_id = $request['price'];
+            $reservation->save();
+            return back()->with('success', trans('messages.reserve.reserve_added'));
+        }else{
+            return back()->with('success', 'You should Login first!!');
+        }
     }
 
     public function contactus()
@@ -234,7 +241,7 @@ class WorkerController extends Controller
         if (Worker::where('email', $email)->first() != null and password_verify($password, $db_password['password']) != false) {
             $workspace_types = WorkSpaceType::all();
             $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->get();
-            $worker=Worker::where('email', $email)->first();
+            $worker = Worker::where('email', $email)->first();
 //            Session::put('worker_id', $worker->id);
             Session::put('worker', $worker);
             return view('publicSite.home', compact('workspace_types', 'workspaces'));
@@ -247,15 +254,17 @@ class WorkerController extends Controller
 
     public function profile($id)
     {
-        $worker_profile=Worker::find($id);
-        return view('publicSite.profile',compact('worker_profile'));
+        $worker_profile = Worker::find($id);
+        return view('publicSite.profile', compact('worker_profile'));
     }
 
-    public function logout() {
+    public function logout()
+    {
         Session::flush();
 
         return view('publicSite.login');
     }
+
     public function getEmail()
     {
 
@@ -315,8 +324,8 @@ class WorkerController extends Controller
     }
 
 
-
-    public function showResetPasswordForm($token) {
+    public function showResetPasswordForm($token)
+    {
         return view('publicSite.resetPassword', ['token' => $token]);
     }
 

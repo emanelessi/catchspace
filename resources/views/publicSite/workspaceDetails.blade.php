@@ -806,17 +806,18 @@
             border: solid rgba(0, 0, 0, 0.01);
       box-shadow: 0px 10px 10px #E0E0E0; padding-top: 20px; padding-bottom: 20px;">
                         <div class="row text-center">
-                            @foreach($workspace->rating as $rate)
+                            @foreach($workspace_rating as $rate)
                                 <div class="col-md-4 mb-5 mb-md-0">
                                     <div class="d-flex justify-content-center mb-4">
-                                        {{--                                    <img src="{{'/storage/'.$rate->worker->avatar}}" class="rounded-circle shadow-1-strong" width="150" height="150"/>--}}
+                                        <img src="{{'/storage/'.$rate->worker->avatar}}"
+                                             class="rounded-circle shadow-1-strong" width="150" height="150"/>
                                     </div>
-                                    {{--                                <h5 class="mb-3">{{$rate->worker->name}}</h5>--}}
-                                    {{--                                <h6 class="text-primary mb-3">{{$rate->worker->job_title}}</h6>--}}
-                                    <p class="px-xl-3">
+                                    <h5 class="mb-3" style="font-weight: 800">{{$rate->worker->name}}</h5>
+                                    <h6 class="text-primary mb-3" style="font-weight: 800">{{$rate->worker->job_title}}</h6>
+                                    <p class="px-xl-3" style="font-weight: 800">
                                         {{$rate->message}}
                                     </p>
-                                    <p class="px-xl-3">
+                                    <p class="px-xl-3" style="font-weight: 800">
                                         {{$rate->tips}}
                                     </p>
 
