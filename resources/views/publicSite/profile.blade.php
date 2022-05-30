@@ -172,7 +172,7 @@
                                 <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin"
                                      class="rounded-circle  bg-primary" width="110" height="150px">
                                 <div class="mt-3">
-                                    <h4>John Doe</h4>
+                                    <h4>{{$worker_profile->name}}</h4>
 
                                 </div>
                             </div>

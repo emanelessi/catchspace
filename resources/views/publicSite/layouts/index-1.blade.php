@@ -17,6 +17,13 @@
 {{--<section id="hero">--}}
 
 {{--    @include('publicSite.layouts.header-1')--}}
+@if ($auth_worker = \Illuminate\Support\Facades\Session::get('worker'))
+{{--    <div class="alert alert-success">--}}
+        <p style="display: none">
+{{ $id=$auth_worker->id }}
+</p>
+{{--    </div>--}}
+@endif
 
 @yield('content')
 

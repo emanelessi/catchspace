@@ -15,9 +15,7 @@ use \App\Http\Controllers\Provider;
 |
 */
 
-Route::get('/test', function () {
-    return view('test');
-});
+
 
 Route::get('/dashboard', function () {
     return view('welcome');
@@ -66,29 +64,30 @@ Route::get('/reset', function () {
 Route::get('/confirm', function () {
     return view('auth.passwords.confirm');
 });
-Route::get('/worker/profile', function () {
-    return view('publicSite.profile');
-});
+
 
 Route::get('/worker/login', [\App\Http\Controllers\WorkerController::class, 'login'])->name('workerLogin');
 Route::post('/worker/login', [\App\Http\Controllers\WorkerController::class, 'check'])->name('workerCheck');
-//Route::get('/worker/logout', [\App\Http\Controllers\WorkerController::class, 'logout'])->name('logout');
-Route::get('/worker/profile', [\App\Http\Controllers\WorkerController::class, 'profile'])->name('workerProfile');
 
 Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'create'])->name('workerSignup');
 Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('signupWorkerStore');
+
 Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class,'getEmail']);
 Route::post('/worker/forget-password',  [\App\Http\Controllers\WorkerController::class,'postEmail'])->name('workerForgetpassword');
-//Route::post('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'resetpassword'])->name('workerResetpassword');
 
 Route::get('/worker/reset-password/{token}', [\App\Http\Controllers\WorkerController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
+Route::get('/worker/logout', [\App\Http\Controllers\WorkerController::class, 'logout']);
+    Route::get('/worker/profile/{$id}', function (){
+      return 'jjjjjjjjjjj' ;
+    });
+
 Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
+
 Route::get('/worker/providers', [\App\Http\Controllers\WorkerController::class, 'providers'])->name('workerProviders');
 Route::get('/worker/review/{id}', [\App\Http\Controllers\WorkerController::class, 'review'])->name('workerReview');
 Route::post('/worker/review', [\App\Http\Controllers\WorkerController::class, 'storereview'])->name('workerReviewStore');
-
 
 Route::get('/worker/provider-details/{id}', [\App\Http\Controllers\WorkerController::class, 'providerdetails']);
 Route::get('/worker/workspace-details/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacedetails']);
@@ -103,10 +102,6 @@ Route::get('/search/workspace', [\App\Http\Controllers\WorkerController::class, 
 Route::get('/search/workspaces', [\App\Http\Controllers\WorkerController::class, 'search'])->name('search');
 
 
-
-Route::get('/workspace-details', function () {
-    return view('publicSite.workspaceDetails');
-});
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index']);

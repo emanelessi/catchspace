@@ -9,7 +9,6 @@ use App\Models\Worker;
 use App\Models\WorkerWorkSpace;
 use App\Models\WorkSpace;
 use App\Models\WorkSpaceAddons;
-use App\Models\WorkSpaceAttribute;
 use App\Models\WorkSpaceRating;
 use App\Models\WorkSpaceService;
 use App\Models\WorkSpaceType;
@@ -235,6 +234,9 @@ class WorkerController extends Controller
         if (Worker::where('email', $email)->first() != null and password_verify($password, $db_password['password']) != false) {
             $workspace_types = WorkSpaceType::all();
             $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->get();
+            $worker=Worker::where('email', $email)->first();
+//            Session::put('worker_id', $worker->id);
+            Session::put('worker', $worker);
             return view('publicSite.home', compact('workspace_types', 'workspaces'));
 
         }
@@ -243,17 +245,17 @@ class WorkerController extends Controller
 
     }
 
-    public function profile()
+    public function profile($id)
     {
-        return view('publicSite.profile');
+        $worker_profile=Worker::find($id);
+        return view('publicSite.profile',compact('worker_profile'));
     }
 
-//    public function logout() {
-//        Session::flush();
-//        Worker::logout();
-//
-//        return view('publicSite.login');
-//    }
+    public function logout() {
+        Session::flush();
+
+        return view('publicSite.login');
+    }
     public function getEmail()
     {
 
