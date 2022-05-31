@@ -169,7 +169,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin"
+                                <img src="{{'/storage/'.$worker_profile->avatar}}" alt="Admin"
                                      class="rounded-circle  bg-primary" width="110" height="150px">
                                 <div class="mt-3">
                                     <h4>{{$worker_profile->name}}</h4>
@@ -190,7 +190,7 @@
                                 <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
                                      style="width:530px">
                                     <div class="d-flex">
-                                        <input type="text" class="form-control" value="John Doe">
+                                        <input type="text" class="form-control" value="{{$worker_profile->name}}">
 
                                         <button class="btn btn-outline-secondary border-left-0 border" type="button">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -212,7 +212,7 @@
                                 <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
                                      style="width:530px">
                                     <div class="d-flex">
-                                    <input type="text" class="form-control" value="john@example.com">
+                                    <input type="text" class="form-control" value="{{$worker_profile->email}}">
 
                                     <button class="btn btn-outline-secondary border-left-0 border" type="button">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -232,7 +232,7 @@
                                 <div class="input-group col-sm-6 border-right-0 bordertext-secondary"
                                      style="width:530px">
                                     <div class="d-flex">
-                                    <input type="text" class="form-control" placeholder="********">
+                                    <input type="text" class="form-control" placeholder="{{$worker_profile->password}}">
 
                                     <button class="btn btn-outline-secondary border-left-0 border" type="button">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

@@ -67,6 +67,8 @@ Route::get('/confirm', function () {
 
 Route::get('/worker/login', [\App\Http\Controllers\WorkerController::class, 'login'])->name('workerLogin');
 Route::post('/worker/login', [\App\Http\Controllers\WorkerController::class, 'check'])->name('workerCheck');
+Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
+Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
 
 Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'create'])->name('workerSignup');
 Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('signupWorkerStore');
@@ -78,7 +80,6 @@ Route::get('/worker/reset-password/{token}', [\App\Http\Controllers\WorkerContro
 Route::post('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 Route::get('/worker/logout', [\App\Http\Controllers\WorkerController::class, 'logout']);
-Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
 
 Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
 
