@@ -10,7 +10,10 @@ class Worker extends Model
 {
     use HasFactory;
     use SoftDeletes;
-
+   protected $guarded=[];
+    protected $hidden = [
+        'password',
+    ];
     public function workerWorkSpace()
     {
         return $this->hasMany(WorkerWorkSpace::class, 'worker_id')->withTrashed();
