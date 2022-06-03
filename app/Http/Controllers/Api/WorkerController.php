@@ -51,7 +51,7 @@ class WorkerController extends Controller
     public function show()
     {
         $provider = Provider::get()->all();
-        return response_api(true, 200, 'Success', providerResource::collection($provider));
+        return response_api(true, 200, 'Success',['providers' =>  providerResource::collection($provider)]);
     }
 
     public function showProviderDetails($id)
@@ -59,9 +59,9 @@ class WorkerController extends Controller
         $provider =  Provider::where('id',$id)->get();
 //        $providerAttribute = ProviderAttribute::where('provider_id',$id)->get();
         $attribute = Attribute::findOrFail($id);
-        $attributes = ProviderAttribute::where('attribute_id', $attribute->id)->get();
-        $work_space_type = WorkSpace::where('provider_id',$id)->get();
-        return response_api(true, 200, 'Success', [providerDetailsResource::collection($provider),$attribute,$attributes]);
+//        $attributes = ProviderAttribute::where('attribute_id', $attribute->id)->get();
+//        $work_space_type = WorkSpace::where('provider_id',$id)->get();
+        return response_api(true, 200, 'Success', [ 'provider' =>providerDetailsResource::collection($provider)]);
     }
 
     public function showWorkspaceDetails($id)
@@ -71,7 +71,7 @@ class WorkerController extends Controller
 //        $attribute = Attribute::findOrFail($id);
 //        $attributes = ProviderAttribute::where('attribute_id', $attribute->id)->get();
 //        $work_space_type = WorkSpace::where('provider_id',$id)->get();
-        return response_api(true, 200, 'Success', [workspaceDetailsResource::collection($workspace)]);
+        return response_api(true, 200, 'Success', ['workspace' =>workspaceDetailsResource::collection($workspace)]);
     }
 
 }

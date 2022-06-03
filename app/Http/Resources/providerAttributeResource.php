@@ -16,9 +16,9 @@ class providerAttributeResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => new AttributeResource($this->name),
+//            'name' => new AttributeResource($this->attributes),
+            'key' => $this->attributes->name,
             'value' => $this->value,
-            'attribute_id' => $this->attribute->name,
         ];
     }
 }

@@ -17,11 +17,11 @@ class workspacesResource extends JsonResource
         return [
 //            `id`, LEFT(`name`, 256),  `image`,  `capacity`,  `work_space_type_id`,  `provider_id`,
             'id' => $this->id,
-            'image' => $this->image,
             'name' => $this->name,
+            'image' => $this->image,
             'capacity' => $this->capacity,
-            'work_space_type' => $this->work_space_type,
-            'workspaces' => $this->workspaces,
+            'work_space_type' => $this->workSpaceType->type,
+//            'workspaces' => $this->workspaces,
         ];
     }
 }

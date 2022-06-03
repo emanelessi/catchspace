@@ -30,6 +30,6 @@ Route::group(['middleware' => 'auth:api'], function () {
 
 //    Route::get('profile/{id?}', [EmployeeController::class, 'profile']);
 //    Route::put('profile', [EmployeeController::class, 'editProfile']);
-    Route::post('providers', [EmployeeController::class, 'projects']);
+//    Route::post('providers', [WorkerController::class, 'projects']);
 
 });

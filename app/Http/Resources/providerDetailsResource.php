@@ -19,8 +19,8 @@ class providerDetailsResource extends JsonResource
             'logo' => $this->logo,
             'name' => $this->name,
             'address' => $this->address,
-            'attribute' => new providerAttributeResource($this->attribute),
-            'workspaces' => $this->workspaces,
+            'attributes' =>  providerAttributeResource::collection($this->providerAttributes),
+            'workspaces' => workspacesResource::collection($this->workspaces),
         ];
     }
 }
