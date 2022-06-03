@@ -22,7 +22,7 @@ class workspaceDetailsResource extends JsonResource
             'capacity' => $this->capacity,
             'provider' => $this->provider->name,
             'workspace type' => $this->workSpaceType->type,
-            'pricing' => $this->pricing,
+            'pricing' => pricingResource::collection($this->pricing),
             'addons' => $this->addons,
             'Amenities' => $this->services,
             'Reviews' => $this->reviews,
