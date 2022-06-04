@@ -23,10 +23,9 @@ class workspaceDetailsResource extends JsonResource
             'provider' => $this->provider->name,
             'workspace type' => $this->workSpaceType->type,
             'pricing' => pricingResource::collection($this->pricing),
-            'addons' => $this->addons,
-            'Amenities' => $this->services,
-            'Reviews' => $this->reviews,
-//            'workspaces' => new workspacesResource($this->workspaces->name),
+            'addons' =>  addonsResource::collection($this->workSpaceAddons),
+            'Amenities' => serviceResource::collection($this->workSpaceServices),
+            'Reviews' => ratingResource::collection($this->workSpaceRating),
         ];
     }
 }

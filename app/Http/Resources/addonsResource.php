@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class providerDetailsResource extends JsonResource
+class addonsResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,11 +16,8 @@ class providerDetailsResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'logo' => $this->logo,
-            'name' => $this->name,
-            'Location' => $this->address,
-            'attributes' =>  providerAttributeResource::collection($this->providerAttributes),
-            'workspaces' => workspacesResource::collection($this->workspaces),
+            'key' => $this->addon->name,
+            'value' => $this->value,
         ];
     }
 }

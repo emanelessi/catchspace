@@ -68,7 +68,7 @@ Route::get('/confirm', function () {
 Route::get('/worker/login', [\App\Http\Controllers\WorkerController::class, 'login'])->name('workerLogin');
 Route::post('/worker/login', [\App\Http\Controllers\WorkerController::class, 'check'])->name('workerCheck');
 Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
-Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
+//Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
 
 Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'create'])->name('workerSignup');
 Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('signupWorkerStore');

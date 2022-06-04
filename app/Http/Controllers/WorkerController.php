@@ -254,7 +254,8 @@ class WorkerController extends Controller
 
     public function profile($id)
     {
-        dd($id);
+//        dd(1);
+//        dd($id);
         $worker_profile = Worker::find($id);
         return view('publicSite.profile', compact('worker_profile'));
     }

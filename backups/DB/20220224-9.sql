@@ -298,7 +298,8 @@ CREATE TABLE `provider_attributes` (
 -- Table structure for table `rent_types`
 --
 
-CREATE TABLE `rent_types` (
+CREATE TABLE
+    `rent_types` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `type` enum('Monthly','by the hour') COLLATE utf8mb4_unicode_ci NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
