@@ -52,12 +52,12 @@ class WorkerController extends Controller
         return view('publicSite.home', compact('workspace_types', 'workspaces'));
     }
 
-    public function aboutus()
+    public function aboutUs()
     {
         return view('publicSite.aboutUs');
     }
 
-    public function simplesearch(Request $request)
+    public function simpleSearch(Request $request)
     {
         $search = $request->input('search');
 //        $workspaces = Provider::query()->where('name', 'LIKE', "%{$search}%")->get();
@@ -106,7 +106,7 @@ class WorkerController extends Controller
         return view('publicSite.review', compact('workspace'));
     }
 
-    public function storereview(Request $request)
+    public function storeReview(Request $request)
     {
         $this->validate($request, [
             'title' => 'required',
@@ -152,14 +152,14 @@ class WorkerController extends Controller
         }
     }
 
-    public function providerdetails($id)
+    public function providerDetails($id)
     {
         $provider = Provider::find($id);
         $workspaces = WorkSpace::where('provider_id', $id)->get();
         return view('publicSite.providerDetails', compact('provider', 'workspaces'));
     }
 
-    public function workspacedetails($id)
+    public function workspaceDetails($id)
     {
         $workspace = WorkSpace::find($id);
         $workspace_rating = Rating::where('work_space_id',$id)->where('worker_id','!=',null)->get();
@@ -167,7 +167,7 @@ class WorkerController extends Controller
         return view('publicSite.workspaceDetails', compact('workspace', 'workspace_services', 'workspace_rating'));
     }
 
-    public function workspacereserve(Request $request)
+    public function workspaceReserve(Request $request)
     {
         $this->validate($request, [
 //            'worker_id' => 'required',
@@ -195,7 +195,7 @@ class WorkerController extends Controller
         return view('publicSite.contactUs');
     }
 
-    public function contactstore(Request $request)
+    public function contactStore(Request $request)
     {
 
         $this->validate($request, [

@@ -150,7 +150,7 @@
         <!-- BEGIN PAGE TOOLBAR -->
         <div class="page-toolbar  ">
             @can('role_create')
-                <a href="{{route('rolecreate')}}" class="demo-loading-btn btn btn-primary add-btn">
+                <a href="{{route('roleCreate')}}" class="demo-loading-btn btn btn-primary add-btn">
                     <i class="fa fa-plus-circle"></i>
                     Add Role
                 </a>

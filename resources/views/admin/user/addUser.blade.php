@@ -124,7 +124,7 @@
                                             <div class="tab-content">
                                                 <!-- PERSONAL INFO TAB -->
                                                 <div class="tab-pane active" id="tab_1_1">
-                                                    <form role="form" action="{{route('userstore')}}" method="Post">
+                                                    <form role="form" action="{{route('userStore')}}" method="Post">
                                                         @csrf
                                                         <div class="form-group margin-left-9 margin-right-10">
                                                             <label class="control-label margin-left-9"

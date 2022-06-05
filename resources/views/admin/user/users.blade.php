@@ -148,7 +148,7 @@
         <!-- BEGIN PAGE TOOLBAR -->
         @can('user_create')
             <div class="page-toolbar">
-                <a href="{{route('usercreate')}}" type="button" class="demo-loading-btn btn btn-primary add-btn">
+                <a href="{{route('userCreate')}}" type="button" class="demo-loading-btn btn btn-primary add-btn">
                     <i class="fa fa-plus-circle"></i>
                     Add User
                 </a>

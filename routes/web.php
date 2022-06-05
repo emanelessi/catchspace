@@ -3,6 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use \App\Http\Controllers\Provider;
+use \App\Http\Controllers\WorkerController;
+use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\ProviderController;
+use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\RateController;
+use \App\Http\Controllers\RoleController;
+use \App\Http\Controllers\WorkSpaceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,86 +72,85 @@ Route::get('/confirm', function () {
 });
 
 
-Route::get('/worker/login', [\App\Http\Controllers\WorkerController::class, 'login'])->name('workerLogin');
-Route::post('/worker/login', [\App\Http\Controllers\WorkerController::class, 'check'])->name('workerCheck');
-Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
-//Route::get('/worker/profile/{$id}', [\App\Http\Controllers\WorkerController::class, 'profile']);
+Route::get('/worker/login', [WorkerController::class, 'login'])->name('workerLogin');
+Route::post('/worker/login', [WorkerController::class, 'check'])->name('workerCheck');
+Route::get('/worker/profile/{$id}', [WorkerController::class, 'profile']);
 
-Route::get('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'create'])->name('workerSignup');
-Route::post('/worker/signup', [\App\Http\Controllers\WorkerController::class, 'store'])->name('signupWorkerStore');
+Route::get('/worker/signup', [WorkerController::class, 'create'])->name('workerSignup');
+Route::post('/worker/signup', [WorkerController::class, 'store'])->name('signupWorkerStore');
 
-Route::get('/worker/forget-password', [\App\Http\Controllers\WorkerController::class, 'getEmail']);
-Route::post('/worker/forget-password', [\App\Http\Controllers\WorkerController::class, 'postEmail'])->name('workerForgetpassword');
+Route::get('/worker/forget-password', [WorkerController::class, 'getEmail']);
+Route::post('/worker/forget-password', [WorkerController::class, 'postEmail'])->name('workerForgetPassword');
 
-Route::get('/worker/reset-password/{token}', [\App\Http\Controllers\WorkerController::class, 'showResetPasswordForm'])->name('reset.password.get');
-Route::post('/worker/reset-password', [\App\Http\Controllers\WorkerController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+Route::get('/worker/reset-password/{token}', [WorkerController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('/worker/reset-password', [WorkerController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
-Route::get('/worker/logout', [\App\Http\Controllers\WorkerController::class, 'logout']);
+Route::get('/worker/logout', [WorkerController::class, 'logout']);
 
-Route::get('/', [\App\Http\Controllers\WorkerController::class, 'home'])->name('workerHome');
+Route::get('/', [WorkerController::class, 'home'])->name('workerHome');
 
-Route::get('/worker/providers', [\App\Http\Controllers\WorkerController::class, 'providers'])->name('workerProviders');
-Route::get('/worker/review/{id}', [\App\Http\Controllers\WorkerController::class, 'review'])->name('workerReview');
-Route::post('/worker/review', [\App\Http\Controllers\WorkerController::class, 'storereview'])->name('workerReviewStore');
+Route::get('/worker/providers', [WorkerController::class, 'providers'])->name('workerProviders');
+Route::get('/worker/review/{id}', [WorkerController::class, 'review'])->name('workerReview');
+Route::post('/worker/review', [WorkerController::class, 'storeReview'])->name('workerReviewStore');
 
-Route::get('/worker/provider-details/{id}', [\App\Http\Controllers\WorkerController::class, 'providerdetails']);
-Route::get('/worker/workspace-details/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacedetails']);
-Route::post('/worker/workspace-reserve/{id}', [\App\Http\Controllers\WorkerController::class, 'workspacereserve']);
+Route::get('/worker/provider-details/{id}', [WorkerController::class, 'providerDetails']);
+Route::get('/worker/workspace-details/{id}', [WorkerController::class, 'workspaceDetails']);
+Route::post('/worker/workspace-reserve/{id}', [WorkerController::class, 'workspaceReserve']);
 
-Route::get('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactus'])->name('workerContactus');
-Route::post('/worker/contact-us', [\App\Http\Controllers\WorkerController::class, 'contactstore'])->name('workerContactStore');
+Route::get('/worker/contact-us', [WorkerController::class, 'contactus'])->name('workerContactus');
+Route::post('/worker/contact-us', [WorkerController::class, 'contactStore'])->name('workerContactStore');
 
-Route::get('/worker/about-us', [\App\Http\Controllers\WorkerController::class, 'aboutus'])->name('workerAboutus');
+Route::get('/worker/about-us', [WorkerController::class, 'aboutUs'])->name('workerAboutUs');
 
-Route::get('/search/workspace', [\App\Http\Controllers\WorkerController::class, 'simplesearch'])->name('simplesearch');
-Route::get('/search/workspaces', [\App\Http\Controllers\WorkerController::class, 'search'])->name('search');
+Route::get('/search/workspace', [WorkerController::class, 'simpleSearch'])->name('simpleSearch');
+Route::get('/search/workspaces', [WorkerController::class, 'search'])->name('search');
 
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/admin/home', [\App\Http\Controllers\HomeController::class, 'index']);
-    Route::get('/provider/home', [\App\Http\Controllers\ProviderController::class, 'index'])->name('providers');
+    Route::get('/admin/home', [HomeController::class, 'index']);
+    Route::get('/provider/home', [ProviderController::class, 'index'])->name('providers');
 
-    Route::get('/admin/user', [\App\Http\Controllers\UserController::class, 'index']);
-    Route::get('/admin/add-user', [\App\Http\Controllers\UserController::class, 'create'])->name('usercreate');
-    Route::post('/admin/add-user', [\App\Http\Controllers\UserController::class, 'store'])->name('userstore');
-    Route::get('/admin/delete-user/{id}', [\App\Http\Controllers\UserController::class, 'destroy']);
-    Route::get('/admin/restore-user/{id}', [\App\Http\Controllers\UserController::class, 'restore']);
-    Route::get('/admin/edit-user/{id}', [\App\Http\Controllers\UserController::class, 'edit']);
-    Route::post('/admin/edit-user', [\App\Http\Controllers\UserController::class, 'update'])->name('userupdate');
-    Route::get('/admin/profile', [\App\Http\Controllers\UserController::class, 'profile'])->name('adminprofile');
+    Route::get('/admin/user', [UserController::class, 'index']);
+    Route::get('/admin/add-user', [UserController::class, 'create'])->name('userCreate');
+    Route::post('/admin/add-user', [UserController::class, 'store'])->name('userStore');
+    Route::get('/admin/delete-user/{id}', [UserController::class, 'destroy']);
+    Route::get('/admin/restore-user/{id}', [UserController::class, 'restore']);
+    Route::get('/admin/edit-user/{id}', [UserController::class, 'edit']);
+    Route::post('/admin/edit-user', [UserController::class, 'update'])->name('userUpdate');
+    Route::get('/admin/profile', [UserController::class, 'profile'])->name('adminProfile');
 
-    Route::get('/admin/rate', [\App\Http\Controllers\RateController::class, 'index']);
-    Route::get('/admin/rate/rating/{id}', [\App\Http\Controllers\RateController::class, 'rating']);
+    Route::get('/admin/rate', [RateController::class, 'index']);
+    Route::get('/admin/rate/rating/{id}', [RateController::class, 'rating']);
 
-    Route::get('/admin/provider', [\App\Http\Controllers\ProviderController::class, 'show']);
-    Route::get('/admin/add-provider', [\App\Http\Controllers\ProviderController::class, 'create'])->name('providercreate');
-    Route::post('/admin/add-provider', [\App\Http\Controllers\ProviderController::class, 'store'])->name('providerstore');
-    Route::get('/admin/edit-provider/{id}', [\App\Http\Controllers\ProviderController::class, 'edit']);
-    Route::post('/admin/edit-provider', [\App\Http\Controllers\ProviderController::class, 'update'])->name('providerupdate');
-    Route::get('/admin/delete-provider/{id}', [\App\Http\Controllers\ProviderController::class, 'destroy']);
-    Route::get('/admin/restore-provider/{id}', [\App\Http\Controllers\ProviderController::class, 'restore']);
+    Route::get('/admin/provider', [ProviderController::class, 'show']);
+    Route::get('/admin/add-provider', [ProviderController::class, 'create'])->name('providerCreate');
+    Route::post('/admin/add-provider', [ProviderController::class, 'store'])->name('providerStore');
+    Route::get('/admin/edit-provider/{id}', [ProviderController::class, 'edit']);
+    Route::post('/admin/edit-provider', [ProviderController::class, 'update'])->name('providerUpdate');
+    Route::get('/admin/delete-provider/{id}', [ProviderController::class, 'destroy']);
+    Route::get('/admin/restore-provider/{id}', [ProviderController::class, 'restore']);
 
-    Route::get('/admin/role', [\App\Http\Controllers\RoleController::class, 'index'])->name('roles');
-    Route::get('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'create'])->name('rolecreate');
-    Route::post('/admin/add-role', [\App\Http\Controllers\RoleController::class, 'store'])->name('rolestore');
-    Route::get('/admin/delete-role/{id}', [\App\Http\Controllers\RoleController::class, 'destroy']);
-    Route::get('/admin/restore-role/{id}', [\App\Http\Controllers\RoleController::class, 'restore']);
+    Route::get('/admin/role', [RoleController::class, 'index'])->name('roles');
+    Route::get('/admin/add-role', [RoleController::class, 'create'])->name('roleCreate');
+    Route::post('/admin/add-role', [RoleController::class, 'store'])->name('roleStore');
+    Route::get('/admin/delete-role/{id}', [RoleController::class, 'destroy']);
+    Route::get('/admin/restore-role/{id}', [RoleController::class, 'restore']);
 
 
-    Route::get('/admin/workspace', [\App\Http\Controllers\WorkSpaceController::class, 'index'])->name('workspaces');
-    Route::get('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'create'])->name('workspacecreate');
-    Route::post('/admin/add-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'store'])->name('workspacestore');
-    Route::get('/admin/delete-workspace/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'destroy']);
-    Route::get('/admin/restore-workspace/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'restore']);
-    Route::get('/admin/edit-workspace/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'edit']);
-    Route::post('/admin/edit-workspace', [\App\Http\Controllers\WorkSpaceController::class, 'update'])->name('workspaceupdate');
+    Route::get('/admin/workspace', [WorkSpaceController::class, 'index'])->name('workspaces');
+    Route::get('/admin/add-workspace', [WorkSpaceController::class, 'create'])->name('workspaceCreate');
+    Route::post('/admin/add-workspace', [WorkSpaceController::class, 'store'])->name('workspaceStore');
+    Route::get('/admin/delete-workspace/{id}', [WorkSpaceController::class, 'destroy']);
+    Route::get('/admin/restore-workspace/{id}', [WorkSpaceController::class, 'restore']);
+    Route::get('/admin/edit-workspace/{id}', [WorkSpaceController::class, 'edit']);
+    Route::post('/admin/edit-workspace', [WorkSpaceController::class, 'update'])->name('workspaceUpdate');
 
-    Route::get('/admin/worker', [\App\Http\Controllers\WorkerController::class, 'index'])->name('workers');
-    Route::get('/admin/worker/reservations/{id}', [\App\Http\Controllers\WorkerController::class, 'reservations']);
+    Route::get('/admin/worker', [WorkerController::class, 'index'])->name('workers');
+    Route::get('/admin/worker/reservations/{id}', [WorkerController::class, 'reservations']);
 
-    Route::get('/admin/workspace/services/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'services']);
-    Route::get('/admin/workspace/pricing/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'pricing']);
-    Route::get('/admin/workspace/addons/{id}', [\App\Http\Controllers\WorkSpaceController::class, 'addons']);
+    Route::get('/admin/workspace/services/{id}', [WorkSpaceController::class, 'services']);
+    Route::get('/admin/workspace/pricing/{id}', [WorkSpaceController::class, 'pricing']);
+    Route::get('/admin/workspace/addons/{id}', [WorkSpaceController::class, 'addons']);
 
 
     Route::get('/provider/workspace', [Provider\WorkSpaceController::class, 'index'])->name('workSpaces');
@@ -207,8 +213,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/provider/edit-policies/{id}', [Provider\PoliciesController::class, 'edit']);
     Route::post('/provider/edit-policies', [Provider\PoliciesController::class, 'update'])->name('updatePolicies');
 
-    Route::get('/provider/provider-profile', [\App\Http\Controllers\ProviderController::class, 'profile'])->name('providerprofile');
-
+    Route::get('/provider/provider-profile', [ProviderController::class, 'profile'])->name('providerProfile');
     Route::get('/provider/edit-profile/{id}', [Provider\ProviderController::class, 'edit']);
     Route::post('/provider/edit-profile', [Provider\ProviderController::class, 'update'])->name('updateProfile');
 

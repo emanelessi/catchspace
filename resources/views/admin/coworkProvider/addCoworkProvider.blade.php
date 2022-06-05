@@ -112,7 +112,7 @@
                                 <div class="col-md-12 col-lg-12 col-xs-12">
                                     <!-- PERSONAL INFO TAB -->
                                     <div class="tab-pane active" id="tab_1_1">
-                                        <form role="form" action="{{route('providerstore')}}"
+                                        <form role="form" action="{{route('providerStore')}}"
                                               enctype="multipart/form-data"
                                               method="Post">
                                             @csrf

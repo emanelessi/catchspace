@@ -10666,7 +10666,7 @@
                                         </label>
                                     </div>
                                     <div class="w-50 text-md-right">
-                                        <a href="{{ route('workerForgetpassword') }}">Forgot Password?</a>
+                                        <a href="{{ route('workerForgetPassword') }}">Forgot Password?</a>
                                     </div>
                                 </div>
                             </form>

@@ -150,7 +150,7 @@
             <!-- BEGIN PAGE TOOLBAR -->
             @can('workspace_create')
                 <div class="page-toolbar">
-                    <a href="{{route('workspacecreate')}}" type="button"
+                    <a href="{{route('workspaceCreate')}}" type="button"
                        class="demo-loading-btn btn btn-primary add-btn">
                         <i class="fa fa-plus-circle"></i>
                         Add work Space

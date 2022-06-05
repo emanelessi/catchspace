@@ -61,7 +61,7 @@
                         <a class="nav-link p-2 p-lg-3  " href="{{ route('workerContactus') }}">Contact us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="{{ route('workerAboutus') }}">About us</a>
+                        <a class="nav-link p-2 p-lg-3" href="{{ route('workerAboutUs') }}">About us</a>
                     </li>
                     @if ($auth_worker = \Illuminate\Support\Facades\Session::get('worker'))
                         <li class="nav-item">

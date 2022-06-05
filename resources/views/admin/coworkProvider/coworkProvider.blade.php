@@ -149,7 +149,7 @@
         <!-- END PAGE TITLE -->
         <!-- BEGIN PAGE TOOLBAR -->
         <div class="page-toolbar">
-            <a href="{{route('providercreate')}}" class="demo-loading-btn btn btn-primary add-btn">
+            <a href="{{route('providerCreate')}}" class="demo-loading-btn btn btn-primary add-btn">
                 <i class="fa fa-plus-circle"></i>
                 Add Cowork Provider
             </a>

@@ -10610,7 +10610,7 @@
                                         you a verification code to reset your password.
                                 </div>
                             </div>
-                            <form action="{{route('workerForgetpassword')}}" method="post" class="signin-form">
+                            <form action="{{route('workerForgetPassword')}}" method="post" class="signin-form">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <label class="label" style="margin-top:50px ;" for="Email">Email</label>

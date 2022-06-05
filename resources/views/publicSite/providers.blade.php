@@ -491,7 +491,7 @@
             text-align: left;
             border:0;
 
-            " method="get" action="{{ route('simplesearch') }}" role="form" class="php-email-form col-4">
+            " method="get" action="{{ route('simpleSearch') }}" role="form" class="php-email-form col-4">
                             @csrf
                             <div class="search d-flex ">
                                 <input id="search" style="border:0" type="text" name="search"

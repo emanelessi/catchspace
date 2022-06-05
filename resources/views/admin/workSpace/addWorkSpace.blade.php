@@ -113,7 +113,7 @@
 
                                         <!-- PERSONAL INFO TAB -->
                                         <div class="tab-pane active" id="tab_1_1">
-                                            <form role="form" enctype="multipart/form-data" action="{{route('workspacestore')}}"
+                                            <form role="form" enctype="multipart/form-data" action="{{route('workspaceStore')}}"
                                                   method="POST">
                                                 @csrf
                                                 <div class="profile-userpic  margin-right--12 " style="

@@ -89,7 +89,7 @@ background-color: #2B292C;border-bottom-color: #2B292C;
                         <ul class="dropdown-menu dropdown-menu-default" style="margin-top: -45px;">
                             @can('permission_access')
                             <li>
-                                <a href="{{ route('adminprofile') }}" style="                                       font-family: 'Montserrat', sans-serif;
+                                <a href="{{ route('adminProfile') }}" style="                                       font-family: 'Montserrat', sans-serif;
 ">
                                     <i class="icon-user" style="
                                     /*color: #9162B3 !important;*/
@@ -100,7 +100,7 @@ background-color: #2B292C;border-bottom-color: #2B292C;
                             @endcan
                                 @can('provider_access')
                             <li>
-                                <a href="{{ route('providerprofile') }}" style="                                       font-family: 'Montserrat', sans-serif;
+                                <a href="{{ route('providerProfile') }}" style="                                       font-family: 'Montserrat', sans-serif;
 ">
                                     <i class="icon-user" style="
                                     color: #E93A76 !important;
