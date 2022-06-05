@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "7c718764-e4b0-4ddb-aa64-301b4954aefc",
+		"name": "Catch Space",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16650316"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Eman",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dina@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "job_title",
+							"value": "dev",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/OMEN/OneDrive/Desktop/DT/screenshot.png"
+						},
+						{
+							"key": "type",
+							"value": "team",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/worker/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"worker",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "{{client_id}}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "{{client_secret}}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "eman@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/worker/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"worker",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "providers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "page_number",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "page_size",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/providers",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"providers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "provider",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}/provider/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"provider",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workspace",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}/workspace/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workspace",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workspaceSearch",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "address",
+							"value": "El Sinaa Crossing, LEGO Business Center Building",
+							"type": "text"
+						},
+						{
+							"key": "work_space_type_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2022-05-27",
+							"type": "text"
+						},
+						{
+							"key": "capacity",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/workspace/search",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workspace",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "test;",
+							"type": "text"
+						},
+						{
+							"key": "rate",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "ghn",
+							"type": "text"
+						},
+						{
+							"key": "is_back",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "tips",
+							"value": "c;yi;iy;diltejetzjz",
+							"type": "text"
+						},
+						{
+							"key": "work_space_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/worker/add-rate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"worker",
+						"add-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/worker/profile",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"worker",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/worker/logout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"worker",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -14,8 +14,8 @@ use \App\Http\Controllers\Api\RateController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('/register', [WorkerController::class, 'register']);
-Route::post('/login', [WorkerController::class, 'login']);
+Route::post('/worker/register', [WorkerController::class, 'register']);
+Route::post('/worker/login', [WorkerController::class, 'login']);
 
 Route::post('/providers', [WorkerController::class, 'show']);
 Route::post('/provider/{id}', [WorkerController::class, 'showProviderDetails']);

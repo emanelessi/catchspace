@@ -29,7 +29,7 @@ class SignupRequest extends FormRequest
             'password' => 'required|string|min:6',
             'job_title' => 'required',
             'avatar' => 'required',
-            'type' => 'required|in:team,individual',
+            'type' => 'required',
         ];
     }
 }
