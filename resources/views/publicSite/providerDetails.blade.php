@@ -461,11 +461,12 @@
         <div id="hero1" class="d-flex align-items-center  row mt-5">
             <div class="col-lg-12   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200" style="background-color: rgb(22 22 23 / 41%);
                          position: relative;
-                         border-radius: 10px" >
+                         border-radius: 10px">
                 <img src="{{'/storage/'.$provider->logo}}" style="height: 400px;
                                                                     width: -webkit-fill-available;
                                                                     z-index: -1;
-                                                                    position: relative;"+  class="img-fluid animated" alt="">
+                                                                    position: relative;" + class="img-fluid animated"
+                     alt="">
                 {{--                <img src="{{'/storage/'.$provider->image}}" class="img-fluid animated" alt="">--}}
                 <div class="centered ">Find The Best Place To <br>Enjoy Your Time</div>
                 <div class="centered ">
@@ -532,6 +533,7 @@
                     </div>
                 </div>
             </div>
+        </section>
     </div>
     <!--lego overview-->
     <section id="star" class="star">
@@ -539,7 +541,7 @@
             <div class="row">
                 <div class="col-lg-12 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
                     <div class="col-lg-6   pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                        <h1 style="color:#FFC107 ;font-weight: 800;" >{{$provider->name}}</h1>
+                        <h1 style="color:#FFC107 ;font-weight: 800;">{{$provider->name}}</h1>
 
 
                         <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="overview">
@@ -661,7 +663,8 @@
                                             {{$myworkspace->capacity}}
                                         </h5>
                                         <div class="product-button-group">
-                                            <a class="btn main-btn6" href="/worker/workspace-details/{{$myworkspace->id}}">View Details</a>
+                                            <a class="btn main-btn6"
+                                               href="/worker/workspace-details/{{$myworkspace->id}}">View Details</a>
                                         </div>
                                     </div>
                                 </div>
