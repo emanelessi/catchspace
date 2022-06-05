@@ -8,6 +8,7 @@ use App\Models\Rating;
 use App\Models\WorkSpace;
 use App\Models\WorkSpaceRating;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class RateController extends Controller
 {
@@ -24,6 +25,10 @@ class RateController extends Controller
                 $newRate->message = $request['message'];
                 $newRate->is_back = $request['is_back'];
                 $newRate->tips = $request['tips'];
+                $worker_id=Session::get('worker');
+                if($worker_id!= null){
+                    $newRate->worker_id = $worker_id->id;
+                }
                 $newRate->save();
 
                 $workspaceRate = WorkSpaceRating::where('work_space_id', $newRate->work_space_id)->first();

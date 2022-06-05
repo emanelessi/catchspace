@@ -16,6 +16,7 @@ use \App\Http\Controllers\Api\RateController;
 */
 Route::post('/register', [WorkerController::class, 'register']);
 Route::post('/login', [WorkerController::class, 'login']);
+
 Route::post('/providers', [WorkerController::class, 'show']);
 Route::post('/provider/{id}', [WorkerController::class, 'showProviderDetails']);
 Route::post('/workspace/search',[WorkerController::class,'search']);
@@ -25,12 +26,12 @@ Route::post('/worker/add-rate', [RateController::class, 'store']);
 
 
 
-Route::group(['middleware' => 'auth:api'], function () {
-    Route::post('/worker/add-rate', [RateController::class, 'store']);
-    Route::get('/profile', [WorkerController::class, 'profile']);
-    Route::post('/logout',[WorkerController::class,'logout']);
+//Route::group(['middleware' => 'auth:api'], function () {
+//    Route::post('/worker/add-rate', [RateController::class, 'store']);
+    Route::get('/worker/profile', [WorkerController::class, 'profile']);
+    Route::get('/worker/logout',[WorkerController::class,'logout']);
 
 //    Route::put('profile', [EmployeeController::class, 'editProfile']);
 //    Route::post('providers', [WorkerController::class, 'projects']);
 
-});
+//});

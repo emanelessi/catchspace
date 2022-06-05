@@ -19,28 +19,42 @@ use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 class WorkerController extends Controller
 {
-    public function login()
+    public function login(Request $request)
     {
-        $proxy = Request::create('oauth/token', 'POST');
-        $response = Route::dispatch($proxy);
-        $statusCode = $response->getStatusCode();
-        $response = json_decode($response->getContent());
-        if ($statusCode != 200)
-            return response_api(false, $statusCode, $response->message, $response);
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $db_password = Worker::select('password')->where('email', $email)->first();
+        if (Worker::where('email', $email)->first() != null and password_verify($password, $db_password['password']) != false) {
+//            $workspace_types = WorkSpaceType::all();
+//            $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->get();
+            $worker = Worker::where('email', $email)->first();
+//            Session::put('worker_id', $worker->id);
+            Session::put('worker', $worker);
+            return response_api(true, 200, 'Successfully Login', ['worker' => $worker]);
 
-        $response_token = $response;
-        $token = $response->access_token;
-        \request()->headers->set('Authorization', 'Bearer ' . $token);
-
-        $proxy = Request::create('api/profile', 'GET');
-        $response = Route::dispatch($proxy);
-
-        $statusCode = $response->getStatusCode();
-        $worker = json_decode($response->getContent())->items;
-        return response_api(true, $statusCode, 'Successfully Login', ['token' => $response_token, 'worker' => $worker]);
+        }
+        return response_api(false, 400, 'Fail', []);
+//        $proxy = Request::create('oauth/token', 'POST');
+//        $response = Route::dispatch($proxy);
+//        $statusCode = $response->getStatusCode();
+//        $response = json_decode($response->getContent());
+//        if ($statusCode != 200)
+//            return response_api(false, $statusCode, $response->message, $response);
+//
+//        $response_token = $response;
+//        $token = $response->access_token;
+//        \request()->headers->set('Authorization', 'Bearer ' . $token);
+//
+//        $proxy = Request::create('api/profile', 'GET');
+//        $response = Route::dispatch($proxy);
+//
+//        $statusCode = $response->getStatusCode();
+//        $worker = json_decode($response->getContent())->items;
+//        return response_api(true, $statusCode, 'Successfully Login', ['token' => $response_token, 'worker' => $worker]);
 
     }
 
@@ -54,7 +68,7 @@ class WorkerController extends Controller
         $worker->avatar = storeImage('workers', 'avatar');
         $worker->type = $request->input('type');
         $worker->save();
-        return response_api(true, 200, 'Successfully Register!', $worker->fresh());
+        return response_api(true, 200, 'Successfully Register!', ['worker' => $worker]);
 
     }
 
@@ -68,7 +82,7 @@ class WorkerController extends Controller
     {
         $provider = Provider::where('id', $id)->get();
 //        $providerAttribute = ProviderAttribute::where('provider_id',$id)->get();
-        $attribute = Attribute::findOrFail($id);
+//        $attribute = Attribute::findOrFail($id);
 //        $attributes = ProviderAttribute::where('attribute_id', $attribute->id)->get();
 //        $work_space_type = WorkSpace::where('provider_id',$id)->get();
         return response_api(true, 200, 'Success', ['provider' => providerDetailsResource::collection($provider)]);
@@ -129,12 +143,18 @@ class WorkerController extends Controller
 
     public function profile()
     {
-        return response_api(true, 200, 'Profile', \auth()->worker());
+        if(Session::get('worker') != null){
+            return response_api(true, 200, 'Successfully Get Profile', Session::get('worker'));
+
+        }else{
+            return response_api(false, 400, 'Fail You are not authorized', '');
+
+        }
     }
 
     public function logout()
     {
-        Auth::worker()->token()->revoke();
+        Session::flush();
         return response_api(true, 200, 'Successfully logged out', '');
     }
 
