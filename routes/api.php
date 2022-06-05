@@ -18,15 +18,15 @@ Route::post('/register', [WorkerController::class, 'register']);
 Route::post('/login', [WorkerController::class, 'login']);
 Route::post('/providers', [WorkerController::class, 'show']);
 Route::post('/provider/{id}', [WorkerController::class, 'showProviderDetails']);
+Route::post('/workspace/search',[WorkerController::class,'search']);
 Route::post('/workspace/{id}', [WorkerController::class, 'showWorkspaceDetails']);
-Route::post('/workspace',[WorkerController::class,'store']);
-Route::post('/customer/add-rate', [RateController::class, 'store']);
-Route::post('/rates', [RateController::class, 'showRates']);
+Route::post('/worker/add-rate', [RateController::class, 'store']);
+//Route::post('/rates', [RateController::class, 'showRates']);
 
 
 
 Route::group(['middleware' => 'auth:api'], function () {
-    Route::post('/customer/add-rate', [RateController::class, 'store']);
+    Route::post('/worker/add-rate', [RateController::class, 'store']);
     Route::get('/profile', [WorkerController::class, 'profile']);
     Route::post('/logout',[WorkerController::class,'logout']);
 

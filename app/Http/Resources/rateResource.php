@@ -23,7 +23,6 @@ class rateResource extends JsonResource
             'mac_address'=>$this->mac_address,
             'is_back'=>$this->is_back,
             'tips'=>$this->tips,
-            'work_space_id'=>$this->work_space_id,
 
         ];
     }

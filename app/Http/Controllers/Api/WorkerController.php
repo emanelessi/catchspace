@@ -8,6 +8,7 @@ use App\Http\Requests\workspaceRequest;
 use App\Http\Resources\providerDetailsResource;
 use App\Http\Resources\providerResource;
 use App\Http\Resources\workspaceDetailsResource;
+use App\Http\Resources\workspacesResource;
 use App\Models\Attribute;
 use App\Models\Provider;
 use App\Models\ProviderAttribute;
@@ -94,7 +95,7 @@ class WorkerController extends Controller
 //
 //
 //    }
-    public function store(workspaceRequest $request)
+    public function search(workspaceRequest $request)
     {
         $address = $request->input('address');
         $work_space_type_id = $request->input('work_space_type_id');
@@ -104,12 +105,19 @@ class WorkerController extends Controller
         $provider = Provider::query()->where('address', 'LIKE', "%{$address}%")->get();
         $reservation = WorkerWorkSpace::where('date', $date)->exists();
 //        dd($workspaces->isEmpty(),$provider->isEmpty(),$reservation == true);
+//        dd(($workspaces->isEmpty() or $provider->isEmpty() and $reservation) != false);
         if (($workspaces->isEmpty() or $provider->isEmpty() and $reservation) == false) {
-            return response_api(true, 200, 'Success', ['workspace' => $workspaces]);
+//            dd($workspaces);
+            return response_api(true, 200, 'Success', ['workspace' => workspacesResource::collection($workspaces)]);
+        } elseif (($workspaces->isEmpty() or $provider->isEmpty()) == true) {
+            if ($reservation == false) {
+//            dd($provider);
+                return response_api(false, 400, 'Not Found Workspace with this Information', []);
+            } else {
+                return response_api(false, 400, 'All Workspaces Reserved on this Date', []);
+            }
         }
-        else{
-            return response_api(false, 400, 'not Success', []);
-        }
+
 
     }
 

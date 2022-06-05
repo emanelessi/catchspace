@@ -24,11 +24,10 @@ class workspaceRequest extends FormRequest
     public function rules()
     {
         return [
-            'Address' => 'required|string',
-            'WorkspaceType' => 'required|in:Open room,Closed room,Meetings room,Skype room',
-//            'Workspace Type' => 'required|in:Open room,Closed room,Meetings room,Skype room',
-            'Date' => 'required',
-            'Capacity' => 'required',
+            'address' => 'required|string',
+            'work_space_type_id' => 'required',
+            'date' => 'required',
+            'capacity' => 'required',
         ];
 
     }

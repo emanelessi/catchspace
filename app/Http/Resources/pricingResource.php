@@ -15,13 +15,9 @@ class pricingResource extends JsonResource
     public function toArray($request)
     {
         return [
-//            PEOPLE	DURATION	PRICE	DATE	ADDONS	AVAILABILITY
-//            'PEOPLE'=>workspacesCapacityResource::collection($this->WorkSpace),
-//            'DURATION' => rentTypesResource::collection($this->rentType),
-            'PRICE'=>$this->price,
-//            'addons' =>  addonsResource::collection($this->workSpaceAddons),
-//            'ADDONS'=>$this->price,
-//            'AVAILABILITY'=>$this->,
+            'price'=>$this->price,
+            'rent type' =>  $this->rentType->type,
+//            'date'=>$this->workerWorkSpace,
         ];
     }
 }

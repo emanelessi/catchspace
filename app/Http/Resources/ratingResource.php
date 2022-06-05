@@ -18,6 +18,7 @@ class ratingResource extends JsonResource
             'id' => $this->id,
             'rate_avg' => $this->rate_avg,
             'rate_count' => $this->rate_count,
+            'raters'=>rateResource::collection($this->workSpace->rating),
         ];
     }
 }
