@@ -32,8 +32,8 @@ class ProviderTableSeeder extends Seeder
 
         $testProvider = new  Provider();
         $testProvider->name = 'Tools';
-        $testProvider->owner_name = 'owner';
-        $testProvider->address = 'Gaza';
+        $testProvider->owner_name = 'Idris Talib';
+        $testProvider->address = 'Ahmed Abdel Aziz Street - Al Rehab Mall - Third Floor';
         $testProvider->phone = '0591505511';
         $testProvider->logo = 'workspaces/Tools.png';
         $testProvider->save();
@@ -78,7 +78,7 @@ class ProviderTableSeeder extends Seeder
 
         $provider_attribute1 = new ProviderAttribute();
         $provider_attribute1->value = 80;
-        $provider_attribute1->provider_id = $provider->id;
+        $provider_attribute1->provider_id =$provider->id;
         $provider_attribute1->attribute_id = $attribute1->id;
         $provider_attribute1->save();
 
@@ -88,6 +88,25 @@ class ProviderTableSeeder extends Seeder
         $provider_attribute2->provider_id = $provider->id;
         $provider_attribute2->attribute_id = $attribute2->id;
         $provider_attribute2->save();
+
+        $another_provider = new ProviderAttribute();
+        $another_provider->value = 'It offers office workspaces for freelancers and companies from the private sector and provides all office and logistical services';
+        $another_provider->provider_id = $testProvider->id;
+        $another_provider->attribute_id = $attribute->id;
+        $another_provider->save();
+
+        $another_provider1 = new ProviderAttribute();
+        $another_provider1->value = 50;
+        $another_provider1->provider_id = $testProvider->id;
+        $another_provider1->attribute_id = $attribute1->id;
+        $another_provider1->save();
+
+
+        $another_provider2 = new ProviderAttribute();
+        $another_provider2->value = '8:30am/10pm';
+        $another_provider2->provider_id = $testProvider->id;
+        $another_provider2->attribute_id = $attribute2->id;
+        $another_provider2->save();
 
 
     }

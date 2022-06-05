@@ -514,7 +514,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
         <!--end hero-->
 
         <!--lego overview-->
