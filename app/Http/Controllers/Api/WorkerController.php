@@ -46,8 +46,14 @@ class WorkerController extends Controller
 
     public function register(SignupRequest $request)
     {
-        $request['password'] = bcrypt($request['password']);
-        $worker = Worker::create($request->all());
+        $worker = new Worker();
+        $worker->name = $request->input('name');
+        $worker->email = $request->input('email');
+        $worker->password = bcrypt($request->input('password'));
+        $worker->job_title = $request->input('job_title');
+        $worker->avatar = storeImage('workers', 'avatar');
+        $worker->type = $request->input('type');
+        $worker->save();
         return response_api(true, 200, 'Successfully Register!', $worker->fresh());
 
     }
