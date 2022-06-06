@@ -24,7 +24,7 @@ class ReserveRequest extends FormRequest
     public function rules()
     {
         return [
-            'date' => 'required|unique:worker_work_spaces',
+            'date' => 'required',
             'work_space_id' => 'required',
             'work_space_addon_id' => 'required',
             'pricing_id' => 'required',

@@ -176,15 +176,22 @@ class WorkerController extends Controller
             'addons' => 'required',
             'price' => 'required',
         ]);
-        if ($auth_worker = \Illuminate\Support\Facades\Session::get('worker')) {
-            $reservation = new WorkerWorkSpace();
-            $reservation->worker_id = 1;
-            $reservation->date = $request['date'];
-            $reservation->work_space_id = $request['id'];
-            $reservation->work_space_addon_id = $request['addons'];
-            $reservation->pricing_id = $request['price'];
-            $reservation->save();
-            return back()->with('success', trans('messages.reserve.reserve_added'));
+        $auth_worker = \Illuminate\Support\Facades\Session::get('worker');
+        if ($auth_worker != null) {
+            $workers=WorkerWorkSpace::where('date',$request['date'])->where('work_space_id',$request['id'])->first();
+            if ($workers == null){
+                $reservation = new WorkerWorkSpace();
+                $reservation->worker_id = $auth_worker->id;
+                $reservation->date = $request['date'];
+                $reservation->work_space_id = $request['id'];
+                $reservation->work_space_addon_id = $request['addons'];
+                $reservation->pricing_id = $request['price'];
+                $reservation->save();
+                return back()->with('success', trans('messages.reserve.reserve_added'));
+            }else{
+                return back()->with('success', trans('messages.search.reserved'));
+            }
+
         }else{
             return back()->with('success', 'You should Login first!!');
         }

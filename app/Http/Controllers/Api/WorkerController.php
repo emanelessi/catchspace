@@ -9,6 +9,7 @@ use App\Http\Requests\workspaceRequest;
 use App\Http\Resources\providerDetailsResource;
 use App\Http\Resources\providerResource;
 use App\Http\Resources\workspaceDetailsResource;
+use App\Http\Resources\workspaceReservationResource;
 use App\Http\Resources\workspacesResource;
 use App\Models\Attribute;
 use App\Models\Provider;
@@ -74,14 +75,19 @@ class WorkerController extends Controller
     {
         $worker=Session::get('worker');
         if ($worker != null) {
-            $reservation = new WorkerWorkSpace();
-            $reservation->worker_id = $worker->id;
-            $reservation->date = $request['date'];
-            $reservation->work_space_id = $request['work_space_id'];
-            $reservation->work_space_addon_id = $request['work_space_addon_id'];
-            $reservation->pricing_id = $request['pricing_id'];
-            $reservation->save();
-            return response_api(true, 200, 'Workspace Reserved Successfully', $reservation );
+            $workers=WorkerWorkSpace::where('date',$request['date'])->where('work_space_id',$request['work_space_id'])->first();
+            if ($workers == null) {
+                $reservation = new WorkerWorkSpace();
+                $reservation->worker_id = $worker->id;
+                $reservation->date = $request['date'];
+                $reservation->work_space_id = $request['work_space_id'];
+                $reservation->work_space_addon_id = $request['work_space_addon_id'];
+                $reservation->pricing_id = $request['pricing_id'];
+                $reservation->save();
+                return response_api(true, 200, 'Workspace Reserved Successfully', ['reservation' => new workspaceReservationResource($reservation)]);
+            }else{
+                return response_api(false, 400, 'Workspace Reserved at this date!!','');
+            }
         } else {
             return response_api(false, 400, 'You should Login first!!','');
         }
