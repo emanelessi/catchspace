@@ -191,10 +191,14 @@
                                     <tr style="border-bottom: 2px solid #F2F5F8;">
                                         <th class="table-th"> #
                                         </th>
-                                        <th class="table-th"> Work Space
-                                        </th>
-                                        <th class="table-th"> Work Space Capacity</th>
+                                        <th class="table-th"> Date</th>
+                                        <th class="table-th"> Work Space</th>
+                                        <th class="table-th"> Capacity</th>
                                         <th class="table-th"> Work Space Type</th>
+                                        <th class="table-th"> Rent Type</th>
+                                        <th class="table-th"> Addon</th>
+                                        <th class="table-th"> Addon Price</th>
+                                        <th class="table-th"> Price</th>
 
 
                                     </tr>
@@ -204,10 +208,14 @@
                                         <tr>
                                             <td class="table-td"> {{$myreservations->id}}
                                             </td>
+                                            <td class="table-td">{{$myreservations->date}}</td>
                                             <td class="table-td">{{$myreservations->workSpace->name}}</td>
                                             <td class="table-td">{{$myreservations->workSpace->capacity}}</td>
                                             <td class="table-td">{{$myreservations->workSpace->workSpaceType->type}}</td>
-
+                                            <td class="table-td">{{$myreservations->pricing->rentType->type}}</td>
+                                            <td class="table-td">{{$myreservations->workSpaceAddons->addon->name}}</td>
+                                            <td class="table-td">{{$myreservations->workSpaceAddons->value}}</td>
+                                            <td class="table-td">{{$myreservations->pricing->price}}</td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -270,9 +278,14 @@
                                             <tr style="border-bottom: 2px solid #F2F5F8;">
                                                 <th class="table-th"> #
                                                 </th>
+                                                <th class="table-th"> Date</th>
                                                 <th class="table-th"> Work Space</th>
-                                                <th class="table-th"> Work Space Capacity</th>
+                                                <th class="table-th"> Capacity</th>
                                                 <th class="table-th"> Work Space Type</th>
+                                                <th class="table-th"> Rent Type</th>
+                                                <th class="table-th"> Addon</th>
+                                                <th class="table-th"> Addon Price</th>
+                                                <th class="table-th"> Price</th>
 
 
                                             </tr>
@@ -282,9 +295,14 @@
                                                 <tr>
                                                     <td class="table-td"> {{$myreservations->id}}
                                                     </td>
+                                                    <td class="table-td">{{$myreservations->date}}</td>
                                                     <td class="table-td">{{$myreservations->workSpace->name}}</td>
                                                     <td class="table-td">{{$myreservations->workSpace->capacity}}</td>
                                                     <td class="table-td">{{$myreservations->workSpace->workSpaceType->type}}</td>
+                                                    <td class="table-td">{{$myreservations->pricing->rentType->type}}</td>
+                                                    <td class="table-td">{{$myreservations->workSpaceAddons->addon->name}}</td>
+                                                    <td class="table-td">{{$myreservations->workSpaceAddons->value}}</td>
+                                                    <td class="table-td">{{$myreservations->pricing->price}}</td>
 
 
                                                 </tr>
