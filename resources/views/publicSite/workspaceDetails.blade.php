@@ -709,15 +709,17 @@
                                                 <div class="row justify-content-left d-flex">
                                                     <div class="col-md-4 d-flex flex-column">
                                                         <div class="rating-box">
-                                                            <h1 class="pt-4">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</h1>
+                                                            <h1 class="pt-4">{{$work_space_ratings->rate_avg ?? 0}}</h1>
                                                             <p class="">out of 5</p>
                                                         </div>
                                                         <div style="margin-left: -20px;">
-                                                            @for($i=0;intval($workspace->workSpaceRating[0]->rate_avg)>$i;$i++)
+                                                            @if(isset($work_space_ratings->rate_avg) )
+                                                            @for($i=0;intval($work_space_ratings->rate_avg)>$i;$i++)
                                                                 <li class="list-inline-item">
                                                                     <i class="fa fa-star" style="color: #FFC107"></i>
                                                                 </li>
                                                             @endfor
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8">
