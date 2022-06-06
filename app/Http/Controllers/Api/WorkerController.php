@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ReserveRequest;
 use App\Http\Requests\SignupRequest;
 use App\Http\Requests\workspaceRequest;
 use App\Http\Resources\providerDetailsResource;
@@ -29,33 +30,12 @@ class WorkerController extends Controller
         $password = $request->input('password');
         $db_password = Worker::select('password')->where('email', $email)->first();
         if (Worker::where('email', $email)->first() != null and password_verify($password, $db_password['password']) != false) {
-//            $workspace_types = WorkSpaceType::all();
-//            $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->get();
             $worker = Worker::where('email', $email)->first();
-//            Session::put('worker_id', $worker->id);
             Session::put('worker', $worker);
             return response_api(true, 200, 'Successfully Login', ['worker' => $worker]);
 
         }
         return response_api(false, 400, 'Fail', []);
-//        $proxy = Request::create('oauth/token', 'POST');
-//        $response = Route::dispatch($proxy);
-//        $statusCode = $response->getStatusCode();
-//        $response = json_decode($response->getContent());
-//        if ($statusCode != 200)
-//            return response_api(false, $statusCode, $response->message, $response);
-//
-//        $response_token = $response;
-//        $token = $response->access_token;
-//        \request()->headers->set('Authorization', 'Bearer ' . $token);
-//
-//        $proxy = Request::create('api/profile', 'GET');
-//        $response = Route::dispatch($proxy);
-//
-//        $statusCode = $response->getStatusCode();
-//        $worker = json_decode($response->getContent())->items;
-//        return response_api(true, $statusCode, 'Successfully Login', ['token' => $response_token, 'worker' => $worker]);
-
     }
 
     public function register(SignupRequest $request)
@@ -81,40 +61,32 @@ class WorkerController extends Controller
     public function showProviderDetails($id)
     {
         $provider = Provider::where('id', $id)->get();
-//        $providerAttribute = ProviderAttribute::where('provider_id',$id)->get();
-//        $attribute = Attribute::findOrFail($id);
-//        $attributes = ProviderAttribute::where('attribute_id', $attribute->id)->get();
-//        $work_space_type = WorkSpace::where('provider_id',$id)->get();
         return response_api(true, 200, 'Success', ['provider' => providerDetailsResource::collection($provider)]);
     }
 
     public function showWorkspaceDetails($id)
     {
         $workspace = WorkSpace::where('id', $id)->get();
-//        $provider = Provider::where('provider_id',$id)->get();
-//        $attribute = Attribute::findOrFail($id);
-//        $attributes = ProviderAttribute::where('attribute_id', $attribute->id)->get();
-//        $work_space_type = WorkSpace::where('provider_id',$id)->get();
         return response_api(true, 200, 'Success', ['workspace' => workspaceDetailsResource::collection($workspace)]);
     }
 
-//    public function store(workspaceRequest $request)
-//    {
-//        $data = $request->get('data');
-//        $workspace = WorkSpace::where("name", "like", "%{$data}%")
-//            ->where("name", "like", "%{$data}%")
-//            ->where("name", "like", "%{$data}%")->get();
-//        $provider=Provider::where("name", "like", "%{$data}%")->get();
-//        if(count($workspace)){
-//            return Response()->json($workspace);
-//        }
-//        else
-//        {
-//            return response()->json(['workspace' => 'No Data not found'], 404);
-//        }
-//
-//
-//    }
+    public function workspaceReserve(ReserveRequest $request)
+    {
+        $worker=Session::get('worker');
+        if ($worker != null) {
+            $reservation = new WorkerWorkSpace();
+            $reservation->worker_id = $worker->id;
+            $reservation->date = $request['date'];
+            $reservation->work_space_id = $request['work_space_id'];
+            $reservation->work_space_addon_id = $request['work_space_addon_id'];
+            $reservation->pricing_id = $request['pricing_id'];
+            $reservation->save();
+            return response_api(true, 200, 'Workspace Reserved Successfully', $reservation );
+        } else {
+            return response_api(false, 400, 'You should Login first!!','');
+        }
+    }
+
     public function search(workspaceRequest $request)
     {
         $address = $request->input('address');
@@ -124,14 +96,10 @@ class WorkerController extends Controller
         $workspaces = WorkSpace::query()->where('capacity', $capacity)->where('work_space_type_id', $work_space_type_id)->get();
         $provider = Provider::query()->where('address', 'LIKE', "%{$address}%")->get();
         $reservation = WorkerWorkSpace::where('date', $date)->exists();
-//        dd($workspaces->isEmpty(),$provider->isEmpty(),$reservation == true);
-//        dd(($workspaces->isEmpty() or $provider->isEmpty() and $reservation) != false);
         if (($workspaces->isEmpty() or $provider->isEmpty() and $reservation) == false) {
-//            dd($workspaces);
             return response_api(true, 200, 'Success', ['workspace' => workspacesResource::collection($workspaces)]);
         } elseif (($workspaces->isEmpty() or $provider->isEmpty()) == true) {
             if ($reservation == false) {
-//            dd($provider);
                 return response_api(false, 400, 'Not Found Workspace with this Information', []);
             } else {
                 return response_api(false, 400, 'All Workspaces Reserved on this Date', []);
@@ -143,10 +111,10 @@ class WorkerController extends Controller
 
     public function profile()
     {
-        if(Session::get('worker') != null){
+        if (Session::get('worker') != null) {
             return response_api(true, 200, 'Successfully Get Profile', Session::get('worker'));
 
-        }else{
+        } else {
             return response_api(false, 400, 'Fail You are not authorized', '');
 
         }
