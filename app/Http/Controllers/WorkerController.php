@@ -30,6 +30,41 @@ class WorkerController extends Controller
 //        $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
     }
 
+    public function update(Request $request)
+    {
+        $id = request('id');
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'job_title' => 'required',
+            'avatar' => 'required',
+            'type' => 'required',
+        ]);
+
+        $worker = Worker::withTrashed()->findOrFail($id);
+        $worker->name = $request->input('name');
+        $worker->email = $request->input('email');
+        $worker->password = bcrypt($request->input('password'));
+        $worker->job_title = $request->input('job_title');
+        $worker->avatar = storeImage('workers','avatar' );
+        $worker->type = $request->input('type');
+        $worker->save();
+        return back()->with('success', trans('messages.worker.worker_updated'));
+    }
+    public function destroy($id)
+    {
+        $reservation= WorkerWorkSpace::findOrFail($id)->delete();
+        return back()->with('success', trans('messages.workspace.workspace_deleted'));
+    }
+
+    public function restore($id)
+    {
+        WorkerWorkSpace::where('id', $id)->withTrashed()->restore();
+
+        return back()->with('success', trans('messages.workspace.workspace_restored'));
+    }
+
     public function index()
     {
         $worker = Worker::withTrashed()->get();
@@ -264,8 +299,9 @@ class WorkerController extends Controller
     {
 //        dd(1);
 //        dd($id);
-        $worker_profile = Worker::find($id);
-        return view('publicSite.profile', compact('worker_profile'));
+        $worker_profile = Worker::withTrashed()->find($id);
+        $worker_workspace = WorkerWorkSpace::withTrashed()->where('worker_id',$id )->get();
+        return view('publicSite.profile', compact('worker_profile','worker_workspace'));
     }
 
     public function logout()

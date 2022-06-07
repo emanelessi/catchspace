@@ -75,6 +75,9 @@ Route::get('/confirm', function () {
 Route::get('/worker/login', [WorkerController::class, 'login'])->name('workerLogin');
 Route::post('/worker/login', [WorkerController::class, 'check'])->name('workerCheck');
 Route::get('/worker/profile/{id}', [WorkerController::class, 'profile']);
+Route::post('/worker/profile/edit', [WorkerController::class, 'update'])->name('updateWorkerProfile');
+Route::get('/worker/delete-reservation/{id}', [WorkerController::class, 'destroy']);
+Route::get('/worker/restore-reservation/{id}', [WorkerController::class, 'restore']);
 
 Route::get('/worker/signup', [WorkerController::class, 'create'])->name('workerSignup');
 Route::post('/worker/signup', [WorkerController::class, 'store'])->name('signupWorkerStore');

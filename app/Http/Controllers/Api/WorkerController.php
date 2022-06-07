@@ -12,11 +12,13 @@ use App\Http\Resources\workspaceDetailsResource;
 use App\Http\Resources\workspaceReservationResource;
 use App\Http\Resources\workspacesResource;
 use App\Models\Attribute;
+use App\Models\Pricing;
 use App\Models\Provider;
 use App\Models\ProviderAttribute;
 use App\Models\Worker;
 use App\Models\WorkerWorkSpace;
 use App\Models\WorkSpace;
+use App\Models\WorkSpaceAddons;
 use App\Models\WorkSpaceType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -55,8 +57,15 @@ class WorkerController extends Controller
 
     public function show()
     {
-        $provider = Provider::get()->all();
-        return response_api(true, 200, 'Success', ['providers' => providerResource::collection($provider)]);
+        $page_number = intval(\request()->get('page_number')) ?? 1;
+        $page_size = \request()->get('page_size') ?? 10;
+        $total_records = Provider::count();
+        $total_pages = ceil($total_records / $page_size);
+        $provider = Provider::skip(($page_number - 1) * $page_size)
+            ->take($page_size)->OrderBy('created_at','Desc')->get();
+        return response_api(true, 200, 'Success',  ['providers' => providerResource::collection($provider)], $page_number, $total_pages, $total_records);
+//        $provider = Provider::get()->all();
+//        return response_api(true, 200, 'Success', ['providers' => providerResource::collection($provider)]);
     }
 
     public function showProviderDetails($id)
@@ -73,23 +82,36 @@ class WorkerController extends Controller
 
     public function workspaceReserve(ReserveRequest $request)
     {
-        $worker=Session::get('worker');
+        $worker = Session::get('worker');
         if ($worker != null) {
-            $workers=WorkerWorkSpace::where('date',$request['date'])->where('work_space_id',$request['work_space_id'])->first();
+            $workers = WorkerWorkSpace::where('date', $request['date'])->where('work_space_id', $request['work_space_id'])->first();
             if ($workers == null) {
                 $reservation = new WorkerWorkSpace();
                 $reservation->worker_id = $worker->id;
                 $reservation->date = $request['date'];
-                $reservation->work_space_id = $request['work_space_id'];
-                $reservation->work_space_addon_id = $request['work_space_addon_id'];
-                $reservation->pricing_id = $request['pricing_id'];
+                if (WorkSpace::find($request['work_space_id'])) {
+                    $reservation->work_space_id = $request['work_space_id'];
+                } else {
+                    return response_api(false, 400, 'There is no workspace with this id!!', '');
+                }
+                if (WorkSpaceAddons::find($request['work_space_addon_id'])) {
+                    $reservation->work_space_addon_id = $request['work_space_addon_id'];
+                } else {
+                    return response_api(false, 400, 'There is no addon with this id!!', '');
+                }
+                if (Pricing::find($request['pricing_id'])) {
+
+                    $reservation->pricing_id = $request['pricing_id'];
+                } else {
+                    return response_api(false, 400, 'There is no pricing with this id!!', '');
+                }
                 $reservation->save();
                 return response_api(true, 200, 'Workspace Reserved Successfully', ['reservation' => new workspaceReservationResource($reservation)]);
-            }else{
-                return response_api(false, 400, 'Workspace Reserved at this date!!','');
+            } else {
+                return response_api(false, 400, 'Workspace Reserved at this date!!', '');
             }
         } else {
-            return response_api(false, 400, 'You should Login first!!','');
+            return response_api(false, 400, 'You should Login first!!', '');
         }
     }
 
