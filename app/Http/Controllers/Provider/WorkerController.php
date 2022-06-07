@@ -32,11 +32,12 @@ class WorkerController extends Controller
 // //            ->groupBy('workers.id')
 //             ->get();
 
-        $workerworkspaces = WorkerWorkSpace::withTrashed()
-                        ->whereIn('work_space_id', WorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('id'))
+        $workers = Worker::withTrashed()
+                        ->whereIn('id', WorkerWorkSpace::whereIn('work_space_id', WorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('id'))->pluck('worker_id'))
                         ->get();
 
-        return view('admin.worker.worker', compact('workerworkspaces'));
+
+        return view('admin.worker.worker', compact('workers'));
 
     }
 

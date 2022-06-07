@@ -27,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // dd(auth()->user());
         if (auth()->user()->user_level_id ==1) {
             $providers = \App\Models\Provider::all();
             $work_spaces = \App\Models\WorkSpace::all();
