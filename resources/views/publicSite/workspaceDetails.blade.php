@@ -587,7 +587,7 @@
                                                            value="{{$price->rentType->type ?? ''}}">
                                                 </td>
                                                 <td>
-                                                    ₪ {{$price->price ?? 0}}
+                                                    $ {{$price->price ?? 0}}
                                                     <input type="hidden" name="price" value="{{$price->id ?? 0}}">
                                                 </td>
                                                 <td>
@@ -598,7 +598,7 @@
                                                         @for($i=0;$i<count($workspace->workSpaceAddons);$i++ )
                                                             <option
                                                                 value="{{$workspace->workSpaceAddons[$i]->id }}">{{$workspace->workSpaceAddons[$i]->value }}
-                                                                ₪ {{$workspace->workSpaceAddons[$i]->addon->name }}</option>
+                                                                $ {{$workspace->workSpaceAddons[$i]->addon->name }}</option>
                                                         @endfor
                                                     </select>
                                                 </td>

@@ -296,7 +296,7 @@
                                 </td>
                                 <td>{{$reservation->workSpace->workSpaceType->type ?? ''}}</td>
                                 <td>
-                                    ₪ {{$reservation->pricing->price ?? ''}}
+                                    $ {{$reservation->pricing->price ?? ''}}
 
                                 </td>
                                 <td>
@@ -305,9 +305,9 @@
                                 </td>
                                 <td>{{$reservation->date}}</td>
                                 <td>{{$reservation->workSpaceAddons->addon->name ?? ''}}</td>
-                                <td>₪ {{$reservation->workSpaceAddons->value ?? ''}}</td>
+                                <td>$ {{$reservation->workSpaceAddons->value ?? ''}}</td>
                                 <td style="color: green;font-weight: bold">
-                                    ₪ {{$reservation->workSpaceAddons->value + $reservation->pricing->price ?? ''}}</td>
+                                    $ {{$reservation->workSpaceAddons->value + $reservation->pricing->price ?? ''}}</td>
                                 <td>
                                     @if($reservation->deleted_at ==null)
                                         <a href="/worker/delete-reservation/{{$reservation->id}}"

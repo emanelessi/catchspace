@@ -27,15 +27,15 @@ class ProviderTableSeeder extends Seeder
         $provider->owner_name = 'Aseel Mousa';
         $provider->address = 'El Sinaa Crossing, LEGO Business Center Building';
         $provider->phone = '0598587747';
-        $provider->logo = 'workspaces/space3.png';
+        $provider->logo = 'workspaces/Lego.jpeg';
         $provider->save();
 
         $testProvider = new  Provider();
         $testProvider->name = 'Tools';
-        $testProvider->owner_name = 'Idris Talib';
+        $testProvider->owner_name = 'Edris Talib';
         $testProvider->address = 'Ahmed Abdel Aziz Street - Al Rehab Mall - Third Floor';
         $testProvider->phone = '0591505511';
-        $testProvider->logo = 'workspaces/Tools.png';
+        $testProvider->logo = 'workspaces/Tools.jpeg';
         $testProvider->save();
 //        `full_name`, `email`, `password`, `phone`, `type`, `user_level_id`,'provider_id'
         $provider_login = new  User();

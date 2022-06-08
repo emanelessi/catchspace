@@ -585,7 +585,7 @@
                                         <h4 style="color:#6B60E6;font-weight: 700;font-size: 15px;">Price Start
                                             From</h4>
                                         <h4 style="color:#FFC107 ; ">
-                                            ₪ {{$provider->ProviderAttributes[1]->value ?? ''}}/mo </h4>
+                                            $ {{$provider->ProviderAttributes[1]->value ?? ''}}/mo </h4>
                                     </div>
 
                                 </div>
@@ -647,7 +647,7 @@
                             <div class="col-md-4 col-sm-4 mt-5" style="background-color:#fff ; ">
                                 <div class="product-grid shadow">
                                     <div class="product-image">
-                                        <img class="pic-1" src="{{'/storage/'.$myworkspace->image}}">
+                                        <img class="pic-1" src="{{'/storage/'.$myworkspace->image}}" style="height: 220px;">
                                     </div>
                                     <div class="product-content">
                                         <ul class="rating">

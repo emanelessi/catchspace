@@ -145,17 +145,17 @@
             padding-top: -50px;
 
         }
+
         .navbar .navbar-nav .nav-link {
             color: #6B60E6;
             font-weight: 800;
-            text-decoration: none;}
+            text-decoration: none;
+        }
 
         .main-btn1:hover {
             background-color: #e47db2;
             color: #EFEEEF;
         }
-
-
 
 
         .navbar .navbar-nav .nav-link.active,
@@ -354,6 +354,7 @@
             margin-top: 0;
 
         }
+
         .product-rating {
 
             font-size: 20px;
@@ -429,6 +430,7 @@
             text-decoration: none;
             color: #6B60E6;
         }
+
         .workspace-name:hover {
             text-decoration: none;
             color: #D9368B;
@@ -460,7 +462,8 @@
             .filter-bar {
                 height: 268px;
             }
-            .login{
+
+            .login {
                 margin-left: 0px !important;
             }
         }
@@ -495,7 +498,7 @@
                             @csrf
                             <div class="search d-flex ">
                                 <input id="search" style="border:0" type="text" name="search"
-                                                              required="">
+                                       required="">
                                 <input type="submit" class="  btn main-btn3" value="Search"></div>
                         </form>
 
@@ -556,30 +559,30 @@
             </div>
             <div class="cheak1 filter-bar  d-flex align-items-center ">
                 <div class="row  align-items-center">
-
-
                     <h6 class="col-md-2 ">Looking For ?</h6>
-                    <div class="col-lg-2 col-md-2  col-sm-3 checkbox  checkbox-success">
+                    <div class="col-lg-2 col-md-2  col-sm-3 checkbox  checkbox-success"  style="    margin-top: 35px;">
                         <input id="checkbox1" class="styled" type="checkbox">
-                        <label for="checkbox1" style="margin-top: -12px">
+                        <label for="checkbox1" style="margin-top: -12px; margin-left: 0px">
                             Desk
                         </label>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-primary">
+                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-primary" >
                         <input id="checkbox2" class="styled" type="checkbox" checked>
-                        <label for="checkbox2">
+                        <label for="checkbox2" style="margin-left: 0px">
                             Private room
                         </label>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success">
                         <input id="checkbox3" class="styled" type="checkbox">
-                        <label for="checkbox3">
+                        <label for="checkbox3"  >
                             Meeting room
                         </label>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success">
+                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success" style="
+    margin-left: 114px;
+">
                         <input id="checkbox4" class="styled" type="checkbox">
-                        <label for="checkbox4">
+                        <label for="checkbox4" style="margin-left: 0px">
                             Skype room
                         </label>
                     </div>
@@ -594,32 +597,35 @@
                     <div class="col-lg-12 col-md-12 col-sm-12  sh shadow" data-aos="fade-right"
                          data-aos-delay="100" style="padding: 20px">
                         <div class="col-lg-4">
-                            <img src="{{'/storage/'.$myprovider->logo}}" class=" rimg img-fluid" alt="">
+                            <img src="{{'/storage/'.$myprovider->logo}}" class=" rimg img-fluid" alt=""
+                                 style="height:290px !important">
                         </div>
-                        <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                        <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100" style="
+    margin-top: 75px;
+">
                             <h3><a href="/worker/provider-details/{{$myprovider->id}}"
                                    class="workspace-name">{{$myprovider->name}}</a></h3>
                             <p class="t">
-                                <i class="fa fa-map-marker" style="color: #D9368B;"></i>  {{$myprovider->address}}
+                                <i class="fa fa-map-marker" style="color: #D9368B;"></i> {{$myprovider->address}}
                             </p>
                             <p class="t">
-                                <i class="fa fa-business-time" style="color: #D9368B;"></i>  {{$myprovider->owner_name}}
+                                <i class="fa fa-business-time" style="color: #D9368B;"></i> {{$myprovider->owner_name}}
                             </p>
-{{--                            <div class="ratings">--}}
-{{--                                <span--}}
-{{--                                    class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>--}}
-{{--                                <div class="stars" style="color:#FFC107 ;">--}}
-{{--                                    <i class="fa fa-star"></i>--}}
-{{--                                    <i class="fa fa-star"></i>--}}
-{{--                                    <i class="fa fa-star"></i>--}}
-{{--                                    <i class="fa fa-star"></i>--}}
-{{--                                </div>--}}
-{{--                                <div class="rating-text">--}}
-{{--                                    <span style="color:#BBBBBB; font-size:12px">{{$workspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <a class="btn main-btn2" id="D" data-target="#responsive"--}}
-{{--                               data-toggle="modal">ENQUIRE NOW</a>--}}
+                            {{--                            <div class="ratings">--}}
+                            {{--                                <span--}}
+                            {{--                                    class="product-rating">{{$workspace->workSpaceRating[0]->rate_avg ?? 0}}</span><span>/5</span>--}}
+                            {{--                                <div class="stars" style="color:#FFC107 ;">--}}
+                            {{--                                    <i class="fa fa-star"></i>--}}
+                            {{--                                    <i class="fa fa-star"></i>--}}
+                            {{--                                    <i class="fa fa-star"></i>--}}
+                            {{--                                    <i class="fa fa-star"></i>--}}
+                            {{--                                </div>--}}
+                            {{--                                <div class="rating-text">--}}
+                            {{--                                    <span style="color:#BBBBBB; font-size:12px">{{$workspace->workSpaceRating[0]->rate_count ?? 0}} reviews</span>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
+                            {{--                            <a class="btn main-btn2" id="D" data-target="#responsive"--}}
+                            {{--                               data-toggle="modal">ENQUIRE NOW</a>--}}
                         </div>
 
                     </div>
