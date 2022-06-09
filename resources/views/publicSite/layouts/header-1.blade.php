@@ -30,6 +30,11 @@
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         margin-left: 180px;
     }
+    .navbar{
+        border-radius: 0px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
 </style>
 <div class="hero-container" data-aos="fade-up">
     <nav class="navbar navbar-expand-lg ">

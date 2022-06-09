@@ -234,7 +234,7 @@
                                             <td class="table-td"> {{$myworkspace->id}}
                                             </td>
                                             <td class="table-td">
-                                                <img alt="" class="img-circle"
+                                                <img alt=""
                                                      src="{{'/storage/'.$myworkspace->image}}" style="width: 100px;"/>
                                             </td>
                                             <td class="table-td"> {{$myworkspace->name}}
@@ -431,7 +431,7 @@
                                                     <td class="table-td"> {{$myworkspace->id}}
                                                     </td>
                                                     <td class="table-td">
-                                                        <img alt="" class="img-circle"
+                                                        <img alt=""
                                                              src="{{'/storage/'.$myworkspace->image}}" style="width: 100px;"/>
                                                     </td>
                                                     <td class="table-td"> {{$myworkspace->name}}
