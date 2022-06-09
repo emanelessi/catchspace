@@ -1294,48 +1294,45 @@
                                 <div class="carousel-inner">
                                     <div class="row">
                                         <div class="item carousel-item active">
-
                                             @foreach($workspaces as $myworkspace)
-
-                                                <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
-                                                    <div class="thumb-wrapper">
-                                                        <div class="img-box">
-                                                            <img src=" {{'/storage/'.$myworkspace->workSpace->image}}"
-                                                                 class="img-fluid"
-                                                                 style=" width:100%" alt="">
-                                                        </div>
-                                                        <div class="thumb-content">
-                                                            <a class="workspace-name"
-                                                               href="/worker/workspace-details/{{$myworkspace->id}}">
-                                                                <h4>{{$myworkspace->workSpace->name}}</h4>
-                                                            </a>
-                                                            <div class="product-rating">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
+                                                        <div class="thumb-wrapper">
+                                                            <div class="img-box">
+                                                                <img
+                                                                    src=" {{'/storage/'.$myworkspace->workSpace->image}}"
+                                                                    class="img-fluid"
+                                                                    style=" width:100%" alt="">
+                                                            </div>
+                                                            <div class="thumb-content">
+                                                                <a class="workspace-name"
+                                                                   href="/worker/workspace-details/{{$myworkspace->id}}">
+                                                                    <h4>{{$myworkspace->workSpace->name}}</h4>
+                                                                </a>
+                                                                <div class="product-rating">
                                                                 <span
                                                                     style="color:#BBBBBB; font-size:14px">{{$myworkspace->workSpace->provider->owner_name ?? 0}}</span>
+                                                                </div>
+                                                                <span
+                                                                    class="product-rating">{{$myworkspace->rate_avg ?? 0 }}</span><span>/5</span>
+
+                                                                <div class="star-rating"
+                                                                     style="color: #FFC107">
+
+                                                                    <ul class="list-inline">
+                                                                        @for($i=0;intval($myworkspace->rate_avg)>$i;$i++)
+                                                                            <li class="list-inline-item"><i
+                                                                                    class="fa fa-star"></i></li>
+                                                                        @endfor
+                                                                    </ul>
+                                                                </div>
+
+                                                                <div class="rating-text">
+                                                                    <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->rate_count ?? 0}} reviews</span>
+                                                                </div>
+
                                                             </div>
-                                                            <span
-                                                                class="product-rating">{{$myworkspace->rate_avg ?? 0 }}</span><span>/5</span>
-
-                                                            <div class="star-rating"
-                                                                 style="color: #FFC107">
-
-                                                                <ul class="list-inline">
-                                                                    @for($i=0;intval($myworkspace->rate_avg)>$i;$i++)
-                                                                        <li class="list-inline-item"><i
-                                                                                class="fa fa-star"></i></li>
-                                                                    @endfor
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="rating-text">
-                                                                <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->rate_count ?? 0}} reviews</span>
-                                                            </div>
-
-                                                            {{--                                                        <a href="#" class="btn btn-primary ">View avilability</a>--}}
                                                         </div>
                                                     </div>
-                                                </div>
-
                                             @endforeach
                                         </div>
                                     </div>
