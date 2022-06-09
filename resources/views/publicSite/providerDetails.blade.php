@@ -462,7 +462,7 @@
             <div class="col-lg-12   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200" style="background-color: rgb(22 22 23 / 41%);
                          position: relative;
                          border-radius: 10px">
-                <img src="{{'/storage/'.$provider->logo}}" style="height: 400px;
+                <img src="{{'/storage/'.$provider->logo}}" style="height: 500px;
                                                                     width: -webkit-fill-available;
                                                                     z-index: -1;
                                                                     position: relative;" + class="img-fluid animated"

@@ -476,7 +476,7 @@
                  style="background-color: rgb(22 22 23 / 41%);
                          position: relative;
                          border-radius: 10px">
-                <img src="{{'/storage/'.$workspace->image}}" style="height: 400px;
+                <img src="{{'/storage/'.$workspace->image}}" style="height: 500px;
                                                                     width: -webkit-fill-available;
                                                                     z-index: -1;
                                                                     position: relative;"
