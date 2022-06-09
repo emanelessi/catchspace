@@ -212,7 +212,7 @@
                                         <tr>
                                             <td class="table-td">  {{$myworker->id}}
                                             </td>
-                                            <td class="table-td"><img alt="" class="img-circle"
+                                            <td class="table-td"><img alt=""
                                                                       src="{{'/storage/'.$myworker->avatar}}" style="width: 40px;"/></td>
                                             <td class="table-td"> {{$myworker->name}}
                                             </td>
@@ -333,7 +333,7 @@
                                                     <td class="table-td">  {{$worker->id}}
                                                     </td>
                                                     <td class="table-td">
-                                                        <img alt="" class="img-circle"
+                                                        <img alt=""
                                                              src="{{'/storage/'.$worker->avatar}}" style="width: 40px;"/>
                                                     </td>
                                                     <td class="table-td"> {{$worker->name}}

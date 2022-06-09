@@ -143,7 +143,17 @@ class WorkSpaceSeeder extends Seeder
 
 
         $rate1 = WorkSpaceRating::create(['work_space_id' => $work_space1->id, 'rate_avg' => 0, 'rate_count' => 0]);
-        $rate2 = WorkSpaceRating::create(['work_space_id' => $work_space7->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate2 = WorkSpaceRating::create(['work_space_id' => $work_space2->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate3 = WorkSpaceRating::create(['work_space_id' => $work_space3->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate4 = WorkSpaceRating::create(['work_space_id' => $work_space4->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate5 = WorkSpaceRating::create(['work_space_id' => $work_space5->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate6 = WorkSpaceRating::create(['work_space_id' => $work_space6->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate7 = WorkSpaceRating::create(['work_space_id' => $work_space7->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate8 = WorkSpaceRating::create(['work_space_id' => $work_space8->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate9 = WorkSpaceRating::create(['work_space_id' => $work_space9->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate10 = WorkSpaceRating::create(['work_space_id' => $work_space10->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate11 = WorkSpaceRating::create(['work_space_id' => $work_space11->id, 'rate_avg' => 0, 'rate_count' => 0]);
+        $rate12 = WorkSpaceRating::create(['work_space_id' => $work_space12->id, 'rate_avg' => 0, 'rate_count' => 0]);
 
 
         $service1 = new Service();

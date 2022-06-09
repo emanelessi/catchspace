@@ -225,7 +225,7 @@
                                     <tr>
                                         <td class="table-td"> {{$myprovider->id}}
                                         </td>
-                                        <td class="table-td"><img alt="" class="img-circle"
+                                        <td class="table-td"><img alt=""
                                                                   src="{{'/storage/'.$myprovider->logo}}" style="width: 40px;"/></td>
                                         <td class="table-td"> {{$myprovider->name}}
                                         </td>
