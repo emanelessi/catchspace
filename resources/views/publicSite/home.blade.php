@@ -1292,9 +1292,11 @@
                                 </ul>
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
-                                    <div class="item carousel-item active">
-                                        <div class="row">
+                                    <div class="row">
+                                        <div class="item carousel-item active">
+
                                             @foreach($workspaces as $myworkspace)
+
                                                 <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
                                                     <div class="thumb-wrapper">
                                                         <div class="img-box">
@@ -1333,10 +1335,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            @endforeach
 
+                                            @endforeach
                                         </div>
                                     </div>
+
                                 </div>
                                 <!-- Carousel controls -->
                                 <a class="carousel-control-prev" href="#demo" data-slide="prev">
