@@ -517,14 +517,14 @@
                     </div>
                     <div class="col-lg-6  " data-aos="fade-left" data-aos-delay="100">
                         @if(isset($provider->workSpaces[1]->image))
-                            <img src="{{'/storage/'.$provider->workSpaces[0]->image }}  " class=" vimg img-fluid"
+                            <img src="{{'/storage/'.$provider->workSpaces[1]->image }}  " class=" vimg img-fluid"
                                  alt="">
                         @else
                             <img src="{{asset('../img/space1.png') }}  " class=" vimg img-fluid" alt="">
 
                         @endif
                         @if(isset($provider->workSpaces[2]->image))
-                            <img src="{{'/storage/'.$provider->workSpaces[0]->image }}  " class=" aimg img-fluid"
+                            <img src="{{'/storage/'.$provider->workSpaces[2]->image }}  " class=" aimg img-fluid"
                                  alt="">
                         @else
                             <img src="{{asset('../img/space3.png') }}  " class=" aimg img-fluid" alt="">

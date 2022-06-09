@@ -598,7 +598,7 @@
                          data-aos-delay="100" style="padding: 20px">
                         <div class="col-lg-4">
                             <img src="{{'/storage/'.$myprovider->logo}}" class=" rimg img-fluid" alt=""
-                                 style="height:290px !important">
+                                 style="height: 290px !important;width: 290px !important;">
                         </div>
                         <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100" style="
     margin-top: 75px;

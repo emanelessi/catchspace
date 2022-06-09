@@ -199,7 +199,7 @@ class WorkerController extends Controller
         $workspace = WorkSpace::find($id);
         $workspace_rating = Rating::where('work_space_id',$id)->where('worker_id','!=',null)->get();
         $work_space_ratings = WorkSpaceRating::where('work_space_id',$id)->first();
-        $workspace_services = WorkSpaceService::all();
+        $workspace_services = WorkSpaceService::where('work_space_id',$id)->get();
         return view('publicSite.workspaceDetails', compact('workspace', 'workspace_services', 'workspace_rating', 'work_space_ratings'));
     }
 

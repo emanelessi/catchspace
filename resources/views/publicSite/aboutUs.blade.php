@@ -327,11 +327,12 @@
             letter-spacing: 0.5px;
             font-size: 30px;
         }
-        .section-subtitle{
+
+        .section-subtitle {
             color: black !important;
-            text-align: center!important;
-            font-size: 30px!important;
-            font-weight: 800!important;
+            text-align: center !important;
+            font-size: 30px !important;
+            font-weight: 800 !important;
         }
 
         /*end our value*/
@@ -368,7 +369,13 @@
                         <div class=" col-md-4 d-flex ">
 
                             <div class="icon-box">
-                                <div class="icon"><i class="bi bi-bookmark-star-fill"></i></div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6B60E6"
+                                         class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                              d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                    </svg>
+                                </div>
                                 <h4><a>PROFESSIONALISM</a></h4>
                                 <p> that we earn and maintain the trust of our customers through OUR QUALITY AND
                                     TRANSPARENCY .</p>
@@ -376,7 +383,13 @@
                         </div>
                         <div class=" col-md-4 d-flex px-4 ">
                             <div class="icon-box">
-                                <div class="icon"><i class="bi bi-bag-heart-fill"></i></div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6B60E6"
+                                         class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5ZM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1Zm0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+                                    </svg>
+                                </div>
                                 <h4><a>RESPECT & DIVERSITY</a></h4>
                                 <p>CatchSpace employees are CONTRIBUTING AND SUPPORTING members of a team. in a
                                     climate
@@ -385,7 +398,15 @@
                         </div>
                         <div class=" col-md-4 d-flex px-4  ">
                             <div class="icon-box">
-                                <div class="icon"><i class="bi bi-envelope-check-fill"></i></div>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6B60E6"
+                                         class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"/>
+                                        <path
+                                            d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+                                    </svg>
+                                </div>
                                 <h4><a>TENING TO THE CUSTOMER</a></h4>
                                 <p>In total we share the same ambition to listen and support our customers so that
                                     their success becomes ours</p>

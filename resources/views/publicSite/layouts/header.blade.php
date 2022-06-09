@@ -50,18 +50,18 @@
             <div class="collapse navbar-collapse" id="main">
                 <ul class="navbar-nav  align-items-center" style="margin-left: 200px;">
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3 active " aria-current="page"
+                        <a class="nav-link p-2 p-lg-3 @if(preg_match('//i',url()->current()))active @endif" aria-current="page"
                            href="{{ route('workerHome') }}">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="{{ route('workerProviders') }}"><u>Workspace</u></a>
+                        <a class="nav-link p-2 p-lg-3 @if(preg_match('/providers/i',url()->current()))active @endif" href="{{ route('workerProviders') }}"><u>Workspace</u></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3  " href="{{ route('workerContactus') }}">Contact us</a>
+                        <a class="nav-link p-2 p-lg-3  @if(preg_match('/contact-us/i',url()->current()))active @endif" href="{{ route('workerContactus') }}">Contact us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="{{ route('workerAboutUs') }}">About us</a>
+                        <a class="nav-link p-2 p-lg-3 @if(preg_match('/about-us/i',url()->current()))active @endif" href="{{ route('workerAboutUs') }}">About us</a>
                     </li>
                     @if ($auth_worker = \Illuminate\Support\Facades\Session::get('worker'))
                         <li class="nav-item">
