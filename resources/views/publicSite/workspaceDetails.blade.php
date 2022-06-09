@@ -89,13 +89,13 @@
 
 
         #nav1 {
-            margin-top: 480px;
+            margin-top: 422px;
             width: 100%;
             font-size: 16px;
             margin-right: 10px;
             background: #fff;
             border-radius: 10px;
-            height: 80px;
+            /*height: 80px;*/
             box-shadow: 0.625 erm, .937 erm, rgba(105, 105, 105, 0.001);
             position: relative;
         }
@@ -127,14 +127,14 @@
             width: 410px;;
             height: 480px;
             /*margin-left: 150px;*/
-            margin-top: 80px;
+            /*margin-top: 80px;*/
 
         }
 
         .pic .vimg {
             width: 430px;
             height: 240px;
-            margin-top: 80px;
+            /*margin-top: 80px;*/
 
 
         }
@@ -445,18 +445,17 @@
                 display: block !important;
             }
 
-            #nav1 {
-                margin-top: 391px;
-                width: 100%;
-                font-size: 16px;
-                margin-right: 10px;
-                background: #fff;
-                border-radius: 10px;
-                height: 145px;
-                box-shadow: 0.625 erm, .937 erm, rgba(105, 105, 105, 0.001);
-                position: relative;
-            }
-
+            /*#nav1 {*/
+            /*    margin-top: 391px;*/
+            /*    width: 100%;*/
+            /*    font-size: 16px;*/
+            /*    margin-right: 10px;*/
+            /*    background: #fff;*/
+            /*    border-radius: 10px;*/
+            /*    height: 145px;*/
+            /*    box-shadow: 0.625 erm, .937 erm, rgba(105, 105, 105, 0.001);*/
+            /*    position: relative;*/
+            /*}*/
             .rate-section {
                 margin-left: 0px;
 
@@ -472,15 +471,14 @@
     <!--Start Hero-->
     <div class="container mt-5">
         <div id="hero1" class="d-flex align-items-center  row mt-5">
-            <div class="col-lg-12   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200"
-                 style="background-color: rgb(22 22 23 / 41%);
-                         position: relative;
-                         border-radius: 10px">
-                <img src="{{'/storage/'.$workspace->image}}" style="height: 500px;
-                                                                    width: -webkit-fill-available;
-                                                                    z-index: -1;
-                                                                    position: relative;"
-                     class="img-fluid animated" alt="">
+            <div class="col-lg-12   order-1 order-lg-2 hero1-img">
+                {{--                <img src="{{'/storage/'.$workspace->image}}" style="height: 400px;--}}
+                {{--                                                                    width: -webkit-fill-available;--}}
+                {{--                                                                    z-index: -1;--}}
+                {{--                                                                    position: relative;"--}}
+                {{--                     class="img-fluid animated" alt=""> --}}
+                <img src="{{"/storage/workspaces/workspace-detail.jpg"}}"
+                     class="img-fluid animated" alt="" style="opacity: 0.6; border-radius: 20px;">
                 <div class="centered ">Find your perfect workspace <br><h4>Whether you’re a team of one, a growing
                         startup,<br><br>
                         or a Fortune 500 company—we have flexible<br><br> solutions for all the ways you work.</h4>
@@ -521,9 +519,10 @@
     <section id="star" class="star ">
         <div class="container" data-aos="fade-up">
             <div class="row ">
-                <div class="col-lg-12 d-flex align-items-center " data-aos="fade-right" data-aos-delay="100"
+                <div class="col-lg-12 col-md-12 col-sm-2 d-flex align-items-center " data-aos="fade-right"
+                     data-aos-delay="100"
                      style="margin-top: 60px">
-                    <div class="col-lg-6   pt-lg-0 content" data-aos="fade-left" data-aos-delay="100"
+                    <div class="col-lg-6 col-md-6 col-sm-6   pt-lg-0 content" data-aos="fade-left" data-aos-delay="100"
                     >
                         <h1 style="color:#FFC107 ;font-weight: 800;" id="overview">{{$workspace->name}}</h1>
 
@@ -550,13 +549,10 @@
                             </svg>
                             Pricing
                         </h4>
-
-
                         <div class="mt-5">
                             <table class="table custom-table  mt-5">
                                 <thead>
-                                <th scope="row">
-                                </th>
+                                <th scope="row"></th>
                                 <th class="tab">People</th>
                                 <th class="tab">Duration</th>
                                 <th class="tab">price</th>
@@ -663,33 +659,32 @@
             <section id="reviews" class="star">
                 <div class="container " data-aos="fade-up">
                     <div class="row">
-                            {{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
-                            {{--                                         style="margin-top: 5px;"--}}
-                            {{--                                         fill="currentColor"--}}
-                            {{--                                         class="bi bi-wifi"--}}
-                            {{--                                         viewBox="0 0 16 16">--}}
-                            {{--                                        <path--}}
-                            {{--                                            d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>--}}
-                            {{--                                        <path--}}
-                            {{--                                            d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>--}}
-                            {{--                                    </svg>--}}
-                            <ol>
-                                @foreach($workspace_services as $workspace_service)
-                                    <div class="col-lg-3 d-flex   " data-aos="fade-left"
-                                         data-aos-delay="100">
+                        {{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
+                        {{--                                         style="margin-top: 5px;"--}}
+                        {{--                                         fill="currentColor"--}}
+                        {{--                                         class="bi bi-wifi"--}}
+                        {{--                                         viewBox="0 0 16 16">--}}
+                        {{--                                        <path--}}
+                        {{--                                            d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>--}}
+                        {{--                                        <path--}}
+                        {{--                                            d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>--}}
+                        {{--                                    </svg>--}}
+                        <ol>
+                            @foreach($workspace_services as $workspace_service)
+                                <div class="col-lg-3 d-flex   " data-aos="fade-left"
+                                     data-aos-delay="100">
                                     <li>
                                         <h5 id="ccc" style="margin-left: 8px;">
                                             {{$workspace_service->service->name}}
                                         </h5>
                                     </li>
-                                    </div>
-                                @endforeach
-                            </ol>
-                        </div>
-                        {{--                                    <h5 id="ccc" style="margin-left: 8px;">--}}
-                        {{--                                        {{$workspace_service->service->name}}--}}
-                        {{--                                    </h5>--}}
-
+                                </div>
+                            @endforeach
+                        </ol>
+                    </div>
+                    {{--                                    <h5 id="ccc" style="margin-left: 8px;">--}}
+                    {{--                                        {{$workspace_service->service->name}}--}}
+                    {{--                                    </h5>--}}
 
 
                 </div>
