@@ -472,7 +472,7 @@
     <div class="container mt-5">
         <div id="hero1" class="d-flex align-items-center  row mt-5">
             <div class="col-lg-12   order-1 order-lg-2 hero1-img">
-                {{--                <img src="{{'/storage/'.$workspace->image}}" style="height: 400px;--}}
+                {{--                <img src="{{'/storage/'.$workspace->image}}" style="height: 500px;--}}
                 {{--                                                                    width: -webkit-fill-available;--}}
                 {{--                                                                    z-index: -1;--}}
                 {{--                                                                    position: relative;"--}}

@@ -461,7 +461,7 @@
         <div id="hero1" class="d-flex align-items-center  row mt-5">
             <div class="col-lg-12 order-1 order-lg-2 hero1-img"
                  data-aos="zoom-in" data-aos-delay="200">
-                {{--                <img src="{{'/storage/'.$provider->logo}}" style="height: 400px;--}}
+                {{--                <img src="{{'/storage/'.$provider->logo}}" style="height: 500px;--}}
                 {{--                                                                    width: -webkit-fill-available;--}}
                 {{--                                                                    z-index: -1;--}}
                 {{--                                                                    position: relative;" + class="img-fluid animated"--}}

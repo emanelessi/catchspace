@@ -488,10 +488,12 @@
             font-size: 22px;
 
         }
-        .card-title{
+
+        .card-title {
             font-size: 15px;
             font-weight: 800;
         }
+
         .card-img-top {
             width: 100%;
             height: 350px;
@@ -614,15 +616,18 @@
         .contact .php-email-form button[type=submit]:hover {
             background: #FFCA29;
         }
-        @media only screen and (max-width: 600px){
-            .login{
+
+        @media only screen and (max-width: 600px) {
+            .login {
                 margin-left: 0px !important;
             }
+
             #hero {
-                height: 996px!important;
+                height: 996px !important;
             }
         }
-            @-webkit-keyframes animate-loading {
+
+        @-webkit-keyframes animate-loading {
             0% {
                 transform: rotate(0deg);
             }
@@ -630,9 +635,11 @@
                 transform: rotate(360deg);
             }
         }
+
         .search-form > form .row.no-margin {
-             margin-right: 0px !important;
+            margin-right: 0px !important;
         }
+
         @keyframes animate-loading {
             0% {
                 transform: rotate(0deg);
@@ -664,6 +671,7 @@
             position: relative;
             color: #343A40;
         }
+
         .workspace-name {
             text-decoration: none !important;
             color: #6B60E6 !important;
@@ -1033,6 +1041,7 @@
             font-size: 14px;
             color: #ffc000;
         }
+
         .product-rating {
             font-size: 20px;
             color: #D9368B;
@@ -1074,7 +1083,8 @@
                                     <div class="col-lg-3 col-md-3 col-sm-3">
                                         <div class="form-group">
                                             <span class="form-label">Address</span>
-                                            <input class="form-control" type="text" name="address" placeholder="Remal" required>
+                                            <input class="form-control" type="text" name="address" placeholder="Remal"
+                                                   required>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
@@ -1200,69 +1210,140 @@
     ">Recommendation
                         <br>our space for you</p>
                     <section id="services1" class="services1 section-bg">
+                        {{--                        <div id="demo" class="carousel slide" data-ride="carousel">--}}
+
+                        {{--                            <!-- Indicators -->--}}
+                        {{--                            <ul class="carousel-indicators">--}}
+                        {{--                                <li data-target="#demo" data-slide-to="0" class="active"></li>--}}
+                        {{--                                <li data-target="#demo" data-slide-to="1"></li>--}}
+                        {{--                                <li data-target="#demo" data-slide-to="2"></li>--}}
+                        {{--                            </ul>--}}
+
+                        {{--                            <!-- The slideshow -->--}}
+                        {{--                            <div class="carousel-inner">--}}
+                        {{--                                <div class="carousel-item active">--}}
+                        {{--                                    <div class="row">--}}
+                        {{--                                        @foreach($workspaces as $myworkspace)--}}
+                        {{--                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">--}}
+                        {{--                                                <div class="thumb-wrapper">--}}
+                        {{--                                                    <div class="img-box">--}}
+                        {{--                                                        <img src=" {{'/storage/'.$myworkspace->workSpace->image}}"--}}
+                        {{--                                                             class="img-fluid"--}}
+                        {{--                                                             style=" width:100%" alt="">--}}
+                        {{--                                                    </div>--}}
+                        {{--                                                    <div class="thumb-content">--}}
+                        {{--                                                        <a class="workspace-name" href="/worker/workspace-details/{{$myworkspace->id}}">--}}
+                        {{--                                                            <h4 >{{$myworkspace->workSpace->name}}</h4>--}}
+                        {{--                                                        </a>--}}
+                        {{--                                                        <div class="product-rating">--}}
+                        {{--                                                            <span style="color:#BBBBBB; font-size:14px">{{$myworkspace->workSpace->provider->owner_name ?? 0}}</span>--}}
+                        {{--                                                        </div>--}}
+                        {{--                                                        <span class="product-rating">{{$myworkspace->rate_avg ?? 0 }}</span><span>/5</span>--}}
+
+                        {{--                                                        <div class="star-rating"--}}
+                        {{--                                                             style="color: #FFC107">--}}
+
+                        {{--                                                            <ul class="list-inline">--}}
+                        {{--                                                                @for($i=0;intval($myworkspace->rate_avg)>$i;$i++)--}}
+                        {{--                                                                    <li class="list-inline-item"><i--}}
+                        {{--                                                                            class="fa fa-star"></i></li>--}}
+                        {{--                                                                @endfor--}}
+                        {{--                                                            </ul>--}}
+                        {{--                                                        </div>--}}
+
+                        {{--                                                        <div class="rating-text">--}}
+                        {{--                                                            <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->rate_count ?? 0}} reviews</span>--}}
+                        {{--                                                        </div>--}}
+
+                        {{--                                                        --}}{{--                                                        <a href="#" class="btn btn-primary ">View avilability</a>--}}
+                        {{--                                                    </div>--}}
+                        {{--                                                </div>--}}
+                        {{--                                            </div>--}}
+                        {{--                                        @endforeach--}}
+
+                        {{--                                    </div>--}}
+                        {{--                                </div>--}}
+                        {{--                                <div class="carousel-item">--}}
+                        {{--                                    <img src="{{'/storage/workspaces/provider-details.jpg'}}" alt="Chicago" width="1100" height="500">--}}
+                        {{--                                </div>--}}
+                        {{--                                <div class="carousel-item">--}}
+                        {{--                                    <img src="{{'/storage/workspaces/provider-details.jpg'}}" alt="New York" width="1100" height="500">--}}
+                        {{--                                </div>--}}
+                        {{--                            </div>--}}
+
+                        {{--                            <!-- Left and right controls -->--}}
+                        {{--                            <a class="carousel-control-prev" href="#demo" data-slide="prev">--}}
+                        {{--                                <span class="carousel-control-prev-icon"></span>--}}
+                        {{--                            </a>--}}
+                        {{--                            <a class="carousel-control-next" href="#demo" data-slide="next">--}}
+                        {{--                                <span class="carousel-control-next-icon"></span>--}}
+                        {{--                            </a>--}}
+                        {{--                        </div>--}}
+
+
                         <div class="container" data-aos="fade-up">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel"
+                            <div id="demo" class="carousel slide" data-ride="carousel"
                                  data-interval="0">
                                 <!-- Carousel indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0"
-                                        class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                </ol>
+                                <ul class="carousel-indicators">
+                                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo" data-slide-to="1"></li>
+                                    <li data-target="#demo" data-slide-to="2"></li>
+                                </ul>
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
                                     <div class="item carousel-item active">
                                         <div class="row">
                                             @foreach($workspaces as $myworkspace)
-                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
-                                                <div class="thumb-wrapper">
-                                                    <div class="img-box">
-                                                        <img src=" {{'/storage/'.$myworkspace->workSpace->image}}"
-                                                             class="img-fluid"
-                                                             style=" width:100%" alt="">
-                                                    </div>
-                                                    <div class="thumb-content">
-                                                        <a class="workspace-name" href="/worker/workspace-details/{{$myworkspace->id}}">
-                                                            <h4 >{{$myworkspace->workSpace->name}}</h4>
-                                                        </a>
-                                                        <div class="product-rating">
-                                                            <span style="color:#BBBBBB; font-size:14px">{{$myworkspace->workSpace->provider->owner_name ?? 0}}</span>
+                                                <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
+                                                    <div class="thumb-wrapper">
+                                                        <div class="img-box">
+                                                            <img src=" {{'/storage/'.$myworkspace->workSpace->image}}"
+                                                                 class="img-fluid"
+                                                                 style=" width:100%" alt="">
                                                         </div>
-                                                        <span class="product-rating">{{$myworkspace->rate_avg ?? 0 }}</span><span>/5</span>
+                                                        <div class="thumb-content">
+                                                            <a class="workspace-name"
+                                                               href="/worker/workspace-details/{{$myworkspace->id}}">
+                                                                <h4>{{$myworkspace->workSpace->name}}</h4>
+                                                            </a>
+                                                            <div class="product-rating">
+                                                                <span
+                                                                    style="color:#BBBBBB; font-size:14px">{{$myworkspace->workSpace->provider->owner_name ?? 0}}</span>
+                                                            </div>
+                                                            <span
+                                                                class="product-rating">{{$myworkspace->rate_avg ?? 0 }}</span><span>/5</span>
 
-                                                        <div class="star-rating"
-                                                             style="color: #FFC107">
+                                                            <div class="star-rating"
+                                                                 style="color: #FFC107">
 
-                                                            <ul class="list-inline">
-                                                                @for($i=0;intval($myworkspace->rate_avg)>$i;$i++)
-                                                                <li class="list-inline-item"><i
-                                                                        class="fa fa-star"></i></li>
-                                                                @endfor
-                                                            </ul>
+                                                                <ul class="list-inline">
+                                                                    @for($i=0;intval($myworkspace->rate_avg)>$i;$i++)
+                                                                        <li class="list-inline-item"><i
+                                                                                class="fa fa-star"></i></li>
+                                                                    @endfor
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="rating-text">
+                                                                <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->rate_count ?? 0}} reviews</span>
+                                                            </div>
+
+                                                            {{--                                                        <a href="#" class="btn btn-primary ">View avilability</a>--}}
                                                         </div>
-
-                                                        <div class="rating-text">
-                                                            <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->rate_count ?? 0}} reviews</span>
-                                                        </div>
-
-{{--                                                        <a href="#" class="btn btn-primary ">View avilability</a>--}}
                                                     </div>
                                                 </div>
-                                            </div>
                                             @endforeach
 
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Carousel controls -->
-                                <a class="carousel-control-prev" href="#myCarousel"
-                                   data-slide="prev">
-                                    <i class="fa fa-angle-left"></i>
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
                                 </a>
-                                <a class="carousel-control-next" href="#myCarousel"
-                                   data-slide="next">
-                                    <i class="fa fa-angle-right"></i>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
                                 </a>
                             </div>
                         </div>
@@ -1271,6 +1352,7 @@
             </div>
         </div>
     </section>
+
 
 
     <!--WorkSpace-->
@@ -1287,42 +1369,42 @@
             <div class="container">
                 <div class="row">
                     @foreach($workspace_types as $type)
-                    <div class="col-lg-3 col-sm-2 col-md-3">
-                        <div class="card  rounded-1  shadow ">
-                            <img src="{{'/storage/'.$type->image}}" class="card-img-top" alt="...">
-                            <div class="card-body bg-warning  text-center ">
-                                <h5 class="card-title mb-0">{{$type->type}}</h5>
+                        <div class="col-lg-3 col-sm-2 col-md-3">
+                            <div class="card  rounded-1  shadow ">
+                                <img src="{{'/storage/'.$type->image}}" class="card-img-top" alt="...">
+                                <div class="card-body bg-warning  text-center ">
+                                    <h5 class="card-title mb-0">{{$type->type}}</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
-{{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
-{{--                        <div class="card rounded-1 border-1-whaite">--}}
-{{--                            <img src=" {{asset('../img/private room.png')}}" class="card-img-top roun" alt="...">--}}
-{{--                            <div class="card-body bg-warning text-center ">--}}
-{{--                                <h5 class="card-title mb-0">Private room</h5>--}}
+                    {{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
+                    {{--                        <div class="card rounded-1 border-1-whaite">--}}
+                    {{--                            <img src=" {{asset('../img/private room.png')}}" class="card-img-top roun" alt="...">--}}
+                    {{--                            <div class="card-body bg-warning text-center ">--}}
+                    {{--                                <h5 class="card-title mb-0">Private room</h5>--}}
 
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
-{{--                        <div class="card  rounded-1 ">--}}
-{{--                            <img src="{{asset('../img/Skype room.png')}}" class="card-img-top" alt="...">--}}
-{{--                            <div class="card-body bg-warning text-center    ">--}}
-{{--                                <h5 class="card-title mb-0">Skype room</h5>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+                    {{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
+                    {{--                        <div class="card  rounded-1 ">--}}
+                    {{--                            <img src="{{asset('../img/Skype room.png')}}" class="card-img-top" alt="...">--}}
+                    {{--                            <div class="card-body bg-warning text-center    ">--}}
+                    {{--                                <h5 class="card-title mb-0">Skype room</h5>--}}
 
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
-{{--                        <div class="card  rounded-1 ">--}}
-{{--                            <img src="{{asset('../img/shard room.png')}}" class="card-img-top" alt="...">--}}
-{{--                            <div class="card-body  bg-warning text-center ">--}}
-{{--                                <h5 class="card-title   mb-0">Sheard room</h5>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+                    {{--                    <div class="col-lg-3 col-sm-3 col-md-3">--}}
+                    {{--                        <div class="card  rounded-1 ">--}}
+                    {{--                            <img src="{{asset('../img/shard room.png')}}" class="card-img-top" alt="...">--}}
+                    {{--                            <div class="card-body  bg-warning text-center ">--}}
+                    {{--                                <h5 class="card-title   mb-0">Sheard room</h5>--}}
 
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    {{--                            </div>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
                 </div>
             </div>
         </div>
