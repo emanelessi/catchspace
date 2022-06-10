@@ -82,7 +82,7 @@ class WorkerController extends Controller
     public function home()
     {
         $workspace_types = WorkSpaceType::all();
-        $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->get();
+        $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->with('workSpace')->get();
 //        $workspace_rating=WorkSpaceRating::where('rate_avg',)->get();
         return view('publicSite.home', compact('workspace_types', 'workspaces'));
     }
@@ -209,7 +209,7 @@ class WorkerController extends Controller
 //            'worker_id' => 'required',
             'date' => 'required',
             'id' => 'required',
-            'addons' => 'required',
+//            'addons' => 'required',
             'price' => 'required',
         ]);
         $auth_worker = \Illuminate\Support\Facades\Session::get('worker');
@@ -220,7 +220,7 @@ class WorkerController extends Controller
                 $reservation->worker_id = $auth_worker->id;
                 $reservation->date = $request['date'];
                 $reservation->work_space_id = $request['id'];
-                $reservation->work_space_addon_id = $request['addons'];
+                $reservation->work_space_addon_id = $request['addons'] ?? null;
                 $reservation->pricing_id = $request['price'];
                 $reservation->save();
                 return back()->with('success', trans('messages.reserve.reserve_added'));

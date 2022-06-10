@@ -1210,77 +1210,6 @@
     ">Recommendation
                         <br>our space for you</p>
                     <section id="services1" class="services1 section-bg">
-                        {{--                        <div id="demo" class="carousel slide" data-ride="carousel">--}}
-
-                        {{--                            <!-- Indicators -->--}}
-                        {{--                            <ul class="carousel-indicators">--}}
-                        {{--                                <li data-target="#demo" data-slide-to="0" class="active"></li>--}}
-                        {{--                                <li data-target="#demo" data-slide-to="1"></li>--}}
-                        {{--                                <li data-target="#demo" data-slide-to="2"></li>--}}
-                        {{--                            </ul>--}}
-
-                        {{--                            <!-- The slideshow -->--}}
-                        {{--                            <div class="carousel-inner">--}}
-                        {{--                                <div class="carousel-item active">--}}
-                        {{--                                    <div class="row">--}}
-                        {{--                                        @foreach($workspaces as $myworkspace)--}}
-                        {{--                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">--}}
-                        {{--                                                <div class="thumb-wrapper">--}}
-                        {{--                                                    <div class="img-box">--}}
-                        {{--                                                        <img src=" {{'/storage/'.$myworkspace->workSpace->image}}"--}}
-                        {{--                                                             class="img-fluid"--}}
-                        {{--                                                             style=" width:100%" alt="">--}}
-                        {{--                                                    </div>--}}
-                        {{--                                                    <div class="thumb-content">--}}
-                        {{--                                                        <a class="workspace-name" href="/worker/workspace-details/{{$myworkspace->id}}">--}}
-                        {{--                                                            <h4 >{{$myworkspace->workSpace->name}}</h4>--}}
-                        {{--                                                        </a>--}}
-                        {{--                                                        <div class="product-rating">--}}
-                        {{--                                                            <span style="color:#BBBBBB; font-size:14px">{{$myworkspace->workSpace->provider->owner_name ?? 0}}</span>--}}
-                        {{--                                                        </div>--}}
-                        {{--                                                        <span class="product-rating">{{$myworkspace->rate_avg ?? 0 }}</span><span>/5</span>--}}
-
-                        {{--                                                        <div class="star-rating"--}}
-                        {{--                                                             style="color: #FFC107">--}}
-
-                        {{--                                                            <ul class="list-inline">--}}
-                        {{--                                                                @for($i=0;intval($myworkspace->rate_avg)>$i;$i++)--}}
-                        {{--                                                                    <li class="list-inline-item"><i--}}
-                        {{--                                                                            class="fa fa-star"></i></li>--}}
-                        {{--                                                                @endfor--}}
-                        {{--                                                            </ul>--}}
-                        {{--                                                        </div>--}}
-
-                        {{--                                                        <div class="rating-text">--}}
-                        {{--                                                            <span style="color:#BBBBBB; font-size:12px">{{$myworkspace->rate_count ?? 0}} reviews</span>--}}
-                        {{--                                                        </div>--}}
-
-                        {{--                                                        --}}{{--                                                        <a href="#" class="btn btn-primary ">View avilability</a>--}}
-                        {{--                                                    </div>--}}
-                        {{--                                                </div>--}}
-                        {{--                                            </div>--}}
-                        {{--                                        @endforeach--}}
-
-                        {{--                                    </div>--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="carousel-item">--}}
-                        {{--                                    <img src="{{'/storage/workspaces/provider-details.jpg'}}" alt="Chicago" width="1100" height="500">--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="carousel-item">--}}
-                        {{--                                    <img src="{{'/storage/workspaces/provider-details.jpg'}}" alt="New York" width="1100" height="500">--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-
-                        {{--                            <!-- Left and right controls -->--}}
-                        {{--                            <a class="carousel-control-prev" href="#demo" data-slide="prev">--}}
-                        {{--                                <span class="carousel-control-prev-icon"></span>--}}
-                        {{--                            </a>--}}
-                        {{--                            <a class="carousel-control-next" href="#demo" data-slide="next">--}}
-                        {{--                                <span class="carousel-control-next-icon"></span>--}}
-                        {{--                            </a>--}}
-                        {{--                        </div>--}}
-
-
                         <div class="container" data-aos="fade-up">
                             <div id="demo" class="carousel slide" data-ride="carousel"
                                  data-interval="0">
@@ -1289,17 +1218,18 @@
                                     <li data-target="#demo" data-slide-to="0" class="active"></li>
                                     <li data-target="#demo" data-slide-to="1"></li>
                                     <li data-target="#demo" data-slide-to="2"></li>
+                                    <li data-target="#demo" data-slide-to="4"></li>
                                 </ul>
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
                                     <div class="row">
-                                        <div class="item carousel-item active">
-                                            @foreach($workspaces as $myworkspace)
-                                                    <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
+                                            @foreach($workspaces->chunk(3) as $myworkspaces)
+                                            <div class="item carousel-item @if ($loop->first) active @endif">
+                                                @foreach($myworkspaces as $myworkspace)
+                                            <div class="col-lg-4 col-md-4 col-sm-4" style="margin-bottom: 10px">
                                                         <div class="thumb-wrapper">
                                                             <div class="img-box">
-                                                                <img
-                                                                    src=" {{'/storage/'.$myworkspace->workSpace->image}}"
+                                                                <img src=" {{'/storage/'.$myworkspace->workSpace->image}}"
                                                                     class="img-fluid"
                                                                     style=" width:100%" alt="">
                                                             </div>
@@ -1333,8 +1263,10 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                            @endforeach
-                                        </div>
+                                                @endforeach
+                                            </div>
+
+                                        @endforeach
                                     </div>
 
                                 </div>

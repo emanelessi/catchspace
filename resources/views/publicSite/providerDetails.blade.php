@@ -89,7 +89,7 @@
 
 
         #nav1 {
-            margin-top: 605px;
+            margin-top: 480px;
             width: 100%;
             font-size: 16px;
             margin-right: 10px;
@@ -432,18 +432,17 @@
                 line-height: normal;
             }
 
-            /*#nav1 {*/
-            /*    margin-top: 391px;*/
-            /*    width: 100%;*/
-            /*    font-size: 16px;*/
-            /*    margin-right: 10px;*/
-            /*    background: #fff;*/
-            /*    border-radius: 10px;*/
-            /*    height: 145px;*/
-            /*    box-shadow: 0.625 erm, .937 erm, rgba(105, 105, 105, 0.001);*/
-            /*    position: relative;*/
-            /*}*/
-
+            #nav1 {
+                margin-top: 391px;
+                width: 100%;
+                font-size: 16px;
+                margin-right: 10px;
+                background: #fff;
+                border-radius: 10px;
+                height: 145px;
+                box-shadow: 0.625 erm, .937 erm, rgba(105, 105, 105, 0.001);
+                position: relative;
+            }
             .rate-section {
                 margin-left: 0px;
 
@@ -459,17 +458,15 @@
     <!--Start Hero-->
     <div class="container mt-5">
         <div id="hero1" class="d-flex align-items-center  row mt-5">
-            <div class="col-lg-12 order-1 order-lg-2 hero1-img"
-                 data-aos="zoom-in" data-aos-delay="200">
-                {{--                <img src="{{'/storage/'.$provider->logo}}" style="height: 500px;--}}
-                {{--                                                                    width: -webkit-fill-available;--}}
-                {{--                                                                    z-index: -1;--}}
-                {{--                                                                    position: relative;" + class="img-fluid animated"--}}
-                {{--                     alt=""> --}}
-                <img src="{{'/storage/workspaces/provider-details.jpg'}}" style="opacity: 0.6; border-radius: 20px;"
-                     class="img-fluid animated"
-                     alt="">
-                {{--                <img src="{{'/storage/'.$provider->image}}" class="img-fluid animated" alt="">--}}
+            <div class="col-lg-12   order-1 order-lg-2 hero1-img" data-aos="zoom-in" data-aos-delay="200"
+                 style="background-color: rgb(22 22 23 / 41%);
+                         position: relative;
+                         border-radius: 10px">
+                <img src="{{'/storage/'.$provider->logo}}" style="height: 500px;
+                                                                    width: -webkit-fill-available;
+                                                                    z-index: -1;
+                                                                    position: relative;"
+                     class="img-fluid animated" alt="">
                 <div class="centered ">Find The Best Place To <br>Enjoy Your Time</div>
                 <div class="centered ">
                     <nav class="navbar navbar-expand-lg shadow " id="nav1">
@@ -507,10 +504,13 @@
 
         <section id="pic" class="pic row  mt-5">
             <div class="container" data-aos="fade-up">
-                <div class="col-lg-12 mt-5">
+                <div class="col-lg-12 mt-5" style="
+    margin-top: 110px !important;
+">
                     <div class="col-lg-6 d-flex align-items-center " data-aos="fade-right" data-aos-delay="100">
                         @if(isset($provider->workSpaces[0]->image))
-                            <img src="{{'/storage/'.$provider->workSpaces[0]->image }}  " class=" rimg img-fluid" style="border-radius: 20px;"
+                            <img src="{{'/storage/'.$provider->workSpaces[0]->image }}  " class=" rimg img-fluid"
+                                 style="border-radius: 20px;"
                                  alt="">
                         @else
                             <img src="{{asset('../img/lego.png') }}  " class=" rimg img-fluid" alt="">
@@ -519,14 +519,16 @@
                     </div>
                     <div class="col-lg-6  " data-aos="fade-left" data-aos-delay="100">
                         @if(isset($provider->workSpaces[1]->image))
-                            <img src="{{'/storage/'.$provider->workSpaces[1]->image }}  " class=" vimg img-fluid" style="border-radius: 20px;margin-top: 5px;"
+                            <img src="{{'/storage/'.$provider->workSpaces[1]->image }}  " class=" vimg img-fluid"
+                                 style="border-radius: 20px;margin-top: 5px;"
                                  alt="">
                         @else
                             <img src="{{asset('../img/space1.png') }}  " class=" vimg img-fluid" alt="">
 
                         @endif
                         @if(isset($provider->workSpaces[2]->image))
-                            <img src="{{'/storage/'.$provider->workSpaces[2]->image }}  " class=" aimg img-fluid" style="border-radius: 20px;"
+                            <img src="{{'/storage/'.$provider->workSpaces[2]->image }}  " class=" aimg img-fluid"
+                                 style="border-radius: 20px;"
                                  alt="">
                         @else
                             <img src="{{asset('../img/space3.png') }}  " class=" aimg img-fluid" alt="">

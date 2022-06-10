@@ -20,8 +20,8 @@ class workspaceReservationResource extends JsonResource
             'worker' => $this->workers->name,
             'work space' => $this->workSpace->name,
             'capacity' => $this->workSpace->capacity,
-            'addon name' => $this->workSpaceAddons->addon->name,
-            'addon value' => $this->workSpaceAddons->value,
+            'addon name' => $this->workSpaceAddons->addon->name ?? null,
+            'addon value' => $this->workSpaceAddons->value ?? null,
             'pricing' => $this->pricing->price,
             'rent type' => $this->pricing->rentType->type,
         ];
