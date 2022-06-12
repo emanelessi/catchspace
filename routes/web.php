@@ -162,7 +162,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/provider/delete-workspace/{id}', [Provider\WorkSpaceController::class, 'destroy']);
     Route::get('/provider/restore-workspace/{id}', [Provider\WorkSpaceController::class, 'restore']);
     Route::get('/provider/edit-workspace/{id}', [Provider\WorkSpaceController::class, 'edit']);
-    Route::post('/provider/edit-workspace', [Provider\WorkSpaceController::class, 'update'])->name('updateWorkspace');
+    Route::post('/provider/edit-workspace', [Provider\WorkSpaceController::class, 'update'])->name('workspaceUpdate');
     Route::get('/provider/workspace/services/{id}', [Provider\WorkSpaceController::class, 'services']);
 
     Route::get('/provider/attribute/{id}', [Provider\AttributeController::class, 'attribute']);
@@ -218,7 +218,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/provider/provider-profile', [ProviderController::class, 'profile'])->name('providerProfile');
     Route::get('/provider/edit-profile/{id}', [Provider\ProviderController::class, 'edit']);
-    Route::post('/provider/edit-profile', [Provider\ProviderController::class, 'update'])->name('updateProfile');
+    Route::post('/provider/edit-profile', [Provider\ProviderController::class, 'update'])->name('providerUpdate');
 
     Route::get('/provider/rate', [Provider\RateController::class, 'index']);
     Route::get('/provider/rate/rating/{id}', [Provider\RateController::class, 'rating']);
