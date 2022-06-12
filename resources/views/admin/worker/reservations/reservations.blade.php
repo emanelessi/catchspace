@@ -215,10 +215,10 @@
                                             <td class="table-td">{{$myreservations->workSpace->capacity}}</td>
                                             <td class="table-td">{{$myreservations->workSpace->workSpaceType->type}}</td>
                                             <td class="table-td">{{$myreservations->pricing->rentType->type}}</td>
-                                            <td class="table-td">{{$myreservations->workSpaceAddons->addon->name}}</td>
-                                            <td class="table-td">$ {{$myreservations->workSpaceAddons->value}}</td>
+                                            <td class="table-td">{{$myreservations->workSpaceAddons->addon->name ?? ''}}</td>
+                                            <td class="table-td">$ {{$myreservations->workSpaceAddons->value ?? ''}}</td>
                                             <td class="table-td">$ {{$myreservations->pricing->price}}</td>
-                                            <td class="table-td" style="color: green !important;font-weight: bold">$ {{$myreservations->workSpaceAddons->value + $myreservations->pricing->price ?? ''}}</td>
+                                            <td class="table-td" style="color: green !important;font-weight: bold">$ {{$myreservations->workSpaceAddons->value ?? 0 + $myreservations->pricing->price ?? ''}}</td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -303,10 +303,10 @@
                                                     <td class="table-td">{{$myreservations->workSpace->capacity}}</td>
                                                     <td class="table-td">{{$myreservations->workSpace->workSpaceType->type}}</td>
                                                     <td class="table-td">{{$myreservations->pricing->rentType->type}}</td>
-                                                    <td class="table-td">{{$myreservations->workSpaceAddons->addon->name}}</td>
-                                                    <td class="table-td">$ {{$myreservations->workSpaceAddons->value}}</td>
+                                                    <td class="table-td">{{$myreservations->workSpaceAddons->addon->name ?? ''}}</td>
+                                                    <td class="table-td">$ {{$myreservations->workSpaceAddons->value ?? ''}}</td>
                                                     <td class="table-td">$ {{$myreservations->pricing->price}}</td>
-                                                    <td class="table-td" style="color: green !important;font-weight: bold">$ {{$myreservations->workSpaceAddons->value + $myreservations->pricing->price ?? ''}}</td>
+                                                    <td class="table-td" style="color: green !important;font-weight: bold">$ {{$myreservations->workSpaceAddons->value ?? 0 + $myreservations->pricing->price ?? ''}}</td>
 
 
                                                 </tr>
