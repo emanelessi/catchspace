@@ -818,7 +818,7 @@
                     </div>
                 </div>
             </section>
-            @if(!empty($workspace_rating))
+            @if($workspace_rating->isNotEmpty())
             <section>
 
                 <div class="row d-flex justify-content-center " style="background-color:#F5F3FF;  background-color:#fff;
