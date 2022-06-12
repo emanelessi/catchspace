@@ -557,35 +557,35 @@
                     <br>
                 </div>
             </div>
-            <div class="cheak1 filter-bar  d-flex align-items-center ">
-                <div class="row  align-items-center">
-                    <h6 class="col-md-2 ">Looking For ?</h6>
-                    <div class="col-lg-2 col-md-2  col-sm-3 checkbox  checkbox-success">
-                        <input id="checkbox1" class="styled" type="checkbox">
-                        <label for="checkbox1" style="margin-top: -12px;">
-                            Desk
-                        </label>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-primary" >
-                        <input id="checkbox2" class="styled" type="checkbox" checked>
-                        <label for="checkbox2" >
-                            Private room
-                        </label>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success">
-                        <input id="checkbox3" class="styled" type="checkbox">
-                        <label for="checkbox3"  >
-                            Meeting room
-                        </label>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success" >
-                        <input id="checkbox4" class="styled" type="checkbox">
-                        <label for="checkbox4" >
-                            Skype room
-                        </label>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="cheak1 filter-bar  d-flex align-items-center ">--}}
+{{--                <div class="row  align-items-center">--}}
+{{--                    <h6 class="col-md-2 ">Looking For ?</h6>--}}
+{{--                    <div class="col-lg-2 col-md-2  col-sm-3 checkbox  checkbox-success">--}}
+{{--                        <input id="checkbox1" class="styled" type="checkbox">--}}
+{{--                        <label for="checkbox1" style="margin-top: -12px;">--}}
+{{--                            Desk--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-primary" >--}}
+{{--                        <input id="checkbox2" class="styled" type="checkbox" checked>--}}
+{{--                        <label for="checkbox2" >--}}
+{{--                            Private room--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success">--}}
+{{--                        <input id="checkbox3" class="styled" type="checkbox">--}}
+{{--                        <label for="checkbox3"  >--}}
+{{--                            Meeting room--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success" >--}}
+{{--                        <input id="checkbox4" class="styled" type="checkbox">--}}
+{{--                        <label for="checkbox4" >--}}
+{{--                            Skype room--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </section>
     @foreach($providers as $myprovider)

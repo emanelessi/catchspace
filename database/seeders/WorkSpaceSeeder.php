@@ -201,19 +201,19 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service1->save();
 
         $work_space_service2 = new WorkSpaceService();
-        $work_space_service2->value = 24/7;
+        $work_space_service2->value = 0;
         $work_space_service2->work_space_id = $work_space7->id;
         $work_space_service2->service_id = $service6->id;
         $work_space_service2->save();
 
         $work_space_service3 = new WorkSpaceService();
-        $work_space_service3->value = 24/7;
+        $work_space_service3->value = 0;
         $work_space_service3->work_space_id = $work_space7->id;
         $work_space_service3->service_id = $service7->id;
         $work_space_service3->save();
 
         $work_space_service4 = new WorkSpaceService();
-        $work_space_service4->value = 24/7;
+        $work_space_service4->value = 0;
         $work_space_service4->work_space_id = $work_space7->id;
         $work_space_service4->service_id = $service8->id;
         $work_space_service4->save();
@@ -231,19 +231,19 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service6->save();
 
         $work_space_service7 = new WorkSpaceService();
-        $work_space_service7->value = 24/7;
+        $work_space_service7->value = 0;
         $work_space_service7->work_space_id = $work_space8->id;
         $work_space_service7->service_id = $service6->id;
         $work_space_service7->save();
 
         $work_space_service8 = new WorkSpaceService();
-        $work_space_service8->value = 24/7;
+        $work_space_service8->value = 0;
         $work_space_service8->work_space_id = $work_space8->id;
         $work_space_service8->service_id = $service7->id;
         $work_space_service8->save();
 
         $work_space_service9 = new WorkSpaceService();
-        $work_space_service9->value = 24/7;
+        $work_space_service9->value = 0;
         $work_space_service9->work_space_id = $work_space8->id;
         $work_space_service9->service_id = $service8->id;
         $work_space_service9->save();
@@ -261,19 +261,19 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service11->save();
 
         $work_space_service13 = new WorkSpaceService();
-        $work_space_service13->value = 24/7;
+        $work_space_service13->value = 0;
         $work_space_service13->work_space_id = $work_space9->id;
         $work_space_service13->service_id = $service6->id;
         $work_space_service13->save();
 
         $work_space_service14 = new WorkSpaceService();
-        $work_space_service14->value = 24/7;
+        $work_space_service14->value = 0;
         $work_space_service14->work_space_id = $work_space9->id;
         $work_space_service14->service_id = $service7->id;
         $work_space_service14->save();
 
         $work_space_service15 = new WorkSpaceService();
-        $work_space_service15->value = 24/7;
+        $work_space_service15->value = 0;
         $work_space_service15->work_space_id = $work_space9->id;
         $work_space_service15->service_id = $service8->id;
         $work_space_service15->save();
@@ -291,19 +291,19 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service17->save();
 
         $work_space_service18 = new WorkSpaceService();
-        $work_space_service18->value = 24/7;
+        $work_space_service18->value = 0;
         $work_space_service18->work_space_id = $work_space10->id;
         $work_space_service18->service_id = $service6->id;
         $work_space_service18->save();
 
         $work_space_service19 = new WorkSpaceService();
-        $work_space_service19->value = 24/7;
+        $work_space_service19->value = 0;
         $work_space_service19->work_space_id = $work_space10->id;
         $work_space_service19->service_id = $service7->id;
         $work_space_service19->save();
 
         $work_space_service20 = new WorkSpaceService();
-        $work_space_service20->value = 24/7;
+        $work_space_service20->value = 0;
         $work_space_service20->work_space_id = $work_space10->id;
         $work_space_service20->service_id = $service8->id;
         $work_space_service20->save();
@@ -321,19 +321,19 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service22->save();
 
         $work_space_service23 = new WorkSpaceService();
-        $work_space_service23->value = 24/7;
+        $work_space_service23->value = 0;
         $work_space_service23->work_space_id = $work_space11->id;
         $work_space_service23->service_id = $service6->id;
         $work_space_service23->save();
 
         $work_space_service24 = new WorkSpaceService();
-        $work_space_service24->value = 24/7;
+        $work_space_service24->value = 0;
         $work_space_service24->work_space_id = $work_space11->id;
         $work_space_service24->service_id = $service7->id;
         $work_space_service24->save();
 
         $work_space_service25 = new WorkSpaceService();
-        $work_space_service25->value = 24/7;
+        $work_space_service25->value = 0;
         $work_space_service25->work_space_id = $work_space11->id;
         $work_space_service25->service_id = $service8->id;
         $work_space_service25->save();
@@ -351,19 +351,19 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service27->save();
 
         $work_space_service28 = new WorkSpaceService();
-        $work_space_service28->value = 24/7;
+        $work_space_service28->value = 0;
         $work_space_service28->work_space_id = $work_space12->id;
         $work_space_service28->service_id = $service6->id;
         $work_space_service28->save();
 
         $work_space_service29 = new WorkSpaceService();
-        $work_space_service29->value = 24/7;
+        $work_space_service29->value = 0;
         $work_space_service29->work_space_id = $work_space12->id;
         $work_space_service29->service_id = $service7->id;
         $work_space_service29->save();
 
         $work_space_service30 = new WorkSpaceService();
-        $work_space_service30->value = 24/7;
+        $work_space_service30->value = 0;
         $work_space_service30->work_space_id = $work_space12->id;
         $work_space_service30->service_id = $service8->id;
         $work_space_service30->save();
@@ -375,13 +375,13 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service31->save();
 
         $work_space_service32 = new WorkSpaceService();
-        $work_space_service32->value = 24/7;
+        $work_space_service32->value = 0;
         $work_space_service32->work_space_id = $work_space1->id;
         $work_space_service32->service_id = $service2->id;
         $work_space_service32->save();
 
         $work_space_service33 = new WorkSpaceService();
-        $work_space_service33->value = 24/7;
+        $work_space_service33->value = 0;
         $work_space_service33->work_space_id = $work_space1->id;
         $work_space_service33->service_id = $service3->id;
         $work_space_service33->save();
@@ -405,13 +405,13 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service36->save();
 
         $work_space_service37 = new WorkSpaceService();
-        $work_space_service37->value = 24/7;
+        $work_space_service37->value = 0;
         $work_space_service37->work_space_id = $work_space2->id;
         $work_space_service37->service_id = $service2->id;
         $work_space_service37->save();
 
         $work_space_service38 = new WorkSpaceService();
-        $work_space_service38->value = 24/7;
+        $work_space_service38->value = 0;
         $work_space_service38->work_space_id = $work_space2->id;
         $work_space_service38->service_id = $service3->id;
         $work_space_service38->save();
@@ -435,13 +435,13 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service41->save();
 
         $work_space_service42 = new WorkSpaceService();
-        $work_space_service42->value = 24/7;
+        $work_space_service42->value = 0;
         $work_space_service42->work_space_id = $work_space3->id;
         $work_space_service42->service_id = $service2->id;
         $work_space_service42->save();
 
         $work_space_service43 = new WorkSpaceService();
-        $work_space_service43->value = 24/7;
+        $work_space_service43->value = 0;
         $work_space_service43->work_space_id = $work_space3->id;
         $work_space_service43->service_id = $service3->id;
         $work_space_service43->save();
@@ -465,13 +465,13 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service46->save();
 
         $work_space_service47 = new WorkSpaceService();
-        $work_space_service47->value = 24/7;
+        $work_space_service47->value = 0;
         $work_space_service47->work_space_id = $work_space4->id;
         $work_space_service47->service_id = $service2->id;
         $work_space_service47->save();
 
         $work_space_service48 = new WorkSpaceService();
-        $work_space_service48->value = 24/7;
+        $work_space_service48->value = 0;
         $work_space_service48->work_space_id = $work_space4->id;
         $work_space_service48->service_id = $service3->id;
         $work_space_service48->save();
@@ -495,13 +495,13 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service50->save();
 
         $work_space_service51 = new WorkSpaceService();
-        $work_space_service51->value = 24/7;
+        $work_space_service51->value = 0;
         $work_space_service51->work_space_id = $work_space5->id;
         $work_space_service51->service_id = $service2->id;
         $work_space_service51->save();
 
         $work_space_service52 = new WorkSpaceService();
-        $work_space_service52->value = 24/7;
+        $work_space_service52->value = 0;
         $work_space_service52->work_space_id = $work_space5->id;
         $work_space_service52->service_id = $service3->id;
         $work_space_service52->save();
@@ -525,13 +525,13 @@ class WorkSpaceSeeder extends Seeder
         $work_space_service55->save();
 
         $work_space_service56 = new WorkSpaceService();
-        $work_space_service56->value = 24/7;
+        $work_space_service56->value = 0;
         $work_space_service56->work_space_id = $work_space6->id;
         $work_space_service56->service_id = $service2->id;
         $work_space_service56->save();
 
         $work_space_service57 = new WorkSpaceService();
-        $work_space_service57->value = 24/7;
+        $work_space_service57->value = 0;
         $work_space_service57->work_space_id = $work_space6->id;
         $work_space_service57->service_id = $service3->id;
         $work_space_service57->save();
@@ -653,25 +653,25 @@ class WorkSpaceSeeder extends Seeder
         $work_space_addons2->save();
 
         $work_space_addons3 = new WorkSpaceAddons();
-        $work_space_addons3->value = 24/7;
+        $work_space_addons3->value = 0;
         $work_space_addons3->work_space_id = $work_space7->id;
         $work_space_addons3->addon_id = $addon2->id;
         $work_space_addons3->save();
 
         $work_space_addons4 = new WorkSpaceAddons();
-        $work_space_addons4->value = 24/7;
+        $work_space_addons4->value = 0;
         $work_space_addons4->work_space_id = $work_space9->id;
         $work_space_addons4->addon_id = $addon2->id;
         $work_space_addons4->save();
 
         $work_space_addons5 = new WorkSpaceAddons();
-        $work_space_addons5->value = 24/7;
+        $work_space_addons5->value = 0;
         $work_space_addons5->work_space_id = $work_space10->id;
         $work_space_addons5->addon_id = $addon2->id;
         $work_space_addons5->save();
 
         $work_space_addons6 = new WorkSpaceAddons();
-        $work_space_addons6->value = 24/7;
+        $work_space_addons6->value = 0;
         $work_space_addons6->work_space_id = $work_space11->id;
         $work_space_addons6->addon_id = $addon2->id;
         $work_space_addons6->save();

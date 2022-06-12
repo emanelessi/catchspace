@@ -483,21 +483,30 @@
         <section id="star" class="star">
             <div class="container " data-aos="fade-up">
                 <div class="row">
-                    @foreach($provider as $myprovider)
+                    @foreach($workspaces as $myworkspace)
 
                     <div class="   col-lg-12  sh shadow d-flex align-items-center" data-aos="fade-right"
                          data-aos-delay="100">
                         <div class="col-lg-4">
-                            <img src="{{'/storage/'.$myprovider->logo}}" class="    rimg img-fluid" alt="">
+                            <img src="{{'/storage/'.$myworkspace->image}}" class="    rimg img-fluid" alt="">
                         </div>
                         <div class="col-lg-3 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                            <h3><a href="/worker/provider-details/{{$myprovider->id}}"
-                                   class="workspace-name">{{$myprovider->name}}</a></h3>
+                            <h3><a href="/worker/workspace-details/{{$myworkspace->id}}"
+                                   class="workspace-name">{{$myworkspace->name}}</a></h3>
                             <p class="t">
-                                {{$myprovider->address}}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#D9368B" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                    <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
+                                    <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"></path>
+                                </svg>
+                                {{$myworkspace->provider->name}}
                             </p>
                             <p class="t">
-                                {{$myprovider->owner_name}}
+                                <i class="fa fa-map-marker" style="color: #D9368B;"></i>
+                                {{$myworkspace->provider->address}}
+                            </p>
+                            <p class="t">
+                                <i class="fa fa-business-time" style="color: #D9368B;"></i>
+                                {{$myworkspace->provider->owner_name}}
                             </p>
                         </div>
                     </div>

@@ -191,6 +191,7 @@
             font-size: 10px;
         }
 
+
         .main-btn2 {
             font-size: 14px;
             font-family: 'roboto' !important;
@@ -320,6 +321,9 @@
         .custom-table {
             text-align: center;
             font-family: roboto;
+            border: 1px solid #6b60e6;
+            border-radius: 4px;
+            border-collapse: separate;
         }
 
 
@@ -647,7 +651,7 @@
                                 </td>
                                 <td>
                                     <input type="hidden" name="id" value="{{$workspace->id}}">
-                                    <button type="submit" class="btn main-btn7 shadow">Enquire now
+                                    <button type="submit" class="btn main-btn7 shadow">Reserve now
                                     </button>
                                 </td>
                             </form>
@@ -814,7 +818,9 @@
                     </div>
                 </div>
             </section>
+            @if(empty($workspace_rating))
             <section>
+
                 <div class="row d-flex justify-content-center " style="background-color:#F5F3FF;  background-color:#fff;
         border-radius: 6px;
             border: solid rgba(0, 0, 0, 0.01);
@@ -848,6 +854,7 @@
                     </div>
                 </div>
             </section>
+            @endif
         </div>
     </section>
     <!-- End Team section-->

@@ -58,7 +58,7 @@
             <div class="collapse navbar-collapse" id="main">
                 <ul class="navbar-nav  align-items-center" style="margin-left: 200px;">
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3  @if(preg_match('//i',url()->current()))active @endif" aria-current="page" href="{{ route('workerHome') }}">Home</a>
+                        <a class="nav-link p-2 p-lg-3  @if(request()->routeIs('workerHome'))active @endif" aria-current="page" href="{{ route('workerHome') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link p-2 p-lg-3 @if(preg_match('/providers/i',url()->current()))active @endif " href="{{ route('workerProviders') }}">Workspace</a>

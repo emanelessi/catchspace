@@ -448,7 +448,34 @@
 
             }
         }
+        .container .cheak1 {
+            margin-top: 30px;
+            border-radius: 20px;
+            align-items: center;
 
+        }
+
+        .container .cheak1 label {
+            color: #ffff;
+            font-weight: 300;
+            margin-top: 29px;
+            font-size: 18px;
+
+            margin-left: 100px;
+        }
+        .filter-bar {
+            background-color: #6B60E6;
+            height: 80px;
+            padding-bottom: 10px;
+        }
+
+        .container .cheak1 h6 {
+            margin-top: 20px;
+            font-size: 24px;
+            margin-left: 40px;
+            color: #FFC107;
+
+        }
 
     </style>
     <!-- ======= Hero Section ======= -->
@@ -636,6 +663,7 @@
             <div class="container  ">
                 <div class="row">
                     <div class="col-lg-12">
+
                         <h4 style="color:#6B60E6; margin-top: 35px;font-weight: 700;font-size: 20px; " id="meetingRoom">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                  class="bi bi-person-workspace" viewBox="0 0 16 16">
@@ -646,6 +674,35 @@
                             </svg>
                             {{$provider->name}} Rooms
                         </h4>
+{{--                        <div class="cheak1 filter-bar  d-flex align-items-center ">--}}
+{{--                            <div class="  align-items-center">--}}
+{{--                                <h6 class="col-md-2 ">Looking For ?</h6>--}}
+{{--                                <div class="col-lg-2 col-md-2  col-sm-3 checkbox  checkbox-success">--}}
+{{--                                    <input id="checkbox1" class="styled" type="checkbox">--}}
+{{--                                    <label for="checkbox1" >--}}
+{{--                                        Desk--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-primary" >--}}
+{{--                                    <input id="checkbox2" class="styled" type="checkbox" checked>--}}
+{{--                                    <label for="checkbox2" >--}}
+{{--                                        Private room--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success">--}}
+{{--                                    <input id="checkbox3" class="styled" type="checkbox">--}}
+{{--                                    <label for="checkbox3"  >--}}
+{{--                                        Meeting room--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-lg-2 col-md-2 col-sm-3 checkbox checkbox-success" >--}}
+{{--                                    <input id="checkbox4" class="styled" type="checkbox">--}}
+{{--                                    <label for="checkbox4" >--}}
+{{--                                        Skype room--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         @foreach($workspaces as $myworkspace)
                             <div class="col-md-4 col-sm-4 mt-5" style="background-color:#fff ; ">
