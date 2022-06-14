@@ -179,7 +179,7 @@
                                                             <select name="provider" class="form-control form-input">
                                                                 @foreach($provider as $myprovider )
                                                                     <option
-                                                                        value="{{$myprovider->provider->id}}">{{$myprovider->provider->name}}</option>
+                                                                        value="{{$myprovider->id}}">{{$myprovider->name}}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>

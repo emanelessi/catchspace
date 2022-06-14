@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Provider;
 use App\Models\User;
 use App\Models\UserLevel;
 use Illuminate\Http\Request;
@@ -39,7 +40,7 @@ class UserController extends Controller
         $user = auth()->user();
         $user_level_id = $user->user_level_id;
         $provider_user_level_id = config('roles.provider');
-        $provider = User::whereNotNull('provider_id')->get();
+        $provider = Provider::all();
         $role = Role::all();
 
         if ($user->user_level_id == $superadmin_user_level_id) {
