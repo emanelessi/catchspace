@@ -102,21 +102,18 @@
                     <!-- BEGIN PROFILE SIDEBAR -->
                     <div>
                         <!-- PORTLET MAIN -->
-                        <div class="portlet light profile-sidebar-portlet bordered"
-                             style="border-bottom: 1px solid #eef1f5;  height: 720px;border-radius: 20px !important;">
+                        <div class="portlet light profile-sidebar-portlet bordered" style="border-radius: 20px !important;">
                             <!-- BEGIN PROFILE CONTENT -->
                             <div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="portlet light bordered" style="margin: 90px 73px 200px;height: 373px;border-radius: 20px !important;background-color: #fff;    border-top-width: 3px !important;
-                                            border-bottom-width: 3px !important;">
-                                            <div class="portlet-body" style="padding-top: 31px;">
+                                            <div class="portlet-body" style="height: 250px;">
                                                 <div class="tab-content">
                                                     <!-- PERSONAL INFO TAB -->
                                                     <div class="tab-pane active" id="tab_1_1">
                                                         <form method="POST" action="{{route('attributeStore')}}">
                                                             @csrf
-                                                            <div class="form-group col-md-6">
+                                                            <div class="form-group col-md-12">
                                                                 <label class="control-label margin-left-9" style="
                                                                 color:#6B7280;">
                                                                     Key *</label>
@@ -127,7 +124,7 @@
                                                                        class="form-control"
                                                                        value="{{$id}}"/>
                                                             </div>
-                                                            <div class="form-group col-md-6">
+                                                            <div class="form-group col-md-12">
                                                                 <label class="control-label margin-left-9"
                                                                        style="color:#6B7280;">Value *</label>
                                                                 <input type="text" name="value"
@@ -162,7 +159,6 @@
                     <!-- END BEGIN PROFILE SIDEBAR -->
 
                 </div>
-            </div>
         </div>
     @endcan
 @endsection

@@ -103,14 +103,12 @@
                     <div>
                         <!-- PORTLET MAIN -->
                         <div class="portlet light profile-sidebar-portlet bordered"
-                             style="border-bottom: 1px solid #eef1f5;  height: 720px;border-radius: 20px !important;">
+                             style="border-radius: 20px !important;">
                             <!-- BEGIN PROFILE CONTENT -->
                             <div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="portlet light bordered" style="margin: 90px 73px 200px;height: 373px;border-radius: 20px !important;background-color: #fff;    border-top-width: 3px !important;
-                                            border-bottom-width: 3px !important;">
-                                            <div class="portlet-body" style="padding-top: 31px;">
+                                            <div class="portlet-body" style="height: 170px">
                                                 <div class="tab-content">
                                                     <!-- PERSONAL INFO TAB -->
                                                     <div class="tab-pane active" id="tab_1_1">
@@ -152,7 +150,7 @@
                                                         <div class="alert alert-success">
                                                             {{ session()->get('message') }}
                                                         </div>
-                                                    @endif                                                </div>
+                                                    @endif
                                             </div>
                                         </div>
 
