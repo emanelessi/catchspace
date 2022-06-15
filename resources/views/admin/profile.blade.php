@@ -243,7 +243,7 @@
 
             </div>
 
-            <div class="col-md-7">
+            <div class="col-md-7" style="margin-left: 59px;">
 
                 <div class="row">
                     <div class="col-md-6 form-group mb-3">
