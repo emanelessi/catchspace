@@ -32,7 +32,8 @@ class WorkSpaceController extends Controller
         $work_space_service = WorkSpaceService::withTrashed()->get();
         $service = Service::withTrashed()->get();
         $rent_type = RentType::withTrashed()->get();
-        return view('admin.workSpace.workSpace', compact('work_space', 'pricing', 'work_space_service', 'service', 'rent_type'));
+        return view('admin.workSpace.workSpace', compact('work_space', 'pricing',
+            'work_space_service', 'service', 'rent_type'));
     }
 
     public function create()

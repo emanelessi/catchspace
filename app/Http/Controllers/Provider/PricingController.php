@@ -73,14 +73,14 @@ class PricingController extends Controller
     public function destroy($id)
     {
         $PricingId = Pricing::findOrFail($id);
-        $workSpaceService = $PricingId->delete();
+        $workSpacePricing= $PricingId->delete();
         return back()->with('success', trans('messages.pricing.pricing_deleted'));
     }
 
     public function restore($id)
     {
         $PricingId = Pricing::withTrashed()->findOrFail($id);
-        $workSpaceService = $PricingId->restore();
+        $workSpacePricing = $PricingId->restore();
         return back()->with('success', trans('messages.pricing.pricing_restored'));
     }
 }
