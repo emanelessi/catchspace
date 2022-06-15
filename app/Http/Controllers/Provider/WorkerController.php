@@ -24,17 +24,13 @@ class WorkerController extends Controller
 
     public function index()
     {
-//        $workspaces = WorkSpace::CheckProvider()
-//         $workerworkspaces = WorkerWorkSpace::withTrashed()
-//             ->join('work_spaces', 'worker_work_spaces.work_space_id', '=', 'work_spaces.id')
-//             ->where('work_spaces.provider_id', auth()->user()->provider->id)
-//             ->distinct('worker_id')
-// //            ->groupBy('workers.id')
-//             ->get();
 
         $workers = Worker::withTrashed()
-                        ->whereIn('id', WorkerWorkSpace::whereIn('work_space_id', WorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('id'))->pluck('worker_id'))
-                        ->get();
+            ->whereIn('id',
+                WorkerWorkSpace::whereIn('work_space_id',
+                    WorkSpace::where('provider_id', auth()->user()->provider->id)->pluck('id'))
+                    ->pluck('worker_id'))
+            ->get();
 
 
         return view('admin.worker.worker', compact('workers'));
@@ -66,13 +62,13 @@ class WorkerController extends Controller
         $worker->email = $request->input('email');
         $worker->password = bcrypt($request->input('password'));
         $worker->job_title = $request->input('job_title');
-        $worker->avatar = storeImage('workers','avatar' );
+        $worker->avatar = storeImage('workers', 'avatar');
 //        $worker->you_did = $request->input('you_did');
         $worker->type = $request->input('type');
         $worker->save();
-        $workerworkspace=new WorkerWorkSpace();
-        $workerworkspace->worker_id   = $worker->id;
-        $workerworkspace->work_space_id  = $request->input('work_space_id');
+        $workerworkspace = new WorkerWorkSpace();
+        $workerworkspace->worker_id = $worker->id;
+        $workerworkspace->work_space_id = $request->input('work_space_id');
         $workerworkspace->save();
 
         return back()->with('success', trans('messages.worker.worker_created'));
@@ -104,13 +100,13 @@ class WorkerController extends Controller
         $worker->email = $request->input('email');
         $worker->password = bcrypt($request->input('password'));
         $worker->job_title = $request->input('job_title');
-        $worker->avatar = storeImage('workers','avatar' );
+        $worker->avatar = storeImage('workers', 'avatar');
 //        $worker->you_did = $request->input('you_did');
         $worker->type = $request->input('type');
         $worker->save();
-        $workerworkspace= WorkerWorkSpace::withTrashed()->findOrFail($id);
-        $workerworkspace->worker_id   = $worker->id;
-        $workerworkspace->work_space_id  = $request->input('work_space_id');
+        $workerworkspace = WorkerWorkSpace::withTrashed()->findOrFail($id);
+        $workerworkspace->worker_id = $worker->id;
+        $workerworkspace->work_space_id = $request->input('work_space_id');
         $workerworkspace->save();
         return back()->with('success', trans('messages.worker.worker_updated'));
     }
@@ -118,20 +114,21 @@ class WorkerController extends Controller
     public function destroy($id)
     {
         $worker = Worker::findOrFail($id)->delete();
-        $workerworkspace=WorkerWorkSpace::where('worker_id',$id)->delete();
+        $workerworkspace = WorkerWorkSpace::where('worker_id', $id)->delete();
         return back()->with('success', trans('messages.worker.worker_deleted'));
     }
 
     public function restore($id)
     {
         Worker::where('id', $id)->withTrashed()->restore();
-        WorkerWorkSpace::where('worker_id',$id)->withTrashed()->restore();
+        WorkerWorkSpace::where('worker_id', $id)->withTrashed()->restore();
         return back()->with('success', trans('messages.worker.worker_restored'));
     }
+
     public function reservations($id)
     {
         $worker = Worker::withTrashed()->findOrFail($id);
-        $reservations= WorkerWorkSpace::withTrashed()->where('worker_id', $worker->id)
+        $reservations = WorkerWorkSpace::withTrashed()->where('worker_id', $worker->id)
             ->join('work_spaces', 'worker_work_spaces.work_space_id', '=', 'work_spaces.id')
             ->where('work_spaces.provider_id', auth()->user()->provider->id)->get();
         return view('admin.worker.reservations.reservations', compact('reservations'));
