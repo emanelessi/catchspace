@@ -64,9 +64,9 @@ class WorkerController extends Controller
         $total_pages = ceil($total_records / $page_size);
         $provider = Provider::skip(($page_number - 1) * $page_size)
             ->take($page_size)->OrderBy('created_at','Desc')->get();
-        return response_api(true, 200, 'Success',  ['providers' => providerResource::collection($provider)], $page_number, $total_pages, $total_records);
-//        $provider = Provider::get()->all();
-//        return response_api(true, 200, 'Success', ['providers' => providerResource::collection($provider)]);
+        return response_api(true, 200, 'Success',
+            ['providers' => providerResource::collection($provider)], $page_number, $total_pages, $total_records);
+
     }
 
     public function showProviderDetails($id)

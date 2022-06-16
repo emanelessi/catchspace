@@ -13,7 +13,6 @@ class AttributeController extends Controller
     function __construct()
     {
 
-//        $this->middleware('permission:attribute_show', ['only' => ['attribute']]);
         $this->middleware('permission:attribute_create', ['only' => ['create', 'store']]);
         $this->middleware('permission:attribute_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:attribute_delete', ['only' => ['destroy']]);

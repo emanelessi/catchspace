@@ -57,8 +57,4 @@ class RateController extends Controller
         }
     }
 
-//    public function showRates(){
-//        $rates = Rating::get()->all();
-//        return response_api(true, 200, 'Success',['rates' =>  rateResource::collection($rates)]);
-//    }
 }

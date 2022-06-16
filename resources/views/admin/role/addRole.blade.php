@@ -177,7 +177,8 @@
                                                         </div>
 
                                                         <button type="submit"
-                                                                class="btn btn-submit btn-primary margin-top--300  m-grid-col-lg-offset-9-5 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 ">
+                                                                class="btn btn-submit btn-primary margin-top--300  m-grid-col-lg-offset-9-5
+                                                                 m-grid-col-md-offset-9-5 m-grid-col-xs-offset-7 ">
                                                             Save Change
                                                         </button>
                                                     </form>
@@ -187,7 +188,8 @@
                                                     <div class="alert alert-success">
                                                         {{ session()->get('message') }}
                                                     </div>
-                                                @endif                                            </div>
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
 

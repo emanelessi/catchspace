@@ -39,7 +39,6 @@ class PricingController extends Controller
             'work_space_id' => 'required',
         ]);
 
-//        $type = RentType::create(['type' => $request->input('type'),]);
         $pricing = Pricing::create(['price' => $request->input('price'),
             'work_space_id' => $request->input('work_space_id'), 'rent_type_id' => $request->input('type'),]);
 
