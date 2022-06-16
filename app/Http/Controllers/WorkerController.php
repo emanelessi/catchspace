@@ -26,8 +26,6 @@ class WorkerController extends Controller
     {
         $this->middleware('permission:worker_access', ['only' => ['index']]);
         $this->middleware('permission:reservations_show', ['only' => ['reservations']]);
-//        $this->middleware('permission:workspace_edit', ['only' => ['edit','update']]);
-//        $this->middleware('permission:workspace_delete', ['only' => ['destroy']]);
     }
 
     public function update(Request $request)
@@ -68,7 +66,6 @@ class WorkerController extends Controller
     public function index()
     {
         $worker = Worker::withTrashed()->get();
-//        dd($worker[0]->workSpace);
         return view('admin.worker.worker', compact('worker'));
     }
 
@@ -83,7 +80,6 @@ class WorkerController extends Controller
     {
         $workspace_types = WorkSpaceType::all();
         $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->with('workSpace')->get();
-//        $workspace_rating=WorkSpaceRating::where('rate_avg',)->get();
         return view('publicSite.home', compact('workspace_types', 'workspaces'));
     }
 
@@ -95,7 +91,6 @@ class WorkerController extends Controller
     public function simpleSearch(Request $request)
     {
         $search = $request->input('search');
-//        $workspaces = Provider::query()->where('name', 'LIKE', "%{$search}%")->get();
         $providers = Provider::query()->where('name', 'LIKE', "%{$search}%")->get();
 
         return view('publicSite.simpleSearch', compact('providers'));
@@ -107,10 +102,10 @@ class WorkerController extends Controller
         $work_space_type_id = $request->input('work_space_type_id');
         $date = $request->input('date');
         $capacity = $request->input('capacity');
-        $workspaces = WorkSpace::query()->where('capacity', $capacity)->where('work_space_type_id', $work_space_type_id)->get();
+        $workspaces = WorkSpace::query()->where('capacity', $capacity)
+            ->where('work_space_type_id', $work_space_type_id)->get();
         $provider = Provider::query()->where('address', 'LIKE', "%{$address}%")->get();
         $reservation = WorkerWorkSpace::where('date', $date)->exists();
-//        dd($workspaces->isEmpty(),$provider->isEmpty(),$reservation == true);
         if (($workspaces->isEmpty() or $provider->isEmpty() and $reservation) == false) {
             return view('publicSite.search', compact('workspaces', 'provider'));
         } elseif (($workspaces->isEmpty() or $provider->isEmpty()) == true) {
@@ -119,13 +114,7 @@ class WorkerController extends Controller
             } else {
                 return back()->with('success', trans('messages.search.reserved'));
             }
-
-
         }
-//        else{
-//            return back()->with('success', trans('messages.search.not_found'));
-//        }
-
     }
 
     public function providers()
@@ -200,16 +189,15 @@ class WorkerController extends Controller
         $workspace_rating = Rating::where('work_space_id',$id)->where('worker_id','!=',null)->get();
         $work_space_ratings = WorkSpaceRating::where('work_space_id',$id)->first();
         $workspace_services = WorkSpaceService::where('work_space_id',$id)->get();
-        return view('publicSite.workspaceDetails', compact('workspace', 'workspace_services', 'workspace_rating', 'work_space_ratings'));
+        return view('publicSite.workspaceDetails', compact('workspace',
+            'workspace_services', 'workspace_rating', 'work_space_ratings'));
     }
 
     public function workspaceReserve(Request $request)
     {
         $this->validate($request, [
-//            'worker_id' => 'required',
             'date' => 'required',
             'id' => 'required',
-//            'addons' => 'required',
             'price' => 'required',
         ]);
         $auth_worker = \Illuminate\Support\Facades\Session::get('worker');
@@ -285,7 +273,6 @@ class WorkerController extends Controller
             $workspace_types = WorkSpaceType::all();
             $workspaces = WorkSpaceRating::where('rate_avg', '>', 4)->get();
             $worker = Worker::where('email', $email)->first();
-//            Session::put('worker_id', $worker->id);
             Session::put('worker', $worker);
             return view('publicSite.home', compact('workspace_types', 'workspaces'));
 
@@ -297,8 +284,6 @@ class WorkerController extends Controller
 
     public function profile($id)
     {
-//        dd(1);
-//        dd($id);
         $worker_profile = Worker::withTrashed()->find($id);
         $worker_workspace = WorkerWorkSpace::withTrashed()->where('worker_id',$id )->get();
         return view('publicSite.profile', compact('worker_profile','worker_workspace'));
@@ -351,8 +336,6 @@ class WorkerController extends Controller
             'password' => 'required',
             'job_title' => 'required',
             'avatar' => 'required',
-//            'you_did' => 'required',
-//            'work_space_id' => 'required',
             'type' => 'required',
         ]);
 
@@ -362,7 +345,6 @@ class WorkerController extends Controller
         $worker->password = bcrypt($request->input('password'));
         $worker->job_title = $request->input('job_title');
         $worker->avatar = storeImage('workers', 'avatar');
-//        $worker->you_did = $request->input('you_did');
         $worker->type = $request->input('type');
         $worker->save();
 

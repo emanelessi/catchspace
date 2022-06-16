@@ -32,7 +32,8 @@ class WorkerController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         $db_password = Worker::select('password')->where('email', $email)->first();
-        if (Worker::where('email', $email)->first() != null and password_verify($password, $db_password['password']) != false) {
+        if (Worker::where('email', $email)->first() != null and
+            password_verify($password, $db_password['password']) != false) {
             $worker = Worker::where('email', $email)->first();
             Session::put('worker', $worker);
             return response_api(true, 200, 'Successfully Login', ['worker' => $worker]);
