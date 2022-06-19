@@ -103,6 +103,11 @@
                     <form role="form" action="{{route('providerUpdate')}}" enctype="multipart/form-data"
                           method="Post">
                         @csrf
+                        @if(session()->has('success'))
+                            <div class="alert alert-success">
+                                {{ session()->get('success') }}
+                            </div>
+                        @endif
                         <div class="profile-userpic  margin-right--12 " style="
                         float: left;
                         width: 300px;
@@ -170,11 +175,7 @@
                                         </button>
                     </form>
                 </div>
-                @if(session()->has('success'))
-                    <div class="alert alert-success">
-                        {{ session()->get('success') }}
-                    </div>
-                @endif              </div>
+                             </div>
         </div>
     </div>
 

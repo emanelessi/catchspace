@@ -121,6 +121,11 @@
                                                 <div class="tab-pane active" id="tab_1_1">
                                                     <form role="form" action="{{route('userUpdate')}}" method="Post">
                                                         @csrf
+                                                        @if(session()->has('success'))
+                                                            <div class="alert alert-success">
+                                                                {{ session()->get('success') }}
+                                                            </div>
+                                                        @endif
                                                         <div class="form-group margin-left-9 margin-right-10">
                                                             <label class="control-label margin-left-9"
                                                                    style="color:#6B7280;">Name*</label>
@@ -204,11 +209,7 @@
                                                     </form>
                                                 </div>
 
-                                                @if(session()->has('success'))
-                                                    <div class="alert alert-success">
-                                                        {{ session()->get('success') }}
-                                                    </div>
-                                                @endif                                              </div>
+                                                                                           </div>
                                         </div>
                                     </div>
 

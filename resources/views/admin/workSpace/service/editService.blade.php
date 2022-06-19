@@ -113,6 +113,11 @@
                                             <div class="tab-pane active" id="tab_1_1">
                                                 <form role="form" action="{{route('updateService')}}" method="POST">
                                                     @csrf
+                                                    @if(session()->has('message'))
+                                                        <div class="alert alert-success">
+                                                            {{ session()->get('message') }}
+                                                        </div>
+                                                    @endif
                                                     <div class="form-group col-md-6">
                                                         <label class="control-label margin-left-9"
                                                                style="color:#6B7280;">

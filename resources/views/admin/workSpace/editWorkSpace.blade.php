@@ -114,6 +114,11 @@
                                                         <form role="form" enctype="multipart/form-data" action="{{route('workspaceUpdate')}}"
                                                               method="POST">
                                                             @csrf
+                                                            @if(session()->has('success'))
+                                                                <div class="alert alert-success">
+                                                                    {{ session()->get('success') }}
+                                                                </div>
+                                                            @endif
                                                             <div class="profile-userpic  margin-right--12 " style="
                         float: left;
                         width: 300px;
@@ -196,11 +201,7 @@
                                                         </form>
                                                     </div>
 
-                                                    @if(session()->has('success'))
-                                                        <div class="alert alert-success">
-                                                            {{ session()->get('success') }}
-                                                        </div>
-                                                    @endif                                                  </div>
+                                                                                                      </div>
                                             </div>
                                         </div>
 
@@ -243,6 +244,11 @@
                                                             <form role="form" enctype="multipart/form-data" action="{{route('workspaceUpdate')}}"
                                                                   method="POST">
                                                                 @csrf
+                                                                @if(session()->has('success'))
+                                                                    <div class="alert alert-success">
+                                                                        {{ session()->get('success') }}
+                                                                    </div>
+                                                                @endif
                                                                 <div class="profile-userpic  margin-right--12 " style="
                         float: left;
                         width: 300px;
@@ -319,11 +325,7 @@
                                                             </form>
                                                         </div>
 
-                                                        @if(session()->has('success'))
-                                                            <div class="alert alert-success">
-                                                                {{ session()->get('success') }}
-                                                            </div>
-                                                        @endif                                                      </div>
+                                                                                                           </div>
                                                 </div>
                                             </div>
 

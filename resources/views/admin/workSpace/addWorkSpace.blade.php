@@ -116,6 +116,11 @@
                                             <form role="form" enctype="multipart/form-data" action="{{route('workspaceStore')}}"
                                                   method="POST">
                                                 @csrf
+                                                @if(session()->has('success'))
+                                                    <div class="alert alert-success">
+                                                        {{ session()->get('success') }}
+                                                    </div>
+                                                @endif
                                                 <div class="profile-userpic  margin-right--12 " style="
                         float: left;
                         width: 300px;
@@ -190,11 +195,7 @@
                                                             </button>
                                             </form>
                                         </div>
-                                        @if(session()->has('success'))
-                                            <div class="alert alert-success">
-                                                {{ session()->get('success') }}
-                                            </div>
-                                        @endif                                                  </div>
+                                                                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -233,6 +234,11 @@
                                                     <div class="tab-pane active" id="tab_1_1">
                                                         <form method="POST" enctype="multipart/form-data" action="{{route('workSpaceStore')}}">
                                                             @csrf
+                                                            @if(session()->has('success'))
+                                                                <div class="alert alert-success">
+                                                                    {{ session()->get('success') }}
+                                                                </div>
+                                                            @endif
                                                             <div class="profile-userpic  margin-right--12 " style="
                         float: left;
                         width: 300px;
@@ -301,11 +307,7 @@
 
                                                         </form>
                                                     </div>
-                                                    @if(session()->has('success'))
-                                                        <div class="alert alert-success">
-                                                            {{ session()->get('success') }}
-                                                        </div>
-                                                @endif                                                    <!-- END PERSONAL INFO TAB -->
+                                                                                                        <!-- END PERSONAL INFO TAB -->
                                                 </div>
                                             </div>
                                         </div>

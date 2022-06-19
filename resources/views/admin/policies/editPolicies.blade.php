@@ -25,6 +25,11 @@ font-size: 17px">
                     <form role="form"  action="{{route('updatePolicies')}}"
                           method="POST">
                         @csrf
+                        @if(session()->has('success'))
+                            <div class="alert alert-success">
+                                {{ session()->get('success') }}
+                            </div>
+                        @endif
                         <div class="form-group col-md-6">
                             <label class="control-label" style="color:#6B7280;">Title *</label>
                             <input type="text" placeholder="Title" name="title"
@@ -70,11 +75,7 @@ font-size: 17px">
                 </div>
             </div>
         </div>
-        @if(session()->has('success'))
-            <div class="alert alert-success">
-                {{ session()->get('success') }}
-            </div>
-        @endif      </div>
+              </div>
 
 
 @endsection
