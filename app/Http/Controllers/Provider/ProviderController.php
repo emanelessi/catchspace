@@ -23,8 +23,8 @@ class ProviderController extends Controller
             'name' => 'required',
             'owner_name' => 'required',
         ]);
-
-        $provider = Provider::findOrFail($request->input($id));
+        $id = request('id');
+        $provider = Provider::findOrFail($id);
         $provider->name = $request->input('name');
         $provider->owner_name = $request->input('owner_name');
         $provider->address = $request->input('address');
