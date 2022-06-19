@@ -72,6 +72,7 @@ class RegisterController extends Controller
         $provider->name = $data['Co-name'];
         $provider->owner_name = $data['full_name'];
         $provider->address = $data['address'];
+        $provider->phone = $data['phone'];
         $provider->logo = storeImage('providers', 'logo');
         $provider->save();
 

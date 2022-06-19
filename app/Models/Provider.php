@@ -11,7 +11,10 @@ class Provider extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'phone',
 
+    ];
     public function users()
     {
         return $this->hasMany(User::class, 'provider_id', 'id')->withTrashed();

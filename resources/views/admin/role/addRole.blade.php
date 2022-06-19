@@ -122,6 +122,11 @@
                                             <div class="tab-content">
                                                 <!-- PERSONAL INFO TAB -->
                                                 <div class="tab-pane active" id="tab_1_1">
+                                                    @if(session()->has('success'))
+                                                        <div class="alert alert-success">
+                                                            {{ session()->get('success') }}
+                                                        </div>
+                                                    @endif
                                                     <form role="form" action="{{route('roleStore')}}" method="Post">
                                                         @csrf
                                                         <div class="form-group margin-left-9 margin-right-10">
