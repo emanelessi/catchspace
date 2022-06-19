@@ -146,7 +146,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/delete-workspace/{id}', [WorkSpaceController::class, 'destroy']);
     Route::get('/admin/restore-workspace/{id}', [WorkSpaceController::class, 'restore']);
     Route::get('/admin/edit-workspace/{id}', [WorkSpaceController::class, 'edit']);
-    Route::post('/admin/edit-workspace', [WorkSpaceController::class, 'update'])->name('workspaceUpdate');
+    Route::post('/admin/edit-workspace', [WorkSpaceController::class, 'update'])->name('adminWorkspaceUpdate');
 
     Route::get('/admin/worker', [WorkerController::class, 'index'])->name('workers');
     Route::get('/admin/worker/reservations/{id}', [WorkerController::class, 'reservations']);

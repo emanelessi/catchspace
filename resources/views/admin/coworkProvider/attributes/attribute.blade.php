@@ -144,7 +144,7 @@
         <div class="page-head">
             <!-- BEGIN PAGE TITLE -->
             <div class="page-title ">
-                <h1 class="head-title">{{$attribute[0]->provider->name??''}} Attributes</h1>
+                <h1 class="head-title">{{$attribute[0]->provider->name ?? ''}} Attributes</h1>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -204,7 +204,7 @@
                                         <tr>
                                             <td class="table-td"> {{$myattribute->id}}
                                             </td>
-                                            <td class="table-td"> {{$myattribute->attributes->name}}</td>
+                                            <td class="table-td"> {{$myattribute->attributes->name ?? ''}}</td>
 
                                             <td class="table-td">{{$myattribute->value}} </td>
 
@@ -223,13 +223,15 @@
                 <div class="page-head">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1 class="margin-top--10 head-title">{{$attribute[0]->provider->name ??''}} Attributes</h1>
+                        <h1 class="margin-top--10 head-title">
+                            {{$attribute[0]->provider->name ??''}}
+                            Attributes</h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
                     @can('attribute_create')
                         <div class="page-toolbar">
-                            <a href="/provider/add-attribute/{{$attribute[0]->provider->id}}" type="button"
+                            <a href="/provider/add-attribute/{{$attribute[0]->provider->id ??''}}" type="button"
                                class="demo-loading-btn btn btn-primary add-btn">
                                 <i class="fa fa-plus-circle"></i>
                                 Add Attribute
@@ -298,7 +300,7 @@
                                                 <tr>
                                                     <td class="table-td"> {{$myattribute->id}}
                                                     </td>
-                                                    <td class="table-td"> {{$myattribute->attributes->name}}</td>
+                                                    <td class="table-td"> {{$myattribute->attributes->name ?? ''}}</td>
 
                                                     <td class="table-td">{{$myattribute->value}} </td>
 

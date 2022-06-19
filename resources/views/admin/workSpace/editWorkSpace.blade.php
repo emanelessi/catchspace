@@ -111,7 +111,7 @@
 
                                                     <!-- PERSONAL INFO TAB -->
                                                     <div class="tab-pane active" id="tab_1_1">
-                                                        <form role="form" enctype="multipart/form-data" action="{{route('workspaceUpdate')}}"
+                                                        <form role="form" enctype="multipart/form-data" action="{{route('adminWorkspaceUpdate')}}"
                                                               method="POST">
                                                             @csrf
                                                             @if(session()->has('success'))
@@ -183,8 +183,8 @@
                                                             </div>
 
 
-                                                            <div class="form-group margin-left-9 margin-right-10">
-                                                                <label class="control-label margin-left-9"
+                                                            <div class="form-group  col-md-6">
+                                                                <label class="control-label "
                                                                        style="color:#6B7280;">Provider Name*</label>
                                                                 <select name="provider_id"
                                                                         class="form-control form-input">

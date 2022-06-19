@@ -104,7 +104,7 @@ font-family: 'Montserrat', sans-serif !important;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.022em;
-"><a class="nav-link">Home</a></li>
+"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
                         <li class="nav-item margin-right-28" style="
 font-family: 'Montserrat', sans-serif !important;
     font-style: normal;
